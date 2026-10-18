@@ -39,6 +39,9 @@
         @include('admin.partials.topbar')
 
         <main id="main" class="content-pad">
+            @hasSection('actions')
+                <div class="d-flex d-xxl-none flex-wrap gap-2 justify-content-end mb-3">@yield('actions')</div>
+            @endif
             @include('admin.partials.flash')
             @yield('content')
         </main>

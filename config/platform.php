@@ -19,12 +19,29 @@ return [
     // Staff are signed out after this many idle minutes (jhs_portal's SessionTimeout).
     'staff_idle_minutes' => (int) env('STAFF_IDLE_MINUTES', 30),
 
-    // Launch scope is SHS (BLUEPRINT A2). Replaced by the curriculum tables in P2.
-    'class_levels' => ['SHS 1', 'SHS 2', 'SHS 3'],
+    // Classes, programmes and subjects are edited in Admin → Curriculum (database), not here.
 
-    'programmes' => [
-        'General Science', 'General Arts', 'Business', 'Visual Arts', 'Home Economics',
-        'Agricultural Science', 'Technical', 'STEM',
+    'library' => [
+        'disk' => 'library',
+        // Keep below the host's upload_max_filesize / post_max_size (cPanel → MultiPHP INI Editor).
+        'max_upload_mb' => (int) env('LIBRARY_MAX_UPLOAD_MB', 25),
+        // Extension => MIME types finfo may report for it. Macro-enabled Office files, HTML, SVG and
+        // executables are deliberately absent.
+        'allowed' => [
+            'pdf' => ['application/pdf'],
+            'docx' => ['application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/octet-stream'],
+            'pptx' => ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/zip', 'application/octet-stream'],
+            'xlsx' => ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/zip', 'application/octet-stream'],
+            'png' => ['image/png'],
+            'jpg' => ['image/jpeg'],
+            'jpeg' => ['image/jpeg'],
+            'webp' => ['image/webp'],
+        ],
+        // Default number of pages people without full access can see (overridable per resource
+        // and in Admin → Library settings).
+        'preview_pages' => (int) env('LIBRARY_PREVIEW_PAGES', 2),
+        // Guests may read free documents in the browser but must sign in to download.
+        'guest_downloads' => false,
     ],
 
     'regions' => [

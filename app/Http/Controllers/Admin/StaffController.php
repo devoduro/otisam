@@ -29,7 +29,7 @@ class StaffController extends Controller
 
     public function create(): View
     {
-        return view('admin.staff.form', ['member' => new User(), 'roles' => $this->staffRoles(), 'memberRoles' => []]);
+        return view('admin.staff.form', ['member' => new User, 'roles' => $this->staffRoles(), 'memberRoles' => []]);
     }
 
     public function store(Request $request): RedirectResponse
@@ -70,7 +70,7 @@ class StaffController extends Controller
         $data = $this->validated($request, $member);
         $before = $member->roles->pluck('name')->all();
 
-        if (in_array(Permissions::SUPER_ADMIN, $before, true) && !in_array(Permissions::SUPER_ADMIN, $data['roles'], true)) {
+        if (in_array(Permissions::SUPER_ADMIN, $before, true) && ! in_array(Permissions::SUPER_ADMIN, $data['roles'], true)) {
             if ($member->is($request->user())) {
                 return back()->withInput()->with('error', 'You cannot remove the Super Admin role from yourself.');
             }
@@ -110,7 +110,7 @@ class StaffController extends Controller
         return $request->validate([
             'name' => ['required', 'string', 'max:120'],
             'email' => ['required_without:phone', 'nullable', 'email:rfc', 'max:150', Rule::unique('users', 'email')->ignore($member?->id)],
-            'phone' => ['required_without:email', 'nullable', 'regex:' . Phone::GHANA_MOBILE, Rule::unique('users', 'phone')->ignore($member?->id)],
+            'phone' => ['required_without:email', 'nullable', 'regex:'.Phone::GHANA_MOBILE, Rule::unique('users', 'phone')->ignore($member?->id)],
             'roles' => ['required', 'array', 'min:1'],
             'roles.*' => [Rule::in($this->staffRoles()->pluck('name')->all())],
         ], ['phone.regex' => 'Enter a Ghana mobile number, e.g. 024 123 4567.']);

@@ -35,32 +35,73 @@ Last updated: 18 Oct 2026
 - [ ] Staff 2FA (Release 2)
 - [ ] Teacher verification documents upload (needs private file storage from P3)
 
-## P2–P11
+## P2: Curriculum
+- [v] Tables: education levels, class levels, programmes, subjects (with slug, core/elective), programme–subject (core/elective per programme), curriculum versions (draft/active/retired, effective dates, official source), curriculum nodes (tree with materialised path)
+- [v] Starter SHS structure seeder (levels, SHS 1–3, 7 programmes, 28 subjects). **No versions, strands or indicators are seeded**; those come from the official documents
+- [v] Admin: levels & classes, programmes (with subject roles), subjects, versions (activating one needs effective date + source; status changes audited)
+- [v] Topic-tree editor: add, edit, move (whole subtree, cycle-safe, max 6 levels), reorder, delete with children; official vs supplementary with source reference
+- [v] CSV import with dry run (line-by-line errors, nothing written) then all-or-nothing commit; CSV export in the same format; template download
+- [v] Student sign-up and profiles use class/programme IDs; inactive classes/programmes disappear from sign-up; existing profiles migrated by name
+- [v] Public pages: /subjects, /subjects/{slug} (tree, version picker, drafts hidden), /subjects/{slug}/topics/{id} (breadcrumb, children, official badge)
+- [v] Used records protected (subject/version with topics, class/programme with students)
+- [ ] Copy a subject tree from one version into a new version (useful when NaCCA revises a curriculum)
+- [ ] Academic years / terms tables: moved to P8 (teacher resources), where they are first used
+- [ ] Official curriculum content entry: **blocked on the owner supplying GES/NaCCA documents**
+
+## P3: Resource library
+- [v] Tables: categories, exam types, resources (soft delete), versioned files on a private disk, links (solution / marking scheme / related), curriculum tags, access logs, takedown requests
+- [v] Starter categories (12) and exam types (5): structure only, no documents
+- [v] Upload checks: extension allowlist + real MIME match, size limit, PDF script/attachment scan, Office macro/ActiveX/OLE scan, image re-encoding, unreadable/quarantined file rejection
+- [v] Automatic PDF preview (first N pages, never more than half, stamped PREVIEW) via queued job; manual preview upload when FPDI cannot parse a PDF
+- [v] Access policy (`ResourceAccess`): editors see all; free = everyone; premium = entitled users only (P4 entitlement stub returns false); teacher-only = approved teachers; downloads need an account
+- [v] Every file streamed by `ResourceFileController` with no-store, nosniff, sandbox CSP; access logged; download counter
+- [v] Admin: resource list/filters, create/edit, replace file (history kept), workflow (draft → in review → published/scheduled → archived), links, curriculum tagging, bulk upload (20 files), categories/exam types/preview-length settings, takedown queue
+- [v] Business rules: WAEC/BECE papers can only be free and must name the copyright holder; publishing needs a file and a copyright holder; publish/archive needs `resources.publish`
+- [v] Public: /library (filters, search), /library/{slug} (metadata, PDF.js reader of full or preview, solutions, topics, related), topic pages list tagged items, /copyright takedown form
+- [ ] Download watermarking with the user's name (Release 3)
+- [ ] Ghostscript-based preview fallback where the host allows it
+- [ ] Unified search across library and curriculum (P11)
+
+## P4: Subscriptions and Paystack
+- [v] Tables: plans, coupons, coupon redemptions, payments (pesewas, unique reference/transaction id), webhook events (unique dedupe key), subscriptions (unique payment_id), receipts, refunds
+- [v] 3 starter plans (3/6/12 months) seeded **inactive with no price**: prices are owner decision D5
+- [v] Checkout: server-side price and coupon, Paystack initialise, placeholder email for phone-only students, 100% coupon activates without Paystack
+- [v] One idempotent `PaymentFulfilment::fulfil()` for callback, webhook, reconciliation and admin re-verify: Paystack verify API, reference/amount/currency match, row lock, receipt, SMS + email after commit
+- [v] Webhook: HMAC-SHA512 signature on raw body, optional IP allowlist, stored once, processed by queued job; `charge.success` and `refund.processed` handled
+- [v] Subscription stacking (renewal starts when current access ends), configurable grace days, `Entitlements` now uses subscriptions; library premium unlocks automatically
+- [v] `payments:reconcile` every 10 min (pending → settled, >48 h → abandoned); `subscriptions:remind` daily (7 days, 1 day, expired; once each; skipped after renewal)
+- [v] Student pages: /plans, checkout, payment status (auto-refresh while waiting for MoMo), my subscription, printable receipt
+- [v] Admin: plans, coupons, payments (filters, totals, Paystack payload, re-verify, record refund), subscribers (grant/extend/revoke with reason), dashboard revenue/subscriber/pending tiles; all audited
+- [ ] **Live check against Paystack test mode: blocked until the owner adds test keys to `.env`**
+- [ ] Paystack recurring billing (not assumed; renewals are new purchases)
+- [ ] Concurrent-session limit per subscriber (decision D6)
+
+## P5–P11
 Not started. See BLUEPRINT §11.
 
-## Test report (18 Oct 2026)
-`php artisan test` → **39 passed, 245 assertions**, against the MySQL test database `otisam_test`.
+## Test report (18 Oct 2026, after P4)
+`php artisan test` → **83 passed, 599 assertions**, against the MySQL test database `otisam_test`.
 
 ## Acceptance criteria (master prompt §19)
 | # | Criterion | Phase | Status |
 |---|---|---|---|
-| 1 | Guest browses public resources and attempts an eligible public quiz | P3, P6 | [ ] |
+| 1 | Guest browses public resources and attempts an eligible public quiz | P3, P6 | [~] browsing verified (`ResourceLibraryTest`); quizzes in P6 |
 | 2 | Student registers, verifies, signs in | P1 | [v] `StudentRegistrationTest` |
 | 3 | Unapproved teacher cannot publish public tutorials | P1, P9 | [~] pending teachers hold no permissions; tutorials not built |
 | 4 | Admin approves teacher and manages their permissions | P1 | [v] `TeacherApprovalTest` |
-| 5 | Admin uploads a past-question paper and links its solution | P3 | [ ] |
-| 6 | Premium preview only, without entitlement | P3, P4 | [ ] |
-| 7 | Verified Paystack transaction activates the correct subscription | P4 | [ ] |
-| 8 | Unverified/failed/forged payment does not activate | P4 | [ ] |
-| 9 | Duplicate webhook does not duplicate payment/subscription | P4 | [ ] |
-| 10 | Valid subscriber accesses premium resources | P4 | [ ] |
-| 11 | Expired subscription cannot access protected content | P4 | [ ] |
+| 5 | Admin uploads a past-question paper and links its solution | P3 | [v] `ResourceLibraryTest::test_paper_and_linked_solution` |
+| 6 | Premium preview only, without entitlement | P3, P4 | [v] guest and non-subscriber get preview only; subscriber gets full access |
+| 7 | Verified Paystack transaction activates the correct subscription | P4 | [v] `PaymentsTest` (with Paystack faked over HTTP; live test-mode check pending keys) |
+| 8 | Unverified/failed/forged payment does not activate | P4 | [v] failed, forged redirect, unknown reference, amount and currency mismatch |
+| 9 | Duplicate webhook does not duplicate payment/subscription | P4 | [v] 3 identical webhooks + callback + reconcile → 1 event, 1 subscription; DB unique key enforced |
+| 10 | Valid subscriber accesses premium resources | P4 | [v] premium document opens after verified payment |
+| 11 | Expired subscription cannot access protected content | P4 | [v] access closes after the period (and after grace days) |
 | 12 | Students practise objective and supported theory questions | P6, P8 | [ ] |
 | 13 | Timed exams save answers, enforce deadlines, record submissions | P6 | [ ] |
 | 14 | Results follow configured marking rules | P6 | [ ] |
 | 15 | Promotion exams restricted to eligible teachers | P10 | [ ] |
 | 16 | Email/SMS generated and delivery status tracked | P7 | [~] logged with sent/failed status; Speso delivery reports pending |
-| 17 | Curriculum managed without code changes | P2 | [ ] |
+| 17 | Curriculum managed without code changes | P2 | [v] `CurriculumAdminTest` |
 | 18 | No access to other users' private records/results/files | all | [~] identity area covered by `AccessControlTest` |
-| 19 | Usable on mobile, tablet, desktop | all | [~] P1 pages checked at 375px and desktop |
+| 19 | Usable on mobile, tablet, desktop | all | [~] P1–P2 pages checked at 375px and desktop |
 | 20 | Backup, restore and deployment documented and tested | P11 | [~] deployment documented |

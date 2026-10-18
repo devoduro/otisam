@@ -60,7 +60,7 @@ class CurriculumNode extends Model
     /** The path a child of this node gets. */
     public function childPath(): string
     {
-        return $this->path . $this->id . '/';
+        return $this->path.$this->id.'/';
     }
 
     /** @return array<int, int> ancestor ids, root first */

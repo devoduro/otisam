@@ -20,10 +20,10 @@ class RegistrationService
             $user = $this->newUser(AccountType::Student, $data);
             $user->assignRole(Permissions::STUDENT);
 
-            $isMinor = !($data['is_adult'] ?? false);
+            $isMinor = ! ($data['is_adult'] ?? false);
             $user->studentProfile()->create([
-                'class_level' => $data['class_level'],
-                'programme' => $data['programme'] ?? null,
+                'class_level_id' => (int) $data['class_level_id'],
+                'programme_id' => isset($data['programme_id']) ? (int) $data['programme_id'] : null,
                 'school_name' => $data['school_name'] ?? null,
                 'region' => $data['region'] ?? null,
                 'is_minor' => $isMinor,

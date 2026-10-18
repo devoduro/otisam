@@ -17,13 +17,11 @@ use InvalidArgumentException;
  */
 class TeacherVerificationService
 {
-    public function __construct(private readonly Notifier $notifier)
-    {
-    }
+    public function __construct(private readonly Notifier $notifier) {}
 
     public function decide(User $teacher, TeacherVerificationStatus $decision, ?string $note, User $by): void
     {
-        if (!$teacher->isTeacher() || !$teacher->teacherProfile) {
+        if (! $teacher->isTeacher() || ! $teacher->teacherProfile) {
             throw new InvalidArgumentException('Only teacher accounts can be verified.');
         }
         if ($decision === TeacherVerificationStatus::Pending) {
@@ -58,20 +56,20 @@ class TeacherVerificationService
             $app = config('app.name');
             [$subject, $body] = match ($decision) {
                 TeacherVerificationStatus::Approved => ["Your {$app} teacher account is approved", "Hello {$teacher->name}, your {$app} teacher account has been approved. You can now sign in and use the teacher resources."],
-                TeacherVerificationStatus::Rejected => ["Your {$app} teacher registration", "Hello {$teacher->name}, we could not approve your {$app} teacher registration." . ($note ? " Reason: {$note}" : '')],
-                TeacherVerificationStatus::MoreInfo => ["More information needed for your {$app} teacher account", "Hello {$teacher->name}, we need more information to approve your {$app} teacher account." . ($note ? " {$note}" : '') . ' Please sign in and update your profile.'],
+                TeacherVerificationStatus::Rejected => ["Your {$app} teacher registration", "Hello {$teacher->name}, we could not approve your {$app} teacher registration.".($note ? " Reason: {$note}" : '')],
+                TeacherVerificationStatus::MoreInfo => ["More information needed for your {$app} teacher account", "Hello {$teacher->name}, we need more information to approve your {$app} teacher account.".($note ? " {$note}" : '').' Please sign in and update your profile.'],
             };
 
             // Keyed on the decision time so a later, different decision still notifies.
             $this->notifier->toUser($teacher, "teacher.{$decision->value}", 'transactional', $subject, $body,
-                "teacher.{$decision->value}:{$teacher->id}:" . $profile->verified_at->timestamp);
+                "teacher.{$decision->value}:{$teacher->id}:".$profile->verified_at->timestamp);
         });
     }
 
     /** @param array<int, string> $capabilities */
     public function setCapabilities(User $teacher, array $capabilities): void
     {
-        if (!$teacher->isApprovedTeacher()) {
+        if (! $teacher->isApprovedTeacher()) {
             throw new InvalidArgumentException('Capabilities can only be granted to approved teachers.');
         }
 

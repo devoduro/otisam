@@ -7,6 +7,7 @@
     <title>@hasSection('title')@yield('title') | @endif{{ config('app.name') }}</title>
     <meta name="description" content="@yield('description', 'Learn, practise and pass: SHS lessons, WASSCE-style practice questions and worked solutions for students in Ghana.')">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('head')
 </head>
 <body class="min-h-screen flex flex-col">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2">Skip to content</a>
@@ -18,11 +19,13 @@
                 {{ config('app.name') }}
             </a>
             <nav aria-label="Account" class="flex items-center gap-1 text-sm font-semibold">
+                <a href="{{ route('library.index') }}" class="rounded-lg px-3 py-2 text-primary-900 no-underline hover:bg-primary-50">Library</a>
+                <a href="{{ route('subjects.index') }}" class="hidden rounded-lg px-3 py-2 text-primary-900 no-underline hover:bg-primary-50 sm:inline-block">Subjects</a>
                 @auth
-                    <a href="{{ route(auth()->user()->homeRoute()) }}" class="rounded-lg px-3 py-2 text-primary-900 no-underline hover:bg-primary-50">My dashboard</a>
+                    <a href="{{ route(auth()->user()->homeRoute()) }}" class="rounded-lg px-3 py-2 text-primary-900 no-underline hover:bg-primary-50 whitespace-nowrap">Dashboard</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="rounded-lg px-3 py-2 text-muted hover:bg-gray-100">Log out</button>
+                        <button type="submit" class="rounded-lg px-3 py-2 text-muted hover:bg-gray-100 whitespace-nowrap">Log out</button>
                     </form>
                 @else
                     <a href="{{ route('login') }}" class="rounded-lg px-3 py-2 text-primary-900 no-underline hover:bg-primary-50">Sign in</a>
@@ -42,6 +45,9 @@
             <nav aria-label="Legal" class="flex gap-4">
                 <a href="{{ route('terms') }}">Terms</a>
                 <a href="{{ route('privacy') }}">Privacy</a>
+                <a href="{{ route('subjects.index') }}" class="sm:hidden">Subjects</a>
+                <a href="{{ route('plans.index') }}">Premium</a>
+                <a href="{{ route('copyright') }}">Copyright</a>
                 <a href="{{ route('teachers.register') }}">For teachers</a>
             </nav>
         </div>

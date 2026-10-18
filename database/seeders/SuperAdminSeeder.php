@@ -27,7 +27,7 @@ class SuperAdminSeeder extends Seeder
         $phone = Phone::clean(env('SEED_SUPERADMIN_PHONE')) ?: null;
         $password = env('SEED_SUPERADMIN_PASSWORD');
 
-        if ((!$email && !$phone) || !$password) {
+        if ((! $email && ! $phone) || ! $password) {
             $this->command?->warn('Set SEED_SUPERADMIN_EMAIL or SEED_SUPERADMIN_PHONE, and SEED_SUPERADMIN_PASSWORD, in .env, then run: php artisan db:seed --class=SuperAdminSeeder');
 
             return;

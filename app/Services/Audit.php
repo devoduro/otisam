@@ -19,7 +19,7 @@ class Audit
     {
         $request = request();
         // Tells RecordActivity this request already has a (more detailed) entry.
-        $request?->attributes->set("audit.recorded", true);
+        $request?->attributes->set('audit.recorded', true);
 
         return AuditLog::create([
             'user_id' => auth()->id(),

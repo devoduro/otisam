@@ -33,11 +33,11 @@ class LoginController extends Controller
         ]);
 
         $identifier = Str::lower(trim($data['login']));
-        $throttleKey = 'login:' . sha1($identifier) . '|' . $request->ip();
+        $throttleKey = 'login:'.sha1($identifier).'|'.$request->ip();
 
         if (RateLimiter::tooManyAttempts($throttleKey, 5)) {
             throw ValidationException::withMessages([
-                'login' => 'Too many sign-in attempts. Try again in ' . RateLimiter::availableIn($throttleKey) . ' seconds.',
+                'login' => 'Too many sign-in attempts. Try again in '.RateLimiter::availableIn($throttleKey).' seconds.',
             ]);
         }
 
@@ -55,13 +55,13 @@ class LoginController extends Controller
             'user_agent' => Str::limit((string) $request->userAgent(), 250, ''),
         ]);
 
-        if (!$valid) {
+        if (! $valid) {
             RateLimiter::hit($throttleKey, 60);
 
             throw ValidationException::withMessages(['login' => 'The phone number/email or password is incorrect.']);
         }
 
-        if (!$user->isActive()) {
+        if (! $user->isActive()) {
             throw ValidationException::withMessages(['login' => 'This account is not active. Please contact support.']);
         }
 

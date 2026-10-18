@@ -45,7 +45,7 @@ class CurriculumTree
         if ($parent) {
             $this->assertInTree($parent, $version, $subject);
             if ($parent->depth + 1 > CurriculumNode::MAX_DEPTH) {
-                throw new InvalidArgumentException('The tree cannot go deeper than ' . (CurriculumNode::MAX_DEPTH + 1) . ' levels.');
+                throw new InvalidArgumentException('The tree cannot go deeper than '.(CurriculumNode::MAX_DEPTH + 1).' levels.');
             }
         }
 
@@ -67,7 +67,7 @@ class CurriculumTree
      * Update a node's content and, if $newParentId differs, move it (with its whole subtree)
      * under another node of the same tree, or to the top level when $newParentId is null.
      *
-     * @param array<string, mixed> $attributes validated fillable attributes
+     * @param  array<string, mixed>  $attributes  validated fillable attributes
      */
     public function update(CurriculumNode $node, array $attributes, ?int $newParentId): CurriculumNode
     {
@@ -119,7 +119,7 @@ class CurriculumTree
     public function descendants(CurriculumNode $node)
     {
         return CurriculumNode::inTree($node->curriculum_version_id, $node->subject_id)
-            ->where('path', 'like', $node->childPath() . '%');
+            ->where('path', 'like', $node->childPath().'%');
     }
 
     private function move(CurriculumNode $node, ?int $newParentId): void
@@ -129,10 +129,10 @@ class CurriculumTree
         if ($newParentId !== null) {
             $newParent = CurriculumNode::find($newParentId);
 
-            if (!$newParent || $newParent->curriculum_version_id !== $node->curriculum_version_id || $newParent->subject_id !== $node->subject_id) {
+            if (! $newParent || $newParent->curriculum_version_id !== $node->curriculum_version_id || $newParent->subject_id !== $node->subject_id) {
                 throw new InvalidArgumentException('The new parent must be in the same subject and curriculum version.');
             }
-            if ($newParent->id === $node->id || str_contains($newParent->path, '/' . $node->id . '/')) {
+            if ($newParent->id === $node->id || str_contains($newParent->path, '/'.$node->id.'/')) {
                 throw new InvalidArgumentException('An item cannot be moved inside itself.');
             }
         }
@@ -146,7 +146,7 @@ class CurriculumTree
 
         $deepest = (int) (clone $subtree)->max('depth');
         if (max($deepest, $node->depth) + $delta > CurriculumNode::MAX_DEPTH) {
-            throw new InvalidArgumentException('Moving it there would make the tree deeper than ' . (CurriculumNode::MAX_DEPTH + 1) . ' levels.');
+            throw new InvalidArgumentException('Moving it there would make the tree deeper than '.(CurriculumNode::MAX_DEPTH + 1).' levels.');
         }
 
         $node->parent_id = $newParent?->id;
@@ -158,9 +158,9 @@ class CurriculumTree
 
         // Rewrite the path prefix and depth of the whole subtree in one statement.
         $subtree->update([
-                'path' => DB::raw('CONCAT(' . DB::getPdo()->quote($newPrefix) . ', SUBSTRING(path, ' . (strlen($oldPrefix) + 1) . '))'),
-                'depth' => DB::raw('depth + (' . (int) $delta . ')'),
-            ]);
+            'path' => DB::raw('CONCAT('.DB::getPdo()->quote($newPrefix).', SUBSTRING(path, '.(strlen($oldPrefix) + 1).'))'),
+            'depth' => DB::raw('depth + ('.(int) $delta.')'),
+        ]);
     }
 
     private function nextSort(int $versionId, int $subjectId, ?int $parentId): int

@@ -1,4 +1,8 @@
 {
+  "node_modules/pdfjs-dist/build/pdf.worker.min.mjs": {
+    "file": "assets/pdf.worker.min-yatZIOMy.mjs",
+    "src": "node_modules/pdfjs-dist/build/pdf.worker.min.mjs"
+  },
   "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2": {
     "file": "assets/PlusJakartaSans-Bold-C17WCrun.woff2",
     "src": "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2"
@@ -12,7 +16,7 @@
     "src": "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-SemiBold.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Bcj5PHSf.css",
+    "file": "assets/app-DjABmKTB.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -25,5 +29,14 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
+  },
+  "resources/js/pdf-viewer.js": {
+    "file": "assets/pdf-viewer-D_PzjaX-.js",
+    "name": "pdf-viewer",
+    "src": "resources/js/pdf-viewer.js",
+    "isEntry": true,
+    "assets": [
+      "assets/pdf.worker.min-yatZIOMy.mjs"
+    ]
   }
 }

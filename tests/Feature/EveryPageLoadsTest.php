@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Enums\TeacherVerificationStatus;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 use Tests\TestCase;
 
 /** Smoke test in the jhs_portal style: every page renders for the account that may see it. */
@@ -37,7 +38,7 @@ class EveryPageLoadsTest extends TestCase
             route('admin.staff.edit', $owner),
             route('admin.roles.index'),
             route('admin.roles.create'),
-            route('admin.roles.edit', \Spatie\Permission\Models\Role::findByName('Content Manager')),
+            route('admin.roles.edit', Role::findByName('Content Manager')),
             route('admin.audit.index'),
             route('password.change'),
         ] as $url) {

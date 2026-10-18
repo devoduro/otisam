@@ -20,8 +20,7 @@ class SpesoSmsGateway implements SmsGateway
         private readonly string $apiKey,
         private readonly string $senderId,
         private readonly string $baseUrl,
-    ) {
-    }
+    ) {}
 
     public static function fromConfig(): self
     {
@@ -50,7 +49,7 @@ class SpesoSmsGateway implements SmsGateway
             $response = Http::withToken($this->apiKey)
                 ->acceptJson()
                 ->timeout(15)
-                ->post($this->baseUrl . '/messages/send', [
+                ->post($this->baseUrl.'/messages/send', [
                     'sender_id' => $this->senderId,
                     'phone' => $phone,
                     'message' => $message,
@@ -64,7 +63,7 @@ class SpesoSmsGateway implements SmsGateway
         $body = $response->json() ?? [];
         $success = $response->successful() && ($body['success'] ?? true) !== false;
 
-        if (!$success) {
+        if (! $success) {
             // Never log the message text: it may hold a one-time code.
             Log::warning('Speso SMS rejected', ['phone' => Phone::mask($phone), 'status' => $response->status(), 'error' => $body['message'] ?? $body['error'] ?? null]);
         }
@@ -76,7 +75,7 @@ class SpesoSmsGateway implements SmsGateway
             (string) $response->status(),
             (string) ($body['message'] ?? $body['error'] ?? ($success ? 'Message submitted' : 'SMS sending failed')),
             $id !== null ? (string) $id : null,
-            retryable: !$success && ($response->serverError() || $response->status() === 429),
+            retryable: ! $success && ($response->serverError() || $response->status() === 429),
         );
     }
 }

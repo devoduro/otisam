@@ -12,8 +12,8 @@
             <dl class="row mb-0 small">
                 <dt class="col-sm-4">Phone</dt><dd class="col-sm-8">{{ $student->phone }} {!! $student->phone_verified_at ? '<span class="badge text-bg-success">verified</span>' : '<span class="badge text-bg-secondary">not verified</span>' !!}</dd>
                 <dt class="col-sm-4">Email</dt><dd class="col-sm-8">{{ $student->email ?? '—' }}</dd>
-                <dt class="col-sm-4">Class</dt><dd class="col-sm-8">{{ $p?->class_level ?? '—' }}</dd>
-                <dt class="col-sm-4">Programme</dt><dd class="col-sm-8">{{ $p?->programme ?? '—' }}</dd>
+                <dt class="col-sm-4">Class</dt><dd class="col-sm-8">{{ $p?->classLevel?->name ?? '—' }}</dd>
+                <dt class="col-sm-4">Programme</dt><dd class="col-sm-8">{{ $p?->programme?->name ?? '—' }}</dd>
                 <dt class="col-sm-4">School</dt><dd class="col-sm-8">{{ $p?->school_name ?? '—' }}</dd>
                 <dt class="col-sm-4">Region</dt><dd class="col-sm-8">{{ $p?->region ?? '—' }}</dd>
                 <dt class="col-sm-4">Under 18</dt><dd class="col-sm-8">{{ $p?->is_minor ? 'Yes' : 'No' }}</dd>

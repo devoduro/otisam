@@ -9,8 +9,11 @@ namespace App\Support;
 final class Permissions
 {
     public const SUPER_ADMIN = 'Super Admin';
+
     public const TEACHER = 'Teacher';
+
     public const TEACHER_PENDING = 'Teacher (Pending)';
+
     public const STUDENT = 'Student';
 
     /** Group label => [permission => description]. */
@@ -84,7 +87,7 @@ final class Permissions
             'teach.author-questions' => 'Teacher: write questions for review',
             'teach.create-assessments' => 'Teacher: create class assessments',
             'teach.publish-tutorials' => 'Teacher: publish tutorials without review',
-            'teach.view-own-student-results' => "Teacher: view results of their own assessments",
+            'teach.view-own-student-results' => 'Teacher: view results of their own assessments',
         ],
     ];
 

@@ -19,16 +19,14 @@ class SendNotificationMessage implements ShouldQueue
     /** @var array<int, int> seconds between retries of transient failures */
     public array $backoff = [60, 300, 900];
 
-    public function __construct(public readonly int $messageId)
-    {
-    }
+    public function __construct(public readonly int $messageId) {}
 
     public function handle(SmsGateway $sms, Notifier $notifier): void
     {
         $message = NotificationMessage::find($this->messageId);
 
         // Already sent (a retried job after a successful send) or deleted: nothing to do.
-        if (!$message || in_array($message->status, ['sent', 'delivered', 'suppressed'], true)) {
+        if (! $message || in_array($message->status, ['sent', 'delivered', 'suppressed'], true)) {
             return;
         }
 
@@ -36,7 +34,7 @@ class SendNotificationMessage implements ShouldQueue
             $result = $sms->send($message->recipient, $message->body);
             $notifier->recordSmsResult($message, $result);
 
-            if (!$result->success && $result->retryable && $this->attempts() < $this->tries) {
+            if (! $result->success && $result->retryable && $this->attempts() < $this->tries) {
                 $this->release($this->backoff[min($this->attempts() - 1, count($this->backoff) - 1)]);
             }
 

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class NotificationMessage extends Model
 {
     public const CHANNEL_SMS = 'sms';
+
     public const CHANNEL_MAIL = 'mail';
 
     protected $fillable = [

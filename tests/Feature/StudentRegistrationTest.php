@@ -3,8 +3,11 @@
 namespace Tests\Feature;
 
 use App\Enums\AccountType;
+use App\Models\Curriculum\ClassLevel;
+use App\Models\Curriculum\Programme;
 use App\Models\NotificationMessage;
 use App\Models\User;
+use App\Services\Sms\LogSmsGateway;
 use Tests\TestCase;
 
 /** Acceptance criterion 2: a student can register, verify their account and sign in. */
@@ -15,8 +18,8 @@ class StudentRegistrationTest extends TestCase
         return $this->post(route('register.store'), array_merge([
             'name' => 'Ama Mensah',
             'phone' => '+233 24 123 4567',
-            'class_level' => 'SHS 2',
-            'programme' => 'General Science',
+            'class_level_id' => ClassLevel::where('name', 'SHS 2')->value('id'),
+            'programme_id' => Programme::where('name', 'General Science')->value('id'),
             'password' => 'secret123',
             'password_confirmation' => 'secret123',
             'terms' => '1',
@@ -30,7 +33,8 @@ class StudentRegistrationTest extends TestCase
         $user = User::where('phone', '0241234567')->firstOrFail();
         $this->assertSame(AccountType::Student, $user->account_type);
         $this->assertTrue($user->hasRole('Student'));
-        $this->assertSame('SHS 2', $user->studentProfile->class_level);
+        $this->assertSame('SHS 2', $user->studentProfile->classLevel->name);
+        $this->assertSame('General Science', $user->studentProfile->programme->name);
         $this->assertTrue($user->studentProfile->is_minor, 'Accounts are treated as minors unless the 18+ box is ticked.');
         $this->assertNull($user->phone_verified_at);
 
@@ -109,6 +113,6 @@ class StudentRegistrationTest extends TestCase
         $this->register();
 
         $this->post(route('verify.phone.resend'))->assertSessionHas('error');
-        $this->assertCount(1, array_filter(\App\Services\Sms\LogSmsGateway::$sent, fn ($s) => $s['phone'] === '0241234567'));
+        $this->assertCount(1, array_filter(LogSmsGateway::$sent, fn ($s) => $s['phone'] === '0241234567'));
     }
 }

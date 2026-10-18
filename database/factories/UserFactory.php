@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Enums\AccountType;
 use App\Enums\TeacherVerificationStatus;
 use App\Enums\UserStatus;
+use App\Models\Curriculum\ClassLevel;
+use App\Models\Curriculum\Programme;
 use App\Models\User;
 use App\Support\Permissions;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -23,7 +25,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'phone' => '024' . fake()->unique()->numerify('#######'),
+            'phone' => '024'.fake()->unique()->numerify('#######'),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
             'account_type' => AccountType::Student,
@@ -47,7 +49,11 @@ class UserFactory extends Factory
         return $this->state(fn () => ['account_type' => AccountType::Student])
             ->afterCreating(function (User $user) {
                 $user->assignRole(Permissions::STUDENT);
-                $user->studentProfile()->create(['class_level' => 'SHS 2', 'programme' => 'General Science']);
+                $class = ClassLevel::where('name', 'SHS 2')->first();
+                $user->studentProfile()->create([
+                    'class_level_id' => $class?->id,
+                    'programme_id' => $class ? Programme::where('education_level_id', $class->education_level_id)->where('name', 'General Science')->value('id') : null,
+                ]);
             });
     }
 

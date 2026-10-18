@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\AuditLog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\View\View;
 
 class AuditLogController extends Controller
@@ -22,7 +23,7 @@ class AuditLogController extends Controller
             ->when($filters['category'] ?? null, fn ($q, $c) => $q->where('category', $c))
             ->when($filters['q'] ?? null, fn ($q, $s) => $q->where('description', 'like', "%{$s}%"))
             ->when($filters['from'] ?? null, fn ($q, $d) => $q->where('created_at', '>=', $d))
-            ->when($filters['to'] ?? null, fn ($q, $d) => $q->where('created_at', '<', \Illuminate\Support\Carbon::parse($d)->addDay()))
+            ->when($filters['to'] ?? null, fn ($q, $d) => $q->where('created_at', '<', Carbon::parse($d)->addDay()))
             ->latest('id')
             ->paginate(50)
             ->withQueryString();

@@ -1,11 +1,12 @@
 @extends('layouts.auth')
 
 @section('title', 'Teacher registration')
+@section('wide', '1')
 @section('heading', 'Register as a teacher')
 @section('intro', 'An administrator checks every teacher account before teacher resources are unlocked. You can sign in while you wait.')
 
 @section('form')
-<form method="POST" action="{{ route('teachers.register.store') }}" class="space-y-4">
+<form method="POST" action="{{ route('teachers.register.store') }}" class="space-y-5" data-auth-form>
     @csrf
     <x-input name="name" label="Full name" required autocomplete="name" maxlength="120" />
     <x-input name="phone" type="tel" label="Mobile number" required autocomplete="tel" inputmode="tel" placeholder="024 123 4567" />
@@ -33,5 +34,5 @@
 @endsection
 
 @section('after')
-<p class="mt-6 text-center text-sm text-muted">Already registered? <a href="{{ route('login') }}" class="font-semibold">Sign in</a></p>
+Already registered? <a href="{{ route('login') }}" class="font-semibold">Sign in</a>
 @endsection

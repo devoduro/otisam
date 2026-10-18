@@ -7,7 +7,7 @@
 @endsection
 
 @section('form')
-<form method="POST" action="{{ route('verify.phone.check') }}" class="space-y-4">
+<form method="POST" action="{{ route('verify.phone.check') }}" class="space-y-5" data-auth-form>
     @csrf
     <x-input name="code" label="Code" required inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]*" maxlength="10" autofocus class="text-center text-2xl tracking-[0.5em]" />
     <x-button full>Confirm</x-button>

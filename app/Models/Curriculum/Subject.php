@@ -24,7 +24,7 @@ class Subject extends Model
     {
         // Slugs are generated once and kept, so public links survive a rename.
         static::creating(function (self $subject) {
-            if (!$subject->slug) {
+            if (! $subject->slug) {
                 $base = Str::slug($subject->name) ?: 'subject';
                 $slug = $base;
                 for ($i = 2; static::where('slug', $slug)->exists(); $i++) {

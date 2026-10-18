@@ -29,8 +29,8 @@ class PhoneVerificationController extends Controller
         $result = $otp->send($user->phone, PhoneOtpService::PURPOSE_VERIFY, $user->id);
 
         return back()->with($result['sent'] ? 'status' : 'error', match (true) {
-            $result['sent'] => 'A new code is on its way to ' . Phone::mask($user->phone) . '.',
-            $result['error'] === 'too_many' => 'Please wait ' . $result['retry_after'] . ' seconds before asking for another code.',
+            $result['sent'] => 'A new code is on its way to '.Phone::mask($user->phone).'.',
+            $result['error'] === 'too_many' => 'Please wait '.$result['retry_after'].' seconds before asking for another code.',
             default => 'We could not send the code just now. Please try again shortly.',
         });
     }
@@ -40,7 +40,7 @@ class PhoneVerificationController extends Controller
         $data = $request->validate(['code' => ['required', 'string', 'max:10']]);
         $user = $request->user();
 
-        if (!$otp->verify($user->phone, PhoneOtpService::PURPOSE_VERIFY, $data['code'])) {
+        if (! $otp->verify($user->phone, PhoneOtpService::PURPOSE_VERIFY, $data['code'])) {
             throw ValidationException::withMessages(['code' => 'That code is wrong or has expired. Check the SMS or send a new code.']);
         }
 

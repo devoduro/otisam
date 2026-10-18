@@ -25,12 +25,25 @@ class RecordActivity
         'admin.staff' => ['user', 'staff account'],
         'admin.roles' => ['user', 'role'],
         'admin.settings' => ['settings', 'setting'],
+        'admin.commerce.plans' => ['commerce', 'plan'],
+        'admin.commerce.coupons' => ['commerce', 'coupon'],
+        'admin.library.resources' => ['library', 'resource'],
+        'admin.library.categories' => ['library', 'resource category'],
+        'admin.library.exam-types' => ['library', 'exam type'],
+        'admin.library.settings' => ['library', 'library setting'],
+        'admin.curriculum.levels' => ['curriculum', 'education level'],
+        'admin.curriculum.classes' => ['curriculum', 'class'],
+        'admin.curriculum.programmes' => ['curriculum', 'programme'],
+        'admin.curriculum.subjects' => ['curriculum', 'subject'],
+        'admin.curriculum.versions' => ['curriculum', 'curriculum version'],
+        'admin.curriculum.tree' => ['curriculum', 'curriculum item'],
     ];
 
     private const VERBS = [
         'store' => 'Added', 'update' => 'Updated', 'destroy' => 'Deleted', 'approve' => 'Approved',
         'reject' => 'Rejected', 'request-info' => 'Asked for more information on', 'suspend' => 'Suspended',
         'activate' => 'Reactivated', 'reset-password' => 'Reset the password of',
+        'shift' => 'Reordered',
     ];
 
     public function handle(Request $request, Closure $next): Response
@@ -48,12 +61,12 @@ class RecordActivity
 
     private function record(Request $request, Response $response): void
     {
-        if ($request->isMethodSafe() || !$request->user() || $response->getStatusCode() >= 400 || $request->attributes->get('audit.recorded')) {
+        if ($request->isMethodSafe() || ! $request->user() || $response->getStatusCode() >= 400 || $request->attributes->get('audit.recorded')) {
             return;
         }
 
         $name = (string) $request->route()?->getName();
-        if (!Str::startsWith($name, 'admin.')) {
+        if (! Str::startsWith($name, 'admin.')) {
             return;
         }
 
@@ -70,7 +83,7 @@ class RecordActivity
             'user_id' => $request->user()->id,
             'category' => $category,
             'action' => Str::afterLast($name, '.'),
-            'description' => Str::limit(trim("{$verb} {$noun}" . ($subject ? ": {$subject}" : '')), 480),
+            'description' => Str::limit(trim("{$verb} {$noun}".($subject ? ": {$subject}" : '')), 480),
             'route_name' => $name,
             'method' => $request->method(),
             'ip_address' => $request->ip(),
@@ -81,7 +94,7 @@ class RecordActivity
     private function area(string $name): array
     {
         foreach (self::AREAS as $prefix => $area) {
-            if ($name === $prefix || Str::startsWith($name, $prefix . '.')) {
+            if ($name === $prefix || Str::startsWith($name, $prefix.'.')) {
                 return $area;
             }
         }

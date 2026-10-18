@@ -26,7 +26,7 @@ class TeacherRegisterController extends Controller
 
         $data = $request->validate([
             'name' => ['required', 'string', 'max:120'],
-            'phone' => ['required', 'regex:' . Phone::GHANA_MOBILE, Rule::unique('users', 'phone')->whereNotNull('phone_verified_at')],
+            'phone' => ['required', 'regex:'.Phone::GHANA_MOBILE, Rule::unique('users', 'phone')->whereNotNull('phone_verified_at')],
             'email' => ['required', 'email:rfc', 'max:150', Rule::unique('users', 'email')],
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()],
             'staff_number' => ['nullable', 'string', 'max:30', Rule::unique('teacher_profiles', 'staff_number')],
@@ -50,7 +50,7 @@ class TeacherRegisterController extends Controller
         $sent = $otp->send($user->phone, PhoneOtpService::PURPOSE_VERIFY, $user->id);
 
         return redirect()->route('verify.phone')->with($sent['sent'] ? 'status' : 'error', $sent['sent']
-            ? 'We sent a 6-digit code to ' . Phone::mask($user->phone) . '.'
+            ? 'We sent a 6-digit code to '.Phone::mask($user->phone).'.'
             : 'We could not send the code just now. Tap "Send a new code" to try again.');
     }
 }

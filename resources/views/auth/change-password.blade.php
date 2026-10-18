@@ -5,7 +5,7 @@
 @section('intro', $forced ? 'You signed in with a temporary password. Choose a new one to continue.' : 'You will stay signed in on this device and be signed out everywhere else.')
 
 @section('form')
-<form method="POST" action="{{ route('password.change.update') }}" class="space-y-4">
+<form method="POST" action="{{ route('password.change.update') }}" class="space-y-5" data-auth-form>
     @csrf
     @method('PUT')
     <x-input name="current_password" type="password" :label="$forced ? 'Temporary password' : 'Current password'" required autocomplete="current-password" />

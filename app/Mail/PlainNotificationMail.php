@@ -8,9 +8,7 @@ use Illuminate\Mail\Mailables\Envelope;
 
 class PlainNotificationMail extends Mailable
 {
-    public function __construct(public readonly string $subjectLine, public readonly string $text)
-    {
-    }
+    public function __construct(public readonly string $subjectLine, public readonly string $text) {}
 
     public function envelope(): Envelope
     {

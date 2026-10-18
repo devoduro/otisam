@@ -11,6 +11,5 @@ final class SmsResult
         public readonly ?string $providerMessageId = null,
         /** True when retrying could help (timeouts, 5xx, rate limits); false for bad numbers or config. */
         public readonly bool $retryable = false,
-    ) {
-    }
+    ) {}
 }

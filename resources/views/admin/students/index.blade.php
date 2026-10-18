@@ -10,11 +10,11 @@
             <input id="q" name="q" value="{{ $filters['q'] ?? '' }}" class="form-control" placeholder="Name, phone or email">
         </div>
         <div class="col-6 col-md-2">
-            <label for="class_level" class="form-label small fw-semibold">Class</label>
-            <select id="class_level" name="class_level" class="form-select">
+            <label for="class_level_id" class="form-label small fw-semibold">Class</label>
+            <select id="class_level_id" name="class_level_id" class="form-select">
                 <option value="">All</option>
-                @foreach (config('platform.class_levels') as $level)
-                    <option @selected(($filters['class_level'] ?? '') === $level)>{{ $level }}</option>
+                @foreach ($classLevels as $level)
+                    <option value="{{ $level->id }}" @selected((int) ($filters['class_level_id'] ?? 0) === $level->id)>{{ $level->name }}</option>
                 @endforeach
             </select>
         </div>
@@ -54,8 +54,8 @@
                         {{ $student->phone }}
                         @if (!$student->phone_verified_at)<span class="badge text-bg-light border">unverified</span>@endif
                     </td>
-                    <td data-label="Class">{{ $student->studentProfile?->class_level ?? '—' }}</td>
-                    <td data-label="Programme">{{ $student->studentProfile?->programme ?? '—' }}</td>
+                    <td data-label="Class">{{ $student->studentProfile?->classLevel?->name ?? '—' }}</td>
+                    <td data-label="Programme">{{ $student->studentProfile?->programme?->name ?? '—' }}</td>
                     <td data-label="Status"><span class="badge text-bg-{{ $student->isActive() ? 'success' : 'danger' }}">{{ $student->status->label() }}</span></td>
                     <td data-label="Joined">{{ $student->created_at->format('j M Y') }}</td>
                 </tr>

@@ -29,7 +29,7 @@ class PasswordResetController extends Controller
     public function send(Request $request, PhoneOtpService $otp): RedirectResponse
     {
         $request->merge(['phone' => Phone::clean($request->input('phone'))]);
-        $data = $request->validate(['phone' => ['required', 'regex:' . Phone::GHANA_MOBILE]], [
+        $data = $request->validate(['phone' => ['required', 'regex:'.Phone::GHANA_MOBILE]], [
             'phone.regex' => 'Enter a Ghana mobile number, e.g. 024 123 4567.',
         ]);
 
@@ -38,19 +38,19 @@ class PasswordResetController extends Controller
         if ($user && $user->isActive()) {
             $result = $otp->send($user->phone, PhoneOtpService::PURPOSE_RESET, $user->id);
 
-            if (!$result['sent'] && $result['error'] === 'too_many') {
-                throw ValidationException::withMessages(['phone' => 'Please wait ' . $result['retry_after'] . ' seconds before asking for another code.']);
+            if (! $result['sent'] && $result['error'] === 'too_many') {
+                throw ValidationException::withMessages(['phone' => 'Please wait '.$result['retry_after'].' seconds before asking for another code.']);
             }
         }
 
         $request->session()->put('password_reset_phone', $data['phone']);
 
-        return redirect()->route('password.reset')->with('status', 'If ' . Phone::mask($data['phone']) . ' has an account, a reset code has been sent to it.');
+        return redirect()->route('password.reset')->with('status', 'If '.Phone::mask($data['phone']).' has an account, a reset code has been sent to it.');
     }
 
     public function edit(Request $request): View|RedirectResponse
     {
-        if (!$request->session()->has('password_reset_phone')) {
+        if (! $request->session()->has('password_reset_phone')) {
             return redirect()->route('password.request');
         }
 
@@ -60,7 +60,7 @@ class PasswordResetController extends Controller
     public function update(Request $request, PhoneOtpService $otp): RedirectResponse
     {
         $phone = $request->session()->get('password_reset_phone');
-        if (!$phone) {
+        if (! $phone) {
             return redirect()->route('password.request');
         }
 
@@ -71,7 +71,7 @@ class PasswordResetController extends Controller
 
         $user = User::where('phone', $phone)->first();
 
-        if (!$user || !$otp->verify($phone, PhoneOtpService::PURPOSE_RESET, $data['code'])) {
+        if (! $user || ! $otp->verify($phone, PhoneOtpService::PURPOSE_RESET, $data['code'])) {
             throw ValidationException::withMessages(['code' => 'That code is wrong or has expired. Request a new one.']);
         }
 

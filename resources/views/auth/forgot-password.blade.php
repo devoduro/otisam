@@ -5,7 +5,7 @@
 @section('intro', 'Enter your mobile number and we will text you a reset code.')
 
 @section('form')
-<form method="POST" action="{{ route('password.send') }}" class="space-y-4">
+<form method="POST" action="{{ route('password.send') }}" class="space-y-5" data-auth-form>
     @csrf
     <x-input name="phone" type="tel" label="Mobile number" required inputmode="tel" autocomplete="tel" placeholder="024 123 4567" autofocus />
     <x-button full>Send code</x-button>
@@ -13,5 +13,5 @@
 @endsection
 
 @section('after')
-<p class="mt-6 text-center text-sm text-muted"><a href="{{ route('login') }}" class="font-semibold">Back to sign in</a></p>
+<a href="{{ route('login') }}" class="font-semibold">Back to sign in</a>
 @endsection

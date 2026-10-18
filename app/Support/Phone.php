@@ -20,10 +20,10 @@ class Phone
             return null;
         }
         if (str_starts_with($digits, '233') && strlen($digits) >= 12) {
-            return '0' . substr($digits, 3);
+            return '0'.substr($digits, 3);
         }
 
-        return strlen($digits) === 9 ? '0' . $digits : $digits;
+        return strlen($digits) === 9 ? '0'.$digits : $digits;
     }
 
     public static function isGhanaMobile(?string $phone): bool
@@ -36,6 +36,6 @@ class Phone
     {
         $phone = (string) self::clean($phone);
 
-        return strlen($phone) < 7 ? '***' : substr($phone, 0, 3) . str_repeat('*', strlen($phone) - 6) . substr($phone, -3);
+        return strlen($phone) < 7 ? '***' : substr($phone, 0, 3).str_repeat('*', strlen($phone) - 6).substr($phone, -3);
     }
 }

@@ -81,7 +81,7 @@ class TeacherController extends Controller
             'capabilities.*' => [Rule::in(Permissions::TEACHER_CAPABILITIES)],
         ]);
 
-        if (!$teacher->isApprovedTeacher()) {
+        if (! $teacher->isApprovedTeacher()) {
             return back()->with('error', 'Approve the teacher before granting capabilities.');
         }
 

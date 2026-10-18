@@ -13,7 +13,7 @@ class EnsurePhoneVerified
     {
         $user = $request->user();
 
-        if ($user && !$user->isStaff() && $user->phone_verified_at === null) {
+        if ($user && ! $user->isStaff() && $user->phone_verified_at === null) {
             return redirect()->route('verify.phone');
         }
 

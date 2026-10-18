@@ -7,7 +7,7 @@
     <x-flash />
 
     <section class="rounded-2xl bg-primary-900 p-6 text-white sm:p-8">
-        <p class="text-sm font-semibold text-accent-400">{{ $profile?->class_level }}{{ $profile?->programme ? ' · ' . $profile->programme : '' }}</p>
+        <p class="text-sm font-semibold text-accent-400">{{ $profile?->classLevel?->name }}{{ $profile?->programme ? ' · ' . $profile->programme->name : '' }}</p>
         <h1 class="mt-1 text-2xl font-extrabold sm:text-3xl">Hello, {{ \Illuminate\Support\Str::before($user->name, ' ') ?: $user->name }}</h1>
         <p class="mt-2 max-w-xl text-primary-100">Your account is ready. Subjects, practice questions and past-question solutions are being added. You will see them here as soon as they are published.</p>
     </section>
@@ -15,7 +15,12 @@
     <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div class="rounded-xl border border-gray-200 bg-white p-5">
             <h2 class="font-bold text-primary-900">Subscription</h2>
-            <p class="mt-1 text-sm text-muted">Free account. Premium plans open when the library launches.</p>
+            @if ($subscription)
+                <p class="mt-1 text-sm"><span class="font-semibold text-green-800">Premium</span> until {{ $subscription->accessEndsAt()->format('j M Y') }}</p>
+            @else
+                <p class="mt-1 text-sm text-muted">Free account. Premium unlocks worked solutions and premium notes.</p>
+            @endif
+            <a href="{{ route('account.subscription') }}" class="mt-3 inline-block text-sm font-semibold">{{ $subscription ? 'Manage' : 'See plans' }}</a>
         </div>
         <div class="rounded-xl border border-gray-200 bg-white p-5">
             <h2 class="font-bold text-primary-900">Your details</h2>

@@ -5,33 +5,69 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-/* Design tokens (BLUEPRINT §9.3). Change the brand here, not in templates. */
+/*
+| Design tokens, matched to jhs_portal: Poppins, the sky-blue "primary" scale, slate sidebar,
+| the two-tone stat-tile palette and the purple sign-in brand. Change the look here.
+*/
 @theme {
-    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
-    --color-primary-50: #eef2f9;
-    --color-primary-100: #dbe4f3;
-    --color-primary-200: #b7c8e6;
-    --color-primary-500: #2f4f8f;
-    --color-primary-600: #1e3a8a;
-    --color-primary-700: #172f6d;
-    --color-primary-900: #13294b;
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f2fe;
+    --color-primary-200: #bae6fd;
+    --color-primary-300: #7dd3fc;
+    --color-primary-400: #38bdf8;
+    --color-primary-500: #0ea5e9;
+    --color-primary-600: #0284c7;
+    --color-primary-700: #0369a1;
+    --color-primary-800: #075985;
+    --color-primary-900: #0c4a6e;
 
-    --color-accent-400: #d8b54a;
-    --color-accent-500: #c9a227;
-    --color-accent-600: #a8861c;
+    /* Sign-in panel (jhs_portal auth-split) */
+    --color-brand-50: #f4f0fb;
+    --color-brand-100: #e9e1f7;
+    --color-brand-300: #c4b1ea;
+    --color-brand-400: #a78bdf;
+    --color-brand-500: #8b6bd1;
+    --color-brand-600: #6a4aa8;
+    --color-brand-700: #5a3d93;
+    --color-brand-800: #462f73;
 
-    --color-ink: #111827;
-    --color-muted: #4b5563;
-    --color-canvas: #f7f8fa;
+    /* Stat tiles (jhs_portal x-stat-tile) */
+    --color-tile-blue: #42a5dc;
+    --color-tile-blue-dark: #2c8fc6;
+    --color-tile-green: #8cc152;
+    --color-tile-green-dark: #74a83b;
+    --color-tile-orange: #f5922f;
+    --color-tile-orange-dark: #de7a14;
+    --color-tile-red: #da4453;
+    --color-tile-red-dark: #c12f3e;
+    --color-tile-purple: #967adc;
+    --color-tile-purple-dark: #7d62c4;
+    --color-tile-slate: #5b6f8f;
+    --color-tile-slate-dark: #4a5c7a;
+
+    /* Older token names still used in a few templates */
+    --color-accent-400: #a0d468;
+    --color-accent-500: #8cc152;
+    --color-accent-600: #74a83b;
+    --color-ink: #1f2937;
+    --color-muted: #6b7280;
+    --color-canvas: #f9fafb;
 }
 
-@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
-@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2') format('woff2'); font-weight: 700 800; font-display: swap; }
-
 @layer base {
-    body { @apply bg-canvas text-ink antialiased; }
-    :focus-visible { outline: 3px solid var(--color-accent-500); outline-offset: 2px; }
+    body { @apply bg-gray-50 text-gray-800 antialiased; }
     a { @apply text-primary-600; }
+    a:hover { @apply text-primary-700; }
+    :focus-visible { outline: 3px solid var(--color-primary-400); outline-offset: 2px; }
+    [x-cloak] { display: none !important; }
+}
+
+@layer components {
+    /* The green logo badge and gradient text from jhs_portal. */
+    .gradient-bg { background: linear-gradient(135deg, #0c9b13 0%, #0a6107 100%); }
+    .gradient-text { background: linear-gradient(135deg, #0c9c24 0%, #064b07 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    /* Standard white panel used across jhs_portal pages. */
+    .panel { @apply rounded-md bg-white shadow-sm ring-1 ring-gray-100; }
 }

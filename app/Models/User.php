@@ -5,6 +5,8 @@ namespace App\Models;
 use App\Enums\AccountType;
 use App\Enums\UserStatus;
 use App\Support\Permissions;
+use App\Support\Phone;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,8 +15,8 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasRoles;
+    /** @use HasFactory<UserFactory> */
+    use HasFactory, HasRoles, Notifiable;
 
     /**
      * `account_type`, `status` and the verification timestamps are deliberately not fillable:
@@ -104,7 +106,7 @@ class User extends Authenticatable
             return static::where('email', mb_strtolower($login))->first();
         }
 
-        $phone = \App\Support\Phone::clean($login);
+        $phone = Phone::clean($login);
 
         return $phone ? static::where('phone', $phone)->first() : null;
     }

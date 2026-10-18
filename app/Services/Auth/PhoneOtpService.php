@@ -20,11 +20,10 @@ use Illuminate\Support\Facades\RateLimiter;
 class PhoneOtpService
 {
     public const PURPOSE_VERIFY = 'verify';
+
     public const PURPOSE_RESET = 'reset';
 
-    public function __construct(private readonly Notifier $notifier)
-    {
-    }
+    public function __construct(private readonly Notifier $notifier) {}
 
     /**
      * @return array{sent: bool, retry_after: int, error: ?string} error is "too_many" or "gateway"
@@ -68,7 +67,7 @@ class PhoneOtpService
 
         $result = $this->notifier->smsNow($phone, $message, "otp.{$purpose}", 'security', $userId, storedBody: "[{$purpose} code]");
 
-        if (!$result->success) {
+        if (! $result->success) {
             return ['sent' => false, 'retry_after' => 0, 'error' => 'gateway'];
         }
 
@@ -88,11 +87,11 @@ class PhoneOtpService
         $record = PhoneVerification::where('phone', $phone)->where('purpose', $purpose)
             ->whereNull('consumed_at')->latest('id')->first();
 
-        if (!$record || $record->expires_at->isPast() || $record->attempts >= (int) config('platform.otp.max_attempts')) {
+        if (! $record || $record->expires_at->isPast() || $record->attempts >= (int) config('platform.otp.max_attempts')) {
             return false;
         }
 
-        if (!Hash::check($code, $record->code_hash)) {
+        if (! Hash::check($code, $record->code_hash)) {
             $record->increment('attempts');
 
             return false;

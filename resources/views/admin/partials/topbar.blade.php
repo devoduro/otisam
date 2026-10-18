@@ -16,7 +16,10 @@
     </div>
 
     <div class="topbar-right d-flex align-items-center gap-2 gap-sm-3">
-        @yield('actions')
+        @hasSection('actions')
+            {{-- Wide screens only; narrower screens get the same buttons above the content (layouts/admin). --}}
+            <div class="d-none d-xxl-flex align-items-center gap-2">@yield('actions')</div>
+        @endif
 
         <a href="{{ route('home') }}" target="_blank" rel="noopener" class="btn-visit-site d-none d-lg-flex">
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>

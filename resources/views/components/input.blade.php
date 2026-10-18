@@ -1,4 +1,4 @@
-{{-- Text field with label, hint and error, adapted from jhs_portal's x-input. --}}
+{{-- Text field with label, hint and error, adapted from jhs_portal's x-input and sign-in fields. --}}
 @props([
     'type' => 'text',
     'name',
@@ -13,31 +13,38 @@
     $id = $id ?? $name;
     $hasError = $errors->has($name);
     $describedBy = trim(($hint ? "{$id}-hint " : '') . ($hasError ? "{$id}-error" : ''));
+    $isPassword = $type === 'password';
 @endphp
 
 <div>
     @if ($label)
-        <label for="{{ $id }}" class="mb-1 block text-sm font-semibold text-ink">
+        <label for="{{ $id }}" class="mb-1.5 block text-sm font-medium text-gray-800">
             {{ $label }}
-            @unless ($required)<span class="font-normal text-muted">(optional)</span>@endunless
+            @unless ($required)<span class="font-normal text-gray-500">(optional)</span>@endunless
         </label>
     @endif
 
-    <input
-        type="{{ $type }}"
-        name="{{ $name }}"
-        id="{{ $id }}"
-        @if ($type !== 'password') value="{{ old($name, $value) }}" @endif
-        @if ($required) required @endif
-        @if ($hasError) aria-invalid="true" @endif
-        @if ($describedBy) aria-describedby="{{ $describedBy }}" @endif
-        {{ $attributes->merge(['class' => 'block w-full rounded-lg border bg-white px-3 py-2.5 text-base shadow-sm focus:outline-none focus:ring-2 ' . ($hasError ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:border-primary-600 focus:ring-primary-100')]) }}
-    />
+    <div class="relative">
+        <input
+            type="{{ $type }}"
+            name="{{ $name }}"
+            id="{{ $id }}"
+            @unless ($isPassword) value="{{ old($name, $value) }}" @endunless
+            @if ($required) required @endif
+            @if ($hasError) aria-invalid="true" @endif
+            @if ($describedBy) aria-describedby="{{ $describedBy }}" @endif
+            {{ $attributes->merge(['class' => 'block w-full rounded-md border bg-white px-3.5 py-3 text-sm shadow-sm focus:outline-none focus:ring-2 '.($isPassword ? 'pr-11 ' : '').($hasError ? 'border-red-400 focus:border-red-500 focus:ring-red-100' : 'border-gray-300 focus:border-primary-500 focus:ring-primary-100')]) }}
+        />
+        @if ($isPassword)
+            <button type="button" data-toggle-password="{{ $id }}" aria-label="Show password"
+                    class="absolute inset-y-0 right-0 flex w-11 items-center justify-center text-gray-400 hover:text-gray-600"><i class="fas fa-eye" aria-hidden="true"></i></button>
+        @endif
+    </div>
 
     @if ($hint)
-        <p id="{{ $id }}-hint" class="mt-1 text-sm text-muted">{{ $hint }}</p>
+        <p id="{{ $id }}-hint" class="mt-1 text-xs text-gray-500">{{ $hint }}</p>
     @endif
     @error($name)
-        <p id="{{ $id }}-error" class="mt-1 text-sm font-medium text-red-700">{{ $message }}</p>
+        <p id="{{ $id }}-error" class="mt-1 text-sm font-medium text-red-600">{{ $message }}</p>
     @enderror
 </div>

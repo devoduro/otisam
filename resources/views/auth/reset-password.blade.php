@@ -7,7 +7,7 @@
 @endsection
 
 @section('form')
-<form method="POST" action="{{ route('password.update') }}" class="space-y-4">
+<form method="POST" action="{{ route('password.update') }}" class="space-y-5" data-auth-form>
     @csrf
     <x-input name="code" label="Code" required inputmode="numeric" autocomplete="one-time-code" maxlength="10" autofocus />
     <x-input name="password" type="password" label="New password" required autocomplete="new-password" hint="At least 8 characters, with letters and numbers." />

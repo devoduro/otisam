@@ -73,6 +73,94 @@
             </div>
         @endcanany
 
+        @canany(['resources.manage', 'resources.publish', 'resources.moderate', 'takedowns.manage'])
+            @php
+                $isLibrary = request()->routeIs('admin.library.*');
+                $openTakedowns = auth()->user()->can('takedowns.manage') ? \App\Models\Library\TakedownRequest::where('status', 'open')->count() : 0;
+            @endphp
+            <div class="menu-group-title">Content</div>
+            <div class="nav-group">
+                <div class="nav-item nav-dropdown-toggle {{ $isLibrary ? 'active' : '' }}" role="button" tabindex="0"
+                     aria-expanded="{{ $isLibrary ? 'true' : 'false' }}" aria-controls="library-menu">
+                    <div class="nav-item-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <span>Library</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        @if($openTakedowns > 0)<span class="nav-badge badge-warn" title="Open takedown requests">{{ $openTakedowns }}</span>@endif
+                        <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                </div>
+                <div id="library-menu" class="nav-dropdown {{ $isLibrary ? 'show' : '' }}">
+                    @canany(['resources.manage', 'resources.publish', 'resources.moderate'])
+                        <a href="{{ route('admin.library.resources.index') }}" class="nav-sub-item {{ request()->routeIs('admin.library.resources.index', 'admin.library.resources.edit', 'admin.library.resources.create') ? 'active' : '' }}">Resources</a>
+                    @endcanany
+                    @can('resources.bulk-import')
+                        <a href="{{ route('admin.library.resources.bulk') }}" class="nav-sub-item {{ request()->routeIs('admin.library.resources.bulk') ? 'active' : '' }}">Bulk upload</a>
+                    @endcan
+                    @can('resources.manage')
+                        <a href="{{ route('admin.library.settings') }}" class="nav-sub-item {{ request()->routeIs('admin.library.settings') ? 'active' : '' }}">Categories &amp; settings</a>
+                    @endcan
+                    @can('takedowns.manage')
+                        <a href="{{ route('admin.library.takedowns.index') }}" class="nav-sub-item {{ request()->routeIs('admin.library.takedowns.*') ? 'active' : '' }}">
+                            Takedown requests
+                            @if($openTakedowns > 0)<span class="nav-badge badge-warn ms-auto">{{ $openTakedowns }}</span>@endif
+                        </a>
+                    @endcan
+                </div>
+            </div>
+        @endcanany
+
+        @canany(['plans.manage', 'coupons.manage', 'payments.view', 'subscriptions.adjust'])
+            @php $isCommerce = request()->routeIs('admin.commerce.*'); @endphp
+            <div class="menu-group-title">Finance</div>
+            <div class="nav-group">
+                <div class="nav-item nav-dropdown-toggle {{ $isCommerce ? 'active' : '' }}" role="button" tabindex="0"
+                     aria-expanded="{{ $isCommerce ? 'true' : 'false' }}" aria-controls="commerce-menu">
+                    <div class="nav-item-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <span>Subscriptions</span>
+                    </div>
+                    <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div id="commerce-menu" class="nav-dropdown {{ $isCommerce ? 'show' : '' }}">
+                    @can('payments.view')
+                        <a href="{{ route('admin.commerce.payments.index') }}" class="nav-sub-item {{ request()->routeIs('admin.commerce.payments.*') ? 'active' : '' }}">Payments</a>
+                    @endcan
+                    @canany(['subscriptions.adjust', 'payments.view'])
+                        <a href="{{ route('admin.commerce.subscriptions.index') }}" class="nav-sub-item {{ request()->routeIs('admin.commerce.subscriptions.*') ? 'active' : '' }}">Subscribers</a>
+                    @endcanany
+                    @can('plans.manage')
+                        <a href="{{ route('admin.commerce.plans.index') }}" class="nav-sub-item {{ request()->routeIs('admin.commerce.plans.*') ? 'active' : '' }}">Plans</a>
+                    @endcan
+                    @can('coupons.manage')
+                        <a href="{{ route('admin.commerce.coupons.index') }}" class="nav-sub-item {{ request()->routeIs('admin.commerce.coupons.*') ? 'active' : '' }}">Coupons</a>
+                    @endcan
+                </div>
+            </div>
+        @endcanany
+
+        @canany(['curriculum.view-admin', 'curriculum.manage'])
+            @php $isCurriculum = request()->routeIs('admin.curriculum.*'); @endphp
+            <div class="menu-group-title">Academics</div>
+            <div class="nav-group">
+                <div class="nav-item nav-dropdown-toggle {{ $isCurriculum ? 'active' : '' }}" role="button" tabindex="0"
+                     aria-expanded="{{ $isCurriculum ? 'true' : 'false' }}" aria-controls="curriculum-menu">
+                    <div class="nav-item-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <span>Curriculum</span>
+                    </div>
+                    <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div id="curriculum-menu" class="nav-dropdown {{ $isCurriculum ? 'show' : '' }}">
+                    <a href="{{ route('admin.curriculum.versions.index') }}" class="nav-sub-item {{ request()->routeIs('admin.curriculum.versions.*', 'admin.curriculum.tree.*') ? 'active' : '' }}">Versions &amp; topics</a>
+                    <a href="{{ route('admin.curriculum.subjects.index') }}" class="nav-sub-item {{ request()->routeIs('admin.curriculum.subjects.*') ? 'active' : '' }}">Subjects</a>
+                    <a href="{{ route('admin.curriculum.programmes.index') }}" class="nav-sub-item {{ request()->routeIs('admin.curriculum.programmes.*') ? 'active' : '' }}">Programmes</a>
+                    <a href="{{ route('admin.curriculum.levels.index') }}" class="nav-sub-item {{ request()->routeIs('admin.curriculum.levels.*') ? 'active' : '' }}">Levels &amp; classes</a>
+                </div>
+            </div>
+        @endcanany
+
         @can('audit.view')
             <div class="menu-group-title">System</div>
             <a href="{{ route('admin.audit.index') }}" class="nav-item {{ request()->routeIs('admin.audit.*') ? 'active' : '' }}">

@@ -24,13 +24,11 @@ class CurriculumImporter
 
     public const MAX_ROWS = 3000;
 
-    public function __construct(private readonly CurriculumTree $tree)
-    {
-    }
+    public function __construct(private readonly CurriculumTree $tree) {}
 
     /**
      * @return array{rows: array<int, array<string, mixed>>, errors: array<int, string>, warnings: array<int, string>}
-     *         rows are keyed by CSV line number
+     *                                                                                                                 rows are keyed by CSV line number
      */
     public function validate(string $csvPath, CurriculumVersion $version, Subject $subject): array
     {
@@ -55,7 +53,7 @@ class CurriculumImporter
         if ($missing) {
             fclose($handle);
 
-            return ['rows' => [], 'errors' => [1 => 'Missing column(s): ' . implode(', ', $missing) . '. Download the template for the expected columns.'], 'warnings' => []];
+            return ['rows' => [], 'errors' => [1 => 'Missing column(s): '.implode(', ', $missing).'. Download the template for the expected columns.'], 'warnings' => []];
         }
 
         $existingCodes = CurriculumNode::inTree($version->id, $subject->id)->whereNotNull('code')->pluck('depth', 'code')->all();
@@ -74,7 +72,7 @@ class CurriculumImporter
                 continue; // blank line
             }
             if (count($rows) >= self::MAX_ROWS) {
-                $errors[$line] = 'Too many rows: import at most ' . self::MAX_ROWS . ' at a time.';
+                $errors[$line] = 'Too many rows: import at most '.self::MAX_ROWS.' at a time.';
                 break;
             }
 
@@ -91,8 +89,8 @@ class CurriculumImporter
 
             $typeInput = mb_strtolower($r['type'] ?? '');
             $type = in_array($typeInput, $typeKeys, true) ? $typeInput : ($typeLabels[$typeInput] ?? str_replace([' ', '-'], '_', $typeInput));
-            if (!in_array($type, $typeKeys, true)) {
-                $problems[] = "type \"{$r['type']}\" is not one of: " . implode(', ', $typeKeys);
+            if (! in_array($type, $typeKeys, true)) {
+                $problems[] = "type \"{$r['type']}\" is not one of: ".implode(', ', $typeKeys);
             }
 
             $code = ($r['code'] ?? '') !== '' ? $r['code'] : null;
@@ -117,14 +115,14 @@ class CurriculumImporter
                     $problems[] = "parent_code {$parentCode} was not found earlier in the file or in the tree";
                 }
                 if ($depth > CurriculumNode::MAX_DEPTH) {
-                    $problems[] = 'too deep (at most ' . (CurriculumNode::MAX_DEPTH + 1) . ' levels)';
+                    $problems[] = 'too deep (at most '.(CurriculumNode::MAX_DEPTH + 1).' levels)';
                 }
             }
 
             $classLevelId = null;
             if (($r['class'] ?? '') !== '') {
                 $classLevelId = $classLevels[mb_strtolower($r['class'])] ?? null;
-                if (!$classLevelId) {
+                if (! $classLevelId) {
                     $problems[] = "class \"{$r['class']}\" does not exist for {$version->educationLevel->name}";
                 }
             }
@@ -138,7 +136,7 @@ class CurriculumImporter
                 $errors[$line] = implode('; ', $problems);
             }
 
-            if ($code !== null && !isset($fileCodes[$code])) {
+            if ($code !== null && ! isset($fileCodes[$code])) {
                 $fileCodes[$code] = $depth;
             }
 
@@ -156,7 +154,7 @@ class CurriculumImporter
 
         fclose($handle);
 
-        if (!$rows && !$errors) {
+        if (! $rows && ! $errors) {
             $errors[2] = 'The file has a header but no rows.';
         }
 

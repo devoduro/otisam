@@ -3,6 +3,8 @@
 namespace Tests;
 
 use App\Services\Sms\LogSmsGateway;
+use Database\Seeders\CurriculumStructureSeeder;
+use Database\Seeders\LibrarySeeder;
 use Database\Seeders\RolesAndPermissionsSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
@@ -17,7 +19,7 @@ abstract class TestCase extends BaseTestCase
         parent::setUp();
 
         $this->withoutVite();
-        $this->seed(RolesAndPermissionsSeeder::class);
+        $this->seed([RolesAndPermissionsSeeder::class, CurriculumStructureSeeder::class, LibrarySeeder::class]);
         LogSmsGateway::$sent = [];
         RateLimiter::clear('otp');
     }

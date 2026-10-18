@@ -14,7 +14,7 @@ class StaffSessionTimeout
     {
         $user = $request->user();
 
-        if (!$user || !$user->isStaff()) {
+        if (! $user || ! $user->isStaff()) {
             return $next($request);
         }
 

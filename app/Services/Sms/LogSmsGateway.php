@@ -25,6 +25,6 @@ class LogSmsGateway implements SmsGateway
 
         Log::info('SMS (log gateway)', ['phone' => Phone::mask($phone), 'message' => $message]);
 
-        return new SmsResult(true, '200', 'Logged', 'log-' . count(self::$sent));
+        return new SmsResult(true, '200', 'Logged', 'log-'.count(self::$sent));
     }
 }

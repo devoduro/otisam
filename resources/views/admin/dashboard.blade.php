@@ -24,6 +24,14 @@
     @endforeach
 </div>
 
+@if ($commerce)
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-xl-3"><div class="stat-tile"><div class="stat-label">Premium subscribers</div><div class="stat-value">{{ number_format($commerce['subscribers']) }}</div><div class="stat-hint">with access right now</div></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-tile"><div class="stat-label">Revenue (30 days)</div><div class="stat-value">{{ \App\Support\Money::format($commerce['revenue30']) }}</div><div class="stat-hint"><a href="{{ route('admin.commerce.payments.index', ['status' => 'success']) }}">Payments</a></div></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-tile"><div class="stat-label">Payments waiting &gt; 30 min</div><div class="stat-value {{ $commerce['pending'] ? 'text-warning' : '' }}">{{ $commerce['pending'] }}</div><div class="stat-hint">re-checked every 10 minutes</div></div></div>
+    </div>
+@endif
+
 <div class="row g-3">
     @can('teachers.verify')
         <div class="col-lg-6">
@@ -69,5 +77,5 @@
     @endcan
 </div>
 
-<p class="small text-muted mt-4 mb-0">Payments, content and exam figures will appear here as those modules go live.</p>
+<p class="small text-muted mt-4 mb-0">Exam and content figures will appear here as those modules go live.</p>
 @endsection

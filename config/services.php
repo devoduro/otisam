@@ -35,7 +35,6 @@ return [
         ],
     ],
 
-
     // Which gateway sends SMS: "speso" (production) or "log" (development and tests).
     'sms_provider' => env('SMS_PROVIDER', 'log'),
 
@@ -44,6 +43,17 @@ return [
         'api_key' => env('SPESO_API_KEY'),
         'sender_id' => env('SPESO_SMS_SENDER_ID', 'OTISAM'),
         'base_url' => env('SPESO_BASE_URL', 'https://business.speso.co/api/v1'),
+    ],
+
+    // Paystack. Keys live in .env only; never in the database or front-end code.
+    'paystack' => [
+        'public_key' => env('PAYSTACK_PUBLIC_KEY'),
+        'secret_key' => env('PAYSTACK_SECRET_KEY'),
+        'base_url' => env('PAYSTACK_BASE_URL', 'https://api.paystack.co'),
+        // Optional allowlist of webhook source IPs (comma separated). Empty = signature check only.
+        'webhook_ips' => array_filter(array_map('trim', explode(',', (string) env('PAYSTACK_WEBHOOK_IPS', '')))),
+        // Paystack requires an email; students without one get user{id}@this domain on the transaction.
+        'placeholder_email_domain' => env('PAYSTACK_PLACEHOLDER_EMAIL_DOMAIN', 'students.otisam.app'),
     ],
 
 ];

@@ -30,7 +30,7 @@ class RoleController extends Controller
 
     public function create(): View
     {
-        return view('admin.roles.form', ['role' => new Role(), 'rolePermissions' => []]);
+        return view('admin.roles.form', ['role' => new Role, 'rolePermissions' => []]);
     }
 
     public function store(Request $request): RedirectResponse

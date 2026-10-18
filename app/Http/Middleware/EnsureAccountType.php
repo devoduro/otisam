@@ -17,11 +17,11 @@ class EnsureAccountType
     {
         $user = $request->user();
 
-        if (!$user) {
+        if (! $user) {
             return redirect()->guest(route('login'));
         }
 
-        if (!in_array($user->account_type->value, $types, true)) {
+        if (! in_array($user->account_type->value, $types, true)) {
             if ($request->expectsJson()) {
                 abort(403);
             }

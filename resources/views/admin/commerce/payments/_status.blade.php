@@ -1,0 +1,1 @@
+<span class="badge text-bg-{{ ['success' => 'success', 'pending' => 'warning', 'initiated' => 'light border', 'failed' => 'danger', 'abandoned' => 'secondary', 'refunded' => 'dark'][$status] ?? 'light' }}">{{ \App\Models\Commerce\Payment::STATUSES[$status] ?? $status }}</span>

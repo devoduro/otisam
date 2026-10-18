@@ -38,6 +38,18 @@ return [
             'report' => false,
         ],
 
+        // Library documents. Private and never served directly (`serve` is off): every read goes
+        // through ResourceFileController and the access policy. Swap the driver for S3-compatible
+        // storage later without code changes.
+        'library' => [
+            'driver' => env('LIBRARY_DISK_DRIVER', 'local'),
+            'root' => storage_path('app/private/library'),
+            'serve' => false,
+            'visibility' => 'private',
+            'throw' => true,
+            'report' => true,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

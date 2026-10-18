@@ -6,6 +6,8 @@ use App\Enums\AccountType;
 use App\Enums\TeacherVerificationStatus;
 use App\Http\Controllers\Controller;
 use App\Models\AuditLog;
+use App\Models\Commerce\Payment;
+use App\Models\Commerce\Subscription;
 use App\Models\NotificationMessage;
 use App\Models\TeacherProfile;
 use App\Models\User;
@@ -34,6 +36,11 @@ class DashboardController extends Controller
                 'pendingTeachers' => $pendingTeachers,
                 'newStudentsWeek' => User::where('account_type', AccountType::Student->value)->where('created_at', '>=', now()->subWeek())->count(),
             ],
+            'commerce' => auth()->user()->can('payments.view') ? [
+                'subscribers' => Subscription::current()->distinct('user_id')->count('user_id'),
+                'revenue30' => (int) Payment::where('status', 'success')->where('paid_at', '>=', now()->subDays(30))->sum('amount_minor'),
+                'pending' => Payment::whereIn('status', ['initiated', 'pending'])->where('provider', 'paystack')->where('created_at', '<', now()->subMinutes(30))->where('created_at', '>', now()->subDays(2))->count(),
+            ] : null,
             'sms' => ['sent' => (int) ($sms['sent'] ?? 0) + (int) ($sms['delivered'] ?? 0), 'failed' => (int) ($sms['failed'] ?? 0), 'queued' => (int) ($sms['queued'] ?? 0)],
             'teacherQueue' => auth()->user()->can('teachers.verify')
                 ? User::where('account_type', AccountType::Teacher->value)

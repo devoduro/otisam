@@ -23,9 +23,7 @@ use Illuminate\Database\QueryException;
  */
 class Notifier
 {
-    public function __construct(private readonly SmsGateway $sms)
-    {
-    }
+    public function __construct(private readonly SmsGateway $sms) {}
 
     /** Notify a user by SMS (if they have a phone) and email (if they have one). */
     public function toUser(User $user, string $eventKey, string $category, string $subject, string $body, ?string $idempotencyKey = null): void
@@ -95,7 +93,7 @@ class Notifier
             'attempts' => $message->attempts + 1,
             'status' => $result->success ? 'sent' : 'failed',
             'provider_message_id' => $result->providerMessageId,
-            'last_error' => $result->success ? null : mb_substr($result->code . ': ' . $result->message, 0, 490),
+            'last_error' => $result->success ? null : mb_substr($result->code.': '.$result->message, 0, 490),
             'sent_at' => $result->success ? now() : null,
         ])->save();
     }
