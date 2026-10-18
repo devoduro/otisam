@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Enums;
+
+enum UserStatus: string
+{
+    case Active = 'active';
+    case Suspended = 'suspended';
+    case Deactivated = 'deactivated';
+
+    public function label(): string
+    {
+        return ucfirst($this->value);
+    }
+}

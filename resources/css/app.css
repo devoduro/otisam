@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Design tokens (BLUEPRINT §9.3). Change the brand here, not in templates. */
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+    --color-primary-50: #eef2f9;
+    --color-primary-100: #dbe4f3;
+    --color-primary-200: #b7c8e6;
+    --color-primary-500: #2f4f8f;
+    --color-primary-600: #1e3a8a;
+    --color-primary-700: #172f6d;
+    --color-primary-900: #13294b;
+
+    --color-accent-400: #d8b54a;
+    --color-accent-500: #c9a227;
+    --color-accent-600: #a8861c;
+
+    --color-ink: #111827;
+    --color-muted: #4b5563;
+    --color-canvas: #f7f8fa;
+}
+
+@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Plus Jakarta Sans'; src: url('../../public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2') format('woff2'); font-weight: 700 800; font-display: swap; }
+
+@layer base {
+    body { @apply bg-canvas text-ink antialiased; }
+    :focus-visible { outline: 3px solid var(--color-accent-500); outline-offset: 2px; }
+    a { @apply text-primary-600; }
+}

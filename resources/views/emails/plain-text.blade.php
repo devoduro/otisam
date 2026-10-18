@@ -1,0 +1,3 @@
+{{ $text }}
+
+— {{ config('app.name') }}

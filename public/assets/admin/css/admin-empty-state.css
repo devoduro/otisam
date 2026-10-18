@@ -1,0 +1,83 @@
+/* 
+    ZIEXAM AI - EMPTY STATE COMPONENT
+    Used for tables and lists with no results.
+*/
+
+:root {
+    --exam-bg: #ffffff;
+    --exam-border: #e2e8f0;
+    --exam-text: #0f172a;
+    --exam-text-muted: #64748b;
+    --exam-primary: #059669;
+    --exam-primary-soft: rgba(5, 150, 105, 0.1);
+}
+
+[data-bs-theme="dark"] {
+    --exam-bg: #1e293b;
+    --exam-border: #334155;
+    --exam-text: #f1f5f9;
+    --exam-text-muted: #94a3b8;
+    --exam-primary: #10b981;
+    --exam-primary-soft: rgba(16, 185, 129, 0.15);
+}
+
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--exam-bg);
+    border-top: 1px solid var(--exam-border);
+}
+
+/* Icon Container */
+.empty-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--exam-primary-soft);
+    color: var(--exam-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    color: var(--exam-text-muted);
+    max-width: 450px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.empty-actions {
+    margin-top: 10px;
+}
+
+[data-bs-theme="dark"] .empty-state-container h5 {
+    color: var(--exam-text) !important;
+}
+
+.exam-list-container .empty-state-container {
+    border-bottom: none;
+}
+
+@media (max-width: 991px) {
+    .exam-list-container {
+
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+    }
+    .empty-state-container {
+        border: 1px solid var(--exam-border);
+        border-radius: var(--exam-radius);
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+}

@@ -1,0 +1,144 @@
+/* 
+-------------------------------------------------------------------------
+1. CORE CONFIGURATION & LAYOUT
+-------------------------------------------------------------------------
+*/
+
+:root {
+    /* --- BRAND PALETTE --- */
+    --zi-primary-900: #022c22;
+    --zi-primary-800: #064e3b;
+    --zi-primary-700: #065f46;
+    --zi-primary-100: #d1fae5;
+    --zi-primary-50:  #ecfdf5;
+
+    /* --- SIGNALS --- */
+    --zi-live: #10b981;
+    --zi-warn: #f59e0b;
+    --zi-risk: #e11d48;
+    --zi-info: #3b82f6;
+    --zi-purple: #8b5cf6;
+    
+    /* --- SURFACES --- */
+    --zi-bg-body: #F8FAFC;
+    --zi-bg-card: #FFFFFF;
+    --zi-bg-hover: #F1F5F9;
+    --zi-border-color: #e2e8f0;
+    
+    /* --- TYPOGRAPHY --- */
+    --zi-text-main: #0f172a;
+    --zi-text-body: #334155;
+    --zi-text-muted: #64748b;
+    
+    /* --- DIMENSIONS --- */
+    --sb-w: 270px;
+    --sb-w-collapsed: 80px;
+    --head-h: 70px;
+    --radius: 16px;
+    --trans-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* --- SHADOWS --- */
+    --zi-shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    --zi-shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+
+    /* --- UI --- */
+    --zi-toggle-bg: #cbd5e1;
+    --zi-toggle-circle: #ffffff;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--zi-bg-body);
+    color: var(--zi-text-body);
+    font-size: 0.925rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+[data-bs-theme="dark"] {
+    --zi-bg-body: #0f172a;
+    --zi-bg-card: #1e293b;
+    --zi-bg-hover: #334155;
+    --zi-border-color: #334155;
+    --zi-text-main: #f8fafc;
+    --zi-text-body: #cbd5e1;
+    --zi-text-muted: #94a3b8;
+    --zi-shadow-1: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --zi-primary-50: rgba(6, 78, 59, 0.5);
+    --zi-primary-900: #022c22;
+    --zi-toggle-bg: #475569;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.2s; }
+ul { list-style: none; padding: 0; margin: 0; }
+button { outline: none; }
+
+/* --- APP SHELL --- */
+.app-layout { display: flex; min-height: 100vh; position: relative; }
+
+/* Mobile Overlay */
+.sidebar-overlay {
+    position: fixed; inset: 0; 
+    background: rgba(0,0,0,0.6);
+    z-index: 1040;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.3s; 
+    backdrop-filter: blur(2px);
+}
+.sidebar-overlay.show { opacity: 1; visibility: visible; }
+
+/* Main Content Base */
+.main-content {
+    flex: 1;
+    display: flex; flex-direction: column;
+    /* Using margin-inline-start instead of margin-left for RTL compatibility */
+    margin-inline-start: var(--sb-w);
+    width: calc(100% - var(--sb-w));
+    transition: margin-inline-start var(--trans-speed), width var(--trans-speed);
+}
+
+.content-pad {
+    padding: 2rem;
+    width: 100%;
+    animation: fadeIn 0.5s ease-out;
+    padding-top: calc(var(--head-h) + 2rem);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utilities */
+[data-bs-theme="dark"] .text-dark { color: var(--zi-text-main) !important; }
+[data-bs-theme="dark"] .text-muted { color: var(--zi-text-muted) !important; }
+[data-bs-theme="dark"] .bg-light { background-color: var(--zi-bg-hover) !important; color: var(--zi-text-main) !important; }
+
+
+/* Sidebar Collapse State */
+.sidebar-collapsed .main-content {
+    margin-inline-start: var(--sb-w-collapsed);
+    width: calc(100% - var(--sb-w-collapsed));
+}
+
+/* Ensure the Fixed Topbar follows the main content wrapper transition */
+.sidebar-collapsed .topbar {
+    /* Using inset-inline-start instead of left for RTL compatibility */
+    inset-inline-start: var(--sb-w-collapsed);
+    width: calc(100% - var(--sb-w-collapsed));
+}
+
+/* Mobile Reset */
+@media (max-width: 991px) {
+    .main-content { 
+        margin-inline-start: 0 !important; 
+        width: 100% !important; 
+    }
+    .content-pad { 
+        padding: 1.25rem; 
+        padding-top: calc(var(--head-h) + 1.25rem); 
+    }
+}

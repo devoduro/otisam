@@ -1,0 +1,168 @@
+/* 
+    Admin Dashboard Styles
+    Context: Overview Page
+*/
+
+/* --- Welcome Section --- */
+.welcome-wrapper {
+    min-height: 60vh;
+}
+
+.welcome-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/* --- KPI & Pulse Animation --- */
+.kpi-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.kpi-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--zi-text-main);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.kpi-trend {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.live-pulse-wrapper {
+    width: 10px;
+    height: 10px;
+    top: -2px;
+    position: relative;
+    display: flex;
+}
+
+.pulse-anim {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #198754;
+    opacity: 0.5;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pulse-static {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #198754;
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* --- Hero Card (Live Exam) --- */
+.live-indicator-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: pulse-red 3s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* --- Analytics & Charts --- */
+.legend-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.legend-box.attendance { background-color: #cbd5e1; }
+.legend-box.pass { background-color: var(--zi-primary-800); }
+
+.chart-bar-group {
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.bar-attendance {
+    background-color: #cbd5e1;
+    opacity: 1;
+}
+[data-bs-theme="dark"] .bar-attendance { background-color: #475569; }
+
+.bar-pass {
+    background-color: var(--zi-primary-800);
+}
+[data-bs-theme="dark"] .bar-pass { background-color: var(--zi-live); }
+
+.chart-group.current .bar-pass {
+    background-color: var(--zi-primary-900);
+    box-shadow: 0 0 10px rgba(6, 78, 59, 0.2);
+}
+[data-bs-theme="dark"] .chart-group.current .bar-pass {
+    background-color: #34d399;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+}
+
+.chart-month-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--zi-text-body);
+    margin-top: 12px;
+}
+
+/* --- Report Lists --- */
+.report-list { display: flex; flex-direction: column; }
+
+.bg-icon-green { background: #ecfdf5; color: #059669; }
+.bg-icon-orange { background: #fff7ed; color: #ea580c; }
+.bg-icon-red { background: #fef2f2; color: #dc2626; }
+.bg-icon-purple { background: #faf5ff; color: #7c3aed; }
+.bg-icon-blue { background: #eff6ff; color: #2563eb; }
+
+[data-bs-theme="dark"] .bg-icon-green { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+[data-bs-theme="dark"] .bg-icon-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+[data-bs-theme="dark"] .bg-icon-red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+[data-bs-theme="dark"] .bg-icon-purple { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+[data-bs-theme="dark"] .bg-icon-blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+
+/* --- Subscription Donut --- */
+.donut-inner span.label {
+    font-size: 0.7rem;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.legend-dot.premium { background: var(--zi-purple); }
+.legend-dot.basic { background: var(--zi-bg-hover); }
+
+/* --- Risk Detection --- */
+.risk-item-box {
+    height: fit-content;
+}
