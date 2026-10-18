@@ -4,6 +4,7 @@ use App\Http\Controllers\Account;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Learn;
+use App\Http\Controllers\Public\HomeController;
 use App\Http\Controllers\Public\LibraryController;
 use App\Http\Controllers\Public\PlanController;
 use App\Http\Controllers\Public\ResourceFileController;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 /*
 | Public
 */
-Route::view('/', 'public.home')->name('home');
+Route::get('/', HomeController::class)->name('home');
 Route::view('/terms', 'public.terms')->name('terms');
 Route::view('/privacy', 'public.privacy')->name('privacy');
 

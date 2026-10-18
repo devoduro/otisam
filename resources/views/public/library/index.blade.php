@@ -5,10 +5,10 @@
 
 @section('content')
 <div class="mx-auto max-w-6xl px-4 py-8 sm:py-12">
-    <h1 class="text-3xl font-extrabold text-primary-900">Library</h1>
-    <p class="mt-1 text-muted">Past questions, worked solutions and notes. Free items open straight away; premium items show a preview.</p>
+    <h1 class="text-3xl font-extrabold text-gray-800">Library</h1>
+    <p class="mt-1 text-gray-500">Past questions, worked solutions and notes. Free items open straight away; premium items show a preview.</p>
 
-    <form method="GET" class="mt-6 grid gap-3 rounded-xl border border-gray-200 bg-white p-4 sm:grid-cols-2 lg:grid-cols-6" role="search">
+    <form method="GET" class="mt-6 grid gap-3 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 sm:grid-cols-2 lg:grid-cols-6" role="search">
         <div class="lg:col-span-2">
             <label for="q" class="mb-1 block text-sm font-semibold">Search</label>
             <input id="q" name="q" value="{{ $filters['q'] ?? '' }}" class="block w-full rounded-lg border border-gray-300 px-3 py-2.5" placeholder="e.g. quadratic, 2019">
@@ -48,10 +48,10 @@
         </div>
     </form>
 
-    <p class="mt-6 text-sm text-muted" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
+    <p class="mt-6 text-sm text-gray-500" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
 
     @if ($resources->isEmpty())
-        <p class="mt-3 rounded-xl border border-gray-200 bg-white p-6 text-muted">Nothing matches yet. Try fewer filters, or check back soon. New material is being added.</p>
+        <p class="mt-3 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6 text-gray-500">Nothing matches yet. Try fewer filters, or check back soon. New material is being added.</p>
     @else
         <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($resources as $resource)

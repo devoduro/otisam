@@ -13,7 +13,7 @@
     $relatedLinks = $resource->linkedResources->where('pivot.relation', 'related');
 @endphp
 <div class="mx-auto max-w-5xl px-4 py-8 sm:py-12">
-    <nav aria-label="Breadcrumb" class="text-sm text-muted">
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-500">
         <ol class="flex flex-wrap gap-1">
             <li><a href="{{ route('library.index') }}">Library</a> /</li>
             @if ($resource->subject)<li><a href="{{ route('library.index', ['subject' => $resource->subject->slug]) }}">{{ $resource->subject->name }}</a> /</li>@endif
@@ -27,9 +27,9 @@
 
     <div class="mt-4 flex flex-wrap items-center gap-2 text-xs font-semibold">
         <span class="rounded-full px-2 py-0.5 {{ $resource->isFree() ? 'bg-green-100 text-green-800' : 'bg-amber-100 text-amber-900' }}">{{ $resource->isFree() ? 'Free' : 'Premium' }}</span>
-        <span class="text-muted">{{ $resource->category->name }}</span>
+        <span class="text-gray-500">{{ $resource->category->name }}</span>
     </div>
-    <h1 class="mt-2 text-2xl font-extrabold text-primary-900 sm:text-3xl">{{ $resource->title }}</h1>
+    <h1 class="mt-2 text-2xl font-extrabold text-gray-800 sm:text-3xl">{{ $resource->title }}</h1>
 
     <dl class="mt-4 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
         @foreach ([
@@ -41,7 +41,7 @@
             'Copyright' => $resource->copyright_holder,
         ] as $label => $value)
             @if ($value)
-                <div class="flex gap-2"><dt class="text-muted">{{ $label }}:</dt><dd class="font-medium">{{ $value }}</dd></div>
+                <div class="flex gap-2"><dt class="text-gray-500">{{ $label }}:</dt><dd class="font-medium">{{ $value }}</dd></div>
             @endif
         @endforeach
     </dl>
@@ -51,7 +51,7 @@
     @endif
 
     {{-- Access panel --}}
-    <div class="mt-6 rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+    <div class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 sm:p-5">
         @if ($canViewFull)
             <div class="flex flex-wrap items-center gap-3">
                 @if ($canDownload)
@@ -60,17 +60,17 @@
                     <x-button :href="route('login')" variant="outline">Sign in to download</x-button>
                 @endif
                 @if ($main && ! $main->isPdf())
-                    <span class="text-sm text-muted">This {{ strtoupper($main->extension) }} file opens after download.</span>
+                    <span class="text-sm text-gray-500">This {{ strtoupper($main->extension) }} file opens after download.</span>
                 @endif
             </div>
         @else
-            <h2 class="font-bold text-primary-900">
+            <h2 class="font-bold text-gray-800">
                 @switch($lockReason)
                     @case('teachers') For approved teachers @break
                     @default Premium resource
                 @endswitch
             </h2>
-            <p class="mt-1 text-sm text-muted">
+            <p class="mt-1 text-sm text-gray-500">
                 @switch($lockReason)
                     @case('teachers') This material is available to verified teacher accounts. <a href="{{ route('teachers.register') }}">Register as a teacher</a>. @break
                     @case('premium_guest') {{ $preview ? 'You can read the preview below.' : '' }} <a href="{{ route('plans.index') }}">See premium plans</a>, or <a href="{{ route('register') }}">create a free account</a> first. @break
@@ -84,40 +84,40 @@
     @if ($readerSrc)
         <section class="mt-6" aria-label="Document reader">
             <div class="flex items-center justify-between">
-                <h2 class="font-bold text-primary-900">{{ $canViewFull ? 'Read online' : 'Preview' }}</h2>
+                <h2 class="font-bold text-gray-800">{{ $canViewFull ? 'Read online' : 'Preview' }}</h2>
             </div>
             <div class="mt-2 rounded-xl bg-gray-100 p-2 sm:p-4" data-pdf-src="{{ $readerSrc }}">
-                <p class="mb-2 text-sm text-muted" data-pdf-status aria-live="polite">Loading document…</p>
+                <p class="mb-2 text-sm text-gray-500" data-pdf-status aria-live="polite">Loading document…</p>
                 <div data-pdf-pages></div>
                 <noscript><p class="text-sm">Turn on JavaScript to read the document here.</p></noscript>
             </div>
             @unless ($canViewFull)
-                <p class="mt-2 text-sm text-muted">This is a shortened preview. The full document is part of premium access.</p>
+                <p class="mt-2 text-sm text-gray-500">This is a shortened preview. The full document is part of premium access.</p>
             @endunless
         </section>
         @vite('resources/js/pdf-viewer.js')
     @elseif (! $canViewFull)
-        <p class="mt-6 text-sm text-muted">No preview is available for this item.</p>
+        <p class="mt-6 text-sm text-gray-500">No preview is available for this item.</p>
     @endif
 
     {{-- Solutions and marking schemes --}}
     @if ($solutions->isNotEmpty() || $resource->linkedFrom->isNotEmpty())
         <section class="mt-8">
-            <h2 class="text-lg font-bold text-primary-900">Linked material</h2>
+            <h2 class="text-lg font-bold text-gray-800">Linked material</h2>
             <ul class="mt-2 grid gap-3 sm:grid-cols-2">
                 @foreach ($solutions as $linked)
                     <li>
-                        <a href="{{ route('library.show', $linked) }}" class="block rounded-xl border border-gray-200 bg-white p-4 no-underline hover:border-primary-600">
-                            <span class="text-xs font-semibold uppercase text-muted">{{ \App\Models\Library\Resource::RELATIONS[$linked->pivot->relation] }} · {{ $linked->isFree() ? 'Free' : 'Premium' }}</span>
-                            <span class="block font-semibold text-ink">{{ $linked->title }}</span>
+                        <a href="{{ route('library.show', $linked) }}" class="block rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                            <span class="text-xs font-semibold uppercase text-gray-500">{{ \App\Models\Library\Resource::RELATIONS[$linked->pivot->relation] }} · {{ $linked->isFree() ? 'Free' : 'Premium' }}</span>
+                            <span class="block font-semibold text-gray-800">{{ $linked->title }}</span>
                         </a>
                     </li>
                 @endforeach
                 @foreach ($resource->linkedFrom as $parent)
                     <li>
-                        <a href="{{ route('library.show', $parent) }}" class="block rounded-xl border border-gray-200 bg-white p-4 no-underline hover:border-primary-600">
-                            <span class="text-xs font-semibold uppercase text-muted">Question paper</span>
-                            <span class="block font-semibold text-ink">{{ $parent->title }}</span>
+                        <a href="{{ route('library.show', $parent) }}" class="block rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                            <span class="text-xs font-semibold uppercase text-gray-500">Question paper</span>
+                            <span class="block font-semibold text-gray-800">{{ $parent->title }}</span>
                         </a>
                     </li>
                 @endforeach
@@ -127,7 +127,7 @@
 
     @if ($topics->isNotEmpty())
         <section class="mt-8">
-            <h2 class="text-lg font-bold text-primary-900">Curriculum topics</h2>
+            <h2 class="text-lg font-bold text-gray-800">Curriculum topics</h2>
             <ul class="mt-2 flex flex-wrap gap-2">
                 @foreach ($topics as $topic)
                     <li><a href="{{ route('subjects.topic', [$resource->subject, $topic]) }}" class="inline-block rounded-full border border-gray-300 bg-white px-3 py-1 text-sm no-underline hover:border-primary-600">{{ $topic->code ? $topic->code.' ' : '' }}{{ \Illuminate\Support\Str::limit($topic->title, 50) }}</a></li>
@@ -138,13 +138,13 @@
 
     @if ($relatedLinks->isNotEmpty() || $related->isNotEmpty())
         <section class="mt-8">
-            <h2 class="text-lg font-bold text-primary-900">More like this</h2>
+            <h2 class="text-lg font-bold text-gray-800">More like this</h2>
             <ul class="mt-2 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($relatedLinks->merge($related)->unique('id')->take(6) as $item)
                     <li>
-                        <a href="{{ route('library.show', $item) }}" class="block h-full rounded-xl border border-gray-200 bg-white p-4 no-underline hover:border-primary-600">
-                            <span class="block font-semibold text-ink">{{ $item->title }}</span>
-                            <span class="text-sm text-muted">{{ $item->examLabel() }}</span>
+                        <a href="{{ route('library.show', $item) }}" class="block h-full rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                            <span class="block font-semibold text-gray-800">{{ $item->title }}</span>
+                            <span class="text-sm text-gray-500">{{ $item->examLabel() }}</span>
                         </a>
                     </li>
                 @endforeach
@@ -152,6 +152,6 @@
         </section>
     @endif
 
-    <p class="mt-10 text-xs text-muted">Think this item infringes your copyright? <a href="{{ route('copyright', ['resource' => $resource->slug]) }}">Report it</a>.</p>
+    <p class="mt-10 text-xs text-gray-500">Think this item infringes your copyright? <a href="{{ route('copyright', ['resource' => $resource->slug]) }}">Report it</a>.</p>
 </div>
 @endsection

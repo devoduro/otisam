@@ -76,11 +76,20 @@ Last updated: 18 Oct 2026
 - [ ] Paystack recurring billing (not assumed; renewals are new purchases)
 - [ ] Concurrent-session limit per subscriber (decision D6)
 
+## UI restyle to match jhs_portal (18 Oct 2026)
+- [v] Design tokens from jhs_portal: Poppins, sky-blue primary scale, slate-900 sidebar, two-tone stat-tile palette, purple sign-in panel (`resources/css/app.css`)
+- [v] Components ported: `x-stat-tile`, `x-dashboard-hero` (copied), `x-auth-split` (jhs split-screen sign-in), jhs-style `x-flash`, `x-button`, `x-input` (password show/hide), `x-select`
+- [v] Layouts: public (jhs header/footer + examsghana-style phone tab bar), auth (split screen), new student/teacher portal (jhs pupil layout: white sidebar, user menu)
+- [v] Admin console: quizapp structure kept, restyled to jhs_portal (dark slate sidebar, sky active item, user block, jhs hero + two-tone tiles on the dashboard, page title in content area, dark mode removed)
+- [v] Homepage redesigned with ideas from open-exam-prep.com (search-first hero, real-number strip, browse by subject with counts) and examsghana.com (big category tiles); only real counts are shown, unbuilt sections say "Coming soon"
+- [v] Fixed: sign-up class/programme dropdowns submitted the name instead of the id (regression test added)
+- [v] Alpine.js 3.14.1 bundled by Vite (no CDN)
+
 ## P5–P11
 Not started. See BLUEPRINT §11.
 
-## Test report (18 Oct 2026, after P4)
-`php artisan test` → **83 passed, 599 assertions**, against the MySQL test database `otisam_test`.
+## Test report (18 Oct 2026, after P4 + UI restyle)
+`php artisan test` → **84 passed, 604 assertions**, against the MySQL test database `otisam_test`.
 
 ## Acceptance criteria (master prompt §19)
 | # | Criterion | Phase | Status |

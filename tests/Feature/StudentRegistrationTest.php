@@ -51,12 +51,24 @@ class StudentRegistrationTest extends TestCase
         $this->post(route('verify.phone.check'), ['code' => $code])->assertRedirect(route('learn.dashboard'));
         $this->assertNotNull($user->fresh()->phone_verified_at);
 
-        $this->get(route('learn.dashboard'))->assertOk()->assertSee('Hello, Ama');
+        $this->get(route('learn.dashboard'))->assertOk()->assertSee(', Ama')->assertSee('SHS 2');
 
         $this->post(route('logout'));
         $this->post(route('login.attempt'), ['login' => '024 123 4567', 'password' => 'secret123'])
             ->assertRedirect(route('learn.dashboard'));
         $this->assertAuthenticatedAs($user->fresh());
+    }
+
+    public function test_sign_up_form_submits_class_and_programme_ids(): void
+    {
+        $class = ClassLevel::where('name', 'SHS 2')->firstOrFail();
+        $programme = Programme::where('name', 'General Science')->firstOrFail();
+
+        // Regression: an id => name option list once submitted the name instead of the id.
+        $this->get(route('register'))->assertOk()
+            ->assertSee('<option value="'.$class->id.'"', false)
+            ->assertSee('<option value="'.$programme->id.'"', false)
+            ->assertSee('<option value="Ashanti"', false);
     }
 
     public function test_code_is_single_use_and_expires(): void

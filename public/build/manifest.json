@@ -3,20 +3,8 @@
     "file": "assets/pdf.worker.min-yatZIOMy.mjs",
     "src": "node_modules/pdfjs-dist/build/pdf.worker.min.mjs"
   },
-  "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2": {
-    "file": "assets/PlusJakartaSans-Bold-C17WCrun.woff2",
-    "src": "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Bold.woff2"
-  },
-  "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Regular.woff2": {
-    "file": "assets/PlusJakartaSans-Regular-xeCc1CX1.woff2",
-    "src": "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-Regular.woff2"
-  },
-  "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-SemiBold.woff2": {
-    "file": "assets/PlusJakartaSans-SemiBold-BD6Sleeg.woff2",
-    "src": "public/assets/admin/fonts/plus-jakarta/PlusJakartaSans-SemiBold.woff2"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-DjABmKTB.css",
+    "file": "assets/app-DyO-ETxN.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -25,7 +13,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DMsN-rLE.js",
+    "file": "assets/app-DN-WoTh3.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

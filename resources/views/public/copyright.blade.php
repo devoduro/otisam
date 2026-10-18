@@ -4,13 +4,13 @@
 
 @section('content')
 <div class="mx-auto max-w-3xl px-4 py-8 sm:py-12">
-    <h1 class="text-3xl font-extrabold text-primary-900">Copyright and content removal</h1>
+    <h1 class="text-3xl font-extrabold text-gray-800">Copyright and content removal</h1>
     <div class="mt-4 space-y-3">
         <p>{{ config('app.name') }} only publishes material it owns, has permission to share, or may lawfully make available. Premium content is our own worked solutions, explanations and practice material. Examination papers are credited to their copyright holders.</p>
         <p>If you hold the rights to something on this site and want it removed or corrected, send the form below. We review every request and reply by email.</p>
     </div>
 
-    <form method="POST" action="{{ route('copyright.takedown') }}" class="mt-8 space-y-4 rounded-2xl border border-gray-200 bg-white p-6">
+    <form method="POST" action="{{ route('copyright.takedown') }}" class="mt-8 space-y-4 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6">
         @csrf
         <x-flash />
         @if ($resource)

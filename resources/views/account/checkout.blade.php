@@ -1,15 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.portal')
+@section('hide_heading', '1')
 
 @section('title', 'Checkout')
 
 @section('content')
 @php use App\Support\Money; @endphp
-<div class="mx-auto max-w-lg px-4 py-8 sm:py-12">
-    <nav aria-label="Breadcrumb" class="text-sm text-muted"><a href="{{ route('plans.index') }}">Plans</a> / Checkout</nav>
-    <h1 class="mt-2 text-2xl font-extrabold text-primary-900">{{ $plan->name }}</h1>
-    <p class="text-muted">{{ $plan->durationLabel() }} of premium access</p>
+<div class="max-w-lg">
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-500"><a href="{{ route('plans.index') }}">Plans</a> / Checkout</nav>
+    <h1 class="mt-2 text-2xl font-extrabold text-gray-800">{{ $plan->name }}</h1>
+    <p class="text-gray-500">{{ $plan->durationLabel() }} of premium access</p>
 
-    <div class="mt-6 rounded-2xl border border-gray-200 bg-white p-6">
+    <div class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6">
         <x-flash />
 
         @if ($coveredUntil)
@@ -26,10 +27,10 @@
 
         <form method="GET" action="{{ route('account.checkout', $plan) }}" class="mt-4 flex items-end gap-2">
             <div class="flex-1">
-                <label for="coupon-check" class="mb-1 block text-sm font-semibold">Discount code <span class="font-normal text-muted">(optional)</span></label>
+                <label for="coupon-check" class="mb-1 block text-sm font-semibold">Discount code <span class="font-normal text-gray-500">(optional)</span></label>
                 <input id="coupon-check" name="coupon" value="{{ $couponCode }}" maxlength="40" class="block w-full rounded-lg border border-gray-300 px-3 py-2.5 uppercase">
             </div>
-            <button type="submit" class="min-h-11 rounded-lg border border-primary-900 px-4 font-semibold text-primary-900">Apply</button>
+            <button type="submit" class="min-h-11 rounded-lg border border-gray-300 bg-white px-4 font-semibold text-gray-700 hover:bg-gray-50">Apply</button>
         </form>
         @if ($quote['problem'])<p class="mt-1 text-sm font-medium text-red-700" role="alert">{{ $quote['problem'] }}</p>@endif
 
@@ -43,7 +44,7 @@
                 @error('coupon')<p class="text-sm font-medium text-red-700">{{ $message }}</p>@enderror
                 <x-button full>{{ $quote['total'] > 0 ? 'Pay '.Money::format($quote['total'], $plan->currency).' with Paystack' : 'Activate for free' }}</x-button>
                 @if ($quote['total'] > 0)
-                    <p class="text-center text-xs text-muted">You will choose mobile money or card on Paystack's secure page. Your access starts as soon as the payment is confirmed.</p>
+                    <p class="text-center text-xs text-gray-500">You will choose mobile money or card on Paystack's secure page. Your access starts as soon as the payment is confirmed.</p>
                 @endif
             </form>
         @else

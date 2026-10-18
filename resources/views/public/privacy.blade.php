@@ -4,9 +4,9 @@
 
 @section('content')
 <article class="mx-auto max-w-3xl px-4 py-10">
-    <h1 class="text-3xl font-extrabold text-primary-900">Privacy policy</h1>
+    <h1 class="text-3xl font-extrabold text-gray-800">Privacy policy</h1>
     <p class="mt-2 rounded-lg bg-amber-50 p-3 text-sm">Draft for legal review under Ghana's Data Protection Act, 2012 (Act 843).</p>
-    <div class="mt-6 space-y-4 text-ink">
+    <div class="mt-6 space-y-4 text-gray-800">
         <h2 class="text-lg font-bold">What we collect</h2>
         <p>Students: name, mobile number, class and programme. School, region, email and a parent or guardian's contact are optional. Teachers: name, contact details, school, region, subjects and, optionally, GES staff number and rank, so we can verify you.</p>
         <h2 class="text-lg font-bold">Why</h2>
