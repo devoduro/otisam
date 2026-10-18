@@ -10,7 +10,7 @@
     <h1 class="mt-2 text-2xl font-extrabold text-gray-800">{{ $plan->name }}</h1>
     <p class="text-gray-500">{{ $plan->durationLabel() }} of premium access</p>
 
-    <div class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6">
+    <div class="mt-6 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6">
         <x-flash />
 
         @if ($coveredUntil)

@@ -6,8 +6,15 @@
     $home = $isTeacher ? route('teach.dashboard') : route('learn.dashboard');
     $links = array_filter([
         ['Dashboard', $home, 'fa-tachometer-alt', request()->routeIs('learn.dashboard', 'teach.dashboard')],
+        $isTeacher ? ['My classes', route('teach.classes.index'), 'fa-people-group', request()->routeIs('teach.classes.*', 'teach.assignments.*')] : ['My classes', route('learn.classes.index'), 'fa-people-group', request()->routeIs('learn.classes.*', 'learn.assignments.*')],
+        $isTeacher ? ['My video tutorials', route('teach.videos.index'), 'fa-circle-play', request()->routeIs('teach.videos.*')] : null,
+        $isTeacher ? ['Lesson materials', route('teach.materials.index'), 'fa-folder-open', request()->routeIs('teach.materials.*')] : null,
         $isTeacher ? ['My profile', route('teach.profile.edit'), 'fa-id-badge', request()->routeIs('teach.profile.*')] : null,
         ['Library', route('library.index'), 'fa-book-open', request()->routeIs('library.*')],
+        ['Practice questions', route('practice.index'), 'fa-list-check', request()->routeIs('practice.*')],
+        ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
+        ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
+        $isTeacher ? ['Promotion exams', route('promotion'), 'fa-chalkboard-user', request()->routeIs('promotion')] : null,
         ['Subjects & topics', route('subjects.index'), 'fa-sitemap', request()->routeIs('subjects.*')],
         ['My subscription', route('account.subscription'), 'fa-crown', request()->routeIs('account.*')],
         ['Premium plans', route('plans.index'), 'fa-tags', request()->routeIs('plans.*')],
@@ -43,7 +50,7 @@
         <nav class="p-4 space-y-1">
             @foreach ($links as [$label, $href, $icon, $active])
                 <a href="{{ $href }}" @if ($active) aria-current="page" @endif
-                   class="flex items-center gap-3 px-4 py-3 rounded-lg no-underline transition-all duration-200 {{ $active ? 'bg-primary-50 text-primary-600 font-medium' : 'text-gray-600 hover:bg-primary-50 hover:text-primary-600' }}">
+                   class="flex items-center gap-3 px-4 py-3 rounded-xl no-underline transition-all duration-200 {{ $active ? 'bg-gold-50 text-gold-700 font-semibold' : 'font-medium text-primary-700 hover:bg-gold-50 hover:text-gold-700' }}">
                     <i class="fas {{ $icon }} w-5" aria-hidden="true"></i>
                     <span>{{ $label }}</span>
                 </a>
@@ -93,9 +100,12 @@
         <main id="main" class="flex-1 flex flex-col min-w-0 px-4 md:px-6 py-4">
             <x-flash />
             @unless (View::hasSection('hide_heading'))
-                <div class="py-2 mt-1 mb-2">
-                    <h1 class="text-2xl font-bold text-gray-800">@yield('title', 'Dashboard')</h1>
-                    @hasSection('subtitle')<p class="text-sm text-gray-500">@yield('subtitle')</p>@endif
+                <div class="py-2 mt-1 mb-2 flex flex-wrap items-start justify-between gap-3">
+                    <div class="min-w-0">
+                        <h1 class="text-2xl font-bold text-gray-800">@yield('title', 'Dashboard')</h1>
+                        @hasSection('subtitle')<p class="text-sm text-gray-500">@yield('subtitle')</p>@endif
+                    </div>
+                    @hasSection('actions')<div class="flex flex-wrap gap-2">@yield('actions')</div>@endif
                 </div>
             @endunless
             @yield('content')
@@ -112,5 +122,6 @@
         </footer>
     </div>
 </div>
+    @stack('scripts')
 </body>
 </html>

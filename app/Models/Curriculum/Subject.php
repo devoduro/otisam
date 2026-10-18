@@ -15,6 +15,27 @@ class Subject extends Model
 
     protected $fillable = ['education_level_id', 'name', 'code', 'category', 'description', 'sort', 'is_active'];
 
+    /** "English Language · JHS": tells same-named subjects at different levels apart in flat lists. */
+    public function labelWithLevel(): string
+    {
+        return $this->educationLevel ? "{$this->name} · {$this->educationLevel->code}" : $this->name;
+    }
+
+    /** Which exam the subject's practice questions imitate: BECE (JHS), WASSCE (SHS) or GES promotion. */
+    public function examStyle(): string
+    {
+        return match ($this->educationLevel?->code) {
+            'JHS' => 'BECE',
+            EducationLevel::PROFESSIONAL => 'GES promotion',
+            default => 'WASSCE',
+        };
+    }
+
+    public function isProfessional(): bool
+    {
+        return $this->educationLevel?->code === EducationLevel::PROFESSIONAL;
+    }
+
     protected function casts(): array
     {
         return ['is_active' => 'boolean'];

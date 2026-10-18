@@ -35,7 +35,7 @@
 
     @if ($node->children->isNotEmpty())
         <h2 class="mt-8 text-lg font-bold text-gray-800">In this {{ strtolower($node->typeLabel()) }}</h2>
-        <ul class="mt-2 divide-y divide-gray-200 rounded-md bg-white shadow-sm ring-1 ring-gray-100">
+        <ul class="mt-2 divide-y divide-gray-200 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3]">
             @foreach ($node->children as $child)
                 <li>
                     <a href="{{ route('subjects.topic', [$subject, $child]) }}" class="flex items-start justify-between gap-3 px-4 py-3 no-underline hover:bg-primary-50">

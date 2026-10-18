@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
+use App\Models\Curriculum\EducationLevel;
 use App\Models\Curriculum\Subject;
 use App\Models\Library\ExamType;
 use App\Models\Library\Resource;
@@ -22,6 +23,8 @@ class LibraryController extends Controller
     {
         $filters = $request->validate([
             'q' => ['nullable', 'string', 'max:100'],
+            'level' => ['nullable', 'string', 'max:20'],
+            'class' => ['nullable', 'integer'],
             'subject' => ['nullable', 'string', 'max:120'],
             'category' => ['nullable', 'string', 'max:90'],
             'exam' => ['nullable', 'integer'],
@@ -29,7 +32,12 @@ class LibraryController extends Controller
             'access' => ['nullable', Rule::in(['free', 'premium'])],
         ]);
 
+        $levels = EducationLevel::active()->ordered()->with([
+            'classLevels',
+            'subjects' => fn ($q) => $q->where('is_active', true)->orderBy('sort')->orderBy('name'),
+        ])->get();
         $subject = ! empty($filters['subject']) ? Subject::where('slug', $filters['subject'])->first() : null;
+        $level = $levels->firstWhere('code', strtoupper($filters['level'] ?? '')) ?? ($subject ? $levels->firstWhere('id', $subject->education_level_id) : null);
         $category = ! empty($filters['category']) ? ResourceCategory::where('slug', $filters['category'])->first() : null;
 
         $resources = Resource::visible()
@@ -37,6 +45,10 @@ class LibraryController extends Controller
             ->withCount(['linkedResources as solutions_count' => fn ($q) => $q->whereIn('resource_links.relation', ['solution', 'marking_scheme'])])
             ->where('audience', '!=', 'teacher')
             ->when($filters['q'] ?? null, fn ($q, $s) => $q->where(fn ($w) => $w->where('title', 'like', "%{$s}%")->orWhere('description', 'like', "%{$s}%")))
+            ->when($level && ! $subject, fn ($q) => $q->where(fn ($w) => $w
+                ->whereHas('subject', fn ($s) => $s->where('education_level_id', $level->id))
+                ->orWhereHas('classLevel', fn ($c) => $c->where('education_level_id', $level->id))))
+            ->when($filters['class'] ?? null, fn ($q, $c) => $q->where('class_level_id', $c))
             ->when($subject, fn ($q) => $q->where('subject_id', $subject->id))
             ->when($category, fn ($q) => $q->where('category_id', $category->id))
             ->when($filters['exam'] ?? null, fn ($q, $e) => $q->where('exam_type_id', $e))
@@ -45,16 +57,21 @@ class LibraryController extends Controller
             ->orderByDesc('exam_year')->orderByDesc('published_at')->orderBy('title')
             ->paginate(20)->withQueryString();
 
-        $years = Resource::visible()->whereNotNull('exam_year')->distinct()->orderByDesc('exam_year')->pluck('exam_year');
-
         return view('public.library.index', [
             'resources' => $resources,
             'filters' => $filters,
-            'subjects' => Subject::active()->whereHas('educationLevel', fn ($q) => $q->where('is_active', true))->orderBy('name')->get(['id', 'name', 'slug']),
+            'levels' => $levels,
+            'level' => $level,
             'categories' => ResourceCategory::active()->where('audience', '!=', 'teacher')->ordered()->get(),
             'examTypes' => ExamType::active()->ordered()->get(),
-            'years' => $years,
+            'years' => self::examYears(),
         ]);
+    }
+
+    /** Exam years to filter by: this year back to 1990 (WAEC has run the WASSCE since 1993, BECE since 1990). */
+    public static function examYears(): array
+    {
+        return range((int) now()->year, 1990);
     }
 
     public function show(Request $request, Resource $resource): View

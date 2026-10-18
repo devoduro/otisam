@@ -18,7 +18,7 @@
     <p class="mt-3"><a href="{{ route('library.index', ['subject' => $subject->slug]) }}" class="font-semibold">Past questions, solutions and notes for {{ $subject->name }} →</a></p>
 
     @if ($version)
-        <div class="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4">
+        <div class="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4">
             <div>
                 <p class="text-sm font-semibold text-gray-800">{{ $version->name }}</p>
                 <p class="text-xs text-gray-500">
@@ -38,14 +38,14 @@
             @endif
         </div>
 
-        <ul class="mt-4 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-2 sm:p-4">
+        <ul class="mt-4 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-2 sm:p-4">
             @foreach ($roots as $node)
                 @include('public.subjects._node', ['node' => $node])
             @endforeach
         </ul>
         <p class="mt-3 text-xs text-gray-500">Items marked “official” follow the wording of the GES/NaCCA curriculum document named above; other items are supplementary.</p>
     @else
-        <p class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6 text-gray-500">The topics for {{ $subject->name }} are being added. Check back soon.</p>
+        <p class="mt-6 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6 text-gray-500">The topics for {{ $subject->name }} are being added. Check back soon.</p>
     @endif
 </div>
 @endsection

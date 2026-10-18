@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="max-w-lg">
-    <div class="rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6 text-center">
+    <div class="rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6 text-center">
         <x-flash />
         @switch($payment->status)
             @case('success')

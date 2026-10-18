@@ -10,7 +10,7 @@
         <p>If you hold the rights to something on this site and want it removed or corrected, send the form below. We review every request and reply by email.</p>
     </div>
 
-    <form method="POST" action="{{ route('copyright.takedown') }}" class="mt-8 space-y-4 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6">
+    <form method="POST" action="{{ route('copyright.takedown') }}" class="mt-8 space-y-4 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6">
         @csrf
         <x-flash />
         @if ($resource)

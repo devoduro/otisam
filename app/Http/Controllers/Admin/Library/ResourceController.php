@@ -63,7 +63,7 @@ class ResourceController extends Controller
             'resources' => $resources,
             'filters' => $filters,
             'categories' => ResourceCategory::ordered()->get(),
-            'subjects' => Subject::orderBy('name')->get(['id', 'name']),
+            'subjects' => Subject::with('educationLevel')->orderBy('education_level_id')->orderBy('name')->get(['id', 'name', 'education_level_id']),
         ]);
     }
 

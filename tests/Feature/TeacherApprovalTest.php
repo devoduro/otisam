@@ -13,30 +13,66 @@ use Tests\TestCase;
 /** Acceptance criteria 3 (part) and 4: teacher registration, approval and capabilities. */
 class TeacherApprovalTest extends TestCase
 {
-    public function test_teacher_registers_and_waits_in_pending_state(): void
+    public function test_teacher_registers_with_just_phone_and_password_and_waits_in_pending_state(): void
     {
+        $this->get('/teachers')->assertOk()->assertSee('Are you a teacher? Join free');
+
         $this->post(route('teachers.register.store'), [
-            'name' => 'Kwame Asante',
             'phone' => '0201112222',
-            'email' => 'kwame@example.com',
             'password' => 'teach1234',
             'password_confirmation' => 'teach1234',
-            'school_name' => 'Prempeh College',
-            'region' => 'Ashanti',
-            'subjects_taught' => 'Physics',
-            'declaration' => '1',
         ])->assertRedirect(route('verify.phone'));
 
-        $teacher = User::where('email', 'kwame@example.com')->firstOrFail();
+        $teacher = User::where('phone', '0201112222')->firstOrFail();
         $this->assertTrue($teacher->hasRole('Teacher (Pending)'));
+        $this->assertStringStartsWith('Teacher ', $teacher->name);
+        $this->assertFalse($teacher->teacherProfile->isComplete());
         $this->assertSame(TeacherVerificationStatus::Pending, $teacher->teacherProfile->verification_status);
         $this->assertSame([], $teacher->getAllPermissions()->pluck('name')->all(), 'A pending teacher holds no permissions.');
 
         $this->post(route('verify.phone.check'), ['code' => $this->lastCodeSentTo('0201112222')]);
-        $this->get(route('teach.dashboard'))->assertOk()->assertSee('Your registration is being reviewed');
+        $this->get(route('teach.dashboard'))->assertOk()->assertSee('Your registration is being reviewed')->assertSee('Complete your profile');
 
         // A teacher can never reach the admin console, approved or not.
         $this->get(route('admin.dashboard'))->assertRedirect(route('teach.dashboard'));
+
+        // Name, school and subjects are added later on the profile.
+        $this->put(route('teach.profile.update'), [
+            'name' => 'Kwame Asante', 'email' => 'Kwame@example.com',
+            'school_name' => 'Prempeh College', 'region' => 'Ashanti', 'subjects_taught' => 'Physics',
+        ])->assertRedirect(route('teach.dashboard'));
+
+        $teacher->refresh();
+        $this->assertSame(['Kwame Asante', 'kwame@example.com'], [$teacher->name, $teacher->email]);
+        $this->assertTrue($teacher->teacherProfile->isComplete());
+        $this->get(route('teach.dashboard'))->assertDontSee('Complete your profile');
+    }
+
+    public function test_region_and_district_are_optional_but_checked_when_given(): void
+    {
+        $this->post(route('teachers.register.store'), [
+            'phone' => '0201113333', 'password' => 'teach1234', 'password_confirmation' => 'teach1234', 'region' => 'Atlantis',
+        ])->assertSessionHasErrors('region');
+
+        $this->post(route('teachers.register.store'), [
+            'phone' => '0201113333', 'password' => 'teach1234', 'password_confirmation' => 'teach1234', 'region' => 'Volta', 'district' => 'Ho',
+        ])->assertRedirect(route('verify.phone'));
+
+        $profile = User::where('phone', '0201113333')->firstOrFail()->teacherProfile;
+        $this->assertSame(['Volta', 'Ho'], [$profile->region, $profile->district]);
+    }
+
+    public function test_admin_pages_handle_an_incomplete_teacher_profile(): void
+    {
+        $this->post(route('teachers.register.store'), ['phone' => '0201114444', 'password' => 'teach1234', 'password_confirmation' => 'teach1234']);
+        $teacher = User::where('phone', '0201114444')->firstOrFail();
+        $teacher->forceFill(['phone_verified_at' => now()])->save();
+        auth()->logout();
+
+        $admin = User::factory()->staff('Administrator')->create();
+        $this->actingAs($admin)->get(route('admin.teachers.show', $teacher))->assertOk()->assertSee('Profile incomplete');
+        $this->get(route('admin.teachers.index'))->assertOk();
+        $this->get(route('admin.dashboard'))->assertOk();
     }
 
     public function test_admin_approves_teacher_grants_capabilities_and_teacher_is_notified(): void
@@ -108,7 +144,7 @@ class TeacherApprovalTest extends TestCase
         $this->assertSame(TeacherVerificationStatus::MoreInfo, $teacher->fresh()->teacherProfile->verification_status);
 
         $this->actingAs($teacher->fresh())->put(route('teach.profile.update'), [
-            'school_name' => 'Accra Academy', 'region' => 'Greater Accra', 'subjects_taught' => 'Core Mathematics', 'staff_number' => 'GES-12345',
+            'name' => $teacher->name, 'school_name' => 'Accra Academy', 'region' => 'Greater Accra', 'subjects_taught' => 'Core Mathematics', 'staff_number' => 'GES-12345',
         ])->assertRedirect(route('teach.dashboard'));
 
         $this->assertSame(TeacherVerificationStatus::Pending, $teacher->fresh()->teacherProfile->verification_status);

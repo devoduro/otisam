@@ -4,13 +4,18 @@ namespace App\Models;
 
 use App\Enums\AccountType;
 use App\Enums\UserStatus;
+use App\Models\Classroom\Classroom;
 use App\Support\Permissions;
 use App\Support\Phone;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -50,6 +55,35 @@ class User extends Authenticatable
     public function studentProfile(): HasOne
     {
         return $this->hasOne(StudentProfile::class);
+    }
+
+    /** Classes this student has joined. */
+    public function classrooms(): BelongsToMany
+    {
+        return $this->belongsToMany(Classroom::class, 'classroom_student', 'student_id', 'classroom_id')->withPivot('joined_at');
+    }
+
+    public function referrer(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'referred_by');
+    }
+
+    public function referrals(): HasMany
+    {
+        return $this->hasMany(self::class, 'referred_by');
+    }
+
+    /** The code in this user's invite link, created the first time it is needed. */
+    public function referralCode(): string
+    {
+        if (! $this->referral_code) {
+            do {
+                $code = Str::lower(Str::random(8));
+            } while (self::where('referral_code', $code)->exists());
+            $this->forceFill(['referral_code' => $code])->saveQuietly();
+        }
+
+        return $this->referral_code;
     }
 
     public function teacherProfile(): HasOne

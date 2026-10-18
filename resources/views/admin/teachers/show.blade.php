@@ -12,14 +12,17 @@
                 <h2 class="h6 fw-bold mb-0">Professional details</h2>
                 <span class="badge text-bg-{{ $p->verification_status->badge() }}">{{ $p->verification_status->label() }}</span>
             </div>
+            @unless ($p->isComplete())
+                <div class="alert alert-warning small py-2"><i class="fas fa-triangle-exclamation me-1"></i> Profile incomplete: the teacher has not yet added their school, region or subjects.</div>
+            @endunless
             <dl class="row mb-0 small">
                 <dt class="col-sm-4">Phone</dt><dd class="col-sm-8">{{ $teacher->phone }} {!! $teacher->phone_verified_at ? '<span class="badge text-bg-success">verified</span>' : '<span class="badge text-bg-secondary">not verified</span>' !!}</dd>
                 <dt class="col-sm-4">Email</dt><dd class="col-sm-8">{{ $teacher->email ?? '—' }}</dd>
                 <dt class="col-sm-4">Staff number</dt><dd class="col-sm-8">{{ $p->staff_number ?? '—' }}</dd>
                 <dt class="col-sm-4">Rank</dt><dd class="col-sm-8">{{ $p->current_rank ?? '—' }}</dd>
-                <dt class="col-sm-4">School</dt><dd class="col-sm-8">{{ $p->school_name }}</dd>
-                <dt class="col-sm-4">Region / district</dt><dd class="col-sm-8">{{ $p->region }}{{ $p->district ? ' · ' . $p->district : '' }}</dd>
-                <dt class="col-sm-4">Subjects</dt><dd class="col-sm-8">{{ $p->subjects_taught }}</dd>
+                <dt class="col-sm-4">School</dt><dd class="col-sm-8">{{ $p->school_name ?? '—' }}</dd>
+                <dt class="col-sm-4">Region / district</dt><dd class="col-sm-8">{{ $p->region ?? '—' }}{{ $p->district ? ' · ' . $p->district : '' }}</dd>
+                <dt class="col-sm-4">Subjects</dt><dd class="col-sm-8">{{ $p->subjects_taught ?? '—' }}</dd>
                 <dt class="col-sm-4">Registered</dt><dd class="col-sm-8">{{ $teacher->created_at->format('j M Y, g:ia') }}</dd>
                 @if ($p->verified_at)
                     <dt class="col-sm-4">Last decision</dt>

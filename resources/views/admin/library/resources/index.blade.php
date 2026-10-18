@@ -29,7 +29,7 @@
             <label for="subject" class="form-label small fw-semibold">Subject</label>
             <select id="subject" name="subject" class="form-select">
                 <option value="">All</option>
-                @foreach ($subjects as $s)<option value="{{ $s->id }}" @selected((int) ($filters['subject'] ?? 0) === $s->id)>{{ $s->name }}</option>@endforeach
+                @foreach ($subjects as $s)<option value="{{ $s->id }}" @selected((int) ($filters['subject'] ?? 0) === $s->id)>{{ $s->labelWithLevel() }}</option>@endforeach
             </select>
         </div>
         <div class="col-4 col-md-1">

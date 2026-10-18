@@ -20,7 +20,7 @@
 
     <x-button full>Sign in</x-button>
 
-    <a href="{{ route('teachers.register') }}" class="flex w-full items-center justify-center gap-2 rounded-md border border-gray-300 px-4 py-3 text-sm font-medium text-gray-700 no-underline transition hover:bg-gray-50 hover:text-gray-800">
+    <a href="{{ route('teachers.register') }}" class="flex w-full items-center justify-center gap-2 rounded-xl border-[1.5px] border-[#e2e0ea] px-4 py-3 text-sm font-medium text-gray-700 no-underline transition hover:bg-gray-50 hover:text-gray-800">
         <i class="fas fa-chalkboard-user text-brand-600" aria-hidden="true"></i> Register as a teacher
     </a>
 </form>

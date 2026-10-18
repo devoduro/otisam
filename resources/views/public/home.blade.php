@@ -19,31 +19,34 @@
 @endphp
 
 {{-- Hero: jhs_portal's dark dashboard hero, with a search-first layout (open-exam-prep.com idea) --}}
-<section class="relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-    <div class="pointer-events-none absolute -right-16 -top-20 h-80 w-80 rounded-full bg-[#42a5dc]/20 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-indigo-500/15 blur-3xl"></div>
-    <div class="pointer-events-none absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 22px 22px;"></div>
+<section class="relative overflow-hidden bg-primary-800 text-white">
+    {{-- Background picture (Admin → Homepage, else the bundled classroom scene) under a dark overlay so the text stays readable. --}}
+    <img src="{{ $heroImage }}" alt="" class="pointer-events-none absolute inset-0 h-full w-full object-cover" fetchpriority="high">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-700/75"></div>
+    <div class="pointer-events-none absolute -right-16 -top-20 h-80 w-80 rounded-full bg-gold-500/15 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-primary-400/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute inset-0 bg-crosshatch"></div>
 
     <div class="relative mx-auto max-w-5xl px-4 py-14 text-center sm:py-20">
         <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">
-            <i class="fas fa-graduation-cap text-[#7cc4ea]" aria-hidden="true"></i> For SHS students and teachers in Ghana
+            <i class="fas fa-graduation-cap text-gold-400" aria-hidden="true"></i> For JHS &amp; SHS students and teachers in Ghana
         </p>
-        <h1 class="mt-5 text-3xl font-bold tracking-tight sm:text-5xl">Learn it. Practise it. <span class="text-[#7cc4ea]">Pass it.</span></h1>
-        <p class="mx-auto mt-4 max-w-2xl text-slate-300">WASSCE past questions with worked solutions, notes mapped to the GES/NaCCA curriculum, and study tools that work on any phone.</p>
+        <h1 class="mt-5 text-3xl font-extrabold sm:text-5xl">Learn it. Practise it. <span class="text-gold-400">Pass it.</span></h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-white/75">WASSCE past questions with worked solutions, notes mapped to the GES/NaCCA curriculum, and study tools that work on any phone.</p>
 
-        <form method="GET" action="{{ route('library.index') }}" role="search" class="mx-auto mt-8 flex max-w-2xl items-center gap-2 rounded-xl bg-white p-2 shadow-lg">
+        <form method="GET" action="{{ route('library.index') }}" role="search" class="mx-auto mt-8 flex max-w-2xl items-center gap-2 rounded-2xl bg-white p-2 shadow-lift">
             <label for="hero-search" class="sr-only">Search past questions and notes</label>
             <i class="fas fa-magnifying-glass pl-3 text-gray-400" aria-hidden="true"></i>
             <input id="hero-search" type="search" name="q" placeholder="Search a topic, subject or year, e.g. quadratic 2019" class="min-w-0 flex-1 border-0 bg-transparent px-2 py-2.5 text-sm text-gray-800 placeholder-gray-400 focus:outline-none">
-            <button type="submit" class="rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-700">Search</button>
+            <button type="submit" class="rounded-xl bg-gold-500 px-5 py-2.5 text-sm font-bold text-primary-950 shadow-gold hover:bg-gold-400">Search</button>
         </form>
 
         <div class="mt-6 flex flex-wrap justify-center gap-3">
             @auth
-                <a href="{{ route(auth()->user()->homeRoute()) }}" class="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 no-underline hover:bg-gray-100 hover:text-slate-900"><i class="fas fa-tachometer-alt text-[#42a5dc]" aria-hidden="true"></i> Go to my dashboard</a>
+                <a href="{{ route(auth()->user()->homeRoute()) }}" class="inline-flex h-12 items-center gap-2 rounded-xl bg-gold-500 px-6 text-[15px] font-bold text-primary-950 no-underline shadow-gold hover:bg-gold-400 hover:text-primary-950"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> Go to my dashboard <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
             @else
-                <a href="{{ route('register') }}" class="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 no-underline hover:bg-gray-100 hover:text-slate-900"><i class="fas fa-user-plus text-[#42a5dc]" aria-hidden="true"></i> Create a free account</a>
-                <a href="{{ route('subjects.index') }}" class="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-sm font-semibold text-white no-underline ring-1 ring-white/20 hover:bg-white/20 hover:text-white"><i class="fas fa-sitemap" aria-hidden="true"></i> Browse subjects</a>
+                <a href="{{ route('register') }}" class="inline-flex h-12 items-center gap-2 rounded-xl bg-gold-500 px-6 text-[15px] font-bold text-primary-950 no-underline shadow-gold hover:bg-gold-400 hover:text-primary-950"><i class="fas fa-user-plus" aria-hidden="true"></i> Create a free account <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
+                <a href="{{ route('subjects.index') }}" class="inline-flex h-12 items-center gap-2 rounded-xl bg-white/10 px-6 text-[15px] font-bold text-white no-underline ring-1 ring-white/30 hover:bg-white/20 hover:text-white"><i class="fas fa-sitemap" aria-hidden="true"></i> Browse subjects</a>
             @endauth
         </div>
     </div>
@@ -53,15 +56,15 @@
         $figures = array_filter([
             [$stats['resources'], 'library items'],
             [$stats['free'], 'free to read'],
-            [$stats['subjects'], 'SHS subjects'],
+            [$stats['subjects'], 'subjects'],
             [$stats['topics'], 'curriculum topics'],
         ], fn ($f) => $f[0] > 0);
     @endphp
     @if ($figures)
-        <div class="relative border-t border-white/10 bg-slate-900/40">
+        <div class="relative border-t border-white/10 bg-primary-950/40">
             <dl class="mx-auto grid max-w-5xl {{ count($figures) === 1 ? 'grid-cols-1' : 'grid-cols-2' }} gap-4 px-4 py-6 text-center {{ [1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4'][count($figures)] }}">
                 @foreach ($figures as [$value, $label])
-                    <div><dt class="sr-only">{{ $label }}</dt><dd><span class="block text-2xl font-bold">{{ number_format($value) }}</span><span class="text-xs text-slate-400">{{ $label }}</span></dd></div>
+                    <div><dt class="sr-only">{{ $label }}</dt><dd><span class="block text-2xl font-bold">{{ number_format($value) }}</span><span class="text-xs text-white/60">{{ $label }}</span></dd></div>
                 @endforeach
             </dl>
         </div>
@@ -80,7 +83,7 @@
     <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         @foreach ($tiles as [$title, $text, $icon, $colour, $href, $count])
             <li>
-                <a href="{{ $href }}" class="group flex h-full overflow-hidden rounded-md text-white no-underline shadow-sm transition hover:-translate-y-0.5 hover:text-white hover:shadow-md">
+                <a href="{{ $href }}" class="group flex h-full overflow-hidden rounded-2xl text-white no-underline shadow-sm transition hover:-translate-y-0.5 hover:text-white hover:shadow-md">
                     <span class="flex w-16 shrink-0 items-center justify-center {{ $tileColours[$colour][1] }}"><i class="fas {{ $icon }} text-2xl" aria-hidden="true"></i></span>
                     <span class="flex flex-1 flex-col justify-center px-4 py-4 {{ $tileColours[$colour][0] }}">
                         <span class="flex items-center justify-between gap-2">
@@ -147,7 +150,7 @@
             ['fa-magnifying-glass', 'Find your topic', 'Search past questions by subject, year or topic, or follow the curriculum strand by strand.'],
             ['fa-crown', 'Go premium when ready', $cheapestPlan ? 'Unlock every worked solution from '.$cheapestPlan->price().' with mobile money or card.' : 'Unlock every worked solution with mobile money or card.'],
         ] as $i => [$icon, $title, $text])
-            <li class="rounded-md bg-white p-5 shadow-sm ring-1 ring-gray-100">
+            <li class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3]">
                 <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-600 text-white"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
                 <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Step {{ $i + 1 }}</p>
                 <h3 class="font-semibold text-gray-800">{{ $title }}</h3>
@@ -159,13 +162,13 @@
 
 {{-- Teachers band --}}
 <section class="mx-auto max-w-7xl px-4 pb-14 md:px-6">
-    <div class="flex flex-col items-start justify-between gap-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-7 text-white shadow-lg md:flex-row md:items-center">
+    <div class="flex flex-col items-start justify-between gap-4 rounded-[1.75rem] bg-primary-700 bg-crosshatch p-8 text-white shadow-lift md:flex-row md:p-12 md:items-center">
         <div>
-            <p class="text-sm font-medium text-[#7cc4ea]">For teachers</p>
-            <h2 class="mt-1 text-2xl font-bold">Lesson plans, question writing and professional exams</h2>
-            <p class="mt-1 max-w-xl text-sm text-slate-300">Register as a teacher. Once an administrator verifies you, teacher resources unlock. Promotion and professional practice exams are on the way.</p>
+            <p class="text-sm font-medium text-gold-400">For teachers</p>
+            <h2 class="mt-1 text-2xl font-extrabold sm:text-3xl">Lesson plans, question writing and professional exams</h2>
+            <p class="mt-2 max-w-xl text-white/75">Register as a teacher. Once an administrator verifies you, teacher resources unlock. Promotion and professional practice exams are on the way.</p>
         </div>
-        <a href="{{ route('teachers.register') }}" class="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 no-underline hover:bg-gray-100 hover:text-slate-900"><i class="fas fa-chalkboard-user text-[#42a5dc]" aria-hidden="true"></i> Register as a teacher</a>
+        <a href="{{ route('teachers.register') }}" class="inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-gold-500 px-6 text-[15px] font-bold text-primary-950 no-underline shadow-gold hover:bg-gold-400 hover:text-primary-950">Register as a teacher <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
     </div>
 </section>
 @endsection

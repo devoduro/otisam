@@ -56,4 +56,10 @@ return [
         'placeholder_email_domain' => env('PAYSTACK_PLACEHOLDER_EMAIL_DOMAIN', 'students.otisam.app'),
     ],
 
+    // YouTube Data API key (optional). Without it, channel imports read the public RSS feed,
+    // which only lists the latest 15 uploads. Lives in .env only.
+    'youtube' => [
+        'key' => env('YOUTUBE_API_KEY'),
+    ],
+
 ];

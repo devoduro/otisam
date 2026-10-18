@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice">
+  <!-- Default homepage background: a classroom scene (chalkboard, books, desk). Replace it with a photo in Admin → Homepage. -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b4a6b"/><stop offset="1" stop-color="#1c334d"/></linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a6b3f"/><stop offset="1" stop-color="#6e4826"/></linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f5d46"/><stop offset="1" stop-color="#1f4232"/></linearGradient>
+    <radialGradient id="light" cx="0.3" cy="0.2" r="0.8"><stop offset="0" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#wall)"/>
+  <!-- window light -->
+  <g opacity=".25"><rect x="1270" y="70" width="230" height="300" rx="6" fill="#9cc8ea"/><path d="M1385 70v300M1270 220h230" stroke="#2b4a6b" stroke-width="10"/></g>
+  <!-- chalkboard -->
+  <rect x="150" y="70" width="980" height="430" rx="10" fill="#7a5530"/>
+  <rect x="172" y="92" width="936" height="386" rx="6" fill="url(#board)"/>
+  <g fill="none" stroke="#e8efe9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+    <path d="M230 170h40M250 150v40"/>
+    <path d="M300 175c20-30 45-30 60 0s40 30 60 0"/>
+    <path d="M460 160l30 30M490 160l-30 30"/>
+    <path d="M540 175h70M560 160h30"/>
+    <path d="M230 260c40-60 90-60 130 0s90 60 130 0"/>
+    <path d="M230 260h300M380 200v120"/>
+    <circle cx="790" cy="230" r="70"/><path d="M790 160v140M720 230h140M790 230l50-50"/>
+    <path d="M930 160l70 120h-140z"/><path d="M930 160v120"/>
+    <path d="M240 380h120M240 410h200M480 380h90M480 410h60"/>
+    <path d="M640 380c15-20 30-20 45 0s30 20 45 0 30-20 45 0"/>
+    <path d="M840 360v70h140"/><path d="M850 420l35-30 30 15 50-45"/>
+  </g>
+  <g fill="#e8efe9" opacity=".75" font-family="Arial, sans-serif" font-size="34" font-weight="700">
+    <text x="610" y="180">x² + 5x + 6 = 0</text>
+    <text x="560" y="310">H₂O</text>
+    <text x="230" y="350" font-size="26">6CO₂ + 6H₂O → C₆H₁₂O₆</text>
+  </g>
+  <rect x="160" y="490" width="960" height="14" rx="4" fill="#5c3d20"/>
+  <rect x="300" y="482" width="60" height="10" rx="3" fill="#f3f3f3"/><rect x="380" y="484" width="40" height="8" rx="3" fill="#f2d16b"/>
+  <!-- desk -->
+  <rect x="0" y="560" width="1600" height="140" fill="url(#desk)"/>
+  <rect x="0" y="552" width="1600" height="14" fill="#b07d4b"/>
+  <!-- books stack -->
+  <g transform="translate(1180 430)">
+    <rect x="0" y="90" width="260" height="34" rx="4" fill="#c0392b"/><rect x="10" y="94" width="240" height="6" fill="#e7b9b3"/>
+    <rect x="20" y="56" width="230" height="34" rx="4" fill="#2471a3"/><rect x="28" y="60" width="214" height="6" fill="#a9cce3"/>
+    <rect x="6" y="22" width="240" height="34" rx="4" fill="#d4ac0d"/><rect x="14" y="26" width="224" height="6" fill="#f9e79f"/>
+    <path d="M60 22c30-30 110-30 140 0" fill="none" stroke="#1d8348" stroke-width="10"/>
+  </g>
+  <!-- open book + pencil -->
+  <g transform="translate(250 590)">
+    <path d="M0 10c80-30 160-30 240 0v70c-80-30-160-30-240 0z" fill="#fdfdfd"/>
+    <path d="M240 10c80-30 160-30 240 0v70c-80-30-160-30-240 0z" fill="#f1f1f1"/>
+    <path d="M30 30h170M30 48h170M270 30h170M270 48h170" stroke="#c9d3dc" stroke-width="4"/>
+    <g transform="translate(520 40) rotate(-20)"><rect width="200" height="18" rx="3" fill="#f5b041"/><path d="M200 0l30 9-30 9z" fill="#f0d9b5"/><rect x="-14" width="16" height="18" rx="3" fill="#e74c3c"/></g>
+  </g>
+  <!-- graduation cap -->
+  <g transform="translate(830 560)">
+    <path d="M90 0L0 36l90 36 90-36z" fill="#1b2631"/>
+    <path d="M40 52v32c0 14 22 26 50 26s50-12 50-26V52l-50 20z" fill="#273746"/>
+    <path d="M170 40v44" stroke="#1b2631" stroke-width="5"/><circle cx="170" cy="90" r="8" fill="#f4d03f"/>
+  </g>
+  <rect width="1600" height="700" fill="url(#light)"/>
+</svg>

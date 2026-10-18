@@ -4,11 +4,17 @@ use App\Http\Controllers\Account;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Learn;
+use App\Http\Controllers\Public\DownloadController;
 use App\Http\Controllers\Public\HomeController;
 use App\Http\Controllers\Public\LibraryController;
 use App\Http\Controllers\Public\PlanController;
+use App\Http\Controllers\Public\PracticeController;
+use App\Http\Controllers\Public\PromotionController;
+use App\Http\Controllers\Public\ReferralController;
 use App\Http\Controllers\Public\ResourceFileController;
 use App\Http\Controllers\Public\SubjectController;
+use App\Http\Controllers\Public\TeacherDirectoryController;
+use App\Http\Controllers\Public\VideoController;
 use App\Http\Controllers\Teach;
 use App\Http\Controllers\Webhooks;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +37,20 @@ Route::get('/library/{resource}/preview', [ResourceFileController::class, 'previ
 Route::get('/library/{resource}/view', [ResourceFileController::class, 'view'])->middleware('throttle:120,1')->name('library.view');
 Route::get('/library/{resource}/download', [ResourceFileController::class, 'download'])->middleware('throttle:30,60')->name('library.download');
 
+Route::get('/teachers', [TeacherDirectoryController::class, 'index'])->name('teachers.index');
+// Profile slugs never clash with /teachers/register (registration routes are matched by the guest group below).
+Route::get('/teachers/{slug}', [TeacherDirectoryController::class, 'show'])->where('slug', '(?!register$)[a-z0-9-]+')->name('teachers.show');
 Route::get('/plans', [PlanController::class, 'index'])->name('plans.index');
+
+Route::get('/practice', [PracticeController::class, 'index'])->name('practice.index');
+Route::get('/practice/start', [PracticeController::class, 'start'])->name('practice.start');
+Route::post('/practice/mark', [PracticeController::class, 'mark'])->middleware('throttle:30,1')->name('practice.mark');
+Route::get('/practice/{subject}', [PracticeController::class, 'show'])->name('practice.show');
+Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
+Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.show');
+Route::get('/downloads', [DownloadController::class, 'index'])->name('downloads.index');
+Route::get('/downloads/teachers/{material}', [DownloadController::class, 'material'])->name('downloads.material');
+Route::get('/promotion', PromotionController::class)->name('promotion');
 
 // Paystack sends the browser back here after checkout. The reference is re-verified server-side.
 Route::get('/payments/paystack/callback', [Account\CheckoutController::class, 'callback'])->middleware('throttle:30,1')->name('payments.callback');
@@ -88,6 +107,19 @@ Route::middleware(['auth', 'account:student,teacher', 'phone.verified', 'passwor
 */
 Route::middleware(['auth', 'account:student', 'phone.verified', 'password.fresh'])->prefix('learn')->name('learn.')->group(function () {
     Route::get('/', Learn\DashboardController::class)->name('dashboard');
+
+    // Classes, assignments and quizzes from teachers
+    Route::get('/classes', [Learn\ClassController::class, 'index'])->name('classes.index');
+    Route::post('/classes/join', [Learn\ClassController::class, 'join'])->middleware('throttle:10,1')->name('classes.join');
+    Route::get('/classes/{classroom}', [Learn\ClassController::class, 'show'])->name('classes.show');
+    Route::delete('/classes/{classroom}', [Learn\ClassController::class, 'leave'])->name('classes.leave');
+    Route::get('/work/{assignment}', [Learn\AssignmentController::class, 'show'])->name('assignments.show');
+    Route::get('/work/{assignment}/quiz', [Learn\AssignmentController::class, 'take'])->name('assignments.take');
+    Route::post('/work/{assignment}/quiz', [Learn\AssignmentController::class, 'submitQuiz'])->middleware('throttle:20,1')->name('assignments.submit-quiz');
+    Route::post('/work/{assignment}/quiz/left', [Learn\AssignmentController::class, 'left'])->middleware('throttle:60,1')->name('assignments.left');
+    Route::post('/work/{assignment}/hand-in', [Learn\AssignmentController::class, 'submitWork'])->middleware('throttle:20,1')->name('assignments.submit-work');
+    Route::get('/work/{assignment}/handout', [Learn\AssignmentController::class, 'handout'])->name('assignments.handout');
+    Route::get('/work/{assignment}/my-file', [Learn\AssignmentController::class, 'myFile'])->name('assignments.my-file');
 });
 
 /*
@@ -98,7 +130,38 @@ Route::middleware(['auth', 'account:teacher', 'phone.verified', 'password.fresh'
     Route::get('/', Teach\DashboardController::class)->name('dashboard');
     Route::get('/profile', [Teach\ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile', [Teach\ProfileController::class, 'update'])->name('profile.update');
+
+    // Classes, assignments, quizzes and shared materials: approved teachers only.
+    Route::middleware('teacher.approved')->group(function () {
+        Route::resource('classes', Teach\ClassroomController::class)->parameters(['classes' => 'classroom'])->except('destroy');
+        Route::post('/classes/{classroom}/archive', [Teach\ClassroomController::class, 'archive'])->name('classes.archive');
+        Route::post('/classes/{classroom}/code', [Teach\ClassroomController::class, 'newCode'])->name('classes.code');
+        Route::delete('/classes/{classroom}/students/{student}', [Teach\ClassroomController::class, 'removeStudent'])->name('classes.students.remove');
+
+        Route::get('/classes/{classroom}/work/create', [Teach\AssignmentController::class, 'create'])->name('assignments.create');
+        Route::post('/classes/{classroom}/work', [Teach\AssignmentController::class, 'store'])->name('assignments.store');
+        Route::get('/work/{assignment}', [Teach\AssignmentController::class, 'show'])->name('assignments.show');
+        Route::get('/work/{assignment}/edit', [Teach\AssignmentController::class, 'edit'])->name('assignments.edit');
+        Route::put('/work/{assignment}', [Teach\AssignmentController::class, 'update'])->name('assignments.update');
+        Route::delete('/work/{assignment}', [Teach\AssignmentController::class, 'destroy'])->name('assignments.destroy');
+        Route::post('/work/{assignment}/publish', [Teach\AssignmentController::class, 'publish'])->name('assignments.publish');
+        Route::post('/work/{assignment}/close', [Teach\AssignmentController::class, 'close'])->name('assignments.close');
+        Route::post('/work/{assignment}/questions/bank', [Teach\AssignmentController::class, 'addFromBank'])->name('assignments.questions.bank');
+        Route::post('/work/{assignment}/questions', [Teach\AssignmentController::class, 'addOwnQuestion'])->name('assignments.questions.store');
+        Route::delete('/work/{assignment}/questions/{question}', [Teach\AssignmentController::class, 'removeQuestion'])->name('assignments.questions.destroy');
+        Route::put('/work/{assignment}/submissions/{submission}', [Teach\AssignmentController::class, 'grade'])->name('assignments.grade');
+        Route::get('/work/{assignment}/handout', [Teach\AssignmentController::class, 'handout'])->name('assignments.handout');
+        Route::get('/work/{assignment}/submissions/{submission}/file', [Teach\AssignmentController::class, 'submissionFile'])->name('assignments.submission-file');
+
+        Route::resource('videos', Teach\VideoController::class)->except('show');
+
+        Route::get('/materials/{material}/download', [Teach\MaterialController::class, 'download'])->name('materials.download');
+        Route::resource('materials', Teach\MaterialController::class)->except('show');
+    });
 });
+
+// Invite links
+Route::get('/r/{code}', ReferralController::class)->where('code', '[A-Za-z0-9]{6,12}')->name('referral');
 
 /*
 | Admin console. Every group checks a permission on the server; the sidebar @can checks only
@@ -139,6 +202,24 @@ Route::middleware(['auth', 'account:staff', 'password.fresh'])->prefix('admin')-
     /*
     | Commerce (BLUEPRINT §7).
     */
+    Route::middleware('permission:settings.manage')->group(function () {
+        Route::get('/settings/homepage', [Admin\HomepageSettingsController::class, 'edit'])->name('settings.homepage');
+        Route::put('/settings/homepage', [Admin\HomepageSettingsController::class, 'update'])->name('settings.homepage.update');
+        Route::delete('/settings/homepage', [Admin\HomepageSettingsController::class, 'destroy'])->name('settings.homepage.destroy');
+    });
+
+    Route::middleware('permission:tutorials.manage')->group(function () {
+        Route::resource('videos', Admin\VideoLessonController::class)->except('show');
+        Route::post('/videos/{video}/status', [Admin\VideoLessonController::class, 'status'])->name('videos.status');
+        Route::post('/videos-import/youtube', [Admin\VideoLessonController::class, 'importYoutube'])->name('videos.import-youtube');
+
+        Route::get('/moderation', [Admin\ContentModerationController::class, 'index'])->name('moderation.index');
+        Route::post('/moderation/videos/{video}/approve', [Admin\ContentModerationController::class, 'approveVideo'])->name('moderation.videos.approve');
+        Route::post('/moderation/videos/{video}/reject', [Admin\ContentModerationController::class, 'rejectVideo'])->name('moderation.videos.reject');
+        Route::get('/moderation/materials/{material}/download', [Admin\ContentModerationController::class, 'downloadMaterial'])->name('moderation.materials.download');
+        Route::post('/moderation/materials/{material}/hide', [Admin\ContentModerationController::class, 'hideMaterial'])->name('moderation.materials.hide');
+    });
+
     Route::prefix('commerce')->name('commerce.')->group(function () {
         Route::middleware('permission:plans.manage')->group(function () {
             Route::resource('plans', Admin\Commerce\PlanController::class)->except('show');

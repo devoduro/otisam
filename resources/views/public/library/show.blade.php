@@ -51,7 +51,7 @@
     @endif
 
     {{-- Access panel --}}
-    <div class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 sm:p-5">
+    <div class="mt-6 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4 sm:p-5">
         @if ($canViewFull)
             <div class="flex flex-wrap items-center gap-3">
                 @if ($canDownload)
@@ -107,7 +107,7 @@
             <ul class="mt-2 grid gap-3 sm:grid-cols-2">
                 @foreach ($solutions as $linked)
                     <li>
-                        <a href="{{ route('library.show', $linked) }}" class="block rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                        <a href="{{ route('library.show', $linked) }}" class="block rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4 no-underline hover:border-primary-600">
                             <span class="text-xs font-semibold uppercase text-gray-500">{{ \App\Models\Library\Resource::RELATIONS[$linked->pivot->relation] }} · {{ $linked->isFree() ? 'Free' : 'Premium' }}</span>
                             <span class="block font-semibold text-gray-800">{{ $linked->title }}</span>
                         </a>
@@ -115,7 +115,7 @@
                 @endforeach
                 @foreach ($resource->linkedFrom as $parent)
                     <li>
-                        <a href="{{ route('library.show', $parent) }}" class="block rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                        <a href="{{ route('library.show', $parent) }}" class="block rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4 no-underline hover:border-primary-600">
                             <span class="text-xs font-semibold uppercase text-gray-500">Question paper</span>
                             <span class="block font-semibold text-gray-800">{{ $parent->title }}</span>
                         </a>
@@ -142,7 +142,7 @@
             <ul class="mt-2 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($relatedLinks->merge($related)->unique('id')->take(6) as $item)
                     <li>
-                        <a href="{{ route('library.show', $item) }}" class="block h-full rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600">
+                        <a href="{{ route('library.show', $item) }}" class="block h-full rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4 no-underline hover:border-primary-600">
                             <span class="block font-semibold text-gray-800">{{ $item->title }}</span>
                             <span class="text-sm text-gray-500">{{ $item->examLabel() }}</span>
                         </a>

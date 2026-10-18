@@ -15,7 +15,7 @@
     @endif
 
     @if ($plans->isEmpty())
-        <p class="mt-8 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6 text-gray-500">Premium plans open soon. <a href="{{ route('register') }}">Create a free account</a> to be ready.</p>
+        <p class="mt-8 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6 text-gray-500">Premium plans open soon. <a href="{{ route('register') }}">Create a free account</a> to be ready.</p>
     @else
         <ul class="mt-8 grid gap-4 md:grid-cols-3">
             @foreach ($plans as $plan)

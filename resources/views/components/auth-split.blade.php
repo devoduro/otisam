@@ -26,7 +26,7 @@
 
         <div class="flex flex-1 items-center justify-center py-10">
             <div class="w-full {{ $wide ? 'max-w-lg' : 'max-w-sm' }}">
-                <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{ $title }}</h1>
+                <h1 class="text-3xl font-extrabold text-primary-700 sm:text-4xl">{{ $title }}</h1>
                 <p class="mt-2 text-gray-500">{{ $subtitle }}</p>
 
                 <div class="mt-6">
@@ -52,9 +52,9 @@
     </div>
 
     <!-- Illustration side -->
-    <div class="relative hidden overflow-hidden bg-brand-400 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:items-center lg:justify-center">
+    <div class="relative hidden overflow-hidden bg-brand-700 bg-crosshatch lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:items-center lg:justify-center">
         <svg class="w-full max-w-xl px-10" viewBox="0 0 600 560" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g stroke="#6a4aa8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+            <g stroke="#8fa0e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
                 <path d="M70 60l12 12M82 60L70 72M520 70l12 12M532 70l-12 12M470 200l10 10M480 200l-10 10M120 260l10 10M130 260l-10 10M300 30l10 10M310 30l-10 10"/>
                 <circle cx="40" cy="160" r="7"/><circle cx="560" cy="150" r="7"/><circle cx="430" cy="40" r="6"/><circle cx="200" cy="40" r="6"/><circle cx="560" cy="300" r="6"/>
                 <path d="M240 70h22M360 60h22M150 120h18M500 250h22M60 330h18M380 250h16"/>
@@ -70,28 +70,28 @@
                 <path d="M470 360h60v86l-10-7-10 7-10-7-10 7-10-7-10 7z"/><path d="M485 380h30M485 395h30M485 410h18"/>
             </g>
             <g transform="translate(225 300)">
-                <path d="M75 0L0 32l75 32 75-32z" fill="#462f73"/>
-                <path d="M30 46v32c0 14 20 26 45 26s45-12 45-26V46l-45 18z" fill="#5a3d93"/>
-                <path d="M140 36v42" stroke="#462f73" stroke-width="4" stroke-linecap="round"/>
-                <circle cx="140" cy="84" r="7" fill="#f5c542"/>
+                <path d="M75 0L0 32l75 32 75-32z" fill="#10163f"/>
+                <path d="M30 46v32c0 14 20 26 45 26s45-12 45-26V46l-45 18z" fill="#16204f"/>
+                <path d="M140 36v42" stroke="#10163f" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="140" cy="84" r="7" fill="#ffaf1b"/>
             </g>
             <g transform="translate(120 450)">
-                <rect x="0" y="0" width="150" height="70" rx="35" stroke="#e9e1f7" stroke-width="3" fill="none"/>
+                <rect x="0" y="0" width="150" height="70" rx="35" stroke="#dde3f7" stroke-width="3" fill="none"/>
                 <circle cx="35" cy="35" r="27" fill="#fff"/>
-                <path d="M22 35l9 9 18-20" stroke="#6a4aa8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 35l9 9 18-20" stroke="#28409e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
             <g transform="translate(300 410)">
-                <rect x="0" y="0" width="190" height="120" rx="12" fill="#1f1640"/>
+                <rect x="0" y="0" width="190" height="120" rx="12" fill="#080b22"/>
                 <rect x="12" y="12" width="166" height="96" rx="6" fill="#fff"/>
-                <rect x="24" y="24" width="70" height="8" rx="4" fill="#8b6bd1"/>
-                <rect x="24" y="42" width="142" height="5" rx="2.5" fill="#e9e1f7"/>
-                <rect x="24" y="54" width="142" height="5" rx="2.5" fill="#e9e1f7"/>
-                <rect x="24" y="66" width="100" height="5" rx="2.5" fill="#e9e1f7"/>
-                <rect x="24" y="84" width="30" height="14" rx="3" fill="#8cc152"/>
-                <rect x="60" y="78" width="30" height="20" rx="3" fill="#42a5dc"/>
-                <rect x="96" y="72" width="30" height="26" rx="3" fill="#f5922f"/>
-                <rect x="132" y="66" width="30" height="32" rx="3" fill="#6a4aa8"/>
-                <path d="M80 120h30l6 22H74z" fill="#c4b1ea"/>
+                <rect x="24" y="24" width="70" height="8" rx="4" fill="#ffaf1b"/>
+                <rect x="24" y="42" width="142" height="5" rx="2.5" fill="#dde3f7"/>
+                <rect x="24" y="54" width="142" height="5" rx="2.5" fill="#dde3f7"/>
+                <rect x="24" y="66" width="100" height="5" rx="2.5" fill="#dde3f7"/>
+                <rect x="24" y="84" width="30" height="14" rx="3" fill="#0f9d58"/>
+                <rect x="60" y="78" width="30" height="20" rx="3" fill="#3a52b8"/>
+                <rect x="96" y="72" width="30" height="26" rx="3" fill="#ffaf1b"/>
+                <rect x="132" y="66" width="30" height="32" rx="3" fill="#28409e"/>
+                <path d="M80 120h30l6 22H74z" fill="#8fa0e3"/>
             </g>
             <path d="M30 520c15-15 25 15 40 0s25 15 40 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
             <path d="M500 330c15-15 25 15 40 0s25 15 40 0" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>

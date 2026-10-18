@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\EnsureAccountIsActive;
 use App\Http\Middleware\EnsureAccountType;
+use App\Http\Middleware\EnsureApprovedTeacher;
 use App\Http\Middleware\EnsurePhoneVerified;
 use App\Http\Middleware\RecordActivity;
 use App\Http\Middleware\RequirePasswordChange;
@@ -24,6 +25,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'account' => EnsureAccountType::class,
             'phone.verified' => EnsurePhoneVerified::class,
             'password.fresh' => RequirePasswordChange::class,
+            'teacher.approved' => EnsureApprovedTeacher::class,
             'role' => RoleMiddleware::class,
             'permission' => PermissionMiddleware::class,
             'role_or_permission' => RoleOrPermissionMiddleware::class,

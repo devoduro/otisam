@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Public;
 
+use App\Http\Controllers\Admin\HomepageSettingsController;
 use App\Http\Controllers\Controller;
 use App\Models\Commerce\Plan;
 use App\Models\Curriculum\CurriculumNode;
@@ -51,6 +52,8 @@ class HomeController extends Controller
             ->with(['category', 'subject', 'examType', 'classLevel'])
             ->withCount(['linkedResources as solutions_count' => fn ($q) => $q->whereIn('resource_links.relation', ['solution', 'marking_scheme'])])
             ->latest('published_at')->limit(6)->get();
+
+        $data['heroImage'] = HomepageSettingsController::heroImageUrl();
 
         return view('public.home', $data);
     }

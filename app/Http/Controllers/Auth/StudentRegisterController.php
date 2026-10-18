@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Public\ReferralController;
 use App\Services\Auth\PhoneOtpService;
 use App\Services\Auth\RegistrationService;
 use App\Support\CurriculumOptions;
@@ -51,6 +52,7 @@ class StudentRegisterController extends Controller
         ]);
 
         $user = $registration->registerStudent($data);
+        ReferralController::credit($request, $user);
 
         Auth::login($user);
         $request->session()->regenerate();

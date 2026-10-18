@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class EducationLevel extends Model
 {
+    /** Hidden level that holds teacher professional subjects (promotion exam practice). */
+    public const PROFESSIONAL = 'PRO';
+
     protected $fillable = ['name', 'code', 'sort', 'is_active'];
 
     protected function casts(): array

@@ -25,3 +25,6 @@ Schedule::command('payments:reconcile')->everyTenMinutes()->withoutOverlapping()
 
 // Subscription expiry reminders (7 days, 1 day, on the day), once each.
 Schedule::command('subscriptions:remind')->dailyAt('08:00')->withoutOverlapping();
+
+// New uploads from the maths YouTube channel(s) become published video lessons.
+Schedule::command('videos:import-youtube')->dailyAt('05:30')->withoutOverlapping();

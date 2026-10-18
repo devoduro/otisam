@@ -1,6 +1,6 @@
 {{-- One library item in a list. Expects $resource. --}}
 <li>
-    <a href="{{ route('library.show', $resource) }}" class="flex h-full flex-col rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-4 no-underline hover:border-primary-600 hover:bg-primary-50">
+    <a href="{{ route('library.show', $resource) }}" class="flex h-full flex-col rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-4 no-underline hover:border-primary-600 hover:bg-primary-50">
         <span class="flex flex-wrap items-center gap-2 text-xs font-semibold">
             <span class="rounded-full px-2 py-0.5 {{ $resource->isFree() ? 'bg-green-100 text-green-800' : 'bg-amber-100 text-amber-900' }}">{{ $resource->isFree() ? 'Free' : 'Premium' }}</span>
             <span class="text-gray-500">{{ $resource->category->name }}</span>

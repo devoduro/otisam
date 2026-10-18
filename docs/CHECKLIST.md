@@ -85,6 +85,13 @@ Last updated: 18 Oct 2026
 - [v] Fixed: sign-up class/programme dropdowns submitted the name instead of the id (regression test added)
 - [v] Alpine.js 3.14.1 bundled by Vite (no CDN)
 
+## Menus: Video lessons, Downloads, Promotion (19 Oct 2026)
+- [v] Video lessons: staff add YouTube lessons (any link form, embedded privacy-enhanced, never re-hosted), subject/class/topic, free or premium, draft/published/archived; public list with search and subject filter; watch page loads the player only on tap; premium locked without a subscription. Teacher submissions and moderation remain P9.
+- [v] Downloads: all published documents with a file, each showing Download / Sign in / Premium; signed-in users see "My downloads" (from the access log). Files still go through the access-checked endpoint.
+- [v] Promotion: information page for teacher promotion practice exams; states clearly they are not open yet and not official GES exams; shows a signed-in teacher's verification status. The exams themselves are P10.
+- [v] Menus added to the public header (menu button below 1280px), phone tab bar, footer, student/teacher sidebar (Promotion for teachers only) and admin sidebar (Content → Video lessons)
+- Tests: 90 passed, 662 assertions
+
 ## P5–P11
 Not started. See BLUEPRINT §11.
 

@@ -8,7 +8,7 @@
     <x-flash />
     <h1 class="text-3xl font-extrabold text-gray-800">My subscription</h1>
 
-    <section class="mt-6 rounded-md bg-white shadow-sm ring-1 ring-gray-100 p-6">
+    <section class="mt-6 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6">
         @if ($current)
             <p class="text-sm font-semibold uppercase text-green-800">Premium active</p>
             <p class="mt-1 text-xl font-bold">Until {{ $current->accessEndsAt()->format('j F Y') }}</p>
@@ -23,7 +23,7 @@
 
     @if ($subscriptions->isNotEmpty())
         <h2 class="mt-8 text-lg font-bold text-gray-800">Access history</h2>
-        <ul class="mt-2 divide-y divide-gray-200 rounded-md bg-white shadow-sm ring-1 ring-gray-100">
+        <ul class="mt-2 divide-y divide-gray-200 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3]">
             @foreach ($subscriptions as $s)
                 <li class="flex flex-wrap justify-between gap-2 px-4 py-3 text-sm">
                     <span>{{ $s->plan?->name ?? \App\Models\Commerce\Subscription::SOURCES[$s->source] }} · {{ $s->starts_at->format('j M Y') }} – {{ $s->ends_at->format('j M Y') }}</span>
@@ -35,7 +35,7 @@
 
     @if ($payments->isNotEmpty())
         <h2 class="mt-8 text-lg font-bold text-gray-800">Payments</h2>
-        <ul class="mt-2 divide-y divide-gray-200 rounded-md bg-white shadow-sm ring-1 ring-gray-100">
+        <ul class="mt-2 divide-y divide-gray-200 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3]">
             @foreach ($payments as $p)
                 <li class="flex flex-wrap items-center justify-between gap-2 px-4 py-3 text-sm">
                     <span>{{ $p->created_at->format('j M Y') }} · {{ $p->plan->name }} · {{ $p->amount() }}</span>

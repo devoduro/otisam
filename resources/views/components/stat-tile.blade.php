@@ -10,13 +10,13 @@
 @php
     // Flat, two-tone tiles: a darker icon block beside a solid colour body.
     $palette = [
-        'blue'   => ['body' => 'bg-[#42a5dc]', 'icon' => 'bg-[#2c8fc6]'],
-        'green'  => ['body' => 'bg-[#8cc152]', 'icon' => 'bg-[#74a83b]'],
-        'orange' => ['body' => 'bg-[#f5922f]', 'icon' => 'bg-[#de7a14]'],
-        'red'    => ['body' => 'bg-[#da4453]', 'icon' => 'bg-[#c12f3e]'],
-        'slate'  => ['body' => 'bg-[#5b6f8f]', 'icon' => 'bg-[#4a5c7a]'],
-        'purple' => ['body' => 'bg-[#967adc]', 'icon' => 'bg-[#7d62c4]'],
-    ][$color] ?? ['body' => 'bg-[#42a5dc]', 'icon' => 'bg-[#2c8fc6]'];
+        'blue'   => ['body' => 'bg-tile-blue', 'icon' => 'bg-tile-blue-dark'],
+        'green'  => ['body' => 'bg-tile-green', 'icon' => 'bg-tile-green-dark'],
+        'orange' => ['body' => 'bg-tile-orange', 'icon' => 'bg-tile-orange-dark'],
+        'red'    => ['body' => 'bg-tile-red', 'icon' => 'bg-tile-red-dark'],
+        'slate'  => ['body' => 'bg-tile-slate', 'icon' => 'bg-tile-slate-dark'],
+        'purple' => ['body' => 'bg-tile-purple', 'icon' => 'bg-tile-purple-dark'],
+    ][$color] ?? ['body' => 'bg-tile-blue', 'icon' => 'bg-tile-blue-dark'];
     $tag = $href ? 'a' : 'div';
     // Long values (e.g. "GH₵ 108,360.00") get a smaller size so they never clip in a 4-across row.
     $valueLength = mb_strlen(trim(strip_tags((string) $value)));

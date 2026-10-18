@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Public\ReferralController;
 use App\Services\Auth\PhoneOtpService;
 use App\Services\Auth\RegistrationService;
 use App\Support\Phone;
@@ -24,25 +25,20 @@ class TeacherRegisterController extends Controller
     {
         $request->merge(['phone' => Phone::clean($request->input('phone'))]);
 
+        // Quick sign-up: phone and password only (region/district optional). Name, school and
+        // subjects are added on the teacher profile before an administrator verifies the account.
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:120'],
             'phone' => ['required', 'regex:'.Phone::GHANA_MOBILE, Rule::unique('users', 'phone')->whereNotNull('phone_verified_at')],
-            'email' => ['required', 'email:rfc', 'max:150', Rule::unique('users', 'email')],
             'password' => ['required', 'confirmed', Password::min(8)->letters()->numbers()],
-            'staff_number' => ['nullable', 'string', 'max:30', Rule::unique('teacher_profiles', 'staff_number')],
-            'current_rank' => ['nullable', 'string', 'max:80'],
-            'school_name' => ['required', 'string', 'max:150'],
-            'region' => ['required', Rule::in(config('platform.regions'))],
+            'region' => ['nullable', Rule::in(config('platform.regions'))],
             'district' => ['nullable', 'string', 'max:80'],
-            'subjects_taught' => ['required', 'string', 'max:255'],
-            'declaration' => ['accepted'],
         ], [
             'phone.regex' => 'Enter a Ghana mobile number, e.g. 024 123 4567.',
             'phone.unique' => 'An account already uses this number. Sign in or reset your password.',
-            'declaration.accepted' => 'Please confirm that the information you gave is accurate.',
         ]);
 
         $user = $registration->registerTeacher($data);
+        ReferralController::credit($request, $user);
 
         Auth::login($user);
         $request->session()->regenerate();

@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="actions d-flex flex-wrap gap-2 align-items-start">
-            @can('resources.manage')<a class="primary" href="{{ route('admin.library.resources.create') }}"><i class="fas fa-upload" style="color:#42a5dc" aria-hidden="true"></i> Add resource</a>@endcan
+            @can('resources.manage')<a class="primary" href="{{ route('admin.library.resources.create') }}"><i class="fas fa-upload" style="color:#ffaf1b" aria-hidden="true"></i> Add resource</a>@endcan
             @can('teachers.verify')<a href="{{ route('admin.teachers.index', ['verification' => 'pending']) }}"><i class="fas fa-user-check" aria-hidden="true"></i> Approve teachers</a>@endcan
             @can('payments.view')<a href="{{ route('admin.commerce.payments.index') }}"><i class="fas fa-receipt" aria-hidden="true"></i> Payments</a>@endcan
         </div>
@@ -68,7 +68,7 @@
                     <a href="{{ route('admin.teachers.show', $teacher) }}" class="report-item text-decoration-none">
                         <div>
                             <div class="fw-semibold text-dark">{{ $teacher->name }}</div>
-                            <div class="small text-muted">{{ $teacher->teacherProfile->school_name }} · {{ $teacher->teacherProfile->region }} · registered {{ $teacher->created_at->diffForHumans() }}</div>
+                            <div class="small text-muted">{{ collect([$teacher->teacherProfile?->school_name, $teacher->teacherProfile?->region])->filter()->implode(' · ') ?: 'Profile incomplete' }} · registered {{ $teacher->created_at->diffForHumans() }}</div>
                         </div>
                         <i class="fa-solid fa-chevron-right report-arrow" aria-hidden="true"></i>
                     </a>

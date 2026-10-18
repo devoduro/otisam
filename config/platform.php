@@ -48,4 +48,17 @@ return [
         'Ahafo', 'Ashanti', 'Bono', 'Bono East', 'Central', 'Eastern', 'Greater Accra', 'North East',
         'Northern', 'Oti', 'Savannah', 'Upper East', 'Upper West', 'Volta', 'Western', 'Western North',
     ],
+    // YouTube channels whose uploads become video lessons (php artisan videos:import-youtube).
+    // Videos whose title mentions an elective_keywords word are filed under elective_subject.
+    'video_channels' => [
+        'otisam-maths' => [
+            'name' => 'Otisam Mathematics',
+            'channel_id' => 'UCoXMXPxUrIJyjPAQp489Byg',
+            'url' => 'https://www.youtube.com/@otisammathematics9887',
+            'subject' => 'core-mathematics',
+            'elective_subject' => 'elective-mathematics',
+            'elective_keywords' => ['differentiat', 'derivative', 'first principle', 'product rule', 'quotient rule', 'chain rule', 'integrat', 'limit', 'matri', 'determinant', 'binomial', 'permutation', 'combination', 'complex number', 'calculus'],
+            'access_level' => 'free',
+        ],
+    ],
 ];

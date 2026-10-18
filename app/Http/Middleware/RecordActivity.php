@@ -25,6 +25,7 @@ class RecordActivity
         'admin.staff' => ['user', 'staff account'],
         'admin.roles' => ['user', 'role'],
         'admin.settings' => ['settings', 'setting'],
+        'admin.videos' => ['content', 'video lesson'],
         'admin.commerce.plans' => ['commerce', 'plan'],
         'admin.commerce.coupons' => ['commerce', 'coupon'],
         'admin.library.resources' => ['library', 'resource'],

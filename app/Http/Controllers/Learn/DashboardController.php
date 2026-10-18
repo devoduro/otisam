@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Learn;
 
 use App\Http\Controllers\Controller;
+use App\Models\Classroom\Assignment;
 use App\Models\Curriculum\Subject;
 use App\Models\Library\Resource;
+use App\Models\User;
 use App\Services\Access\Entitlements;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -35,7 +37,21 @@ class DashboardController extends Controller
                 'free' => (clone $library)->where('access_level', 'free')->count(),
                 'papers' => (clone $library)->whereNotNull('exam_year')->count(),
             ],
+            'classwork' => $this->classwork($user),
             'latest' => (clone $library)->with(['category', 'subject', 'examType', 'classLevel'])->latest('published_at')->limit(6)->get(),
         ]);
+    }
+
+    /** @return array{classes: int, todo: int} */
+    private function classwork(User $user): array
+    {
+        $classIds = $user->classrooms()->pluck('classrooms.id');
+
+        return [
+            'classes' => $classIds->count(),
+            'todo' => Assignment::where('status', 'published')->whereIn('classroom_id', $classIds)
+                ->whereDoesntHave('submissions', fn ($q) => $q->where('student_id', $user->id)->whereNotNull('submitted_at'))
+                ->count(),
+        ];
     }
 }
