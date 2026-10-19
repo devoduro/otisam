@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Curriculum\ClassLevel;
+use App\Models\Curriculum\CurriculumNode;
+use App\Models\Curriculum\CurriculumVersion;
 use App\Models\Curriculum\EducationLevel;
 use App\Models\Curriculum\Subject;
 use App\Models\QuestionBank\Question;
@@ -18,8 +21,11 @@ use Illuminate\Support\Str;
  * subject is skipped.
  *
  * Questions live in data/demo-questions-{set}.php (the first small sets) and data/questions/{slug}.php
- * (one file per subject, the larger bank). Both use the same row format. Not part of DatabaseSeeder;
- * run it on purpose:
+ * (one file per subject, the larger bank, grouped by topic). Each topic becomes a supplementary node in
+ * a "Practice topics" curriculum version, so learners can practise one topic at a time; a topic named
+ * like "SHS 2: Rigid motion" also files its questions under that year. Questions already in the bank
+ * get a topic and year only if they have none, so an administrator's tagging stays. Not part of
+ * DatabaseSeeder; run it on purpose:
  *
  *     php artisan db:seed --class=DemoQuestionSeeder
  */
@@ -30,6 +36,11 @@ class DemoQuestionSeeder extends Seeder
         'jhs' => 'Demo question, BECE-style (written by Otisam)',
         'promotion' => 'Demo question, GES promotion exam style (written by Otisam)',
     ];
+
+    public const TOPIC_VERSION = 'Practice topics (Otisam)';
+
+    /** @var array<string, CurriculumNode> */
+    private array $nodes = [];
 
     public function run(): void
     {
@@ -63,8 +74,11 @@ class DemoQuestionSeeder extends Seeder
                 EducationLevel::PROFESSIONAL => 'promotion',
                 default => 'shs',
             }];
-            foreach (require $file as [$stem, $options, $answer, $explanation, $difficulty]) {
+            foreach (self::rows($file) as ['row' => [$stem, $options, $answer, $explanation, $difficulty], 'topic' => $topic, 'year' => $year]) {
                 $created += (int) $this->add($subject, $stem, $options, $answer, $explanation, $difficulty, $source);
+                if ($topic !== null) {
+                    $this->tag($subject, $stem, $topic, $year);
+                }
             }
         }
 
@@ -97,6 +111,83 @@ class DemoQuestionSeeder extends Seeder
         }
 
         return $files;
+    }
+
+    /**
+     * The rows of a question file with their topic. A file returns either a plain list of rows or
+     * ['Topic' => [rows…], …]; "SHS 2: Topic" gives the year as well.
+     *
+     * @return list<array{row: array, topic: ?string, year: ?string}>
+     */
+    public static function rows(string $file): array
+    {
+        $rows = [];
+        foreach (require $file as $key => $value) {
+            if (! is_string($key)) {
+                $rows[] = ['row' => $value, 'topic' => null, 'year' => null];
+
+                continue;
+            }
+            [$topic, $year] = self::splitTopic($key);
+            foreach ($value as $row) {
+                $rows[] = ['row' => $row, 'topic' => $topic, 'year' => $year];
+            }
+        }
+
+        return $rows;
+    }
+
+    /** @return array{0: string, 1: ?string} topic title and class level name ("SHS 2"), if the key names one */
+    public static function splitTopic(string $key): array
+    {
+        if (preg_match('/^((?:JHS|SHS) \d):\s*(.+)$/', trim($key), $m)) {
+            return [trim($m[2]), $m[1]];
+        }
+
+        return [trim($key), null];
+    }
+
+    /** Files the question under its topic (and year), unless it is already tagged. */
+    private function tag(Subject $subject, string $stem, string $topic, ?string $year): void
+    {
+        $question = Question::where('subject_id', $subject->id)->where('stem_hash', self::stemHash($stem))->first();
+        if (! $question) {
+            return;
+        }
+        $classLevel = $year ? ClassLevel::where('education_level_id', $subject->education_level_id)->where('name', $year)->first() : null;
+        if (! $question->curriculumNodes()->exists()) {
+            $question->curriculumNodes()->attach($this->topicNode($subject, $topic, $classLevel)->id);
+        }
+        if ($classLevel && ! $question->class_level_id) {
+            $question->forceFill(['class_level_id' => $classLevel->id])->save();
+        }
+    }
+
+    private function topicNode(Subject $subject, string $topic, ?ClassLevel $classLevel): CurriculumNode
+    {
+        $cacheKey = $subject->id.'|'.mb_strtolower($topic);
+        if (isset($this->nodes[$cacheKey])) {
+            return $this->nodes[$cacheKey];
+        }
+
+        $version = CurriculumVersion::firstOrCreate(
+            ['education_level_id' => $subject->education_level_id, 'name' => self::TOPIC_VERSION],
+            ['status' => 'active', 'notes' => 'Topic groups for the practice question bank, written by Otisam. Not the official curriculum document.'],
+        );
+        $node = CurriculumNode::where('curriculum_version_id', $version->id)->where('subject_id', $subject->id)
+            ->whereNull('parent_id')->where('title', $topic)->first();
+        if (! $node) {
+            $node = new CurriculumNode(['class_level_id' => $classLevel?->id, 'node_type' => 'topic', 'title' => $topic, 'is_official' => false]);
+            $node->forceFill([
+                'curriculum_version_id' => $version->id,
+                'subject_id' => $subject->id,
+                'sort' => (int) CurriculumNode::where('curriculum_version_id', $version->id)->where('subject_id', $subject->id)->max('sort') + 1,
+                'depth' => 0,
+                'path' => '/',
+            ])->save();
+        }
+
+        return $this->nodes[$cacheKey] = $node;
     }
 
     public static function stemHash(string $stem): string

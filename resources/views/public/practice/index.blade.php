@@ -62,7 +62,7 @@
                 <label for="p-topic" class="mb-1 block text-[13px] font-bold text-primary-800">Topic</label>
                 <select id="p-topic" name="topic" class="{{ $control }}" @disabled($topics->isEmpty())>
                     <option value="">{{ $subject ? ($topics->isEmpty() ? 'All topics (none tagged yet)' : 'All topics') : 'Choose a subject first' }}</option>
-                    @foreach ($topics as $t)<option value="{{ $t->id }}" @selected((int) ($filters['topic'] ?? 0) === $t->id)>{{ $t->code ? $t->code.' ' : '' }}{{ \Illuminate\Support\Str::limit($t->title, 70) }}</option>@endforeach
+                    @foreach ($topics as $t)<option value="{{ $t->id }}" @selected((int) ($filters['topic'] ?? 0) === $t->id)>{{ $t->code ? $t->code.' ' : '' }}{{ $t->classLevel ? $t->classLevel->name.' · ' : '' }}{{ \Illuminate\Support\Str::limit($t->title, 70) }}</option>@endforeach
                 </select>
             </div>
             <div>

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Curriculum\ClassLevel;
 use App\Models\Curriculum\Subject;
 use Database\Seeders\CurriculumSubjectsSeeder;
 use Database\Seeders\DemoQuestionSeeder;
@@ -28,8 +29,14 @@ class QuestionBankDataTest extends TestCase
 
         foreach ($files as $slug => $file) {
             $this->assertTrue(Subject::where('slug', $slug)->exists(), "{$slug}: no subject with this slug.");
-            $rows = require $file;
-            $this->assertIsArray($rows, "{$slug}: the file must return a list of questions.");
+            $this->assertIsArray(require $file, "{$slug}: the file must return the questions grouped by topic.");
+            $tagged = DemoQuestionSeeder::rows($file);
+            $rows = array_column($tagged, 'row');
+            // Every question needs a topic so learners can practise one topic at a time.
+            $this->assertNotContains(null, array_column($tagged, 'topic'), "{$slug}: group the questions under topic names.");
+            foreach (array_filter(array_unique(array_column($tagged, 'year'))) as $year) {
+                $this->assertTrue(ClassLevel::where('name', $year)->exists(), "{$slug}: no class level called {$year}.");
+            }
 
             foreach ($rows as $i => $row) {
                 $where = "{$slug} #".($i + 1);

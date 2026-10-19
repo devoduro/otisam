@@ -9,6 +9,7 @@ use App\Models\Library\ExamType;
 use App\Models\Library\Resource;
 use App\Models\Library\ResourceCategory;
 use App\Models\Library\TakedownRequest;
+use App\Models\QuestionBank\Question;
 use App\Services\Library\ResourceAccess;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -65,6 +66,10 @@ class LibraryController extends Controller
             'categories' => ResourceCategory::active()->where('audience', '!=', 'teacher')->ordered()->get(),
             'examTypes' => ExamType::active()->ordered()->get(),
             'years' => self::examYears(),
+            // Practice questions live in the question bank, not the library, so point to them.
+            'practiceCount' => $subject ? Question::where('subject_id', $subject->id)->where('status', 'published')
+                ->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count() : 0,
+            'subject' => $subject,
         ]);
     }
 

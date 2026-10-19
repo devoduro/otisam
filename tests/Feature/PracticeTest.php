@@ -58,7 +58,8 @@ class PracticeTest extends TestCase
         $subject = Subject::where('slug', 'core-mathematics')->first();
 
         $this->get(route('practice.index'))->assertOk()->assertSee('Core Mathematics')->assertSee('BECE');
-        $this->get(route('practice.index', ['subject' => 'core-mathematics']))->assertOk()->assertSee('44 questions match');
+        $this->get(route('practice.index', ['subject' => 'core-mathematics']))->assertOk()
+            ->assertSee(Question::where('subject_id', $subject->id)->count().' questions match');
         $this->get(route('practice.show', $subject))->assertRedirect(route('practice.start', ['subject' => 'core-mathematics']));
 
         $page = $this->get(route('practice.start', ['subject' => 'core-mathematics', 'count' => 10]))->assertOk();

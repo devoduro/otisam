@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Curriculum\EducationLevel;
+use App\Models\Curriculum\Programme;
 use App\Models\Curriculum\Subject;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -64,6 +65,37 @@ class CurriculumSubjectsSeeder extends Seeder
         'Performing Arts' => ['elective', '2023 SHS curriculum elective.'],
     ];
 
+    /**
+     * Programmes for the 2023 subjects above, so the programme filter shows them. "*" means every programme,
+     * as a core subject. Only subjects with no programme yet are linked, so an administrator's choices stay.
+     */
+    private const PROGRAMME_LINKS = [
+        'Religious and Moral Education' => '*',
+        'Physical Education and Health' => '*',
+        'Information and Communication Technology' => '*',
+        'Intervention English' => '*',
+        'Intervention Mathematics' => '*',
+        'Computing' => ['General Science', 'General Arts', 'Business', 'Technical'],
+        'Elective Physical Education and Health' => ['General Science', 'General Arts'],
+        'Agricultural Science' => ['Agricultural Science'],
+        'Applied Technology' => ['Technical'],
+        'Art and Design Foundation' => ['Visual Arts'],
+        'Arts and Design Studio' => ['Visual Arts'],
+        'Aviation and Aerospace Engineering' => ['General Science', 'Technical'],
+        'Biomedical Science' => ['General Science'],
+        'Design and Communication Technology' => ['Technical', 'Visual Arts'],
+        'Engineering' => ['General Science', 'Technical'],
+        'Manufacturing Engineering' => ['General Science', 'Technical'],
+        'Robotics' => ['General Science', 'Technical'],
+        'Islamic Religious Studies' => ['General Arts'],
+        'Ghanaian Language' => ['General Arts'],
+        'French' => ['General Arts'],
+        'Spanish' => ['General Arts'],
+        'Arabic' => ['General Arts'],
+        'Music' => ['General Arts', 'Visual Arts'],
+        'Performing Arts' => ['General Arts', 'Visual Arts'],
+    ];
+
     /** Existing WASSCE-era subjects => their name in the 2023 SHS curriculum. */
     private const SHS_ALSO_KNOWN_AS = [
         'Core Mathematics' => 'Mathematics',
@@ -90,6 +122,7 @@ class CurriculumSubjectsSeeder extends Seeder
             $shs = EducationLevel::where('code', 'SHS')->first();
             if ($shs) {
                 $added += $this->addMissing($shs, self::SHS_NEW);
+                $this->linkProgrammes($shs);
                 foreach (self::SHS_ALSO_KNOWN_AS as $name => $newName) {
                     $subject = $shs->subjects()->where('name', $name)->first();
                     if ($subject && blank($subject->description)) {
@@ -100,6 +133,21 @@ class CurriculumSubjectsSeeder extends Seeder
 
             $this->command?->info("Curriculum subjects: {$added} added.");
         });
+    }
+
+    private function linkProgrammes(EducationLevel $shs): void
+    {
+        $programmes = Programme::where('education_level_id', $shs->id)->get();
+        foreach (self::PROGRAMME_LINKS as $name => $names) {
+            $subject = $shs->subjects()->where('name', $name)->first();
+            if (! $subject || $subject->programmes()->exists()) {
+                continue;
+            }
+            $targets = $names === '*' ? $programmes : $programmes->filter(fn ($p) => in_array($p->name, $names, true));
+            foreach ($targets as $programme) {
+                $programme->subjects()->syncWithoutDetaching([$subject->id => ['is_core' => $names === '*']]);
+            }
+        }
     }
 
     private function addMissing(EducationLevel $level, array $subjects): int

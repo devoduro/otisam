@@ -52,7 +52,7 @@ class PublicTeachersTest extends TestCase
         $this->get(route('subjects.index'))->assertOk()->assertSee('Career Technology')->assertSee('Robotics');
         $this->get(route('subjects.index', ['level' => 'jhs']))->assertSee('Career Technology')->assertDontSee('Robotics');
         $this->get(route('subjects.index', ['category' => 'elective', 'level' => 'shs']))->assertSee('Robotics')->assertDontSee('Integrated Science');
-        $this->get(route('subjects.index', ['has' => 'practice']))->assertSee('Core Mathematics')->assertDontSee('Robotics');
+        $this->get(route('subjects.index', ['has' => 'practice']))->assertSee('Core Mathematics')->assertDontSee('Spanish');
         $this->get(route('subjects.index', ['q' => 'engineer']))->assertSee('Manufacturing Engineering')->assertDontSee('Biology');
     }
 

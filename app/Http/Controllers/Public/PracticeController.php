@@ -45,7 +45,10 @@ class PracticeController extends Controller
             ? CurriculumNode::where('subject_id', $subject->id)
                 ->whereHas('version', fn ($v) => $v->published())
                 ->whereIn('id', fn ($q) => $q->select('curriculum_node_id')->from('curriculum_node_question'))
-                ->orderBy('path')->orderBy('sort')->get(['id', 'title', 'code', 'path'])
+                // With a year chosen, offer that year's topics and the ones for every year.
+                ->when($year, fn ($q) => $q->where(fn ($w) => $w->whereNull('class_level_id')->orWhere('class_level_id', $year->id)))
+                ->with('classLevel:id,name')
+                ->orderBy('path')->orderBy('sort')->get(['id', 'title', 'code', 'path', 'class_level_id'])
             : collect();
 
         $available = $subject ? $this->filtered($premium, $subject, $filters, $year, $topic)->count() : null;

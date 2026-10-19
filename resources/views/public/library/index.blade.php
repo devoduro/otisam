@@ -79,6 +79,13 @@
     </form>
     @include('public.partials.auto-filter-script')
 
+    @if ($practiceCount > 0)
+        <a href="{{ route('practice.index', ['subject' => $subject->slug]) }}" class="mt-6 flex items-center justify-between gap-3 rounded-2xl bg-gold-50 p-4 text-primary-700 no-underline shadow-card ring-1 ring-[#ece9f3] hover:bg-gold-100">
+            <span><i class="fas fa-list-check mr-2" aria-hidden="true"></i>{{ number_format($practiceCount) }} practice {{ \Illuminate\Support\Str::plural('question', $practiceCount) }} with answers for {{ $subject->name }}</span>
+            <span class="font-semibold whitespace-nowrap">Practise now &rarr;</span>
+        </a>
+    @endif
+
     <p class="mt-6 text-sm text-gray-500" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
 
     @if ($resources->isEmpty())

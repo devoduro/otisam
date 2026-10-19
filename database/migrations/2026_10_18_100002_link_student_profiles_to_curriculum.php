@@ -32,7 +32,7 @@ return new class extends Migration
                 $classId = null;
                 if ($row->class_level) {
                     $classId = $classIds[$row->class_level] ??= DB::table('class_levels')->where('education_level_id', $levelId)->where('name', $row->class_level)->value('id')
-                        ?? DB::table('class_levels')->insertGetId(['education_level_id' => $levelId, 'name' => $row->class_level, 'sort' => 0, 'is_active' => true, 'created_at' => $now, 'updated_at' => $now]);
+                        ?? DB::table('class_levels')->insertGetId(['education_level_id' => $levelId, 'name' => $row->class_level, 'sort' => preg_match('/(\d+)\s*$/', $row->class_level, $n) ? (int) $n[1] : 0, 'is_active' => true, 'created_at' => $now, 'updated_at' => $now]);
                 }
 
                 $programmeId = null;
