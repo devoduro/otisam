@@ -58,12 +58,12 @@ class PracticeTest extends TestCase
         $subject = Subject::where('slug', 'core-mathematics')->first();
 
         $this->get(route('practice.index'))->assertOk()->assertSee('Core Mathematics')->assertSee('BECE');
-        $this->get(route('practice.index', ['subject' => 'core-mathematics']))->assertOk()->assertSee('8 questions match');
+        $this->get(route('practice.index', ['subject' => 'core-mathematics']))->assertOk()->assertSee('44 questions match');
         $this->get(route('practice.show', $subject))->assertRedirect(route('practice.start', ['subject' => 'core-mathematics']));
 
         $page = $this->get(route('practice.start', ['subject' => 'core-mathematics', 'count' => 10]))->assertOk();
         $ids = session('practice.set')['ids'];
-        $this->assertCount(8, $ids);
+        $this->assertCount(10, $ids);
         $page->assertDontSee('Explanation')->assertDontSee('"correct"', false);
 
         // Answer every question correctly except the first.
@@ -75,13 +75,13 @@ class PracticeTest extends TestCase
         }
 
         $this->post(route('practice.mark'), ['answers' => $answers])
-            ->assertOk()->assertSee('7 / 8')->assertSee('Explanation');
+            ->assertOk()->assertSee('9 / 10')->assertSee('Explanation');
 
         // The set is used up: marking it again needs a new set.
         $this->post(route('practice.mark'), ['answers' => $answers])->assertStatus(419);
 
         // The score shows on the practice home page.
-        $this->get(route('practice.index'))->assertSee('Your recent scores')->assertSee('7/8');
+        $this->get(route('practice.index'))->assertSee('Your recent scores')->assertSee('9/10');
     }
 
     public function test_filters_difficulty_count_and_timed_mode(): void

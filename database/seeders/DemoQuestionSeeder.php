@@ -15,7 +15,11 @@ use Illuminate\Support\Str;
  * Demo practice questions (WASSCE-style for SHS, BECE-style for JHS), written for Otisam, so the
  * practice pages have something to show. Published as free practice questions and labelled as
  * demo content in `source`. Safe to run again: a question whose stem is already in the bank for that
- * subject is skipped. Not part of DatabaseSeeder; run it on purpose:
+ * subject is skipped.
+ *
+ * Questions live in data/demo-questions-{set}.php (the first small sets) and data/questions/{slug}.php
+ * (one file per subject, the larger bank). Both use the same row format. Not part of DatabaseSeeder;
+ * run it on purpose:
  *
  *     php artisan db:seed --class=DemoQuestionSeeder
  */
@@ -47,6 +51,23 @@ class DemoQuestionSeeder extends Seeder
             }
         }
 
+        foreach (self::subjectFiles() as $slug => $file) {
+            $subject = Subject::with('educationLevel')->where('slug', $slug)->first();
+            if (! $subject) {
+                $missing[] = $slug;
+
+                continue;
+            }
+            $source = self::SOURCES[match ($subject->educationLevel?->code) {
+                'JHS' => 'jhs',
+                EducationLevel::PROFESSIONAL => 'promotion',
+                default => 'shs',
+            }];
+            foreach (require $file as [$stem, $options, $answer, $explanation, $difficulty]) {
+                $created += (int) $this->add($subject, $stem, $options, $answer, $explanation, $difficulty, $source);
+            }
+        }
+
         $this->command?->info("Demo questions: {$created} added.");
         if ($missing) {
             $this->command?->warn('Subjects not found (run CurriculumSubjectsSeeder first): '.implode(', ', $missing));
@@ -65,6 +86,17 @@ class DemoQuestionSeeder extends Seeder
             $subject->slug = 'ges-promotion-general';
             $subject->save();
         }
+    }
+
+    /** @return array<string, string> subject slug => path of its question file */
+    public static function subjectFiles(): array
+    {
+        $files = [];
+        foreach (glob(__DIR__.'/data/questions/*.php') ?: [] as $path) {
+            $files[basename($path, '.php')] = $path;
+        }
+
+        return $files;
     }
 
     public static function stemHash(string $stem): string
