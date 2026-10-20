@@ -33,6 +33,16 @@ return [
         ['Flexibility is the', ['strength of a muscle', 'speed of a runner', 'range of movement around a joint', 'heart rate'], 'C', 'Stretching improves it.', 1],
         ['The normal resting heart rate of an adult is about', ['5–10 beats per minute', '20–40 beats per minute', '150–200 beats per minute', '60–100 beats per minute'], 'D', 'Fit people often have lower rates.', 2],
         ['Body composition refers to the', ['height only', 'proportion of fat to lean tissue in the body', 'skin colour', 'speed'], 'B', 'It is a health-related fitness component.', 2],
+        ['A 16-year-old\'s training zone at 70–85% of maximum heart rate is about', ['100–120 bpm', '143–173 bpm', '180–204 bpm', '60–80 bpm'], 'B', 'Max HR = 204; × 0.70 and × 0.85.', 5],
+        ['Which test best measures anaerobic power?', ['sit-and-reach', 'the multistage fitness test', 'the 30-second Wingate cycle test', 'the Cooper 12-minute run'], 'C', 'It measures short, intense output.', 5],
+        ['Plyometric training mainly develops', ['balance only', 'flexibility', 'aerobic endurance', 'explosive power'], 'D', 'Jumps and bounds.', 4],
+        ['The FITT principle variable most changed to apply progressive overload in running is often', ['music', 'type of shoes', 'location', 'intensity or time'], 'D', 'Gradually increase load.', 4],
+        ['A BMI of 30 for an adult indicates', ['normal weight', 'obesity', 'underweight', 'overweight only'], 'B', '≥30 is obese.', 3],
+        ['The maximum heart rate of a 20-year-old is estimated as', ['160 beats per minute', '220 beats per minute', '180 beats per minute', '200 beats per minute'], 'D', '220 − age.', 5],
+        ['The FITT principle stands for frequency, intensity, time and', ['training', 'type', 'tempo', 'tension'], 'B', 'Exercise planning.', 4],
+        ['The Cooper 12-minute run measures', ['muscular power', 'flexibility', 'cardiovascular endurance', 'agility'], 'C', 'Aerobic fitness.', 4],
+        ['The sit-and-reach test measures', ['balance', 'strength', 'speed', 'flexibility'], 'D', 'Hamstring and lower back.', 4],
+        ['Progressive overload means', ['training once a year', 'gradually increasing training demands', 'reducing intensity', 'resting only'], 'B', 'Adaptation principle.', 4],
     ],
 
     'Anatomy and physiology' => [
@@ -55,6 +65,16 @@ return [
         ['Joints that allow no movement, such as in the skull, are', ['hinge joints', 'fixed (fibrous) joints', 'ball-and-socket joints', 'pivot joints'], 'B', 'They are also called sutures.', 2],
         ['The large muscle at the front of the thigh is the', ['calf', 'hamstring', 'quadriceps', 'gluteus'], 'C', 'It straightens the knee.', 1],
         ['Blood returns to the heart through', ['nerves', 'arteries', 'capillaries only', 'veins'], 'D', 'Veins have valves.', 1],
+        ['During exercise, blood flow is redirected from the digestive organs to the muscles by', ['the kidneys', 'vascular shunting (vasoconstriction and vasodilation)', 'sweating', 'breathing faster only'], 'B', 'Muscles need more oxygen.', 5],
+        ['The type of muscle fibre suited to marathon running is', ['cardiac only', 'fast-twitch (type IIb)', 'slow-twitch (type I)', 'smooth'], 'C', 'Resistant to fatigue.', 5],
+        ['Oxygen debt (EPOC) after exercise is used to', ['digest food', 'build muscle instantly', 'cool the body only', 'remove lactic acid and restore oxygen stores'], 'D', 'Breathing stays elevated.', 5],
+        ['Tidal volume of 0.5 L at 12 breaths per minute gives a minute ventilation of', ['0.5 L/min', '12 L/min', '6 L/min', '24 L/min'], 'C', '0.5 × 12.', 4],
+        ['During exercise, stroke volume increases partly because of', ['reduced muscle activity', 'lower heart rate', 'less blood', 'greater venous return'], 'D', 'Starling\'s law.', 5],
+        ['The largest bone in the human body is the', ['humerus', 'tibia', 'femur', 'pelvis'], 'C', 'Thigh bone.', 4],
+        ['The knee is an example of a', ['gliding joint', 'ball-and-socket joint', 'pivot joint', 'hinge joint'], 'D', 'Movement in one plane.', 4],
+        ['Muscles are attached to bones by', ['ligaments', 'tendons', 'cartilage', 'nerves'], 'B', 'Tough cords.', 4],
+        ['Lactic acid builds up in muscles during', ['rest', 'aerobic respiration', 'anaerobic respiration', 'sleep'], 'C', 'Oxygen debt.', 4],
+        ['The muscle that bends the arm at the elbow is the', ['quadriceps', 'triceps', 'deltoid', 'biceps'], 'D', 'Flexor.', 4],
     ],
 
     'Sports and athletics' => [
@@ -80,6 +100,15 @@ return [
         ['In a relay race, the baton must be passed within the', ['spectator area', 'starting blocks', 'finish line', 'changeover (takeover) zone'], 'D', 'Passing outside it disqualifies the team.', 2],
         ['The triple jump consists of a hop, a step and a', ['run', 'jump', 'throw', 'roll'], 'B', 'The athlete lands in the sand pit.', 1],
         ['In basketball, each team has how many players on court?', ['7', '6', '5', '11'], 'C', 'Substitutions are unlimited.', 1],
+        ['In a staggered start for the 400 m, runners in outer lanes start ahead because', ['they are faster', 'outer lanes are longer around the bends', 'it is random', 'they are seeded'], 'B', 'It equalises distance.', 4],
+        ['In football, a player cannot be offside directly from a', ['pass in open play', 'free kick', 'throw-in, goal kick or corner kick', 'header'], 'C', 'Laws of the Game.', 5],
+        ['In volleyball, a team rotates', ['anticlockwise each point', 'clockwise when it wins the serve back', 'never', 'after each set only'], 'B', 'Positions rotate.', 5],
+        ['A 400 m track has two straights and two bends; the 200 m race is run on', ['two bends', 'two straights', 'one bend and one straight', 'only a straight'], 'C', 'Half a lap.', 4],
+        ['In football, a match normally lasts', ['60 minutes', '90 minutes', '80 minutes', '120 minutes'], 'B', 'Two halves of 45.', 4],
+        ['A volleyball team has how many players on court?', ['7', '5', '6', '11'], 'C', 'Per side.', 4],
+        ['In basketball, a shot from beyond the arc scores', ['4 points', '2 points', '1 point', '3 points'], 'D', 'Three-point line.', 4],
+        ['The 4 × 100 m relay baton must be passed within the', ['takeover zone', 'start box', 'finish line', 'inside lane'], 'A', 'Exchange zone.', 4],
+        ['A netball team has how many players on court?', ['7', '6', '5', '11'], 'A', 'Seven positions.', 4],
     ],
 
     'First aid and health' => [
@@ -101,6 +130,11 @@ return [
         ['The first thing to do at the scene of an accident is to', ['leave', 'move the casualty quickly', 'give water', 'check for danger'], 'D', 'DRABC: Danger, Response, Airway, Breathing, Circulation.', 2],
         ['Bleeding from a cut can be controlled by', ['removing the bandage', 'applying direct pressure', 'washing with hot water', 'lifting the casualty'], 'B', 'Elevate the wound too.', 1],
         ['CPR is given to a casualty who is', ['walking', 'talking', 'not breathing normally', 'eating'], 'C', 'It combines chest compressions and rescue breaths.', 2],
+        ['In adult CPR, the recommended rate of chest compressions is', ['100–120 per minute', '30 per minute', '60 per minute', '200 per minute'], 'A', 'Push hard and fast.', 5],
+        ['The ratio of chest compressions to rescue breaths in adult CPR is', ['30 : 2', '15 : 1', '5 : 1', '10 : 2'], 'A', 'Current guidelines.', 4],
+        ['RICE treatment for a sprain stands for rest, ice, compression and', ['elevation', 'exercise', 'evaluation', 'emergency'], 'A', 'Reduce swelling.', 4],
+        ['The recommended adult CPR compression rate is', ['100 to 120 per minute', '30 per minute', '60 per minute', '200 per minute'], 'A', 'Current guidelines.', 5],
+        ['Heat exhaustion is best treated by', ['moving to a cool place and giving fluids', 'more exercise', 'wrapping in blankets', 'giving alcohol'], 'A', 'Cool and rehydrate.', 4],
     ],
 
     'SHS 1: Career pathways in PEH' => [
@@ -220,6 +254,7 @@ return [
         ['Sleeping under an insecticide-treated net prevents', ['malaria', 'diabetes', 'tuberculosis', 'hypertension'], 'A', 'It stops mosquito bites.', 1],
         ['Cholera can be prevented by', ['drinking safe water and good sanitation', 'sleeping under nets', 'wearing shoes only', 'eating sweets'], 'A', 'It is a waterborne disease.', 1],
         ['Hypertension can be reduced by', ['regular exercise and less salt', 'more salt', 'smoking', 'no exercise'], 'A', 'It is a lifestyle disease.', 1],
+        ['Hepatitis B is transmitted mainly through', ['blood and body fluids', 'mosquito bites', 'food only', 'air'], 'A', 'Vaccination prevents it.', 4],
     ],
 
     'SHS 2: Traditional games' => [
@@ -271,5 +306,6 @@ return [
         ['Drug dependence means', ['the body needs the drug to function normally', 'taking medicine correctly', 'never using drugs', 'using vitamins'], 'A', 'Stopping causes withdrawal symptoms.', 2],
         ['Stress can be managed by', ['exercise, rest and talking to others', 'drinking alcohol', 'taking drugs', 'isolation'], 'A', 'Healthy coping.', 1],
         ['Alcohol abuse by drivers leads to', ['road accidents', 'safer driving', 'better reflexes', 'less fuel use'], 'A', 'It impairs judgement.', 1],
+        ['Anabolic steroids are banned in sport because they', ['give unfair advantage and harm health', 'reduce muscle', 'are vitamins', 'cure injuries legally'], 'A', 'WADA prohibited list.', 4],
     ],
 ];

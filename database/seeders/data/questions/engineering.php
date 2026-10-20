@@ -42,6 +42,11 @@ return [
         ['The SI unit of energy is the', ['newton', 'watt', 'volt', 'joule'], 'D', '1 J = 1 N m.', 1],
         ['Precision of a measurement refers to', ['how close a value is to the true value', 'how close repeated measurements are to each other', 'the unit used', 'the instrument\'s cost'], 'B', 'Accuracy is closeness to the true value.', 2],
         ['Convert 500 mm to metres.', ['50 m', '5 m', '0.5 m', '0.05 m'], 'C', '1 m = 1,000 mm.', 1],
+        ['Convert 72 km/h to m/s.', ['200 m/s', '7.2 m/s', '72 m/s', '20 m/s'], 'D', 'Divide by 3.6.', 3],
+        ['The percentage error of a 50 mm measurement with an uncertainty of ±0.5 mm is', ['0.5%', '1%', '10%', '5%'], 'B', '0.5/50 × 100.', 4],
+        ['The SI unit of stress is the', ['watt', 'newton', 'joule', 'pascal'], 'D', 'Equal to N/m².', 4],
+        ['A vernier caliper reading with main scale 23 mm and vernier 0.35 mm gives', ['23.035 mm', '23.35 mm', '26.5 mm', '2.335 mm'], 'B', 'Add the readings.', 4],
+        ['1 bar equals', ['10 Pa', '1000 Pa', '100,000 Pa', '1 Pa'], 'C', 'It is 10⁵ Pa.', 5],
     ],
 
     'Statics and structures' => [
@@ -62,6 +67,14 @@ return [
         ['Tension in a member means it is being', ['pushed', 'pulled', 'twisted', 'bent'], 'B', 'Cables are in tension.', 1],
         ['The moment of a 20 N force acting 0.5 m from a pivot is', ['20.5 N m', '40 N m', '10 N m', '0.025 N m'], 'C', 'M = F × d.', 1],
         ['Arches are strong because they', ['are always steel', 'are made of glass', 'have no supports', 'transfer loads mainly as compression'], 'D', 'Stone and concrete are strong in compression.', 2],
+        ['A 4 m simply supported beam carries a central point load of 10 kN. Each support reaction is', ['2.5 kN', '10 kN', '5 kN', '20 kN'], 'C', 'Symmetrical loading.', 4],
+        ['For the same beam (4 m, central 10 kN load), the maximum bending moment is', ['40 kN m', '20 kN m', '5 kN m', '10 kN m'], 'D', 'M = WL/4.', 5],
+        ['A steel rod of area 100 mm² carries a tensile load of 20 kN. The stress is', ['2 N/mm²', '200 N/mm²', '2,000 N/mm²', '20 N/mm²'], 'B', 'σ = F/A.', 4],
+        ['The factor of safety is the ratio of', ['load to area', 'working stress to ultimate stress', 'ultimate stress to working stress', 'strain to stress'], 'C', 'It allows for uncertainty.', 4],
+        ['A beam 4 m long is simply supported at its ends with a 1000 N load at its centre. Each support reaction is', ['2000 N', '1000 N', '250 N', '500 N'], 'D', 'Symmetrical loading.', 4],
+        ['For a body in equilibrium, the sum of moments about any point is', ['maximum', 'zero', 'equal to weight', 'negative'], 'B', 'Condition of equilibrium.', 4],
+        ['Triangulation is used in trusses because triangles are', ['curved', 'cheap', 'rigid shapes', 'hollow'], 'C', 'Cannot deform without changing side length.', 4],
+        ['A force of 200 N stretches a rod of area 0.0001 m². The stress is', ['2 × 10² Pa', '2 × 10⁴ Pa', '200 Pa', '2 × 10⁶ Pa'], 'D', 'Stress = F/A.', 5],
     ],
 
     'Materials' => [
@@ -80,6 +93,10 @@ return [
         ['Stainless steel resists rusting because it contains', ['copper', 'chromium', 'tin', 'lead'], 'B', 'Chromium forms a protective oxide layer.', 2],
         ['Bronze is an alloy of copper and', ['iron', 'zinc', 'tin', 'lead'], 'C', 'Brass is copper and zinc.', 2],
         ['Corrosion of iron can be prevented by', ['leaving it outdoors', 'wetting it', 'heating it', 'painting, galvanising or oiling'], 'D', 'These form barriers.', 1],
+        ['A material with stress 200 MPa and strain 0.001 has Young\'s modulus', ['200 MPa', '20 GPa', '2 GPa', '200 GPa'], 'D', 'E = σ/ε.', 5],
+        ['The elastic limit is the point beyond which a material', ['breaks immediately', 'does not return to its original shape', 'becomes elastic', 'melts'], 'B', 'Plastic deformation begins.', 4],
+        ['The ability of a material to be drawn into wires is', ['malleability', 'ductility', 'brittleness', 'hardness'], 'B', 'E.g. copper.', 4],
+        ['Strain is defined as', ['force times length', 'force divided by area', 'extension divided by original length', 'mass per volume'], 'C', 'Dimensionless.', 4],
     ],
 
     'Work, energy and machines' => [
@@ -99,6 +116,11 @@ return [
         ['Tweezers are an example of a', ['second-class lever', 'first-class lever', 'third-class lever', 'screw'], 'C', 'Effort is between fulcrum and load.', 2],
         ['An inclined plane reduces the', ['load', 'work done', 'height', 'effort needed to raise a load'], 'D', 'The effort acts over a longer distance.', 1],
         ['Work done = force × distance moved', ['perpendicular to the force', 'in the direction of the force', 'in any direction', 'only upward'], 'B', 'W = Fd cos θ.', 2],
+        ['A pulley system lifts 800 N with 250 N effort and has VR 4. Its efficiency is', ['31%', '320%', '80%', '25%'], 'C', 'MA = 3.2; 3.2/4.', 5],
+        ['A motor lifts 500 kg through 10 m in 25 s (g = 9.8 m/s²). Its power output is', ['19,600 W', '4,900 W', '200 W', '1,960 W'], 'D', 'mgh/t = 49,000/25.', 5],
+        ['A gear of 20 teeth drives a gear of 60 teeth. The velocity ratio is', ['80', '1/3', '40', '3'], 'D', '60 ÷ 20.', 4],
+        ['A motor does 6000 J of work in 2 minutes. Its power is', ['50 W', '3000 W', '12,000 W', '100 W'], 'A', '6000 ÷ 120.', 5],
+        ['Efficiency of a machine is always less than 100% because of', ['friction and other losses', 'gravity', 'high load', 'low effort'], 'A', 'Energy wasted.', 4],
     ],
 
     'Electrical, fluids and thermal' => [
@@ -114,6 +136,11 @@ return [
         ['The pressure in a hydraulic system is 200 kPa acting on a piston of 0.01 m². The force is', ['200 N', '20,000 N', '2,000 N', '20 N'], 'C', 'F = PA.', 2],
         ['Heat transfer through a metal rod is by', ['evaporation', 'convection', 'radiation', 'conduction'], 'D', 'Free electrons carry energy.', 1],
         ['Bernoulli\'s principle explains', ['why ice melts', 'how faster-moving fluid has lower pressure', 'how magnets work', 'why sound echoes'], 'B', 'It is used in carburettors and wings.', 2],
+        ['Water flows through a 0.02 m² pipe at 3 m/s. The flow rate is', ['0.6 m³/s', '0.06 m³/s', '6 m³/s', '0.006 m³/s'], 'B', 'Q = Av.', 4],
+        ['A pipe narrows from 0.04 m² to 0.01 m². If speed in the wide part is 2 m/s, speed in the narrow part is', ['4 m/s', '0.5 m/s', '8 m/s', '2 m/s'], 'C', 'Continuity: A₁v₁ = A₂v₂.', 5],
+        ['The thermal efficiency of an engine that takes in 1,000 J and rejects 650 J is', ['153%', '65%', '50%', '35%'], 'D', '350/1,000.', 5],
+        ['In a hydraulic press, a 50 N force on a 0.01 m² piston produces on a 0.5 m² piston a force of', ['2500 N', '50 N', '25 N', '5000 N'], 'A', 'Pressure transmitted equally.', 5],
+        ['The pressure at a depth of 10 m in water (density 1000 kg/m³, g = 10 m/s²) is', ['100,000 Pa', '10,000 Pa', '1000 Pa', '1,000,000 Pa'], 'A', 'p = ρgh.', 5],
     ],
 
     'Energy and sustainability' => [
@@ -125,6 +152,8 @@ return [
         ['Ghana\'s largest hydroelectric dam is at', ['Tema', 'Kpong', 'Bui', 'Akosombo'], 'D', 'It was completed in 1965.', 1],
         ['Sustainable engineering aims to', ['ignore waste', 'use as many resources as possible', 'meet needs while reducing environmental harm', 'avoid recycling'], 'C', 'It considers the whole life cycle.', 1],
         ['Life-cycle assessment examines a product\'s environmental impact', ['only at disposal', 'only during use', 'only at sale', 'from raw materials to disposal'], 'D', 'Cradle to grave.', 2],
+        ['A 250 W solar panel receiving 5 peak sun hours a day produces about', ['250 kWh per day', '1.25 kWh per day', '5 kWh per day', '50 Wh per day'], 'B', '250 × 5 = 1,250 Wh.', 4],
+        ['Carbon footprint measures', ['shoe sizes', 'the size of a factory', 'total greenhouse gas emissions caused by an activity', 'land area only'], 'C', 'In CO₂ equivalent.', 4],
     ],
 
     'SHS 1: Health, safety and ethics in engineering' => [
@@ -137,6 +166,7 @@ return [
         ['The professional body for engineers in Ghana is the', ['GNAT', 'Ghana Bar Association', 'Ghana Medical Association', 'Ghana Institution of Engineering'], 'D', 'It regulates engineering practice.', 2],
         ['Signing off on unsafe work to save money is', ['good practice', 'unethical', 'required', 'efficient'], 'B', 'It endangers lives.', 1],
         ['Engineers must avoid conflicts of interest because they', ['reduce costs', 'increase safety', 'can bias professional judgement', 'improve design'], 'C', 'Integrity matters.', 2],
+        ['Risk is commonly rated as', ['workers × hours', 'cost × time', 'hazard + time', 'likelihood × severity'], 'D', 'A risk matrix.', 4],
     ],
 
     'SHS 1: Electrical and electronic circuits' => [
@@ -146,10 +176,13 @@ return [
         ['Ohm\'s law states that', ['E = mc²', 'P = IV only', 'Q = It', 'V = IR'], 'D', 'Voltage = current × resistance.', 1],
         ['A circuit breaker', ['increases voltage', 'automatically switches off the circuit when current is too high', 'stores energy', 'produces light'], 'B', 'It can be reset.', 1],
         ['A breadboard is used to', ['print circuits', 'cut wood', 'build and test circuits without soldering', 'store batteries'], 'C', 'Components plug into holes.', 1],
-        ['The power used by a device with 5 A at 12 V is', ['60 W', '17 W', '2.4 W', '7 W'], 'A', 'P = VI.', 1],
-        ['A diode in a circuit allows current to flow', ['in one direction only', 'in both directions equally', 'only when cold', 'only at night'], 'A', 'It is used for rectification.', 1],
-        ['The total resistance of 2 Ω, 4 Ω and 6 Ω in series is', ['12 Ω', '1.09 Ω', '48 Ω', '6 Ω'], 'A', 'Series resistances add.', 1],
-        ['A switch in a circuit is used to', ['open or close the circuit', 'store energy', 'measure current', 'produce light'], 'A', 'It controls current flow.', 1],
+        ['The power used by a device with 5 A at 12 V is', ['17 W', '60 W', '2.4 W', '7 W'], 'B', 'P = VI.', 1],
+        ['A diode in a circuit allows current to flow', ['only when cold', 'in both directions equally', 'in one direction only', 'only at night'], 'C', 'It is used for rectification.', 1],
+        ['The total resistance of 2 Ω, 4 Ω and 6 Ω in series is', ['6 Ω', '1.09 Ω', '48 Ω', '12 Ω'], 'D', 'Series resistances add.', 1],
+        ['A switch in a circuit is used to', ['store energy', 'open or close the circuit', 'measure current', 'produce light'], 'B', 'It controls current flow.', 1],
+        ['Three 9 Ω resistors in parallel give', ['9 Ω', '27 Ω', '3 Ω', '1 Ω'], 'C', 'Equal resistors in parallel: 9 ÷ 3.', 3],
+        ['A 12 V battery rated 60 Ah can deliver 3 A for about', ['20 hours', '5 hours', '180 hours', '4 hours'], 'A', 'Time = 60 Ah ÷ 3 A.', 4],
+        ['The power dissipated in a 100 Ω resistor carrying 0.2 A is', ['4 W', '20 W', '0.4 W', '2 W'], 'A', 'P = I²R.', 4],
     ],
 
     'Renewable energy' => [
@@ -162,6 +195,8 @@ return [
         ['Hydroelectric power uses', ['the energy of falling or flowing water', 'sunlight', 'wind', 'coal'], 'A', 'Akosombo and Bui are hydro stations.', 1],
         ['Solar thermal collectors are used mainly to', ['heat water', 'generate wind', 'store gas', 'pump oil'], 'A', 'Solar water heaters.', 1],
         ['Tidal energy comes from', ['the rise and fall of the sea', 'wind', 'the sun directly', 'coal'], 'A', 'It is renewable.', 1],
+        ['A wind turbine\'s power output is proportional to the', ['cube of the wind speed', 'square of the wind speed', 'wind speed', 'square root of wind speed'], 'A', 'P = ½ρAv³.', 5],
+        ['A hydroelectric plant with 100 m head and 10 m³/s flow at 90% efficiency produces about (ρ = 1,000 kg/m³, g = 10 m/s²)', ['9 MW', '10 MW', '90 MW', '0.9 MW'], 'A', 'ηρgQh = 0.9 × 10⁷ W.', 5],
     ],
 
     'Energy efficiency and conservation' => [
@@ -174,6 +209,8 @@ return [
         ['An energy audit identifies', ['where energy is wasted and how to save it', 'the cost of food', 'the number of staff', 'tax owed'], 'A', 'It is the first step in conservation.', 2],
         ['An energy-efficient refrigerator has', ['a higher energy rating label', 'a lower rating', 'no label', 'more noise'], 'A', 'It uses less electricity.', 1],
         ['Efficiency of a motor that converts 800 J of 1,000 J input into useful work is', ['80%', '20%', '125%', '8%'], 'A', 'Useful ÷ input × 100.', 1],
+        ['Replacing ten 60 W bulbs with 9 W LEDs used 5 hours a day saves how much energy per day?', ['2.55 kWh', '0.51 kWh', '3 kWh', '0.45 kWh'], 'A', '10 × 51 W × 5 h.', 5],
+        ['U-value in building insulation measures', ['the rate of heat transfer through a material', 'its colour', 'its weight', 'its cost'], 'A', 'Lower U is better insulation.', 5],
     ],
 
     'SHS 3: Energy systems' => [
@@ -185,6 +222,7 @@ return [
         ['A thermal power plant generates electricity by', ['burning fuel to make steam that drives turbines', 'using sunlight directly', 'using wind', 'using tides'], 'A', 'Takoradi has thermal plants.', 2],
         ['A mini-grid supplies electricity to', ['a local community not connected to the national grid', 'the whole country', 'only factories abroad', 'satellites'], 'A', 'Often solar-powered.', 2],
         ['Energy storage systems such as batteries help to', ['balance supply when generation is low', 'waste energy', 'increase demand', 'reduce efficiency always'], 'A', 'Important for solar.', 2],
+        ['Transmitting 1 MW at 100 kV instead of 10 kV reduces I²R losses by a factor of', ['100', '10', '1,000', '2'], 'A', 'Current falls 10×; loss falls 100×.', 5],
     ],
 
     'Engineering design and prototyping' => [
@@ -197,6 +235,8 @@ return [
         ['A design constraint is', ['a limit the design must work within, such as budget', 'a design feature', 'a finished product', 'a test result'], 'A', 'Size, cost and materials are constraints.', 2],
         ['A design specification should be', ['measurable and clear', 'vague', 'secret', 'unlimited'], 'A', 'It guides evaluation.', 1],
         ['Simulation software allows engineers to', ['test designs virtually before building', 'avoid design', 'only draw pictures', 'print money'], 'A', 'It saves cost.', 2],
+        ['Finite element analysis (FEA) is used to', ['predict stresses and deformations in a design', 'draw logos', 'price products', 'write code only'], 'A', 'The model is split into small elements.', 5],
+        ['Design for assembly aims to', ['reduce the number of parts and assembly steps', 'add more parts', 'increase screws', 'use glue only'], 'A', 'Lowers cost and errors.', 4],
     ],
 
     'Automation and embedded systems' => [
@@ -210,5 +250,7 @@ return [
         ['A microcontroller such as the Arduino contains', ['a processor, memory and input/output pins on one chip', 'only a battery', 'only a screen', 'a hard disk'], 'A', 'It is a small computer.', 2],
         ['Traffic lights controlled by a timer are an example of', ['an automated system', 'manual control', 'a hand tool', 'a renewable source'], 'A', 'They switch automatically.', 1],
         ['Firmware in embedded systems is stored in', ['non-volatile memory', 'RAM only', 'the cloud only', 'paper'], 'A', 'It persists without power.', 2],
+        ['A ladder diagram is used to program', ['PLCs', 'websites', 'spreadsheets', 'databases'], 'A', 'It resembles relay logic.', 4],
+        ['Real-time embedded systems must', ['respond within strict time limits', 'run only at night', 'have no inputs', 'use no sensors'], 'A', 'E.g. airbag controllers.', 5],
     ],
 ];

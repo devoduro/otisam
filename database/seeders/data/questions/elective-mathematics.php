@@ -31,6 +31,21 @@ return [
         ['Solve log₃ (x + 1) = 2.', ['5', '9', '8', '3'], 'C', 'x + 1 = 9.', 1],
         ['If f(x) = 3x − 2 and g(x) = x², find g(f(1)).', ['−1', '9', '3', '1'], 'D', 'f(1) = 1; g(1) = 1.', 2],
         ['Find the remainder when 2x³ + x − 3 is divided by (x + 1).', ['0', '−6', '6', '−4'], 'B', 'f(−1) = −2 − 1 − 3.', 2],
+        ['If f(x) = (2x + 1)/(x − 3), x ≠ 3, find f⁻¹(x).', ['(x − 3)/(2x + 1)', '(3x + 1)/(x − 2)', '(3x − 1)/(x + 2)', '(2x − 1)/(x + 3)'], 'B', 'Solve x = (2y + 1)/(y − 3) for y.', 5],
+        ['Find the remainder when x⁴ − 3x² + 2 is divided by x + 2.', ['−6', '0', '6', '14'], 'C', '16 − 12 + 2.', 4],
+        ['Solve 2 log₃ x − log₃(x − 2) = 2.', ['x = 2', 'x = 3 only', 'x = 6 only', 'x = 3 or 6'], 'D', 'x² = 9(x − 2); x² − 9x + 18 = 0.', 5],
+        ['If log₂ y = 3 + log₂ x, express y in terms of x.', ['y = x + 8', 'y = 8x', 'y = 3x', 'y = x³'], 'B', 'log₂(y/x) = 3.', 4],
+        ['Find the range of values of k for which x² + kx + 4 = 0 has no real roots.', ['k < −4', 'k > 4', '−4 < k < 4', 'k = ±4'], 'C', 'k² − 16 < 0.', 5],
+        ['Express (5x + 1)/((x + 1)(x − 1)) in partial fractions.', ['3/(x + 1) + 2/(x − 1)', '2/(x + 1) + 3/(x − 1)', '1/(x + 1) + 4/(x − 1)', '4/(x + 1) + 1/(x − 1)'], 'B', 'x = 1 gives B = 3; x = −1 gives A = 2.', 5],
+        ['Find the domain of f(x) = √(4 − x²).', ['x ≤ −2', 'x ≥ 2', '−2 ≤ x ≤ 2', 'all real x'], 'C', '4 − x² ≥ 0.', 4],
+        ['If f(x) = 3x + 2, find f⁻¹(11).', ['4', '35', '11', '3'], 'D', '3x + 2 = 11.', 4],
+        ['If f(x) = x² − 1 and g(x) = 2x + 3, find (f ∘ g)(−1).', ['1', '3', '−1', '0'], 'D', 'g(−1) = 1; f(1) = 0.', 4],
+        ['Find the remainder when 3x³ − 2x² + x − 5 is divided by 3x − 2.', ['13/3', '−13/3', '−5', '0'], 'B', 'f(2/3) = 8/9 − 8/9 + 2/3 − 5.', 5],
+        ['Solve log₂(x + 1) + log₂(x − 1) = 3.', ['x = −3', 'x = 3', 'x = 2', 'x = 9'], 'B', 'x² − 1 = 8, x > 1.', 5],
+        ['If α and β are roots of 2x² − 3x − 5 = 0, find 1/α + 1/β.', ['−5/3', '3/5', '5/3', '−3/5'], 'D', '(α + β)/αβ = (3/2)/(−5/2).', 5],
+        ['Find the range of f(x) = x² + 4x + 7.', ['f(x) ≥ 7', 'f(x) ≥ 3', 'f(x) ≤ 3', 'all real numbers'], 'B', '(x + 2)² + 3.', 5],
+        ['Express 3/((x − 1)(x + 2)) in partial fractions.', ['3/(x − 1) − 3/(x + 2)', '1/(x − 1) + 1/(x + 2)', '1/(x − 1) − 1/(x + 2)', '2/(x − 1) − 1/(x + 2)'], 'C', 'A = 1, B = −1.', 5],
+        ['The inverse of f(x) = (2x + 1)/(x − 3), x ≠ 3, is', ['(x + 1)/(2x − 3)', '(x − 3)/(2x + 1)', '(3x − 1)/(x + 2)', '(3x + 1)/(x − 2)'], 'D', 'Swap and solve.', 5],
     ],
 
     'Matrices, vectors, binomial' => [
@@ -52,6 +67,17 @@ return [
         ['Find the 4th term in the expansion of (1 + x)⁶.', ['20x⁴', '15x³', '6x³', '20x³'], 'D', '⁶C₃ x³.', 2],
         ['The angle between a = i + j and b = i − j is', ['0°', '90°', '45°', '180°'], 'B', 'a · b = 1 − 1 = 0.', 2],
         ['If |a| = 3, |b| = 4 and the angle between them is 60°, find a · b.', ['7', '12', '6', '3.5'], 'C', '3 × 4 × cos 60°.', 2],
+        ['Find the term independent of x in (2x − 1/x)⁶.', ['240', '160', '−20', '−160'], 'D', '⁶C₃ (2x)³(−1/x)³ = 20 × 8 × (−1).', 5],
+        ['Find the angle between a = 2i + j and b = i + 3j.', ['30°', '45°', '60°', '90°'], 'B', 'cos θ = 5/(√5 √10) = 1/√2.', 5],
+        ['If A = [[2, 1], [3, 4]], find A⁻¹.', ['(1/5)[[2, 1], [3, 4]]', '[[4, −1], [−3, 2]]', '(1/5)[[4, −1], [−3, 2]]', '(1/11)[[4, −1], [−3, 2]]'], 'C', 'det = 5.', 4],
+        ['Use the binomial expansion to evaluate (1.02)⁵ to 3 decimal places.', ['1.010', '1.100', '1.110', '1.104'], 'D', '1 + 0.1 + 0.004 + 0.00008 ≈ 1.104.', 5],
+        ['Find the value of k for which the vectors 2i + kj and 3i − 6j are perpendicular.', ['−1', '1', '2', '4'], 'B', '6 − 6k = 0.', 4],
+        ['The coefficient of x² in (1 + x)(1 − 2x)⁵ is', ['−10', '40', '30', '50'], 'C', '40 + (−10).', 5],
+        ['The sum of the coefficients in the expansion of (2x − 1)⁵ is', ['32', '0', '1', '−1'], 'C', 'Put x = 1.', 5],
+        ['The determinant of [[3, 2], [5, 4]] is', ['22', '2', '−2', '7'], 'B', '12 − 10.', 4],
+        ['The coefficient of x² in (1 + 2x)⁵ is', ['20', '10', '40', '80'], 'C', '⁵C₂ × 4.', 5],
+        ['If a = 3i + 4j, |a| is', ['1', '7', '25', '5'], 'D', '√(9 + 16).', 4],
+        ['The dot product of (2i + 3j) and (4i − j) is', ['11', '5', '8', '−3'], 'B', '8 − 3.', 5],
     ],
 
     'Trigonometry and coordinate geometry' => [
@@ -72,6 +98,18 @@ return [
         ['Find the equation of the line perpendicular to y = 2x + 1 through (0, 3).', ['y = 2x + 3', 'y = −x/2 + 3', 'y = −2x + 3', 'y = x/2 + 3'], 'B', 'Gradient −1/2.', 2],
         ['Solve 2 sin x − 1 = 0 for 0° ≤ x ≤ 180°.', ['30° only', '60° and 120°', '30° and 150°', '45° and 135°'], 'C', 'sin x = ½.', 2],
         ['cos(A − B) =', ['cos A − cos B', 'cos A cos B − sin A sin B', 'sin A cos B − cos A sin B', 'cos A cos B + sin A sin B'], 'D', 'Compound angle formula.', 2],
+        ['Find the equation of the tangent to the circle x² + y² = 25 at (3, 4).', ['4x − 3y = 0', '3x + 4y = 25', '3x − 4y = 25', 'x + y = 7'], 'B', 'Tangent: x₁x + y₁y = r².', 5],
+        ['Express √3 sin θ + cos θ in the form R sin(θ + α).', ['√2 sin(θ + 45°)', '2 sin(θ + 60°)', '2 sin(θ + 30°)', '4 sin(θ + 30°)'], 'C', 'R = 2, tan α = 1/√3.', 5],
+        ['Find the acute angle between the lines y = 2x + 1 and y = −3x + 4.', ['90°', '60°', '30°', '45°'], 'D', 'tan θ = |(2 + 3)/(1 − 6)| = 1.', 5],
+        ['Solve cos 2x = cos x for 0° ≤ x ≤ 360°.', ['60°, 300°', '0°, 120°, 240°, 360°', '90°, 270°', '180° only'], 'B', '2cos²x − cos x − 1 = 0.', 5],
+        ['Find the centre and radius of x² + y² + 4x − 2y − 20 = 0.', ['(4, −2), r = 20', '(2, −1), r = 5', '(−2, 1), r = 25', '(−2, 1), r = 5'], 'D', 'r² = 4 + 1 + 20.', 5],
+        ['Given sin 3θ = 3 sin θ − 4 sin³θ, find sin 3θ when sin θ = 1/2.', ['1/2', '1', '0', '−1'], 'B', '3/2 − 4/8 = 1.', 5],
+        ['The equation of the line with intercepts 3 on the x-axis and −2 on the y-axis is', ['x − y = 1', '3x − 2y = 6', '2x + 3y = 6', '2x − 3y = 6'], 'D', 'x/3 + y/(−2) = 1.', 5],
+        ['If tan A = 3/4 (A acute), find sin 2A.', ['7/25', '24/25', '12/25', '3/5'], 'B', '2 × 3/5 × 4/5.', 5],
+        ['Solve 2 sin x = 1 for 0° ≤ x ≤ 360°.', ['60° and 120°', '30° only', '30° and 150°', '30° and 330°'], 'C', 'sin positive in Q1 and Q2.', 5],
+        ['The centre and radius of x² + y² − 4x + 6y − 3 = 0 are', ['(4, −6) and 3', '(−2, 3) and 4', '(2, −3) and 16', '(2, −3) and 4'], 'D', '4 + 9 + 3 = 16.', 5],
+        ['cos 75° expressed exactly is', ['(√6 + √2)/4', '(√6 − √2)/4', '√3/2', '(√2 − 1)/2'], 'B', 'cos(45° + 30°).', 5],
+        ['The perpendicular distance from (1, 2) to the line 3x + 4y − 1 = 0 is', ['1', '10', '2', '5'], 'C', '|3 + 8 − 1| ÷ 5.', 5],
     ],
 
     'Calculus' => [
@@ -97,6 +135,22 @@ return [
         ['Find dy/dx if y = eˣ.', ['xeˣ⁻¹', 'eˣ', '1/x', 'ln x'], 'B', 'eˣ is its own derivative.', 1],
         ['Find dy/dx if y = ln(3x).', ['1/(3x)', '3/x', '1/x', '3x'], 'C', 'ln 3x = ln 3 + ln x.', 3],
         ['The gradient of the curve y = x³ − 2x at x = 1 is', ['0', '−1', '3', '1'], 'D', '3x² − 2 = 1.', 1],
+        ['Differentiate y = x²/(x + 1).', ['(x² − 2x)/(x + 1)²', '2x/(x + 1)', '(x² + 2x)/(x + 1)²', '2x(x + 1)'], 'C', 'Quotient rule.', 5],
+        ['Find ∫ x(x² + 1)³ dx.', ['(x² + 1)³/6 + C', '(x² + 1)⁴/4 + C', 'x²(x² + 1)⁴ + C', '(x² + 1)⁴/8 + C'], 'D', 'Substitute u = x² + 1.', 5],
+        ['Find the area enclosed by y = x² and y = 2x.', ['8/3', '4/3', '2', '1/3'], 'B', '∫₀² (2x − x²) dx.', 5],
+        ['A curve has gradient 3x² − 4 and passes through (2, 1). Its equation is', ['y = 3x³ − 4x', 'y = x³ − 4x', 'y = x³ − 4x + 1', 'y = x³ − 4x − 1'], 'C', '8 − 8 + c = 1.', 4],
+        ['Find dy/dx if x² + y² = 25.', ['2x + 2y', 'x/y', '−y/x', '−x/y'], 'D', 'Implicit differentiation.', 5],
+        ['Find the equation of the normal to y = x² at (1, 1).', ['y = x', 'y = 2x − 1', 'y = −x/2 + 3/2', 'y = −2x + 3'], 'C', 'Normal gradient −1/2.', 5],
+        ['Evaluate ∫₁² (3x² − 2x) dx.', ['5', '6', '3', '4'], 'D', '[x³ − x²] = 4 − 0.', 4],
+        ['If y = e^(2x) sin x, dy/dx is', ['2e^(2x) cos x', 'e^(2x)(2 sin x + cos x)', 'e^(2x) cos x', '2e^(2x) sin x'], 'B', 'Product rule.', 5],
+        ['The turning points of y = x³ − 3x are at x =', ['±3', '0 and 3', '±1', '0 only'], 'C', '3x² − 3 = 0.', 4],
+        ['The maximum value of y = x³ − 3x occurs at x = −1 and equals', ['4', '−2', '0', '2'], 'D', '−1 + 3.', 5],
+        ['∫₀^π cos x dx =', ['2', '0', '1', '−2'], 'B', 'sin π − sin 0.', 4],
+        ['Differentiate y = (3x − 1)⁴.', ['12(3x − 1)⁴', '4(3x − 1)³', '3(3x − 1)³', '12(3x − 1)³'], 'D', 'Chain rule.', 4],
+        ['Find dy/dx if y = x²eˣ.', ['2xeˣ', 'eˣ(x² + 2x)', 'x²eˣ', 'eˣ(2x + 1)'], 'B', 'Product rule.', 5],
+        ['The area enclosed by y = x² and y = 4 is', ['8', '16/3', '32/3', '64/3'], 'C', '2∫₀² (4 − x²) dx.', 5],
+        ['The gradient of y = ln(2x) at x = 1 is', ['ln 2', '2', '1/2', '1'], 'D', 'dy/dx = 1/x.', 5],
+        ['Find the equation of the tangent to y = x² at (2, 4).', ['y = 2x', 'y = 4x − 4', 'y = 4x + 4', 'y = x + 2'], 'B', 'Gradient 4.', 5],
     ],
 
     'Statistics and probability' => [
@@ -114,6 +168,18 @@ return [
         ['How many 3-digit numbers can be formed from 1, 2, 3, 4 without repetition?', ['12', '64', '24', '4'], 'C', '4 × 3 × 2.', 2],
         ['A bag contains 5 red and 3 blue balls. Two are drawn with replacement. P(both blue) is', ['6/64', '3/28', '3/8', '9/64'], 'D', '(3/8)².', 2],
         ['The mean of x, 2x, 3x is 8. Find x.', ['8', '4', '2', '6'], 'B', '6x/3 = 8.', 1],
+        ['In how many ways can 4 boys and 3 girls sit in a row if the girls must sit together?', ['5,040', '720', '144', '360'], 'B', '5! × 3!.', 5],
+        ['A committee of 4 is chosen from 5 men and 4 women. In how many ways can it contain exactly 2 women?', ['36', '126', '60', '20'], 'C', '⁵C₂ × ⁴C₂.', 4],
+        ['P(A) = 0.4, P(B) = 0.5 and P(A ∪ B) = 0.7. Find P(A | B).', ['0.8', '0.2', '0.5', '0.4'], 'D', 'P(A ∩ B) = 0.2; 0.2/0.5.', 5],
+        ['The probability that a student passes Maths is 0.7 and English 0.8, independently. Find the probability that exactly one subject is passed.', ['0.56', '0.38', '0.06', '0.44'], 'B', '0.7(0.2) + 0.3(0.8).', 5],
+        ['The number of ways to arrange the letters of ACCRA is', ['120', '60', '30', '20'], 'C', '5!/(2!2!).', 5],
+        ['P(A) = 0.6, P(B) = 0.5 and A, B independent. Find P(A ∪ B).', ['0.9', '1.1', '0.3', '0.8'], 'D', '0.6 + 0.5 − 0.3.', 4],
+        ['How many diagonals does a polygon with 10 sides have?', ['10', '45', '35', '20'], 'C', '¹⁰C₂ − 10.', 5],
+        ['A fair die is thrown 3 times. P(at least one six) is', ['125/216', '1/216', '1/2', '91/216'], 'D', '1 − (5/6)³.', 5],
+        ['In how many ways can the letters of the word GHANA be arranged?', ['24', '120', '60', '30'], 'C', '5! ÷ 2!.', 5],
+        ['A committee of 3 is chosen from 5 men and 4 women. The number of committees with exactly 2 women is', ['20', '60', '84', '30'], 'D', '⁴C₂ × ⁵C₁.', 5],
+        ['If P(A) = 0.5, P(B) = 0.4 and A, B are independent, P(A ∪ B) is', ['0.7', '0.9', '0.2', '0.1'], 'A', '0.5 + 0.4 − 0.2.', 5],
+        ['A binomial distribution has n = 10 and p = 0.3. Its mean is', ['3', '0.3', '7', '2.1'], 'A', 'Mean = np.', 4],
     ],
 
     'Mechanics' => [
@@ -131,6 +197,21 @@ return [
         ['The impulse of a force of 10 N acting for 0.5 s is', ['20 N s', '5 N s', '10 N s', '0.05 N s'], 'B', 'Impulse = Ft.', 1],
         ['A ball is projected horizontally at 10 m/s from a height of 20 m (g = 10 m/s²). The time to reach the ground is', ['4 s', '1 s', '2 s', '20 s'], 'C', 'h = ½gt².', 2],
         ['A ball is projected horizontally at 10 m/s from a height of 20 m (g = 10 m/s²). How far from the foot of the cliff does it land?', ['200 m', '10 m', '40 m', '20 m'], 'D', 't = √(2h/g) = 2 s; x = ut = 10 × 2.', 2],
+        ['A particle starts from rest with acceleration a = 6t m/s². Its displacement after 2 s is', ['24 m', '12 m', '8 m', '4 m'], 'C', 'v = 3t², s = t³.', 5],
+        ['A 4 kg mass on a smooth plane inclined at 30° is released. Its acceleration down the plane is (g = 10 m/s²)', ['2.5 m/s²', '10 m/s²', '8.66 m/s²', '5 m/s²'], 'D', 'g sin 30°.', 4],
+        ['Two particles of masses 3 kg and 2 kg hang over a smooth pulley. The acceleration of the system is (g = 10 m/s²)', ['10 m/s²', '2 m/s²', '5 m/s²', '1 m/s²'], 'B', '(3 − 2)g/(3 + 2).', 5],
+        ['A body projected at 20 m/s at 30° to the horizontal reaches a maximum height of (g = 10 m/s²)', ['20 m', '10 m', '5 m', '2.5 m'], 'C', '(u sin θ)²/2g = 100/20.', 5],
+        ['Three forces (2i + 3j), (−4i + j) and (ai + bj) are in equilibrium. Find a and b.', ['a = 6, b = −2', 'a = −2, b = 4', 'a = 2, b = 4', 'a = 2, b = −4'], 'D', 'The sum must be zero.', 4],
+        ['A force F = (3i + 4j) N moves a particle from (1, 2) to (5, 6) m. The work done is', ['7 J', '28 J', '20 J', '16 J'], 'B', 'F · d = 3(4) + 4(4).', 5],
+        ['A 5 kg mass is pulled up a smooth 30° incline by a force parallel to it. The force needed for constant velocity is (g = 10 m/s²)', ['43.3 N', '50 N', '25 N', '10 N'], 'C', 'mg sin 30°.', 5],
+        ['A car accelerates from 10 m/s to 30 m/s over 200 m. Its acceleration is', ['0.1 m/s²', '1 m/s²', '4 m/s²', '2 m/s²'], 'D', '(900 − 100)/400.', 4],
+        ['A particle moves so that s = t³ − 6t² + 9t. It is momentarily at rest when t =', ['0 or 2', '1 or 3', '2 only', '3 only'], 'B', 'v = 3t² − 12t + 9 = 0.', 5],
+        ['A body thrown up at 30 m/s returns to the thrower after (g = 10 m/s²)', ['9 s', '3 s', '6 s', '4.5 s'], 'C', 'Time = 2u/g.', 4],
+        ['A 5 kg mass on a smooth plane inclined at 30° slides down with acceleration (g = 10 m/s²)', ['5 m/s²', '10 m/s²', '8.66 m/s²', '2.5 m/s²'], 'A', 'g sin 30°.', 5],
+        ['Two masses 3 kg and 2 kg hang over a smooth pulley. The acceleration is (g = 10 m/s²)', ['2 m/s²', '5 m/s²', '10 m/s²', '1 m/s²'], 'A', '(3 − 2)g ÷ 5.', 5],
+        ['A projectile is launched at 20 m/s at 30° to the horizontal. The time of flight is (g = 10 m/s²)', ['2 s', '4 s', '1 s', '3.46 s'], 'A', '2u sin θ / g.', 5],
+        ['A 2 kg ball moving at 6 m/s collides and sticks to a 1 kg ball at rest. The common velocity is', ['4 m/s', '6 m/s', '3 m/s', '2 m/s'], 'A', '12 ÷ 3.', 5],
+        ['The impulse of a 10 N force acting for 0.5 s is', ['5 N s', '20 N s', '10 N s', '0.05 N s'], 'A', 'Impulse = Ft.', 4],
     ],
 
     'SHS 1: Binary operations, sets and the binomial theorem' => [
@@ -144,6 +225,8 @@ return [
         ['The number of terms in the expansion of (a + b)⁶ is', ['12', '6', '5', '7'], 'D', 'There are n + 1 terms.', 1],
         ['If x ⊕ y = x + y − 2, find the identity element.', ['0', '2', '1', '−2'], 'B', 'x ⊕ e = x gives e = 2.', 3],
         ['The coefficient of x in (2 + x)⁴ is', ['8', '16', '32', '4'], 'C', '⁴C₁ × 2³ = 4 × 8.', 2],
+        ['Find the coefficient of x⁴ in (1 − 2x)⁶.', ['−240', '240', '60', '15'], 'B', '⁶C₄ × (−2)⁴ = 15 × 16.', 5],
+        ['A binary operation is defined by a * b = ab/(a + b) for positive reals. Is * commutative?', ['Only for a = b', 'No', 'Yes', 'Only for integers'], 'C', 'ab/(a + b) = ba/(b + a).', 4],
     ],
 
     'SHS 1: Surds, indices and logarithms' => [
@@ -158,6 +241,11 @@ return [
         ['Simplify (√5 + √2)(√5 − √2).', ['10', '7', '√3', '3'], 'D', '5 − 2.', 1],
         ['Evaluate log₂ 64.', ['8', '6', '32', '4'], 'B', '2⁶ = 64.', 1],
         ['Simplify 16^(−1/2).', ['−4', '4', '1/4', '1/8'], 'C', '1/√16.', 2],
+        ['Solve 9ˣ − 4(3ˣ) + 3 = 0.', ['x = 1 only', 'x = 1 or 3', 'x = 0 or 3', 'x = 0 or 1'], 'D', 'Let y = 3ˣ: y = 1 or 3.', 5],
+        ['Simplify log₂ 8 + log₃ 9 − log₅ 125.', ['4', '2', '1', '3'], 'B', '3 + 2 − 3.', 4],
+        ['If logₐ 2 = 0.3 and logₐ 3 = 0.48, find logₐ 12.', ['1.44', '0.78', '1.08', '0.96'], 'C', '2(0.3) + 0.48.', 4],
+        ['Solve 5^(x + 1) = 25^(x − 1).', ['1', '3', '2', '−3'], 'B', 'x + 1 = 2x − 2.', 4],
+        ['Express log 75 in terms of log 3 and log 5.', ['log 3 × log 25', '2 log 3 + log 5', 'log 3 + 2 log 5', '3 log 5'], 'C', '75 = 3 × 5².', 4],
     ],
 
     'SHS 1: Sequences and functions' => [
@@ -171,6 +259,11 @@ return [
         ['If f(x) = 3x − 1, find f(f(1)).', ['2', '5', '8', '3'], 'B', 'f(1) = 2; f(2) = 5.', 2],
         ['The 5th term of the AP with first term 7 and common difference −2 is', ['−3', '1', '15', '−1'], 'D', '7 + 4(−2).', 1],
         ['If f(x) = x² − 1, the range for x ∈ {0, 1, 2} is', ['{0, 1, 2}', '{−1, 0, 3}', '{1, 2, 3}', '{−1, 1, 3}'], 'B', 'f(0) = −1, f(1) = 0, f(2) = 3.', 2],
+        ['The 3rd and 7th terms of an AP are 10 and 30. Find the sum of the first 10 terms.', ['300', '250', '200', '225'], 'D', 'd = 5, a = 0; S₁₀ = 5(0 + 45).', 5],
+        ['f(x) = 2x + 1 and g(x) = (x − 1)/2. Show that f and g are', ['equal', 'inverses of each other', 'constant', 'periodic'], 'B', 'f(g(x)) = x.', 4],
+        ['Insert three arithmetic means between 4 and 20.', ['7, 11, 15', '6, 10, 14', '5, 10, 15', '8, 12, 16'], 'D', 'd = 16/4.', 4],
+        ['The function f(x) = x² − 4x on the domain x ≥ 2 is', ['many-to-one', 'one-to-one', 'not a function', 'constant'], 'B', 'It is increasing for x ≥ 2.', 5],
+        ['The 1st, 2nd and 3rd terms of a GP are k − 2, k and k + 3. Find k.', ['6', '4', '3', '2'], 'A', 'k² = (k − 2)(k + 3).', 5],
     ],
 
     'SHS 1: Matrices' => [
@@ -184,6 +277,8 @@ return [
         ['The transpose of [[1, 2], [3, 4]] is', ['[[4, 3], [2, 1]]', '[[1, 3], [2, 4]]', '[[1, 2], [3, 4]]', '[[2, 1], [4, 3]]'], 'B', 'Rows become columns.', 2],
         ['If A = [[2, 0], [1, 3]] and B = [[1, 1], [0, 2]], find A + B.', ['[[3, 0], [1, 5]]', '[[2, 0], [0, 6]]', '[[3, 1], [1, 5]]', '[[1, 1], [1, 1]]'], 'C', 'Add corresponding entries.', 1],
         ['Find AB if A = [[1, 2], [3, 4]] and B = [[1], [1]].', ['[[2], [3]]', '[[1], [2]]', '[[4], [6]]', '[[3], [7]]'], 'D', '1 + 2 = 3; 3 + 4 = 7.', 2],
+        ['If [[x, 2], [3, 4]] [[1], [2]] = [[7], [11]], find x.', ['2', '7', '3', '5'], 'C', 'x + 4 = 7.', 4],
+        ['If A = [[1, 2], [3, 4]], find A².', ['[[2, 4], [6, 8]]', '[[1, 4], [9, 16]]', '[[7, 10], [15, 22]]', '[[7, 6], [15, 14]]'], 'C', 'Row by column.', 5],
     ],
 
     'SHS 1: Straight lines' => [
@@ -197,6 +292,9 @@ return [
         ['The line 2x + 3y = 6 cuts the y-axis at', ['(0, 3)', '(3, 0)', '(0, 2)', '(0, 6)'], 'C', 'Put x = 0.', 2],
         ['Find the equation of the line through (1, 1) and (3, 7).', ['y = 2x − 1', 'y = 3x − 2', 'y = 3x + 2', 'y = x'], 'B', 'm = 6/2 = 3.', 2],
         ['The angle a line of gradient 1 makes with the positive x-axis is', ['60°', '30°', '45°', '90°'], 'C', 'tan θ = 1.', 2],
+        ['Find the point of intersection of y = 2x + 1 and x + y = 7.', ['(5, 2)', '(3, 4)', '(1, 3)', '(2, 5)'], 'D', 'x + 2x + 1 = 7.', 4],
+        ['The distance from (2, −1) to the line 4x − 3y + 4 = 0 is', ['5', '3', '15/4', '1'], 'B', '|8 + 3 + 4|/5.', 5],
+        ['The acute angle between y = x and y = √3 x is', ['60°', '30°', '45°', '15°'], 'D', '60° − 45°.', 5],
     ],
 
     'SHS 1: Vectors' => [
@@ -209,6 +307,9 @@ return [
         ['The position vector of the point (−2, 5) is', ['2i − 5j', '5i − 2j', '−2i + 5j', '−2i − 5j'], 'C', 'x-component then y-component.', 1],
         ['If p = 3i − 2j, find |p|.', ['13', '5', '1', '√13'], 'D', '√(9 + 4).', 1],
         ['Find the vector AB if A = (1, 2) and B = (4, 6).', ['5i + 8j', '3i + 4j', '−3i − 4j', '4i + 3j'], 'B', 'B − A.', 1],
+        ['Find the scalar projection of a = 3i + 4j onto b = i.', ['5', '4', '3', '1'], 'C', 'a · b̂ = 3.', 4],
+        ['The points A(1, 2), B(3, 6), C(4, 8) are', ['equidistant', 'vertices of a right triangle', 'vertices of a square', 'collinear'], 'D', 'AB = (2, 4), BC = (1, 2) are parallel.', 5],
+        ['Find the unit vector in the direction of a = 4i − 3j.', ['(4, −3)', '(0.8, −0.6)', '(0.6, −0.8)', '(1, −1)'], 'B', 'Divide by 5.', 4],
     ],
 
     'SHS 1: Trigonometric functions' => [
@@ -223,6 +324,9 @@ return [
         ['Convert π/3 radians to degrees.', ['90°', '30°', '60°', '120°'], 'C', 'π = 180°.', 1],
         ['Find cos 150°.', ['−1/2', '√3/2', '1/2', '−√3/2'], 'D', 'cos(180° − 30°) = −cos 30°.', 2],
         ['The period of y = sin 2x is', ['360°', '180°', '90°', '720°'], 'B', '360° ÷ 2.', 2],
+        ['Find the length of an arc of radius 6 cm subtending 2 radians.', ['3 cm', '12 cm', '6 cm', '24 cm'], 'B', 's = rθ.', 4],
+        ['The area of a sector of radius 4 cm and angle π/4 is', ['4π cm²', 'π cm²', '2π cm²', 'π/2 cm²'], 'C', '½r²θ = 8 × π/4.', 5],
+        ['Find the value of sin 240°.', ['−1/2', '√3/2', '−√3/2', '1/2'], 'C', '−sin 60°.', 4],
     ],
 
     'SHS 1: Limits and differentiation' => [
@@ -237,6 +341,9 @@ return [
         ['Evaluate lim (x→3) (x² − 9)/(x − 3).', ['3', '0', '6', '9'], 'C', 'x + 3 → 6.', 2],
         ['Differentiate y = 4/x.', ['−4x', '4/x²', '4', '−4/x²'], 'D', 'y = 4x⁻¹.', 2],
         ['Differentiate y = √x.', ['2√x', '1/(2√x)', '√x/2', '1/√x'], 'B', 'y = x^(1/2).', 2],
+        ['Evaluate lim (x→0) (sin 3x)/x.', ['0', '3', '1', '1/3'], 'B', 'sin x/x → 1.', 5],
+        ['Differentiate from first principles: the derivative of x² is found from lim (h→0) of', ['(x + h)/h', '(x² − h²)/h', '((x + h)² − x²)/h', 'x²/h'], 'C', 'The limit gives 2x.', 4],
+        ['Differentiate y = (3x − 1)/(x + 2).', ['−7/(x + 2)²', '3/(x + 2)', '(3x − 7)/(x + 2)²', '7/(x + 2)²'], 'D', 'Quotient rule: (3(x + 2) − (3x − 1))/(x + 2)².', 5],
     ],
 
     'SHS 1: Statistics' => [
@@ -250,12 +357,14 @@ return [
         ['The class mark of the interval 10–19 is', ['15', '14.5', '10', '19'], 'B', '(10 + 19)/2.', 1],
         ['The variance of 1, 3, 5 is', ['4', '3', '8/3', '2'], 'C', 'Mean 3; (4 + 0 + 4)/3.', 2],
         ['If each value in a data set is increased by 5, the standard deviation', ['decreases by 5', 'increases by 5', 'doubles', 'stays the same'], 'D', 'Spread does not change.', 3],
+        ['The mean of 10 numbers is 15. If each number is multiplied by 2 and then 3 is added, the new mean is', ['36', '30', '18', '33'], 'D', '2(15) + 3.', 5],
+        ['The standard deviation of a data set is 4. If each value is multiplied by 3, the new standard deviation is', ['4', '12', '7', '36'], 'B', 'SD scales by the multiplier.', 5],
+        ['The coefficient of variation of data with mean 50 and SD 5 is', ['5%', '10%', '250%', '45%'], 'B', 'SD/mean × 100.', 4],
     ],
 
     'SHS 1: Permutations, combinations and probability' => [
         ['Evaluate ⁶P₂.', ['12', '15', '30', '36'], 'C', '⁶P₂ = 6 × 5 = 30.', 2],
         ['Evaluate ⁷C₃.', ['7', '210', '21', '35'], 'D', '⁷C₃ = (7 × 6 × 5) ÷ (3 × 2 × 1) = 35.', 2],
-        ['In how many ways can the letters of the word GHANA be arranged?', ['120', '60', '24', '30'], 'B', 'There are 5 letters with A repeated twice: 5! ÷ 2! = 60.', 3],
         ['Two fair coins are tossed. What is the probability of at least one head?', ['1/4', '1/2', '3/4', '1'], 'C', 'P(no heads) = 1/4, so P(at least one head) = 1 − 1/4 = 3/4.', 2],
         ['How many ways can 3 people be chosen from 7?', ['21', '210', '35', '7'], 'C', '⁷C₃ = 35.', 2],
         ['Evaluate ⁵P₂.', ['60', '10', '25', '20'], 'D', '5 × 4.', 1],
@@ -263,6 +372,9 @@ return [
         ['If P(A) = 0.3, find P(not A).', ['1.3', '0.3', '0.7', '0'], 'C', '1 − 0.3.', 1],
         ['How many ways can the letters of the word GHANA be arranged?', ['120', '60', '24', '20'], 'B', '5!/2!.', 2],
         ['Evaluate ⁸C₃.', ['24', '336', '56', '28'], 'C', '8 × 7 × 6 / 6.', 2],
+        ['How many ways can 6 people be seated around a round table?', ['60', '720', '120', '36'], 'C', '(6 − 1)!.', 5],
+        ['How many 4-digit even numbers can be formed from 1, 2, 3, 4, 5 without repetition?', ['60', '120', '24', '48'], 'D', 'Last digit 2 ways; 4 × 3 × 2 × 2.', 5],
+        ['How many ways can a team of 5 be chosen from 6 boys and 4 girls if it must include exactly 2 girls?', ['210', '60', '120', '252'], 'C', '⁶C₃ × ⁴C₂ = 20 × 6.', 5],
     ],
 
     'SHS 2: Sets and binomial expansions' => [
@@ -274,6 +386,8 @@ return [
         ['Expand (1 + x)³.', ['1 + 3x + x³', '1 + x³', '1 + 3x + 3x² + x³', '3 + 3x + x²'], 'C', 'Coefficients 1, 3, 3, 1.', 1],
         ['The constant term in (x + 1/x)⁴ is', ['12', '4', '1', '6'], 'D', '⁴C₂ = 6 (x² · x⁻²).', 3],
         ['The middle term of (a + b)⁴ is', ['a²b²', '4a³b', '4ab³', '6a²b²'], 'D', 'Coefficient ⁴C₂ = 6.', 2],
+        ['Expand (1 + x)^(1/2) up to the term in x².', ['1 + x/2 + x²/8', '1 + x/2 − x²/8', '1 − x/2 + x²/8', '1 + x + x²/2'], 'B', 'Binomial series for |x| < 1.', 5],
+        ['Use the binomial theorem to find (0.98)⁴ to 3 decimal places.', ['0.902', '0.920', '0.941', '0.922'], 'D', '1 − 0.08 + 0.0024 − 0.000032.', 5],
     ],
 
     'SHS 2: Sequences, series and inequalities' => [
@@ -285,6 +399,9 @@ return [
         ['Solve x² − 5x + 6 < 0.', ['x < 2', 'x < 2 or x > 3', 'x > 3', '2 < x < 3'], 'D', '(x − 2)(x − 3) < 0 between the roots.', 3],
         ['The common ratio of the GP 27, 9, 3, ... is', ['3', '1/3', '−3', '−1/3'], 'B', 'r = 9 ÷ 27 = 1/3.', 1],
         ['How many terms of the AP 3, 7, 11, ... are needed to give a sum of 210?', ['12', '10', '15', '8'], 'B', 'n/2[6 + 4(n − 1)] = 210 gives n = 10.', 3],
+        ['The sum to infinity of a GP is 27 and the first term is 9. Find the common ratio.', ['−2/3', '1/3', '3', '2/3'], 'D', '9/(1 − r) = 27.', 4],
+        ['Solve (x − 1)/(x + 2) > 0.', ['−2 < x < 1', 'x < −2 or x > 1', 'x > 1 only', 'x < −2 only'], 'B', 'Both factors have the same sign.', 5],
+        ['Find the sum of all multiples of 3 between 1 and 100.', ['1,500', '1,650', '1,683', '1,782'], 'C', '33 terms: 33/2(3 + 99).', 5],
     ],
 
     'SHS 2: Polynomial functions' => [
@@ -298,6 +415,10 @@ return [
         ['The product of the roots of 2x² + 5x − 3 = 0 is', ['−5/2', '5/2', '−3/2', '3/2'], 'C', 'Product = c/a.', 2],
         ['Find the quotient when x² + 5x + 6 is divided by x + 2.', ['x − 3', 'x + 2', 'x + 3', 'x + 6'], 'C', '(x + 2)(x + 3).', 1],
         ['If x = −1 is a root of x³ + 2x² − x − 2 = 0, the other roots are', ['1 and 2', '2 and −1', '−1 and 2', '1 and −2'], 'D', 'Factor: (x + 1)(x − 1)(x + 2).', 3],
+        ['When f(x) is divided by (x − 1) the remainder is 3, and by (x + 1) it is −1. The remainder when divided by (x² − 1) is', ['2x − 1', 'x + 2', '3x − 1', '2x + 1'], 'D', 'ax + b: a + b = 3, −a + b = −1.', 5],
+        ['If α, β and γ are roots of x³ − 6x² + 11x − 6 = 0, find α + β + γ.', ['−6', '6', '11', '1'], 'B', 'Sum = −b/a.', 4],
+        ['The equation x³ − 7x + 6 = 0 has roots', ['1, −2, 3', '1, 2, −3', '−1, 2, 3', '1, 3, −2'], 'B', 'Factor (x − 1)(x − 2)(x + 3).', 5],
+        ['The polynomial x³ + ax² + bx − 6 has factors (x − 1) and (x + 2). Find a.', ['4', '2', '−2', '1'], 'A', 'a + b = 5 and 2a − b = 7.', 5],
     ],
 
     'SHS 2: Circles and loci' => [
@@ -308,7 +429,10 @@ return [
         ['Find the equation of the circle with centre (0, 0) and radius 5.', ['x² − y² = 25', 'x² + y² = 5', 'x + y = 25', 'x² + y² = 25'], 'D', '(x − a)² + (y − b)² = r².', 1],
         ['The radius of the circle x² + y² − 6x + 8y = 0 is', ['25', '5', '10', '7'], 'B', 'Centre (3, −4); r = √(9 + 16).', 3],
         ['The locus of points equidistant from two fixed points is', ['a parabola', 'a circle', 'the perpendicular bisector of the line joining them', 'a parallel line'], 'C', 'Every point on it is the same distance from both.', 2],
-        ['Find the centre of the circle (x + 1)² + (y − 4)² = 16.', ['(−1, 4)', '(1, −4)', '(4, −1)', '(−1, −4)'], 'A', 'Centre (a, b).', 1],
+        ['Find the centre of the circle (x + 1)² + (y − 4)² = 16.', ['(4, −1)', '(1, −4)', '(−1, 4)', '(−1, −4)'], 'C', 'Centre (a, b).', 1],
+        ['Find the equation of the circle with diameter joining (1, 2) and (5, 6).', ['(x − 2)² + (y − 2)² = 8', '(x − 3)² + (y − 4)² = 16', '(x + 3)² + (y + 4)² = 8', '(x − 3)² + (y − 4)² = 8'], 'D', 'Centre (3, 4); r² = 4 + 4.', 5],
+        ['The locus of points P such that PA = 2PB, where A = (0, 0) and B = (3, 0), is a', ['parabola', 'straight line', 'circle', 'point'], 'C', 'An Apollonius circle.', 5],
+        ['Find the length of the tangent from (7, 1) to the circle x² + y² = 25.', ['√50', '7', '5', '4'], 'C', '√(49 + 1 − 25).', 5],
     ],
 
     'SHS 2: Vectors and matrices' => [
@@ -320,7 +444,8 @@ return [
         ['The identity matrix of order 2 is', ['[[0, 1], [1, 0]]', '[[1, 0], [0, 1]]', '[[1, 1], [1, 1]]', '[[0, 0], [0, 0]]'], 'B', 'AI = A.', 1],
         ['The matrix [[0, −1], [1, 0]] represents a rotation of', ['90° clockwise', '180°', '90° anticlockwise about the origin', 'a reflection in y = x'], 'C', '(1, 0) maps to (0, 1).', 3],
         ['The angle between vectors a and b with a · b = 0 is', ['180°', '0°', '45°', '90°'], 'D', 'They are perpendicular.', 1],
-        ['The determinant of [[4, 6], [2, 3]] is', ['0', '24', '12', '−24'], 'A', '12 − 12.', 1],
+        ['The determinant of [[4, 6], [2, 3]] is', ['−24', '24', '12', '0'], 'D', '12 − 12.', 1],
+        ['The image of the point (1, 2) under the matrix [[2, 0], [0, 3]] is', ['(2, 6)', '(3, 2)', '(2, 3)', '(1, 6)'], 'A', 'A stretch.', 4],
     ],
 
     'SHS 2: Correlation' => [
@@ -333,6 +458,7 @@ return [
         ['A line of best fit on a scatter graph should', ['pass through the origin always', 'pass through the mean point (x̄, ȳ)', 'join the first and last points', 'be vertical'], 'B', 'It shows the trend.', 2],
         ['If Σd² = 0 for 5 pairs of ranks, Spearman\'s coefficient is', ['−1', '0', '1', '0.5'], 'C', 'The rankings agree perfectly.', 2],
         ['For 6 pairs of ranks with Σd² = 14, Spearman\'s coefficient is', ['0.6', '0.4', '0.8', '−0.6'], 'A', '1 − 6(14)/(6 × 35) = 1 − 0.4.', 3],
+        ['The regression line of y on x passes through', ['the point (x̄, ȳ)', 'the origin always', '(0, ȳ)', '(x̄, 0)'], 'A', 'A property of least squares.', 4],
     ],
 
     'SHS 2: Indices and logarithms' => [
@@ -344,6 +470,8 @@ return [
         ['Simplify 8^(2/3).', ['64', '16/3', '2', '4'], 'D', '(∛8)² = 2².', 2],
         ['Express log 12 in terms of log 2 and log 3.', ['log 2 + 2 log 3', '2 log 2 + log 3', '6 log 2', 'log 2 × log 3'], 'B', '12 = 2² × 3.', 2],
         ['Solve log x + log 4 = log 20.', ['80', '16', '5', '24'], 'C', 'log 4x = log 20, so x = 5.', 2],
+        ['Solve log₂ x + log₂ (x − 2) = 3.', ['4', '−2', '4 or −2', '2'], 'A', 'x² − 2x − 8 = 0; reject −2.', 5],
+        ['Solve 2^x = 7, giving x to 2 decimal places (log 2 = 0.3010, log 7 = 0.8451).', ['2.81', '3.50', '2.31', '0.36'], 'A', 'x = log 7/log 2.', 5],
     ],
 
     'SHS 2: Trigonometric identities' => [
@@ -355,6 +483,9 @@ return [
         ['cos 2θ can be written as', ['1 − 2 sin²θ', '2 sin θ cos θ', '1 + 2 sin²θ', 'sin²θ − cos²θ'], 'A', 'Also 2cos²θ − 1.', 2],
         ['sin(A + B) =', ['sin A cos B + cos A sin B', 'sin A + sin B', 'cos A cos B − sin A sin B', 'sin A sin B + cos A cos B'], 'A', 'The compound-angle formula.', 2],
         ['tan 2θ =', ['2tan θ/(1 − tan²θ)', '2tan θ', 'tan²θ', '1/(1 + tan²θ)'], 'A', 'Double-angle formula.', 2],
+        ['Prove that (1 − cos 2θ)/sin 2θ equals', ['tan θ', 'cot θ', 'sin θ', 'cos θ'], 'A', '2sin²θ/(2 sin θ cos θ).', 5],
+        ['If tan A = 1/2 and tan B = 1/3, find A + B.', ['45°', '60°', '30°', '90°'], 'A', 'tan(A + B) = (5/6)/(1 − 1/6) = 1.', 5],
+        ['Simplify sin 2θ / (1 + cos 2θ).', ['tan θ', 'cot θ', 'sin θ', '2 tan θ'], 'A', '2 sin θ cos θ / 2cos²θ.', 5],
     ],
 
     'SHS 2: Differentiation and integration' => [
@@ -378,6 +509,9 @@ return [
         ['The equation of the tangent to y = x² at (1, 1) is', ['y = 2x − 1', 'y = x', 'y = 2x + 1', 'y = x + 1'], 'A', 'Gradient 2; 1 = 2(1) + c.', 3],
         ['If y = x³, find the rate of change of y when x = 2.', ['12', '8', '6', '4'], 'A', 'dy/dx = 3x² = 12.', 1],
         ['The volume of a cube of side x is changing. dV/dx when x = 3 is', ['27', '9', '18', '81'], 'A', 'V = x³; 3x².', 2],
+        ['An open box is made from a 12 cm square sheet by cutting squares of side x from each corner. The value of x that maximises volume is', ['2 cm', '3 cm', '4 cm', '6 cm'], 'A', 'V = x(12 − 2x)²; dV/dx = 0.', 5],
+        ['The radius of a circle increases at 2 cm/s. How fast is its area increasing when r = 5 cm?', ['20π cm²/s', '10π cm²/s', '25π cm²/s', '4π cm²/s'], 'A', 'dA/dt = 2πr dr/dt.', 5],
+        ['A rectangle has perimeter 40 cm. Its maximum possible area is', ['100 cm²', '400 cm²', '80 cm²', '96 cm²'], 'A', 'A square of side 10.', 4],
     ],
 
     'SHS 2: Probability' => [
@@ -390,6 +524,8 @@ return [
         ['P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.2. Find P(A ∪ B).', ['0.7', '0.9', '0.1', '0.2'], 'A', '0.5 + 0.4 − 0.2.', 2],
         ['The probability of an impossible event is', ['0', '1', '0.5', '−1'], 'A', 'A certain event has probability 1.', 1],
         ['A box has 4 red and 6 blue pens. One is taken at random. P(red) is', ['2/5', '3/5', '1/4', '1/6'], 'A', '4 red out of 10 pens = 2/5.', 1],
+        ['A bag has 3 red and 2 white balls. Two are drawn at random without replacement. P(at least one red) is', ['9/10', '3/10', '1/10', '3/5'], 'A', '1 − P(both white) = 1 − 1/10.', 5],
+        ['Three coins are tossed. P(at least two heads) is', ['1/2', '3/8', '1/8', '7/8'], 'A', '(3 + 1)/8.', 4],
     ],
 
     'SHS 3: Logic' => [
@@ -403,6 +539,8 @@ return [
         ['A statement that is always true is a', ['tautology', 'contradiction', 'converse', 'premise'], 'A', 'For example, p ∨ ~p.', 2],
         ['The inverse of p → q is', ['~p → ~q', 'q → p', '~q → ~p', 'p ∧ q'], 'A', 'Negate both parts.', 2],
         ['p ∨ q is false only when', ['both p and q are false', 'both are true', 'p is true', 'q is true'], 'A', '∨ means or.', 1],
+        ['The statement p → q is logically equivalent to', ['~p ∨ q', 'p ∧ q', '~q → p', 'q → p'], 'A', 'Material implication.', 5],
+        ['The truth value of (T → F) ∨ (F → T) is', ['T', 'F', 'cannot tell', 'both'], 'A', 'F ∨ T.', 5],
     ],
 
     'SHS 3: Matrices and determinants' => [
@@ -415,6 +553,9 @@ return [
         ['The determinant of [[1, 0, 0], [0, 2, 0], [0, 0, 3]] is', ['6', '3', '5', '0'], 'A', 'For a diagonal matrix, multiply the diagonal.', 2],
         ['If det A = 4, then det(2A) for a 2 × 2 matrix A is', ['16', '8', '4', '2'], 'A', 'det(kA) = k² det A for 2 × 2.', 3],
         ['Solve using matrices: 2x + y = 5, x + y = 3. Then x =', ['2', '1', '3', '4'], 'A', 'Subtract: x = 2.', 2],
+        ['Find the determinant of [[1, 2, 3], [0, 1, 4], [5, 6, 0]].', ['1', '−1', '24', '0'], 'A', '1(0 − 24) − 2(0 − 20) + 3(0 − 5) = −24 + 40 − 15.', 5],
+        ['The matrix [[k, 2], [8, k]] is singular. Find the values of k.', ['±4', '±2', '16', '0'], 'A', 'k² − 16 = 0.', 4],
+        ['Use Cramer\'s rule: x + y = 3, 2x − y = 0. Then x =', ['1', '2', '3', '0'], 'A', 'Dx/D = (−3)/(−3).', 5],
     ],
 
     'SHS 3: Parabolas' => [
@@ -426,6 +567,8 @@ return [
         ['The directrix of y² = 12x is', ['x = −3', 'x = 3', 'y = −3', 'x = −12'], 'A', '4a = 12, a = 3; directrix x = −a.', 3],
         ['The axis of symmetry of y = x² − 6x + 1 is', ['x = 3', 'x = −3', 'x = 6', 'y = 3'], 'A', 'x = −b/2a.', 2],
         ['The vertex of y = x² − 4x + 1 is', ['(2, −3)', '(−2, 13)', '(2, 1)', '(4, 1)'], 'A', 'x = 2; y = 4 − 8 + 1.', 2],
+        ['The parabola y² = 16x has focus', ['(4, 0)', '(16, 0)', '(0, 4)', '(2, 0)'], 'A', '4a = 16.', 4],
+        ['The length of the latus rectum of y² = 8x is', ['8', '2', '4', '16'], 'A', 'Latus rectum = 4a.', 5],
     ],
 
     'SHS 3: Trigonometry' => [
@@ -437,6 +580,7 @@ return [
         ['In triangle ABC, a = 5, b = 7 and C = 60°. Find c².', ['39', '74', '109', '35'], 'A', 'c² = 25 + 49 − 2(5)(7)(0.5).', 3],
         ['The area of a triangle with sides 6 and 8 and included angle 30° is', ['12', '24', '48', '6'], 'A', '½ab sin C = ½(6)(8)(0.5).', 2],
         ['Solve tan x = 1 for 0° ≤ x ≤ 360°.', ['45° and 225°', '45° only', '45° and 135°', '135° and 315°'], 'A', 'tan is positive in quadrants 1 and 3.', 2],
+        ['Find the general solution of sin x = 0.', ['x = nπ', 'x = 2nπ', 'x = π/2 + nπ', 'x = nπ/2'], 'A', 'n is an integer.', 5],
     ],
 
     'SHS 3: Integration' => [
@@ -448,6 +592,9 @@ return [
         ['Evaluate ∫₁³ 2x dx.', ['8', '9', '6', '4'], 'A', '[x²] from 1 to 3 = 9 − 1.', 2],
         ['∫ (1/x) dx =', ['ln|x| + C', 'x⁻² + C', '1/x² + C', 'eˣ + C'], 'A', 'd/dx(ln x) = 1/x.', 2],
         ['∫ eˣ dx =', ['eˣ + C', 'xeˣ + C', 'eˣ⁺¹ + C', 'ln x + C'], 'A', 'eˣ integrates to itself.', 1],
+        ['∫₀^(π/2) sin x dx =', ['1', '0', '−1', 'π/2'], 'A', '[−cos x] = 0 − (−1).', 4],
+        ['∫ 1/(2x + 1) dx =', ['½ ln|2x + 1| + C', 'ln|2x + 1| + C', '2 ln|2x + 1| + C', '1/(2x + 1)² + C'], 'A', 'Divide by the inner derivative.', 5],
+        ['∫ x eˣ dx =', ['eˣ(x − 1) + C', 'x eˣ + C', 'eˣ(x + 1) + C', 'x² eˣ/2 + C'], 'A', 'Integration by parts.', 5],
     ],
 
     'SHS 3: Applications of integration' => [
@@ -459,6 +606,9 @@ return [
         ['The volume generated when y = x from 0 to 3 is rotated about the x-axis is', ['9π', '3π', '27π', '6π'], 'A', 'V = π∫x² dx = π[x³/3] from 0 to 3.', 3],
         ['The area between y = 4 − x² and the x-axis is', ['32/3', '16/3', '8', '16'], 'A', '∫ from −2 to 2 of (4 − x²) dx = 16 − 16/3.', 3],
         ['The area under y = 2x from x = 1 to x = 4 is', ['15', '16', '8', '12'], 'A', '[x²] = 16 − 1.', 2],
+        ['Find the volume generated when y = x² from x = 0 to x = 1 is rotated about the x-axis.', ['π/5', 'π/3', 'π/2', '2π/5'], 'A', 'π∫x⁴ dx.', 5],
+        ['A particle has velocity v = 4 − 2t. Find the distance travelled in the first 3 s.', ['5 m', '3 m', '4 m', '9 m'], 'A', 'It stops at t = 2: 4 m forward, then 1 m back.', 5],
+        ['The area between y = x³ and the x-axis from x = −1 to x = 1 is', ['1/2', '0', '1/4', '1'], 'A', 'Sum of absolute areas: 1/4 + 1/4.', 5],
     ],
 
     'SHS 3: Statistics and the normal distribution' => [
@@ -470,6 +620,9 @@ return [
         ['If X ~ N(50, 25), the standard deviation of X is', ['5', '25', '50', '625'], 'A', 'The variance is 25.', 2],
         ['The z-score of a value 60 when μ = 50 and σ = 5 is', ['2', '10', '0.5', '−2'], 'A', 'z = (x − μ)/σ.', 2],
         ['About 95% of a normal distribution lies within', ['2 standard deviations of the mean', '1 standard deviation', '3 standard deviations', 'the IQR'], 'A', 'The 68–95–99.7 rule.', 2],
+        ['X ~ N(50, 16). Find P(X > 58) given P(Z < 2) = 0.9772.', ['0.0228', '0.9772', '0.4772', '0.5'], 'A', 'z = (58 − 50)/4 = 2.', 5],
+        ['The scores of a test have mean 60 and SD 8. A score of 76 has a z-score of', ['2', '1.5', '−2', '16'], 'A', '(76 − 60)/8.', 4],
+        ['If X ~ N(100, 225), the standard deviation is', ['15', '225', '100', '22.5'], 'A', 'SD = √variance = √225.', 4],
     ],
 
     'SHS 3: Probability distributions' => [
@@ -481,5 +634,8 @@ return [
         ['The sum of all probabilities in a probability distribution is', ['1', '0', '100', 'n'], 'A', 'Total probability is 1.', 1],
         ['For X ~ B(10, 0.3), the variance is', ['2.1', '3', '0.21', '7'], 'A', 'npq = 10 × 0.3 × 0.7.', 2],
         ['For X ~ B(5, 0.5), P(X = 0) is', ['1/32', '1/5', '1/2', '0'], 'A', '(0.5)⁵.', 2],
+        ['For X ~ B(4, 1/2), find P(X ≥ 3).', ['5/16', '1/4', '3/8', '11/16'], 'A', 'P(3) + P(4) = 4/16 + 1/16.', 5],
+        ['A discrete variable X takes values 1, 2, 3 with probabilities 0.2, 0.5, 0.3. Find E(X).', ['2.1', '2', '1.5', '6'], 'A', '0.2 + 1.0 + 0.9.', 4],
+        ['For a Poisson distribution with mean 2, P(X = 0) is', ['e⁻²', '2e⁻²', '1/2', '0'], 'A', 'λ⁰e^(−λ)/0!.', 5],
     ],
 ];

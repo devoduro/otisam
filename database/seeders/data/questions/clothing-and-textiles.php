@@ -34,6 +34,15 @@ return [
         ['Synthetic fibres usually', ['leave soft ash', 'smell like burning paper', 'melt and form hard beads when burnt', 'do not burn at all'], 'C', 'Nylon and polyester melt.', 2],
         ['Wool is obtained from', ['flax', 'cotton plants', 'silkworms', 'sheep'], 'D', 'It is a protein fibre.', 1],
         ['The selvedge of a fabric is', ['the cut edge', 'the firmly woven edge that does not fray', 'the bias', 'the hem'], 'B', 'It runs along the warp.', 1],
+        ['Wool shrinks and felts when washed in hot water with agitation because of', ['its low strength', 'its smooth surface', 'its synthetic nature', 'its scaly fibre surface'], 'D', 'Scales interlock.', 5],
+        ['Silk is damaged by', ['cold water', 'strong alkalis and sunlight', 'gentle ironing', 'air'], 'B', 'It is a protein fibre.', 4],
+        ['Thermoplastic fibres such as nylon can be', ['ironed at very high heat', 'boiled without damage always', 'heat-set into permanent pleats', 'bleached strongly'], 'C', 'Heat softens them.', 5],
+        ['The moisture regain of cotton is higher than polyester, so cotton is', ['less absorbent', 'quicker drying', 'more static', 'more comfortable in hot weather'], 'D', 'It absorbs sweat.', 4],
+        ['The burning test of a cotton fibre gives a smell of', ['chemicals', 'burning hair', 'vinegar', 'burning paper'], 'D', 'Cellulose fibre.', 4],
+        ['Wool burns with a smell of', ['burning paper', 'burning hair', 'burning plastic', 'sugar'], 'B', 'Protein fibre.', 4],
+        ['Nylon is a', ['animal fibre', 'natural plant fibre', 'synthetic fibre', 'mineral fibre'], 'C', 'Polyamide.', 4],
+        ['The lengthwise threads in a woven fabric are the', ['bias', 'weft', 'selvedge', 'warp'], 'D', 'Parallel to the selvedge.', 4],
+        ['The true bias runs at', ['90° to the selvedge', '45° to the warp and weft', 'parallel to the weft', 'along the selvedge'], 'B', 'Greatest stretch.', 5],
     ],
 
     'Sewing equipment and processes' => [
@@ -62,6 +71,14 @@ return [
         ['Cutting fabric on the bias means cutting', ['along the selvedge', 'at 45° to the straight grain', 'along the weft', 'in circles'], 'B', 'Bias-cut fabric stretches.', 2],
         ['A paper pattern helps a dressmaker to', ['iron clothes', 'thread the machine', 'cut fabric pieces to the correct shape and size', 'choose colours only'], 'C', 'Markings show grain lines and darts.', 1],
         ['A tracing wheel is used with carbon paper to', ['sew buttons', 'cut threads', 'press seams', 'transfer pattern markings onto fabric'], 'D', 'Marks show darts and seam lines.', 2],
+        ['Machine stitches that loop on the underside of fabric usually indicate', ['a blunt needle only', 'incorrect upper thread tension', 'too much fabric', 'a bent bobbin case only'], 'B', 'Adjust the tension.', 5],
+        ['A size 14 machine needle is suitable for', ['heavy canvas', 'very fine silk', 'medium-weight fabrics', 'leather only'], 'C', 'Needle size matches fabric weight.', 4],
+        ['Ease in pattern making refers to', ['dart width', 'seam allowance', 'hem allowance', 'extra allowance for movement and comfort'], 'D', 'Garments should not be skin-tight.', 5],
+        ['A dart is used to', ['finish hems', 'join seams', 'remove fullness and shape a garment', 'add buttons'], 'C', 'Shaping.', 4],
+        ['A French seam is suitable for', ['thick wool only', 'heavy denim', 'leather', 'fine, sheer fabrics'], 'D', 'Encloses raw edges.', 5],
+        ['Tacking is a', ['permanent stitch', 'temporary stitch', 'decorative stitch', 'machine stitch only'], 'B', 'Holds fabric in place.', 4],
+        ['Notching curved seams helps the seam to', ['stretch', 'fray', 'lie flat', 'shrink'], 'C', 'Removes bulk.', 4],
+        ['A facing is used to', ['lengthen sleeves', 'add pockets', 'make pleats', 'neaten raw edges such as necklines'], 'D', 'Edge finish.', 4],
     ],
 
     'Care of clothing and textile decoration' => [
@@ -82,6 +99,13 @@ return [
         ['Tie-and-dye creates patterns by', ['stitching appliqué', 'printing with blocks', 'weaving coloured threads', 'tying parts of the fabric so they resist the dye'], 'D', 'It is popular in Ghana.', 1],
         ['White cotton fabrics can be whitened by', ['tie-dyeing', 'bleaching', 'starching', 'ironing only'], 'B', 'Use bleach carefully.', 1],
         ['Embroidery is decorating fabric with', ['wax', 'dye', 'needle and thread stitches', 'paint only'], 'C', 'Chain stitch and satin stitch are embroidery stitches.', 1],
+        ['Ironing temperature for polyester should be', ['high (three dots)', 'low (one dot)', 'medium-high always', 'no ironing ever'], 'B', 'It melts at high heat.', 4],
+        ['In tie-dye, fabric is soaked in a mordant to', ['soften the fabric only', 'remove colour', 'fix the dye permanently', 'add wax'], 'C', 'Mordants bind dyes.', 5],
+        ['Dry-cleaning uses', ['steam only', 'only hot water', 'bleach', 'organic solvents instead of water'], 'D', 'For fabrics damaged by water.', 4],
+        ['Tie-and-dye is an example of', ['resist dyeing', 'printing with blocks', 'embroidery', 'appliqué'], 'A', 'Tied areas resist dye.', 4],
+        ['Batik uses', ['wax as a resist', 'thread as a resist', 'stencils', 'paint only'], 'A', 'Wax resist.', 4],
+        ['Adinkra cloth is decorated by', ['stamping with carved calabash stamps', 'weaving', 'embroidery', 'knitting'], 'A', 'Symbol printing.', 4],
+        ['A care label symbol of a crossed-out tub means', ['do not wash', 'hand wash', 'dry clean', 'tumble dry'], 'A', 'Washing not allowed.', 4],
     ],
 
     'Wardrobe planning' => [
@@ -94,6 +118,7 @@ return [
         ['Clothes that can be worn together in different combinations are', ['costumes', 'uniforms', 'mix-and-match clothes', 'fashion fads'], 'C', 'They increase variety cheaply.', 2],
         ['Basic garments in a wardrobe are', ['uniforms only', 'very fashionable items worn once', 'costumes', 'simple, versatile items that can be worn often'], 'D', 'They form the core of a wardrobe.', 1],
         ['A fad is', ['a classic style', 'a fashion that is popular for a very short time', 'a uniform', 'a type of fabric'], 'B', 'Classics last for years.', 2],
+        ['A capsule wardrobe is', ['a large designer collection', 'a small collection of versatile items that can be combined', 'only uniforms', 'disposable clothing'], 'B', 'It maximises outfits from few pieces.', 4],
     ],
 
     'SHS 1: Clothing, grooming and wardrobe planning' => [
@@ -127,6 +152,7 @@ return [
         ['Nylon is known for being', ['natural', 'very absorbent', 'strong and elastic', 'weak'], 'C', 'It is used for stockings and ropes.', 2],
         ['Blending polyester with cotton gives a fabric that is', ['fireproof', 'very weak', 'non-washable', 'strong, comfortable and less wrinkled'], 'D', 'Blends combine good qualities.', 2],
         ['Cotton fabric is cool to wear because it', ['is plastic', 'traps heat', 'is waterproof', 'absorbs sweat and lets air through'], 'D', 'It is breathable.', 1],
+        ['Denier is a unit used to measure', ['thread strength only', 'fabric colour', 'the fineness of filament yarns', 'garment length'], 'C', 'Mass in grams per 9,000 m.', 5],
     ],
 
     'SHS 1: Sewing tools and techniques' => [
@@ -138,6 +164,7 @@ return [
         ['A seam ripper (unpicker) is used to', ['iron seams', 'sew buttons', 'mark fabric', 'remove unwanted stitches'], 'D', 'It cuts threads carefully.', 1],
         ['Tailor\'s chalk is used for', ['sewing', 'marking fabric', 'cutting', 'ironing'], 'B', 'It brushes off easily.', 1],
         ['Back stitch is a', ['decorative only stitch', 'temporary stitch', 'strong hand stitch resembling machine stitching', 'hemming stitch only'], 'C', 'It can replace machine sewing.', 2],
+        ['A seam allowance of 1.5 cm on each side of a seam means the finished seam uses', ['6 cm', '1.5 cm', '0.75 cm', '3 cm of fabric in total'], 'D', 'Both pieces lose 1.5 cm.', 4],
     ],
 
     'SHS 1: Fullness, openings and fastenings' => [
@@ -150,18 +177,19 @@ return [
         ['Pleats are', ['seams', 'buttons', 'holes', 'folds of fabric stitched or pressed in place'], 'D', 'Knife and box pleats are types.', 1],
         ['A placket is', ['a pocket', 'an opening in a garment finished to allow it to be put on', 'a sleeve', 'a collar'], 'B', 'It is often fitted with buttons or a zip.', 3],
         ['Hooks and eyes are commonly used to fasten', ['bags', 'shoes', 'waistbands and necklines', 'curtains'], 'C', 'They are small fastenings.', 2],
-        ['Tucks are', ['stitched folds of fabric used for shaping or decoration', 'holes', 'pockets', 'zips'], 'A', 'Pin tucks are narrow tucks.', 2],
+        ['Tucks are', ['holes', 'stitched folds of fabric used for shaping or decoration', 'pockets', 'zips'], 'B', 'Pin tucks are narrow tucks.', 2],
     ],
 
     'SHS 2: Figure types and dress sense' => [
         ['A figure with shoulders and hips of similar width and a well-defined waist is the', ['rectangle figure', 'pear figure', 'inverted triangle figure', 'hourglass figure'], 'D', 'Knowing your figure type helps you choose flattering styles.', 2],
         ['A person with a pear figure (wider hips) can balance the shape by', ['wearing very tight trousers only', 'drawing attention to the upper body, for example with details at the shoulders', 'wearing wide belts at the hips', 'using bold prints on the hips'], 'B', 'Interest at the top balances wider hips.', 2],
-        ['A person with a pear-shaped figure has', ['hips wider than the shoulders', 'shoulders wider than hips', 'equal shoulders and hips', 'no waist'], 'A', 'Dark skirts and bright tops balance the figure.', 2],
+        ['A person with a pear-shaped figure has', ['equal shoulders and hips', 'shoulders wider than hips', 'hips wider than the shoulders', 'no waist'], 'C', 'Dark skirts and bright tops balance the figure.', 2],
         ['Dress sense is the ability to', ['choose clothes that suit one\'s figure and the occasion', 'sew quickly', 'buy expensive clothes', 'follow every fashion'], 'A', 'It shows good taste.', 1],
         ['A tall, thin person can appear broader by wearing', ['horizontal lines and layers', 'vertical stripes only', 'very tight clothes', 'one dark colour'], 'A', 'Horizontal lines add width.', 2],
         ['Accessories include', ['bags, belts, jewellery and shoes', 'needles', 'fabrics', 'patterns'], 'A', 'They complete an outfit.', 1],
         ['An hourglass figure has', ['balanced shoulders and hips with a defined waist', 'wide hips only', 'broad shoulders only', 'no waist'], 'A', 'Fitted styles suit it.', 2],
         ['A short person can appear taller by wearing', ['one colour from top to bottom', 'wide belts', 'horizontal stripes', 'large patterns'], 'A', 'Unbroken colour elongates.', 2],
+        ['An inverted-triangle figure is balanced by', ['A-line skirts and plain tops', 'shoulder pads', 'horizontal stripes on the chest', 'tight skirts'], 'A', 'Add width at the hips.', 5],
     ],
 
     'SHS 2: Fabric construction' => [
@@ -175,6 +203,8 @@ return [
         ['Twill weave is recognised by its', ['diagonal lines on the fabric', 'plain checks', 'shiny surface', 'loops'], 'A', 'Denim is a twill.', 2],
         ['Satin weave produces fabric that is', ['smooth and lustrous', 'rough', 'loosely knitted', 'felted'], 'A', 'Long floats reflect light.', 2],
         ['Non-woven fabrics are made by', ['bonding fibres together without weaving or knitting', 'weaving', 'knitting', 'crocheting'], 'A', 'E.g. interfacing.', 2],
+        ['Warp-knitted fabrics differ from weft-knitted ones because they', ['are less stretchy and do not ladder easily', 'are always handmade', 'unravel easily', 'have no loops'], 'A', 'Tricot is warp-knitted.', 5],
+        ['The thread count of a fabric refers to', ['the number of warp and weft threads per unit area', 'its colour', 'its weight only', 'its thickness only'], 'A', 'Higher counts are finer.', 4],
     ],
 
     'SHS 2: Seams, hems and sewing processes' => [
@@ -187,6 +217,7 @@ return [
         ['Neatening seam edges prevents', ['fraying', 'shrinking', 'colour loss', 'stretching'], 'A', 'Overcasting or zigzag stitching can be used.', 1],
         ['Clipping curved seams helps them to', ['lie flat when turned', 'fray', 'shrink', 'tear'], 'A', 'Small cuts in the allowance.', 2],
         ['A blind hem is', ['almost invisible from the right side', 'very visible', 'a decorative stitch', 'a seam finish'], 'A', 'Used on skirts and trousers.', 2],
+        ['A Hong Kong finish on a seam uses', ['bias binding to enclose raw edges', 'pinking shears', 'zigzag stitch only', 'glue'], 'A', 'Used on unlined jackets.', 5],
     ],
 
     'SHS 3: Textile finishes' => [
@@ -199,6 +230,8 @@ return [
         ['Flame-retardant finishes are important for', ['children\'s nightwear and curtains', 'sports shoes', 'socks', 'bags'], 'A', 'They slow burning.', 2],
         ['Crease-resistant finishes help fabrics to', ['resist wrinkling', 'absorb water', 'shrink', 'fade'], 'A', 'Useful for travel clothes.', 1],
         ['Stain-resistant finishes are useful for', ['upholstery and tablecloths', 'socks', 'bags only', 'thread'], 'A', 'They repel spills.', 1],
+        ['Sanforisation is a finish that', ['controls shrinkage of cotton', 'adds colour', 'makes fabric waterproof', 'adds shine only'], 'A', 'Compressive shrinkage.', 5],
+        ['Calendering gives fabric', ['a smooth, glossy surface', 'a rough texture', 'flame resistance', 'stretch'], 'A', 'Pressed between heated rollers.', 5],
     ],
 
     'SHS 3: Careers, fashion promotion and entrepreneurship' => [
@@ -212,5 +245,6 @@ return [
         ['National Friday Wear in Ghana promotes', ['locally made fabrics and clothing', 'imported suits', 'uniforms only', 'sportswear'], 'A', 'It supports local industry.', 2],
         ['A fashion merchandiser', ['plans and promotes the sale of fashion products', 'grows cotton', 'sews only', 'designs buildings'], 'A', 'They work in retail.', 2],
         ['A seamstress or tailor can start a business with', ['a sewing machine, skills and a small workspace', 'a factory only', 'no skills', 'a bank licence'], 'A', 'It is a common enterprise in Ghana.', 1],
+        ['A fashion entrepreneur pricing a dress costing GH¢80 to make with a 50% mark-up should charge', ['GH¢120', 'GH¢130', 'GH¢160', 'GH¢100'], 'A', '80 × 1.5.', 4],
     ],
 ];

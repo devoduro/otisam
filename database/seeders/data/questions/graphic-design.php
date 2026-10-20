@@ -33,6 +33,7 @@ return [
         ['Hierarchy in design guides the viewer to', ['read randomly', 'ignore the headline', 'see the most important information first', 'skip images'], 'C', 'Size and contrast create hierarchy.', 2],
         ['A grid in layout design helps to', ['hide text', 'add colour', 'print faster', 'align elements consistently'], 'D', 'It structures pages.', 1],
         ['Proximity in design means', ['spreading everything apart', 'grouping related items close together', 'using one colour', 'centring all text'], 'B', 'It shows relationships.', 2],
+        ['Gestalt principles describe how viewers', ['type text', 'mix inks', 'print posters', 'perceive visual elements as organised wholes'], 'D', 'Proximity, similarity, closure.', 5],
     ],
 
     'Typography' => [
@@ -57,6 +58,9 @@ return [
         ['Using too many typefaces in one design makes it', ['easier to read', 'more professional', 'look cluttered and confusing', 'cheaper to print'], 'C', 'Two or three are usually enough.', 1],
         ['Leading that is too tight makes text', ['bigger', 'easier to read', 'hard to read', 'coloured'], 'C', 'Lines crowd each other.', 1],
         ['An italic typeface is', ['upside down', 'very bold', 'all capitals', 'slanted to the right'], 'D', 'Used for emphasis.', 1],
+        ['An x-height is', ['the width of a letter', 'the height of lowercase letters excluding ascenders and descenders', 'the space between words', 'the size of capitals'], 'B', 'It affects readability.', 5],
+        ['A ligature is', ['a bullet point', 'a line spacing setting', 'two or more letters joined as a single glyph', 'a margin'], 'C', 'E.g. "fi".', 5],
+        ['Widows and orphans in layout are', ['footers', 'large images', 'headings', 'single lines left alone at the top or bottom of a column'], 'D', 'They should be avoided.', 5],
     ],
 
     'Printing processes' => [
@@ -73,14 +77,17 @@ return [
         ['A test print checked for errors before the full run is a', ['master', 'plate', 'proof', 'stencil'], 'C', 'Errors are cheaper to fix before printing.', 1],
         ['Letterpress is an example of', ['intaglio printing', 'relief printing', 'planographic printing', 'stencil printing'], 'B', 'The raised surface carries the ink.', 2],
         ['Screen printing forces ink through a', ['rubber stamp', 'metal plate', 'mesh stencil', 'roller only'], 'C', 'It is used on T-shirts.', 1],
-        ['Offset lithography is based on the principle that', ['oil and water do not mix', 'ink dries instantly', 'heat transfers images', 'paper absorbs all ink'], 'A', 'The image is offset onto a rubber blanket.', 2],
-        ['Extending artwork beyond the trim edge of a page is called', ['bleed', 'gutter', 'margin', 'crop'], 'A', 'It prevents white edges after trimming.', 2],
+        ['Offset lithography is based on the principle that', ['ink dries instantly', 'oil and water do not mix', 'heat transfers images', 'paper absorbs all ink'], 'B', 'The image is offset onto a rubber blanket.', 2],
+        ['Extending artwork beyond the trim edge of a page is called', ['margin', 'gutter', 'bleed', 'crop'], 'C', 'It prevents white edges after trimming.', 2],
         ['Letterpress printing is an example of', ['relief printing', 'intaglio printing', 'planographic printing', 'digital printing'], 'A', 'The raised surface is inked.', 2],
         ['Digital printing is best for', ['short runs and personalised prints', 'very long runs only', 'printing on metal only', 'engraving'], 'A', 'No plates are needed.', 2],
         ['Registration marks help to', ['align colours correctly in printing', 'number pages', 'cut paper', 'bind books'], 'A', 'Misregistration causes blurred colours.', 2],
         ['Gravure printing is a type of', ['intaglio printing', 'relief printing', 'screen printing', 'offset only'], 'A', 'The image is etched into the cylinder.', 3],
         ['A printing plate in offset lithography is usually made of', ['aluminium', 'wood', 'cloth', 'glass'], 'A', 'It carries the image.', 2],
         ['Proofreading before printing helps to', ['catch errors before the final run', 'add colour', 'speed up printing', 'cut paper'], 'A', 'It saves money.', 1],
+        ['A 4-colour process print uses', ['cyan, magenta, yellow and black', 'red, green, blue and white', 'only black', 'spot colours only'], 'A', 'The CMYK process colours.', 4],
+        ['A moiré pattern in printing is caused by', ['misaligned halftone screen angles', 'too much ink', 'wet paper', 'dull plates'], 'A', 'Interference patterns appear.', 5],
+        ['Imposition in printing refers to', ['arranging pages on a press sheet so they read in order after folding', 'colour mixing', 'binding', 'trimming only'], 'A', 'Important for booklets.', 5],
     ],
 
     'Digital design and advertising' => [
@@ -106,5 +113,7 @@ return [
         ['Photoshop is mainly used for', ['editing raster images', 'writing code', 'accounting', 'database design'], 'A', 'It works with pixels.', 1],
         ['Branding helps a company to', ['create a recognisable identity', 'hide its products', 'reduce sales', 'avoid customers'], 'A', 'Logos, colours and slogans.', 1],
         ['A banner advert appears', ['on websites', 'only on radio', 'only in newspapers', 'only on billboards'], 'A', 'It is a digital advert.', 1],
+        ['An image for print at 10 cm × 15 cm and 300 dpi needs about', ['1,181 × 1,772 pixels', '300 × 450 pixels', '100 × 150 pixels', '3,000 × 4,500 pixels'], 'A', '10 cm ≈ 3.94 in × 300.', 5],
+        ['AIDA in advertising stands for', ['Attention, Interest, Desire, Action', 'Art, Image, Design, Ad', 'Audience, Idea, Draft, Approve', 'Advertise, Inform, Deliver, Achieve'], 'A', 'A model of persuasion.', 4],
     ],
 ];

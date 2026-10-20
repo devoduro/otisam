@@ -62,6 +62,9 @@ return [
         ['A colour sensor can help a robot to', ['measure weight', 'sort objects by colour', 'hear sounds', 'charge itself'], 'B', 'It detects reflected light wavelengths.', 1],
         ['An encoder on a motor measures', ['light', 'temperature', 'how far the shaft has turned', 'air pressure'], 'C', 'It gives position feedback.', 2],
         ['Analogue sensors give', ['only sound', 'only 0 or 1', 'no output', 'a range of values'], 'D', 'Digital sensors give on/off.', 2],
+        ['An ultrasonic echo returns after 2 ms. If sound travels at 340 m/s, the obstacle distance is', ['0.17 m', '0.68 m', '3.4 m', '0.34 m'], 'D', 'd = vt/2.', 5],
+        ['A 10-bit ADC with a 5 V reference has a resolution of about', ['0.5 V', '4.9 mV', '50 mV', '1 mV'], 'B', '5/1024.', 5],
+        ['Sensor fusion combines', ['battery cells', 'two motors', 'data from several sensors for better estimates', 'programs and wheels'], 'C', 'E.g. gyroscope with accelerometer.', 5],
     ],
 
     'Motors and power' => [
@@ -83,6 +86,10 @@ return [
         ['Torque is the', ['voltage of a battery', 'speed of a motor', 'turning force of a motor', 'weight of a robot'], 'C', 'More torque lifts heavier loads.', 1],
         ['Batteries connected in series', ['reduce voltage', 'add their capacities only', 'cancel out', 'add their voltages'], 'D', 'Two 3.7 V cells give 7.4 V.', 2],
         ['A motor driver is needed because microcontroller pins', ['are too powerful', 'cannot supply enough current for motors', 'have no voltage', 'only work with LEDs'], 'B', 'Drivers handle higher currents.', 2],
+        ['A robot draws 2 A from a 2,000 mAh battery. Approximately how long will it run?', ['4 hours', '2 hours', '30 minutes', '1 hour'], 'D', '2 Ah ÷ 2 A.', 4],
+        ['A PWM signal with a 25% duty cycle on a 12 V supply gives an average voltage of', ['9 V', '3 V', '12 V', '6 V'], 'B', '0.25 × 12.', 4],
+        ['A motor shaft turning at 120 rpm with a wheel of radius 5 cm moves the robot at about', ['0.1 m/s', '6 m/s', '0.63 m/s', '1.2 m/s'], 'C', '2π × 0.05 × 2 rev/s.', 5],
+        ['The power output of a motor giving 0.5 N m torque at 10 rad/s is', ['50 W', '0.05 W', '20 W', '5 W'], 'D', 'P = τω.', 5],
     ],
 
     'Control' => [
@@ -97,6 +104,8 @@ return [
         ['An open-loop control system', ['corrects errors automatically', 'always uses sensors', 'does not use feedback', 'is the same as PID'], 'C', 'A toaster timer is open-loop.', 1],
         ['A thermostat is an example of', ['manual control only', 'open-loop control', 'no control', 'closed-loop control'], 'D', 'It measures temperature and adjusts.', 2],
         ['The set point in a control system is the', ['measured value', 'desired value', 'error', 'output only'], 'B', 'Error = set point − measured value.', 2],
+        ['Increasing the proportional gain too much in a P controller usually causes', ['slower response always', 'overshoot and oscillation', 'no change', 'zero error'], 'B', 'The system becomes unstable.', 5],
+        ['A PID controller output is u = Kp·e + Ki·∫e dt + Kd·de/dt. The term that predicts future error is', ['the proportional term', 'the integral term', 'the derivative term', 'none'], 'C', 'It reacts to the rate of change.', 5],
     ],
 
     'Programming' => [
@@ -115,6 +124,8 @@ return [
         ['The Arduino function analogRead() returns a value between', ['−1 and 1', '0 and 1', '0 and 255', '0 and 1023'], 'D', 'It uses a 10-bit ADC.', 3],
         ['The Arduino function pinMode(9, OUTPUT) sets pin 9 as', ['an input', 'an output', 'a ground', 'an analogue reader'], 'B', 'It is called in setup().', 1],
         ['A function in a program is', ['a wire', 'a sensor', 'a named block of code that performs a task', 'a battery'], 'C', 'Functions avoid repetition.', 1],
+        ['In an Arduino sketch, millis() is preferred over delay() for multitasking because it', ['stops interrupts', 'is slower', 'uses less memory always', 'does not block the program'], 'D', 'Other code keeps running.', 5],
+        ['An interrupt service routine (ISR) should be', ['long with delays', 'short and fast', 'full of print statements', 'never used'], 'B', 'It pauses the main program.', 5],
     ],
 
     'Safety' => [
@@ -137,10 +148,11 @@ return [
         ['A factory robot can be reprogrammed in an hour to pack a new product. Which performance indicator does this mainly improve?', ['price', 'quality', 'innovation', 'flexibility'], 'D', 'Flexibility is how quickly an organisation can change what or how it produces.', 2],
         ['Roboethics is mainly concerned with', ['the colour of robots', 'oiling robot joints', 'using robots responsibly, safely and fairly', 'robot battery sizes'], 'C', 'Roboethics looks at questions such as safety, privacy, job losses and who is responsible when a robot causes harm.', 1],
         ['Which of these is an example of a smart home device?', ['a wooden chair', 'a clay pot', 'a thermostat that adjusts the room temperature by itself', 'a hand broom'], 'C', 'Smart devices sense conditions and act on them automatically, often connected to a phone or the internet.', 1],
-        ['Which job mainly involves operating, maintaining and repairing robots in a factory?', ['robotics technician', 'patent attorney', 'robot ethicist', 'sales manager'], 'A', 'Technicians keep robots running day to day. Robotics engineers design and develop new systems.', 1],
-        ['Industry 4.0 is characterised by', ['smart factories, automation and connected systems', 'steam power', 'hand tools only', 'horse transport'], 'A', 'The fourth industrial revolution.', 2],
-        ['A concern in roboethics is', ['job losses due to automation', 'robots being too slow', 'robots having colour', 'robots being cheap'], 'A', 'Also privacy and safety.', 1],
-        ['Robots are often used for jobs that are', ['dangerous, dirty or dull', 'creative only', 'emotional', 'social'], 'A', 'The "3 Ds".', 1],
+        ['Which job mainly involves operating, maintaining and repairing robots in a factory?', ['robot ethicist', 'patent attorney', 'robotics technician', 'sales manager'], 'C', 'Technicians keep robots running day to day. Robotics engineers design and develop new systems.', 1],
+        ['Industry 4.0 is characterised by', ['horse transport', 'steam power', 'hand tools only', 'smart factories, automation and connected systems'], 'D', 'The fourth industrial revolution.', 2],
+        ['A concern in roboethics is', ['robots being too slow', 'job losses due to automation', 'robots having colour', 'robots being cheap'], 'B', 'Also privacy and safety.', 1],
+        ['Robots are often used for jobs that are', ['emotional', 'creative only', 'dangerous, dirty or dull', 'social'], 'C', 'The "3 Ds".', 1],
+        ['Asimov\'s First Law of Robotics states that a robot may not', ['move without power', 'obey orders', 'protect itself', 'injure a human or allow a human to come to harm'], 'D', 'From science fiction, influential in ethics.', 4],
     ],
 
     'SHS 1: Robotic systems and control loops' => [
@@ -155,6 +167,7 @@ return [
         ['A room temperature controller that measures and adjusts the heating continuously, rather than in separate steps, is an example of', ['a continuous-time system', 'a two-state machine only', 'a non-feedback system', 'a manual system'], 'A', 'In a continuous-time system the signals change smoothly over time and are acted on all the time.', 3],
         ['A control loop consists of a sensor, a controller and an', ['actuator', 'antenna', 'audience', 'artist'], 'A', 'Sense, decide, act.', 1],
         ['Feedback allows a robot to', ['adjust its actions based on sensor data', 'ignore the environment', 'stop learning', 'avoid sensors'], 'A', 'Closed-loop control.', 1],
+        ['The bandwidth of a control loop relates to how', ['quickly the system responds to changes', 'big the robot is', 'much it costs', 'long the cables are'], 'A', 'Higher bandwidth responds faster.', 5],
     ],
 
     'Sensors and signals' => [
@@ -169,6 +182,8 @@ return [
         ['An analogue-to-digital converter (ADC)', ['changes a continuous signal into numbers', 'changes numbers into sound', 'powers motors', 'stores programs'], 'A', 'Microcontrollers need digital values.', 2],
         ['Noise in a sensor signal is', ['unwanted random variation', 'the desired reading', 'a type of motor', 'the battery level'], 'A', 'Filtering reduces noise.', 2],
         ['A potentiometer can act as a sensor of', ['angular position', 'colour', 'sound', 'smell'], 'A', 'Its resistance changes with rotation.', 2],
+        ['The Nyquist rule says a signal must be sampled at least', ['twice its highest frequency', 'once per second', 'at its highest frequency', 'half its frequency'], 'A', 'To avoid aliasing.', 5],
+        ['A low-pass filter on a sensor signal', ['removes high-frequency noise', 'removes the signal', 'amplifies noise', 'adds delay only'], 'A', 'Smooths readings.', 5],
     ],
 
     'Electronics and digital logic' => [
@@ -190,6 +205,8 @@ return [
         ['A pull-up resistor ensures a digital input reads', ['HIGH when the switch is open', 'LOW always', 'random values', 'nothing'], 'A', 'It prevents floating inputs.', 3],
         ['Ohm\'s law for a 5 V circuit with 250 Ω gives a current of', ['20 mA', '50 mA', '2 mA', '200 mA'], 'A', 'I = 5/250 = 0.02 A.', 2],
         ['An LED needs a series resistor to', ['limit the current', 'increase voltage', 'change colour', 'store charge'], 'A', 'Too much current destroys it.', 1],
+        ['A voltage divider with 10 kΩ and 20 kΩ across 9 V gives across the 20 kΩ resistor', ['6 V', '3 V', '4.5 V', '9 V'], 'A', '9 × 20/30.', 4],
+        ['A flip-flop is a circuit that', ['stores one bit of data', 'amplifies signals', 'converts AC to DC', 'produces light'], 'A', 'Basic memory element.', 5],
     ],
 
     'Design tools and making parts' => [
@@ -202,6 +219,7 @@ return [
         ['Tinkercad and Fusion 360 are examples of', ['CAD software', 'operating systems', 'browsers', 'spreadsheets'], 'A', 'They create 3D models.', 1],
         ['A chassis in a mobile robot is the', ['main frame that holds the parts', 'program', 'sensor', 'battery'], 'A', 'Motors and boards mount on it.', 1],
         ['3D printers in robotics are used to', ['make custom plastic parts', 'write code', 'charge batteries', 'test circuits'], 'A', 'Additive manufacturing.', 1],
+        ['Tolerance stacking in an assembly means', ['individual part tolerances add up and affect fit', 'parts never fit', 'tolerances cancel always', 'only one part matters'], 'A', 'Plan clearances.', 5],
     ],
 
     'Algorithms and programming' => [
@@ -215,6 +233,8 @@ return [
         ['A variable in a program is', ['a named storage location for data', 'a motor', 'a sensor', 'a battery'], 'A', 'Its value can change.', 1],
         ['Pseudocode for "if distance < 10 then stop" is an example of', ['a conditional statement', 'a loop', 'a variable declaration', 'a comment'], 'A', 'It makes a decision.', 1],
         ['Debugging a robot program means', ['finding and fixing errors', 'adding sensors', 'charging batteries', 'painting the robot'], 'A', 'Test step by step.', 1],
+        ['A finite state machine for a robot changes state based on', ['current state and inputs', 'random numbers only', 'battery colour', 'time of day only'], 'A', 'E.g. searching → avoiding.', 5],
+        ['Dead reckoning estimates a robot\'s position from', ['known speed, heading and time', 'GPS only', 'cameras only', 'guessing'], 'A', 'Errors accumulate.', 5],
     ],
 
     'Construction, mechanisms and motion' => [
@@ -237,6 +257,8 @@ return [
         ['A cam mechanism converts', ['rotary motion into reciprocating motion', 'light into motion', 'heat into light', 'sound into motion'], 'A', 'The follower moves up and down.', 2],
         ['A gear ratio of 3 : 1 (driven : driver teeth) makes the output', ['slower but with more torque', 'faster with less torque', 'the same speed', 'stop'], 'A', 'Larger driven gear.', 3],
         ['Tracks (caterpillar treads) are useful for robots on', ['rough or soft ground', 'smooth floors only', 'water', 'walls'], 'A', 'They spread the weight.', 1],
+        ['A driver gear of 12 teeth turns a driven gear of 36 teeth. If the driver rotates at 90 rpm, the driven gear rotates at', ['30 rpm', '270 rpm', '90 rpm', '45 rpm'], 'A', 'Speed ratio = 12/36.', 4],
+        ['Forward kinematics of a robot arm calculates', ['the end-effector position from joint angles', 'joint angles from position', 'battery life', 'motor current'], 'A', 'Inverse kinematics does the reverse.', 5],
     ],
 
     'SHS 2: PID control and troubleshooting' => [

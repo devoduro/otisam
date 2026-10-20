@@ -28,6 +28,8 @@ return [
         ['Asymmetrical balance uses', ['no balance', 'identical halves', 'different elements of equal visual weight on each side', 'only one colour'], 'C', 'It is informal balance.', 2],
         ['Texture that can be felt is', ['no texture', 'implied texture', 'visual texture only', 'actual (tactile) texture'], 'D', 'Implied texture is drawn.', 1],
         ['Variety in design adds', ['boredom', 'interest by using different elements', 'repetition only', 'emptiness'], 'B', 'Too much variety causes chaos.', 2],
+        ['Implied line is created when', ['colour is mixed', 'a ruler is used', 'a line is drawn heavily', 'the eye connects separate elements into a line'], 'D', 'E.g. a gaze direction.', 5],
+        ['Visual weight increases with', ['paleness', 'size, darkness and saturation', 'small size', 'transparency'], 'B', 'Affects balance.', 4],
     ],
 
     'Colour' => [
@@ -50,6 +52,9 @@ return [
         ['Hue is', ['its lightness', 'the name of a colour', 'its brightness', 'its texture'], 'B', 'Red, blue, yellow are hues.', 1],
         ['Intensity (saturation) refers to', ['its lightness only', 'its name', 'how bright or dull a colour is', 'its size'], 'C', 'Adding the complement dulls a colour.', 2],
         ['A monochromatic colour scheme uses', ['no colours', 'complementary colours', 'all colours', 'tints and shades of one hue'], 'D', 'It is harmonious.', 2],
+        ['Subtractive colour mixing applies to', ['stage lights', 'light on screens', 'paints and inks', 'projectors'], 'C', 'Pigments absorb light.', 5],
+        ['Additive colour mixing of red and green light produces', ['black', 'brown', 'purple', 'yellow'], 'D', 'RGB light mixing.', 5],
+        ['A split-complementary scheme uses a colour and the two colours', ['next to it', 'adjacent to its complement', 'opposite each other', 'black and white'], 'B', 'Less tense than complements.', 5],
     ],
 
     'Drawing' => [
@@ -99,6 +104,7 @@ return [
         ['Leonardo da Vinci painted', ['Guernica', 'the Mona Lisa and The Last Supper', 'The Starry Night', 'The Scream'], 'B', 'A Renaissance master.', 1],
         ['Claude Monet was a leading', ['Surrealist', 'Cubist', 'Impressionist painter', 'Pop artist'], 'C', '"Impression, Sunrise" named the movement.', 2],
         ['Frida Kahlo was a', ['Ghanaian sculptor', 'Mexican painter known for self-portraits', 'French architect', 'Italian composer'], 'B', 'Her work explores identity and pain.', 2],
+        ['Michelangelo\'s statue of David is made of', ['wood', 'bronze', 'marble', 'clay'], 'C', 'Carved 1501–1504.', 3],
     ],
 
     'Design process and ceramics' => [
@@ -113,6 +119,8 @@ return [
         ['A potter\'s wheel is used for', ['carving wood', 'weaving', 'printing', 'throwing round forms'], 'D', 'The clay is centred and shaped.', 1],
         ['Glaze is', ['raw clay', 'a glassy coating fused onto ceramics by firing', 'a type of kiln', 'a carving tool'], 'B', 'It waterproofs and decorates.', 1],
         ['Leather-hard clay is', ['fully fired', 'wet slip', 'partly dry and firm enough to carve', 'powder'], 'C', 'It is good for trimming.', 2],
+        ['Bisque firing is usually done at about', ['900–1,000 °C', '100 °C', '2,000 °C', '300 °C'], 'A', 'Glaze firing is often higher.', 5],
+        ['Stoneware differs from earthenware because it is', ['fired at higher temperature and is non-porous', 'unfired', 'softer', 'always red'], 'A', 'It vitrifies.', 5],
     ],
 
     'SHS 1: Indigenous Ghanaian art and culture' => [
@@ -164,6 +172,7 @@ return [
         ['Vincent van Gogh is known for', ['"The Starry Night"', '"Mona Lisa"', '"The Last Supper"', '"Guernica"'], 'A', 'He was a Post-Impressionist.', 1],
         ['Dadaism was a movement that', ['rejected traditional art and embraced absurdity', 'copied nature exactly', 'painted only saints', 'used only sculpture'], 'A', 'It arose during World War I.', 3],
         ['Andy Warhol is famous for', ['Pop Art prints of soup cans and celebrities', 'Renaissance frescoes', 'Cubist guitars', 'Impressionist gardens'], 'A', 'He used screen printing.', 2],
+        ['Abstract Expressionism, associated with Jackson Pollock, emphasised', ['spontaneous gestures and large canvases', 'precise realism', 'religious icons', 'small miniatures'], 'A', 'Action painting.', 5],
     ],
 
     'SHS 2: Aesthetic theories and colour symbolism' => [

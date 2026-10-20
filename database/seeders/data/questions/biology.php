@@ -26,6 +26,12 @@ return [
         ['The jelly-like substance in which organelles are suspended is the', ['nucleus', 'cytoplasm', 'vacuole', 'cell sap'], 'B', 'Many reactions occur there.', 1],
         ['Cells that are similar in structure and function form a', ['system', 'organ', 'tissue', 'organism'], 'C', 'Tissues form organs.', 1],
         ['Red blood cells lack a nucleus so that they can', ['make proteins', 'divide quickly', 'fight infection', 'carry more haemoglobin'], 'D', 'More room for oxygen transport.', 2],
+        ['A plant cell placed in a hypertonic solution becomes', ['turgid', 'plasmolysed', 'lysed', 'unchanged'], 'B', 'Water leaves by osmosis.', 4],
+        ['Which organelle would be most abundant in muscle cells?', ['cell walls', 'chloroplasts', 'mitochondria', 'vacuoles'], 'C', 'Muscles need much energy.', 4],
+        ['Cells that secrete enzymes would have a well-developed', ['large vacuole', 'cell wall', 'chloroplast', 'rough endoplasmic reticulum and Golgi apparatus'], 'D', 'They make and package proteins.', 5],
+        ['The cell membrane is described by the', ['lock and key model', 'fluid mosaic model', 'Bohr model', 'sliding filament model'], 'B', 'Proteins float in a phospholipid bilayer.', 5],
+        ['A cell 50 μm long appears 25 mm long in a photograph. The magnification is', ['× 2', '× 50', '× 5,000', '× 500'], 'D', '25,000 μm ÷ 50 μm.', 5],
+        ['Cells lining the small intestine have microvilli to', ['move food', 'increase the surface area for absorption', 'produce bile', 'store fat'], 'B', 'Brush border.', 4],
     ],
 
     'Classification' => [
@@ -44,6 +50,11 @@ return [
         ['Spiders differ from insects because spiders have', ['wings', 'six legs', 'eight legs and two body parts', 'antennae'], 'C', 'Insects have six legs and three body parts.', 2],
         ['Which is a monocotyledon?', ['groundnut', 'beans', 'mango', 'maize'], 'D', 'It has one seed leaf and parallel veins.', 2],
         ['Animals that can live both on land and in water are', ['reptiles', 'amphibians', 'fishes', 'birds'], 'B', 'Frogs and toads are amphibians.', 1],
+        ['Which feature distinguishes monocots from dicots?', ['presence of roots', 'presence of flowers', 'parallel leaf venation', 'production of seeds'], 'C', 'Dicots have net venation.', 4],
+        ['Organisms with a notochord at some stage belong to the phylum', ['Annelida', 'Arthropoda', 'Mollusca', 'Chordata'], 'D', 'Vertebrates are chordates.', 4],
+        ['A segmented worm with chaetae belongs to the phylum', ['Nematoda', 'Annelida', 'Platyhelminthes', 'Arthropoda'], 'B', 'The earthworm is an example.', 4],
+        ['The five-kingdom system places mushrooms in Fungi because they', ['have no cells', 'photosynthesise', 'are heterotrophic with chitin cell walls', 'are prokaryotes'], 'C', 'Absorptive nutrition.', 5],
+        ['Arthropods are characterised by', ['radial symmetry', 'a backbone', 'segmented soft bodies only', 'jointed appendages and an exoskeleton'], 'D', 'Insects, spiders, crustaceans.', 4],
     ],
 
     'Nutrition' => [
@@ -65,6 +76,15 @@ return [
         ['Herbivores have a long gut because', ['they eat meat', 'plant material is hard to digest', 'they eat little', 'they have no teeth'], 'B', 'Cellulose takes time to break down.', 2],
         ['Animals that feed on both plants and animals are', ['carnivores', 'herbivores', 'omnivores', 'producers'], 'C', 'Humans are omnivores.', 1],
         ['The canine teeth of carnivores are used for', ['chewing cud', 'grinding', 'cutting grass', 'tearing flesh'], 'D', 'They are long and pointed.', 1],
+        ['In an experiment to show that light is necessary for photosynthesis, the plant is first destarched by', ['adding iodine', 'boiling it', 'keeping it in darkness for 48 hours', 'watering it'], 'C', 'Stored starch is used up.', 4],
+        ['Leaves are boiled in alcohol during a starch test in order to', ['soften the cuticle only', 'kill bacteria', 'add starch', 'remove chlorophyll'], 'D', 'Colour changes are then visible.', 4],
+        ['Which enzyme digests protein in the small intestine?', ['amylase', 'trypsin', 'pepsin', 'lipase'], 'B', 'Secreted by the pancreas.', 4],
+        ['The limiting factor of photosynthesis on a bright, cool day is most likely', ['water', 'light intensity', 'temperature', 'chlorophyll'], 'C', 'Enzymes work slowly in cold.', 5],
+        ['In a food test, a sample turns purple with biuret reagent. It contains', ['fat', 'starch', 'reducing sugar', 'protein'], 'D', 'Peptide bonds react.', 4],
+        ['The emulsion test for fats uses', ['iodine', 'ethanol then water, giving a milky emulsion', 'Benedict\'s solution', 'biuret'], 'B', 'Fat forms droplets.', 4],
+        ['The light-independent stage of photosynthesis takes place in the', ['cytoplasm', 'grana', 'stroma', 'mitochondria'], 'C', 'The Calvin cycle.', 5],
+        ['The rate of photosynthesis is measured by counting oxygen bubbles from pondweed. Moving the lamp closer increases the rate until', ['the plant dies always', 'another factor becomes limiting', 'water boils', 'bubbles stop instantly'], 'B', 'Limiting factors.', 5],
+        ['Symbiotic bacteria in the caecum of rabbits help to digest', ['fat', 'protein', 'cellulose', 'salt'], 'C', 'Rabbits also re-eat soft faeces.', 5],
     ],
 
     'Transport, respiration, excretion' => [
@@ -86,6 +106,15 @@ return [
         ['The products of aerobic respiration are', ['glucose and oxygen', 'carbon dioxide, water and energy', 'lactic acid only', 'ethanol and CO₂'], 'B', 'C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy.', 1],
         ['During vigorous exercise, muscles may respire anaerobically, producing', ['starch', 'ethanol', 'lactic acid', 'oxygen'], 'C', 'This causes muscle fatigue.', 2],
         ['The renal artery brings blood to the', ['heart', 'liver', 'lung', 'kidney'], 'D', 'The renal vein takes it away.', 1],
+        ['The respiratory quotient (RQ) for carbohydrate respiration is', ['2.0', '0.7', '0.9', '1.0'], 'D', 'CO₂ produced ÷ O₂ used.', 5],
+        ['Which part of the nephron reabsorbs most glucose?', ['loop of Henle', 'proximal convoluted tubule', 'collecting duct', 'Bowman\'s capsule'], 'B', 'All glucose is normally reabsorbed there.', 5],
+        ['ADH (antidiuretic hormone) increases', ['sweating', 'urine volume', 'water reabsorption in the kidneys', 'heart rate'], 'C', 'It makes urine concentrated.', 4],
+        ['A potometer measures the rate of', ['growth', 'photosynthesis', 'respiration', 'water uptake by a shoot'], 'D', 'It estimates transpiration.', 4],
+        ['The Bohr effect means haemoglobin', ['stops working', 'binds more oxygen in muscles', 'carries CO₂ only', 'releases oxygen more readily at higher CO₂ levels'], 'D', 'Helps oxygen delivery to active tissues.', 5],
+        ['Glycolysis takes place in the', ['mitochondrial matrix', 'cytoplasm', 'nucleus', 'chloroplast'], 'B', 'Glucose → pyruvate.', 5],
+        ['The Krebs cycle takes place in the', ['cristae only', 'cytoplasm', 'mitochondrial matrix', 'ribosomes'], 'C', 'Releases CO₂.', 5],
+        ['A potometer shows a bubble moving 30 mm in 5 minutes in a capillary of cross-section 1 mm². The rate of water uptake is', ['0.6 mm³/min', '30 mm³/min', '150 mm³/min', '6 mm³/min'], 'D', 'Volume 30 mm³ ÷ 5.', 5],
+        ['Fetal haemoglobin has a higher affinity for oxygen than adult haemoglobin so that', ['the mother gets more oxygen', 'the fetus can take oxygen from the mother\'s blood', 'it carries CO₂ only', 'it clots faster'], 'B', 'Oxygen moves across the placenta.', 5],
     ],
 
     'Coordination and reproduction' => [
@@ -104,6 +133,13 @@ return [
         ['The part of the eye that contains light-sensitive cells is the', ['cornea', 'retina', 'iris', 'lens'], 'B', 'Rods and cones are found there.', 1],
         ['The hormone that controls the menstrual cycle and secondary female characteristics is', ['insulin', 'testosterone', 'oestrogen', 'adrenaline'], 'C', 'It is made in the ovaries.', 1],
         ['The male gamete in flowering plants is found in the', ['ovary', 'ovule', 'stigma', 'pollen grain'], 'D', 'It travels down the pollen tube.', 2],
+        ['Auxin causes a shoot to bend towards light because it', ['is destroyed by light', 'accumulates on the shaded side and stimulates growth there', 'inhibits all growth', 'moves to the roots'], 'B', 'Unequal growth causes bending.', 5],
+        ['The hormone that triggers ovulation is', ['thyroxine', 'insulin', 'luteinising hormone (LH)', 'adrenaline'], 'C', 'It is released by the pituitary.', 5],
+        ['The part of the brain that regulates body temperature is the', ['cerebrum', 'cerebellum', 'medulla', 'hypothalamus'], 'D', 'It acts like a thermostat.', 4],
+        ['Accommodation for near vision involves', ['the retina moving', 'ciliary muscles relaxing', 'the pupil widening only', 'ciliary muscles contracting and the lens becoming thicker'], 'D', 'The lens becomes more convex.', 5],
+        ['The menstrual cycle is regulated by FSH, LH, oestrogen and', ['insulin', 'progesterone', 'thyroxine', 'adrenaline'], 'B', 'Feedback between pituitary and ovaries.', 4],
+        ['Short-sightedness is corrected with a', ['plane glass', 'converging lens', 'diverging (concave) lens', 'prism'], 'C', 'Images fall in front of the retina.', 4],
+        ['Removing the tip of a shoot causes side branches to grow because', ['roots grow faster', 'more auxin reaches the buds', 'gibberellin is destroyed', 'auxin inhibition of lateral buds is removed'], 'D', 'Apical dominance.', 5],
     ],
 
     'Genetics and evolution' => [
@@ -122,6 +158,15 @@ return [
         ['A cross between a homozygous tall plant (TT) and a short plant (tt) gives offspring that are', ['half tall, half short', 'all short', 'all tall (Tt)', '3 tall : 1 short'], 'C', 'T is dominant.', 2],
         ['Haemophilia is a sex-linked disorder carried on the', ['mitochondria', 'Y chromosome', 'chromosome 21', 'X chromosome'], 'D', 'It is more common in males.', 2],
         ['Down syndrome is caused by an extra copy of chromosome', ['1', '21', 'X', 'Y'], 'B', 'It is trisomy 21.', 2],
+        ['In a dihybrid cross of two heterozygotes (AaBb × AaBb), the expected phenotypic ratio is', ['3 : 1', '9 : 3 : 3 : 1', '1 : 2 : 1', '1 : 1 : 1 : 1'], 'B', 'Independent assortment.', 5],
+        ['A colour-blind man marries a woman who is not a carrier. The probability that their son is colour-blind is', ['1/4', '1/2', '0', '1'], 'C', 'Sons get their X from the mother.', 5],
+        ['Codominance is shown by the', ['albino trait', 'O blood group', 'tall pea plant', 'AB blood group'], 'D', 'Both alleles are expressed.', 4],
+        ['Lamarck\'s theory of evolution was based on', ['natural selection', 'inheritance of acquired characteristics', 'mutation', 'genetic drift'], 'B', 'It is no longer accepted.', 4],
+        ['In a population, 16% show a recessive trait (aa). The frequency of allele a is', ['0.6', '0.16', '0.4', '0.84'], 'C', 'q² = 0.16.', 5],
+        ['In a population where the recessive allele frequency q = 0.4, the frequency of heterozygotes (Aa) is', ['0.16', '0.36', '0.24', '0.48'], 'D', '2pq = 2 × 0.6 × 0.4.', 5],
+        ['Allopatric speciation occurs when populations are', ['living together', 'geographically isolated', 'interbreeding freely', 'identical'], 'B', 'Separated populations diverge.', 5],
+        ['In a cross Rr × rr, the probability that an offspring is homozygous recessive is', ['1/4', '1/2', '3/4', '0'], 'B', 'Rr, Rr, rr, rr.', 4],
+        ['A trait controlled by many genes, such as skin colour, shows', ['sex linkage', 'codominance only', 'polygenic inheritance', 'complete dominance'], 'C', 'Continuous variation.', 5],
     ],
 
     'Ecology' => [
@@ -140,6 +185,13 @@ return [
         ['Which factor is a biotic factor?', ['temperature', 'predators', 'rainfall', 'soil pH'], 'B', 'Biotic factors are living.', 1],
         ['The tapeworm in the human gut is an example of a', ['saprophyte', 'predator', 'parasite', 'symbiont'], 'C', 'It harms its host.', 1],
         ['Eutrophication of a lake is caused mainly by', ['cold weather', 'too many fish', 'clean water', 'excess fertiliser nutrients running into the water'], 'D', 'Algal blooms use up oxygen.', 2],
+        ['In a population, 20 snails are marked and released. Later, 30 are caught, of which 5 are marked. The estimated population is', ['600', '150', '120', '50'], 'C', 'Lincoln index: 20 × 30 / 5.', 5],
+        ['Only about 10% of energy passes to the next trophic level. If producers fix 10,000 kJ, energy reaching secondary consumers is about', ['9,000 kJ', '1,000 kJ', '10 kJ', '100 kJ'], 'D', '10,000 → 1,000 → 100.', 5],
+        ['Succession on bare rock begins with', ['trees', 'lichens', 'grasses', 'shrubs'], 'B', 'They are pioneer species.', 4],
+        ['Net primary productivity is', ['animal growth', 'total sunlight', 'gross primary productivity minus plant respiration', 'decomposer activity'], 'C', 'Energy available to consumers.', 5],
+        ['In a predator–prey cycle, predator numbers usually peak', ['never', 'before prey peak', 'at the same time always', 'after prey numbers peak'], 'D', 'Time lag.', 4],
+        ['A quadrat of 0.25 m² samples an average of 6 plants. The estimated density per m² is', ['6', '24', '1.5', '12'], 'B', '6 ÷ 0.25.', 4],
+        ['The carrying capacity of an environment is', ['the total biomass', 'the number of species', 'the maximum population it can support sustainably', 'the number of producers'], 'C', 'Population levels off.', 4],
     ],
 
     'SHS 1: Biology, scientific method and microscopes' => [
@@ -153,6 +205,8 @@ return [
         ['Which microscope can show the detailed structure of organelles such as ribosomes?', ['hand lens', 'electron microscope', 'light microscope', 'telescope'], 'B', 'It has much higher resolution.', 2],
         ['The objective lens of a microscope is the lens', ['nearest to the eye', 'nearest to the specimen', 'in the mirror', 'in the stage'], 'B', 'The eyepiece is near the eye.', 1],
         ['Staining a specimen helps to', ['magnify it', 'kill the microscope', 'make cell structures visible', 'warm it'], 'C', 'Iodine and methylene blue are stains.', 1],
+        ['A cell measures 40 mm in a drawing magnified × 400. Its actual size is', ['4 μm', '10 μm', '1,600 μm', '100 μm'], 'D', '40 mm ÷ 400 = 0.1 mm.', 5],
+        ['The resolving power of a light microscope is limited by', ['the size of the stage', 'the wavelength of light', 'the mirror', 'the colour of the slide'], 'B', 'About 0.2 μm.', 5],
     ],
 
     'SHS 1: Fish farming, processing and conservation' => [
@@ -166,6 +220,7 @@ return [
         ['Using light to attract fish at sea (light fishing) is banned because it', ['makes fish taste bad', 'is too cheap', 'catches juvenile fish and depletes stocks', 'is slow'], 'C', 'It is unsustainable.', 2],
         ['Overfishing leads to', ['bigger fish', 'more fish', 'cleaner water', 'depletion of fish stocks'], 'D', 'Fish cannot reproduce fast enough.', 1],
         ['Fish should be fed in a pond', ['as much as possible', 'regularly with the correct amount', 'never', 'only once a month'], 'B', 'Excess feed pollutes water.', 1],
+        ['Fish ponds are drained and limed between cycles mainly to', ['increase depth', 'add fish', 'grow weeds', 'kill parasites and correct acidity'], 'D', 'Improves the next crop.', 4],
     ],
 
     'SHS 1: Cells and their organelles' => [
@@ -179,6 +234,14 @@ return [
         ['Lysosomes contain', ['starch', 'chlorophyll', 'DNA', 'digestive enzymes'], 'D', 'They break down worn-out parts.', 2],
         ['The cell wall of plants is made mainly of', ['fat', 'protein', 'cellulose', 'starch'], 'C', 'It gives support.', 1],
         ['The large vacuole in a plant cell contains', ['blood', 'chlorophyll', 'DNA', 'cell sap'], 'D', 'It keeps the cell turgid.', 1],
+        ['Prokaryotic cells differ from eukaryotic cells because they lack', ['a cell membrane', 'ribosomes', 'a membrane-bound nucleus', 'DNA'], 'C', 'Bacteria are prokaryotes.', 4],
+        ['The endosymbiotic theory explains the origin of', ['vacuoles', 'the nucleus only', 'cell walls', 'mitochondria and chloroplasts'], 'D', 'They have their own DNA.', 5],
+        ['A cell actively secreting hormones would have many', ['chloroplasts', 'ribosomes and Golgi bodies', 'vacuoles', 'cell walls'], 'B', 'Protein synthesis and packaging.', 4],
+        ['The nucleolus is the site of', ['respiration', 'photosynthesis', 'ribosome synthesis', 'digestion'], 'C', 'rRNA is made there.', 5],
+        ['Plant cells placed in a hypertonic solution become', ['unchanged', 'turgid', 'burst', 'plasmolysed'], 'D', 'Water leaves by osmosis.', 4],
+        ['Red blood cells placed in distilled water will', ['become plasmolysed', 'shrink', 'swell and burst', 'stay the same'], 'C', 'Haemolysis; no cell wall.', 4],
+        ['Active transport differs from diffusion because it', ['needs no carrier', 'is passive', 'moves down a gradient only', 'requires energy from ATP'], 'D', 'Against the gradient.', 4],
+        ['The cell membrane is described as', ['fully permeable', 'partially permeable', 'impermeable', 'rigid'], 'B', 'Selective.', 4],
     ],
 
     'SHS 1: Organisms and their classification' => [
@@ -189,6 +252,9 @@ return [
         ['The scientific name Homo sapiens is an example of', ['common naming', 'binomial nomenclature', 'trinomial naming', 'classification by colour'], 'B', 'Genus then species, introduced by Linnaeus.', 1],
         ['Insects belong to the phylum', ['Annelida', 'Mollusca', 'Arthropoda', 'Chordata'], 'C', 'They have jointed legs.', 1],
         ['Fungi differ from plants because fungi', ['have roots', 'lack chlorophyll', 'make their own food', 'have flowers'], 'B', 'They feed on dead matter.', 1],
+        ['Which characteristic places a bat in the class Mammalia rather than Aves?', ['it flies', 'it has fur and suckles its young', 'it has wings', 'it lays eggs'], 'B', 'Flight is not a classification criterion here.', 4],
+        ['Euglena is difficult to classify because it', ['is a fungus', 'has no cells', 'has both plant-like and animal-like features', 'is a virus'], 'C', 'It photosynthesises and moves.', 4],
+        ['Bryophytes differ from pteridophytes because bryophytes', ['have flowers', 'have seeds', 'have true roots', 'lack vascular tissue'], 'D', 'Mosses vs ferns.', 4],
     ],
 
     'SHS 1: Ecology' => [
@@ -201,6 +267,7 @@ return [
         ['Organisms that break down dead matter are', ['predators', 'producers', 'herbivores', 'decomposers'], 'D', 'Bacteria and fungi are decomposers.', 1],
         ['A food web is', ['a single food chain', 'several interconnected food chains', 'a list of producers', 'a type of habitat'], 'B', 'It shows feeding relationships.', 1],
         ['Competition occurs when organisms', ['live in different places', 'help each other', 'need the same limited resources', 'never meet'], 'C', 'E.g. for food or light.', 1],
+        ['A pyramid of biomass may be inverted in', ['grasslands', 'forests', 'aquatic ecosystems with fast-reproducing phytoplankton', 'deserts'], 'C', 'Producers are eaten quickly.', 5],
     ],
 
     'SHS 1: Diseases and infections' => [
@@ -212,6 +279,9 @@ return [
         ['Typhoid fever is caused by a', ['worm', 'virus', 'protozoan', 'bacterium (Salmonella typhi)'], 'D', 'It spreads through contaminated food and water.', 2],
         ['Guinea worm disease is contracted by', ['mosquito bites', 'drinking water containing infected water fleas', 'touching animals', 'breathing dust'], 'B', 'Filtering drinking water prevents it.', 2],
         ['Measles is caused by a', ['fungus', 'bacterium', 'protozoan', 'virus'], 'D', 'It is prevented by vaccination.', 1],
+        ['Malaria parasites multiply in the human', ['kidneys', 'stomach', 'lungs', 'liver and red blood cells'], 'D', 'Plasmodium life cycle.', 4],
+        ['Viruses are considered non-living outside a host because they', ['have DNA', 'cannot reproduce on their own', 'are small', 'cause disease'], 'B', 'They need host cells.', 4],
+        ['The incubation period of a disease is', ['the recovery time', 'the time between infection and the appearance of symptoms', 'the time in hospital', 'the vaccination time'], 'B', 'Varies by disease.', 4],
     ],
 
     'SHS 1: Mammalian systems' => [
@@ -225,6 +295,12 @@ return [
         ['The largest artery in the body is the', ['vena cava', 'aorta', 'pulmonary artery', 'carotid artery'], 'B', 'It leaves the left ventricle.', 1],
         ['The function of the trachea is to', ['carry food to the stomach', 'carry air to the lungs', 'pump blood', 'filter urine'], 'B', 'Cartilage rings keep it open.', 1],
         ['Saliva contains the enzyme', ['lipase', 'pepsin', 'amylase', 'trypsin'], 'C', 'It digests starch.', 1],
+        ['The function of the hydrochloric acid in the stomach is to', ['absorb water', 'digest fat', 'kill bacteria and provide an acidic pH for pepsin', 'produce bile'], 'C', 'pH about 2.', 4],
+        ['Blood leaving the small intestine travels to the liver through the', ['aorta', 'hepatic artery', 'renal vein', 'hepatic portal vein'], 'D', 'It carries absorbed nutrients.', 5],
+        ['Peristalsis is', ['absorption', 'chewing', 'wave-like muscle contractions moving food along the gut', 'enzyme action'], 'C', 'Circular and longitudinal muscles.', 4],
+        ['Villi in the small intestine increase', ['mechanical digestion', 'acid secretion', 'surface area for absorption', 'bile production'], 'C', 'Finger-like projections.', 4],
+        ['The blood vessel with the highest pressure is the', ['capillary', 'vena cava', 'pulmonary vein', 'aorta'], 'D', 'Leaves the left ventricle.', 4],
+        ['Antidiuretic hormone (ADH) acts on the', ['liver', 'collecting duct of the kidney', 'pancreas', 'bladder'], 'B', 'Increases water reabsorption.', 5],
     ],
 
     'SHS 1: Plant systems' => [
@@ -237,6 +313,14 @@ return [
         ['Root hairs absorb water mainly by', ['diffusion of gas', 'osmosis', 'photosynthesis', 'transpiration'], 'B', 'They increase the surface area.', 1],
         ['The tissue that increases the girth of a stem is the', ['pith', 'epidermis', 'cambium', 'xylem only'], 'C', 'It causes secondary growth.', 2],
         ['Guard cells control the opening of', ['root hairs', 'xylem', 'phloem', 'stomata'], 'D', 'They regulate gas exchange.', 1],
+        ['Stomata usually close at night because', ['water is plentiful', 'there is no light for photosynthesis', 'temperature rises', 'CO₂ is high'], 'B', 'Reduces water loss.', 4],
+        ['Translocation in the phloem moves mainly', ['minerals only', 'water only', 'sucrose and amino acids', 'oxygen'], 'C', 'From source to sink.', 4],
+        ['Transpiration is highest when it is', ['dark and still', 'cold and humid', 'hot, dry, windy and bright', 'raining'], 'C', 'Steep water potential gradient.', 4],
+        ['Lenticels on woody stems allow', ['seed dispersal', 'water absorption', 'photosynthesis', 'gaseous exchange'], 'D', 'Pores in bark.', 4],
+        ['The products of the light stage of photosynthesis are', ['glucose only', 'ATP, NADPH and oxygen', 'carbon dioxide and water', 'starch'], 'B', 'Used in the dark stage.', 5],
+        ['Phloem transports mainly', ['mineral salts only', 'water only', 'sugars', 'oxygen'], 'C', 'Translocation.', 4],
+        ['Xylem vessels are dead and lignified, which allows them to', ['divide', 'make food', 'store starch', 'conduct water and give support'], 'D', 'Hollow tubes.', 4],
+        ['A plant grows towards light because of', ['gravity', 'auxin moving to the shaded side', 'water', 'ethylene'], 'B', 'Phototropism.', 5],
     ],
 
     'SHS 2: Mosses and ferns' => [
@@ -250,6 +334,7 @@ return [
         ['Mosses grow best in', ['hot sand', 'dry deserts', 'salty water', 'damp, shady places'], 'D', 'Water is needed for fertilisation.', 1],
         ['The structures that anchor a moss plant are', ['true roots', 'rhizoids', 'tubers', 'bulbs'], 'B', 'They do not absorb much water.', 2],
         ['The leaves of a fern are called', ['blades only', 'needles', 'fronds', 'petals'], 'C', 'Young fronds are coiled.', 1],
+        ['Ferns are more advanced than mosses because they have', ['rhizoids', 'spores', 'chlorophyll', 'vascular tissue'], 'D', 'Xylem and phloem.', 4],
     ],
 
     'SHS 2: Improving crops and animals' => [
@@ -263,17 +348,20 @@ return [
         ['Hybrid vigour (heterosis) means that offspring', ['look like one parent', 'are always sterile', 'perform better than either parent', 'are weaker'], 'C', 'It is seen in hybrid maize.', 3],
         ['Artificial insemination in cattle helps to', ['stop breeding', 'reduce milk', 'increase disease', 'spread genes of superior bulls'], 'D', 'One bull can sire many calves.', 2],
         ['Disease-resistant crop varieties help farmers to', ['increase disease', 'reduce losses and pesticide use', 'harvest less', 'avoid planting'], 'B', 'They are developed by breeding.', 1],
+        ['Polyploidy in crops such as wheat often results in', ['sterile animals', 'larger and more vigorous plants', 'smaller seeds', 'no growth'], 'B', 'Extra chromosome sets.', 5],
+        ['Tissue culture produces plants that are', ['always sterile', 'all different', 'genetically identical to the parent', 'hybrids'], 'C', 'Clones.', 4],
     ],
 
     'SHS 2: Cell theory and membrane transport' => [
         ['Which statement belongs to the cell theory?', ['only animals have cells', 'cells arise from non-living matter', 'all living things are made of cells', 'cells never divide'], 'C', 'It also states that the cell is the basic unit of life and that cells come from existing cells.', 1],
-        ['Active transport differs from diffusion because it', ['only happens in dead cells', 'needs no energy', 'only moves water', 'moves substances against a concentration gradient using energy (ATP)'], 'D', 'Root hair cells use active transport to take in mineral ions.', 2],
         ['A white blood cell engulfing a bacterium is an example of', ['exocytosis', 'endocytosis (phagocytosis)', 'osmosis', 'diffusion'], 'B', 'The membrane wraps around the particle and takes it into the cell.', 3],
         ['Releasing hormones or enzymes from a cell in vesicles that fuse with the membrane is', ['plasmolysis', 'endocytosis', 'exocytosis', 'osmosis'], 'C', 'Exocytosis moves materials out of the cell.', 3],
         ['The cell theory states that', ['viruses are cells', 'only plants have cells', 'cells arise from non-living matter', 'all living things are made of cells'], 'D', 'Cells come from pre-existing cells.', 1],
         ['The engulfing of solid particles by a cell is', ['pinocytosis', 'phagocytosis', 'osmosis', 'exocytosis'], 'B', 'White blood cells do this.', 2],
         ['A red blood cell placed in distilled water will', ['stay the same', 'shrink', 'swell and burst', 'divide'], 'C', 'Water enters by osmosis; there is no cell wall.', 2],
-        ['The cell membrane is described as', ['impermeable', 'fully permeable', 'partially (selectively) permeable', 'rigid'], 'C', 'It lets some substances through.', 1],
+        ['Root hair cells absorb mineral ions from dilute soil solution by', ['phagocytosis', 'osmosis', 'diffusion only', 'active transport'], 'D', 'Against the concentration gradient.', 4],
+        ['Increasing the surface area to volume ratio of a cell', ['slows diffusion', 'speeds up diffusion of materials', 'has no effect', 'stops osmosis'], 'B', 'Small cells exchange materials efficiently.', 4],
+        ['Facilitated diffusion differs from simple diffusion because it', ['only moves water', 'needs ATP', 'moves against gradients', 'uses carrier or channel proteins'], 'D', 'Still passive.', 5],
     ],
 
     'SHS 2: DNA and protein synthesis' => [
@@ -287,6 +375,9 @@ return [
         ['A sequence of three bases coding for an amino acid is a', ['chromosome', 'gene', 'codon', 'nucleotide'], 'C', 'tRNA carries a matching anticodon.', 2],
         ['RNA differs from DNA because RNA contains', ['no sugar', 'thymine instead of uracil', 'two strands', 'uracil instead of thymine'], 'D', 'RNA is usually single-stranded.', 2],
         ['Translation of mRNA takes place at the', ['nucleus', 'ribosome', 'mitochondrion', 'vacuole'], 'B', 'tRNA brings amino acids.', 2],
+        ['A DNA strand has the base sequence ATG CCA. The complementary mRNA is', ['ATG CCA', 'TAC GGT', 'UAC GGU', 'UAG GCU'], 'C', 'A–U, T–A, G–C, C–G.', 5],
+        ['If 30% of the bases in a DNA molecule are adenine, the percentage of guanine is', ['70%', '30%', '40%', '20%'], 'D', 'A = T = 30%; G + C = 40%.', 5],
+        ['The process by which DNA makes an exact copy of itself is', ['transcription', 'semi-conservative replication', 'translation', 'mutation'], 'B', 'Each new molecule keeps one old strand.', 4],
     ],
 
     'SHS 2: Insects and their economic importance' => [
@@ -296,10 +387,13 @@ return [
         ['In a honeybee colony, the sterile females that collect nectar and care for the young are the', ['queens', 'drones', 'workers', 'larvae'], 'C', 'Drones are males; the queen lays the eggs.', 2],
         ['Honeybees are economically important because they', ['spread malaria', 'destroy crops', 'pollinate crops and produce honey', 'eat wood'], 'C', 'Beekeeping is apiculture.', 1],
         ['The stage of a grasshopper\'s life cycle that resembles the adult but has no wings is the', ['imago', 'larva', 'pupa', 'nymph'], 'D', 'It undergoes incomplete metamorphosis.', 2],
-        ['Termites cause damage by', ['eating wood in buildings and crops', 'pollinating flowers', 'producing silk', 'eating aphids'], 'A', 'They digest cellulose.', 1],
-        ['The housefly spreads diseases such as cholera by', ['carrying germs on its legs and body to food', 'biting', 'stinging', 'sucking blood'], 'A', 'It is a mechanical vector.', 1],
+        ['Termites cause damage by', ['producing silk', 'pollinating flowers', 'eating wood in buildings and crops', 'eating aphids'], 'C', 'They digest cellulose.', 1],
+        ['The housefly spreads diseases such as cholera by', ['stinging', 'biting', 'carrying germs on its legs and body to food', 'sucking blood'], 'C', 'It is a mechanical vector.', 1],
         ['The silkworm is economically important because it', ['produces silk', 'pollinates crops', 'destroys wood', 'spreads disease'], 'A', 'Sericulture.', 1],
         ['Locusts are harmful because they', ['destroy crops in swarms', 'pollinate flowers', 'make honey', 'eat pests'], 'A', 'Swarms can strip fields.', 1],
+        ['Complete metamorphosis involves the stages', ['egg, larva, pupa, adult', 'egg, nymph, adult', 'larva, adult', 'egg, adult'], 'A', 'E.g. butterflies.', 4],
+        ['Insects breathe through', ['spiracles and tracheae', 'lungs', 'gills', 'skin only'], 'A', 'Air enters directly.', 4],
+        ['The weevil damages stored grain mainly at the', ['larval stage feeding inside the grain', 'adult flying stage only', 'egg stage', 'pupal stage only'], 'A', 'Larvae bore into grain.', 4],
     ],
 
     'SHS 2: Habitats and adaptations' => [
@@ -313,6 +407,11 @@ return [
         ['Fish breathe in water using', ['gills', 'lungs', 'skin only', 'spiracles'], 'A', 'Water flows over the gill filaments.', 1],
         ['Camels are adapted to deserts by', ['storing fat in humps and conserving water', 'having gills', 'living underground', 'having thin fur'], 'A', 'They can go days without water.', 1],
         ['Water lilies have air spaces in their leaves to', ['help them float', 'store food', 'trap insects', 'absorb salt'], 'A', 'It is an aquatic adaptation.', 2],
+        ['Xerophytes reduce water loss by having', ['sunken stomata and thick cuticles', 'large thin leaves', 'many stomata on top', 'no roots'], 'A', 'Desert plant adaptations.', 4],
+        ['Halophytes are plants adapted to', ['salty soils', 'deserts only', 'water only', 'shade'], 'A', 'E.g. mangroves.', 4],
+        ['Mangroves have pneumatophores to', ['obtain oxygen in waterlogged soil', 'store water', 'absorb salt', 'climb'], 'A', 'Breathing roots.', 4],
+        ['In a food chain, energy is lost at each level mainly as', ['heat from respiration', 'light', 'sound', 'urine only'], 'A', 'About 90% lost.', 4],
+        ['The relationship between a tick and a cow is', ['parasitism', 'mutualism', 'commensalism', 'competition'], 'A', 'Tick benefits, cow harmed.', 4],
     ],
 
     'SHS 2: Immunisation and vaccination' => [
@@ -324,6 +423,8 @@ return [
         ['Which disease was eradicated worldwide through vaccination?', ['smallpox', 'malaria', 'cholera', 'tuberculosis'], 'A', 'It was declared eradicated in 1980.', 2],
         ['Polio vaccine is given to children mainly as', ['oral drops', 'a tablet', 'a cream', 'an eye drop'], 'A', 'Oral polio vaccine (OPV).', 1],
         ['The Expanded Programme on Immunisation in Ghana protects children against diseases such as', ['measles, polio and tuberculosis', 'malaria only', 'diabetes', 'sickle cell'], 'A', 'Vaccines are given in infancy.', 2],
+        ['A booster dose of a vaccine is given to', ['raise antibody levels again', 'cure the disease', 'kill memory cells', 'cause disease'], 'A', 'Strengthens immunity.', 4],
+        ['An attenuated vaccine contains', ['weakened live pathogens', 'dead tissue only', 'antibodies', 'antibiotics'], 'A', 'E.g. oral polio.', 5],
     ],
 
     'SHS 3: Biotechnology in everyday life' => [
@@ -337,6 +438,7 @@ return [
         ['The antibiotic penicillin is produced by a', ['fungus (Penicillium)', 'virus', 'plant', 'animal'], 'A', 'Discovered by Alexander Fleming.', 1],
         ['Genetic engineering involves', ['transferring genes from one organism to another', 'cross-pollination only', 'grafting', 'composting'], 'A', 'It creates GMOs.', 2],
         ['Biogas digesters produce methane from', ['organic waste by bacteria', 'sunlight', 'water', 'rocks'], 'A', 'It is anaerobic digestion.', 2],
+        ['Restriction enzymes in genetic engineering are used to', ['cut DNA at specific base sequences', 'join DNA fragments', 'copy DNA', 'destroy cells'], 'A', 'Ligase joins the fragments.', 5],
     ],
 
     'SHS 3: Inheritance and blood groups' => [
@@ -350,6 +452,13 @@ return [
         ['A person with blood group AB can receive blood from', ['all ABO groups', 'group O only', 'group AB only', 'group A only'], 'A', 'AB is the universal recipient.', 2],
         ['A child of parents with blood groups AO and BO could have blood group', ['A, B, AB or O', 'A only', 'AB only', 'O only'], 'A', 'All four combinations are possible.', 3],
         ['A carrier of a recessive disorder', ['has one copy of the faulty allele but no symptoms', 'has two faulty alleles', 'shows severe symptoms', 'has no alleles'], 'A', 'E.g. sickle-cell trait (AS).', 2],
+        ['A woman who is a carrier of haemophilia marries a normal man. The probability that a son will be haemophiliac is', ['1/2', '1/4', '0', '1'], 'A', 'Sons receive one of her two X chromosomes.', 5],
+        ['Two parents with blood groups A and B have a child of group O. The parents\' genotypes must be', ['AO and BO', 'AA and BB', 'AO and BB', 'AB and OO'], 'A', 'Each passed an O allele.', 5],
+        ['A man of blood group AB marries a woman of group AB. The probability of a child with group A is', ['1/4', '1/2', '0', '3/4'], 'A', 'AA, AB, AB, BB.', 5],
+        ['A colour-blind man marries a carrier woman. The probability that a son is colour-blind is', ['1/2', '1/4', '0', '1'], 'A', 'Son receives X from mother.', 5],
+        ['A person of blood group O can receive blood from', ['group O only', 'any group', 'group AB', 'group A'], 'A', 'Has anti-A and anti-B.', 4],
+        ['The universal recipient blood group is', ['AB', 'O', 'A', 'B'], 'A', 'No antibodies.', 4],
+        ['A test cross is made between an organism of unknown genotype and a', ['homozygous recessive', 'homozygous dominant', 'heterozygous', 'hybrid'], 'A', 'Reveals genotype.', 5],
     ],
 
     'SHS 3: Variation and evolution' => [
@@ -363,6 +472,11 @@ return [
         ['Organs with the same basic structure but different functions, such as a human arm and a bat wing, are', ['homologous structures', 'analogous structures', 'vestigial organs', 'fossils'], 'A', 'They suggest common ancestry.', 3],
         ['Fossils provide evidence for', ['evolution', 'photosynthesis', 'respiration', 'digestion'], 'A', 'They show life forms of the past.', 1],
         ['Variation caused by the environment, such as a scar, is', ['acquired (environmental) variation', 'genetic variation', 'inherited', 'a mutation'], 'A', 'It is not passed on.', 2],
+        ['The development of antibiotic resistance in bacteria is an example of', ['natural selection', 'acquired characteristics', 'artificial selection', 'convergent evolution only'], 'A', 'Resistant bacteria survive and multiply.', 4],
+        ['Industrial melanism in the peppered moth shows', ['selection favouring dark forms in polluted areas', 'use and disuse', 'no selection', 'migration'], 'A', 'Dark moths were camouflaged on sooty trees.', 5],
+        ['Analogous structures, such as wings of birds and insects, indicate', ['convergent evolution', 'common ancestry', 'mutation only', 'artificial selection'], 'A', 'Same function, different origin.', 5],
+        ['Darwin\'s theory of evolution is based on', ['natural selection', 'use and disuse', 'special creation', 'spontaneous generation'], 'A', 'Survival of the fittest.', 4],
+        ['Lamarck proposed', ['inheritance of acquired characteristics', 'natural selection', 'mutation theory', 'genetic drift'], 'A', 'Use and disuse.', 4],
     ],
 
     'SHS 3: Cell division' => [
@@ -375,6 +489,8 @@ return [
         ['During anaphase of mitosis,', ['chromatids are pulled to opposite poles', 'the nuclear membrane forms', 'chromosomes condense', 'DNA replicates'], 'A', 'The spindle fibres shorten.', 2],
         ['Meiosis is important because it', ['halves the chromosome number for gametes', 'doubles chromosomes', 'repairs tissues', 'produces identical cells'], 'A', 'Fertilisation restores the diploid number.', 2],
         ['Meiosis produces how many daughter cells from one parent cell?', ['4', '2', '1', '8'], 'A', 'They are haploid.', 1],
+        ['A cell with 46 chromosomes undergoes meiosis. Each daughter cell has', ['23 chromosomes', '46 chromosomes', '92 chromosomes', '12 chromosomes'], 'A', 'Meiosis halves the number.', 3],
+        ['The stage of meiosis when homologous chromosomes pair and cross over is', ['prophase I', 'metaphase II', 'anaphase I', 'telophase II'], 'A', 'Chiasmata form.', 5],
     ],
 
     'SHS 3: Tilapia, frog, wall gecko and domestic fowl' => [
@@ -388,6 +504,8 @@ return [
         ['The part of the domestic fowl\'s gut that grinds food is the', ['gizzard', 'crop', 'cloaca', 'caecum'], 'A', 'It contains small stones.', 2],
         ['The fins of a fish are used for', ['balance and movement', 'breathing', 'eating', 'hearing'], 'A', 'The tail fin gives thrust.', 1],
         ['The domestic fowl lays eggs with hard shells made of', ['calcium carbonate', 'protein', 'fat', 'silica'], 'A', 'Layers need calcium in feed.', 2],
+        ['The frog can breathe through its skin because the skin is', ['moist and richly supplied with blood', 'dry and scaly', 'covered with feathers', 'thick'], 'A', 'Cutaneous respiration.', 4],
+        ['The swim bladder in bony fish helps to', ['control buoyancy', 'digest food', 'excrete waste', 'reproduce'], 'A', 'Gas volume is adjusted.', 4],
     ],
 
     'SHS 3: Health: BMI and emerging diseases' => [
@@ -401,6 +519,7 @@ return [
         ['A BMI above 30 is classified as', ['obese', 'underweight', 'normal', 'overweight only'], 'A', '25–29.9 is overweight.', 2],
         ['Lassa fever is spread mainly by', ['rats (multimammate mice)', 'mosquitoes', 'dogs', 'birds'], 'A', 'Through contaminated food or urine.', 2],
         ['A BMI below 18.5 is classified as', ['underweight', 'normal', 'overweight', 'obese'], 'A', 'It may indicate malnutrition.', 1],
+        ['A person 1.6 m tall weighing 64 kg has a BMI of', ['25', '40', '20', '30'], 'A', '64 ÷ 2.56.', 4],
     ],
 
     'SHS 3: Mammalian body systems' => [
@@ -413,6 +532,9 @@ return [
         ['A reflex action is', ['a rapid automatic response to a stimulus', 'a conscious decision', 'a learned skill', 'a hormone'], 'A', 'Example: pulling your hand from a hot object.', 1],
         ['The hormone that prepares the body for "fight or flight" is', ['adrenaline', 'insulin', 'oestrogen', 'thyroxine'], 'A', 'It increases heart rate.', 1],
         ['The pituitary gland is located at the', ['base of the brain', 'neck', 'kidney', 'pancreas'], 'A', 'It controls other glands.', 1],
+        ['Negative feedback in blood glucose control means that', ['a rise in glucose triggers responses that lower it', 'glucose keeps rising', 'insulin is never released', 'glucagon raises it further'], 'A', 'It maintains homeostasis.', 5],
+        ['The loop of Henle is longest in mammals that live in', ['deserts', 'water', 'cold regions', 'forests'], 'A', 'It allows very concentrated urine.', 5],
+        ['The hormone calcitonin lowers blood', ['calcium levels', 'glucose', 'water', 'sodium'], 'A', 'From the thyroid.', 5],
     ],
 
     'SHS 3: Reproduction in flowering plants' => [
@@ -425,5 +547,8 @@ return [
         ['Seeds of the Tridax plant are dispersed mainly by', ['wind', 'water', 'explosion', 'animals eating fruit'], 'A', 'They have a hairy pappus.', 2],
         ['Germination requires water, oxygen and', ['a suitable temperature', 'light always', 'soil always', 'fertiliser'], 'A', 'Most seeds do not need light to germinate.', 2],
         ['Cross-pollination is the transfer of pollen', ['between flowers of different plants of the same species', 'within the same flower', 'to the soil', 'to leaves'], 'A', 'It increases variation.', 2],
+        ['Double fertilisation in flowering plants produces', ['a zygote and a triploid endosperm', 'two zygotes', 'two seeds', 'a fruit and a leaf'], 'A', 'One male nucleus fuses with the polar nuclei.', 5],
+        ['Which part of the ovule becomes the seed coat (testa)?', ['integuments', 'nucellus', 'micropyle', 'embryo sac'], 'A', 'The integuments harden.', 5],
+        ['Self-pollination is prevented in some flowers by', ['stamens and stigmas maturing at different times', 'having petals', 'producing nectar', 'having sepals'], 'A', 'Protandry or protogyny.', 5],
     ],
 ];

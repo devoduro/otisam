@@ -24,6 +24,7 @@ return [
         ['A green safety sign indicates', ['a mandatory action', 'a prohibition', 'a warning', 'a safe condition such as a first-aid point or exit'], 'D', 'Emergency exits are green.', 2],
         ['Dust masks are worn when', ['drinking water', 'sanding wood or working in dusty conditions', 'reading', 'resting'], 'B', 'Dust harms the lungs.', 1],
         ['Workshop floors should be kept', ['cluttered', 'oily', 'clean and free of obstacles', 'wet'], 'C', 'This prevents slips and trips.', 1],
+        ['The best extinguisher for an electrical fire is', ['foam', 'water', 'carbon dioxide', 'sand mixed with water'], 'C', 'Non-conducting.', 4],
     ],
 
     'Electrical and electronics' => [
@@ -48,6 +49,12 @@ return [
         ['A soldering iron is used to', ['cut wires', 'join electronic components with solder', 'measure voltage', 'drill holes'], 'B', 'It heats solder until it melts.', 1],
         ['The first colour band on a resistor represents the', ['multiplier', 'tolerance', 'first digit of its value', 'power rating'], 'C', 'The third band is the multiplier.', 2],
         ['In a parallel circuit, if one bulb blows the others', ['explode', 'go off', 'get brighter always', 'stay lit'], 'D', 'Each has its own path.', 1],
+        ['A resistor coded brown–black–orange–gold has a value of', ['10 Ω ± 5%', '1 kΩ ± 5%', '100 kΩ ± 10%', '10 kΩ ± 5%'], 'D', '1, 0, × 1,000; gold = 5%.', 5],
+        ['Two 100 μF capacitors in series give', ['200 μF', '50 μF', '100 μF', '10 μF'], 'B', 'Series capacitance halves for equal values.', 4],
+        ['The colour code brown, black, red on a resistor means', ['10,000 Ω', '100 Ω', '10 Ω', '1000 Ω'], 'D', '1, 0, × 100.', 5],
+        ['A capacitor stores', ['magnetism', 'electric charge', 'heat', 'light'], 'B', 'Between plates.', 4],
+        ['A light-dependent resistor\'s resistance', ['never changes', 'rises as light increases', 'falls as light increases', 'depends on heat only'], 'C', 'Light-dependent resistor.', 4],
+        ['An LED must be connected with a', ['transformer', 'parallel capacitor only', 'fuse only', 'series resistor to limit current'], 'D', 'Prevents damage.', 4],
     ],
 
     'Mechanical and automotive' => [
@@ -65,6 +72,11 @@ return [
         ['The alternator in a vehicle', ['stops the car', 'cools the engine', 'generates electricity while the engine runs', 'steers the wheels'], 'C', 'It charges the battery.', 2],
         ['A diesel engine ignites fuel by', ['using electricity only', 'using a spark plug', 'using an open flame', 'compressing air until it is hot enough'], 'D', 'It is compression ignition.', 2],
         ['The air filter in an engine', ['cools the engine', 'stops dust from entering the engine', 'stores fuel', 'produces sparks'], 'B', 'A clogged filter reduces power.', 1],
+        ['An engine with a bore of 80 mm and stroke of 100 mm has a swept volume per cylinder of about', ['250 cm³', '800 cm³', '503 cm³', '1,005 cm³'], 'C', 'π/4 × 8² × 10.', 5],
+        ['A compression ratio of 10 : 1 means', ['fuel is ten times air', 'ten cylinders', 'ten strokes', 'total volume is ten times the clearance volume'], 'D', '(Vs + Vc)/Vc.', 5],
+        ['Gear ratio of a gearbox with input 30 teeth driving output 90 teeth is', ['1 : 3 increase', '3 : 1 reduction', '1 : 1', '9 : 3 increase'], 'B', 'Output turns three times slower.', 4],
+        ['In a four-stroke engine, the correct order is', ['compression, intake, exhaust, power', 'intake, compression, power, exhaust', 'power, intake, exhaust, compression', 'exhaust, power, intake, compression'], 'B', 'Otto cycle.', 4],
+        ['The radiator in a car is part of the', ['fuel system', 'braking system', 'cooling system', 'steering system'], 'C', 'Removes engine heat.', 4],
     ],
 
     'Metal work' => [
@@ -86,6 +98,11 @@ return [
         ['An anvil is used for', ['painting', 'cutting threads', 'measuring', 'supporting metal while it is hammered'], 'D', 'Used in forging.', 1],
         ['Tin snips are used to cut', ['thick bars', 'thin sheet metal', 'wood', 'plastic pipes only'], 'B', 'They work like scissors.', 1],
         ['A die is used to cut', ['holes', 'internal threads', 'external threads on a rod', 'sheets'], 'C', 'A tap cuts internal threads.', 2],
+        ['The tapping drill size for an M10 × 1.5 thread is about', ['11.5 mm', '10 mm', '8.5 mm', '6 mm'], 'C', 'Diameter minus pitch.', 5],
+        ['Brass is easily machined because it', ['is brittle like glass', 'is very hard', 'is magnetic', 'is relatively soft and forms short chips'], 'D', 'A copper–zinc alloy.', 4],
+        ['Annealing a metal makes it', ['rust-proof', 'harder', 'magnetic', 'softer and less brittle'], 'D', 'Heat and slow cool.', 4],
+        ['Hardening steel involves heating and', ['slow cooling in the furnace', 'rapid quenching', 'painting', 'hammering cold'], 'B', 'Quench in water or oil.', 5],
+        ['Tempering follows hardening to', ['remove rust', 'increase brittleness', 'reduce brittleness', 'add carbon'], 'C', 'Toughness.', 5],
     ],
 
     'Wood and building work' => [
@@ -104,6 +121,11 @@ return [
         ['A mallet is used to', ['drive nails', 'strike chisels without damaging the handle', 'cut wood', 'measure angles'], 'B', 'It has a wooden head.', 1],
         ['Hardwoods come from', ['grasses', 'conifers', 'broad-leaved (deciduous) trees', 'palms only'], 'C', 'Mahogany and odum are hardwoods.', 2],
         ['A spirit level checks that a surface is', ['painted', 'smooth', 'strong', 'horizontal or vertical'], 'D', 'The bubble centres when level.', 1],
+        ['Timber shrinks most', ['longitudinally', 'tangentially (along the growth rings)', 'radially', 'not at all'], 'B', 'This causes cupping.', 5],
+        ['Quarter-sawn timber is preferred for flooring because it', ['is lighter', 'is cheaper', 'is more stable and wears evenly', 'has more knots'], 'C', 'Less shrinkage and warping.', 5],
+        ['A mortise and tenon joint is used mainly in', ['frame construction', 'sheet metal', 'plumbing', 'electrical wiring'], 'A', 'Strong frame joint.', 4],
+        ['A tenon saw is used for', ['fine straight cuts in joints', 'cutting curves', 'cutting metal', 'ripping long boards'], 'A', 'Back saw.', 4],
+        ['Wood glue such as PVA works best when the joint is', ['clamped until set', 'heated', 'wet', 'painted first'], 'A', 'Pressure ensures bond.', 4],
     ],
 
     'Drawing and measurement' => [
@@ -130,6 +152,8 @@ return [
         ['ABS in a car helps to', ['increase speed', 'prevent the wheels locking during hard braking', 'save fuel', 'cool the brakes'], 'B', 'The driver can still steer.', 2],
         ['The gearbox in a vehicle allows', ['steering', 'cooling the engine', 'changing the speed and torque delivered to the wheels', 'charging the battery'], 'C', 'Low gears give more torque.', 1],
         ['Disc brakes stop the wheel by', ['using the clutch', 'shoes expanding in a drum', 'turning off the engine', 'pads squeezing a rotating disc'], 'D', 'Friction converts energy to heat.', 2],
+        ['Overall gear ratio with gearbox 3 : 1 and differential 4 : 1 is', ['1 : 12', '7 : 1', '0.75 : 1', '12 : 1'], 'D', 'Multiply ratios.', 5],
+        ['Brake fade occurs when', ['brakes are new', 'brakes overheat and lose effectiveness', 'tyres are inflated', 'the clutch slips'], 'B', 'Friction falls at high temperature.', 4],
     ],
 
     'SHS 1: Manufactured boards' => [
@@ -173,12 +197,12 @@ return [
         ['Reheating hardened steel to a lower temperature to reduce brittleness is', ['quenching', 'tempering', 'casting', 'forging'], 'B', 'Tempering trades a little hardness for toughness.', 2],
         ['In sand casting, the shape used to make the cavity in the sand is the', ['ladle', 'riser', 'pattern', 'crucible'], 'C', 'The pattern is removed, leaving a hollow the shape of the part.', 2],
         ['In a sand mould, the riser', ['cools the metal', 'holds the pattern', 'is where the sand is mixed', 'supplies extra molten metal as the casting cools and shrinks'], 'D', 'Without a riser, shrinkage cavities can form.', 3],
-        ['Annealing a metal makes it', ['magnetic', 'harder', 'softer and less brittle', 'rusty'], 'C', 'It is heated and cooled slowly.', 2],
         ['Quenching hot steel in water makes it', ['non-metallic', 'softer', 'longer', 'harder but more brittle'], 'D', 'Rapid cooling hardens it.', 2],
         ['Tempering after hardening', ['makes steel fully soft', 'reduces brittleness while keeping some hardness', 'melts the steel', 'adds carbon'], 'B', 'It is done at lower temperatures.', 2],
         ['Sand moulds are made using a box called a', ['ladle', 'crucible', 'flask (moulding box)', 'kiln'], 'C', 'It has a cope and drag.', 3],
         ['Case hardening produces', ['a melted surface', 'a soft surface', 'a brittle core', 'a hard surface with a tough core'], 'D', 'Used for gears.', 3],
         ['Molten metal enters a sand mould through the', ['vent only', 'runner and sprue', 'pattern', 'core box'], 'B', 'Risers feed shrinkage.', 3],
+        ['Normalising steel involves heating it and', ['cooling in the furnace', 'quenching in water', 'cooling it in still air', 'cooling in oil'], 'C', 'It refines grain structure.', 5],
     ],
 
     'SHS 2: Steering, suspension and wheels' => [
@@ -191,6 +215,7 @@ return [
         ['Under-inflated tyres cause', ['lower fuel use', 'better grip always', 'higher fuel use and faster tyre wear', 'smoother steering'], 'C', 'Check pressure regularly.', 1],
         ['Power steering makes steering', ['slower', 'heavier', 'impossible', 'easier using hydraulic or electric assistance'], 'D', 'It reduces driver effort.', 1],
         ['Coil springs in suspension', ['stop the car', 'steer the car', 'absorb road shocks', 'power the car'], 'C', 'Dampers control bounce.', 1],
+        ['Ackermann steering geometry ensures that', ['wheels do not turn', 'both wheels turn equally', 'rear wheels steer', 'the inner wheel turns at a greater angle than the outer'], 'D', 'Reduces tyre scrub.', 5],
     ],
 
     'SHS 2: Metal forming processes' => [
@@ -202,6 +227,7 @@ return [
         ['Extrusion pushes metal through a die to make', ['powders', 'flat sheets', 'spheres', 'long shapes with a constant cross-section'], 'D', 'Aluminium window frames are extruded.', 2],
         ['Pressing sheet metal into shape with a die is', ['turning', 'casting', 'welding', 'stamping'], 'D', 'Car body panels are stamped.', 2],
         ['Forging improves metal strength by', ['adding paint', 'refining the grain structure', 'melting it completely', 'cooling it slowly only'], 'B', 'The grain follows the shape.', 2],
+        ['Cold working of metals increases', ['ductility only', 'hardness and strength but reduces ductility', 'softness', 'grain size'], 'B', 'Work hardening.', 5],
     ],
 
     'SHS 2: Woodwork tools and machines' => [
@@ -210,7 +236,7 @@ return [
         ['A firmer chisel is mainly used for', ['cutting metal', 'general paring and cutting joints', 'measuring', 'drilling holes'], 'B', 'Mortise chisels are thicker, for chopping deep mortises.', 2],
         ['Before using a woodwork machine, a learner must first', ['wear loose clothing', 'remove the guards', 'check that guards are in place and get permission', 'switch on without checking'], 'C', 'Guards and supervision prevent serious injuries.', 1],
         ['The jack plane is used for', ['drilling holes', 'cutting curves', 'smoothing and levelling wood surfaces', 'driving nails'], 'C', 'It is a general-purpose plane.', 1],
-        ['A coping saw is used for', ['cutting curves in thin wood', 'cutting large planks', 'cutting metal', 'cutting along the grain only'], 'A', 'It has a thin blade in a frame.', 1],
+        ['A coping saw is used for', ['cutting metal', 'cutting large planks', 'cutting curves in thin wood', 'cutting along the grain only'], 'C', 'It has a thin blade in a frame.', 1],
         ['The circular saw machine is used for', ['ripping and cross-cutting timber', 'turning wood', 'sanding', 'drilling'], 'A', 'Keep the guard in place.', 1],
         ['A wood lathe is used for', ['turning cylindrical shapes such as table legs', 'cutting sheets', 'joining wood', 'planing boards'], 'A', 'The wood rotates against a chisel.', 2],
         ['A bench vice is used to', ['hold work securely', 'cut wood', 'drill holes', 'sand surfaces'], 'A', 'It frees both hands.', 1],
@@ -253,6 +279,8 @@ return [
         ['Electrical cables in walls are often run in', ['conduits', 'water pipes', 'gutters', 'curtain rails'], 'A', 'Conduits protect the cables.', 1],
         ['A two-way switching circuit allows a light to be controlled', ['from two different places', 'only from one place', 'automatically only', 'without a switch'], 'A', 'Used on staircases.', 2],
         ['The energy meter in a house measures', ['electricity consumed in kWh', 'voltage only', 'water usage', 'gas pressure'], 'A', 'Prepaid meters are common.', 1],
+        ['A 3 kW water heater on 230 V needs a cable rated for at least', ['13 A', '5 A', '30 A', '1 A'], 'A', 'I = 3,000/230 ≈ 13 A.', 5],
+        ['A residual current device typically trips at an earth leakage of', ['30 mA', '30 A', '3 A', '300 A'], 'A', 'It protects against shock.', 5],
     ],
 
     'SHS 2: Electronic components and digital electronics' => [
@@ -265,6 +293,7 @@ return [
         ['A relay is', ['an electrically operated switch', 'a light bulb', 'a battery', 'a resistor'], 'A', 'A small current controls a larger one.', 2],
         ['A transistor switch turns on when', ['enough current flows into its base', 'no current flows', 'it is heated', 'it is reversed'], 'A', 'It controls a larger collector current.', 2],
         ['A 555 timer IC is used to', ['produce timing pulses and delays', 'store data', 'amplify sound only', 'rectify AC'], 'A', 'Used in flashers.', 3],
+        ['A 555 timer in astable mode with R₁ = R₂ = 10 kΩ and C = 10 μF has a frequency of about', ['4.8 Hz', '48 Hz', '0.48 Hz', '480 Hz'], 'A', 'f = 1.44/((R₁ + 2R₂)C).', 5],
     ],
 
     'SHS 3: CNC, design for manufacture and 3D printing' => [
@@ -277,6 +306,7 @@ return [
         ['Support structures in 3D printing are needed for', ['overhanging parts of the model', 'flat bases', 'colour changes', 'cooling'], 'A', 'They are removed after printing.', 2],
         ['Infill in 3D printing refers to', ['the internal structure of a printed part', 'the outer colour', 'the printer brand', 'the filament spool'], 'A', 'Higher infill gives stronger parts.', 2],
         ['G-code instructs a CNC machine', ['where and how to move the tool', 'what colour to paint', 'how to sell products', 'when to close'], 'A', 'G01 is a linear move.', 2],
+        ['Layer height in 3D printing mainly affects', ['surface finish and print time', 'colour', 'filament type', 'nozzle temperature only'], 'A', 'Thinner layers: smoother but slower.', 4],
     ],
 
     'SHS 3: Building services and finishes' => [
@@ -289,6 +319,7 @@ return [
         ['Emulsion paint is mainly used on', ['interior walls', 'metal gates', 'car bodies', 'boats'], 'A', 'It is water-based.', 1],
         ['Ceramic floor tiles are fixed with', ['tile adhesive or mortar', 'nails', 'paint', 'glue sticks'], 'A', 'Joints are grouted.', 1],
         ['Gloss paint is suitable for', ['doors and window frames', 'ceilings only', 'floors', 'walls of bathrooms only'], 'A', 'It is durable and shiny.', 2],
+        ['Paint coverage is 10 m² per litre. Two coats on a 45 m² wall need', ['9 litres', '4.5 litres', '90 litres', '18 litres'], 'A', '90 m² ÷ 10.', 4],
     ],
 
     'SHS 3: Electrical machines and appliances' => [

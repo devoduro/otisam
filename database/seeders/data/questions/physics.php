@@ -38,6 +38,26 @@ return [
         ['The velocity of a body falling freely from rest after 3 s (g = 10 m/s²) is', ['15 m/s', '30 m/s', '45 m/s', '3 m/s'], 'B', 'v = gt.', 1],
         ['Which instrument is most suitable for measuring the diameter of a thin wire?', ['vernier caliper', 'metre rule', 'micrometer screw gauge', 'measuring tape'], 'C', 'It reads to 0.01 mm.', 1],
         ['The slope of a distance–time graph gives the', ['force', 'acceleration', 'distance', 'speed'], 'D', 'Gradient = distance ÷ time.', 1],
+        ['A car decelerates uniformly from 25 m/s to rest over 50 m. Its deceleration is', ['2.5 m/s²', '12.5 m/s²', '0.5 m/s²', '6.25 m/s²'], 'D', 'v² = u² − 2as: 0 = 625 − 100a.', 4],
+        ['A ball thrown vertically upward returns to the thrower after 4 s (g = 10 m/s²). Its initial speed was', ['40 m/s', '20 m/s', '10 m/s', '80 m/s'], 'B', 'Time to top is 2 s; u = gt.', 4],
+        ['A body moves with initial velocity 5 m/s and acceleration 2 m/s². The distance covered in the 4th second is', ['13 m', '36 m', '12 m', '21 m'], 'C', 's₄ − s₃ = 36 − 24.', 5],
+        ['The dimension of acceleration is', ['L²T⁻²', 'LT⁻¹', 'MLT⁻²', 'LT⁻²'], 'D', 'Velocity per unit time.', 3],
+        ['A stone is projected horizontally at 15 m/s from a cliff 45 m high (g = 10 m/s²). Its horizontal range is', ['30 m', '45 m', '90 m', '15 m'], 'B', 't = 3 s; x = 15 × 3.', 4],
+        ['A body travels the first half of a journey at 20 m/s and the second half at 30 m/s. Its average speed is', ['10 m/s', '25 m/s', '50 m/s', '24 m/s'], 'D', '2v₁v₂/(v₁ + v₂).', 5],
+        ['A velocity–time graph rises from 0 to 20 m/s in 4 s, stays constant for 6 s, then falls to 0 in 2 s. The total distance is', ['240 m', '180 m', '120 m', '200 m'], 'B', '40 + 120 + 20.', 5],
+        ['Using a vernier caliper, main scale 2.3 cm and vernier 6th line coincides (0.01 cm per division). The reading is', ['2.6 cm', '2.30 cm', '2.36 cm', '2.06 cm'], 'C', '2.3 + 0.06.', 4],
+        ['A ball rolls off a table 1.25 m high with speed 2 m/s (g = 10 m/s²). It lands at a horizontal distance of', ['2.5 m', '2 m', '0.5 m', '1 m'], 'D', 't = 0.5 s.', 5],
+        ['The relative velocity of car A (30 m/s east) with respect to car B (20 m/s west) is', ['10 m/s east', '50 m/s east', '50 m/s west', '10 m/s west'], 'B', '30 − (−20).', 5],
+        ['A car accelerates uniformly from rest to 20 m/s in 5 s. The distance travelled is', ['100 m', '50 m', '4 m', '25 m'], 'B', '½ × 20 × 5.', 4],
+        ['A stone dropped from rest falls for 3 s (g = 10 m/s²). Its final velocity is', ['15 m/s', '45 m/s', '30 m/s', '3.3 m/s'], 'C', 'v = gt.', 4],
+        ['The dimension of momentum is', ['MT⁻¹', 'MLT⁻²', 'ML²T⁻²', 'MLT⁻¹'], 'D', 'kg m s⁻¹.', 5],
+        ['The resultant of forces 3 N and 4 N acting at right angles is', ['7 N', '5 N', '1 N', '12 N'], 'B', 'Pythagoras.', 4],
+        ['A body moves in a circle of radius 2 m at 4 m/s. Its centripetal acceleration is', ['16 m/s²', '2 m/s²', '8 m/s²', '32 m/s²'], 'C', 'a = v²/r.', 5],
+        ['A car travelling at 72 km/h has a speed of', ['200 m/s', '72 m/s', '7.2 m/s', '20 m/s'], 'D', '72 × 1000 ÷ 3600.', 4],
+        ['A body decelerates uniformly from 30 m/s to rest in 6 s. The deceleration is', ['180 m/s²', '5 m/s²', '0.2 m/s²', '36 m/s²'], 'B', '30 ÷ 6.', 4],
+        ['The area under a velocity–time graph gives', ['momentum', 'acceleration', 'force', 'displacement'], 'D', 'Velocity × time.', 4],
+        ['A stone is thrown horizontally at 10 m/s from a cliff 45 m high. It lands from the base at (g = 10 m/s²)', ['45 m', '30 m', '10 m', '90 m'], 'B', 't = 3 s; 10 × 3.', 5],
+        ['The slope of a displacement–time graph gives', ['distance', 'acceleration', 'velocity', 'force'], 'C', 'Rate of change of displacement.', 4],
     ],
 
     'Forces, work, energy, machines' => [
@@ -65,6 +85,28 @@ return [
         ['A pulley system with 4 supporting strands has a velocity ratio of', ['8', '2', '4', '1'], 'C', 'VR = number of supporting strands.', 2],
         ['The coefficient of static friction is the ratio of', ['velocity to time', 'weight to mass', 'force to area', 'limiting friction to normal reaction'], 'D', 'μ = F/R.', 2],
         ['A body of mass 5 kg falls from a height of 20 m. Its kinetic energy just before hitting the ground is (g = 10 m/s²)', ['100 J', '1,000 J', '500 J', '2,000 J'], 'B', 'KE gained = PE lost = mgh.', 2],
+        ['A 5 kg block on a horizontal surface needs 20 N to move it at constant speed (g = 10 m/s²). The coefficient of friction is', ['4', '0.25', '0.4', '2.5'], 'C', 'μ = F/R = 20/50.', 4],
+        ['A force of 30 N acts at 60° to the horizontal and moves a load 10 m horizontally. The work done is', ['30 J', '300 J', '260 J', '150 J'], 'D', 'W = Fd cos 60°.', 4],
+        ['A 2 kg ball moving at 6 m/s collides head-on with a stationary 4 kg ball. If they stick together, the kinetic energy lost is', ['36 J', '24 J', '12 J', '0 J'], 'B', 'v = 2 m/s; KE before 36 J, after 12 J.', 5],
+        ['A screw jack has a pitch of 0.5 cm and a handle of radius 35 cm. Its velocity ratio is (π = 22/7)', ['220', '70', '440', '110'], 'C', 'VR = 2πr/pitch = 220/0.5.', 5],
+        ['A rocket ejects 50 kg of gas per second at 2,000 m/s. The thrust is', ['1,000 N', '40 N', '2,050 N', '100,000 N'], 'D', 'F = (m/t)v.', 4],
+        ['A uniform plank 4 m long weighing 200 N rests on a pivot 1 m from one end. What load at that end balances it?', ['400 N', '200 N', '100 N', '600 N'], 'B', 'Weight acts 1 m from the pivot: 200 × 1 = W × 1.', 5],
+        ['A gun of mass 4 kg fires a 20 g bullet at 400 m/s. The recoil velocity of the gun is', ['8 m/s', '20 m/s', '0.2 m/s', '2 m/s'], 'D', '0.02 × 400 / 4.', 5],
+        ['A lever has a load of 600 N at 0.2 m from the fulcrum. The effort needed at 1.2 m is', ['3,600 N', '100 N', '600 N', '144 N'], 'B', '600 × 0.2 = E × 1.2.', 4],
+        ['A pulley system of VR 5 and efficiency 60% has a mechanical advantage of', ['5', '8.3', '3', '0.12'], 'C', '0.6 × 5.', 4],
+        ['A 1,200 kg car climbs a 20 m hill at constant speed in 40 s (g = 10 m/s²). The minimum power is', ['60 kW', '24 kW', '600 W', '6 kW'], 'D', 'mgh/t = 240,000/40.', 5],
+        ['A spring of constant 400 N/m is compressed 0.1 m. The energy stored is', ['4 J', '40 J', '2 J', '20 J'], 'C', 'E = ½kx² = ½ × 400 × 0.01.', 4],
+        ['A 0.2 kg ball hits a wall at 10 m/s and rebounds at 8 m/s. The change in momentum is', ['1.6 kg m/s', '0.4 kg m/s', '2 kg m/s', '3.6 kg m/s'], 'D', '0.2 × (10 + 8).', 5],
+        ['A force of 6 N acts on a 2 kg body for 3 s from rest. The kinetic energy gained is', ['18 J', '81 J', '9 J', '54 J'], 'B', 'v = 9 m/s; ½ × 2 × 81.', 5],
+        ['A machine with velocity ratio 5 and efficiency 80% has mechanical advantage', ['0.8', '5', '6.25', '4'], 'D', 'MA = 0.8 × 5.', 5],
+        ['A pump lifts 100 kg of water through 10 m in 20 s (g = 10 m/s²). Its power is', ['1000 W', '500 W', '200 W', '50 W'], 'B', '10,000 J ÷ 20 s.', 5],
+        ['A spring extends by 4 cm under a load of 8 N. Its spring constant is', ['32 N/m', '2 N/m', '200 N/m', '0.5 N/m'], 'C', '8 ÷ 0.04.', 5],
+        ['A uniform metre rule is balanced at the 50 cm mark. A 2 N weight at 20 cm is balanced by a weight at 80 cm of', ['3 N', '4 N', '1 N', '2 N'], 'D', 'Equal distances.', 4],
+        ['A net force of 20 N acts on a 4 kg mass. The acceleration is', ['24 m/s²', '80 m/s²', '0.2 m/s²', '5 m/s²'], 'D', 'a = F/m.', 4],
+        ['The coefficient of friction is 0.4 for a 50 N block on a level floor. The limiting friction is', ['125 N', '20 N', '50 N', '12.5 N'], 'B', 'F = μR.', 5],
+        ['A pulley system lifts a 600 N load with an effort of 200 N. The mechanical advantage is', ['400', '0.33', '3', '800'], 'C', 'Load ÷ effort.', 4],
+        ['An inclined plane 5 m long raises a load 1 m. Its velocity ratio is', ['4', '1/5', '6', '5'], 'D', 'Length ÷ height.', 4],
+        ['A boy of mass 50 kg climbs 4 m in 10 s (g = 10 m/s²). His power is', ['2000 W', '200 W', '20 W', '500 W'], 'B', '2000 J ÷ 10 s.', 5],
     ],
 
     'Heat' => [
@@ -85,6 +127,22 @@ return [
         ['A 2 kW kettle heats 1 kg of water from 20 °C to 100 °C. Ignoring losses, the time taken is (c = 4,200 J/kg K)', ['42 s', '84 s', '336 s', '168 s'], 'D', 'Q = 1 × 4,200 × 80 = 336,000 J; t = Q/P.', 3],
         ['Land breezes blow at night from land to sea because', ['the land is warmer', 'the sea is warmer than the land at night', 'there is no air', 'the moon pulls the air'], 'B', 'Land cools faster than water.', 2],
         ['The boiling point of water decreases at high altitude because', ['the air is colder', 'gravity is stronger', 'atmospheric pressure is lower', 'water is denser'], 'C', 'Boiling occurs when vapour pressure equals atmospheric pressure.', 2],
+        ['A 0.5 kg copper block at 100 °C is dropped into 0.2 kg of water at 20 °C. Ignoring losses, the final temperature is about (c(Cu) = 400, c(water) = 4,200 J/kg K)', ['60 °C', '50 °C', '35 °C', '25 °C'], 'C', '200(100 − θ) = 840(θ − 20) → θ ≈ 35.4 °C.', 5],
+        ['The energy needed to convert 0.1 kg of water at 100 °C to steam (L = 2.26 × 10⁶ J/kg) is', ['4.2 × 10⁴ J', '2.26 × 10⁶ J', '2.26 × 10⁷ J', '2.26 × 10⁵ J'], 'D', 'Q = mL.', 4],
+        ['A gas at 27 °C and 100 kPa is heated at constant volume to 127 °C. Its new pressure is', ['470 kPa', '133 kPa', '200 kPa', '79 kPa'], 'B', 'P/T: 100 × 400/300.', 5],
+        ['The cubic expansivity of a solid is approximately', ['twice it', 'equal to it', 'three times its linear expansivity', 'one-third of it'], 'C', 'γ ≈ 3α.', 4],
+        ['An electric heater of 500 W warms 2 kg of oil by 25 K in 3 minutes. The specific heat capacity of oil is', ['900 J/kg K', '1,800 J/kg K', '3,600 J/kg K', '450 J/kg K'], 'B', '90,000 / (2 × 25).', 5],
+        ['A gas at 2 atm and 300 K is compressed to half its volume while its temperature rises to 450 K. Its new pressure is', ['4 atm', '3 atm', '6 atm', '1.5 atm'], 'C', 'P₂ = 2 × 2 × 1.5.', 5],
+        ['Equal masses of water at 80 °C and 20 °C are mixed. Ignoring losses, the final temperature is', ['40 °C', '60 °C', '50 °C', '100 °C'], 'C', 'Average.', 3],
+        ['A balloon of volume 2 L at 27 °C is heated to 177 °C at constant pressure. The new volume is', ['2.5 L', '13.1 L', '4 L', '3 L'], 'D', '2 × 450/300.', 5],
+        ['The heat needed to raise 2 kg of water by 10 °C (c = 4200 J/kg K) is', ['42,000 J', '84,000 J', '8,400 J', '840 J'], 'B', 'Q = mcΔθ.', 4],
+        ['The heat needed to melt 0.5 kg of ice at 0 °C (L = 336,000 J/kg) is', ['672,000 J', '336,000 J', '168,000 J', '16,800 J'], 'C', 'Q = mL.', 4],
+        ['A temperature of 300 K in Celsius is', ['300 °C', '573 °C', '−27 °C', '27 °C'], 'D', '300 − 273.', 4],
+        ['Heat transfer through a vacuum occurs only by', ['conduction', 'radiation', 'convection', 'evaporation'], 'B', 'No medium needed.', 4],
+        ['The specific latent heat of vaporisation of water is the heat needed to', ['melt 1 kg of ice', 'raise 1 kg by 1 K', 'change 1 kg of water at 100 °C to steam at 100 °C', 'boil water from 0 °C'], 'C', 'No temperature change.', 4],
+        ['A metal rod 2 m long expands by 0.4 mm when heated by 20 K. Its linear expansivity is', ['4 × 10⁻⁶ K⁻¹', '2 × 10⁻⁵ K⁻¹', '1 × 10⁻⁴ K⁻¹', '1 × 10⁻⁵ K⁻¹'], 'D', '0.0004 ÷ (2 × 20).', 5],
+        ['A gas at 2 atm occupies 3 litres. At constant temperature, at 6 atm it occupies', ['9 litres', '1 litre', '4 litres', '0.5 litre'], 'B', 'Boyle\'s law.', 4],
+        ['A bimetallic strip bends on heating because the metals have different', ['masses', 'colours', 'expansivities', 'densities only'], 'C', 'Unequal expansion.', 4],
     ],
 
     'Waves, light, sound' => [
@@ -108,6 +166,25 @@ return [
         ['The critical angle of glass of refractive index 1.5 is about', ['60°', '30°', '42°', '90°'], 'C', 'sin c = 1/n = 0.67.', 3],
         ['A ray of light passes through the optical centre of a lens', ['by total reflection', 'parallel to the axis', 'through the focus', 'without deviation'], 'D', 'It goes straight through.', 2],
         ['The image formed on the retina of the eye is', ['virtual and upright', 'real and inverted', 'virtual and inverted', 'real and upright'], 'B', 'The brain interprets it upright.', 2],
+        ['The fundamental frequency of a closed pipe of length 0.85 m (speed of sound 340 m/s) is', ['50 Hz', '200 Hz', '400 Hz', '100 Hz'], 'D', 'f = v/4L.', 5],
+        ['A string vibrating in its fundamental mode has length 0.5 m. The wavelength of the wave is', ['0.5 m', '1.0 m', '0.25 m', '2.0 m'], 'B', 'λ = 2L.', 4],
+        ['A real image twice the size of the object is formed by a concave mirror of focal length 10 cm. The object distance is', ['30 cm', '20 cm', '15 cm', '5 cm'], 'C', 'v = 2u; 1/u + 1/2u = 1/10.', 5],
+        ['Beats of frequency 4 Hz are heard when a 256 Hz fork is sounded with another fork. The other fork could be', ['64 Hz', '256 Hz', '1,024 Hz', '252 Hz or 260 Hz'], 'D', 'Beat frequency = difference.', 4],
+        ['Light passes from glass (n = 1.5) to water (n = 1.33). The critical angle is about', ['42°', '62°', '49°', '90°'], 'B', 'sin c = 1.33/1.5 ≈ 0.887.', 5],
+        ['A converging lens of focal length 20 cm forms a real image 60 cm from it. The object distance is', ['60 cm', '15 cm', '40 cm', '30 cm'], 'D', '1/u = 1/20 − 1/60.', 5],
+        ['Sound of frequency 512 Hz travels in air at 340 m/s. Its wavelength is about', ['1.5 m', '0.66 m', '174 m', '6.6 m'], 'B', 'λ = v/f.', 4],
+        ['The apparent depth of a pool 2 m deep (n of water = 4/3) is', ['2 m', '2.67 m', '1.5 m', '1 m'], 'C', 'Real ÷ n.', 4],
+        ['An object 15 cm from a concave mirror of focal length 10 cm forms an image at', ['6 cm', '30 cm', '25 cm', '15 cm'], 'B', '1/v = 1/10 − 1/15.', 5],
+        ['The frequency heard from an approaching ambulance siren is higher because of the', ['diffraction', 'refraction of sound', 'Doppler effect', 'resonance'], 'C', 'Waves are compressed.', 4],
+        ['A wave of frequency 50 Hz has wavelength 4 m. Its speed is', ['54 m/s', '12.5 m/s', '200 m/s', '0.08 m/s'], 'C', 'v = fλ.', 4],
+        ['An object is 30 cm from a converging lens of focal length 10 cm. The image distance is', ['7.5 cm', '20 cm', '30 cm', '15 cm'], 'D', '1/v = 1/10 − 1/30.', 5],
+        ['Light travels from air into glass of refractive index 1.5. Its speed in glass is', ['3 × 10⁸ m/s', '2 × 10⁸ m/s', '4.5 × 10⁸ m/s', '1.5 × 10⁸ m/s'], 'B', '3 × 10⁸ ÷ 1.5.', 5],
+        ['An echo is heard 2 s after a shout at a cliff. Speed of sound 340 m/s. The cliff is', ['170 m away', '680 m away', '340 m away', '1360 m away'], 'C', '340 × 2 ÷ 2.', 4],
+        ['The critical angle for glass of refractive index 1.5 satisfies sin c =', ['1/3', '3/2', '1/2', '2/3'], 'D', 'sin c = 1/n.', 5],
+        ['An object is placed 10 cm from a concave mirror of focal length 20 cm. The image is', ['at infinity', 'real and inverted', 'real and diminished', 'virtual and magnified'], 'D', 'Object inside F.', 5],
+        ['The magnification when image distance is 30 cm and object distance is 10 cm is', ['0.33', '3', '20', '40'], 'B', 'm = v ÷ u.', 4],
+        ['A string vibrating in its fundamental mode has length 0.5 m. The wavelength is', ['0.25 m', '0.5 m', '1.0 m', '2.0 m'], 'C', 'Here λ = 2L.', 5],
+        ['The power of a lens of focal length 25 cm is', ['−4 D', '+0.25 D', '+25 D', '+4 D'], 'D', '1 ÷ 0.25 m.', 5],
     ],
 
     'Electricity and magnetism' => [
@@ -131,6 +208,26 @@ return [
         ['The e.m.f. of a cell is 1.5 V and its internal resistance is 0.5 Ω. When connected to a 2.5 Ω resistor, the current is', ['3 A', '0.6 A', '0.5 A', '1.5 A'], 'C', 'I = E/(R + r) = 1.5/3.', 3],
         ['Soft iron is used for electromagnet cores because it', ['is heavy', 'keeps its magnetism permanently', 'is a poor conductor', 'magnetises and demagnetises easily'], 'D', 'Steel retains magnetism.', 2],
         ['The earth wire in a plug is connected to the', ['fuse', 'metal case of the appliance', 'switch', 'neutral terminal'], 'B', 'It prevents shocks if a fault occurs.', 1],
+        ['A cell of e.m.f. 3 V and internal resistance 1 Ω drives current through a 5 Ω resistor. The terminal p.d. is', ['0.5 V', '3 V', '2.5 V', '1.5 V'], 'C', 'I = 0.5 A; V = IR = 2.5 V.', 5],
+        ['A wire of resistance 8 Ω is stretched to twice its length (volume unchanged). Its new resistance is', ['4 Ω', '16 Ω', '8 Ω', '32 Ω'], 'D', 'R ∝ L²; ×4.', 5],
+        ['A 2 kW kettle is used for 30 minutes daily for 30 days. At GH¢1.20 per kWh, the cost is', ['GH¢72', 'GH¢36', 'GH¢18', 'GH¢60'], 'B', '1 kWh × 30 days = 30 kWh.', 4],
+        ['A transformer steps 240 V down to 12 V. If the primary has 1,000 turns, the secondary has', ['200 turns', '20,000 turns', '50 turns', '12 turns'], 'C', 'Ns = 1,000 × 12/240.', 4],
+        ['The magnetic flux density inside a long solenoid increases when', ['the iron core is removed', 'the solenoid gets longer at fixed total turns', 'the current reverses', 'the current or turns per metre increase'], 'D', 'B = μ₀nI.', 5],
+        ['Two cells of e.m.f. 1.5 V and internal resistance 0.5 Ω each are in series with a 2 Ω resistor. The current is', ['3 A', '0.5 A', '1.5 A', '1 A'], 'D', '3 V ÷ 3 Ω.', 5],
+        ['A galvanometer of resistance 50 Ω gives full-scale deflection at 1 mA. To convert it into a 10 V voltmeter, connect in series a resistor of', ['10,000 Ω', '9,950 Ω', '50 Ω', '0.005 Ω'], 'B', 'R = V/I − G.', 5],
+        ['A galvanometer of resistance 50 Ω and full-scale current 1 mA is converted into a 1 A ammeter. The shunt needed is about', ['5 Ω', '50 Ω', '0.05 Ω', '0.5 Ω'], 'C', 'S = IgG/(I − Ig).', 5],
+        ['A 9 V battery with internal resistance 1 Ω is short-circuited. The current is', ['4.5 A', '1 A', '0 A', '9 A'], 'D', 'I = E/r.', 4],
+        ['An electric iron of 1,000 W on 250 V draws a current of', ['0.25 A', '4 A', '250 A', '40 A'], 'B', 'I = P/V.', 3],
+        ['A 4 Ω and 12 Ω resistor in parallel are in series with a 2 Ω resistor. The total resistance is', ['3 Ω', '18 Ω', '5 Ω', '6 Ω'], 'C', '3 + 2.', 4],
+        ['Two 6 Ω resistors in parallel have an effective resistance of', ['12 Ω', '3 Ω', '6 Ω', '2 Ω'], 'B', 'Equal pair: R/2.', 4],
+        ['The power dissipated in a 4 Ω resistor carrying 3 A is', ['48 W', '12 W', '36 W', '7 W'], 'C', 'P = I²R.', 4],
+        ['A cell of e.m.f. 3 V and internal resistance 1 Ω is connected to a 5 Ω resistor. The current is', ['0.6 A', '0.5 A', '3 A', '0.75 A'], 'B', '3 ÷ 6.', 5],
+        ['A transformer has 100 primary and 500 secondary turns. With 240 V input the output is', ['240 V', '48 V', '1200 V', '600 V'], 'C', 'Vs = 240 × 5.', 5],
+        ['The cost of running a 2 kW heater for 3 hours at GH¢1.50 per kWh is', ['GH¢9.00', 'GH¢4.50', 'GH¢6.00', 'GH¢3.00'], 'A', '6 kWh × 1.50.', 5],
+        ['Three 2 Ω resistors in parallel have equivalent resistance', ['2/3 Ω', '6 Ω', '3/2 Ω', '1 Ω'], 'A', '1/R = 3/2.', 4],
+        ['The energy stored in a 10 μF capacitor charged to 100 V is', ['0.05 J', '0.1 J', '500 J', '1000 J'], 'A', 'E = ½CV².', 5],
+        ['A galvanometer is converted to an ammeter by connecting a', ['low resistance in parallel', 'high resistance in series', 'high resistance in parallel', 'capacitor in series'], 'A', 'A shunt resistor.', 5],
+        ['A galvanometer is converted to a voltmeter by connecting a', ['high resistance in series', 'low resistance in parallel', 'capacitor', 'diode'], 'A', 'Multiplier.', 5],
     ],
 
     'Modern physics' => [
@@ -147,6 +244,22 @@ return [
         ['The energy of a photon is given by', ['E = IVt', 'E = mc only', 'E = ½mv', 'E = hf'], 'D', 'h is Planck\'s constant.', 2],
         ['When ²³⁸₉₂U emits an alpha particle, the new nucleus has mass number', ['238', '234', '236', '230'], 'B', 'Alpha removes 4 nucleons.', 2],
         ['A Geiger–Müller tube is used to', ['store charge', 'produce X-rays', 'detect radiation', 'measure temperature'], 'C', 'It counts ionising events.', 1],
+        ['A sample has a half-life of 5 days. What fraction remains after 20 days?', ['1/4', '1/16', '1/8', '1/20'], 'B', 'Four half-lives.', 4],
+        ['The work function of a metal is 2.0 eV. Light of photon energy 3.5 eV falls on it. The maximum kinetic energy of the electrons is', ['2.0 eV', '5.5 eV', '1.5 eV', '3.5 eV'], 'C', 'KE = hf − φ.', 4],
+        ['²²⁶₈₈Ra decays by α emission. The daughter nucleus is', ['²³⁰₉₀Th', '²²⁶₈₉Ac', '²²²₈₈Ra', '²²²₈₆Rn'], 'D', 'Mass −4, atomic number −2.', 5],
+        ['A nucleus emits one alpha and two beta particles. Its atomic number', ['falls by 2', 'stays the same', 'rises by 2', 'falls by 4'], 'B', '−2 + 2 = 0.', 5],
+        ['The de Broglie wavelength of a particle increases when its', ['energy increases', 'speed increases', 'mass increases', 'momentum decreases'], 'D', 'λ = h/p.', 5],
+        ['A radioactive count falls from 640 to 40 counts/min in 20 minutes. The half-life is', ['10 minutes', '5 minutes', '4 minutes', '20 minutes'], 'B', '640 → 40 is four halvings.', 5],
+        ['The mass defect of a nucleus is 0.03 u. The binding energy is about (1 u = 931 MeV)', ['279 MeV', '0.03 MeV', '931 MeV', '27.9 MeV'], 'D', '0.03 × 931.', 5],
+        ['After 4 half-lives, the percentage of a radioactive sample remaining is', ['6.25%', '25%', '12.5%', '3.125%'], 'A', '(1/2)⁴ × 100.', 4],
+        ['A radioactive sample has a half-life of 5 days. The fraction remaining after 20 days is', ['1/16', '1/8', '1/4', '1/32'], 'A', 'Four half-lives.', 5],
+        ['Alpha particles are', ['helium nuclei', 'electrons', 'photons', 'neutrons'], 'A', '2 protons, 2 neutrons.', 4],
+        ['When ²³⁸U emits an alpha particle, its mass number becomes', ['234', '236', '238', '242'], 'A', 'Loses 4.', 4],
+        ['Gamma rays are deflected in a magnetic field', ['not at all', 'towards the north pole', 'more than alpha', 'like electrons'], 'A', 'They are uncharged.', 4],
+        ['The energy of a photon of frequency 5 × 10¹⁴ Hz is (h = 6.6 × 10⁻³⁴ J s)', ['3.3 × 10⁻¹⁹ J', '1.3 × 10⁻⁴⁸ J', '3.3 × 10⁻²⁰ J', '6.6 × 10⁻¹⁹ J'], 'A', 'Using E = hf.', 5],
+        ['Beta particles are', ['fast electrons from the nucleus', 'helium nuclei', 'protons', 'X-rays'], 'A', 'Neutron decays to proton.', 4],
+        ['After beta emission, the atomic number of a nucleus', ['increases by 1', 'decreases by 1', 'decreases by 2', 'stays the same'], 'A', 'n → p + e⁻.', 5],
+        ['The threshold frequency is the', ['minimum frequency to cause photoemission', 'maximum frequency of light', 'frequency of X-rays', 'speed of electrons'], 'A', 'Photoelectric effect.', 4],
     ],
 
     'SHS 1: Introduction to physics and matter' => [
@@ -161,6 +274,10 @@ return [
         ['The SI unit of length is the', ['foot', 'kilometre', 'centimetre', 'metre'], 'D', 'One of the seven base units.', 1],
         ['A block of volume 50 cm³ and density 8 g/cm³ has mass', ['6.25 g', '400 g', '58 g', '42 g'], 'B', 'm = ρV.', 1],
         ['The branch of physics that deals with heat is', ['acoustics', 'optics', 'thermodynamics', 'mechanics'], 'C', 'Optics deals with light.', 2],
+        ['A 50 cm³ measuring cylinder contains 30 cm³ of water. A stone raises the level to 42 cm³. If the stone\'s mass is 30 g, its density is', ['0.71 g/cm³', '0.4 g/cm³', '1.0 g/cm³', '2.5 g/cm³'], 'D', 'V = 12 cm³; 30/12.', 4],
+        ['The mass of air in a room 5 m × 4 m × 3 m (air density 1.3 kg/m³) is', ['60 kg', '78 kg', '46 kg', '780 kg'], 'B', '60 m³ × 1.3.', 4],
+        ['Equal masses of two liquids of densities 800 and 1,200 kg/m³ are mixed. The density of the mixture is', ['2,000 kg/m³', '1,000 kg/m³', '960 kg/m³', '400 kg/m³'], 'C', '2ρ₁ρ₂/(ρ₁ + ρ₂).', 5],
+        ['The density of a cube of side 2 cm and mass 64 g is', ['8 g/cm³', '16 g/cm³', '32 g/cm³', '4 g/cm³'], 'A', 'Volume 8 cm³.', 4],
     ],
 
     'SHS 1: Motion and pressure' => [
@@ -173,6 +290,12 @@ return [
         ['A body moving with constant velocity has an acceleration of', ['10 m/s²', 'zero', '1 m/s²', 'infinity'], 'B', 'Velocity does not change.', 1],
         ['A hydraulic press works because pressure in a liquid is', ['zero', 'lost', 'only downward', 'transmitted equally in all directions'], 'D', 'Pascal\'s principle.', 2],
         ['A box of weight 600 N rests on an area of 2 m². The pressure it exerts is', ['1,200 Pa', '300 Pa', '602 Pa', '0.003 Pa'], 'B', 'P = F/A.', 1],
+        ['A mercury barometer reads 76 cm. The atmospheric pressure is (ρ = 13,600 kg/m³, g = 10 m/s²)', ['1.0 × 10³ Pa', '7.6 × 10⁴ Pa', '1.36 × 10⁴ Pa', '1.03 × 10⁵ Pa'], 'D', 'ρgh = 13,600 × 10 × 0.76.', 5],
+        ['A diver at 20 m depth in sea water (ρ = 1,030 kg/m³) experiences a total pressure of about (atmospheric 1.0 × 10⁵ Pa, g = 10 m/s²)', ['2.06 × 10⁵ Pa', '3.06 × 10⁵ Pa', '1.0 × 10⁵ Pa', '4.0 × 10⁵ Pa'], 'B', '1.0 × 10⁵ + 2.06 × 10⁵.', 5],
+        ['In a hydraulic press, a 50 N force on a 0.01 m² piston lifts a load on a 0.5 m² piston of', ['100 N', '25 N', '2,500 N', '5,000 N'], 'C', 'F₂ = F₁ × A₂/A₁.', 4],
+        ['A car moving at 72 km/h brakes uniformly to rest in 5 s. The stopping distance is', ['25 m', '100 m', '50 m', '180 m'], 'C', 'u = 20 m/s; s = ½ × 20 × 5.', 5],
+        ['A train accelerates at 0.5 m/s² from rest. The time to reach 25 m/s is', ['100 s', '12.5 s', '25 s', '50 s'], 'D', 't = v/a.', 3],
+        ['A U-tube contains water and oil. A 10 cm column of oil balances 8 cm of water. The density of oil is (water 1,000 kg/m³)', ['1,250 kg/m³', '800 kg/m³', '1,000 kg/m³', '80 kg/m³'], 'B', 'ρ₁h₁ = ρ₂h₂.', 5],
     ],
 
     'SHS 1: Thermometers and temperature' => [
@@ -185,6 +308,10 @@ return [
         ['A clinical thermometer has a constriction to', ['make it faster', 'stop the mercury falling back before reading', 'increase its range', 'protect the bulb'], 'B', 'It is shaken down after use.', 2],
         ['Alcohol is used in thermometers for very cold places because it', ['conducts electricity', 'is opaque', 'has a low freezing point', 'has a high boiling point'], 'C', 'It freezes at about −115 °C.', 2],
         ['Absolute zero is', ['−100 °C', '0 °C', '0 K (−273 °C)', '273 K'], 'C', 'No lower temperature is possible.', 2],
+        ['On a faulty thermometer, ice reads 5° and steam 95°. A true temperature of 50 °C reads', ['60°', '45°', '55°', '50°'], 'D', '5 + 0.9 × 50 = 50.', 5],
+        ['A thermocouple is suitable for measuring', ['body temperature only', 'rapidly changing and very high temperatures', 'room temperature only', 'freezing water only'], 'B', 'It is small and responds fast.', 4],
+        ['A resistance thermometer reads 10 Ω at 0 °C and 14 Ω at 100 °C. At 12.5 Ω the temperature is', ['50 °C', '25 °C', '62.5 °C', '75 °C'], 'C', '(12.5 − 10)/(14 − 10) × 100.', 5],
+        ['Convert 98.6 °F to Celsius.', ['32 °C', '35 °C', '40 °C', '37 °C'], 'D', '(98.6 − 32) × 5/9.', 4],
     ],
 
     'SHS 1: Mirrors, reflection and refraction' => [
@@ -197,6 +324,9 @@ return [
         ['A concave mirror is used as a', ['kaleidoscope only', 'rear-view mirror in cars', 'periscope', 'shaving or make-up mirror'], 'D', 'It gives a magnified upright image close up.', 2],
         ['A convex mirror is used as a car\'s rear-view mirror because it', ['reflects no light', 'magnifies objects', 'forms real images', 'gives a wide field of view'], 'D', 'Images are diminished and upright.', 2],
         ['A swimming pool appears shallower than it is because of', ['reflection', 'refraction', 'diffraction', 'dispersion'], 'B', 'Light bends as it leaves the water.', 1],
+        ['Two plane mirrors inclined at 60° form how many images of an object between them?', ['3', '6', '5', '4'], 'C', 'n = 360/60 − 1.', 4],
+        ['A plane mirror is rotated by 15°. The reflected ray turns through', ['45°', '15°', '7.5°', '30°'], 'D', 'Twice the mirror rotation.', 5],
+        ['Light enters glass (n = 1.5) at an angle of incidence of 30°. The angle of refraction is about', ['30°', '19.5°', '45°', '48.6°'], 'B', 'sin r = sin 30°/1.5 = 0.333.', 5],
     ],
 
     'SHS 1: Light through different media' => [
@@ -210,6 +340,8 @@ return [
         ['Total internal reflection is used in', ['plane mirrors', 'optical fibres', 'convex lenses', 'loudspeakers'], 'B', 'Light stays inside the fibre.', 1],
         ['A rainbow is formed by', ['diffraction through dust', 'reflection off clouds only', 'dispersion and internal reflection of sunlight in raindrops', 'absorption by air'], 'C', 'Each colour bends differently.', 2],
         ['Light travels slowest in', ['space', 'air', 'a vacuum', 'glass'], 'D', 'Denser media slow light.', 2],
+        ['Light of wavelength 600 nm in air enters glass (n = 1.5). Its wavelength in glass is', ['900 nm', '400 nm', '600 nm', '300 nm'], 'B', 'λ in glass = 600 ÷ 1.5.', 5],
+        ['The speed of light in water (n = 1.33) is about', ['4 × 10⁸ m/s', '3 × 10⁸ m/s', '2.26 × 10⁸ m/s', '1.33 × 10⁸ m/s'], 'C', 'v = c ÷ n = 3 × 10⁸ ÷ 1.33.', 4],
     ],
 
     'SHS 1: Electric charge and magnetism' => [
@@ -222,6 +354,8 @@ return [
         ['Which material is magnetic?', ['copper', 'iron', 'aluminium', 'wood'], 'B', 'Nickel and cobalt are also magnetic.', 1],
         ['The region around a magnet where its force acts is its', ['domain', 'pole', 'magnetic field', 'circuit'], 'C', 'It is shown with field lines.', 1],
         ['The magnetic poles of the earth are near the', ['equator', 'geographic poles', 'tropics', 'oceans'], 'B', 'A compass points to magnetic north.', 1],
+        ['A charge of 5 μC experiences a force of 0.02 N. The electric field strength is', ['100 N/C', '0.0001 N/C', '400 N/C', '4,000 N/C'], 'D', 'E = F/q.', 5],
+        ['The neutral point between two north poles facing each other is where', ['the field is strongest', 'their fields cancel', 'south poles form', 'current flows'], 'B', 'Resultant field is zero.', 4],
     ],
 
     'SHS 1: Semiconductors and transducers' => [
@@ -235,6 +369,7 @@ return [
         ['In an n-type semiconductor, the majority charge carriers are', ['neutrons', 'holes', 'protons', 'electrons'], 'D', 'In p-type they are holes.', 2],
         ['A loudspeaker converts', ['light into sound', 'sound into electrical energy', 'electrical energy into sound energy', 'heat into light'], 'C', 'A microphone does the reverse.', 1],
         ['Silicon is a semiconductor because its conductivity', ['is the same as copper', 'is very high', 'is zero', 'lies between that of conductors and insulators'], 'D', 'It increases with temperature.', 2],
+        ['In a potential divider with an LDR, the output voltage across the LDR rises when', ['the supply is removed', 'light increases', 'light intensity falls', 'temperature falls'], 'C', 'LDR resistance rises in darkness.', 5],
     ],
 
     'SHS 1: Atoms and the nucleus' => [
@@ -246,6 +381,8 @@ return [
         ['Rutherford\'s gold-foil experiment showed that the atom', ['has no charge', 'is solid throughout', 'has a small, dense, positive nucleus', 'is made of electrons only'], 'C', 'Most alpha particles passed straight through.', 2],
         ['The mass number of an atom is the number of', ['protons only', 'protons plus neutrons', 'electrons only', 'neutrons only'], 'B', 'Also called the nucleon number.', 1],
         ['An atom of ²³Na₁₁ has how many neutrons?', ['23', '11', '12', '34'], 'C', '23 − 11.', 2],
+        ['The binding energy of a nucleus is the energy', ['stored in bonds between atoms', 'of its electrons', 'released by burning', 'needed to separate it into its nucleons'], 'D', 'It comes from the mass defect.', 5],
+        ['Which pair are isobars?', ['¹²C and ¹⁴C', '¹⁴C and ¹⁴N', '¹H and ²H', '¹⁶O and ¹⁸O'], 'B', 'Same mass number, different elements.', 5],
     ],
 
     'SHS 2: Dimensions, vectors, flotation and deformation' => [
@@ -259,6 +396,11 @@ return [
         ['A hydrometer is used to measure the', ['mass', 'pressure of gases', 'temperature', 'relative density of liquids'], 'D', 'It floats higher in denser liquids.', 2],
         ['Hooke\'s law states that extension is proportional to', ['length only', 'load, within the elastic limit', 'mass squared', 'temperature'], 'B', 'F = ke.', 1],
         ['Two forces of 6 N and 8 N act in opposite directions. Their resultant is', ['10 N', '14 N', '2 N', '48 N'], 'C', 'Subtract.', 1],
+        ['The dimensions of power are', ['MLT⁻²', 'ML²T⁻²', 'ML²T⁻³', 'ML²T⁻¹'], 'C', 'Power = work/time.', 4],
+        ['Two forces of 5 N and 12 N act at right angles. The angle the resultant makes with the 12 N force is about (tan⁻¹ 0.417 ≈ 22.6°)', ['30°', '67.4°', '45°', '22.6°'], 'D', 'tan θ = 5/12.', 5],
+        ['A wire of length 2 m and area 1 × 10⁻⁶ m² stretches 1 mm under 100 N. Young\'s modulus is', ['2 × 10⁸ Pa', '2 × 10¹¹ Pa', '5 × 10¹⁰ Pa', '1 × 10¹¹ Pa'], 'B', 'E = (F/A)/(e/L) = 10⁸/(5 × 10⁻⁴).', 5],
+        ['A body floats with 3/4 of its volume submerged in water. Its density is', ['250 kg/m³', '1,333 kg/m³', '750 kg/m³', '1,000 kg/m³'], 'C', 'Fraction submerged = ρ/ρ(water).', 4],
+        ['A wooden block floats with 60% of its volume in a liquid of density 1,200 kg/m³. The block\'s density is', ['720 kg/m³', '600 kg/m³', '1,200 kg/m³', '2,000 kg/m³'], 'A', '0.6 × 1,200.', 5],
     ],
 
     'SHS 2: Measurement of heat' => [
@@ -272,6 +414,10 @@ return [
         ['Energy needed to melt 2 kg of ice at 0 °C (L = 3.36 × 10⁵ J/kg) is', ['6.72 × 10⁴ J', '1.68 × 10⁵ J', '3.36 × 10⁵ J', '6.72 × 10⁵ J'], 'D', 'Q = mL.', 2],
         ['Heat capacity is the heat needed to raise the temperature of', ['water by 1 °C only', '1 kg by 1 K', '1 g by 100 K', 'a whole body by 1 K'], 'D', 'Specific heat capacity is per kg.', 2],
         ['Evaporation causes cooling because', ['heat is added', 'the most energetic molecules escape', 'pressure rises', 'the liquid expands'], 'B', 'Sweating cools the body.', 2],
+        ['The specific heat capacity of a 2 kg metal block that needs 18,000 J to rise by 20 K is', ['180 J/kg K', '900 J/kg K', '450 J/kg K', '9,000 J/kg K'], 'C', 'c = Q/(mΔθ).', 4],
+        ['How much heat is needed to change 0.5 kg of ice at 0 °C to water at 20 °C? (L = 3.36 × 10⁵ J/kg; c = 4,200 J/kg K)', ['3.78 × 10⁵ J', '1.68 × 10⁵ J', '4.2 × 10⁴ J', '2.10 × 10⁵ J'], 'D', '168,000 + 42,000.', 5],
+        ['A 2 kW immersion heater boils 1 kg of water at 100 °C away to steam (L = 2.26 × 10⁶ J/kg). The time taken is', ['2,260 s', '226 s', '1,130 s', '113 s'], 'C', 't = mL/P.', 5],
+        ['The method of mixtures assumes that', ['mass changes', 'no heat flows', 'temperature doubles', 'heat lost by hot bodies equals heat gained by cold bodies'], 'D', 'Conservation of energy.', 4],
     ],
 
     'SHS 2: Electrostatics' => [
@@ -285,6 +431,10 @@ return [
         ['A lightning conductor protects buildings by', ['storing charge', 'conducting charge safely to earth', 'repelling lightning', 'insulating the roof'], 'B', 'Its points discharge the air.', 1],
         ['Charges on a conductor concentrate at', ['the centre', 'flat surfaces', 'sharp points', 'nowhere'], 'C', 'This is used in lightning conductors.', 2],
         ['Two capacitors of 2 μF and 3 μF in parallel have a total capacitance of', ['1 μF', '1.2 μF', '6 μF', '5 μF'], 'D', 'Parallel capacitances add.', 2],
+        ['Two capacitors of 3 μF and 6 μF are in series. Their combined capacitance is', ['18 μF', '9 μF', '4.5 μF', '2 μF'], 'D', '1/C = 1/3 + 1/6.', 4],
+        ['The force between two charges 0.1 m apart is 9 N. If the separation becomes 0.3 m, the force becomes', ['27 N', '3 N', '1 N', '0.33 N'], 'C', 'Force ∝ 1/r²; (1/3)² × 9.', 4],
+        ['A parallel-plate capacitor\'s capacitance increases when', ['separation increases', 'plate area increases or separation decreases', 'area decreases', 'voltage increases'], 'B', 'C = εA/d.', 5],
+        ['Charge stored on a 4 μF capacitor connected to 12 V is', ['0.33 μC', '3 μC', '48 μC', '16 μC'], 'C', 'Q = CV.', 4],
     ],
 
     'SHS 2: Photoelectric effect and radioactivity' => [
@@ -297,6 +447,9 @@ return [
         ['The radiation with the greatest penetrating power is', ['beta', 'alpha', 'gamma', 'infrared'], 'C', 'It is reduced by thick lead or concrete.', 1],
         ['Photoelectrons are emitted only if the light\'s frequency is above the', ['mean frequency', 'threshold frequency', 'speed of light', 'critical angle'], 'B', 'Below it, no emission occurs.', 2],
         ['The half-life of a radioactive isotope is the time for', ['the mass to double', 'all the nuclei to decay', 'half of the nuclei in a sample to decay', 'radiation to stop'], 'C', 'It is constant for each isotope.', 1],
+        ['The threshold wavelength of a metal with work function 3.0 × 10⁻¹⁹ J is about (h = 6.6 × 10⁻³⁴ J s, c = 3 × 10⁸ m/s)', ['2.2 × 10⁻⁷ m', '6.6 × 10⁻⁷ m', '1.0 × 10⁻⁶ m', '4.5 × 10⁻⁷ m'], 'B', 'λ₀ = hc/φ.', 5],
+        ['After 3 half-lives, a sample has 25 g left. Its initial mass was', ['100 g', '75 g', '200 g', '150 g'], 'C', '25 × 2³.', 4],
+        ['In nuclear equations, beta-minus emission increases the atomic number by 1 because', ['a proton is lost', 'a neutron changes into a proton and an electron', 'an alpha is gained', 'a neutron is gained'], 'B', 'n → p + e⁻.', 5],
     ],
 
     'SHS 2: Projectiles, friction and circular motion' => [
@@ -308,6 +461,11 @@ return [
         ['The force that keeps a body moving in a circle is directed', ['away from the centre', 'towards the centre', 'along the tangent', 'vertically upward'], 'B', 'It is the centripetal force.', 2],
         ['At the highest point of its path, a projectile\'s vertical velocity is', ['negative', 'maximum', 'equal to its horizontal velocity', 'zero'], 'D', 'It changes direction.', 2],
         ['Lubrication reduces', ['weight', 'friction', 'mass', 'speed'], 'B', 'Oil separates surfaces.', 1],
+        ['A 0.5 kg stone is whirled in a horizontal circle of radius 2 m at 4 m/s. The centripetal force is', ['16 N', '1 N', '8 N', '4 N'], 'D', 'F = mv²/r = 0.5 × 16/2.', 4],
+        ['A projectile launched at 40 m/s at 30° has a time of flight of (g = 10 m/s²)', ['2 s', '4 s', '8 s', '6.9 s'], 'B', 'T = 2u sin θ/g.', 4],
+        ['A projectile is launched at 40 m/s at 30° to the horizontal (g = 10 m/s²). Its horizontal range is about', ['80 m', '160 m', '138.6 m', '69.3 m'], 'C', 'R = u² sin 2θ/g = 1600 × 0.866/10.', 5],
+        ['A car of mass 1,000 kg rounds a bend of radius 50 m at 10 m/s. The friction force needed is', ['500 N', '200 N', '2,000 N', '10,000 N'], 'C', 'mv²/r.', 5],
+        ['A body on a rough plane begins to slide when the plane is tilted to 30°. The coefficient of static friction is', ['0.577', '0.5', '0.866', '1'], 'A', 'μ = tan 30°.', 5],
     ],
 
     'SHS 2: Electromagnetism' => [
@@ -317,10 +475,13 @@ return [
         ['The strength of an electromagnet can be increased by', ['reducing the current', 'using a copper core', 'increasing the current and the number of turns', 'removing the core'], 'C', 'More current, more turns and a soft iron core all strengthen it.', 1],
         ['The magnetic field around a straight current-carrying wire forms', ['no pattern', 'straight lines', 'concentric circles', 'spirals outward'], 'C', 'Use the right-hand grip rule.', 2],
         ['The strength of an electromagnet increases if you', ['reduce the current', 'remove the iron core', 'increase the number of turns', 'use a copper core'], 'C', 'More turns and current give a stronger field.', 1],
-        ['An electric bell uses', ['an electromagnet', 'a permanent magnet only', 'a transformer', 'a diode'], 'A', 'The armature is attracted and released.', 1],
-        ['A coil that produces a magnetic field like a bar magnet when current flows is a', ['solenoid', 'resistor', 'capacitor', 'rheostat'], 'A', 'It has north and south poles.', 1],
-        ['The force on a current-carrying wire in a magnetic field is greatest when the wire is', ['perpendicular to the field', 'parallel to the field', 'at 30° to the field', 'outside the field'], 'A', 'F = BIL sin θ.', 2],
+        ['An electric bell uses', ['a diode', 'a permanent magnet only', 'a transformer', 'an electromagnet'], 'D', 'The armature is attracted and released.', 1],
+        ['A coil that produces a magnetic field like a bar magnet when current flows is a', ['resistor', 'solenoid', 'capacitor', 'rheostat'], 'B', 'It has north and south poles.', 1],
+        ['The force on a current-carrying wire in a magnetic field is greatest when the wire is', ['at 30° to the field', 'parallel to the field', 'perpendicular to the field', 'outside the field'], 'C', 'F = BIL sin θ.', 2],
         ['An electric motor converts', ['electrical energy into mechanical energy', 'mechanical into electrical energy', 'heat into light', 'sound into electricity'], 'A', 'It uses the motor effect.', 1],
+        ['A wire 0.5 m long carries 4 A at right angles to a field of 0.2 T. The force on it is', ['0.4 N', '4 N', '1.6 N', '0.1 N'], 'A', 'F = BIL.', 4],
+        ['Two parallel wires carrying currents in the same direction', ['attract each other', 'repel each other', 'have no effect', 'rotate'], 'A', 'Their fields interact.', 4],
+        ['An electron moving at 10⁶ m/s perpendicular to a 0.01 T field experiences a force of (e = 1.6 × 10⁻¹⁹ C)', ['1.6 × 10⁻¹⁵ N', '1.6 × 10⁻¹³ N', '1.6 × 10⁻²¹ N', '10⁴ N'], 'A', 'F = Bqv.', 5],
     ],
 
     'SHS 2: Waves' => [
@@ -334,6 +495,12 @@ return [
         ['The period of a wave of frequency 20 Hz is', ['0.05 s', '20 s', '2 s', '0.5 s'], 'A', 'T = 1/f.', 2],
         ['The distance between two successive crests is the', ['wavelength', 'amplitude', 'frequency', 'period'], 'A', 'Symbol λ.', 1],
         ['Water waves slow down when they enter', ['shallower water', 'deeper water', 'air', 'oil only'], 'A', 'Their wavelength also decreases.', 2],
+        ['In a stationary wave, the distance between adjacent nodes is', ['half a wavelength', 'one wavelength', 'a quarter wavelength', 'two wavelengths'], 'A', 'Node to node = λ/2.', 4],
+        ['A radio station broadcasts at 100 MHz. The wavelength is (c = 3 × 10⁸ m/s)', ['3 m', '30 m', '0.3 m', '300 m'], 'A', 'λ = c/f.', 4],
+        ['Two coherent sources produce an interference pattern. A dark fringe occurs where the path difference is', ['an odd number of half wavelengths', 'a whole number of wavelengths', 'zero', 'any value'], 'A', 'Destructive interference.', 5],
+        ['In Young\'s double slit, fringe spacing increases when', ['slit separation decreases', 'wavelength decreases', 'screen moves closer', 'slits widen apart'], 'A', 'y = λD/d.', 5],
+        ['An open pipe of length 0.5 m has a fundamental frequency of (v = 340 m/s)', ['340 Hz', '170 Hz', '680 Hz', '85 Hz'], 'A', 'f = v/2L.', 5],
+        ['The speed of a wave on a string increases when', ['tension increases', 'tension decreases', 'mass per length increases', 'length decreases only'], 'A', 'v = √(T/μ).', 5],
     ],
 
     'SHS 2: Electric fields, magnetic fields and electronics' => [
@@ -346,6 +513,7 @@ return [
         ['A cathode ray oscilloscope can be used to', ['display and measure waveforms', 'store charge', 'increase voltage', 'produce gamma rays'], 'A', 'It shows voltage against time.', 2],
         ['Field lines of an electric field point from', ['positive to negative charges', 'negative to positive charges', 'north to south', 'south to north'], 'A', 'They show the direction of force on a positive charge.', 1],
         ['A charged particle in a uniform electric field experiences', ['a constant force', 'no force', 'a varying force', 'only a magnetic force'], 'A', 'F = qE.', 2],
+        ['An electron accelerated through 100 V gains kinetic energy of', ['1.6 × 10⁻¹⁷ J', '1.6 × 10⁻¹⁹ J', '100 J', '1.6 × 10⁻²¹ J'], 'A', 'eV = 1.6 × 10⁻¹⁹ × 100.', 5],
     ],
 
     'SHS 3: Thermal expansion' => [
@@ -359,6 +527,8 @@ return [
         ['A metal rod 2 m long with linear expansivity 1.2 × 10⁻⁵ K⁻¹ is heated through 50 K. Its expansion is', ['1.2 × 10⁻³ m', '1.2 × 10⁻⁵ m', '6 × 10⁻⁴ m', '2.4 × 10⁻² m'], 'A', 'ΔL = αLΔθ = 1.2 × 10⁻⁵ × 2 × 50.', 3],
         ['Telephone wires are left slack in hot weather so that they', ['do not snap when they contract on cold nights', 'look nice', 'conduct better', 'stay hot'], 'A', 'Metals contract when cooled.', 2],
         ['A gas expands more than a solid when heated because', ['its molecules are farther apart with weaker forces', 'it is heavier', 'it is denser', 'it has more atoms'], 'A', 'Intermolecular forces are weak.', 2],
+        ['A steel rod 1 m long at 20 °C is heated to 120 °C. If α = 1.2 × 10⁻⁵ /K, the new length is', ['1.0012 m', '1.012 m', '1.12 m', '1.00012 m'], 'A', 'ΔL = 1 × 1.2 × 10⁻⁵ × 100.', 4],
+        ['A brass ring of diameter 4.99 cm at 20 °C is heated to fit a 5.00 cm rod. If α = 2 × 10⁻⁵ /K, the temperature rise needed is about', ['100 K', '50 K', '200 K', '10 K'], 'A', 'Δθ = ΔL/(αL) = 0.01/(2 × 10⁻⁵ × 4.99).', 5],
     ],
 
     'SHS 3: Electric circuits and Kirchhoff\'s laws' => [
@@ -372,6 +542,9 @@ return [
         ['Kirchhoff\'s second law is based on conservation of', ['energy', 'charge', 'momentum', 'mass'], 'A', 'The sum of e.m.f.s equals the sum of p.d.s around a loop.', 3],
         ['At a junction, 3 A and 2 A flow in. The current flowing out is', ['5 A', '1 A', '6 A', '1.5 A'], 'A', 'Kirchhoff\'s first law.', 1],
         ['A Wheatstone bridge is used to measure', ['an unknown resistance', 'current only', 'power', 'frequency'], 'A', 'It is balanced when the galvanometer reads zero.', 2],
+        ['In a balanced Wheatstone bridge, P = 4 Ω, Q = 8 Ω and R = 6 Ω. The unknown S is', ['12 Ω', '3 Ω', '16 Ω', '2 Ω'], 'A', 'P/Q = R/S.', 4],
+        ['A potentiometer wire of 100 cm balances a 1.5 V cell at 60 cm. Another cell balances at 80 cm. Its e.m.f. is', ['2.0 V', '1.125 V', '1.2 V', '2.5 V'], 'A', 'E ∝ length: 1.5 × 80/60.', 5],
+        ['In a loop with e.m.f.s 12 V and 4 V opposing each other and total resistance 4 Ω, the current is', ['2 A', '4 A', '1 A', '3 A'], 'A', 'Net e.m.f. 8 V.', 5],
     ],
 
     'SHS 3: X-rays and nuclear energy' => [
@@ -384,6 +557,9 @@ return [
         ['Einstein\'s mass–energy equation is', ['E = mc²', 'E = mgh', 'E = ½mv²', 'E = hf only'], 'A', 'A small mass gives a huge energy.', 1],
         ['X-rays are used in hospitals because they', ['pass through soft tissue but are absorbed by bone', 'heat the body', 'kill all germs', 'are visible light'], 'A', 'They show fractures.', 1],
         ['A nuclear reactor uses control rods made of', ['boron or cadmium to absorb neutrons', 'iron', 'copper', 'gold'], 'A', 'They control the chain reaction.', 3],
+        ['The energy released when 0.001 kg of mass is converted entirely is (c = 3 × 10⁸ m/s)', ['9 × 10¹³ J', '3 × 10⁵ J', '9 × 10¹⁶ J', '3 × 10¹¹ J'], 'A', 'E = mc².', 5],
+        ['Hard X-rays differ from soft X-rays because they have', ['higher energy and greater penetration', 'lower frequency', 'longer wavelength', 'no charge'], 'A', 'They come from higher tube voltages.', 4],
+        ['The maximum energy of X-ray photons from a tube at 50 kV is', ['50 keV', '50 eV', '5 keV', '500 keV'], 'A', 'eV of the accelerated electron.', 5],
     ],
 
     'SHS 3: Astronomy and cosmology' => [
@@ -397,6 +573,9 @@ return [
         ['The largest planet in the solar system is', ['Jupiter', 'Saturn', 'Earth', 'Neptune'], 'A', 'It is a gas giant.', 1],
         ['The sun is a', ['star', 'planet', 'moon', 'comet'], 'A', 'It is a medium-sized star.', 1],
         ['The planet known as the "Red Planet" is', ['Mars', 'Venus', 'Jupiter', 'Mercury'], 'A', 'Iron oxide gives it its colour.', 1],
+        ['Red-shift of light from distant galaxies indicates that', ['they are moving away from us', 'they are moving closer', 'they are cooling', 'they are stationary'], 'A', 'Evidence for an expanding universe.', 5],
+        ['A star more massive than about 8 solar masses ends its life as a', ['supernova leaving a neutron star or black hole', 'white dwarf only', 'planet', 'comet'], 'A', 'Stellar evolution.', 5],
+        ['A light-year is about', ['9.46 × 10¹⁵ m', '3 × 10⁸ m', '1.5 × 10¹¹ m', '3.26 m'], 'A', 'c × seconds in a year.', 4],
     ],
 
     'SHS 3: Alternating current' => [
@@ -409,6 +588,11 @@ return [
         ['The reactance of an inductor increases when the frequency', ['increases', 'decreases', 'is zero', 'is constant'], 'A', 'XL = 2πfL.', 2],
         ['At resonance in an RLC series circuit, the impedance is', ['equal to the resistance (minimum)', 'maximum', 'zero always', 'infinite'], 'A', 'XL = XC.', 3],
         ['In a purely capacitive a.c. circuit, current', ['leads the voltage by 90°', 'lags the voltage by 90°', 'is in phase with voltage', 'is zero'], 'A', 'ICE: current leads in a capacitor.', 3],
+        ['An inductor of 0.1 H on a 50 Hz supply has a reactance of about', ['31.4 Ω', '5 Ω', '3.14 Ω', '314 Ω'], 'A', 'XL = 2πfL.', 4],
+        ['A series circuit has R = 30 Ω and XL = 40 Ω. The impedance is', ['50 Ω', '70 Ω', '10 Ω', '35 Ω'], 'A', 'Z = √(R² + X²).', 4],
+        ['The resonant frequency of an LC circuit is given by', ['1/(2π√LC)', '2π√LC', '√(L/C)', '1/LC'], 'A', 'XL = XC at resonance.', 5],
+        ['A 100 Ω resistor, 0.5 H inductor and 20 μF capacitor are in series at 50 Hz. The inductive reactance is about', ['157 Ω', '50 Ω', '314 Ω', '15.7 Ω'], 'A', '2π × 50 × 0.5.', 5],
+        ['In a series RL circuit with R = 6 Ω and XL = 8 Ω, the power factor is', ['0.6', '0.8', '0.75', '1.33'], 'A', 'cos φ = R/Z = 6/10.', 5],
     ],
 
     'SHS 3: Lenses and lasers' => [
@@ -418,9 +602,11 @@ return [
         ['Laser light differs from ordinary light because it is', ['monochromatic and coherent', 'made of many colours', 'always invisible', 'unable to travel in air'], 'A', 'Laser light has one wavelength and its waves are in step.', 2],
         ['A converging lens forms a real image of an object at twice its focal length. The image is', ['the same size and inverted', 'magnified and upright', 'diminished and upright', 'virtual'], 'A', 'At 2F the image is also at 2F, same size and inverted.', 3],
         ['A camera lens forms an image on the sensor that is', ['real, inverted and diminished', 'virtual and upright', 'magnified and upright', 'virtual and inverted'], 'A', 'The object is beyond 2F.', 2],
-        ['An object is 30 cm from a converging lens of focal length 10 cm. The image distance is', ['15 cm', '20 cm', '7.5 cm', '30 cm'], 'A', '1/v = 1/10 − 1/30 = 2/30, v = 15 cm.', 3],
         ['The power of a lens of focal length 0.5 m is', ['2 D', '0.5 D', '5 D', '50 D'], 'A', 'P = 1/f in metres.', 2],
         ['Laser light is', ['monochromatic and coherent', 'white and scattered', 'always invisible', 'made of sound'], 'A', 'It has a single wavelength.', 2],
+        ['A lens of power −2.5 D is', ['diverging with focal length 40 cm', 'converging with focal length 40 cm', 'diverging with focal length 25 cm', 'converging with focal length 2.5 m'], 'A', 'f = 1/P = −0.4 m.', 5],
+        ['The magnification of an image formed 60 cm from a lens when the object is 20 cm away is', ['3', '0.33', '40', '80'], 'A', 'm = v/u.', 4],
+        ['Two thin lenses of focal lengths 20 cm and 30 cm in contact have a combined focal length of', ['12 cm', '50 cm', '25 cm', '10 cm'], 'A', '1/f = 1/20 + 1/30.', 5],
     ],
 
     'SHS 3: Electromagnetic induction' => [
@@ -432,6 +618,8 @@ return [
         ['Lenz\'s law states that the induced current', ['opposes the change producing it', 'aids the change', 'is always zero', 'flows clockwise only'], 'A', 'It follows from conservation of energy.', 2],
         ['A generator converts', ['mechanical energy to electrical energy', 'electrical to mechanical energy', 'light to electrical energy', 'heat to light'], 'A', 'A motor does the reverse.', 1],
         ['The induced e.m.f. in a coil increases if', ['the number of turns increases', 'the magnet is held still', 'the coil is removed', 'resistance increases'], 'A', 'More turns cut more flux.', 2],
+        ['A coil of 200 turns has its flux changed from 0.05 Wb to 0 in 0.1 s. The average induced e.m.f. is', ['100 V', '10 V', '1 V', '0.1 V'], 'A', 'E = NΔΦ/Δt.', 5],
+        ['A straight conductor 0.5 m long moves at 4 m/s perpendicular to a 0.2 T field. The induced e.m.f. is', ['0.4 V', '4 V', '1.6 V', '0.04 V'], 'A', 'E = BLv.', 5],
     ],
 
     'SHS 3: Simple harmonic motion and collisions' => [
@@ -444,6 +632,10 @@ return [
         ['In SHM, acceleration is always directed', ['towards the equilibrium position', 'away from equilibrium', 'along the velocity', 'upward'], 'A', 'a = −ω²x.', 2],
         ['A pendulum of length 1 m on earth has a period of about (g = 10 m/s²)', ['2 s', '1 s', '6.3 s', '0.5 s'], 'A', 'T = 2π√(1/10) ≈ 1.99 s.', 3],
         ['In an inelastic collision, kinetic energy is', ['not conserved', 'always conserved', 'doubled', 'zero before'], 'A', 'Momentum is still conserved.', 2],
+        ['A mass on a spring has a period of 2 s. If the mass is quadrupled, the period becomes', ['4 s', '8 s', '1 s', '2 s'], 'A', 'T ∝ √m.', 5],
+        ['The maximum speed of a body in SHM with amplitude 0.1 m and angular frequency 10 rad/s is', ['1 m/s', '10 m/s', '0.01 m/s', '100 m/s'], 'A', 'v = Aω.', 4],
+        ['The acceleration of a body in SHM at displacement 0.05 m with ω = 4 rad/s is', ['0.8 m/s² towards equilibrium', '0.2 m/s²', '16 m/s²', '0'], 'A', 'a = ω²x.', 5],
+        ['A 3 kg trolley at 4 m/s collides elastically with an identical stationary trolley. After collision the first trolley', ['stops and the second moves at 4 m/s', 'continues at 4 m/s', 'bounces back at 4 m/s', 'both move at 2 m/s'], 'A', 'Equal masses exchange velocities.', 5],
     ],
 
     'SHS 3: Rectification and power supplies' => [
@@ -455,5 +647,6 @@ return [
         ['A Zener diode in a power supply is used for', ['voltage regulation', 'rectification only', 'amplification', 'oscillation'], 'A', 'It keeps the output voltage steady.', 2],
         ['Half-wave rectification uses', ['one diode', 'four diodes', 'no diodes', 'two capacitors only'], 'A', 'Only half of each cycle passes.', 1],
         ['Full-wave rectification makes use of', ['both halves of the a.c. cycle', 'only the positive half', 'only the negative half', 'no part'], 'A', 'It gives smoother d.c.', 2],
+        ['The ripple in a rectified output is reduced by', ['a larger smoothing capacitor', 'a smaller capacitor', 'removing diodes', 'higher frequency transformer only'], 'A', 'It discharges more slowly.', 4],
     ],
 ];

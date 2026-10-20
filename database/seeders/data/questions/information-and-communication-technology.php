@@ -36,6 +36,19 @@ return [
         ['The speed of a printer is often measured in', ['megapixels', 'gigahertz', 'pages per minute', 'dots per inch only'], 'C', 'Pages per minute (ppm).', 1],
         ['Which memory is non-volatile and stores the startup instructions?', ['register', 'RAM', 'cache', 'ROM'], 'D', 'It keeps data without power.', 1],
         ['A plotter is used mainly to print', ['receipts', 'large technical drawings', 'photos only', 'barcodes'], 'B', 'Architects use plotters.', 2],
+        ['A 2 MB file is transferred over a 4 Mbps link. Ignoring overhead, the time taken is about', ['8 seconds', '0.5 seconds', '2 seconds', '4 seconds'], 'D', '2 MB = 16 Mb; 16/4.', 5],
+        ['A 1920 × 1080 image with 24-bit colour needs about how much storage uncompressed?', ['2 MB', '6.2 MB', '24 MB', '1 MB'], 'B', '1920 × 1080 × 3 bytes.', 5],
+        ['The binary number 11111111 equals', ['127', '256', '255', '128'], 'C', '2⁸ − 1.', 4],
+        ['Which memory type is fastest?', ['optical disc', 'RAM', 'hard disk', 'CPU registers'], 'D', 'They are inside the CPU.', 4],
+        ['Which memory loses its contents when power is switched off?', ['ROM', 'RAM', 'hard disk', 'flash drive'], 'B', 'Volatile memory.', 4],
+        ['Cache memory is used to', ['print documents', 'store files permanently', 'speed up access to frequently used data', 'connect to the internet'], 'C', 'Fast buffer near the CPU.', 4],
+        ['The unit that performs arithmetic and logical operations is the', ['bus', 'control unit', 'register file', 'ALU'], 'D', 'Part of the CPU.', 4],
+        ['A device that is both input and output is a', ['scanner', 'touchscreen', 'printer', 'microphone'], 'B', 'Displays and senses touch.', 4],
+        ['How many bytes are in 2 KB (binary)?', ['1024', '2000', '2048', '4096'], 'C', '2 × 1024.', 4],
+        ['Clock speed is measured in', ['bits per second only', 'gigabytes', 'megapixels', 'gigahertz'], 'D', 'Cycles per second.', 4],
+        ['An SSD differs from an HDD because it', ['uses magnetic platters', 'has no moving parts', 'is always slower', 'cannot store files'], 'B', 'Flash memory.', 4],
+        ['A 1080p display has a vertical resolution of', ['720 pixels', '1920 pixels', '1080 pixels', '4000 pixels'], 'C', '1920 × 1080.', 4],
+        ['The BIOS or UEFI is stored in', ['the cloud', 'RAM', 'the hard disk only', 'ROM/flash on the motherboard'], 'D', 'Firmware.', 5],
     ],
 
     'Software' => [
@@ -61,6 +74,18 @@ return [
         ['Software that is installed and used for a trial period is', ['freeware', 'shareware', 'open-source', 'firmware'], 'B', 'You pay after the trial.', 2],
         ['Which of these is application software?', ['BIOS', 'Windows 11', 'Microsoft Word', 'device driver'], 'C', 'It performs user tasks.', 1],
         ['The file extension .xlsx belongs to', ['Notepad', 'Microsoft Word', 'PowerPoint', 'Microsoft Excel'], 'D', '.docx is Word.', 1],
+        ['An interpreter differs from a compiler because it', ['produces an executable file first', 'translates and executes code line by line', 'is hardware', 'only runs Java'], 'B', 'Errors appear as each line runs.', 4],
+        ['Software licensed so that users can modify and redistribute the source code is', ['shareware', 'proprietary software', 'open-source software', 'malware'], 'C', 'E.g. under the GPL.', 4],
+        ['A compiler error that stops a program from running is usually a', ['logic error', 'syntax error', 'runtime error only', 'hardware fault'], 'B', 'Rules of the language are broken.', 4],
+        ['An operating system is an example of', ['application software', 'system software', 'malware', 'firmware only'], 'B', 'Manages hardware.', 4],
+        ['Open-source software is software whose', ['code is hidden', 'licence is expensive', 'source code is freely available', 'use is illegal'], 'C', 'E.g. Linux.', 4],
+        ['In a spreadsheet, the formula =SUM(A1:A4) adds', ['a whole row', 'two cells', 'one cell', 'four cells'], 'D', 'A1 to A4.', 4],
+        ['In a spreadsheet, $A$1 is an example of', ['a relative reference', 'an absolute reference', 'a function', 'a range'], 'B', 'Does not change when copied.', 5],
+        ['A compiler translates', ['machine code into source code', 'one line at a time while running', 'a whole program into machine code before execution', 'text into images'], 'C', 'Unlike an interpreter.', 5],
+        ['In a spreadsheet, =AVERAGE(B1:B4) where the cells hold 4, 6, 8 and 10 returns', ['28', '7', '4', '10'], 'B', '28 ÷ 4.', 4],
+        ['In a spreadsheet, =MAX(3, 9, 5) returns', ['5', '3', '9', '17'], 'C', 'Largest value.', 4],
+        ['A device driver is software that', ['browses the web', 'removes viruses', 'edits photos', 'lets the OS communicate with hardware'], 'D', 'Hardware interface.', 4],
+        ['Mail merge in a word processor combines', ['two images', 'a main document with a data source', 'sound and video', 'two spreadsheets only'], 'B', 'Personalised letters.', 4],
     ],
 
     'Networks and the internet' => [
@@ -86,6 +111,17 @@ return [
         ['The part of an e-mail address after the @ symbol is the', ['password', 'user name', 'subject', 'domain name'], 'D', 'For example gmail.com.', 1],
         ['An intranet is', ['the public internet', 'a private network used within an organisation', 'a search engine', 'a social media site'], 'B', 'Only employees can access it.', 2],
         ['The "CC" field in an e-mail is used to', ['delete the mail', 'attach a file', 'send a copy to other recipients', 'change the font'], 'C', 'Carbon copy.', 1],
+        ['An IPv4 address such as 192.168.1.10 is', ['a domain name', 'a public internet address', 'a MAC address', 'a private address used inside local networks'], 'D', '192.168.x.x is reserved.', 5],
+        ['The OSI layer responsible for routing packets is the', ['physical layer', 'network layer', 'application layer', 'session layer'], 'B', 'Layer 3.', 5],
+        ['A subnet mask of 255.255.255.0 allows how many usable host addresses?', ['255', '256', '254', '128'], 'C', '256 minus network and broadcast.', 5],
+        ['A network covering a single building is a', ['PAN', 'WAN', 'MAN', 'LAN'], 'D', 'Local area network.', 4],
+        ['The device that forwards data between different networks is a', ['hub', 'router', 'repeater', 'modem only'], 'B', 'Routes packets.', 4],
+        ['In an email address, the part after @ is the', ['protocol', 'username', 'domain name', 'subject'], 'C', 'Mail server domain.', 4],
+        ['Bandwidth refers to', ['storage space', 'cable length', 'screen size', 'the data-carrying capacity of a connection'], 'D', 'Bits per second.', 4],
+        ['A URL beginning with https indicates', ['an email', 'a file transfer only', 'a secure connection', 'an offline page'], 'C', 'Encrypted HTTP.', 4],
+        ['An IP address of version 4 has', ['32 bits', '64 bits', '128 bits', '16 bits'], 'A', 'Four octets.', 4],
+        ['The protocol used to send email is', ['SMTP', 'HTTP', 'FTP', 'DHCP'], 'A', 'Simple Mail Transfer Protocol.', 4],
+        ['DHCP is used to', ['assign IP addresses automatically', 'send email', 'translate domain names', 'encrypt traffic'], 'A', 'Dynamic configuration.', 5],
     ],
 
     'Security, ethics and society' => [
@@ -110,6 +146,13 @@ return [
         ['Software piracy is', ['updating software', 'buying original software', 'illegal copying or distribution of software', 'writing software'], 'C', 'It breaks copyright law.', 1],
         ['A computer virus is', ['a type of cable', 'a hardware part', 'a cleaning tool', 'a program that damages or disrupts a computer and can spread'], 'D', 'Antivirus software detects it.', 1],
         ['Two-factor authentication improves security by', ['removing passwords', 'requiring a second proof of identity such as a code', 'sharing passwords', 'using one password everywhere'], 'B', 'Even a stolen password is not enough.', 2],
+        ['A denial-of-service attack aims to', ['repair systems', 'steal passwords only', 'encrypt files for ransom', 'make a system unavailable by overloading it'], 'D', 'Floods the server with traffic.', 4],
+        ['Public-key encryption uses', ['no keys', 'one shared key only', 'a public key to encrypt and a private key to decrypt', 'passwords only'], 'C', 'Asymmetric encryption.', 5],
+        ['Ghana\'s Data Protection Act, 2012 (Act 843) mainly protects', ['mobile money only', 'telephone lines', 'computer hardware', 'personal data of individuals'], 'D', 'It created the Data Protection Commission.', 5],
+        ['Phishing is an attempt to', ['trick users into revealing personal information', 'speed up a computer', 'back up files', 'repair a network'], 'A', 'Fraudulent messages.', 4],
+        ['A firewall', ['controls incoming and outgoing network traffic', 'cools the CPU', 'stores passwords', 'prints securely'], 'A', 'Filters traffic.', 4],
+        ['Two-factor authentication requires', ['two different types of proof of identity', 'two passwords that are the same', 'two computers', 'two users'], 'A', 'E.g. password plus code.', 5],
+        ['A strong password should', ['mix letters, numbers and symbols', 'be your name', 'be 1234', 'be shared'], 'A', 'Harder to guess.', 4],
     ],
 
     'SHS 1: Multimedia tools and applications' => [
@@ -147,6 +190,8 @@ return [
         ['The unique address of a web page is its', ['ISP', 'IP only', 'URL', 'HTML'], 'C', 'Uniform Resource Locator.', 1],
         ['The body that regulates communications services in Ghana is the', ['Ghana Standards Authority', 'Ghana Revenue Authority', 'Food and Drugs Authority', 'National Communications Authority'], 'D', 'It licenses ISPs and mobile networks.', 2],
         ['Broadband refers to', ['slow dial-up only', 'high-speed internet access', 'radio broadcasting', 'TV channels'], 'B', 'It allows streaming.', 1],
+        ['Downloading a 600 MB file on a 10 Mbps connection takes about', ['1 minute', '8 minutes', '60 minutes', '30 seconds'], 'B', '4,800 Mb ÷ 10 = 480 s.', 5],
+        ['A top-level domain such as ".gh" indicates', ['an educational site only', 'a government agency only', 'the country Ghana', 'a commercial site'], 'C', 'Country-code TLD.', 4],
     ],
 
     'SHS 1: Guided and unguided network media' => [
@@ -160,6 +205,8 @@ return [
         ['The cable with the highest bandwidth over long distances is', ['telephone wire', 'twisted-pair cable', 'coaxial cable', 'fibre-optic cable'], 'D', 'It carries data as light.', 2],
         ['Bluetooth is an example of', ['coaxial cable', 'fibre-optic cable', 'short-range wireless communication', 'satellite TV'], 'C', 'It connects nearby devices.', 1],
         ['Satellite communication is useful for', ['printing', 'connecting a mouse', 'charging phones', 'remote areas without cables'], 'D', 'Signals go via satellites.', 2],
+        ['Fibre-optic cable is immune to electromagnetic interference because it', ['is wireless', 'is thick', 'is copper', 'carries light, not electrical signals'], 'D', 'Total internal reflection carries data.', 5],
+        ['Microwave links require', ['cables', 'line of sight between antennas', 'no towers', 'satellite only'], 'B', 'Relay towers are used.', 4],
     ],
 
     'SHS 1: Physical safety when using computers' => [
@@ -192,9 +239,12 @@ return [
         ['The formula =SUM(A1:A5) adds', ['column B', 'only A1 and A5', 'all cells in the sheet', 'the values in cells A1 to A5'], 'D', 'The colon means a range.', 1],
         ['=AVERAGE(B2:B6) calculates the', ['largest value', 'mean of the values in B2 to B6', 'total', 'count of cells'], 'B', 'It divides the sum by the count.', 1],
         ['=MAX(C1:C10) returns the', ['average', 'smallest value', 'largest value in the range', 'number of cells'], 'C', '=MIN gives the smallest.', 1],
-        ['All spreadsheet formulas begin with', ['=', '#', '@', '$'], 'A', 'The equals sign tells Excel to calculate.', 1],
-        ['The function =COUNT(A1:A10) counts', ['cells containing numbers', 'all cells', 'blank cells', 'text cells only'], 'A', 'COUNTA counts non-empty cells.', 2],
+        ['All spreadsheet formulas begin with', ['@', '#', '=', '$'], 'C', 'The equals sign tells Excel to calculate.', 1],
+        ['The function =COUNT(A1:A10) counts', ['text cells only', 'all cells', 'blank cells', 'cells containing numbers'], 'D', 'COUNTA counts non-empty cells.', 2],
         ['In =IF(B2>=50,"Pass","Fail"), a score of 45 gives', ['Fail', 'Pass', '45', 'error'], 'A', '45 is less than 50.', 1],
+        ['If A1 = 5 and B1 = 3, what is =IF(A1>B1, A1*2, B1*2)?', ['10', '6', '8', '15'], 'A', 'A1 > B1 is true.', 4],
+        ['The formula =$A$1*B2 copied to C3 becomes', ['=$A$1*B3', '=$A$2*B3', '=A2*B3', '=$A$1*C3'], 'A', 'Absolute reference stays fixed.', 5],
+        ['=VLOOKUP(101, A2:C10, 3, FALSE) returns', ['the value in column 3 of the row where 101 is found exactly', 'the sum of column 3', 'the row number of 101', 'an error always'], 'A', 'Exact match lookup.', 5],
     ],
 
     'SHS 2: Spreadsheets: charts, sorting and filtering' => [
@@ -228,6 +278,7 @@ return [
         ['Before installing an app, you should check', ['the permissions it requests and its reviews', 'nothing', 'only its colour', 'the phone\'s weight'], 'A', 'Some apps collect too much data.', 1],
         ['Updating mobile apps regularly helps to', ['fix bugs and security weaknesses', 'slow down the phone', 'delete data', 'remove features always'], 'A', 'Updates patch vulnerabilities.', 1],
         ['Mobile money services in Ghana allow users to', ['send money with a phone', 'print money', 'avoid networks', 'make free calls only'], 'A', 'MoMo is widely used.', 1],
+        ['Granting a flashlight app access to contacts is a risk because', ['the app does not need it and may misuse data', 'it improves brightness', 'it saves battery', 'it is required'], 'A', 'Principle of least privilege.', 4],
     ],
 
     'SHS 2: Ethernet and network security' => [
@@ -240,6 +291,9 @@ return [
         ['Tricking people into revealing passwords by pretending to be a trusted organisation is', ['phishing', 'debugging', 'formatting', 'encryption'], 'A', 'Check links and senders carefully.', 1],
         ['An Ethernet cable connects devices using an', ['RJ45 connector', 'HDMI connector', 'VGA connector', 'USB-C only'], 'A', 'It is used in wired LANs.', 2],
         ['A strong Wi-Fi security protocol is', ['WPA2 or WPA3', 'no password', 'WEP', 'an open network'], 'A', 'WEP is outdated.', 2],
+        ['A MAC address has', ['48 bits', '32 bits', '128 bits', '8 bits'], 'A', 'Written as six hex pairs.', 5],
+        ['A man-in-the-middle attack', ['intercepts communication between two parties', 'floods servers', 'deletes files only', 'repairs networks'], 'A', 'Encryption helps prevent it.', 4],
+        ['WPA3 improves Wi-Fi security mainly by', ['stronger encryption and protection against password guessing', 'faster speed only', 'removing passwords', 'using WEP'], 'A', 'SAE handshake.', 5],
     ],
 
     'SHS 3: Presentation software' => [
@@ -269,6 +323,8 @@ return [
         ['A newsletter usually arranges text in', ['columns', 'one long line', 'a single cell', 'a database table'], 'A', 'Columns make it easy to read.', 1],
         ['Master pages in desktop publishing are used to', ['apply the same layout elements to many pages', 'delete pages', 'print one page', 'add viruses'], 'A', 'E.g. page numbers and headers.', 2],
         ['A text box in DTP software', ['holds text that can be moved anywhere on the page', 'stores images only', 'is a type of font', 'is a printer setting'], 'A', 'It allows flexible layout.', 1],
+        ['Kerning in DTP adjusts', ['space between specific pairs of letters', 'line spacing', 'page margins', 'image size'], 'A', 'Tracking adjusts all letters.', 4],
+        ['Bleed is added to a print document to', ['prevent white edges after trimming', 'reduce file size', 'add colour', 'bind pages'], 'A', 'Usually 3 mm.', 5],
     ],
 
     'SHS 3: Collaboration tools' => [
@@ -280,5 +336,6 @@ return [
         ['A shared calendar is useful for', ['scheduling meetings for a team', 'typing letters', 'drawing pictures', 'calculating tax'], 'A', 'Everyone sees the same schedule.', 1],
         ['Version history in collaboration tools allows users to', ['see and restore earlier versions of a file', 'delete the file forever', 'hide the file', 'print the file'], 'A', 'It protects against mistakes.', 2],
         ['Comments in shared documents allow users to', ['give feedback without changing the text', 'delete the document', 'hide changes', 'print'], 'A', 'They appear in the margin.', 1],
+        ['Version control systems such as Git allow teams to', ['track changes and merge work safely', 'delete history', 'avoid backups', 'work offline only'], 'A', 'Branches and commits.', 5],
     ],
 ];

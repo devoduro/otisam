@@ -28,6 +28,13 @@ return [
         ['The money measurement concept means that', ['staff morale is recorded', 'all events are recorded', 'only transactions that can be expressed in money are recorded', 'goodwill is always recorded'], 'C', 'Employee skill is not recorded.', 2],
         ['Users of financial statements include', ['no one', 'only the accountant', 'only competitors', 'owners, lenders, employees and government'], 'D', 'Each has different needs.', 1],
         ['The realisation concept states that revenue is recognised when', ['cash is received only', 'goods are delivered or services rendered', 'orders are placed', 'goods are produced'], 'B', 'The sale is complete.', 2],
+        ['Treating the purchase of a GH¢5 stapler as an expense rather than an asset follows the', ['realisation concept', 'going concern concept', 'entity concept', 'materiality concept'], 'D', 'Insignificant amounts.', 4],
+        ['Revaluing land upwards and crediting profit would breach the', ['consistency concept only', 'prudence and realisation concepts', 'entity concept', 'dual aspect concept'], 'B', 'Gains are not realised.', 5],
+        ['Recording revenue when goods are delivered on credit, not when cash is received, applies the', ['money measurement concept', 'cash basis', 'entity concept', 'accruals (realisation) concept'], 'D', 'Revenue is earned on delivery.', 4],
+        ['Recording a machine at cost rather than its current market value follows the', ['realisation concept', 'going concern concept', 'historical cost concept', 'materiality concept'], 'C', 'Assets at original cost.', 4],
+        ['Treating the owner and the business as separate is the', ['accruals concept', 'dual aspect concept', 'consistency concept', 'business entity concept'], 'D', 'Separate accounting unit.', 4],
+        ['Income is recognised when earned, not when cash is received, under the', ['cash concept', 'accruals concept', 'prudence concept', 'money measurement concept'], 'B', 'Matching principle.', 4],
+        ['Providing for doubtful debts is an application of the', ['realisation concept', 'entity concept', 'prudence concept', 'going concern concept'], 'C', 'Anticipate losses.', 4],
     ],
 
     'Double entry and books of prime entry' => [
@@ -53,6 +60,14 @@ return [
         ['Cash sales of GH¢800 are recorded by', ['debiting sales and crediting cash', 'debiting cash and crediting sales', 'debiting purchases', 'crediting capital'], 'B', 'Cash increases; sales income increases.', 1],
         ['The petty cash book is used for', ['bank loans', 'large credit sales', 'small cash payments', 'capital introduced'], 'C', 'It often uses the imprest system.', 1],
         ['Under the imprest system, the petty cashier is', ['paid a salary from it', 'given a new float every day', 'never reimbursed', 'reimbursed the amount spent at the end of each period'], 'D', 'The float is restored to a fixed amount.', 2],
+        ['Goods worth GH¢500 taken by the owner for personal use are recorded by', ['debiting sales and crediting cash', 'debiting purchases and crediting drawings', 'debiting drawings and crediting purchases', 'debiting capital and crediting sales'], 'C', 'It reduces goods available for sale.', 5],
+        ['A contra entry in a three-column cash book occurs when', ['discount is received', 'goods are bought on credit', 'a debtor pays by cheque', 'cash is paid into the bank or withdrawn for office use'], 'D', 'Both sides of the cash book are used.', 5],
+        ['Trade discount is', ['debited to discount allowed', 'not recorded in the ledger accounts', 'credited to discount received', 'treated as income'], 'B', 'It is deducted on the invoice.', 4],
+        ['Goods taken by the owner for personal use are recorded by debiting', ['sales and crediting cash', 'purchases and crediting drawings', 'capital and crediting sales', 'drawings and crediting purchases'], 'D', 'Reduces goods available.', 5],
+        ['Returns inwards are recorded in the', ['purchases day book', 'sales returns day book', 'cash book', 'purchases returns day book'], 'B', 'Goods returned by customers.', 4],
+        ['A discount allowed is debited to the discount allowed account and credited to', ['cash account', 'the supplier\'s account', 'the customer\'s account', 'sales account'], 'C', 'Reduces debtor balance.', 5],
+        ['Credit purchase of a motor van is first recorded in the', ['sales day book', 'purchases day book', 'cash book', 'journal proper'], 'D', 'Not goods for resale.', 5],
+        ['A trade discount is', ['debited to discount allowed', 'not recorded in the ledger', 'credited to discount received', 'recorded in the cash book'], 'B', 'Deducted on the invoice.', 4],
     ],
 
     'Trial balance and errors' => [
@@ -69,6 +84,11 @@ return [
         ['An error that does NOT affect the agreement of the trial balance is an error of', ['single entry', 'omission', 'addition in one account', 'transposition in one entry only'], 'B', 'Both sides are equally affected.', 2],
         ['Compensating errors are', ['errors of omission', 'errors of principle', 'errors that cancel each other out', 'casting errors on one side'], 'C', 'The trial balance still agrees.', 2],
         ['Writing GH¢54 as GH¢45 in both accounts is an error of', ['omission', 'principle', 'commission', 'original entry'], 'D', 'The wrong amount is entered on both sides.', 2],
+        ['Sales of GH¢300 to Kofi were posted to Kojo\'s account. The correcting entry is', ['debit sales, credit Kofi', 'debit Kojo, credit Kofi', 'debit Kofi, credit Kojo', 'debit suspense, credit Kojo'], 'C', 'Error of commission.', 5],
+        ['Purchases were undercast by GH¢100. The correction is', ['no entry', 'debit suspense, credit purchases', 'debit sales, credit purchases', 'debit purchases, credit suspense'], 'D', 'The debit side was short.', 5],
+        ['An error of principle occurs when', ['an entry is omitted', 'figures are reversed', 'revenue expenditure is debited to an asset account', 'the wrong customer is debited'], 'C', 'Wrong class of account.', 4],
+        ['Which error does NOT affect the agreement of the trial balance?', ['balance omitted', 'single entry', 'casting error on one side', 'error of commission'], 'D', 'Debit and credit still equal.', 4],
+        ['Rent of GH¢400 paid was entered on the credit side of the rent account. The suspense account will show', ['GH¢400', 'GH¢800', 'nil', 'GH¢200'], 'B', 'Debit understated by 400 and credit overstated by 400.', 5],
     ],
 
     'Final accounts' => [
@@ -92,6 +112,22 @@ return [
         ['Prepaid insurance at the year end is shown as a', ['non-current asset', 'current liability', 'current asset', 'expense only'], 'C', 'It has been paid in advance.', 2],
         ['Net sales GH¢60,000; gross profit 25% of sales. Cost of sales is', ['GH¢12,000', 'GH¢15,000', 'GH¢48,000', 'GH¢45,000'], 'D', '60,000 − 15,000.', 2],
         ['Working capital equals', ['total assets minus capital', 'current assets minus current liabilities', 'non-current assets plus inventory', 'capital plus drawings'], 'B', 'It measures liquidity.', 1],
+        ['Opening inventory GH¢4,000; purchases GH¢20,000; returns outwards GH¢1,000; carriage inwards GH¢500; closing inventory GH¢3,500. Cost of sales is', ['GH¢24,500', 'GH¢21,000', 'GH¢19,000', 'GH¢20,000'], 'D', '4,000 + 19,500 − 3,500.', 5],
+        ['Sales GH¢50,000; returns inwards GH¢2,000; cost of sales GH¢30,000. Gross profit is', ['GH¢22,000', 'GH¢20,000', 'GH¢18,000', 'GH¢16,000'], 'C', '48,000 − 30,000.', 4],
+        ['Rent paid GH¢4,800 covers 16 months from 1 January. The rent expense for the year ended 31 December is', ['GH¢4,000', 'GH¢4,800', 'GH¢1,200', 'GH¢3,600'], 'D', '4,800 × 12/16.', 5],
+        ['Wages paid GH¢9,000; wages owing at the start GH¢500; at the end GH¢800. Wages charged to the income statement are', ['GH¢8,700', 'GH¢9,300', 'GH¢10,300', 'GH¢9,000'], 'B', '9,000 − 500 + 800.', 5],
+        ['Capital at start GH¢20,000; net profit GH¢6,000; drawings GH¢2,500; additional capital GH¢1,000. Closing capital is', ['GH¢22,500', 'GH¢27,000', 'GH¢24,500', 'GH¢26,500'], 'C', '20,000 + 1,000 + 6,000 − 2,500.', 4],
+        ['Electricity paid GH¢2,400 during the year; GH¢300 was owing at the start and GH¢500 at the end. The expense for the year is', ['GH¢2,200', 'GH¢2,600', 'GH¢3,200', 'GH¢2,400'], 'B', '2,400 − 300 + 500.', 5],
+        ['Insurance paid GH¢1,800 for 18 months from 1 July. For the year ended 31 December, the prepayment is', ['GH¢1,800', 'GH¢600', 'GH¢1,200', 'GH¢900'], 'C', '6 months used; 12 months prepaid.', 5],
+        ['Opening inventory GH¢5,000, purchases GH¢20,000, closing inventory GH¢3,000. Cost of sales is', ['GH¢18,000', 'GH¢28,000', 'GH¢22,000', 'GH¢25,000'], 'C', '5,000 + 20,000 − 3,000.', 4],
+        ['Sales GH¢40,000; cost of sales GH¢30,000. The gross profit margin is', ['10%', '33.3%', '75%', '25%'], 'D', '10,000 ÷ 40,000.', 5],
+        ['Rent paid GH¢1,300 includes GH¢100 prepaid. Rent charged to profit or loss is', ['GH¢1,400', 'GH¢1,200', 'GH¢1,300', 'GH¢100'], 'B', 'Deduct the prepayment.', 4],
+        ['Carriage inwards is treated as part of', ['administrative expenses', 'selling expenses', 'cost of sales', 'non-current assets'], 'C', 'Cost of bringing goods in.', 4],
+        ['Accrued wages at year end are shown as a', ['capital item', 'current asset', 'non-current liability', 'current liability'], 'D', 'Amount owed.', 4],
+        ['Gross profit GH¢15,000; expenses GH¢9,000; discount received GH¢500. Net profit is', ['GH¢24,500', 'GH¢5,500', 'GH¢6,000', 'GH¢6,500'], 'D', '15,000 + 500 − 9,000.', 5],
+        ['Cost of sales GH¢30,000; average inventory GH¢5,000. The rate of inventory turnover is', ['5 times', '6 times', '0.17 times', '35 times'], 'B', '30,000 ÷ 5,000.', 5],
+        ['Mark-up of 25% on cost is equivalent to a margin of', ['33⅓%', '25%', '20%', '75%'], 'C', '25 ÷ 125.', 5],
+        ['Goods costing GH¢800 are sold at a margin of 20%. The selling price is', ['GH¢1,600', 'GH¢960', 'GH¢640', 'GH¢1,000'], 'D', '800 ÷ 0.8.', 5],
     ],
 
     'Depreciation, bad debts, control accounts' => [
@@ -110,6 +146,19 @@ return [
         ['A provision for doubtful debts is created to apply the', ['money measurement concept', 'going concern concept', 'entity concept', 'prudence concept'], 'D', 'It anticipates losses.', 2],
         ['Cash received from credit customers appears in the sales ledger control account on the', ['debit side', 'credit side', 'both sides', 'neither side'], 'B', 'It reduces receivables.', 2],
         ['Depreciation is charged because', ['cash is paid every year', 'assets increase in value', 'assets lose value through use and time', 'the law forbids assets'], 'C', 'It matches cost to periods of use.', 1],
+        ['A van costing GH¢30,000 is depreciated at 20% per annum on the reducing balance. Its net book value after 2 years is', ['GH¢12,000', 'GH¢18,000', 'GH¢24,000', 'GH¢19,200'], 'D', '30,000 × 0.8².', 5],
+        ['Receivables are GH¢40,000 and a provision for doubtful debts of 5% is required. The existing provision is GH¢1,500. The charge to the income statement is', ['GH¢2,000', 'GH¢500', 'GH¢1,500', 'GH¢3,500'], 'B', 'Required 2,000 − existing 1,500.', 5],
+        ['A machine bought for GH¢12,000 with accumulated depreciation of GH¢7,000 is sold for GH¢4,000. The result is', ['a loss of GH¢8,000', 'a profit of GH¢1,000', 'a loss of GH¢1,000', 'a profit of GH¢4,000'], 'C', 'NBV 5,000 − proceeds 4,000.', 5],
+        ['In the purchases ledger control account, discounts received appear on the', ['neither side', 'credit side', 'both sides', 'debit side'], 'D', 'They reduce payables.', 4],
+        ['A bad debt previously written off is recovered. The double entry includes crediting', ['sales account', 'bad debts recovered account', 'capital account', 'purchases account'], 'B', 'It is treated as income.', 4],
+        ['Opening receivables GH¢10,000; credit sales GH¢50,000; cash received GH¢45,000; bad debts GH¢1,000. Closing receivables are', ['GH¢15,000', 'GH¢16,000', 'GH¢6,000', 'GH¢14,000'], 'D', '10,000 + 50,000 − 45,000 − 1,000.', 5],
+        ['A machine costing GH¢18,000 has a 6-year life and nil residual value. Using sum-of-the-years\'-digits, year 1 depreciation is', ['GH¢3,000', 'GH¢5,143', 'GH¢6,000', 'GH¢4,286'], 'B', '6/21 × 18,000.', 5],
+        ['A machine costs GH¢10,000 with residual value GH¢2,000 and a 4-year life. Straight-line depreciation per year is', ['GH¢2,500', 'GH¢2,000', 'GH¢3,000', 'GH¢1,500'], 'B', '8,000 ÷ 4.', 4],
+        ['Reducing balance at 20% on GH¢5,000. Depreciation in year 2 is', ['GH¢640', 'GH¢1,000', 'GH¢800', 'GH¢4,000'], 'C', '20% of 4,000.', 5],
+        ['Debtors GH¢20,000; allowance for doubtful debts 5%. The allowance is', ['GH¢2,000', 'GH¢1,000', 'GH¢500', 'GH¢100'], 'B', '5% × 20,000.', 4],
+        ['In the sales ledger control account, cash received from debtors appears on the', ['either side', 'debit side', 'credit side', 'neither side'], 'C', 'Reduces the debtors total.', 4],
+        ['A bad debt recovered is credited to', ['bad debts recovered account', 'the debtor\'s account only', 'sales', 'purchases'], 'A', 'Income when received.', 5],
+        ['Opening debtors GH¢5,000, credit sales GH¢20,000, cash received GH¢18,000. Closing debtors are', ['GH¢7,000', 'GH¢3,000', 'GH¢43,000', 'GH¢2,000'], 'A', '5,000 + 20,000 − 18,000.', 5],
     ],
 
     'Bank reconciliation' => [
@@ -122,6 +171,10 @@ return [
         ['Bank charges shown only on the bank statement should be', ['added to the bank balance', 'ignored', 'entered in the cash book', 'entered in the sales book'], 'C', 'The cash book is then updated.', 2],
         ['Deposits made but not yet credited by the bank are', ['bank charges', 'unpresented cheques', 'standing orders', 'uncredited lodgements'], 'D', 'They are added to the bank statement balance.', 2],
         ['A standing order paid by the bank but not in the cash book is', ['added to the bank statement', 'entered on the credit side of the cash book', 'ignored', 'entered as a receipt'], 'B', 'It is a payment.', 2],
+        ['The cash book shows GH¢2,500 debit. Unpresented cheques are GH¢800 and uncredited deposits GH¢600. The bank statement balance is', ['GH¢3,900', 'GH¢2,300', 'GH¢2,700', 'GH¢1,100'], 'C', '2,500 + 800 − 600.', 5],
+        ['A cheque for GH¢150 paid to a supplier was recorded in the cash book as GH¢510. The cash book adjustment is', ['credit GH¢150', 'credit GH¢360', 'debit GH¢510', 'debit GH¢360'], 'D', 'Over-recorded payment is reversed.', 5],
+        ['Unpresented cheques are', ['cheques issued but not yet paid by the bank', 'cheques received not yet banked', 'dishonoured cheques', 'standing orders'], 'A', 'Timing difference.', 4],
+        ['Bank charges on the statement but not in the cash book require', ['a credit entry in the cash book', 'a debit entry in the cash book', 'no entry', 'an entry in the journal only'], 'A', 'Reduces the bank balance.', 5],
     ],
 
     'Partnerships, companies, non-profit and incomplete records' => [
@@ -141,6 +194,19 @@ return [
         ['Authorised share capital is', ['reserves', 'capital already paid', 'the bank loan', 'the maximum share capital a company may issue'], 'D', 'It is stated in the constitution.', 2],
         ['Debentures are', ['ordinary shares', 'long-term loans to a company', 'dividends', 'current assets'], 'B', 'Holders receive fixed interest.', 2],
         ['Credit sales can be found from incomplete records using', ['the cash account only', 'the capital account', 'the total receivables (debtors) account', 'the depreciation account'], 'C', 'Missing figures are balancing items.', 3],
+        ['A and B share profits 3 : 2 after A\'s salary of GH¢4,000. Net profit is GH¢24,000. A\'s total share is', ['GH¢12,000', 'GH¢16,000', 'GH¢14,400', 'GH¢18,000'], 'B', '4,000 + 3/5 × 20,000.', 5],
+        ['Opening capital GH¢15,000; closing capital GH¢22,000; drawings GH¢3,000; no new capital. Profit is', ['GH¢4,000', 'GH¢7,000', 'GH¢10,000', 'GH¢25,000'], 'C', '22,000 − 15,000 + 3,000.', 5],
+        ['Subscriptions received GH¢6,000 include GH¢400 for next year and GH¢300 owing from last year. Subscriptions income for the year is', ['GH¢6,700', 'GH¢5,300', 'GH¢5,700', 'GH¢6,000'], 'B', '6,000 − 400 − 300.', 5],
+        ['A company issues 10,000 shares of GH¢1 at GH¢1.50. The share premium is', ['GH¢10,000', 'GH¢15,000', 'GH¢5,000', 'GH¢1,500'], 'C', '10,000 × 0.50.', 4],
+        ['A company has 50,000 ordinary shares and declares a dividend of GH¢0.20 per share. Total dividend is', ['GH¢50,000', 'GH¢2,500', 'GH¢10,000', 'GH¢1,000'], 'C', '50,000 × 0.20.', 3],
+        ['Bonus shares are issued', ['free to existing shareholders from reserves', 'for cash to the public', 'to creditors', 'to directors only'], 'A', 'Capitalisation of reserves.', 5],
+        ['Interest on drawings is', ['credited to the appropriation account', 'debited to the appropriation account', 'an expense', 'paid to the bank'], 'A', 'Charged to partners.', 5],
+        ['The excess of income over expenditure of a club is called', ['surplus', 'gross profit', 'net profit', 'capital'], 'A', 'Not-for-profit term.', 4],
+        ['Opening capital GH¢8,000, closing capital GH¢12,000, drawings GH¢2,000, no new capital. Profit is', ['GH¢6,000', 'GH¢4,000', 'GH¢2,000', 'GH¢10,000'], 'A', '12,000 − 8,000 + 2,000.', 5],
+        ['A and B share profits 3 : 2. Profit of GH¢10,000 gives A', ['GH¢6,000', 'GH¢4,000', 'GH¢5,000', 'GH¢3,000'], 'A', '3/5 × 10,000.', 4],
+        ['Goodwill is', ['the value of a business\'s reputation above its net assets', 'a current asset', 'cash at bank', 'a liability'], 'A', 'Intangible asset.', 4],
+        ['A company issues 10,000 shares of GH¢1 at GH¢1.20. The share premium is', ['GH¢2,000', 'GH¢12,000', 'GH¢10,000', 'GH¢1,200'], 'A', '10,000 × 0.20.', 5],
+        ['Subscriptions in arrears for a club are shown as a', ['current asset', 'current liability', 'income only', 'capital'], 'A', 'Owed by members.', 5],
     ],
 
     'SHS 1: The accounting equation and double entry' => [
@@ -154,6 +220,8 @@ return [
         ['Paying a creditor GH¢300 by cheque is recorded as', ['debit purchases, credit bank', 'debit bank, credit creditor', 'debit creditor, credit bank', 'debit capital, credit bank'], 'C', 'The liability and bank both fall.', 2],
         ['The owner brings GH¢10,000 cash into the business. The entry is', ['debit sales, credit capital', 'debit capital, credit cash', 'debit drawings, credit cash', 'debit cash, credit capital'], 'D', 'Cash rises; capital rises.', 1],
         ['Buying office furniture for cash affects', ['capital and cash', 'furniture (up) and cash (down)', 'sales and purchases', 'drawings and cash'], 'B', 'One asset replaces another.', 2],
+        ['Assets rise by GH¢5,000 and liabilities rise by GH¢2,000 during a period with no drawings or new capital. Profit is', ['GH¢5,000', 'GH¢7,000', 'GH¢2,000', 'GH¢3,000'], 'D', 'Capital increase = 5,000 − 2,000.', 5],
+        ['A business with capital GH¢40,000 and liabilities GH¢15,000 has total assets of', ['GH¢25,000', 'GH¢55,000', 'GH¢40,000', 'GH¢15,000'], 'B', 'A = C + L.', 3],
     ],
 
     'SHS 1: Final accounts of a sole trader' => [
@@ -162,11 +230,12 @@ return [
         ['A machine costs GH¢12,000, has a residual value of GH¢2,000 and a life of 5 years. What is the yearly straight-line depreciation?', ['GH¢2,400', 'GH¢2,000', 'GH¢2,800', 'GH¢10,000'], 'B', '(12,000 − 2,000) ÷ 5 = GH¢2,000 a year.', 2],
         ['In a statement of financial position, a bank overdraft is shown as', ['a current asset', 'a non-current asset', 'a current liability', 'capital'], 'C', 'It is repayable on demand.', 2],
         ['Net profit is added to capital in the', ['sales day book', 'trial balance', 'cash book', 'statement of financial position'], 'D', 'Drawings are deducted.', 2],
-        ['Carriage inwards is treated as part of', ['capital', 'selling expenses', 'cost of sales', 'non-current assets'], 'C', 'It is a cost of bringing goods in.', 2],
         ['Carriage outwards is treated as', ['income', 'part of cost of sales', 'a liability', 'a selling and distribution expense'], 'D', 'It is the cost of delivering goods to customers.', 2],
         ['Sales GH¢40,000, cost of sales GH¢25,000, expenses GH¢6,000. Net profit is', ['GH¢15,000', 'GH¢9,000', 'GH¢21,000', 'GH¢31,000'], 'B', 'Gross profit 15,000 − 6,000.', 2],
         ['Discount allowed is shown in the income statement as', ['a liability', 'income', 'an expense', 'an asset'], 'C', 'It reduces profit.', 2],
         ['Discount received is shown in the income statement as', ['capital', 'an expense', 'a liability', 'income'], 'D', 'It is a gain.', 2],
+        ['Gross profit is GH¢30,000; mark-up on cost is 50%. Sales were', ['GH¢45,000', 'GH¢60,000', 'GH¢90,000', 'GH¢75,000'], 'C', 'Cost = 60,000; sales = 90,000.', 5],
+        ['Inventory valued at cost GH¢8,000 can only be sold for GH¢6,500 after GH¢500 selling costs. It should be valued at', ['GH¢7,500', 'GH¢8,000', 'GH¢6,500', 'GH¢6,000'], 'D', 'NRV = 6,500 − 500.', 5],
     ],
 
     'SHS 2: Accounting concepts and conventions' => [
@@ -175,10 +244,11 @@ return [
         ['Assuming a business will continue to operate in the foreseeable future is the', ['accruals concept', 'consistency concept', 'historical cost concept', 'going concern concept'], 'D', 'It justifies valuing assets at cost rather than break-up value.', 2],
         ['The going concern concept assumes that the business will', ['close next month', 'continue in operation for the foreseeable future', 'be sold immediately', 'make no profit'], 'B', 'Assets are valued at cost, not break-up value.', 2],
         ['The consistency concept requires', ['only cash accounting', 'methods to change every year', 'the same accounting methods to be used from year to year', 'no depreciation'], 'C', 'It allows meaningful comparison.', 2],
-        ['The materiality concept means', ['insignificant items need not be treated strictly', 'all items must be capitalised', 'only cash is recorded', 'assets are revalued yearly'], 'A', 'A cheap stapler can be expensed.', 2],
-        ['The historical cost concept records assets at', ['their original purchase price', 'their current market value', 'their replacement cost', 'their selling price'], 'A', 'It is objective and verifiable.', 1],
-        ['Recording a building at its purchase price rather than its current value follows the', ['historical cost concept', 'going concern concept', 'realisation concept', 'materiality concept'], 'A', 'It is objective.', 1],
-        ['The concept that profits must not be overstated is', ['prudence (conservatism)', 'consistency', 'entity', 'dual aspect'], 'A', 'Anticipate losses, not gains.', 1],
+        ['The materiality concept means', ['all items must be capitalised', 'insignificant items need not be treated strictly', 'only cash is recorded', 'assets are revalued yearly'], 'B', 'A cheap stapler can be expensed.', 2],
+        ['The historical cost concept records assets at', ['their replacement cost', 'their current market value', 'their original purchase price', 'their selling price'], 'C', 'It is objective and verifiable.', 1],
+        ['Recording a building at its purchase price rather than its current value follows the', ['materiality concept', 'going concern concept', 'realisation concept', 'historical cost concept'], 'D', 'It is objective.', 1],
+        ['The concept that profits must not be overstated is', ['consistency', 'prudence (conservatism)', 'entity', 'dual aspect'], 'B', 'Anticipate losses, not gains.', 1],
+        ['Changing from straight-line to reducing-balance depreciation every year breaches the', ['entity concept', 'going concern concept', 'consistency concept', 'money measurement concept'], 'C', 'Comparability suffers.', 4],
     ],
 
     'SHS 2: Correction of errors and bank reconciliation' => [
@@ -191,6 +261,8 @@ return [
         ['A dishonoured cheque from a customer is recorded in the cash book on the', ['credit side', 'debit side', 'both sides', 'neither side'], 'A', 'It reverses the earlier receipt.', 3],
         ['A suspense account balance of GH¢200 debit means the trial balance', ['credit side was short by GH¢200', 'debit side was short by GH¢200', 'agreed', 'had no errors'], 'B', 'The suspense entry makes up the side that was short, so the debit side was short.', 3],
         ['Interest received credited by the bank should be', ['debited in the cash book', 'credited in the cash book', 'ignored', 'deducted from the statement'], 'A', 'It increases the bank balance.', 2],
+        ['The bank statement shows an overdraft of GH¢1,200. Unpresented cheques are GH¢400 and uncredited deposits GH¢900. The cash book balance is', ['GH¢700 overdraft', 'GH¢1,700 overdraft', 'GH¢300 credit', 'GH¢2,500 overdraft'], 'A', '−1,200 − 400 + 900.', 5],
+        ['A suspense account has a debit balance of GH¢90 caused by discount allowed of GH¢45 being credited instead of debited. The correction is', ['debit discount allowed GH¢90, credit suspense GH¢90', 'debit suspense GH¢45', 'credit discount allowed GH¢90', 'no entry'], 'A', 'Reverse and correct: twice the amount.', 5],
     ],
 
     'SHS 2: Not-for-profit organisations and incomplete records' => [
@@ -203,6 +275,9 @@ return [
         ['A statement of affairs is used to find', ['capital when records are incomplete', 'sales only', 'cash in hand only', 'the trial balance'], 'A', 'Profit = closing capital − opening capital + drawings − capital introduced.', 3],
         ['Subscriptions received in advance are shown as', ['a current liability', 'a current asset', 'income', 'capital'], 'A', 'They relate to the next year.', 2],
         ['Life membership fees are usually', ['credited to a special fund and spread over years', 'treated as current income in full', 'ignored', 'treated as expenses'], 'A', 'They benefit several years.', 3],
+        ['A club\'s opening accumulated fund is GH¢8,000; surplus GH¢2,500; life subscriptions capitalised GH¢500. The closing accumulated fund is', ['GH¢11,000', 'GH¢10,500', 'GH¢8,000', 'GH¢5,000'], 'A', '8,000 + 2,500 + 500.', 5],
+        ['Mark-up of 25% on cost is equivalent to a margin on sales of', ['20%', '25%', '33⅓%', '15%'], 'A', '25/125.', 5],
+        ['Cost of sales GH¢24,000 and margin 20%. Sales were', ['GH¢30,000', 'GH¢28,800', 'GH¢19,200', 'GH¢26,000'], 'A', '24,000 ÷ 0.8.', 5],
     ],
 
     'Cost accounting and inventory' => [
@@ -225,6 +300,7 @@ return [
         ['Falsifying financial statements to show higher profits is', ['fraud', 'prudence', 'consistency', 'accrual'], 'A', 'It misleads users.', 1],
         ['Professional competence means an accountant should', ['keep skills and knowledge up to date', 'work without training', 'guess figures', 'avoid standards'], 'A', 'Continuing professional development.', 1],
         ['An accountant who discovers fraud should', ['report it through proper channels', 'join it', 'ignore it', 'tell the newspapers first'], 'A', 'Integrity is required.', 2],
+        ['An auditor who owns shares in the client company faces a threat to', ['independence (self-interest threat)', 'competence', 'confidentiality', 'courtesy'], 'A', 'Objectivity may be compromised.', 5],
     ],
 
     'SHS 3: Ratio analysis' => [
@@ -238,17 +314,23 @@ return [
         ['Net profit GH¢12,000 on sales of GH¢60,000 gives a net profit margin of', ['20%', '12%', '5%', '50%'], 'A', '12,000/60,000 × 100.', 2],
         ['A current ratio of 2 : 1 means current assets are', ['twice current liabilities', 'half of current liabilities', 'equal to liabilities', 'zero'], 'A', 'It shows liquidity.', 2],
         ['Return on capital employed (ROCE) measures', ['profitability relative to capital used', 'liquidity', 'stock turnover', 'gearing only'], 'A', 'Net profit ÷ capital employed.', 2],
+        ['Current assets GH¢30,000 (inventory GH¢12,000); current liabilities GH¢15,000. The acid test ratio is', ['1.2 : 1', '2 : 1', '0.8 : 1', '3 : 1'], 'A', '(30,000 − 12,000)/15,000.', 5],
+        ['Credit sales GH¢120,000; average receivables GH¢20,000. The receivables collection period is about', ['61 days', '6 days', '30 days', '120 days'], 'A', '20,000/120,000 × 365.', 5],
+        ['A gearing ratio above 50% indicates that a company', ['relies heavily on borrowed funds', 'has no debt', 'is very liquid', 'has high inventory'], 'A', 'Higher financial risk.', 4],
+        ['Inventory turnover of 8 times a year means inventory is held on average for about', ['46 days', '8 days', '30 days', '365 days'], 'A', '365/8.', 4],
+        ['Net profit GH¢18,000 and capital employed GH¢120,000 give ROCE of', ['15%', '18%', '6.7%', '12%'], 'A', '18,000/120,000.', 4],
     ],
 
     'SHS 3: Partnership accounts' => [
         ['Where there is no partnership agreement, profits and losses are usually shared', ['equally', 'in the ratio of capitals', 'according to age', 'by the senior partner only'], 'A', 'The law fills the gap: equal shares, no interest on capital and no salaries.', 2],
         ['The account that shows how a partnership\'s profit is divided among the partners is the', ['appropriation account', 'trading account', 'realisation account', 'suspense account'], 'A', 'It deals with interest on capital, salaries and profit shares.', 2],
         ['The appropriation account of a partnership shows', ['how net profit is shared among partners', 'gross profit', 'cash received', 'assets bought'], 'A', 'It includes salaries and interest on capital.', 2],
-        ['Interest on drawings is', ['charged to partners and added to profit available', 'paid to partners', 'an expense', 'a liability'], 'A', 'It discourages heavy drawings.', 3],
         ['A partner\'s current account records', ['salaries, interest, share of profit and drawings', 'only capital introduced', 'fixed assets', 'loans from banks'], 'A', 'Capital accounts stay fixed.', 2],
-        ['Goodwill is', ['the value of a business\'s reputation above its net assets', 'a current asset', 'cash at bank', 'a liability'], 'A', 'It arises when a partner joins or leaves.', 2],
         ['Partners\' salaries are shown in the', ['appropriation account', 'income statement as expenses', 'trial balance only', 'cash book'], 'A', 'They are shares of profit.', 2],
         ['Interest on capital rewards partners for', ['the capital they invested', 'their work only', 'drawings', 'losses'], 'A', 'It is debited to the appropriation account.', 2],
+        ['A and B share profits equally after interest on capital at 10%. Capitals: A GH¢20,000, B GH¢10,000. Profit GH¢15,000. B\'s total share is', ['GH¢7,000', 'GH¢7,500', 'GH¢6,000', 'GH¢8,000'], 'A', 'Interest 2,000 + 1,000; residual 12,000 split 6,000 each; B = 1,000 + 6,000.', 5],
+        ['When a new partner pays for goodwill that is retained in the business, the old partners\' capital accounts are', ['credited in their old profit-sharing ratio', 'debited equally', 'unchanged', 'credited in the new ratio'], 'A', 'They earned the goodwill.', 5],
+        ['On admission of a partner, revaluation gain on assets is credited to', ['old partners in their old ratio', 'the new partner only', 'all partners equally', 'the income statement'], 'A', 'It arose before admission.', 5],
     ],
 
     'SHS 3: Labour costs, budgets and break-even' => [
@@ -262,5 +344,7 @@ return [
         ['At break-even point, profit is', ['zero', 'maximum', 'negative', 'equal to fixed costs'], 'A', 'Total revenue equals total cost.', 1],
         ['A budget is', ['a financial plan for a future period', 'a record of past sales', 'a ledger', 'a receipt'], 'A', 'It helps control spending.', 1],
         ['Fixed costs GH¢9,000; selling price GH¢15; variable cost GH¢6. Break-even units are', ['1,000', '600', '1,500', '450'], 'A', '9,000 ÷ 9.', 2],
+        ['Opening cash GH¢2,000; expected receipts GH¢15,000; expected payments GH¢18,500. The closing cash balance is', ['GH¢(1,500) overdraft', 'GH¢1,500', 'GH¢35,500', 'GH¢3,500'], 'A', '2,000 + 15,000 − 18,500.', 4],
+        ['Fixed costs GH¢30,000; C/S ratio 40%. Sales needed for a profit of GH¢10,000 are', ['GH¢100,000', 'GH¢75,000', 'GH¢40,000', 'GH¢16,000'], 'A', '(30,000 + 10,000)/0.4.', 5],
     ],
 ];

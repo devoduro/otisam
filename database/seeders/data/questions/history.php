@@ -32,6 +32,11 @@ return [
         ['Artefacts are', ['oral songs', 'written books', 'objects made by humans in the past', 'maps only'], 'C', 'Pots, beads and tools are artefacts.', 1],
         ['A disadvantage of written records from European traders is that they may be', ['in Twi', 'too old', 'unreadable always', 'biased'], 'D', 'They reflect the writers\' interests.', 2],
         ['The ancient Ghana Empire was famous for trading in', ['oil', 'gold', 'cocoa', 'rubber'], 'B', 'It was called "the land of gold".', 1],
+        ['The Ghana Empire declined partly because of', ['cocoa failure', 'the slave trade to America', 'British colonialism', 'attacks by the Almoravids'], 'D', 'Around 1076.', 5],
+        ['The Ghana Empire\'s capital Kumbi Saleh was divided into', ['two Christian quarters', 'a Muslim merchant town and a royal town', 'a port and a fort', 'a mine and a farm'], 'B', 'Described by al-Bakri.', 5],
+        ['Oral tradition as a historical source is weakened mainly by', ['too much detail', 'written dates', 'archaeological support', 'distortion over time'], 'D', 'Memory changes.', 4],
+        ['Carbon-14 dating is used to date', ['stone tools directly', 'organic remains', 'metal coins', 'written documents only'], 'B', 'Once-living material.', 5],
+        ['The study of past societies through material remains is', ['linguistics', 'anthropology', 'archaeology', 'numismatics'], 'C', 'Excavation.', 4],
     ],
 
     'States of Ghana' => [
@@ -57,6 +62,13 @@ return [
         ['The Bono state with capital at Bono-Manso was', ['a European fort', 'one of the earliest Akan states', 'a Ga state', 'a colonial creation'], 'B', 'It was later conquered by Asante.', 2],
         ['The Fante Confederation was formed in', ['1700', '1957', '1868', '1900'], 'C', 'It aimed at self-government and resisting Asante.', 3],
         ['The Ga people trace their migration to the coast from', ['Europe', 'Egypt directly', 'Mali', 'the east (Nigeria area)'], 'D', 'Tradition links them to the Benin region.', 3],
+        ['The Asante Empire expanded rapidly in the 18th century under', ['Prempeh I', 'Opoku Ware I', 'Kwaku Dua II', 'Osei Agyeman'], 'B', 'He conquered Akyem and Bono.', 4],
+        ['A major factor in the rise of the Asante state was', ['oil wealth', 'European support', 'the unifying role of the Golden Stool', 'a Muslim jihad'], 'C', 'It united the Asante states.', 4],
+        ['The Battle of Katamanso (1826) was fought between Asante and', ['the Portuguese', 'the Dagomba', 'the Ewe only', 'a coalition of coastal states and the British'], 'D', 'Asante was defeated.', 5],
+        ['The Odwira festival in Asante was important politically because', ['it marked independence', 'chiefs renewed allegiance to the Asantehene', 'Europeans attended', 'it ended slavery'], 'B', 'A unifying annual ceremony.', 5],
+        ['The Asante Empire\'s administration included', ['British advisers', 'elected parliaments', 'provincial governors and a council of chiefs', 'military juntas only'], 'C', 'Centralised under the Asantehene.', 4],
+        ['The Golden Stool is associated with', ['Opoku Ware II', 'Nana Yaa Asantewaa only', 'Osei Kwadwo', 'Okomfo Anokye'], 'D', 'Asante tradition.', 4],
+        ['Gonja was founded by', ['Na Gbewaa', 'Ndewura Jakpa', 'Osei Tutu', 'Ofori Panin'], 'B', 'Mande invaders.', 5],
     ],
 
     'Europeans on the coast and colonial rule' => [
@@ -78,6 +90,18 @@ return [
         ['The main reason the Europeans first came to the Gold Coast was', ['to spread democracy', 'trade in gold', 'tourism', 'to build roads'], 'B', 'Gold gave the coast its name.', 1],
         ['Cape Coast Castle served as the headquarters of the British until the capital moved to Accra in', ['1844', '1957', '1877', '1900'], 'C', 'Accra became the capital in 1877.', 3],
         ['The Sagrenti War of 1874 was fought between the British and', ['Ga', 'Fante', 'Ewe', 'Asante'], 'D', 'Sir Garnet Wolseley led the British.', 2],
+        ['The Dutch sold their forts on the Gold Coast to the British in', ['1850', '1872', '1900', '1957'], 'B', 'Including Elmina.', 5],
+        ['The Danes sold their forts to the British in', ['1957', '1872', '1850', '1700'], 'C', 'Including Christiansborg.', 5],
+        ['A major cause of the Anglo-Asante wars was', ['independence demands', 'the cocoa boom', 'the 1948 riots', 'Asante\'s desire to control trade with the coast'], 'D', 'Coastal states blocked Asante trade.', 4],
+        ['The Legislative Council of the Gold Coast was first established in', ['1925', '1850', '1946', '1951'], 'B', 'It had only official members at first.', 5],
+        ['The "Notes" (rent payments) for coastal forts were paid by Europeans to', ['the Pope', 'the British Crown', 'local African rulers', 'merchants in Europe'], 'C', 'E.g. the Elmina Note to Asante.', 5],
+        ['George Maclean (1830–1844) is remembered for', ['writing the 1992 Constitution', 'founding Kumasi', 'leading the 1948 riots', 'extending British judicial influence on the coast'], 'D', 'His work led to the Bond of 1844.', 5],
+        ['The Aborigines\' Rights Protection Society was formed to oppose the', ['Bond of 1844', 'poll tax', 'Lands Bill of 1897', 'cocoa hold-up'], 'C', 'Land alienation.', 5],
+        ['Indirect rule meant governing through', ['missionaries', 'British settlers', 'the army only', 'traditional rulers'], 'D', 'Lugard\'s system.', 4],
+        ['The Yaa Asantewaa War of 1900 was sparked by the British demand for', ['slaves', 'gold mines', 'cocoa farms', 'the Golden Stool'], 'D', 'Governor Hodgson\'s demand.', 4],
+        ['The Sagrenti War of 1874 was led on the British side by', ['Governor Hodgson', 'Sir Garnet Wolseley', 'George Maclean', 'Charles MacCarthy'], 'B', 'Sacked Kumasi.', 5],
+        ['George Maclean is remembered for', ['building Elmina Castle', 'founding the CPP', 'extending British influence through judicial work on the coast', 'leading the Sagrenti War'], 'C', 'Before the Bond of 1844.', 5],
+        ['The cocoa hold-up of 1937–38 was a protest against', ['mission schools', 'British taxes on salt', 'forced labour', 'low cocoa prices fixed by European firms'], 'D', 'Buying pool.', 5],
     ],
 
     'Nationalism and independence' => [
@@ -104,6 +128,20 @@ return [
         ['The shooting at Christiansborg Crossroads in 1948 involved', ['farmers', 'students', 'ex-servicemen marching to present a petition', 'chiefs'], 'C', 'Sergeant Adjetey was killed.', 2],
         ['The Watson Commission was set up to', ['build schools', 'write the 1992 Constitution', 'conduct elections', 'investigate the causes of the 1948 disturbances'], 'D', 'It recommended constitutional reform.', 2],
         ['Ghana became the first sub-Saharan African country to gain independence from colonial rule, on', ['1 July 1960', '6 March 1957', '24 April 1951', '7 January 1993'], 'B', 'It inspired other African nations.', 1],
+        ['The Burns Constitution of 1946 was significant because it', ['abolished chiefs', 'granted independence', 'gave Africans a majority in the Legislative Council', 'created the CPP'], 'C', 'It was the first such colony in British Africa.', 5],
+        ['The 1954 general election in the Gold Coast was won by the', ['NPP', 'NLM', 'UGCC', 'CPP'], 'D', 'Under the 1954 Constitution.', 4],
+        ['A major grievance behind the 1948 riots was', ['low taxes', 'high prices of imported goods and cutting of cocoa trees', 'too many jobs', 'free education'], 'B', 'Plus ex-servicemen\'s unpaid benefits.', 4],
+        ['The Mass Education Movement and the press helped nationalism by', ['supporting colonial rule', 'spreading political awareness', 'banning newspapers', 'stopping schools'], 'B', 'E.g. the Accra Evening News.', 4],
+        ['The 1956 general election was significant because', ['it was cancelled', 'the NLM won', 'the CPP\'s win led Britain to fix a date for independence', 'it created a monarchy'], 'C', 'Independence followed in 1957.', 5],
+        ['The UGCC was formed in', ['1949', '1947', '1951', '1957'], 'B', 'J. B. Danquah and others.', 4],
+        ['The 1948 riots followed the shooting of ex-servicemen at', ['Cape Coast', 'Kumasi', 'Christiansborg crossroads', 'Sekondi'], 'C', '28 February 1948.', 4],
+        ['The commission that investigated the 1948 disturbances was the', ['Coussey Committee', 'Watson Commission', 'Bourne Commission', 'Lennox-Boyd Commission'], 'B', 'Recommended constitutional change.', 5],
+        ['Positive Action was launched in', ['1952', '1948', '1950', '1956'], 'C', 'Strikes and boycotts.', 5],
+        ['Ghana became a republic on', ['1 July 1960', '6 March 1957', '24 February 1966', '1 July 1957'], 'A', 'Nkrumah as president.', 4],
+        ['The Coussey Committee of 1949 recommended', ['constitutional reform leading to the 1951 Constitution', 'independence in 1949', 'military rule', 'federation'], 'A', 'Greater African participation.', 5],
+        ['The CPP won the general election of', ['1951', '1947', '1945', '1966'], 'A', 'Nkrumah released from prison.', 4],
+        ['The National Liberation Movement (NLM) demanded', ['a federal system of government', 'immediate republic', 'one-party rule', 'union with Togo'], 'A', 'Asante-based movement.', 5],
+        ['British Togoland joined the Gold Coast after a plebiscite in', ['1956', '1951', '1960', '1946'], 'A', 'UN-supervised vote.', 5],
     ],
 
     'SHS 1: Why we study history and its sources' => [
@@ -116,6 +154,8 @@ return [
         ['Studying history helps a nation to', ['avoid change', 'forget its past', 'learn from past mistakes and achievements', 'ignore culture'], 'C', 'It builds national identity.', 1],
         ['Museums help in the study of history by', ['conducting elections', 'selling food', 'preserving artefacts and documents', 'teaching sports'], 'C', 'The National Museum is in Accra.', 1],
         ['Chronology in history means', ['counting people', 'studying rocks', 'drawing maps', 'arranging events in the order they happened'], 'D', 'Timelines show chronology.', 1],
+        ['Corroboration in history means', ['ignoring dates', 'accepting one source', 'inventing evidence', 'checking a source against other independent evidence'], 'D', 'Improves reliability.', 4],
+        ['Dendrochronology dates timber by', ['radioactive decay', 'counting tree rings', 'oral tradition', 'pottery styles'], 'B', 'Each ring is one year.', 5],
     ],
 
     'SHS 1: Ghanaian prehistory' => [
@@ -128,6 +168,7 @@ return [
         ['Microliths are', ['gold ornaments', 'large iron weapons', 'clay pots', 'small stone tools'], 'D', 'They were used in the Late Stone Age.', 2],
         ['Early humans in the Stone Age lived mainly by', ['factory work', 'hunting and gathering', 'trading oil', 'mining gold with machines'], 'B', 'Before farming developed.', 1],
         ['The discovery of fire helped early people to', ['write books', 'build cars', 'cook food and keep warm', 'fly'], 'C', 'It also scared away animals.', 1],
+        ['Evidence of early iron working in Ghana has been found at', ['Kumasi only', 'Accra only', 'Begho and Daboya', 'Keta'], 'C', 'Archaeological sites.', 5],
     ],
 
     'SHS 1: Rise of states and kingdoms in Ghana' => [
@@ -140,6 +181,8 @@ return [
         ['The Akwamu kingdom at its height controlled', ['the Volta Lake', 'northern Ghana', 'the Accra coast and its trade', 'the Sahara'], 'C', 'It captured Christiansborg Castle in 1693.', 3],
         ['The Mole-Dagbani states include Dagbon, Mamprugu and', ['Fante', 'Asante', 'Akyem', 'Nanumba'], 'D', 'They share a common ancestry.', 2],
         ['Asante grew powerful partly because of its control of', ['cocoa factories', 'oil wells', 'railways', 'trade in gold and kola'], 'D', 'Trade brought wealth and guns.', 2],
+        ['The Akwamu empire collapsed in 1730 mainly after defeat by', ['Asante', 'Akyem', 'the British', 'Denkyira'], 'B', 'Akyem conquered Akwamu.', 5],
+        ['A factor common to the rise of Asante, Akwamu and Denkyira was', ['cocoa farming', 'Christian missions', 'control of trade routes and access to firearms', 'colonial support'], 'C', 'Trade and military power.', 4],
     ],
 
     'SHS 1: Pre-colonial society, art and economy' => [
@@ -153,6 +196,8 @@ return [
         ['Salaga was an important pre-colonial', ['fishing port', 'market town for kola and slaves', 'mining town', 'castle'], 'B', 'It linked northern and southern trade.', 2],
         ['The extended family system in pre-colonial Ghana provided', ['bank loans', 'social security for members', 'government jobs', 'foreign aid'], 'B', 'Members cared for each other.', 1],
         ['Long-distance trade linked forest states with', ['Asia directly', 'only Europe', 'northern markets such as Salaga and the Sahel', 'the Americas'], 'C', 'Kola went north; salt came south.', 2],
+        ['The Asante "Great Roads" were important because they', ['were built by the British', 'were railway lines', 'carried oil', 'linked Kumasi to provinces for trade and administration'], 'D', 'Radiating from Kumasi.', 5],
+        ['Cowries were used in pre-colonial West Africa as', ['building material', 'weapons', 'food', 'currency'], 'D', 'Imported from the Indian Ocean.', 4],
     ],
 
     'SHS 1: Change and continuity in religious practices' => [
@@ -164,6 +209,7 @@ return [
         ['The Methodist Mission began work at', ['Ho', 'Tamale', 'Kumasi first', 'Cape Coast'], 'D', 'It started in 1835.', 2],
         ['A continuity in Ghanaian religious practice is', ['the end of all festivals', 'libation and respect for ancestors alongside Christianity and Islam', 'banning traditional music', 'abandoning naming ceremonies'], 'B', 'Many traditions survive.', 2],
         ['Missionary activity in the Gold Coast led to the founding of', ['castles', 'mines', 'schools and churches', 'markets only'], 'C', 'Education spread widely.', 1],
+        ['The arrival of Islam in northern Ghana led to', ['abandonment of chieftaincy', 'literacy in Arabic and new trade links', 'Christian schools', 'colonial rule'], 'B', 'Muslim scholars served courts.', 4],
     ],
 
     'SHS 2: European encounter and colonial rule' => [
@@ -174,9 +220,13 @@ return [
         ['The Anglo-Asante war of 1874 is also called the', ['Nsamankow War', 'War of the Golden Stool', 'Katamanso War', 'Sagrenti War'], 'D', 'It is named after Sir Garnet Wolseley.', 2],
         ['Yaa Asantewaa was the queen mother of', ['Mampong', 'Ejisu', 'Juaben', 'Bekwai'], 'B', 'She led the 1900 war against the British.', 2],
         ['The system of ruling through traditional chiefs used by the British was', ['assimilation', 'direct rule', 'indirect rule', 'association'], 'C', 'Lord Lugard promoted it.', 1],
-        ['The French colonial policy of making Africans into French citizens was', ['assimilation', 'indirect rule', 'apartheid', 'mandate'], 'A', 'It was applied in Senegal.', 2],
-        ['The British used chiefs to collect taxes and maintain order under', ['indirect rule', 'assimilation', 'apartheid', 'direct rule only'], 'A', 'Native Authorities were set up.', 1],
-        ['The Poll Tax Ordinance of 1852 was resisted because', ['people saw no benefits from it', 'it was too low', 'it funded schools well', 'it was voluntary'], 'A', 'It was abandoned in the 1860s.', 3],
+        ['The French colonial policy of making Africans into French citizens was', ['apartheid', 'indirect rule', 'assimilation', 'mandate'], 'C', 'It was applied in Senegal.', 2],
+        ['The British used chiefs to collect taxes and maintain order under', ['direct rule only', 'assimilation', 'apartheid', 'indirect rule'], 'D', 'Native Authorities were set up.', 1],
+        ['The Poll Tax Ordinance of 1852 was resisted because', ['it funded schools well', 'it was too low', 'people saw no benefits from it', 'it was voluntary'], 'C', 'It was abandoned in the 1860s.', 3],
+        ['The Native Jurisdiction Ordinance of 1883 aimed to', ['build railways', 'abolish chiefs', 'grant independence', 'define and control the powers of chiefs'], 'D', 'Part of indirect rule.', 5],
+        ['The Gold Coast railway from Sekondi to Tarkwa was built mainly to', ['carry cocoa from the north', 'transport gold and mining equipment', 'move troops to Asante only', 'connect to Togo'], 'B', 'Completed in 1901.', 4],
+        ['Governor Guggisberg (1919–1927) is remembered for', ['the 1948 riots', 'the Bond of 1844', 'Takoradi Harbour, Korle Bu Hospital and Achimota School', 'the slave trade'], 'C', 'Major infrastructure projects.', 4],
+        ['The Lands Bill of 1897 was opposed because it', ['gave land to chiefs', 'threatened customary ownership of land', 'abolished taxes', 'built railways'], 'B', 'The ARPS was formed.', 4],
     ],
 
     'SHS 2: Nationalism and the road to independence' => [
@@ -184,11 +234,13 @@ return [
         ['The Convention People\'s Party (CPP) was formed by Kwame Nkrumah on', ['6 March 1957', '12 June 1949', '4 August 1947', '1 July 1960'], 'B', 'It demanded "Self-Government Now".', 2],
         ['Nkrumah\'s 1950 campaign of strikes and non-cooperation was called', ['the Accra Riots', 'Operation Feed Yourself', 'Positive Action', 'the Big Six'], 'C', 'He was jailed but won the 1951 election from prison.', 2],
         ['The National Congress of British West Africa (1920) was led by', ['K. A. Busia', 'Kwame Nkrumah', 'J. B. Danquah', 'J. E. Casely Hayford'], 'D', 'It brought together nationalists from four British West African colonies.', 3],
-        ['The National Congress of British West Africa was formed in', ['1920', '1897', '1947', '1957'], 'A', 'J. E. Casely Hayford was a leader.', 2],
-        ['The Coussey Committee (1949) recommended', ['constitutional reforms towards self-government', 'more colonial control', 'abolishing chiefs', 'independence in 1950'], 'A', 'It led to the 1951 Constitution.', 2],
-        ['The CPP won the 1951 general election and Nkrumah became', ['Leader of Government Business', 'Governor', 'King', 'Chief Justice'], 'A', 'He was later Prime Minister.', 2],
-        ['British Togoland joined the Gold Coast after a plebiscite in', ['1956', '1945', '1960', '1966'], 'A', 'It is now part of the Volta Region.', 3],
+        ['The National Congress of British West Africa was formed in', ['1957', '1897', '1947', '1920'], 'D', 'J. E. Casely Hayford was a leader.', 2],
+        ['The Coussey Committee (1949) recommended', ['independence in 1950', 'more colonial control', 'abolishing chiefs', 'constitutional reforms towards self-government'], 'D', 'It led to the 1951 Constitution.', 2],
+        ['The CPP won the 1951 general election and Nkrumah became', ['King', 'Governor', 'Leader of Government Business', 'Chief Justice'], 'C', 'He was later Prime Minister.', 2],
         ['The National Liberation Movement (NLM) was based mainly in', ['Asante', 'the Volta Region', 'Accra', 'the Northern Territories'], 'A', 'It demanded federalism.', 2],
+        ['The Accra Riots of 1948 were sparked by', ['the shooting of ex-servicemen at Christiansborg Crossroads', 'the Bond of 1844', 'a cocoa boom', 'the 1951 election'], 'A', 'Looting followed.', 4],
+        ['The Gold Coast Youth Conference was led by', ['J. B. Danquah', 'Kwame Nkrumah', 'Jerry Rawlings', 'K. A. Busia'], 'A', 'It began in the 1930s.', 5],
+        ['The Pan-African Congress held in Manchester in 1945 was attended by', ['Kwame Nkrumah', 'J. B. Danquah', 'Prempeh II', 'Kofi Busia'], 'A', 'It boosted nationalism.', 4],
     ],
 
     'SHS 2: Post-independence Ghana' => [
@@ -202,6 +254,9 @@ return [
         ['The first President of the Fourth Republic was', ['Jerry John Rawlings', 'John Agyekum Kufuor', 'John Atta Mills', 'Kwame Nkrumah'], 'A', 'He served from 1993 to 2001.', 1],
         ['The Akosombo Dam was completed under the government of', ['Kwame Nkrumah', 'Kofi Busia', 'Jerry Rawlings', 'John Kufuor'], 'A', 'It was opened in 1966.', 2],
         ['The Free Compulsory Universal Basic Education (FCUBE) programme was introduced in', ['1996', '1957', '1966', '2010'], 'A', 'Under the Fourth Republic.', 3],
+        ['A major economic policy of the PNDC government from 1983 was the', ['Economic Recovery Programme (ERP)', 'Operation Feed Yourself', 'Seven-Year Development Plan', 'One District One Factory'], 'A', 'Supported by the IMF and World Bank.', 5],
+        ['Operation Feed Yourself was launched under', ['Col. I. K. Acheampong', 'Kwame Nkrumah', 'Jerry Rawlings', 'Hilla Limann'], 'A', 'In 1972.', 4],
+        ['The Volta River Project was financed partly by loans from', ['the World Bank, USA and UK', 'the Soviet Union only', 'Nigeria', 'China only'], 'A', 'VALCO was a key partner.', 5],
     ],
 
     'SHS 3: Early civilisations of Africa' => [
@@ -214,6 +269,8 @@ return [
         ['Hieroglyphics was the writing system of ancient', ['Egypt', 'Mali', 'Songhai', 'Benin'], 'A', 'It used pictures and symbols.', 1],
         ['The ancient Egyptian civilisation developed along the', ['River Nile', 'River Niger', 'River Congo', 'River Volta'], 'A', 'Annual floods made farming possible.', 1],
         ['Carthage was an ancient city in present-day', ['Tunisia', 'Ghana', 'Kenya', 'Nigeria'], 'A', 'It rivalled Rome.', 2],
+        ['The Kingdom of Aksum was among the first states to adopt', ['Christianity as a state religion', 'Islam', 'Buddhism', 'Hinduism'], 'A', 'Under King Ezana, 4th century.', 5],
+        ['The Great Zimbabwe civilisation was associated mainly with the', ['Shona people', 'Zulu', 'Yoruba', 'Ashanti'], 'A', '11th–15th centuries.', 5],
     ],
 
     'SHS 3: The trans-Saharan trade' => [
@@ -226,6 +283,8 @@ return [
         ['Taghaza was an important source of', ['salt', 'gold', 'ivory', 'kola'], 'A', 'Buildings there were made of salt blocks.', 2],
         ['Timbuktu, Gao and Jenne were important', ['trans-Saharan trading cities', 'fishing villages', 'European forts', 'mining camps'], 'A', 'They were also learning centres.', 2],
         ['Berber and Arab traders crossed the Sahara in groups called', ['caravans', 'fleets', 'trains', 'convoys of trucks'], 'A', 'Camel caravans.', 1],
+        ['The decline of the trans-Saharan trade was hastened by', ['the growth of Atlantic coastal trade with Europeans', 'the discovery of oil', 'the slave trade abolition', 'railways'], 'A', 'Trade shifted to the coast.', 5],
+        ['The Mali Empire\'s wealth came largely from', ['control of gold fields and trade routes', 'cocoa', 'oil', 'rubber'], 'A', 'Bambuk and Bure gold.', 4],
     ],
 
     'SHS 3: The trans-Atlantic slave trade' => [
@@ -238,6 +297,9 @@ return [
         ['The "Middle Passage" was the voyage of enslaved Africans', ['across the Atlantic to the Americas', 'from Europe to Africa', 'across the Sahara', 'along the Nile'], 'A', 'Conditions were terrible.', 1],
         ['A major effect of the slave trade on West Africa was', ['loss of population and insecurity', 'rapid industrial growth', 'peace', 'better education'], 'A', 'Millions were taken.', 1],
         ['The triangular trade linked Europe, Africa and', ['the Americas', 'Asia', 'Australia', 'Antarctica'], 'A', 'Goods, slaves and raw materials.', 1],
+        ['The abolition of the slave trade was influenced by', ['humanitarian campaigns and economic changes', 'African kings demanding more trade', 'Asian traders', 'the discovery of cocoa'], 'A', 'Wilberforce and the Industrial Revolution.', 4],
+        ['After abolition, the British navy patrolled the West African coast to', ['intercept slave ships', 'buy slaves', 'attack Asante', 'protect Portuguese traders'], 'A', 'The West Africa Squadron.', 4],
+        ['The "Door of No Return" at Cape Coast and Elmina symbolises', ['enslaved Africans\' final departure from Africa', 'a trading office', 'a church entrance', 'a fort gate for soldiers'], 'A', 'A memorial site.', 4],
     ],
 
     'SHS 3: Partition of Africa and resistance' => [
@@ -251,5 +313,10 @@ return [
         ['Ethiopia defeated Italy at the Battle of Adwa in', ['1896', '1935', '1884', '1957'], 'A', 'Ethiopia remained independent.', 2],
         ['The "Scramble for Africa" refers to', ['the rapid European colonisation of Africa in the late 1800s', 'African trade fairs', 'the slave trade', 'independence movements'], 'A', 'It followed the Berlin Conference.', 1],
         ['Prempeh I of Asante was exiled by the British to', ['the Seychelles', 'Liberia', 'England', 'Jamaica'], 'A', 'He was first held in Sierra Leone, then the Seychelles; he returned in 1924.', 3],
+        ['The principle of "effective occupation" from the Berlin Conference required European powers to', ['establish real control before claiming territory', 'pay Africans for land', 'leave Africa', 'trade only on the coast'], 'A', 'It accelerated conquest.', 5],
+        ['Menelik II is remembered for', ['defeating Italy at Adwa', 'founding Asante', 'signing the Bond of 1844', 'building Elmina'], 'A', 'Ethiopia kept its independence.', 4],
+        ['The Maji Maji fighters believed that', ['sacred water would protect them from bullets', 'guns were useless', 'the Germans would leave', 'Britain would help'], 'A', 'Maji means water.', 5],
+        ['The Herero and Nama genocide (1904–1908) was carried out by', ['Germany in South West Africa', 'Britain in Ghana', 'France in Senegal', 'Portugal in Angola'], 'A', 'Present-day Namibia.', 5],
+        ['A major reason for the partition of Africa was', ['the search for raw materials and markets', 'African invitation', 'abolition of slavery only', 'tourism'], 'A', 'Industrial demand.', 4],
     ],
 ];

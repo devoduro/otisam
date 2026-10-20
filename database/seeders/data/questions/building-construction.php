@@ -32,6 +32,13 @@ return [
         ['Timbering in trenches is used to', ['level the ground', 'decorate trenches', 'drain water', 'prevent the sides from collapsing'], 'D', 'It protects workers.', 2],
         ['A site investigation is carried out to', ['install lights', 'paint the building', 'choose curtains', 'find the nature of the soil and site conditions'], 'D', 'It informs foundation design.', 1],
         ['Backfilling means', ['digging trenches', 'returning excavated soil around foundations', 'pouring roofs', 'plastering walls'], 'B', 'It is compacted in layers.', 2],
+        ['The safe bearing capacity of a soil is 150 kN/m² and the wall load is 300 kN per metre. The minimum strip width is', ['0.5 m', '2 m', '1.5 m', '450 m'], 'B', '300/150.', 5],
+        ['Differential settlement in buildings causes', ['better drainage', 'stronger foundations', 'cracking of walls', 'no effect'], 'C', 'Parts settle unevenly.', 4],
+        ['The volume of excavation for a trench 20 m long, 0.6 m wide and 0.9 m deep is', ['5.4 m³', '12 m³', '18 m³', '10.8 m³'], 'D', '20 × 0.6 × 0.9.', 4],
+        ['The 3-4-5 method on site is used to', ['measure levels', 'set out right angles', 'mix concrete', 'check plumb'], 'B', 'Pythagorean triple.', 4],
+        ['A raft foundation is suitable for', ['light fences', 'rock only', 'soils of low bearing capacity', 'garden walls'], 'C', 'Spreads load over the whole area.', 5],
+        ['Pile foundations transfer loads to', ['the roof', 'the topsoil', 'the walls', 'deeper firm strata'], 'D', 'Through weak soil.', 5],
+        ['A strip foundation for a wall 225 mm thick is typically', ['narrower than the wall', 'wider than the wall', 'equal to the wall', 'not needed'], 'B', 'Spreads load.', 4],
     ],
 
     'Materials' => [
@@ -56,6 +63,15 @@ return [
         ['Aggregate in concrete is', ['water', 'cement only', 'sand and gravel or crushed stone', 'steel'], 'C', 'Fine and coarse aggregate.', 1],
         ['Clay bricks are hardened by', ['freezing', 'drying in shade only', 'soaking', 'burning in a kiln'], 'D', 'Firing makes them strong.', 1],
         ['Mild steel reinforcement bars are protected in concrete by', ['paint only', 'adequate concrete cover', 'oil', 'nothing'], 'B', 'Cover prevents rusting.', 2],
+        ['How many bags of cement (50 kg) are needed for 1 m³ of 1:2:4 concrete if dry volume is 1.54 m³ and cement density is 1,440 kg/m³?', ['about 20 bags', 'about 2 bags', 'about 12 bags', 'about 6.3 bags'], 'D', '1.54 × 1/7 × 1,440 ÷ 50.', 5],
+        ['The water–cement ratio mainly affects concrete\'s', ['colour only', 'strength and workability', 'weight only', 'smell'], 'B', 'More water lowers strength.', 4],
+        ['Honeycombing in concrete is caused by', ['using steel', 'too much curing', 'poor compaction', 'painting'], 'C', 'Voids remain.', 4],
+        ['The characteristic strength of concrete is usually tested at', ['1 day', '28 days', '7 hours', '1 year'], 'B', 'Cube tests.', 4],
+        ['Concrete cubes 150 mm fail at 675 kN. The compressive strength is', ['45 N/mm²', '4.5 N/mm²', '30 N/mm²', '22.5 N/mm²'], 'C', '675,000 ÷ 22,500 mm².', 5],
+        ['A nominal concrete mix of 1 : 2 : 4 means', ['aggregate : sand : cement', 'sand : cement : water', 'cement : sand : aggregate', 'water : cement : sand'], 'C', 'Proportions by volume.', 4],
+        ['Curing concrete is done to', ['reduce weight', 'speed drying', 'colour it', 'allow proper hydration and strength gain'], 'D', 'Keep moist.', 4],
+        ['The water-cement ratio mainly affects concrete\'s', ['colour', 'strength and workability', 'weight only', 'shape'], 'B', 'More water lowers strength.', 5],
+        ['Seasoning of timber reduces its', ['grain', 'length', 'moisture content', 'colour'], 'C', 'Prevents warping and decay.', 4],
     ],
 
     'Walls and bonding' => [
@@ -77,8 +93,16 @@ return [
         ['In English bond, courses of headers alternate with courses of', ['closers only', 'headers', 'stretchers', 'soldiers'], 'C', 'It is a strong bond.', 2],
         ['In Flemish bond, each course has', ['only headers', 'only stretchers', 'alternate headers and stretchers', 'no pattern'], 'C', 'It looks attractive.', 2],
         ['A cavity wall has', ['only blocks', 'one thick leaf', 'no mortar', 'two leaves separated by a gap'], 'D', 'The gap resists moisture and heat.', 2],
-        ['The purpose of bonding in brickwork is to', ['distribute loads and give strength', 'decorate only', 'save mortar', 'make walls thinner'], 'A', 'Joints are staggered.', 1],
-        ['A queen closer is', ['a brick cut in half lengthwise', 'a whole brick', 'a roof tile', 'a door frame'], 'A', 'Used to complete bond at corners.', 3],
+        ['The purpose of bonding in brickwork is to', ['make walls thinner', 'decorate only', 'save mortar', 'distribute loads and give strength'], 'D', 'Joints are staggered.', 1],
+        ['A queen closer is', ['a whole brick', 'a brick cut in half lengthwise', 'a roof tile', 'a door frame'], 'B', 'Used to complete bond at corners.', 3],
+        ['A one-brick wall in English bond is about', ['330 mm thick', '102.5 mm thick', '215 mm thick', '50 mm thick'], 'C', 'The length of a standard brick.', 5],
+        ['Wall ties in cavity walls are used to', ['support the roof only', 'drain water', 'insulate', 'connect the two leaves for stability'], 'D', 'Stainless steel ties.', 4],
+        ['A wall 10 m long and 3 m high uses 10 blocks per m² (ignoring openings). The blocks needed are', ['100', '30', '3,000', '300'], 'D', '30 m² × 10.', 4],
+        ['Movement joints in long walls are provided to', ['save bricks', 'allow for thermal and moisture movement', 'add decoration', 'support roofs'], 'B', 'Prevent cracking.', 4],
+        ['In English bond, courses alternate between', ['headers only', 'stretchers only', 'headers and stretchers', 'soldiers and stretchers'], 'C', 'Strong bond.', 4],
+        ['Flemish bond has in each course', ['diagonal bricks', 'only headers', 'only stretchers', 'alternate headers and stretchers'], 'D', 'Decorative.', 4],
+        ['A damp-proof course is placed to', ['stop moisture rising up walls', 'support the roof', 'decorate the wall', 'carry pipes'], 'A', 'Above ground level.', 4],
+        ['A lintel is placed', ['over openings to carry the load above', 'under foundations', 'at the roof ridge', 'in the floor'], 'A', 'Spans doors and windows.', 4],
     ],
 
     'Roofs, floors and finishes' => [
@@ -103,6 +127,13 @@ return [
         ['Screeding a floor means', ['laying a smooth, level layer of cement mortar', 'painting it', 'tiling it', 'carpeting it'], 'A', 'It prepares the surface for finishes.', 2],
         ['A roof truss is', ['a triangulated frame supporting the roof', 'a floor tile', 'a window', 'a door'], 'A', 'It spans between walls.', 1],
         ['Roofing sheets in Ghana are commonly made of', ['aluminium or galvanised steel', 'glass', 'paper', 'clay only'], 'A', 'They are light and durable.', 1],
+        ['A roof with a span of 8 m and pitch of 30° has a rise of about (tan 30° ≈ 0.577)', ['2.31 m', '4.62 m', '1.15 m', '8 m'], 'A', 'Half span × tan 30° = 4 × 0.577.', 5],
+        ['Timber suspended floors need underfloor ventilation to', ['prevent dry rot', 'increase heat', 'reduce cost', 'attract termites'], 'A', 'Moist timber decays.', 4],
+        ['A floor 6 m × 4 m tiled with 400 mm × 400 mm tiles needs (ignoring waste)', ['150 tiles', '24 tiles', '96 tiles', '600 tiles'], 'A', '24 m² ÷ 0.16 m².', 5],
+        ['A roof with slopes on all four sides is a', ['hipped roof', 'gable roof', 'lean-to roof', 'flat roof'], 'A', 'Hip ends.', 4],
+        ['The horizontal timber at the apex of a pitched roof is the', ['ridge board', 'wall plate', 'purlin', 'rafter'], 'A', 'Top of the roof.', 4],
+        ['A wall plate', ['spreads the roof load onto the wall', 'covers the floor', 'holds glass', 'drains water'], 'A', 'Bedded on top of the wall.', 4],
+        ['Plastering is applied to walls mainly to', ['give a smooth, durable finish', 'support loads', 'insulate electrically', 'hold windows'], 'A', 'Rendering surface.', 4],
     ],
 
     'Safety and services' => [
@@ -120,5 +151,6 @@ return [
         ['Lightning conductors on tall buildings are connected to', ['an earth electrode', 'the water tank', 'the roof gutter only', 'the doorbell'], 'A', 'They conduct strikes safely to earth.', 2],
         ['Hard hats, boots and gloves on a building site are examples of', ['personal protective equipment', 'tools', 'materials', 'plant'], 'A', 'PPE protects workers.', 1],
         ['A manhole in a drainage system allows', ['access for inspection and cleaning', 'water storage', 'electricity supply', 'ventilation only'], 'A', 'It is covered by a lid.', 1],
+        ['The minimum fall for a 100 mm drainage pipe is about', ['1 in 40', '1 in 400', '1 in 4', 'level'], 'A', 'It ensures self-cleansing flow.', 5],
     ],
 ];

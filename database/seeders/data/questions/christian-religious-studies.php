@@ -56,6 +56,31 @@ return [
         ['The prophet Amos is known for preaching against', ['foreign marriage', 'idol making only', 'Sabbath breaking only', 'social injustice'], 'D', '"Let justice roll down like waters."', 2],
         ['Naboth\'s vineyard was seized by', ['David', 'King Ahab and Jezebel', 'Solomon', 'Saul'], 'B', '1 Kings 21.', 2],
         ['The prophet who anointed David as king was', ['Elijah', 'Nathan', 'Samuel', 'Isaiah'], 'C', '1 Samuel 16.', 1],
+        ['The Ten Commandments were given to Israel to', ['choose a king', 'help them build the temple', 'defeat the Philistines', 'guide their relationship with God and one another'], 'D', 'Exodus 20.', 4],
+        ['Saul was rejected as king mainly because he', ['was too young', 'disobeyed God\'s command regarding the Amalekites', 'refused to fight', 'married a foreigner'], 'B', '1 Samuel 15.', 4],
+        ['Nathan\'s parable of the ewe lamb was used to', ['warn Ahab', 'praise Solomon', 'convict David of his sin with Bathsheba', 'teach farming'], 'C', '2 Samuel 12.', 4],
+        ['The division of the kingdom of Israel after Solomon was caused mainly by', ['Elijah\'s preaching', 'a foreign invasion', 'a famine', 'Rehoboam\'s harsh policies'], 'D', 'Jeroboam led the northern tribes.', 5],
+        ['Jeremiah\'s new covenant prophecy promised that God would', ['build a new temple', 'write His law on people\'s hearts', 'destroy Babylon', 'send rain'], 'B', 'Jeremiah 31:33.', 5],
+        ['Amos condemned the people of Israel mainly for', ['refusing to farm', 'oppressing the poor while practising empty worship', 'building the temple', 'marrying Egyptians'], 'B', 'Amos 5:21–24.', 5],
+        ['Elijah\'s encounter with God at Horeb showed that God spoke in', ['the strong wind', 'the earthquake', 'the fire', 'a still small voice'], 'D', '1 Kings 19:12.', 5],
+        ['The Babylonian exile of Judah began after the fall of Jerusalem in', ['722 BC', '586 BC', '1000 BC', '70 AD'], 'B', 'Nebuchadnezzar destroyed the temple.', 5],
+        ['The fall of the Northern Kingdom (Israel) in 722 BC was to', ['Persia', 'Babylon', 'Assyria', 'Egypt'], 'C', 'Samaria was captured.', 5],
+        ['Jeremiah was called the "weeping prophet" because he', ['was a king', 'was always sick', 'lost his family', 'lamented Judah\'s sin and coming destruction'], 'D', 'Lamentations is linked to him.', 4],
+        ['The sign of God\'s covenant with Noah was the', ['ark', 'circumcision', 'Sabbath', 'rainbow'], 'D', 'Genesis 9.', 4],
+        ['Joseph was sold by his brothers to', ['Philistines', 'Ishmaelite traders', 'Egyptians directly', 'Moabites'], 'B', 'Genesis 37.', 4],
+        ['Moses\' father-in-law who advised him to appoint judges was', ['Laban', 'Aaron', 'Jethro', 'Eli'], 'C', 'Exodus 18.', 4],
+        ['The prophet who confronted David over Bathsheba was', ['Samuel', 'Nathan', 'Elijah', 'Gad'], 'B', '2 Samuel 12.', 4],
+        ['On Mount Carmel, Elijah challenged the prophets of', ['Molech', 'Dagon', 'Baal', 'Chemosh'], 'C', '1 Kings 18.', 4],
+        ['The kingdom of Israel divided after the death of', ['Ahab', 'David', 'Saul', 'Solomon'], 'D', 'Rehoboam and Jeroboam.', 4],
+        ['The prophet called from among the shepherds of Tekoa was', ['Hosea', 'Amos', 'Isaiah', 'Micah'], 'B', 'Amos 1:1.', 5],
+        ['Hosea\'s marriage to Gomer symbolised', ['the exile', 'royal power', 'God\'s faithful love for unfaithful Israel', 'temple worship'], 'C', 'Covenant love.', 5],
+        ['Jeremiah\'s new covenant would be written', ['on scrolls', 'on stone tablets', 'in the temple', 'on people\'s hearts'], 'D', 'Jeremiah 31.', 5],
+        ['The king who repaired the temple and found the Book of the Law was', ['Hezekiah', 'Josiah', 'Ahaz', 'Manasseh'], 'B', '2 Kings 22.', 5],
+        ['God called Samuel while he served in the temple under', ['Elijah', 'Nathan', 'Saul', 'Eli'], 'D', '1 Samuel 3.', 4],
+        ['Elijah\'s successor who received a double portion of his spirit was', ['Isaiah', 'Gehazi', 'Jonah', 'Elisha'], 'D', '2 Kings 2.', 4],
+        ['Naaman was healed of leprosy after washing seven times in the', ['Nile', 'Jordan', 'Euphrates', 'Red Sea'], 'B', '2 Kings 5.', 4],
+        ['The king whose life was extended by fifteen years was', ['Ahab', 'Josiah', 'Hezekiah', 'Uzziah'], 'C', '2 Kings 20.', 5],
+        ['Jonah was sent to preach to', ['Nineveh', 'Babylon', 'Jerusalem', 'Tyre'], 'A', 'Jonah 1.', 4],
     ],
 
     'New Testament: Jesus' => [
@@ -86,6 +111,24 @@ return [
         ['Jesus raised Lazarus from the dead at', ['Cana', 'Nain', 'Jericho', 'Bethany'], 'D', 'John 11.', 2],
         ['The tax collector who climbed a tree to see Jesus was', ['Matthew', 'Zacchaeus', 'Nicodemus', 'Bartimaeus'], 'B', 'Luke 19.', 1],
         ['Jesus\' transfiguration was witnessed by Peter, James and', ['Thomas', 'Andrew', 'John', 'Philip'], 'C', 'Moses and Elijah appeared.', 2],
+        ['The temptations of Jesus in the wilderness show that he', ['sought earthly power', 'performed many miracles', 'relied on God\'s word to resist evil', 'gave up his mission'], 'C', 'Matthew 4.', 4],
+        ['Jesus\' parable of the sower explains', ['the end of the world only', 'how to plant crops', 'the payment of taxes', 'different responses to God\'s word'], 'D', 'Mark 4.', 4],
+        ['At the Last Supper, Jesus instituted', ['baptism', 'the Holy Communion (Eucharist)', 'the Sabbath', 'circumcision'], 'B', 'Bread and wine.', 4],
+        ['Jesus said "Render to Caesar the things that are Caesar\'s" when asked about', ['divorce', 'the Sabbath', 'paying taxes to Rome', 'fasting'], 'C', 'Mark 12:17.', 4],
+        ['The Great Commission instructs disciples to', ['fight the Romans', 'build churches only in Jerusalem', 'stop preaching', 'make disciples of all nations'], 'D', 'Matthew 28:19–20.', 4],
+        ['The Beatitude "Blessed are the meek" promises they will', ['be comforted', 'see God', 'inherit the earth', 'be called children of God'], 'C', 'Matthew 5:5.', 4],
+        ['Jesus\' parable of the talents teaches', ['giving to the rich', 'saving money in banks', 'avoiding risk', 'faithful use of God-given abilities'], 'D', 'Matthew 25.', 4],
+        ['The Synoptic Gospels are', ['Matthew, John and Acts', 'Matthew, Mark and Luke', 'Mark, Luke and John', 'John and Revelation'], 'B', 'They share similar accounts.', 4],
+        ['In Luke\'s parable of the Rich Fool, the man\'s error was', ['working hard', 'giving to the poor', 'storing wealth without being rich towards God', 'praying'], 'C', 'Luke 12.', 4],
+        ['Jesus\' "I am" sayings are recorded mainly in the Gospel of', ['Luke', 'Mark', 'Matthew', 'John'], 'D', 'E.g. "I am the bread of life".', 4],
+        ['The "messianic secret" is a theme especially in the Gospel of', ['John', 'Mark', 'Luke', 'Matthew'], 'B', 'Jesus tells people not to reveal him.', 5],
+        ['Jesus\' first miracle was at', ['Bethany', 'Capernaum', 'Cana in Galilee', 'Jericho'], 'C', 'Water into wine, John 2.', 4],
+        ['The parable of the Good Samaritan answers the question', ['What must I eat?', 'Who is the greatest?', 'How often should I forgive?', 'Who is my neighbour?'], 'D', 'Luke 10.', 4],
+        ['Peter\'s confession that Jesus is the Christ took place at', ['Jerusalem', 'Caesarea Philippi', 'Nazareth', 'Bethlehem'], 'B', 'Matthew 16.', 4],
+        ['The Transfiguration was witnessed by Peter, James and', ['Thomas', 'Andrew', 'John', 'Philip'], 'C', 'Inner circle.', 4],
+        ['The Roman governor who sentenced Jesus was', ['Pontius Pilate', 'Herod Antipas', 'Caiaphas', 'Felix'], 'A', 'Governor of Judea.', 4],
+        ['Jesus told Nicodemus that one must be', ['born again', 'circumcised', 'rich', 'a Levite'], 'A', 'John 3.', 4],
+        ['The parable of the sower teaches mainly about', ['different responses to God\'s word', 'farming methods', 'paying taxes', 'forgiveness'], 'A', 'Four kinds of soil.', 4],
     ],
 
     'Early church' => [
@@ -107,6 +150,14 @@ return [
         ['The deacons, including Stephen, were chosen to', ['write the Gospels', 'preach in Rome', 'distribute food to widows', 'lead the army'], 'C', 'Acts 6.', 2],
         ['Cornelius, the first Gentile convert, was a', ['fisherman', 'Jewish priest', 'tax collector', 'Roman centurion'], 'D', 'Acts 10.', 2],
         ['Paul and Silas were imprisoned at', ['Athens', 'Philippi', 'Corinth', 'Ephesus'], 'B', 'An earthquake opened the prison (Acts 16).', 2],
+        ['The main issue at the Council of Jerusalem (Acts 15) was whether', ['Peter should lead', 'Gentile believers must keep the Mosaic law', 'Paul should be arrested', 'the temple should be rebuilt'], 'B', 'They decided Gentiles were free from circumcision.', 4],
+        ['Paul\'s teaching on justification by faith is mainly found in', ['Psalms', 'Leviticus', 'Romans and Galatians', 'Revelation'], 'C', 'Salvation by grace through faith.', 5],
+        ['Paul\'s teaching on spiritual gifts in 1 Corinthians 12 emphasises', ['rivalry among believers', 'that only apostles have gifts', 'speaking in tongues above all', 'unity in diversity in the body of Christ'], 'D', 'Many members, one body.', 5],
+        ['Paul\'s letter to Philemon concerns', ['Timothy\'s ordination', 'the Council of Jerusalem', 'the slave Onesimus', 'the church at Rome'], 'C', 'He urges forgiveness.', 5],
+        ['The doctrine of the "body of Christ" teaches that', ['churches compete', 'only priests matter', 'Christ has no church', 'all believers are interdependent members of one church'], 'D', '1 Corinthians 12.', 4],
+        ['Paul\'s Areopagus speech in Athens referred to an altar inscribed', ['"To Zeus"', '"To an unknown god"', '"To Caesar"', '"To Moses"'], 'B', 'Acts 17.', 4],
+        ['The coming of the Holy Spirit happened on the day of', ['Pentecost', 'Passover', 'Atonement', 'Tabernacles'], 'A', 'Acts 2.', 4],
+        ['Followers of Jesus were first called Christians at', ['Antioch', 'Jerusalem', 'Corinth', 'Ephesus'], 'A', 'Acts 11.', 4],
     ],
 
     'SHS 1: The study of religion and Christianity in Ghana' => [
@@ -130,6 +181,7 @@ return [
         ['Mfantsipim School was founded by the', ['Anglican Church', 'Catholic Church', 'Presbyterian Church', 'Methodist Church'], 'D', 'It was founded in 1876 in Cape Coast.', 2],
         ['Christian teaching encourages hard work, as Paul wrote, "If anyone will not work,', ['let him rest"', 'let him not eat"', 'let him pray only"', 'let him travel"'], 'B', '2 Thessalonians 3:10.', 2],
         ['Christian missions contributed to development by introducing', ['mining', 'the slave trade', 'colonial taxes', 'formal education and health care'], 'D', 'Schools like Achimota had church links.', 1],
+        ['The Christian Council of Ghana was founded in', ['1828', '1957', '1929', '1992'], 'C', 'Brought Protestant churches together.', 5],
     ],
 
     'SHS 1: Major beliefs of Christianity' => [
@@ -143,6 +195,8 @@ return [
         ['The statement of Christian beliefs said in many churches is the', ['Beatitudes', 'Ten Commandments', 'Apostles\' Creed', 'Lord\'s Supper'], 'C', 'It begins "I believe in God the Father Almighty".', 2],
         ['Christians believe Jesus ascended into heaven', ['on the day he died', 'forty days after his resurrection', 'at his birth', 'at Pentecost'], 'B', 'Acts 1.', 2],
         ['The Second Coming refers to', ['Pentecost', 'Jesus\' birth', 'the return of Jesus Christ', 'Moses returning'], 'C', 'Christians await it.', 1],
+        ['The doctrine of atonement teaches that', ['good works alone save', 'Jesus\' death reconciles humanity to God', 'God is not holy', 'sin does not exist'], 'B', 'Romans 5:10–11.', 5],
+        ['Justification by faith, emphasised during the Reformation, means', ['fasting only', 'buying indulgences', 'being made right with God through faith in Christ', 'obeying church leaders only'], 'C', 'Martin Luther emphasised it.', 5],
     ],
 
     'SHS 1: Religion and the environment' => [
@@ -164,6 +218,10 @@ return [
         ['The head of the Roman Catholic Church is the', ['Pope', 'Archbishop of Canterbury', 'Moderator', 'General Overseer'], 'A', 'He is based in the Vatican.', 1],
         ['The Presbyterian Church of Ghana is led by the', ['Moderator of the General Assembly', 'Pope', 'Chief Imam', 'Archbishop of Canterbury'], 'A', 'Presbyterians are governed by elders.', 2],
         ['The Anglican Church is headed worldwide by the', ['Archbishop of Canterbury (spiritual head)', 'Pope', 'Moderator', 'Chief Imam'], 'A', 'It began in England.', 2],
+        ['The Protestant Reformation began in 1517 when Martin Luther', ['posted his 95 Theses', 'became Pope', 'founded the Methodist Church', 'translated the Qur\'an'], 'A', 'In Wittenberg, Germany.', 4],
+        ['A distinctive belief of Pentecostal churches is', ['baptism of the Holy Spirit with speaking in tongues', 'infant baptism only', 'no prayer', 'papal authority'], 'A', 'Acts 2.', 4],
+        ['The Methodist movement was founded by', ['John Wesley', 'Martin Luther', 'John Calvin', 'Pope Leo X'], 'A', '18th-century England.', 4],
+        ['The Presbyterian tradition traces its theology mainly to', ['John Calvin', 'John Wesley', 'Henry VIII', 'Peter'], 'A', 'Reformed theology.', 4],
     ],
 
     'SHS 2: The nature of God and worship' => [
@@ -178,6 +236,7 @@ return [
         ['The belief that God is all-powerful is', ['omnipotence', 'omniscience', 'omnipresence', 'transcendence'], 'A', 'Nothing is impossible for God.', 1],
         ['God being beyond and above creation is described as', ['transcendence', 'immanence', 'omnipresence', 'incarnation'], 'A', 'Immanence means God is present within creation.', 3],
         ['Christian worship usually includes', ['prayer, singing, Bible reading and preaching', 'only dancing', 'animal sacrifice', 'libation'], 'A', 'Sunday services follow this pattern.', 1],
+        ['The Shema ("Hear, O Israel…") emphasises', ['the oneness of God', 'the Trinity', 'the Sabbath only', 'sacrifices'], 'A', 'Deuteronomy 6:4.', 5],
     ],
 
     'SHS 2: Religious pluralism and sexual morality' => [
@@ -188,6 +247,7 @@ return [
         ['The story of Joseph and Potiphar\'s wife teaches', ['resisting sexual temptation', 'lying', 'revenge', 'greed'], 'A', 'Joseph fled (Genesis 39).', 2],
         ['Peaceful coexistence among religions requires', ['mutual respect and dialogue', 'mockery', 'violence', 'isolation'], 'A', 'It builds national unity.', 1],
         ['Paul taught that the body is the temple of the', ['Holy Spirit', 'king', 'priest', 'law'], 'A', '1 Corinthians 6:19.', 2],
+        ['Paul\'s teaching in 1 Corinthians 7 on marriage encourages', ['faithfulness and mutual respect between spouses', 'divorce on demand', 'polygamy', 'celibacy for all'], 'A', 'Each should fulfil duties to the other.', 5],
     ],
 
     'SHS 3: Creation and the origin of sin' => [
@@ -199,6 +259,8 @@ return [
         ['According to Genesis 3, sin entered the world when Adam and Eve', ['ate the forbidden fruit', 'built the tower of Babel', 'killed Abel', 'worshipped idols'], 'A', 'They disobeyed God.', 1],
         ['God punished the serpent by making it', ['crawl on its belly', 'fly', 'speak', 'disappear'], 'A', 'Genesis 3:14.', 2],
         ['God created humans in His own', ['image', 'house', 'garden only', 'temple'], 'A', 'Genesis 1:27.', 1],
+        ['The consequences of the Fall in Genesis 3 include', ['toil, pain in childbirth and death', 'immediate wealth', 'more knowledge only', 'no change'], 'A', 'Genesis 3:16–19.', 4],
+        ['Genesis 1 and 2 differ in that Genesis 2 focuses mainly on', ['the creation of humans and the garden', 'the seven days in order', 'the flood', 'the tower of Babel'], 'A', 'A second creation account.', 5],
     ],
 
     'SHS 3: Prayer and music' => [
@@ -210,6 +272,7 @@ return [
         ['Prayer offered on behalf of others is', ['intercession', 'confession', 'adoration', 'thanksgiving'], 'A', 'Paul urged prayers for all people.', 1],
         ['Music in Christian worship mainly serves to', ['praise God and unite the congregation', 'entertain only', 'raise money', 'replace prayer'], 'A', 'Hymns teach doctrine too.', 1],
         ['The prayer Jesus taught begins with', ['"Our Father, who art in heaven"', '"I believe in God"', '"Blessed are the poor"', '"In the beginning"'], 'A', 'The Lord\'s Prayer.', 1],
+        ['Jesus\' prayer in Gethsemane shows', ['submission to God\'s will', 'anger at God', 'fear of the disciples only', 'rejection of his mission'], 'A', '"Not my will, but yours."', 4],
     ],
 
     'SHS 3: Women in Christianity' => [
@@ -222,6 +285,7 @@ return [
         ['Ruth is known for her', ['loyalty to her mother-in-law Naomi', 'wealth', 'military skill', 'prophecy'], 'A', '"Your people will be my people."', 1],
         ['Hannah prayed for a son and gave birth to', ['Samuel', 'Samson', 'Saul', 'David'], 'A', '1 Samuel 1.', 2],
         ['Mary, the mother of Jesus, is honoured for her', ['faith and obedience to God', 'wealth', 'political power', 'military skill'], 'A', '"Let it be to me according to your word."', 1],
+        ['Priscilla is noted in Acts for', ['teaching Apollos with her husband Aquila', 'being a queen', 'leading Israel', 'writing a Gospel'], 'A', 'Acts 18:26.', 5],
     ],
 
     'SHS 3: Christianity and fraud' => [

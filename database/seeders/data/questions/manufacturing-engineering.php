@@ -46,6 +46,10 @@ return [
         ['Drilling produces', ['flat sheets', 'round holes', 'threads only', 'castings'], 'B', 'A twist drill is used.', 1],
         ['Injection moulding is used to make', ['wooden chairs', 'steel beams', 'plastic products in large numbers', 'glass windows'], 'C', 'Molten plastic is forced into a mould.', 1],
         ['Grinding is used to', ['weld joints', 'make holes', 'bend metal', 'produce a smooth, accurate surface finish'], 'D', 'An abrasive wheel is used.', 2],
+        ['The cutting speed of a 50 mm diameter bar turned at 400 rpm is about', ['20 m/min', '62.8 m/min', '400 m/min', '6.28 m/min'], 'B', 'v = πDN/1000.', 5],
+        ['Taper turning on a lathe can be done by', ['grinding only', 'using a drill', 'setting over the compound slide', 'casting'], 'C', 'The tool moves at an angle.', 5],
+        ['Shrinkage allowance is added to casting patterns because', ['machining removes nothing', 'sand expands', 'paint is added', 'metal contracts as it cools'], 'D', 'Patterns are made oversize.', 4],
+        ['Feed rate in milling is', ['the spindle speed', 'the distance the workpiece advances per unit time or per tooth', 'the depth of cut', 'the coolant flow'], 'B', 'Affects surface finish.', 5],
     ],
 
     'Joining and finishing' => [
@@ -72,6 +76,8 @@ return [
         ['An industrial robot on an assembly line is mainly used for', ['managing staff', 'repetitive tasks such as welding and painting', 'designing products', 'selling goods'], 'B', 'It works fast and consistently.', 1],
         ['CAM stands for', ['Computer Analogue Model', 'Central Assembly Machine', 'Computer-Aided Manufacturing', 'Controlled Automatic Motor'], 'C', 'CAM software drives CNC machines.', 1],
         ['A CNC router is mainly used to', ['paint cars', 'print documents', 'weld steel', 'cut and shape wood, plastics and soft metals'], 'D', 'It follows programmed toolpaths.', 2],
+        ['In G-code, G02 commands a', ['rapid move', 'clockwise circular move', 'straight cutting move', 'tool change'], 'B', 'G03 is anticlockwise.', 5],
+        ['Absolute programming (G90) gives coordinates', ['in inches only', 'relative to the last position', 'relative to a fixed origin', 'randomly'], 'C', 'G91 is incremental.', 5],
     ],
 
     'Quality and measurement' => [
@@ -89,6 +95,9 @@ return [
         ['Quality assurance aims to', ['increase waste', 'only inspect finished goods', 'prevent defects by controlling processes', 'ignore customers'], 'C', 'It builds quality into production.', 2],
         ['ISO 9001 is a standard for', ['road signs', 'food safety only', 'electrical wiring', 'quality management systems'], 'D', 'Companies are certified against it.', 2],
         ['A micrometer reads to an accuracy of about', ['1 mm', '0.01 mm', '1 cm', '0.1 m'], 'B', 'It is more precise than a vernier.', 1],
+        ['A part dimensioned 40 ± 0.05 mm measures 40.07 mm. It is', ['perfect', 'within tolerance', 'too small', 'out of tolerance (too large)'], 'D', 'The upper limit is 40.05 mm.', 4],
+        ['Statistical process control uses control charts to', ['design products', 'detect when a process goes out of control', 'pay workers', 'buy materials'], 'B', 'Upper and lower control limits.', 5],
+        ['Six Sigma aims for no more than about', ['50% defects', '1 defect per hundred', '3.4 defects per million opportunities', 'zero production'], 'C', 'A quality standard.', 5],
     ],
 
     'Lean manufacturing' => [
@@ -102,6 +111,7 @@ return [
         ['Kaizen means', ['just-in-time delivery only', 'mass production', 'continuous improvement', 'quality inspection'], 'C', 'Small improvements every day.', 2],
         ['The 5S method organises the workplace by sort, set in order, shine, standardise and', ['save', 'sell', 'ship', 'sustain'], 'D', 'It improves efficiency and safety.', 2],
         ['The seven wastes in lean include overproduction, waiting and', ['customer value', 'profit', 'excess inventory', 'quality'], 'C', 'Also transport, motion, defects, over-processing.', 2],
+        ['Takt time is', ['lead time only', 'machine speed', 'break time', 'available production time divided by customer demand'], 'D', 'It sets the production pace.', 5],
     ],
 
     'Costs and supply' => [
@@ -117,6 +127,8 @@ return [
         ['Unit cost is', ['fixed cost only', 'selling price', 'profit per unit', 'total cost divided by the number of units produced'], 'D', 'It falls as output rises.', 1],
         ['Outsourcing means', ['making everything in-house', 'buying components or services from another company', 'exporting', 'closing a factory'], 'B', 'It can reduce costs.', 2],
         ['Inventory held as a safety buffer is called', ['finished goods', 'work in progress', 'safety stock', 'scrap'], 'C', 'It protects against delays.', 2],
+        ['Fixed costs GH¢50,000; variable cost GH¢30/unit; price GH¢55/unit. Break-even output is', ['909 units', '1,667 units', '2,000 units', '5,000 units'], 'C', '50,000/25.', 4],
+        ['Economic order quantity balances', ['price and demand', 'wages and taxes', 'sales and profit', 'ordering costs and holding costs'], 'D', 'It minimises total inventory cost.', 4],
     ],
 
     'Safety' => [
@@ -138,9 +150,9 @@ return [
         ['Which property is most important for an electrical cable\'s core?', ['brittleness', 'high electrical conductivity', 'low melting point', 'transparency'], 'B', 'Copper is used for this reason.', 1],
         ['The property of a material to resist scratching and wear is', ['elasticity', 'ductility', 'hardness', 'conductivity'], 'C', 'Diamond is very hard.', 1],
         ['Ceramics are generally', ['magnetic', 'soft and ductile', 'good electrical conductors', 'hard but brittle'], 'D', 'They break rather than bend.', 2],
-        ['Thermosetting plastics', ['cannot be reshaped once set', 'can be remelted many times', 'are metals', 'are natural fibres'], 'A', 'Melamine is a thermoset.', 2],
-        ['Ferrous metals contain', ['iron', 'copper', 'aluminium', 'tin'], 'A', 'Steel and cast iron are ferrous.', 1],
-        ['Aluminium is used in drink cans because it is', ['light and corrosion-resistant', 'heavy', 'magnetic', 'brittle'], 'A', 'It is also recyclable.', 1],
+        ['Thermosetting plastics', ['can be remelted many times', 'cannot be reshaped once set', 'are metals', 'are natural fibres'], 'B', 'Melamine is a thermoset.', 2],
+        ['Ferrous metals contain', ['aluminium', 'copper', 'iron', 'tin'], 'C', 'Steel and cast iron are ferrous.', 1],
+        ['Aluminium is used in drink cans because it is', ['brittle', 'heavy', 'magnetic', 'light and corrosion-resistant'], 'D', 'It is also recyclable.', 1],
         ['Copper is used for electrical wiring because it', ['is an excellent conductor and ductile', 'is cheap and magnetic', 'is brittle', 'rusts easily'], 'A', 'It is drawn into wire.', 1],
     ],
 
@@ -166,6 +178,7 @@ return [
         ['A vernier caliper can measure', ['internal, external and depth dimensions', 'only weight', 'temperature', 'voltage'], 'A', 'It has jaws and a depth rod.', 2],
         ['An engineer\'s square checks', ['right angles', 'diameters', 'threads', 'temperature'], 'A', 'It has a stock and blade.', 1],
         ['Odd-leg calipers are used to', ['scribe lines parallel to an edge', 'measure diameters only', 'cut metal', 'drill holes'], 'A', 'Also called jenny calipers.', 3],
+        ['A vernier caliper with main scale reading 23 mm and vernier coincidence at the 7th division (0.02 mm each) reads', ['23.14 mm', '23.07 mm', '23.70 mm', '23.02 mm'], 'A', '23 + 7 × 0.02.', 5],
     ],
 
     'SHS 2: Mechanical properties of materials' => [
@@ -178,6 +191,9 @@ return [
         ['Malleability is the ability to be', ['hammered or rolled into sheets', 'drawn into wire', 'magnetised', 'dissolved'], 'A', 'Gold is very malleable.', 1],
         ['Brittleness means a material', ['breaks easily without bending', 'stretches a lot', 'bends easily', 'absorbs shocks'], 'A', 'Glass is brittle.', 1],
         ['Hardness can be tested by', ['indentation tests such as Brinell', 'measuring length', 'weighing', 'heating'], 'A', 'Indent size shows hardness.', 3],
+        ['The ultimate tensile strength of a bar of area 50 mm² that breaks at 20 kN is', ['400 N/mm²', '40 N/mm²', '1,000 N/mm²', '2.5 N/mm²'], 'A', '20,000/50.', 4],
+        ['Strain is calculated as', ['change in length ÷ original length', 'force ÷ area', 'length × force', 'area ÷ length'], 'A', 'It has no units.', 4],
+        ['A material that undergoes large plastic deformation before fracture is', ['ductile', 'brittle', 'hard', 'elastic only'], 'A', 'E.g. mild steel.', 4],
     ],
 
     'SHS 2: Drawing and modelling for manufacture' => [
@@ -190,6 +206,7 @@ return [
         ['First-angle projection is identified on a drawing by', ['a standard truncated-cone symbol', 'the colour of the paper', 'the title only', 'the scale'], 'A', 'Third angle has its own symbol.', 3],
         ['An exploded drawing shows', ['parts separated to show assembly', 'only the outside', 'colour only', 'the factory layout'], 'A', 'Useful for instructions.', 1],
         ['Tolerances on a drawing tell the manufacturer', ['the allowed variation in size', 'the colour', 'the price', 'the brand'], 'A', 'E.g. ±0.1 mm.', 1],
+        ['Geometric dimensioning and tolerancing (GD&T) controls', ['form, orientation and position of features', 'only colour', 'only price', 'only material'], 'A', 'E.g. flatness, perpendicularity.', 5],
     ],
 
     'SHS 2: Casting, joining and safety' => [
@@ -203,5 +220,7 @@ return [
         ['Rivets are used to make', ['permanent mechanical joints', 'temporary joints', 'electrical connections', 'glue joints'], 'A', 'They are used in aircraft.', 2],
         ['Die casting uses', ['reusable metal moulds', 'sand moulds only', 'wooden moulds', 'paper moulds'], 'A', 'Good for high volumes.', 2],
         ['Welding fumes should be controlled by', ['good ventilation and extraction', 'closing windows', 'using more heat', 'ignoring them'], 'A', 'Fumes are harmful.', 1],
+        ['Porosity in castings is caused mainly by', ['trapped gases', 'too much paint', 'cold moulds only', 'excess machining'], 'A', 'Venting reduces it.', 5],
+        ['TIG welding uses', ['a non-consumable tungsten electrode with inert gas', 'a consumable rod with flux', 'oxygen and acetylene only', 'no electricity'], 'A', 'High-quality welds.', 5],
     ],
 ];

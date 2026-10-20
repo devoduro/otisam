@@ -45,6 +45,9 @@ return [
         ['The normal range of haemoglobin in adult males is about', ['30–40 g/dL', '1–3 g/dL', '13–17 g/dL', '5–7 g/dL'], 'C', 'Lower values indicate anaemia.', 3],
         ['Blood plasma is mostly', ['cells', 'protein', 'fat', 'water'], 'D', 'About 90% water.', 1],
         ['The Rhesus factor is an antigen found on', ['white blood cells', 'red blood cells', 'platelets only', 'nerve cells'], 'B', 'People are Rh+ or Rh−.', 2],
+        ['A patient with blood group A Rh− can safely receive blood from', ['B Rh−', 'A Rh+ only', 'AB Rh−', 'A Rh− or O Rh−'], 'D', 'No anti-B or Rh antigen exposure.', 5],
+        ['Haemolytic disease of the newborn can occur when', ['both parents are Rh−', 'an Rh− mother carries an Rh+ baby after sensitisation', 'the baby is Rh−', 'the mother is AB'], 'B', 'Maternal antibodies cross the placenta.', 5],
+        ['A haematocrit (PCV) of 45% means', ['45% is white cells', '45% is plasma', '45% of blood volume is red cells', '45% is platelets'], 'C', 'Packed cell volume.', 5],
     ],
 
     'Body systems' => [
@@ -65,6 +68,9 @@ return [
         ['The alveoli are the site of', ['hormone release', 'digestion', 'urine production', 'gas exchange in the lungs'], 'D', 'Oxygen enters the blood there.', 1],
         ['The liver produces bile and also', ['pumps blood', 'detoxifies harmful substances', 'produces insulin', 'filters urine'], 'B', 'It also stores glycogen.', 2],
         ['The lymphatic system helps to', ['move bones', 'digest food', 'return fluid to the blood and fight infection', 'produce urine'], 'C', 'Lymph nodes filter pathogens.', 2],
+        ['Cardiac output for a heart rate of 70 bpm and stroke volume of 70 mL is about', ['0.49 L/min', '140 mL/min', '70 L/min', '4.9 L/min'], 'D', '70 × 70 = 4,900 mL.', 4],
+        ['The glomerular filtration rate is mainly driven by', ['osmosis in the bladder', 'blood pressure in the glomerulus', 'ADH', 'muscle contraction'], 'B', 'High hydrostatic pressure.', 5],
+        ['The sinoatrial node acts as the heart\'s', ['blood store', 'valve', 'natural pacemaker', 'filter'], 'C', 'It starts each heartbeat.', 4],
     ],
 
     'Infection and immunity' => [
@@ -85,6 +91,9 @@ return [
         ['Herd immunity occurs when', ['one person is vaccinated', 'enough people are immune that disease spread is reduced', 'animals are vaccinated only', 'no one is immune'], 'B', 'It protects those who cannot be vaccinated.', 2],
         ['Antibiotic resistance develops mainly because of', ['clean water', 'vaccination', 'misuse and overuse of antibiotics', 'good nutrition'], 'C', 'Complete prescribed courses.', 2],
         ['Malaria is diagnosed in the laboratory mainly by', ['measuring height', 'urine tests only', 'X-rays', 'examining blood films or rapid diagnostic tests'], 'D', 'Parasites are seen in red cells.', 2],
+        ['Memory cells produced after vaccination allow', ['allergy', 'no response', 'only passive immunity', 'a faster, stronger secondary response'], 'D', 'The basis of vaccines.', 4],
+        ['Gram-positive bacteria stain purple because they have', ['no cell wall', 'a thick peptidoglycan cell wall', 'a thin wall with outer membrane', 'chloroplasts'], 'B', 'They retain crystal violet.', 5],
+        ['Monoclonal antibodies are', ['vaccines', 'mixed antibodies', 'identical antibodies from a single clone of cells', 'antibiotics'], 'C', 'Used in pregnancy tests.', 5],
     ],
 
     'Genetics' => [
@@ -97,6 +106,8 @@ return [
         ['The sex chromosomes of a human male are', ['XX', 'XY', 'YY', 'XO'], 'B', 'Females are XX.', 1],
         ['A mutation is', ['a type of cell', 'a change in the DNA sequence', 'a hormone', 'a vaccine'], 'B', 'It may be harmful, neutral or beneficial.', 1],
         ['Genetic counselling helps couples to', ['grow taller', 'choose a wedding date', 'understand the risk of passing on inherited disorders', 'avoid exercise'], 'C', 'Sickle cell screening is an example.', 2],
+        ['PCR (polymerase chain reaction) is used to', ['stain cells', 'cut DNA', 'sequence proteins', 'amplify DNA'], 'D', 'Millions of copies are made.', 5],
+        ['Gel electrophoresis separates DNA fragments by', ['colour', 'size', 'taste', 'smell'], 'B', 'Smaller fragments move further.', 5],
     ],
 
     'Laboratory practice and ethics' => [
@@ -114,6 +125,8 @@ return [
         ['A pipette is used to', ['weigh solids', 'measure and transfer small volumes of liquid accurately', 'heat samples', 'view cells'], 'B', 'Micropipettes measure microlitres.', 1],
         ['Labelling samples correctly prevents', ['spills', 'contamination only', 'mix-ups and wrong results', 'breakage'], 'C', 'Each sample must be traceable.', 1],
         ['Clinical waste such as used swabs should be placed in', ['open trays', 'normal bins', 'the sink', 'yellow or red biohazard bags'], 'D', 'It is incinerated.', 2],
+        ['A serial dilution of 1:10 repeated three times gives a final dilution of', ['1:100', '1:30', '1:1,000', '1:10,000'], 'C', '10 × 10 × 10 = 1,000.', 4],
+        ['A spectrophotometer measures a sample\'s', ['pH directly', 'mass', 'temperature', 'absorbance of light'], 'D', 'Used to find concentration (Beer–Lambert).', 5],
     ],
 
     'SHS 1: Biosafety in the laboratory' => [
@@ -127,6 +140,7 @@ return [
         ['Eating and drinking in the laboratory are', ['allowed', 'prohibited', 'encouraged', 'required'], 'B', 'Samples may contaminate food.', 1],
         ['Laboratory coats should be', ['worn at home', 'worn in the lab and removed before leaving', 'never worn', 'washed with food'], 'B', 'They prevent contamination.', 1],
         ['Spills of infectious material should be', ['wiped with bare hands', 'left to dry', 'covered and disinfected promptly', 'ignored'], 'C', 'Use disinfectant.', 1],
+        ['Biosafety level 3 laboratories handle', ['harmless microbes only', 'agents that cause serious disease by inhalation, such as TB', 'no microbes', 'only plants'], 'B', 'They need negative-pressure rooms.', 5],
     ],
 
     'SHS 2: Careers and professional practice' => [
@@ -137,20 +151,23 @@ return [
         ['A radiographer operates', ['bank computers', 'farm tractors', 'printing machines', 'X-ray and imaging equipment'], 'D', 'They produce medical images.', 1],
         ['Professional ethics in health care requires', ['sharing patients\' records publicly', 'confidentiality and respect for patients', 'charging bribes', 'ignoring consent'], 'B', 'Patient trust is essential.', 1],
         ['A biomedical engineer', ['grows crops', 'teaches history', 'designs and maintains medical devices', 'repairs roads'], 'C', 'Examples include dialysis machines.', 2],
-        ['A pharmacist', ['dispenses medicines and advises on their use', 'performs surgery', 'takes X-rays', 'designs hospitals'], 'A', 'They work in pharmacies and hospitals.', 1],
-        ['A nurse\'s duties include', ['caring for patients and giving medication', 'building roads', 'flying planes', 'teaching music'], 'A', 'Nurses are key health workers.', 1],
+        ['A pharmacist', ['takes X-rays', 'performs surgery', 'dispenses medicines and advises on their use', 'designs hospitals'], 'C', 'They work in pharmacies and hospitals.', 1],
+        ['A nurse\'s duties include', ['teaching music', 'building roads', 'flying planes', 'caring for patients and giving medication'], 'D', 'Nurses are key health workers.', 1],
     ],
 
     'SHS 2: Communication systems of the body' => [
         ['The gland often called the "master gland", because it controls other glands, is the', ['adrenal gland', 'thyroid gland', 'pituitary gland', 'pancreas'], 'C', 'It sits at the base of the brain.', 2],
         ['Hormones travel from the glands to their target organs through the', ['air', 'nerves', 'lymph nodes only', 'blood'], 'D', 'Nerve messages are faster but shorter-lasting.', 1],
         ['Chemicals that carry signals across a synapse between neurones are', ['antibodies', 'neurotransmitters', 'enzymes', 'hormones only'], 'B', 'Acetylcholine is one example.', 2],
-        ['The two main communication systems of the body are the', ['nervous and endocrine systems', 'digestive and excretory systems', 'skeletal and muscular systems', 'respiratory and circulatory systems'], 'A', 'Nerves are fast; hormones are slower.', 1],
-        ['Hormones are carried around the body in the', ['blood', 'nerves', 'lymph only', 'air'], 'A', 'They act on target organs.', 1],
+        ['The two main communication systems of the body are the', ['digestive and excretory systems', 'nervous and endocrine systems', 'skeletal and muscular systems', 'respiratory and circulatory systems'], 'B', 'Nerves are fast; hormones are slower.', 1],
+        ['Hormones are carried around the body in the', ['lymph only', 'nerves', 'blood', 'air'], 'C', 'They act on target organs.', 1],
         ['The gap between two neurons is a', ['synapse', 'axon', 'dendrite', 'myelin sheath'], 'A', 'Neurotransmitters cross it.', 2],
         ['The thyroid gland produces', ['thyroxine', 'insulin', 'adrenaline', 'oestrogen'], 'A', 'It controls metabolic rate.', 2],
         ['Adrenaline is produced by the', ['adrenal glands', 'pituitary gland', 'thyroid', 'pancreas'], 'A', 'It prepares for fight or flight.', 1],
         ['Nerve impulses travel along the', ['axon', 'nucleus', 'cell wall', 'chloroplast'], 'A', 'Myelin speeds them up.', 2],
+        ['The resting membrane potential of a neuron is about', ['−70 mV', '+70 mV', '0 mV', '−7 V'], 'A', 'Maintained by the sodium–potassium pump.', 5],
+        ['During an action potential, depolarisation is caused by', ['influx of sodium ions', 'outflow of sodium ions', 'influx of chloride', 'calcium leaving'], 'A', 'Na⁺ channels open.', 5],
+        ['Steroid hormones act on target cells by', ['entering the cell and binding to receptors inside', 'binding only to the outer membrane', 'destroying the cell', 'acting on DNA in blood'], 'A', 'They are lipid-soluble.', 5],
     ],
 
     'SHS 2: Diseases and disorders' => [
@@ -163,6 +180,8 @@ return [
         ['A non-communicable disease is one that', ['cannot spread from person to person', 'spreads by air', 'spreads by touch', 'spreads by mosquitoes'], 'A', 'Examples: diabetes, cancer.', 1],
         ['Asthma affects the', ['airways of the lungs', 'kidneys', 'bones', 'skin only'], 'A', 'Airways narrow.', 1],
         ['Stroke occurs when', ['blood supply to part of the brain is cut off', 'a bone breaks', 'the stomach is upset', 'the eyes are tired'], 'A', 'Hypertension is a risk factor.', 2],
+        ['In type 2 diabetes, the main problem is', ['insulin resistance', 'absence of the pancreas', 'too much insulin injected', 'low blood sugar'], 'A', 'Cells respond poorly to insulin.', 5],
+        ['Atherosclerosis increases the risk of', ['heart attack and stroke', 'fractures', 'asthma', 'malaria'], 'A', 'Fatty plaques narrow arteries.', 4],
     ],
 
     'Diagnostic and therapeutic devices' => [
@@ -177,6 +196,9 @@ return [
         ['A stethoscope is used to', ['listen to heart and lung sounds', 'measure height', 'take X-rays', 'test urine'], 'A', 'It amplifies sounds.', 1],
         ['A sphygmomanometer measures', ['blood pressure', 'temperature', 'blood sugar', 'weight'], 'A', 'It uses a cuff.', 2],
         ['An ultrasound scan uses', ['high-frequency sound waves', 'X-rays', 'radioactive dye', 'magnets only'], 'A', 'Used in pregnancy.', 2],
+        ['An ECG records', ['the electrical activity of the heart', 'brain waves', 'blood glucose', 'lung volume'], 'A', 'P, QRS and T waves.', 4],
+        ['MRI scanners produce images using', ['strong magnetic fields and radio waves', 'X-rays', 'ultrasound', 'radioactive tracers only'], 'A', 'No ionising radiation.', 5],
+        ['A pulse oximeter measures', ['oxygen saturation of the blood', 'blood pressure', 'temperature', 'heart sounds'], 'A', 'Using light absorption.', 4],
     ],
 
     'Research and design' => [
@@ -188,6 +210,8 @@ return [
         ['A double-blind study means', ['neither participants nor researchers know who receives the treatment', 'everyone knows', 'only participants know', 'there is no control'], 'A', 'It reduces bias.', 3],
         ['Peer review means research is', ['checked by other experts before publication', 'kept secret', 'published without checks', 'written by students only'], 'A', 'It improves quality.', 2],
         ['A hypothesis in research is', ['a testable prediction', 'a final answer', 'a lab tool', 'a type of cell'], 'A', 'Experiments test it.', 1],
+        ['A p-value below 0.05 in a study usually indicates', ['a statistically significant result', 'no effect at all', 'an error', 'a biased sample'], 'A', 'Unlikely to be due to chance alone.', 5],
+        ['A randomised controlled trial reduces', ['selection bias', 'sample size', 'cost', 'ethics approval'], 'A', 'Random allocation.', 5],
     ],
 
     'SHS 3: Digestion and energy' => [
@@ -201,5 +225,6 @@ return [
         ['The basal metabolic rate is the energy needed', ['to keep the body alive at rest', 'for running', 'for digestion only', 'for growth only'], 'A', 'It is used for breathing, circulation, etc.', 2],
         ['Lipase breaks down', ['fats into fatty acids and glycerol', 'proteins', 'starch', 'DNA'], 'A', 'It is made by the pancreas.', 2],
         ['Glycogen is stored mainly in the', ['liver and muscles', 'brain', 'skin', 'bones'], 'A', 'It is a store of glucose.', 2],
+        ['One glucose molecule fully oxidised in aerobic respiration yields about', ['30–38 ATP', '2 ATP', '100 ATP', '4 ATP'], 'A', 'Anaerobic gives only 2.', 5],
     ],
 ];

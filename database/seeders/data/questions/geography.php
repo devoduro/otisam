@@ -28,6 +28,18 @@ return [
         ['A solar eclipse occurs when the', ['earth passes between the sun and moon', 'moon passes between the sun and the earth', 'sun passes between earth and moon', 'planets align with Mars'], 'B', 'The moon blocks the sun.', 2],
         ['The longest day in the northern hemisphere is around', ['21 March', '21 December', '21 June', '23 September'], 'C', 'The summer solstice.', 2],
         ['The layer of the earth on which we live is the', ['inner core', 'mantle', 'outer core', 'crust'], 'D', 'It is the thinnest layer.', 1],
+        ['When it is 12 noon at Accra (0°), the local time at a place 75°E is', ['7:00 a.m.', '5:00 p.m.', '5:00 a.m.', '7:00 p.m.'], 'B', '75 × 4 min = 300 min ahead.', 4],
+        ['A town at 120°W has a local time of 6:00 a.m. The time at Greenwich is', ['6:00 p.m.', '10:00 p.m.', '2:00 p.m.', '12 noon'], 'C', '8 hours ahead.', 4],
+        ['The noon sun is overhead at the Tropic of Cancer on about', ['23 September', '21 December', '21 March', '21 June'], 'D', 'The June solstice.', 4],
+        ['Places on the same meridian have the same', ['height', 'latitude', 'climate', 'local time'], 'D', 'Longitude determines local time.', 4],
+        ['The earth moves round the sun at roughly', ['3 km/s', '30 km/s', '300 km/s', '0.3 km/s'], 'B', 'About 107,000 km/h.', 5],
+        ['When it is 12 noon at Greenwich (0°), the local time at 45°E is', ['9:00 a.m.', '3:00 p.m.', '12:45 p.m.', '3:00 a.m.'], 'B', '4 minutes per degree east.', 5],
+        ['The equinoxes occur on about', ['21 June and 22 December', '21 March and 23 September', '1 January and 1 July', '4 July and 3 January'], 'B', 'Sun overhead at the equator.', 4],
+        ['Perihelion is the position when the earth is', ['at the equinox', 'farthest from the sun', 'nearest to the sun', 'in eclipse'], 'C', 'About 3 January.', 5],
+        ['The difference in longitude between two places with a time difference of 2 hours is', ['120°', '15°', '60°', '30°'], 'D', '15° per hour.', 4],
+        ['When it is 10:00 a.m. at Accra (0°), the time at 30°W is', ['9:30 a.m.', '12:00 noon', '10:30 a.m.', '8:00 a.m.'], 'D', 'Two hours behind.', 5],
+        ['The Tropic of Cancer is at latitude', ['23½°S', '23½°N', '66½°N', '0°'], 'B', 'Overhead sun on 21 June.', 4],
+        ['The longest day in the northern hemisphere is on about', ['21 March', '22 December', '21 June', '23 September'], 'C', 'Summer solstice.', 4],
     ],
 
     'Rocks and landforms' => [
@@ -51,6 +63,20 @@ return [
         ['Basalt is formed when', ['limestone is heated', 'sand is compacted', 'lava cools quickly at the surface', 'shells accumulate'], 'C', 'It is fine-grained.', 2],
         ['An inselberg is', ['a sand dune', 'a deep valley', 'a river mouth', 'an isolated hill rising abruptly from a plain'], 'D', 'Common in savanna regions.', 3],
         ['A waterfall forms where', ['a river meets the sea', 'a river flows over hard rock lying above softer rock', 'two rivers join', 'a lake dries up'], 'B', 'The soft rock erodes faster.', 2],
+        ['A landform produced by wind erosion in deserts is a', ['delta', 'zeugen', 'ox-bow lake', 'drumlin'], 'B', 'A ridge of hard rock capping soft rock.', 5],
+        ['Stalactites and stalagmites form in', ['sand dunes', 'granite hills', 'limestone caves', 'volcanic craters'], 'C', 'Calcium carbonate is deposited.', 4],
+        ['A horst is formed when', ['glaciers deposit', 'land sinks between faults', 'rivers erode', 'a block of land is uplifted between two faults'], 'D', 'A block mountain.', 5],
+        ['The process of a river wearing away its bed by grinding with its load is', ['solution', 'corrasion (abrasion)', 'hydraulic action', 'attrition'], 'B', 'Attrition is load hitting load.', 5],
+        ['A cuesta is a ridge with', ['a crater', 'two steep sides', 'no slopes', 'a steep scarp slope and a gentle dip slope'], 'D', 'Formed in tilted sedimentary rocks.', 5],
+        ['Marble is formed from', ['granite by weathering', 'limestone by metamorphism', 'basalt by cooling', 'sandstone by deposition'], 'B', 'Heat and pressure.', 4],
+        ['A rift valley is formed by', ['glaciation', 'folding', 'faulting', 'river erosion'], 'C', 'Land sinks between faults.', 4],
+        ['Stalactites are formed in', ['deltas', 'deserts', 'volcanoes', 'limestone caves'], 'D', 'Deposits of calcium carbonate from the roof.', 4],
+        ['A barchan is a', ['rock pedestal', 'crescent-shaped sand dune', 'river meander', 'coastal spit'], 'B', 'Desert landform.', 4],
+        ['An ox-bow lake forms from', ['a crater', 'a glacier', 'a cut-off meander', 'a lagoon'], 'C', 'Lower course of a river.', 4],
+        ['Granite is an example of', ['an extrusive rock', 'a sedimentary rock', 'a metamorphic rock', 'an intrusive igneous rock'], 'D', 'Cools slowly underground.', 4],
+        ['Basalt is', ['an intrusive rock', 'an extrusive igneous rock', 'a sedimentary rock', 'a metamorphic rock'], 'B', 'Fine-grained lava rock.', 4],
+        ['A spit is formed by', ['glacial deposition', 'river erosion', 'longshore drift', 'faulting'], 'C', 'Coastal deposition.', 4],
+        ['A delta forms where a river', ['meets a glacier', 'flows over a waterfall', 'erodes its banks', 'deposits sediment at its mouth'], 'D', 'E.g. Volta delta.', 4],
     ],
 
     'Climate and vegetation' => [
@@ -75,6 +101,19 @@ return [
         ['Rainfall formed when moist air is forced up a mountain is', ['convectional rainfall', 'relief (orographic) rainfall', 'frontal rainfall', 'cyclonic rainfall'], 'B', 'The leeward side is a rain shadow.', 2],
         ['The tropical rainforest has many layers of trees, the tallest of which are called', ['undergrowth', 'shrubs', 'emergents', 'grasses'], 'C', 'They rise above the canopy.', 2],
         ['A climatic graph shows', ['road lengths', 'population growth', 'crop prices', 'temperature and rainfall of a place over a year'], 'D', 'Temperature is often a line; rainfall bars.', 1],
+        ['The ITCZ (inter-tropical convergence zone) affects Ghana\'s', ['population', 'time zone', 'rainfall seasons', 'soil colour'], 'C', 'Its movement brings the rains.', 5],
+        ['The temperature at the foot of a mountain is 30 °C. Using the normal lapse rate, the temperature at 2,000 m is', ['28 °C', '23.5 °C', '10 °C', '17 °C'], 'D', '30 − 2 × 6.5.', 5],
+        ['Savanna vegetation is adapted to the dry season by', ['growing in water', 'having deep roots and shedding leaves', 'having broad soft leaves', 'having no roots'], 'B', 'Xerophytic features.', 4],
+        ['Air at 25 °C rises adiabatically and cools at the dry rate of 10 °C/km until condensation at 1 km. Its temperature at cloud base is', ['25 °C', '20 °C', '15 °C', '5 °C'], 'C', '25 − 10.', 5],
+        ['The Benguela current cools the coast of', ['Egypt', 'Ghana', 'Kenya', 'south-western Africa'], 'D', 'Contributes to the Namib desert.', 5],
+        ['Air temperature generally falls with height at about', ['0.1 °C per 1,000 m', '1 °C per 1,000 m', '20 °C per 1,000 m', '6.5 °C per 1,000 m'], 'D', 'Normal lapse rate.', 5],
+        ['The harmattan is a', ['moist south-westerly wind', 'dry dusty north-easterly wind', 'sea breeze', 'land breeze'], 'B', 'From the Sahara.', 4],
+        ['Relief rainfall occurs when moist air', ['is heated by the ground', 'meets cold fronts', 'rises over high ground', 'sinks into valleys'], 'C', 'Orographic rainfall.', 4],
+        ['Xerophytes are typical of', ['tundra only', 'rainforests', 'swamps', 'deserts'], 'D', 'Drought-resistant plants.', 4],
+        ['The Mediterranean climate has', ['rain all year', 'hot dry summers and mild wet winters', 'cold dry winters', 'monsoon rains in summer'], 'B', 'Winter rainfall.', 4],
+        ['The Inter-Tropical Discontinuity (ITD) separates', ['cold and warm currents', 'tropical maritime and tropical continental air masses', 'land and sea', 'polar air masses'], 'B', 'Controls West African seasons.', 5],
+        ['The Benguela current is a', ['river', 'warm current', 'cold current', 'wind'], 'C', 'Off south-west Africa.', 5],
+        ['Savanna vegetation is characterised by', ['mosses', 'dense evergreen trees', 'cacti only', 'tall grasses with scattered trees'], 'D', 'Tropical grassland.', 4],
     ],
 
     'Map work' => [
@@ -92,6 +131,17 @@ return [
         ['On a topographical map, a church is often shown with', ['a contour', 'a blue line', 'a cross symbol', 'a spot height'], 'C', 'Conventional signs are in the key.', 1],
         ['A four-figure grid reference identifies', ['a scale', 'an exact point', 'a contour', 'a grid square'], 'D', 'Six figures locate a point.', 2],
         ['The vertical interval is the', ['horizontal distance', 'difference in height between two consecutive contours', 'scale of the map', 'bearing'], 'B', 'It is constant on a map.', 2],
+        ['On a map of scale 1:50,000, a road measures 7.5 cm. Its actual length is', ['0.375 km', '37.5 km', '3.75 km', '7.5 km'], 'C', '7.5 × 50,000 cm = 375,000 cm.', 4],
+        ['A slope rises 50 m over a horizontal distance of 1 km. Its gradient is', ['1 in 2', '1 in 50', '1 in 200', '1 in 20'], 'D', '50 : 1,000.', 5],
+        ['An area of 4 cm² on a 1:25,000 map represents', ['1 km²', '0.25 km²', '100 km²', '4 km²'], 'B', '1 cm² = 0.0625 km².', 5],
+        ['Two places 6 cm apart on a 1:25,000 map are 150 m apart in height. The gradient is', ['1 in 15', '1 in 10', '1 in 25', '1 in 100'], 'B', 'HE 1,500 m.', 5],
+        ['On a map of scale 1 : 50,000, 4 cm represents', ['200 m', '20 km', '2 km', '4 km'], 'C', '4 × 50,000 cm.', 4],
+        ['On a 1 : 25,000 map, an area of 4 cm² represents', ['4 km²', '1 km²', '100 km²', '0.25 km²'], 'D', '1 cm² = 0.0625 km².', 5],
+        ['Closely spaced contours indicate a', ['steep slope', 'gentle slope', 'flat land', 'valley floor'], 'A', 'Rapid change in height.', 4],
+        ['The vertical interval between contours of 100 m and 150 m is', ['50 m', '100 m', '150 m', '250 m'], 'A', '150 − 100.', 4],
+        ['A gradient of 1 in 20 between two points 2 km apart means a height difference of', ['100 m', '200 m', '40 m', '20 m'], 'A', '2000 ÷ 20.', 5],
+        ['A bearing of 270° is due', ['west', 'east', 'south', 'north'], 'A', 'Clockwise from north.', 4],
+        ['A spur is shown on a map by contours that', ['form a V pointing downhill', 'form a V pointing uphill', 'are circular', 'are straight'], 'A', 'Ridge of high ground.', 5],
     ],
 
     'Human and economic geography (Ghana and West Africa)' => [
@@ -120,6 +170,17 @@ return [
         ['Nomadic herding in West Africa is practised mainly by the', ['Ashanti', 'Fulani', 'Ga', 'Yoruba'], 'B', 'They move with cattle in search of pasture.', 2],
         ['The Bui Dam is on the', ['Pra', 'White Volta', 'Black Volta', 'Tano'], 'C', 'It generates hydroelectric power.', 2],
         ['The main factor for siting industries in Tema is', ['desert', 'cold climate', 'mountains', 'the deep-water harbour and power supply'], 'D', 'It is Ghana\'s main industrial city.', 2],
+        ['A major reason for the location of the aluminium smelter at Tema is', ['cool climate', 'nearby bauxite mines', 'cheap hydroelectric power from Akosombo', 'large forests'], 'C', 'Smelting needs lots of electricity.', 4],
+        ['The main problem of the cocoa industry in Ghana is', ['lack of demand', 'too many young trees', 'excess rainfall everywhere', 'ageing farms and diseases like swollen shoot'], 'D', 'Rehabilitation is ongoing.', 4],
+        ['The Kainji Dam is on the River', ['Volta', 'Niger', 'Senegal', 'Benue'], 'B', 'It is in Nigeria.', 5],
+        ['Groundnut production in West Africa is concentrated in', ['the coastal mangroves', 'the rainforest', 'the savanna belt', 'the desert'], 'C', 'It needs moderate rainfall.', 4],
+        ['The main factor limiting industrialisation in many West African countries is', ['excess skilled labour', 'too many raw materials', 'cold climate', 'inadequate capital and power supply'], 'D', 'Infrastructure gaps.', 4],
+        ['The Volta Lake supports fishing, transport and', ['oil drilling', 'gold mining', 'irrigation and hydroelectric power', 'cocoa processing'], 'C', 'Multipurpose reservoir.', 4],
+        ['Lagos grew rapidly mainly because it', ['is the capital of Ghana', 'is in the desert', 'has gold mines', 'is a major port and commercial centre'], 'D', 'Primate city of Nigeria.', 4],
+        ['The Akosombo Dam was built mainly to', ['generate hydroelectric power', 'irrigate the north', 'control floods in Accra', 'supply water to Kumasi'], 'A', 'Power for VALCO and the nation.', 4],
+        ['Ghana\'s main bauxite deposits are at', ['Awaso', 'Obuasi', 'Nsuta', 'Akwatia'], 'A', 'Western North Region.', 5],
+        ['Manganese in Ghana is mined at', ['Nsuta', 'Awaso', 'Tarkwa only', 'Prestea'], 'A', 'Near Tarkwa.', 5],
+        ['Industries tend to locate near Tema because of', ['the harbour and power supply', 'cold climate', 'mountains', 'forests'], 'A', 'Transport and energy.', 4],
     ],
 
     'SHS 1: The solar system and the earth\'s motions' => [
@@ -133,6 +194,8 @@ return [
         ['The earth rotates from', ['east to west', 'west to east', 'north to south', 'south to north'], 'B', 'So the sun appears to rise in the east.', 1],
         ['The time the earth takes to rotate once on its axis is about', ['365 days', '24 hours', '12 hours', '30 days'], 'B', 'It causes day and night.', 1],
         ['Seasons are caused by the', ['rotation only', 'moon\'s phases', 'tilt of the earth\'s axis as it revolves around the sun', 'distance to Mars'], 'C', 'The tilt changes the sun\'s angle.', 2],
+        ['At the equinox, the length of day at the equator is', ['24 hours', '12 hours', '0 hours', '18 hours'], 'B', 'Day equals night everywhere.', 3],
+        ['The midnight sun is experienced inside the Arctic Circle around', ['21 March', '21 December', '21 June', '23 September'], 'C', 'The pole tilts towards the sun.', 4],
     ],
 
     'SHS 1: Latitude, longitude and time' => [
@@ -145,6 +208,8 @@ return [
         ['The International Date Line roughly follows', ['the equator', 'the 0° meridian', 'the 180° meridian', 'the Tropic of Cancer'], 'C', 'Crossing it changes the date.', 2],
         ['The Tropic of Capricorn lies at about', ['0°', '23½° N', '66½° S', '23½° S'], 'D', 'The sun is overhead there in December.', 2],
         ['A place at 30°W is how many hours behind Greenwich?', ['30 hours', '2 hours', '4 hours', '1 hour'], 'B', '30 ÷ 15.', 2],
+        ['Two places on the equator are 30° apart in longitude. The distance between them is about (earth\'s circumference 40,000 km)', ['1,111 km', '3,333 km', '30 km', '10,000 km'], 'B', '30/360 × 40,000.', 5],
+        ['A plane leaves Accra (0°) at 10:00 GMT and flies 8 hours to a city at 45°E. The local arrival time is', ['15:00', '18:00', '21:00', '13:00'], 'C', '18:00 GMT + 3 hours.', 5],
     ],
 
     'SHS 1: Map reading and relief' => [
@@ -158,6 +223,8 @@ return [
         ['A spot height on a map shows', ['a road', 'a town', 'a river', 'the exact height of a point'], 'D', 'It is marked with a dot and number.', 1],
         ['A ridge on a contour map appears as', ['contours forming a V pointing upstream', 'closed contours of decreasing height', 'contours forming a long, narrow upland', 'blue lines'], 'C', 'It is elongated high ground.', 3],
         ['A valley on a contour map is shown by contours forming a V pointing', ['east', 'downstream', 'north', 'upstream'], 'D', 'The V points towards higher ground.', 3],
+        ['On a 1:50,000 map, two points 4 cm apart differ in height by 100 m. The gradient is', ['1 in 4', '1 in 50', '1 in 200', '1 in 20'], 'D', 'HE = 2,000 m; 100 : 2,000.', 5],
+        ['A conical hill is shown on a map by', ['parallel straight contours', 'concentric roughly circular contours with height increasing inwards', 'V-shaped contours', 'no contours'], 'B', 'The summit is in the centre.', 4],
     ],
 
     'SHS 1: Ghana\'s physical environment' => [
@@ -182,10 +249,11 @@ return [
         ['The Accra Plains are relatively dry and covered by', ['rainforest', 'coastal savanna', 'mangrove only', 'desert'], 'B', 'Rainfall is low there.', 2],
         ['Forest soils (ochrosols) in Ghana are good for growing', ['wheat', 'millet only', 'cocoa', 'barley'], 'C', 'Cocoa grows in the forest zone.', 2],
         ['The harmattan in Ghana is most noticeable in', ['April to May', 'June to August', 'December to February', 'September only'], 'C', 'It brings dry, dusty air.', 1],
+        ['The double rainfall maxima of southern Ghana are caused by', ['mountains', 'the harmattan', 'ocean currents only', 'the movement of the ITCZ north and south twice a year'], 'D', 'Rain belts pass twice.', 5],
+        ['The dry Accra plains have low rainfall partly because', ['they are high mountains', 'the coastline runs parallel to the moist winds', 'they are far from the sea', 'of heavy forests'], 'B', 'Also cool upwelling waters.', 5],
     ],
 
     'SHS 1: Rocks and weathering' => [
-        ['Granite is an example of', ['organic rock', 'sedimentary rock', 'metamorphic rock', 'igneous rock'], 'D', 'It forms from magma cooling slowly underground.', 1],
         ['The peeling off of outer rock layers due to daily heating and cooling is', ['oxidation', 'carbonation', 'exfoliation', 'hydration'], 'C', 'It is a type of mechanical weathering common in hot, dry areas.', 2],
         ['Rainwater containing carbon dioxide dissolves limestone by', ['abrasion', 'exfoliation', 'frost action', 'carbonation'], 'D', 'It is a form of chemical weathering.', 2],
         ['The breakdown of rocks in place without moving them is', ['transportation', 'erosion', 'deposition', 'weathering'], 'D', 'Erosion moves the material.', 1],
@@ -194,6 +262,8 @@ return [
         ['Sandstone is an example of a', ['volcanic rock', 'igneous rock', 'metamorphic rock', 'sedimentary rock'], 'D', 'It forms from compacted sand.', 1],
         ['Chemical weathering is most rapid in', ['polar regions', 'cold, dry climates', 'deserts', 'hot, wet climates'], 'D', 'Heat and moisture speed reactions.', 2],
         ['Plant roots growing in rock cracks cause', ['chemical deposition', 'biological weathering', 'erosion by wind', 'folding'], 'B', 'Roots widen cracks.', 1],
+        ['Freeze–thaw weathering is most effective where', ['it is always frozen', 'it is always hot', 'temperatures fluctuate around 0 °C', 'there is no water'], 'C', 'Water expands on freezing.', 4],
+        ['Hydrolysis in chemical weathering mainly affects', ['salt', 'quartz', 'limestone', 'feldspars in granite'], 'D', 'Feldspar turns to clay.', 5],
     ],
 
     'SHS 1: The atmosphere' => [
@@ -205,6 +275,8 @@ return [
         ['The direction of wind is shown by a', ['barometer', 'anemometer', 'rain gauge', 'wind vane'], 'D', 'An anemometer measures speed.', 1],
         ['Winds are named after the direction', ['towards which they blow', 'from which they blow', 'of the sun', 'of the nearest town'], 'B', 'A north wind blows from the north.', 2],
         ['A Stevenson screen houses', ['wind vanes', 'rain gauges only', 'weather instruments such as thermometers', 'satellites'], 'C', 'It shades instruments from direct sun.', 2],
+        ['Air at 30 °C holding 15 g/m³ of water when it could hold 30 g/m³ has a relative humidity of', ['15%', '50%', '200%', '30%'], 'B', '15/30 × 100.', 4],
+        ['Dew point is the temperature at which', ['ice melts', 'water boils', 'air becomes saturated and condensation begins', 'air is driest'], 'C', 'Cooling to dew point forms dew.', 4],
     ],
 
     'SHS 1: Collecting geospatial data' => [
@@ -216,6 +288,7 @@ return [
         ['Collecting data about the earth from satellites or aircraft is', ['field sketching', 'remote sensing', 'interviewing', 'questionnaire survey'], 'B', 'Images show land use and change.', 2],
         ['A questionnaire is a method of collecting', ['satellite data', 'secondary data only', 'primary data', 'historical maps'], 'C', 'It gathers information directly from people.', 1],
         ['Secondary data includes', ['your photos', 'interviews you conduct', 'your field measurements', 'census reports and published maps'], 'D', 'It was collected by others.', 1],
+        ['Stratified sampling divides a population into', ['groups (strata) and samples each proportionally', 'random individuals only', 'one group', 'no groups'], 'A', 'Improves representativeness.', 5],
     ],
 
     'SHS 1: Mining, pollution and hazards in Ghana' => [
@@ -228,6 +301,7 @@ return [
         ['NADMO in Ghana is responsible for', ['running elections', 'collecting taxes', 'managing disasters such as floods', 'issuing passports'], 'C', 'National Disaster Management Organisation.', 1],
         ['Flooding in Accra is made worse by', ['low rainfall', 'planting trees', 'good drainage', 'blocked drains and building on waterways'], 'D', 'Water cannot drain away.', 1],
         ['Surface mining often leads to', ['more forests', 'land degradation and loss of farmland', 'cleaner rivers', 'better soil'], 'B', 'Pits are left behind.', 1],
+        ['Cyanide used in gold processing can cause', ['better soil', 'more rain', 'poisoning of rivers and fish', 'no effect'], 'C', 'Spills are dangerous.', 4],
     ],
 
     'SHS 2: Earth movements and landforms' => [
@@ -238,9 +312,9 @@ return [
         ['An opening in the earth\'s crust through which magma erupts is a', ['fault', 'volcano', 'fold', 'rift'], 'B', 'Mount Cameroon is an active volcano.', 1],
         ['The point on the earth\'s surface directly above the origin of an earthquake is the', ['fault', 'focus', 'epicentre', 'crater'], 'C', 'The focus is the point of origin below the surface.', 2],
         ['A fold mountain is formed by', ['volcanic ash only', 'erosion by rivers', 'wind deposition', 'compression of the earth\'s crust'], 'D', 'The Atlas Mountains are fold mountains.', 2],
-        ['A rift valley is formed by', ['river erosion', 'faulting and sinking of land between two faults', 'glaciers', 'folding'], 'B', 'The East African Rift Valley is an example.', 2],
         ['An earthquake\'s point of origin underground is the', ['crater', 'epicentre', 'focus', 'vent'], 'C', 'The epicentre is directly above it.', 2],
         ['A volcano that has not erupted for a long time but may erupt again is', ['composite', 'active', 'extinct', 'dormant'], 'D', 'Extinct volcanoes will not erupt again.', 2],
+        ['Plate boundaries where plates move apart are', ['passive', 'convergent', 'transform', 'divergent (constructive)'], 'D', 'The Mid-Atlantic Ridge.', 5],
     ],
 
     'SHS 2: Map skills and analysis' => [
@@ -248,10 +322,12 @@ return [
         ['A scale written as 1 : 25,000 is called a', ['statement scale', 'representative fraction', 'linear scale', 'grid'], 'B', 'It shows that 1 unit on the map stands for 25,000 of the same units on the ground.', 2],
         ['The direction of a place measured clockwise from north in degrees is its', ['scale', 'contour', 'bearing', 'latitude'], 'C', 'Bearings are written with three figures, such as 045°.', 1],
         ['A gradient of 1 in 20 means the land rises', ['1 m per 1 m', '20 units per 1 unit', '1 unit for every 20 units of horizontal distance', '20 m per 20 m'], 'C', 'Gradient = vertical interval / horizontal equivalent.', 2],
-        ['The bearing of a place directly west of another is', ['270°', '090°', '180°', '000°'], 'A', 'Measured clockwise from north.', 1],
-        ['A cross-section drawn from a contour map shows the', ['profile of the land surface', 'population', 'rainfall', 'vegetation types'], 'A', 'It reveals hills and valleys.', 2],
+        ['The bearing of a place directly west of another is', ['090°', '270°', '180°', '000°'], 'B', 'Measured clockwise from north.', 1],
+        ['A cross-section drawn from a contour map shows the', ['rainfall', 'population', 'profile of the land surface', 'vegetation types'], 'C', 'It reveals hills and valleys.', 2],
         ['Two places with an intervening hill between them are said to be', ['not intervisible', 'intervisible', 'parallel', 'on the same contour'], 'A', 'The hill blocks the line of sight.', 3],
         ['A six-figure grid reference is more precise than a four-figure one because it', ['locates a point within a grid square', 'covers a larger area', 'uses contours', 'shows the scale'], 'A', 'The extra digits are tenths.', 2],
+        ['On a 1:50,000 map, the vertical interval is 20 m and contours are 0.5 cm apart. The gradient is', ['1 in 12.5', '1 in 25', '1 in 50', '1 in 2.5'], 'A', 'HE = 250 m; 20 : 250.', 5],
+        ['A map area of 6 cm² at 1:50,000 represents', ['1.5 km²', '3 km²', '15 km²', '0.6 km²'], 'A', '1 cm² = 0.25 km².', 5],
     ],
 
     'SHS 2: The physical setting of West Africa' => [
@@ -264,6 +340,7 @@ return [
         ['Mount Cameroon is a', ['volcanic mountain', 'fold mountain', 'block mountain', 'plateau'], 'A', 'It is still active.', 2],
         ['The Jos Plateau is in', ['Nigeria', 'Ghana', 'Mali', 'Senegal'], 'A', 'It is known for tin mining.', 2],
         ['Lake Chad is shared by Nigeria, Niger, Chad and', ['Cameroon', 'Ghana', 'Mali', 'Togo'], 'A', 'It has shrunk greatly.', 2],
+        ['The Benue River is a major tributary of the', ['Niger', 'Volta', 'Senegal', 'Gambia'], 'A', 'They meet at Lokoja.', 4],
     ],
 
     'SHS 2: Manufacturing industries in Ghana' => [
@@ -274,6 +351,7 @@ return [
         ['Cocoa processing factories are found in', ['Tema and Takoradi', 'Bolgatanga only', 'Wa only', 'Yendi only'], 'A', 'They make cocoa butter and powder.', 2],
         ['A problem facing manufacturing in Ghana is', ['unreliable power supply', 'too much electricity', 'free raw materials', 'no demand at all'], 'A', 'Power outages ("dumsor") raise costs.', 1],
         ['Tema is an important industrial city mainly because of its', ['harbour and industrial zone', 'mountains', 'gold mines', 'forests'], 'A', 'It has many factories.', 1],
+        ['Agglomeration of industries in Accra–Tema is mainly due to', ['market, port, power and labour advantages', 'cold climate', 'forests', 'gold deposits'], 'A', 'Industrial clustering.', 4],
     ],
 
     'SHS 2: Soil formation' => [
@@ -285,17 +363,20 @@ return [
         ['Laterite soils form in', ['hot, wet tropical regions with heavy leaching', 'cold deserts', 'polar areas', 'high mountains only'], 'A', 'Iron and aluminium oxides remain.', 2],
         ['A soil profile is', ['a vertical section showing soil layers', 'a soil map', 'a soil sample bag', 'a type of rock'], 'A', 'It shows horizons.', 1],
         ['Humus improves soil by', ['increasing water retention and fertility', 'making it sandy', 'reducing nutrients', 'causing erosion'], 'A', 'It is decayed organic matter.', 1],
+        ['Podzolisation occurs mainly in', ['cool, wet climates under coniferous forest', 'hot deserts', 'tropical grasslands', 'mangroves'], 'A', 'Intense leaching of iron and humus.', 5],
     ],
 
     'SHS 2: World climates and vegetation' => [
         ['A climate with hot, dry summers and mild, wet winters is the', ['monsoon climate', 'equatorial climate', 'tundra climate', 'Mediterranean climate'], 'D', 'It is found around the Mediterranean Sea and at the southern tip of Africa.', 2],
         ['The equatorial climate is', ['hot and wet all year', 'cold all year', 'dry all year', 'hot with snow'], 'A', 'Temperatures stay around 27 °C, with rain in every month.', 1],
         ['Coniferous forest of the cold northern lands is called', ['taiga', 'savannah', 'steppe', 'mangrove'], 'A', 'Conifers have needle leaves that resist snow and frost.', 2],
-        ['The Mediterranean climate has', ['hot dry summers and mild wet winters', 'rain all year', 'very cold winters', 'no seasons'], 'A', 'It is found around the Mediterranean Sea.', 2],
         ['Tundra vegetation consists mainly of', ['mosses, lichens and small shrubs', 'tall trees', 'grassland', 'cacti'], 'A', 'It is found near the Arctic.', 2],
         ['The tropical rainforest has', ['high temperatures and heavy rainfall all year', 'cold winters', 'a long dry season', 'little rain'], 'A', 'The Amazon is the largest rainforest.', 1],
         ['The temperate grasslands of North America are called the', ['prairies', 'pampas', 'steppes', 'veld'], 'A', 'The pampas are in South America.', 2],
         ['The hot desert climate has', ['very low rainfall and high day temperatures', 'heavy rain all year', 'cold winters only', 'two rainy seasons'], 'A', 'The Sahara is an example.', 1],
+        ['Monsoon climates are characterised by', ['seasonal reversal of winds bringing heavy summer rain', 'rain all year', 'no rain', 'snow'], 'A', 'E.g. India.', 4],
+        ['Coniferous forests (taiga) are found mainly in', ['cool temperate regions of the Northern Hemisphere', 'the equator', 'deserts', 'the tropics'], 'A', 'Canada, Russia, Scandinavia.', 4],
+        ['Tropical continental (savanna) climates have', ['a wet summer and a long dry season', 'rain all year', 'very cold winters', 'no seasons'], 'A', 'As in northern Ghana.', 4],
     ],
 
     'SHS 2: Land degradation and environmental hazards' => [
@@ -307,6 +388,7 @@ return [
         ['An earthquake is measured on the', ['Richter scale', 'Beaufort scale', 'Celsius scale', 'Mohs scale'], 'A', 'The Beaufort scale measures wind.', 2],
         ['Accra experienced a major earthquake in', ['1939', '1957', '2000', '1980'], 'A', 'It caused deaths and damage.', 3],
         ['Bush fires in the savanna destroy', ['vegetation and soil organisms', 'rocks only', 'rivers', 'clouds'], 'A', 'They expose soil to erosion.', 1],
+        ['Gully erosion is most likely on', ['bare slopes with heavy concentrated runoff', 'flat grassland', 'forest floors', 'rocky deserts'], 'A', 'Runoff cuts channels.', 4],
     ],
 
     'SHS 3: Rivers and mass wasting' => [
@@ -315,11 +397,13 @@ return [
         ['Land built up from sediment at the mouth of a river, such as at the Volta estuary, is', ['a delta', 'a gorge', 'a meander', 'a waterfall'], 'A', 'It forms where the river slows and drops its load.', 1],
         ['The slow downhill movement of soil under gravity is', ['soil creep', 'a landslide', 'a rockfall', 'an avalanche'], 'A', 'Tilted fences and trees are signs of soil creep.', 2],
         ['The downhill movement of soil and rock under gravity is', ['mass wasting', 'weathering', 'deposition', 'sedimentation'], 'A', 'Landslides are a type.', 1],
-        ['A delta forms where a river', ['deposits sediment at its mouth', 'begins', 'erodes a waterfall', 'flows underground'], 'A', 'The Volta has a delta.', 1],
         ['The very slow downhill movement of soil is', ['soil creep', 'a landslide', 'a rockfall', 'a mudflow'], 'A', 'It tilts fences and trees.', 2],
         ['The area drained by a river and its tributaries is its', ['drainage basin', 'delta', 'estuary', 'meander'], 'A', 'The boundary is the watershed.', 1],
         ['A meander is', ['a bend in a river', 'a waterfall', 'a delta', 'a lake'], 'A', 'It forms in the middle and lower course.', 1],
         ['The mouth of a river is where it', ['enters the sea or lake', 'begins', 'forms a waterfall', 'splits into tributaries'], 'A', 'The source is where it begins.', 1],
+        ['River capture occurs when', ['one river erodes headward and diverts the headwaters of another', 'two rivers meet at a delta', 'a river dries up', 'a river floods'], 'A', 'Leaves a wind gap.', 5],
+        ['A river\'s discharge is calculated as', ['cross-sectional area × velocity', 'length × width', 'depth only', 'rainfall × area'], 'A', 'Measured in cumecs.', 5],
+        ['Rejuvenation of a river can produce', ['knickpoints and river terraces', 'deltas only', 'ox-bow lakes only', 'sand dunes'], 'A', 'Due to a fall in base level.', 5],
     ],
 
     'SHS 3: Population studies in Ghana' => [
@@ -332,6 +416,8 @@ return [
         ['Ghana\'s 2021 Population and Housing Census recorded a population of about', ['30.8 million', '20 million', '45 million', '12 million'], 'A', 'It was the first digital census in Ghana.', 2],
         ['Natural increase in population is', ['birth rate minus death rate', 'immigration minus emigration', 'total births', 'total deaths'], 'A', 'It excludes migration.', 2],
         ['A population pyramid with a wide base indicates', ['a high birth rate', 'an ageing population', 'low fertility', 'many old people'], 'A', 'Many young people.', 2],
+        ['A population with a narrow base and wide top in its pyramid indicates', ['an ageing population with low birth rates', 'a youthful population', 'high death rates of the old', 'rapid growth'], 'A', 'Common in developed countries.', 5],
+        ['A country with a birth rate of 30‰ and death rate of 8‰ has a natural increase rate of', ['2.2%', '3.8%', '22%', '0.22%'], 'A', '22 per thousand.', 5],
     ],
 
     'SHS 3: Climate change and waste management' => [
@@ -343,6 +429,7 @@ return [
         ['A sanitary landfill differs from an open dump because it', ['is lined and covered to protect the environment', 'is in the open air', 'burns waste openly', 'is in rivers'], 'A', 'It controls leachate and smell.', 2],
         ['Rising sea levels due to climate change threaten', ['coastal towns such as Keta', 'mountain villages', 'inland deserts', 'nothing'], 'A', 'Warming melts ice and expands water.', 1],
         ['Global warming is likely to cause', ['more extreme weather events', 'colder winters everywhere', 'no change', 'more ice'], 'A', 'Floods and droughts increase.', 1],
+        ['Carbon sequestration means', ['capturing and storing carbon dioxide', 'releasing CO₂', 'burning fuel', 'cutting trees'], 'A', 'Forests and soils store carbon.', 4],
     ],
 
     'SHS 3: Desert encroachment and landslides' => [
@@ -354,5 +441,6 @@ return [
         ['Planting vegetation on slopes helps to prevent landslides because roots', ['bind the soil', 'add weight', 'loosen the soil', 'absorb sunlight'], 'A', 'Roots hold soil together.', 1],
         ['The Great Green Wall initiative aims to', ['stop the spread of the Sahara across Africa', 'build a wall around Accra', 'plant crops in the sea', 'prevent floods in cities'], 'A', 'A belt of trees across the Sahel.', 2],
         ['Overgrazing contributes to desert encroachment by', ['removing vegetation that holds the soil', 'adding moisture', 'planting trees', 'improving soil'], 'A', 'Bare soil is blown away.', 1],
+        ['Slope instability increases when', ['soil becomes saturated and vegetation is removed', 'trees are planted', 'drainage is improved', 'terraces are built'], 'A', 'Water adds weight and lubricates.', 4],
     ],
 ];

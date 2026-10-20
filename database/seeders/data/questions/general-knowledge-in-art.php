@@ -43,6 +43,10 @@ return [
         ['Movement in a work of art is', ['the frame', 'the path the viewer\'s eye follows', 'the price', 'the signature'], 'B', 'Lines and shapes guide it.', 2],
         ['Pattern in art is created by', ['leaving blank space', 'using one line', 'repeating a motif', 'framing'], 'C', 'E.g. kente designs.', 1],
         ['Value in art refers to', ['shape', 'price', 'size', 'lightness or darkness'], 'D', 'Shading creates value.', 1],
+        ['The golden ratio, often used in composition, is approximately', ['1 : 2', '1 : 1.618', '1 : 3', '1 : 1'], 'B', 'Found in nature and classical art.', 5],
+        ['Atmospheric (aerial) perspective creates depth by making distant objects', ['larger', 'darker and sharper', 'paler, bluer and less detailed', 'more saturated'], 'C', 'Air scatters light.', 5],
+        ['Chiaroscuro refers to', ['mosaic work', 'flat colour', 'outline drawing', 'strong contrast between light and dark'], 'D', 'Used by Caravaggio.', 5],
+        ['Simultaneous contrast means colours appear different depending on', ['the brush used', 'the colours next to them', 'the canvas size', 'the time of day only'], 'B', 'Grey looks warmer on blue.', 5],
     ],
 
     'Ghanaian and African art' => [
@@ -67,15 +71,18 @@ return [
         ['Adinkra symbols are traditionally stamped on cloth using', ['metal moulds', 'carved calabash stamps', 'brushes only', 'computers'], 'B', 'The dye is made from tree bark.', 2],
         ['The Adinkra symbol "Gye Nyame" means', ['wisdom', 'unity', 'except God', 'strength'], 'C', 'It expresses the supremacy of God.', 1],
         ['The Asante craft of making brass figures by the lost-wax method is', ['carving', 'weaving', 'pottery', 'casting'], 'D', 'Gold weights were made this way.', 2],
-        ['The Adinkra symbol "Sankofa" means', ['go back and fetch it (learn from the past)', 'except God', 'unity', 'strength'], 'A', 'It is shown as a bird looking backwards.', 1],
-        ['The Adinkra symbol "Dwennimmen" (ram\'s horns) represents', ['humility and strength', 'death', 'wealth', 'war'], 'A', 'A ram is strong yet humble.', 2],
-        ['The Benin bronzes of Nigeria were made by', ['the lost-wax casting method', 'weaving', 'carving stone', 'painting'], 'A', 'They were made for the Oba\'s court.', 2],
-        ['Ewe kente differs from Asante kente mainly in its', ['use of figurative motifs and different colour schemes', 'material only', 'size', 'absence of colour'], 'A', 'Ewe kente often has pictures.', 3],
+        ['The Adinkra symbol "Sankofa" means', ['unity', 'except God', 'go back and fetch it (learn from the past)', 'strength'], 'C', 'It is shown as a bird looking backwards.', 1],
+        ['The Adinkra symbol "Dwennimmen" (ram\'s horns) represents', ['war', 'death', 'wealth', 'humility and strength'], 'D', 'A ram is strong yet humble.', 2],
+        ['The Benin bronzes of Nigeria were made by', ['weaving', 'the lost-wax casting method', 'carving stone', 'painting'], 'B', 'They were made for the Oba\'s court.', 2],
+        ['Ewe kente differs from Asante kente mainly in its', ['size', 'material only', 'use of figurative motifs and different colour schemes', 'absence of colour'], 'C', 'Ewe kente often has pictures.', 3],
         ['The Ghanaian craft of making pots from clay is', ['pottery (ceramics)', 'weaving', 'carving', 'casting'], 'A', 'Vume and Kpando are known for it.', 1],
         ['Asante gold weights were used to', ['weigh gold dust in trade', 'decorate houses', 'make music', 'farm'], 'A', 'They show proverbs and figures.', 1],
         ['The Adinkra symbol "Nyame Dua" represents', ['God\'s presence and protection', 'war', 'wealth', 'farming'], 'A', 'An altar to God.', 2],
         ['The Asante stool carving centre near Kumasi is', ['Ahwiaa', 'Bonwire', 'Ntonso', 'Pankrono'], 'A', 'Ntonso is known for Adinkra.', 2],
         ['Ntonso in the Ashanti Region is known for', ['Adinkra cloth production', 'kente weaving', 'pottery', 'bead making'], 'A', 'Stamps are made from calabash.', 2],
+        ['The Akan gold weights were cast using the', ['cire perdue (lost-wax) process', 'sand-casting only', 'forging', 'stamping'], 'A', 'Wax models are replaced by metal.', 4],
+        ['The motif "Fihankra" in Adinkra symbolises', ['security and safety of the house', 'death', 'wealth', 'war'], 'A', 'A compound house.', 5],
+        ['Nok terracotta heads are noted for', ['elaborate hairstyles and pierced eyes', 'bronze material', 'abstract cubes', 'gold leaf'], 'A', 'From central Nigeria.', 5],
     ],
 
     'Art history and movements' => [
@@ -102,5 +109,8 @@ return [
         ['Ancient Egyptian art is known for', ['figures shown with head in profile and body facing front', 'realistic perspective', 'abstract shapes', 'photography'], 'A', 'It followed strict conventions.', 2],
         ['The Baroque style is known for', ['drama, movement and rich detail', 'simple shapes only', 'abstraction', 'pop culture'], 'A', 'Caravaggio and Rubens.', 3],
         ['Salvador Dalí was a', ['Surrealist painter', 'Impressionist', 'Cubist', 'Renaissance artist'], 'A', 'Known for melting clocks.', 1],
+        ['Fauvism is characterised by', ['wild, non-naturalistic colours', 'muted greys', 'photographic realism', 'geometric black lines only'], 'A', 'Henri Matisse led it.', 5],
+        ['African sculpture influenced early 20th-century', ['Cubism', 'Baroque', 'Renaissance', 'Gothic art'], 'A', 'Picasso\'s "Les Demoiselles d\'Avignon".', 5],
+        ['Pointillism uses', ['small dots of pure colour that blend in the viewer\'s eye', 'long brushstrokes', 'collage', 'sculpture'], 'A', 'Georges Seurat.', 4],
     ],
 ];

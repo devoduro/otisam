@@ -25,6 +25,8 @@ return [
         ['Weight acts through the aircraft\'s', ['nose', 'centre of gravity', 'tail', 'wing tips'], 'B', 'Loading affects its position.', 1],
         ['Drag increases when', ['the aircraft is parked', 'speed decreases', 'speed increases', 'engines stop'], 'C', 'Drag rises with the square of speed.', 2],
         ['A glider has no engine, so it relies on', ['rockets', 'jet thrust', 'propellers', 'gravity and rising air currents'], 'D', 'Thermals provide lift.', 1],
+        ['The lift-to-drag ratio of a glider is 30. From 1,000 m it can glide about', ['3 km', '30 km', '300 m', '1 km'], 'B', 'Glide ratio × height.', 5],
+        ['In a level turn, the load factor at a 60° bank angle is', ['1.5', '1', '2', '0.5'], 'C', 'n = 1/cos 60°.', 5],
     ],
 
     'Wings and lift' => [
@@ -43,6 +45,9 @@ return [
         ['Camber refers to the', ['height of the tail', 'length of the fuselage', 'curvature of an aerofoil', 'size of the engine'], 'C', 'More camber gives more lift at low speed.', 2],
         ['The aspect ratio of a wing compares its', ['thickness to colour', 'weight to lift', 'speed to height', 'span to its mean chord'], 'D', 'Gliders have high aspect ratios.', 3],
         ['Lift depends on air density, speed, wing area and', ['the colour', 'the lift coefficient', 'the pilot\'s weight only', 'the time of day'], 'B', 'L = ½ρv²SC_L.', 3],
+        ['If an aircraft\'s speed doubles while other factors stay constant, its lift', ['stays the same', 'doubles', 'halves', 'quadruples'], 'D', 'Lift ∝ v².', 5],
+        ['A wing has span 30 m and mean chord 3 m. Its aspect ratio is', ['90', '10', '33', '3'], 'B', 'AR = span/chord.', 4],
+        ['Wing loading is', ['thrust per engine', 'wing area divided by weight', 'aircraft weight divided by wing area', 'fuel per wing'], 'C', 'It affects take-off speed.', 5],
     ],
 
     'Aircraft parts and control' => [
@@ -74,6 +79,7 @@ return [
         ['A compass in an aircraft shows', ['fuel level', 'altitude', 'airspeed', 'magnetic heading'], 'D', 'Pilots navigate by headings.', 1],
         ['Seatbelt signs are switched on during', ['cruise only', 'take-off, landing and turbulence', 'boarding only', 'never'], 'B', 'They protect passengers.', 1],
         ['Emergency exits on aircraft are marked to', ['store luggage', 'decorate the cabin', 'help passengers evacuate quickly', 'show the toilet'], 'C', 'Floor lighting guides passengers.', 1],
+        ['The difference between indicated and true airspeed increases with altitude because', ['the engines slow', 'temperature rises', 'gravity weakens', 'air density decreases'], 'D', 'Pitot readings depend on density.', 5],
     ],
 
     'Propulsion and the atmosphere' => [
@@ -92,6 +98,8 @@ return [
         ['Jet engines take in air, compress it, burn fuel and', ['produce electricity only', 'store the air', 'cool the fuel', 'expel hot gases at high speed'], 'D', 'Suck, squeeze, bang, blow.', 2],
         ['Air pressure decreases with altitude, so aircraft cabins are', ['left open', 'pressurised', 'filled with water', 'cooled only'], 'B', 'It allows normal breathing.', 2],
         ['Turboprop engines use a gas turbine to drive a', ['generator only', 'rocket', 'propeller', 'wheel'], 'C', 'They suit short regional flights.', 2],
+        ['Air density at high altitude is lower, so jet engine thrust', ['increases', 'decreases', 'stays the same', 'becomes infinite'], 'B', 'Less air mass flow.', 4],
+        ['Specific fuel consumption measures', ['engine weight', 'fuel tank size', 'fuel used per unit thrust or power per hour', 'top speed'], 'C', 'Lower is more efficient.', 5],
     ],
 
     'Space and orbits' => [
@@ -107,6 +115,9 @@ return [
         ['The first human to walk on the moon was', ['Yuri Gagarin', 'Neil Armstrong', 'Buzz Aldrin', 'John Glenn'], 'B', 'In July 1969 (Apollo 11).', 1],
         ['Escape velocity from the earth is about', ['112 km/s', '1.1 km/s', '11.2 km/s', '0.5 km/s'], 'C', 'Below this, objects fall back or orbit.', 3],
         ['GPS works using signals from', ['the moon', 'radio towers only', 'underground cables', 'satellites orbiting the earth'], 'D', 'At least four satellites give a position.', 2],
+        ['The International Space Station orbits at about 400 km. Its orbital period is about', ['30 days', '24 hours', '12 hours', '90 minutes'], 'D', 'Low earth orbit.', 4],
+        ['Kepler\'s third law relates a planet\'s orbital period to its', ['mass', 'mean distance from the sun', 'colour', 'number of moons'], 'B', 'T² ∝ r³.', 5],
+        ['The speed needed for a low earth orbit is about', ['1 km/s', '11.2 km/s', '7.8 km/s', '30 km/s'], 'C', 'Escape velocity is 11.2 km/s.', 5],
     ],
 
     'History, materials and the industry' => [
@@ -157,9 +168,10 @@ return [
         ['In the International Standard Atmosphere, sea-level temperature is', ['−15 °C', '0 °C', '25 °C', '15 °C'], 'D', 'Pressure is 1013.25 hPa.', 2],
         ['Cumulonimbus clouds are dangerous to aircraft because they produce', ['calm air', 'clear skies', 'thunderstorms, turbulence and icing', 'warm fog only'], 'C', 'Pilots avoid them.', 2],
         ['A headwind during take-off', ['stops the engine', 'lengthens the take-off run', 'has no effect', 'shortens the take-off run'], 'D', 'Airspeed builds faster.', 2],
-        ['Standard sea-level pressure is about', ['1013 hPa', '500 hPa', '2000 hPa', '100 hPa'], 'A', 'It is 29.92 inches of mercury.', 2],
-        ['Fog reduces flight safety mainly by', ['reducing visibility', 'increasing lift', 'cooling engines', 'increasing speed'], 'A', 'Pilots rely on instruments.', 1],
-        ['Temperature in the troposphere generally', ['decreases with height', 'increases with height', 'stays constant', 'doubles'], 'A', 'About 6.5 °C per km.', 2],
+        ['Standard sea-level pressure is about', ['100 hPa', '500 hPa', '2000 hPa', '1013 hPa'], 'D', 'It is 29.92 inches of mercury.', 2],
+        ['Fog reduces flight safety mainly by', ['increasing lift', 'reducing visibility', 'cooling engines', 'increasing speed'], 'B', 'Pilots rely on instruments.', 1],
+        ['Temperature in the troposphere generally', ['stays constant', 'increases with height', 'decreases with height', 'doubles'], 'C', 'About 6.5 °C per km.', 2],
+        ['At 3,000 m in the International Standard Atmosphere, the temperature is about', ['−20 °C', '15 °C', '0 °C', '−4.5 °C'], 'D', '15 − 3 × 6.5.', 5],
     ],
 
     'SHS 2: Aerodynamic forces' => [
@@ -172,6 +184,8 @@ return [
         ['Flaps on a wing are used to', ['increase lift at low speeds for take-off and landing', 'steer the aircraft', 'store fuel', 'cool the engine'], 'A', 'They change the wing camber.', 2],
         ['Parasite drag includes form drag and', ['skin friction drag', 'induced drag', 'lift', 'thrust'], 'A', 'It is not related to lift production.', 3],
         ['Streamlining an aircraft reduces', ['drag', 'lift', 'weight', 'thrust'], 'A', 'Smooth shapes reduce resistance.', 1],
+        ['Induced drag is greatest at', ['low speeds and high angles of attack', 'high speeds', 'zero lift', 'cruise only'], 'A', 'It falls as speed rises.', 5],
+        ['Total drag is minimum at the speed where', ['induced drag equals parasite drag', 'parasite drag is zero', 'lift is zero', 'thrust is maximum'], 'A', 'Best lift-to-drag ratio.', 5],
     ],
 
     'SHS 2: Propulsion systems' => [
@@ -183,6 +197,8 @@ return [
         ['The part of a jet engine where fuel is burned is the', ['combustion chamber', 'compressor', 'intake', 'nozzle'], 'A', 'Hot gases then drive the turbine.', 1],
         ['Propellers produce thrust by', ['accelerating air backward', 'heating air', 'pushing the ground', 'using magnets'], 'A', 'Newton\'s third law.', 1],
         ['The afterburner in a jet engine', ['injects extra fuel to increase thrust', 'cools the engine', 'stops the engine', 'reduces noise'], 'A', 'Used in military jets.', 3],
+        ['A jet engine accelerates 50 kg/s of air from 200 m/s to 600 m/s. The thrust is', ['20,000 N', '30,000 N', '10,000 N', '40,000 N'], 'A', 'ṁΔv = 50 × 400.', 5],
+        ['The bypass ratio of a turbofan compares', ['air bypassing the core to air through the core', 'fuel to air', 'thrust to weight', 'speed to height'], 'A', 'High bypass is quieter and efficient.', 5],
     ],
 
     'SHS 2: Aircraft instruments' => [
@@ -196,6 +212,8 @@ return [
         ['The vertical speed indicator shows the', ['rate of climb or descent', 'heading', 'altitude', 'airspeed'], 'A', 'Measured in feet per minute.', 2],
         ['The turn coordinator shows', ['the rate of turn and coordination', 'fuel level', 'altitude', 'oil pressure'], 'A', 'It helps balanced turns.', 3],
         ['The heading indicator shows the aircraft\'s', ['direction', 'speed', 'height', 'fuel'], 'A', 'It is gyroscopic.', 2],
+        ['The pitot tube measures', ['total (dynamic plus static) pressure', 'temperature', 'altitude only', 'fuel flow'], 'A', 'Used for airspeed.', 5],
+        ['A blocked static port would cause the altimeter to', ['freeze at the altitude where the blockage occurred', 'read zero', 'read double', 'spin'], 'A', 'Static pressure is trapped.', 5],
     ],
 
     'SHS 2: Aviation bodies and UAV regulations' => [
@@ -222,5 +240,7 @@ return [
         ['The main spar of a wing', ['carries most of the wing\'s bending loads', 'holds fuel only', 'controls roll', 'lights the wing'], 'A', 'It runs along the span.', 3],
         ['Dihedral (upward angle of wings) improves', ['lateral (roll) stability', 'speed', 'fuel capacity', 'thrust'], 'A', 'It helps the aircraft level itself.', 3],
         ['Pre-flight inspection is carried out', ['before every flight', 'once a year', 'only after accidents', 'never'], 'A', 'It checks airworthiness.', 1],
+        ['Moving the centre of gravity too far aft makes an aircraft', ['less stable in pitch and harder to recover from a stall', 'more stable', 'faster', 'heavier'], 'A', 'Loading limits matter.', 5],
+        ['Monocoque construction means', ['the outer skin carries most of the load', 'an internal frame carries all loads', 'there is no skin', 'wings carry fuselage loads'], 'A', 'Semi-monocoque adds stringers.', 5],
     ],
 ];

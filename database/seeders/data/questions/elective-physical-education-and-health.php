@@ -31,6 +31,9 @@ return [
         ['The deltoid muscle is located on the', ['back of the knee', 'calf', 'stomach', 'shoulder'], 'D', 'It lifts the arm.', 1],
         ['Tidal volume is the', ['maximum lung capacity', 'amount of air breathed in or out in a normal breath', 'air left after breathing out', 'breathing rate'], 'B', 'About 0.5 litres at rest.', 2],
         ['Ligaments connect', ['nerve to muscle', 'muscle to bone', 'bone to bone', 'skin to muscle'], 'C', 'They stabilise joints.', 1],
+        ['Cardiac output equals stroke volume multiplied by', ['blood pressure', 'heart rate', 'breathing rate', 'tidal volume'], 'B', 'Q = SV × HR.', 4],
+        ['A stroke volume of 70 ml and heart rate of 70 bpm give a cardiac output of', ['1 litre per minute', '140 ml per minute', '4.9 litres per minute', '49 litres per minute'], 'C', '70 × 70 ml.', 5],
+        ['The muscle that acts as the prime mover is the', ['synergist', 'antagonist', 'fixator', 'agonist'], 'D', 'Produces the movement.', 4],
     ],
 
     'Exercise physiology and training' => [
@@ -53,6 +56,16 @@ return [
         ['The training zone for aerobic fitness is about', ['10–20%', '60–80% of maximum heart rate', '95–100%', '30–40%'], 'B', 'It improves endurance.', 2],
         ['Circuit training involves', ['only sleeping', 'one long run', 'a series of exercises done at stations in rotation', 'only stretching'], 'C', 'It develops all-round fitness.', 1],
         ['Overtraining can lead to', ['faster healing', 'better recovery', 'more energy', 'fatigue, injury and poor performance'], 'D', 'Rest is part of training.', 1],
+        ['The energy system that dominates in a 100 m sprint is the', ['aerobic system', 'ATP–PC (phosphocreatine) system', 'lactic acid system only', 'fat oxidation system'], 'B', 'It lasts about 10 seconds.', 5],
+        ['The lactic acid (anaerobic glycolysis) system mainly supplies energy for events lasting about', ['under 2 seconds', 'over 1 hour', '10 seconds to 2 minutes', 'all day'], 'C', 'E.g. the 400 m.', 5],
+        ['Cardiac hypertrophy from endurance training results in', ['no change', 'a smaller heart', 'higher resting heart rate', 'a larger stroke volume and lower resting heart rate'], 'D', 'The heart becomes more efficient.', 5],
+        ['The Karvonen formula calculates training heart rate using', ['body weight', 'heart rate reserve (max HR − resting HR)', 'age only', 'blood pressure'], 'B', 'THR = RHR + %(HRR).', 5],
+        ['Using the Karvonen method, an athlete with max HR 200 and resting HR 60 training at 70% has a target HR of', ['140 bpm', '158 bpm', '182 bpm', '120 bpm'], 'B', '60 + 0.7 × 140.', 5],
+        ['VO₂ max is typically expressed in', ['beats per minute', 'litres per hour', 'mL of oxygen per kg per minute', 'kilocalories'], 'C', 'Relative to body mass.', 4],
+        ['Interval training alternates', ['different sports', 'periods of work and rest', 'morning and evening sessions', 'diet and sleep'], 'B', 'Work–rest ratio.', 4],
+        ['The principle of reversibility states that', ['overload is harmful', 'training must be specific', 'fitness gains are lost when training stops', 'rest is unnecessary'], 'C', 'Use it or lose it.', 4],
+        ['Plyometric training mainly develops', ['balance', 'flexibility', 'endurance', 'power'], 'D', 'Jumping and bounding.', 5],
+        ['Using the Karvonen method, a resting HR of 60 and max HR of 200 at 70% intensity gives a target HR of', ['140 bpm', '158 bpm', '170 bpm', '98 bpm'], 'B', '60 + 0.7 × 140.', 5],
     ],
 
     'Fitness testing and nutrition' => [
@@ -70,6 +83,8 @@ return [
         ['The Illinois agility test involves', ['sitting and reaching', 'jumping vertically', 'running a course around cones', 'lifting weights'], 'C', 'It measures agility.', 2],
         ['Athletes should drink water', ['only after a week', 'only when very thirsty', 'never during exercise', 'before, during and after exercise'], 'D', 'It prevents dehydration.', 1],
         ['Protein is important for athletes mainly for', ['quick energy only', 'muscle growth and repair', 'hydration', 'vitamins'], 'B', 'Eggs, beans and fish.', 1],
+        ['A 70 kg athlete needs about 1.4 g of protein per kg daily. The daily requirement is', ['140 g', '70 g', '98 g', '50 g'], 'C', '70 × 1.4.', 4],
+        ['A test is reliable if', ['it is short', 'it measures what it claims', 'it is expensive', 'it gives consistent results when repeated'], 'D', 'Validity is measuring what it claims.', 5],
     ],
 
     'Biomechanics and sport psychology' => [
@@ -86,6 +101,15 @@ return [
         ['Arousal that is too high before competition can cause', ['no effect', 'perfect performance', 'sleepiness', 'anxiety and poor performance'], 'D', 'The inverted-U theory.', 2],
         ['Goal setting in sport should be', ['vague', 'specific, measurable, achievable, realistic and time-bound', 'impossible', 'unmeasured'], 'B', 'SMART goals.', 1],
         ['Momentum in sport equals', ['mass × acceleration', 'force × time', 'mass × velocity', 'speed × time'], 'C', 'p = mv.', 2],
+        ['The optimum release angle for a shot put is slightly less than 45° because', ['gravity is stronger', 'the release height is above the landing point', 'the shot is heavy only', 'air resistance is zero'], 'B', 'Release height changes the optimum.', 5],
+        ['Angular momentum is conserved when a diver tucks, so the diver', ['stops spinning', 'spins slower', 'spins faster', 'falls faster'], 'C', 'Moment of inertia decreases.', 5],
+        ['The inverted-U hypothesis states that performance is best at', ['no arousal', 'very low arousal', 'very high arousal', 'moderate arousal'], 'D', 'Yerkes–Dodson.', 4],
+        ['Intrinsic motivation comes from', ['praise only', 'trophies', 'money', 'personal enjoyment and satisfaction'], 'D', 'Extrinsic comes from outside rewards.', 4],
+        ['A sprinter of mass 70 kg accelerates at 5 m/s². The net horizontal force is', ['14 N', '350 N', '700 N', '75 N'], 'B', 'F = ma.', 4],
+        ['Social facilitation suggests that an audience', ['has no effect', 'always lowers performance', 'improves performance of well-learned skills', 'only affects beginners positively'], 'C', 'Zajonc\'s theory.', 5],
+        ['Newton\'s third law explains why a sprinter', ['keeps moving at constant speed', 'slows down at the finish', 'pushes back on the blocks to move forward', 'falls'], 'C', 'Action and reaction.', 4],
+        ['Lowering the centre of gravity improves', ['flexibility', 'speed', 'endurance', 'stability'], 'D', 'Wider, lower base.', 4],
+        ['The inverted-U theory links performance to', ['arousal level', 'diet', 'height', 'age'], 'A', 'Optimal arousal.', 5],
     ],
 
     'Injuries and safety' => [
@@ -100,6 +124,10 @@ return [
         ['A muscle strain is', ['a skin cut', 'a broken bone', 'a joint dislocation', 'a stretch or tear of muscle fibres'], 'D', 'Often from overstretching.', 1],
         ['Dislocation means', ['a muscle tears', 'a bone is forced out of its joint', 'skin is cut', 'a bone breaks'], 'B', 'It must be treated by professionals.', 2],
         ['Heat exhaustion can be prevented by', ['skipping water', 'wearing heavy clothes', 'drinking enough water and avoiding training in extreme heat', 'training at noon only'], 'C', 'Hydration and rest.', 1],
+        ['A stress fracture is usually caused by', ['poor diet only', 'a single heavy blow', 'infection', 'repeated overuse loading of a bone'], 'D', 'Common in runners.', 4],
+        ['A tear in a ligament is a', ['sprain', 'strain', 'fracture', 'dislocation'], 'A', 'Strains affect muscles.', 4],
+        ['A stress fracture is caused mainly by', ['repeated overuse', 'a single heavy blow', 'infection', 'cold'], 'A', 'Repetitive loading.', 5],
+        ['A proper warm-up mainly', ['raises body temperature and reduces injury risk', 'tires the muscles', 'lowers heart rate', 'replaces training'], 'A', 'Prepares the body.', 4],
     ],
 
     'Sport, history and society' => [
@@ -179,9 +207,9 @@ return [
         ['The principle of specificity means training should', ['match the demands of the sport', 'be random', 'be the same for every sport', 'avoid skill practice'], 'A', 'Sprinters train for speed.', 2],
         ['Reversibility means fitness gains are', ['lost when training stops', 'permanent', 'doubled with rest', 'unaffected by rest'], 'A', '"Use it or lose it."', 2],
         ['FITT stands for frequency, intensity, time and', ['type', 'talent', 'team', 'tactics'], 'A', 'It is used to plan training.', 1],
-        ['Interval training alternates', ['periods of high-intensity work with rest or low-intensity work', 'sleep and eating', 'only long slow runs', 'only stretching'], 'A', 'It improves speed and endurance.', 2],
         ['Individual differences in training mean that', ['programmes should suit each athlete\'s needs', 'everyone trains the same', 'no training is needed', 'only experts train'], 'A', 'Age, fitness and goals differ.', 2],
         ['Recovery days in training allow the body to', ['repair and adapt', 'lose all fitness', 'become injured', 'gain fat only'], 'A', 'Adaptation happens during rest.', 1],
+        ['Detraining effects on aerobic fitness can begin after about', ['2 weeks of inactivity', '1 day', '1 year', 'never'], 'A', 'Reversibility.', 5],
     ],
 
     'SHS 2: Biomechanical principles' => [
@@ -194,6 +222,7 @@ return [
         ['Newton\'s first law in sport means a ball stays at rest until', ['a force acts on it', 'it gets tired', 'it is painted', 'the referee whistles'], 'A', 'This is the law of inertia.', 1],
         ['A long follow-through in throwing increases', ['the time force is applied, giving more speed', 'friction', 'weight', 'fatigue'], 'A', 'Impulse = force × time.', 3],
         ['Bending the knees when landing helps to', ['absorb impact force', 'increase impact', 'jump higher only', 'lose balance'], 'A', 'It spreads force over time.', 2],
+        ['A long jumper\'s range depends mainly on take-off speed, angle and', ['height of the centre of mass at take-off', 'shoe colour', 'crowd size', 'wind direction only'], 'A', 'Projectile principles.', 5],
     ],
 
     'SHS 2: Invasion sports and careers' => [
@@ -217,6 +246,7 @@ return [
         ['Stigma about mental illness', ['stops people from seeking help', 'encourages treatment', 'has no effect', 'cures illness'], 'A', 'Awareness reduces stigma.', 2],
         ['Anxiety disorders involve', ['excessive worry and fear', 'constant happiness', 'better sleep', 'more energy'], 'A', 'They can be treated.', 1],
         ['Getting enough sleep supports mental health by', ['improving mood and concentration', 'causing stress', 'reducing memory', 'causing anxiety'], 'A', 'Sleep restores the brain.', 1],
+        ['Cognitive behavioural therapy (CBT) helps people by', ['changing unhelpful thoughts and behaviours', 'prescribing drugs only', 'surgery', 'avoiding all activity'], 'A', 'A talking therapy.', 5],
     ],
 
     'SHS 3: Injury management and rehabilitation' => [
@@ -241,6 +271,7 @@ return [
         ['Kinesiology is the study of', ['human movement', 'plant growth', 'rocks', 'weather'], 'A', 'It covers anatomy and mechanics.', 2],
         ['The preparation phase of training focuses on', ['building a fitness base', 'competing', 'complete rest', 'tapering only'], 'A', 'It comes before the season.', 2],
         ['Tapering before a competition means', ['reducing training volume to rest the body', 'training harder', 'stopping all activity for months', 'changing sports'], 'A', 'It allows peak performance.', 2],
+        ['A mesocycle typically lasts', ['several weeks (about 2–6)', 'one day', 'one year', 'one hour'], 'A', 'Between micro- and macrocycles.', 4],
     ],
 
     'SHS 3: Academic and career pathways' => [

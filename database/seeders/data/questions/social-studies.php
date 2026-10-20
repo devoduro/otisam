@@ -32,6 +32,13 @@ return [
         ['Assertiveness means', ['insulting others', 'being aggressive', 'staying silent always', 'expressing one\'s views confidently and respectfully'], 'D', 'It helps resist negative peer pressure.', 2],
         ['A role model is a person who', ['is always rich', 'others look up to and copy', 'breaks laws', 'avoids responsibility'], 'B', 'Good role models inspire positive behaviour.', 1],
         ['Which is an example of a norm in Ghanaian society?', ['cheating in exams', 'stealing', 'greeting elders respectfully', 'littering'], 'C', 'Norms are expected behaviours.', 1],
+        ['Which statement best describes self-identity?', ['what others want them to be', 'a person\'s bank account', 'the name on a passport only', 'a person\'s understanding of who they are based on values and experiences'], 'D', 'It develops through socialisation.', 4],
+        ['Conformity becomes harmful when it', ['promotes discipline', 'leads individuals to act against their values', 'supports laws', 'encourages respect'], 'B', 'E.g. joining a gang.', 4],
+        ['Which best explains why adolescents are more vulnerable to peer pressure?', ['they dislike friends', 'they seek acceptance while forming their identity', 'they have fixed values', 'they avoid groups'], 'B', 'Identity formation stage.', 4],
+        ['Self-identity is best developed through', ['ignoring culture', 'copying celebrities', 'avoiding others', 'understanding one\'s values, abilities and background'], 'D', 'Self-knowledge.', 4],
+        ['Peer pressure becomes harmful when it', ['encourages study', 'pushes one into risky behaviour', 'builds teamwork', 'promotes sports'], 'B', 'Negative influence.', 4],
+        ['Socialisation primarily begins in the', ['church', 'school', 'family', 'workplace'], 'C', 'Primary agent.', 4],
+        ['Adolescent reproductive health education aims mainly to', ['stop schooling', 'encourage early marriage', 'promote teenage pregnancy', 'help the youth make responsible choices'], 'D', 'Informed decisions.', 4],
     ],
 
     'Environment' => [
@@ -54,6 +61,16 @@ return [
         ['An environmental impact assessment is done to', ['hire workers', 'calculate profit', 'find out how a project will affect the environment', 'collect taxes'], 'C', 'The EPA requires it for major projects.', 2],
         ['Population pressure on land can lead to', ['cleaner rivers', 'more forests', 'higher soil fertility', 'land degradation'], 'D', 'Overuse reduces productivity.', 1],
         ['The ozone layer protects the earth from', ['rain', 'harmful ultraviolet radiation', 'wind', 'earthquakes'], 'B', 'It is in the stratosphere.', 1],
+        ['The most effective long-term solution to galamsey is', ['buying more excavators', 'ignoring it', 'providing alternative livelihoods and enforcing regulations', 'banning farming'], 'C', 'Addresses causes and enforcement.', 5],
+        ['Climate change adaptation in northern Ghana would include', ['overgrazing', 'more bush burning', 'deforestation', 'drought-resistant crops and water harvesting'], 'D', 'Adjusting to changing rainfall.', 4],
+        ['The most sustainable solution to waste in cities is', ['burning plastics', 'open dumping', 'reduce, reuse and recycle with proper collection', 'dumping in gutters'], 'C', 'Integrated waste management.', 4],
+        ['Rapid urbanisation without planning leads mainly to', ['fewer jobs in towns', 'cleaner cities', 'more farmland', 'slums and poor sanitation'], 'D', 'Infrastructure lags.', 4],
+        ['Galamsey threatens Ghana\'s environment mainly by', ['increasing forest cover', 'polluting rivers and destroying farmland', 'improving soil fertility', 'cleaning water bodies'], 'B', 'Illegal small-scale mining.', 4],
+        ['Desertification in northern Ghana is worsened by', ['irrigation', 'tree planting', 'bush burning and overgrazing', 'crop rotation'], 'C', 'Loss of vegetation cover.', 4],
+        ['Sustainable development meets present needs without', ['farming', 'using any resources', 'industrialisation', 'compromising future generations'], 'D', 'Brundtland definition.', 5],
+        ['Afforestation means', ['cutting trees', 'planting trees on land that had no forest', 'clearing bush', 'harvesting timber'], 'B', 'New forest.', 4],
+        ['Global warming is caused mainly by', ['volcanic ash only', 'more trees', 'cold ocean currents', 'increase in greenhouse gases'], 'D', 'CO₂ and methane.', 4],
+        ['Recycling helps the environment by', ['increasing landfill', 'reducing waste and conserving resources', 'burning plastics', 'using more raw materials'], 'B', 'Reuse of materials.', 4],
     ],
 
     'Governance and citizenship' => [
@@ -85,6 +102,21 @@ return [
         ['The rule of law ensures that', ['only the poor obey laws', 'the president can break laws', 'no one is above the law', 'chiefs are above the law'], 'C', 'All are equal before the law.', 1],
         ['Human rights are', ['rights for adults only', 'privileges for the rich', 'rights given only by chiefs', 'basic rights every person has because they are human'], 'D', 'They are inalienable.', 1],
         ['Which is a way of resolving conflict peacefully?', ['violence', 'dialogue and mediation', 'revenge', 'ignoring the problem'], 'B', 'Mediation involves a neutral third party.', 1],
+        ['Which institution in Ghana is constitutionally mandated to investigate corruption involving public officers and human rights abuse?', ['NCCE', 'CHRAJ', 'Electoral Commission', 'Council of State'], 'B', 'Commission on Human Rights and Administrative Justice.', 4],
+        ['The main reason for decentralisation in Ghana is to', ['reduce elections', 'increase central control', 'bring government closer to the people and promote participation', 'abolish chiefs'], 'C', 'District assemblies plan locally.', 4],
+        ['A citizen who refuses to pay tax undermines', ['the opposition', 'his rights', 'the courts only', 'the government\'s ability to provide public goods'], 'D', 'Taxes fund development.', 4],
+        ['Which is the best way for the youth to influence national policy peacefully?', ['through violent protests', 'through civic engagement, advocacy and voting', 'by staying silent', 'through vandalism'], 'B', 'Democratic participation.', 4],
+        ['The main purpose of the separation of powers is to', ['speed up law-making', 'prevent tyranny by dividing authority', 'increase taxes', 'reduce elections'], 'B', 'Montesquieu.', 4],
+        ['Which action best demonstrates civic responsibility during elections?', ['destroying ballot boxes', 'buying votes', 'voting peacefully and accepting results', 'spreading false news'], 'C', 'Peaceful participation.', 3],
+        ['The Commission on Human Rights and Administrative Justice (CHRAJ) mainly', ['makes laws', 'conducts elections', 'investigates human rights abuses and corruption', 'prosecutes all crimes'], 'C', 'Article 218.', 4],
+        ['The body that conducts elections in Ghana is the', ['Parliament', 'NCCE', 'CHRAJ', 'Electoral Commission'], 'D', 'Independent body.', 4],
+        ['The NCCE is responsible for', ['tax collection', 'civic education', 'policing', 'running elections'], 'B', 'National Commission for Civic Education.', 4],
+        ['A citizen\'s duty includes', ['damaging public property', 'evading tax', 'paying taxes', 'avoiding voting always'], 'C', 'Civic responsibility.', 4],
+        ['The 1992 Constitution limits the President to', ['three terms', 'one five-year term', 'two four-year terms', 'life tenure'], 'C', 'Article 66.', 4],
+        ['Decentralisation in Ghana is carried out mainly through', ['churches', 'the army', 'chieftaincy only', 'metropolitan, municipal and district assemblies'], 'D', 'Local government.', 4],
+        ['The Council of State in Ghana', ['advises the President', 'makes laws', 'judges cases', 'conducts elections'], 'A', 'Advisory body.', 4],
+        ['Fundamental human rights are found in Chapter', ['5 of the 1992 Constitution', '1', '8', '12'], 'A', 'Chapter Five.', 5],
+        ['Patriotism means', ['love and loyalty to one\'s country', 'love of money', 'loyalty to a party only', 'hatred of foreigners'], 'A', 'National devotion.', 4],
     ],
 
     'Social and economic development' => [
@@ -116,6 +148,17 @@ return [
         ['Rural–urban migration can cause', ['more farm labour in villages', 'overcrowding and slums in cities', 'lower city populations', 'less unemployment in towns'], 'B', 'Cities cannot absorb all migrants.', 1],
         ['Savings and investment contribute to development by', ['increasing waste', 'reducing production', 'providing capital for businesses', 'closing banks'], 'C', 'Capital creates jobs.', 1],
         ['Which is a cause of poverty in Ghana?', ['many hospitals', 'high literacy', 'good roads', 'unemployment'], 'D', 'Lack of income keeps people poor.', 1],
+        ['Which factor best explains the persistence of poverty in rural Ghana?', ['high wages', 'too many industries', 'limited access to credit, markets and infrastructure', 'excess education'], 'C', 'Rural areas lack services.', 4],
+        ['Over-reliance on primary products for export makes a country vulnerable to', ['low unemployment', 'stable income', 'industrial growth', 'fluctuations in world prices'], 'D', 'E.g. cocoa price falls.', 5],
+        ['Sustainable development requires a balance between', ['only growth and profit', 'economic growth, social equity and environmental protection', 'imports and exports only', 'population and land'], 'B', 'The three pillars.', 5],
+        ['Human capital development refers to', ['importing machines', 'building roads', 'printing money', 'improving people\'s skills, health and education'], 'D', 'It raises productivity.', 4],
+        ['Which policy would most directly reduce youth unemployment in Ghana?', ['banning imports', 'expanding TVET and entrepreneurship support', 'reducing schools', 'raising taxes on small firms'], 'B', 'Skills and enterprise.', 4],
+        ['Rural-urban migration leads to', ['congestion and slums in cities', 'more farm labour in villages', 'lower urban unemployment', 'rural growth'], 'A', 'Pressure on urban services.', 4],
+        ['A high dependency ratio means', ['many dependants relative to workers', 'few children', 'an ageing workforce only', 'high savings'], 'A', 'Burden on the working population.', 5],
+        ['Entrepreneurship contributes to development by', ['creating jobs', 'raising unemployment', 'reducing output', 'discouraging innovation'], 'A', 'New businesses.', 4],
+        ['Gross Domestic Product per capita is', ['GDP divided by population', 'total exports', 'government revenue', 'GDP times population'], 'A', 'Average output per person.', 4],
+        ['The Human Development Index combines', ['life expectancy, education and income', 'GDP only', 'population only', 'exports and imports'], 'A', 'UNDP measure.', 5],
+        ['Over-dependence on a single export crop makes an economy', ['vulnerable to price changes', 'stable', 'industrialised', 'self-sufficient'], 'A', 'Monoculture risk.', 4],
     ],
 
     'SHS 1: A geographical and historical sketch of Africa' => [
@@ -133,6 +176,8 @@ return [
         ['The Suez Canal links the Mediterranean Sea and the', ['Atlantic Ocean', 'Red Sea', 'Indian Ocean directly', 'Black Sea'], 'B', 'It is in Egypt.', 2],
         ['Africa is separated from Europe by the Strait of', ['Malacca', 'Hormuz', 'Gibraltar', 'Dover'], 'C', 'It lies between Morocco and Spain.', 2],
         ['The country in Africa that was never colonised, apart from a short Italian occupation, is', ['Kenya', 'Ghana', 'Nigeria', 'Ethiopia'], 'D', 'It defeated Italy at Adwa in 1896.', 2],
+        ['The Great Rift Valley stretches from', ['Egypt to Morocco', 'Ghana to Senegal', 'the Middle East through East Africa to Mozambique', 'Nigeria to Cameroon'], 'C', 'Formed by tectonic movement.', 5],
+        ['A key reason Africa is described as a plateau continent is that', ['it is mostly desert', 'it has no mountains', 'it is below sea level', 'much of its interior is high, flat land'], 'D', 'Rivers have rapids near the coast.', 5],
     ],
 
     'SHS 1: Road safety in Ghana' => [
@@ -176,6 +221,7 @@ return [
         ['Accountability means', ['blaming others', 'hiding mistakes', 'being answerable for one\'s actions', 'avoiding work'], 'C', 'Leaders must account to citizens.', 1],
         ['Respect for the rights of others is an example of', ['a law of physics', 'a vice', 'a crime', 'a positive human value'], 'D', 'Values guide conduct.', 1],
         ['Patriotism, honesty and hard work are values that promote', ['corruption', 'national development', 'conflict', 'poverty'], 'B', 'They build the nation.', 1],
+        ['A conflict of interest arises when a public official', ['pays tax', 'serves the public', 'can benefit personally from a decision they make', 'follows rules'], 'C', 'Must be declared.', 4],
     ],
 
     'SHS 1: African civilisations' => [
@@ -189,6 +235,7 @@ return [
         ['Great Zimbabwe is famous for its', ['oil wells', 'pyramids', 'stone walls and buildings', 'glass skyscrapers'], 'C', 'It was built without mortar.', 2],
         ['Timbuktu was a famous centre of', ['fishing', 'oil production', 'car manufacture', 'Islamic learning and trade'], 'D', 'It had the Sankore University.', 2],
         ['The Songhai Empire\'s famous ruler who expanded it was', ['Sundiata', 'Mansa Musa', 'Sonni Ali', 'Osei Tutu'], 'C', 'He captured Timbuktu in 1468.', 3],
+        ['The Swahili city-states such as Kilwa prospered mainly through', ['Atlantic slave trade', 'Indian Ocean trade', 'gold mining in Ghana', 'cocoa exports'], 'B', 'Trade with Arabia and Asia.', 5],
     ],
 
     'SHS 1: Revolutions that changed the world' => [
@@ -200,6 +247,7 @@ return [
         ['The invention that drove the early Industrial Revolution was the', ['computer', 'steam engine', 'aeroplane', 'telephone'], 'B', 'James Watt improved it in the 1760s–70s.', 1],
         ['The digital (information) revolution is based mainly on', ['horse transport', 'steam engines', 'computers and the internet', 'hand tools'], 'C', 'It changed how people communicate and work.', 1],
         ['The Agricultural Revolution introduced', ['aeroplanes', 'computers', 'factories', 'settled farming and domestication of animals'], 'D', 'It began about 10,000 years ago.', 1],
+        ['A major social effect of the Industrial Revolution was', ['end of trade', 'decline of cities', 'rapid urbanisation', 'return to farming'], 'C', 'People moved to factory towns.', 4],
     ],
 
     'SHS 1: Economic activities in Africa' => [
@@ -211,6 +259,7 @@ return [
         ['Manufacturing is an example of a', ['primary activity', 'secondary economic activity', 'tertiary activity', 'quaternary activity'], 'B', 'It turns raw materials into goods.', 1],
         ['Transport and tourism are', ['secondary activities', 'primary activities', 'tertiary (service) activities', 'extractive activities'], 'C', 'They provide services.', 1],
         ['Nigeria\'s economy depends heavily on', ['cocoa only', 'crude oil', 'tea', 'copper'], 'B', 'Oil is its main export.', 1],
+        ['The "resource curse" refers to', ['cheap imports', 'lack of resources', 'high crop yields', 'countries rich in natural resources experiencing poor development'], 'D', 'Conflict and corruption may follow.', 5],
     ],
 
     'SHS 1: Entrepreneurship, workplace culture and productivity' => [
@@ -251,6 +300,7 @@ return [
         ['A pyramid scheme promising very high returns quickly is likely to be', ['a fraud (Ponzi scheme)', 'a safe investment', 'a government bond', 'a savings account'], 'A', 'Early investors are paid with later investors\' money.', 2],
         ['A budget deficit at home occurs when', ['spending is more than income', 'income is more than spending', 'income equals spending', 'there is no spending'], 'A', 'It leads to debt.', 1],
         ['Interest earned on savings is', ['a reward for saving money', 'a tax', 'a fine', 'a loan'], 'A', 'Banks pay interest on deposits.', 1],
+        ['If GH¢1,000 is saved at 10% compound interest per year, it becomes after 2 years', ['GH¢1,210', 'GH¢1,200', 'GH¢1,100', 'GH¢1,020'], 'A', '1,000 × 1.1².', 4],
     ],
 
     'SHS 2: Environmental literacy and sustainability' => [
@@ -259,12 +309,12 @@ return [
         ['Development that meets present needs without harming the ability of future generations to meet theirs is', ['sustainable development', 'urbanisation', 'industrialisation', 'deforestation'], 'A', 'Sustainable development balances economic growth, social needs and the environment.', 1],
         ['Green Ghana Day, launched in 2021, mainly involves', ['planting trees across the country', 'painting public buildings', 'cleaning beaches only', 'banning cars for a day'], 'A', 'Millions of seedlings are planted to restore Ghana\'s forest cover.', 1],
         ['Cutting down forests faster than they are replaced is', ['afforestation', 'deforestation', 'reforestation', 'agroforestry'], 'B', 'Deforestation causes soil erosion, loss of wildlife and less rainfall.', 1],
-        ['Sustainable development meets present needs without', ['compromising the ability of future generations to meet theirs', 'using any resources', 'growing the economy', 'building roads'], 'A', 'This is the Brundtland definition.', 2],
         ['The three Rs of waste management are', ['reduce, reuse and recycle', 'read, write and reckon', 'remove, refuse and rest', 'repair, repaint and resell'], 'A', 'They reduce waste going to dumps.', 1],
         ['Which practice causes desertification in northern Ghana?', ['bush burning and overgrazing', 'tree planting', 'contour ploughing', 'mulching'], 'A', 'They remove vegetation cover.', 1],
         ['Plastic waste is harmful to the environment because it', ['does not decompose easily', 'adds nutrients to soil', 'cleans rivers', 'dissolves quickly'], 'A', 'It can last hundreds of years.', 1],
         ['Recycling plastic bottles helps to', ['reduce waste and pollution', 'increase waste', 'cause floods', 'cut trees'], 'A', 'Materials are reused.', 1],
         ['Sand winning along beaches leads to', ['coastal erosion', 'more beaches', 'better roads', 'cleaner seas'], 'A', 'It removes natural protection.', 2],
+        ['Ghana\'s ban on single-use plastics is mainly intended to', ['reduce plastic pollution', 'increase plastic production', 'raise taxes only', 'help fishermen catch more'], 'A', 'Plastics clog drains and harm marine life.', 4],
     ],
 
     'SHS 2: Law enforcement in Ghana' => [
@@ -280,6 +330,7 @@ return [
         ['CHRAJ investigates', ['human rights abuses and administrative injustice', 'road accidents only', 'football results', 'weather forecasts'], 'A', 'Commission on Human Rights and Administrative Justice.', 2],
         ['The Ghana Police Service is responsible for', ['maintaining law and order', 'conducting elections', 'collecting taxes', 'printing money'], 'A', 'It prevents and detects crime.', 1],
         ['The Ghana Prisons Service is responsible for', ['keeping and reforming convicted offenders', 'arresting criminals', 'judging cases', 'making laws'], 'A', 'It runs correctional facilities.', 1],
+        ['The principle that an accused person is presumed innocent until proven guilty is guaranteed by', ['the 1992 Constitution', 'the police service', 'the Electoral Commission', 'district assemblies'], 'A', 'Article 19.', 5],
     ],
 
     'SHS 2: European encounter, colonialism and neo-colonialism' => [
@@ -291,6 +342,7 @@ return [
         ['The main item the British sought from the Gold Coast in the 19th century after the slave trade ended was', ['raw materials such as palm oil, gold and later cocoa', 'manufactured cars', 'computers', 'oil only'], 'A', 'Legitimate trade replaced the slave trade.', 2],
         ['Which European country colonised Togo before the First World War?', ['Germany', 'Britain', 'France', 'Portugal'], 'A', 'After the war it was divided between Britain and France.', 2],
         ['Neo-colonialism refers to', ['indirect control of a former colony through economic and political influence', 'direct colonial rule', 'independence without any foreign ties', 'the slave trade'], 'A', 'Nkrumah wrote about it in 1965.', 2],
+        ['A key economic legacy of colonialism in Ghana is', ['dependence on export of raw materials', 'a diversified industrial base', 'self-sufficiency in manufactured goods', 'no foreign trade'], 'A', 'Cocoa and minerals dominated.', 4],
     ],
 
     'SHS 2: Nationalism, citizenship and nation building' => [
@@ -302,11 +354,11 @@ return [
         ['Ghana\'s first President was', ['Kwame Nkrumah', 'K. A. Busia', 'J. B. Danquah', 'Edward Akufo-Addo'], 'A', 'He became President when Ghana became a republic in 1960.', 1],
         ['Which group of nationalists was known as "The Big Six"?', ['leaders of the UGCC arrested after the 1948 riots', 'the first six presidents', 'six chiefs', 'six army officers'], 'A', 'They included Nkrumah, Danquah, Akufo-Addo, Ako Adjei, Obetsebi-Lamptey and Ofori Atta.', 2],
         ['A good citizen shows patriotism by', ['protecting public property', 'damaging state buildings', 'avoiding voting', 'evading tax'], 'A', 'Patriotism is love and service to one\'s country.', 1],
-        ['Patriotism means', ['love for and loyalty to one\'s country', 'love of money', 'hatred of foreigners', 'support for one tribe'], 'A', 'Patriots work for national good.', 1],
         ['A person can become a citizen of Ghana by', ['birth, descent, marriage or naturalisation', 'buying a house only', 'visiting once', 'having a phone'], 'A', 'The Citizenship Act sets the rules.', 2],
         ['Which helps nation building in Ghana?', ['national unity and tolerance', 'ethnic conflict', 'corruption', 'tax evasion'], 'A', 'Unity brings peace and development.', 1],
         ['The national motto of Ghana is', ['Freedom and Justice', 'Unity and Faith', 'Peace and Progress', 'One Nation, One People'], 'A', 'It is on the coat of arms.', 2],
         ['Ghana\'s national pledge begins with', ['"I promise on my honour to be faithful and loyal to Ghana my motherland"', '"God bless our homeland Ghana"', '"Arise, Ghana youth"', '"Freedom and Justice"'], 'A', 'It is recited at school assemblies.', 2],
+        ['Ethnocentrism hinders nation building because it', ['makes people favour their own ethnic group over national interest', 'promotes unity', 'encourages tolerance', 'improves the economy'], 'A', 'It creates division.', 5],
     ],
 
     'SHS 2: Leisure and tourism' => [
@@ -322,6 +374,7 @@ return [
         ['Tourism benefits Ghana mainly by', ['earning foreign exchange and creating jobs', 'increasing crime only', 'reducing income', 'causing floods'], 'A', 'It is a major service industry.', 1],
         ['Ecotourism means', ['responsible travel to natural areas that conserves the environment', 'visiting factories', 'shopping abroad', 'staying at home'], 'A', 'Kakum and Mole support ecotourism.', 2],
         ['The Cape Coast and Elmina Castles attract tourists because of their', ['historical link to the slave trade', 'modern hotels', 'shopping malls', 'mountains'], 'A', 'They are UNESCO World Heritage Sites.', 1],
+        ['A negative impact of mass tourism on local communities can be', ['cultural erosion and environmental damage', 'more income', 'better roads', 'job creation'], 'A', 'It must be managed sustainably.', 4],
     ],
 
     'SHS 2: The youth and national development' => [
@@ -333,6 +386,7 @@ return [
         ['Volunteering in community clean-up exercises shows', ['civic responsibility', 'laziness', 'corruption', 'tribalism'], 'A', 'It contributes to development.', 1],
         ['National Service in Ghana is mainly for', ['graduates of tertiary institutions', 'primary pupils', 'retirees', 'foreign visitors'], 'A', 'It lasts one year.', 1],
         ['Which is a way the youth can contribute to national development?', ['acquiring skills and being productive', 'engaging in galamsey', 'vandalising property', 'joining violent groups'], 'A', 'Skilled youth drive growth.', 1],
+        ['The NABCo programme in Ghana aimed mainly to', ['provide temporary jobs for unemployed graduates', 'build roads', 'train soldiers', 'export cocoa'], 'A', 'Nation Builders Corps.', 5],
     ],
 
     'SHS 2: Economic activities in Ghana' => [

@@ -42,6 +42,22 @@ return [
         ['Which particle has a negative charge?', ['proton', 'electron', 'neutron', 'nucleus'], 'B', 'Protons are positive.', 1],
         ['Distillation separates', ['iron from sand', 'two solids', 'a liquid from a solution by boiling and condensing', 'oil from water only'], 'C', 'Used to purify water.', 2],
         ['Diffusion is fastest in', ['metals', 'liquids', 'solids', 'gases'], 'D', 'Gas particles move fastest.', 1],
+        ['An element X has atomic number 12. The formula of its chloride is', ['XCl', 'XCl₂', 'X₂Cl', 'XCl₃'], 'B', 'Configuration 2, 8, 2 gives X²⁺.', 4],
+        ['How many neutrons are in ³⁷₁₇Cl?', ['37', '17', '20', '54'], 'C', '37 − 17.', 3],
+        ['Which pair of substances can be separated by sublimation?', ['oil and water', 'sand and water', 'salt and water', 'ammonium chloride and sodium chloride'], 'D', 'NH₄Cl sublimes on heating.', 4],
+        ['The mass of 0.2 mol of CaCO₃ (Ca = 40, C = 12, O = 16) is', ['100 g', '20 g', '10 g', '50 g'], 'B', 'Molar mass 100 g/mol.', 4],
+        ['Which property shows that a substance is pure?', ['its colour', 'a range of melting points', 'a sharp, fixed melting point', 'its smell'], 'C', 'Impurities lower and broaden the melting point.', 4],
+        ['The relative molecular mass of glucose C₆H₁₂O₆ (C = 12, H = 1, O = 16) is', ['342', '90', '160', '180'], 'D', '72 + 12 + 96.', 4],
+        ['An atom loses two electrons. The particle formed is', ['a negative ion', 'a positive ion with charge +2', 'an isotope', 'a molecule'], 'B', 'Fewer electrons than protons.', 4],
+        ['A pure substance boils at 78 °C. It is most likely', ['mercury', 'water', 'ethanol', 'salt'], 'C', 'Ethanol\'s boiling point.', 4],
+        ['The number of neutrons in ²³Na (atomic number 11) is', ['23', '11', '12', '34'], 'C', '23 − 11.', 4],
+        ['The electron configuration of an element with atomic number 17 is', ['2, 8, 8', '2, 8, 7', '2, 7, 8', '2, 8, 6, 1'], 'B', 'Chlorine.', 4],
+        ['Which method separates a mixture of salt and sand?', ['magnetism', 'distillation only', 'dissolving, filtering and evaporating', 'sieving only'], 'C', 'Salt dissolves; sand does not.', 4],
+        ['Sublimation is the change from', ['solid to liquid', 'liquid to gas', 'gas to liquid', 'solid directly to gas'], 'D', 'E.g. iodine, naphthalene.', 4],
+        ['The mass number of an atom with 17 protons and 18 neutrons is', ['17', '35', '18', '1'], 'B', '17 + 18.', 4],
+        ['Fractional distillation separates liquids by differences in', ['colour', 'density', 'boiling point', 'solubility'], 'C', 'Crude oil refining.', 4],
+        ['Chromatography separates', ['oil and water', 'sand and water', 'iron and sulphur', 'dyes in ink'], 'D', 'Different solubilities.', 4],
+        ['The number of moles in 36 g of water (H = 1, O = 16) is', ['1', '2', '18', '0.5'], 'B', '36 ÷ 18.', 4],
     ],
 
     'Cycles' => [
@@ -64,6 +80,14 @@ return [
         ['Denitrifying bacteria convert nitrates in the soil into', ['oxygen', 'ammonia only', 'proteins', 'nitrogen gas'], 'D', 'This returns nitrogen to the air.', 2],
         ['The source of energy for the water cycle is the', ['moon', 'sun', 'wind', 'earth\'s core'], 'B', 'It evaporates water.', 1],
         ['The stage of a housefly\'s life cycle that feeds on rotting material is the', ['egg', 'pupa', 'larva (maggot)', 'adult only'], 'C', 'Maggots live in refuse.', 2],
+        ['In the nitrogen cycle, the conversion of ammonium compounds to nitrates is', ['ammonification', 'denitrification', 'nitrogen fixation', 'nitrification'], 'D', 'Done by Nitrosomonas and Nitrobacter.', 4],
+        ['Which process removes carbon dioxide from the atmosphere?', ['respiration', 'photosynthesis', 'combustion', 'decay'], 'B', 'Plants fix CO₂ into glucose.', 3],
+        ['Lightning contributes to the nitrogen cycle by', ['releasing ammonia', 'destroying nitrates', 'combining nitrogen and oxygen to form oxides of nitrogen', 'removing nitrogen'], 'C', 'These dissolve in rain.', 4],
+        ['In the carbon cycle, fossil fuels are formed from', ['volcanoes', 'rocks only', 'air', 'remains of plants and animals over millions of years'], 'D', 'Coal, oil, gas.', 4],
+        ['In the nitrogen cycle, nitrifying bacteria convert', ['nitrogen gas to ammonia', 'nitrates to nitrogen gas', 'ammonium to nitrates', 'protein to amino acids'], 'C', 'Nitrosomonas and Nitrobacter.', 5],
+        ['Denitrifying bacteria return nitrogen to the air as', ['nitrites', 'nitrates', 'ammonia', 'nitrogen gas'], 'D', 'Anaerobic soils.', 4],
+        ['Carbon dioxide is removed from the atmosphere mainly by', ['respiration', 'photosynthesis', 'combustion', 'decay'], 'B', 'Plants fix CO₂.', 4],
+        ['Transpiration contributes to the', ['rock cycle', 'nitrogen cycle', 'water cycle', 'carbon cycle only'], 'C', 'Water vapour from leaves.', 4],
     ],
 
     'Systems' => [
@@ -91,6 +115,16 @@ return [
         ['The part of the brain responsible for thinking and memory is the', ['spinal cord', 'cerebellum', 'medulla', 'cerebrum'], 'D', 'It is the largest part.', 2],
         ['The tiny blood vessels where exchange of materials takes place are', ['arteries', 'capillaries', 'veins', 'aorta'], 'B', 'Their walls are one cell thick.', 1],
         ['The function of the epiglottis is to', ['pump blood', 'digest food', 'stop food entering the windpipe', 'filter urine'], 'C', 'It closes during swallowing.', 2],
+        ['Which blood vessel has the highest blood pressure?', ['capillary', 'vena cava', 'pulmonary vein', 'aorta'], 'D', 'It receives blood from the left ventricle.', 4],
+        ['The wall of the left ventricle is thicker than that of the right because it', ['receives more blood', 'pumps blood to the whole body', 'pumps to the lungs', 'has more valves'], 'B', 'It needs higher pressure.', 4],
+        ['In the human eye, the part that focuses light onto the retina by changing shape is the', ['iris', 'cornea', 'lens', 'pupil'], 'C', 'Ciliary muscles change its shape.', 3],
+        ['A person whose pancreas produces too little insulin will have', ['normal glucose', 'low blood glucose', 'high blood pressure only', 'high blood glucose'], 'D', 'This is diabetes mellitus.', 3],
+        ['The heart pumps 70 mL per beat at 72 beats per minute. Cardiac output is about', ['72 L/min', '5 L/min', '0.7 L/min', '10 L/min'], 'B', '70 × 72 = 5,040 mL.', 5],
+        ['The part of the nephron where filtration occurs is the', ['collecting duct', 'loop of Henle', 'glomerulus/Bowman\'s capsule', 'ureter'], 'C', 'Ultrafiltration.', 4],
+        ['The part of the brain that controls balance is the', ['cerebrum', 'cerebellum', 'medulla', 'hypothalamus'], 'B', 'Coordination of movement.', 4],
+        ['The functional unit of the kidney is the', ['alveolus', 'neuron', 'nephron', 'villus'], 'C', 'Filtration unit.', 4],
+        ['Gaseous exchange in the lungs takes place in the', ['larynx', 'trachea', 'bronchi', 'alveoli'], 'D', 'Thin moist walls.', 4],
+        ['The hormone that lowers blood sugar is', ['glucagon', 'insulin', 'adrenaline', 'thyroxine'], 'B', 'From the pancreas.', 4],
     ],
 
     'Energy and forces' => [
@@ -123,6 +157,21 @@ return [
         ['Pressure is defined as', ['mass per unit volume', 'force per unit area', 'work per unit time', 'distance per unit time'], 'B', 'P = F/A.', 1],
         ['The principle of conservation of energy states that energy', ['is created by machines', 'is always lost', 'cannot be created or destroyed', 'only exists as heat'], 'C', 'It changes form.', 1],
         ['A body\'s weight on the moon is less than on earth because', ['it is colder', 'its mass changes', 'there is no air', 'the moon\'s gravity is weaker'], 'D', 'Mass stays the same.', 2],
+        ['A car of mass 1,000 kg accelerates from 10 m/s to 30 m/s. The work done by the engine (ignoring friction) is', ['200,000 J', '400,000 J', '20,000 J', '800,000 J'], 'B', 'ΔKE = ½ × 1000 × (900 − 100).', 5],
+        ['A pump raises 500 kg of water through 12 m in 1 minute (g = 10 m/s²). Its power is', ['6,000 W', '60,000 W', '1,000 W', '500 W'], 'C', 'mgh/t = 60,000/60.', 4],
+        ['An object of mass 2 kg falls freely from rest for 3 s (g = 10 m/s²). Its kinetic energy is', ['60 J', '300 J', '90 J', '900 J'], 'D', 'v = 30 m/s; ½ × 2 × 900.', 4],
+        ['A machine has efficiency 75% and velocity ratio 8. What effort lifts a load of 600 N?', ['75 N', '100 N', '80 N', '150 N'], 'B', 'MA = 6; effort = 600/6.', 5],
+        ['A 60 W bulb runs for 5 hours. The energy used is', ['1,080 J', '300 J', '18,000 J', '1.08 × 10⁶ J'], 'D', '60 × 18,000 s.', 5],
+        ['A body of mass 5 kg is lifted 4 m in 2 s (g = 10 m/s²). The power is', ['200 W', '100 W', '40 W', '10 W'], 'B', '200 J ÷ 2 s.', 4],
+        ['A force of 20 N moves a box 5 m in the direction of the force. The work done is', ['25 J', '4 J', '100 J', '15 J'], 'C', 'W = Fd.', 4],
+        ['A 60 W bulb is used for 5 hours. Energy used is', ['3 kWh', '300 kWh', '12 kWh', '0.3 kWh'], 'D', '60 × 5 = 300 Wh.', 5],
+        ['A 2 kg mass at 10 m above the ground has potential energy (g = 10 m/s²)', ['20 J', '200 J', '100 J', '2000 J'], 'B', 'PE = mgh.', 4],
+        ['A car of mass 1000 kg moving at 10 m/s has kinetic energy', ['100,000 J', '10,000 J', '50,000 J', '5,000 J'], 'C', '½ × 1000 × 100.', 5],
+        ['The resistance of a conductor carrying 2 A with a p.d. of 12 V is', ['0.17 Ω', '24 Ω', '10 Ω', '6 Ω'], 'D', 'R = V/I.', 4],
+        ['Pressure exerted by a force of 50 N on an area of 0.5 m² is', ['25 Pa', '100 Pa', '50 Pa', '0.01 Pa'], 'B', 'P = F/A.', 4],
+        ['A 1.5 kW heater runs for 2 hours. Energy used is', ['1.5 kWh', '0.75 kWh', '3000 kWh', '3 kWh'], 'D', '1.5 × 2.', 4],
+        ['The efficiency of a machine that gives 400 J output for 500 J input is', ['80%', '125%', '20%', '100%'], 'A', '400 ÷ 500.', 4],
+        ['The upthrust on a body fully immersed in water equals the', ['weight of water displaced', 'weight of the body', 'volume of the body', 'density of water'], 'A', 'Archimedes\' principle.', 4],
     ],
 
     'Agriculture, health and the environment' => [
@@ -150,6 +199,13 @@ return [
         ['The use of animal dung to improve soil is', ['irrigation', 'liming', 'manuring', 'mulching'], 'C', 'It adds organic matter.', 1],
         ['Which practice reduces malaria?', ['growing tall grass near homes', 'keeping old tyres with water', 'sleeping without nets', 'clearing stagnant water'], 'D', 'It removes breeding sites.', 1],
         ['A vaccine is given to', ['cure all diseases', 'prevent a disease', 'cause disease', 'replace food'], 'B', 'It builds immunity.', 1],
+        ['Leaching of nutrients is most severe in', ['loams in deserts', 'clay soils in dry areas', 'sandy soils in high-rainfall areas', 'soils under cover crops'], 'C', 'Water drains quickly through sand.', 4],
+        ['Which disease is caused by a protozoan transmitted by the tsetse fly?', ['yellow fever', 'malaria', 'cholera', 'sleeping sickness'], 'D', 'Trypanosomiasis.', 4],
+        ['Biological control of pests uses', ['chemical sprays', 'natural enemies of the pest', 'burning', 'flooding'], 'B', 'It avoids chemical residues.', 3],
+        ['Eutrophication of water bodies is mainly caused by', ['cold weather', 'planting trees', 'run-off of fertilisers rich in nitrates and phosphates', 'fish farming only'], 'C', 'Algal blooms deplete oxygen.', 4],
+        ['Malaria is caused by', ['a bacterium', 'a virus', 'Plasmodium', 'a tapeworm'], 'C', 'Spread by female Anopheles.', 4],
+        ['Eutrophication of water bodies is caused mainly by', ['fish farming only', 'cold water', 'sand mining', 'excess fertiliser run-off'], 'D', 'Nitrates and phosphates cause algal bloom.', 5],
+        ['Cholera is best prevented by', ['sleeping under nets', 'drinking safe water and good sanitation', 'vaccinating pets', 'eating more protein'], 'B', 'Water-borne disease.', 4],
     ],
 
     'SHS 1: The nature and processes of science' => [
@@ -163,6 +219,9 @@ return [
         ['Repeating an experiment several times mainly improves its', ['speed', 'cost', 'colour', 'reliability'], 'D', 'Consistent results are more trustworthy.', 2],
         ['Information gathered using the senses is an', ['inference', 'observation', 'hypothesis', 'theory'], 'B', 'An inference is a conclusion drawn from it.', 1],
         ['The group in an experiment that is not given the treatment is the', ['sample group', 'test group', 'control group', 'dependent group'], 'C', 'It is used for comparison.', 2],
+        ['In an experiment testing the effect of fertiliser on plant height, the controlled variables include', ['fertiliser amount', 'water, light and plant type', 'plant height', 'the result'], 'B', 'Kept constant for a fair test.', 4],
+        ['A result that differs greatly from others in repeated trials is', ['a control', 'the mean', 'an anomalous result', 'a hypothesis'], 'C', 'It should be checked or repeated.', 4],
+        ['Precision of measurements is improved by', ['rounding early', 'guessing', 'fewer trials', 'using instruments with smaller scale divisions'], 'D', 'E.g. a micrometer over a ruler.', 4],
     ],
 
     'SHS 1: Solids, binary compounds and their names' => [
@@ -178,6 +237,9 @@ return [
         ['The formula of aluminium oxide is', ['Al₃O₂', 'AlO', 'Al₂O₃', 'AlO₃'], 'C', 'Al³⁺ and O²⁻ combine 2:3.', 3],
         ['A solid whose particles are arranged in a regular repeating pattern is', ['liquid', 'amorphous', 'gaseous', 'crystalline'], 'D', 'Salt and sugar form crystals.', 2],
         ['The name of the compound formed from calcium and chlorine is', ['calcium chlorate', 'calcium chloride', 'chlorine calcide', 'calcium chlorine'], 'B', 'Its formula is CaCl₂.', 1],
+        ['The formula of iron(III) oxide is', ['FeO₃', 'FeO', 'Fe₃O₄', 'Fe₂O₃'], 'D', 'Fe³⁺ and O²⁻.', 4],
+        ['The name of N₂O₅ is', ['nitrogen oxide', 'dinitrogen pentoxide', 'nitrogen dioxide', 'pentanitrogen dioxide'], 'B', 'Prefixes show the number of atoms.', 4],
+        ['Ionic solids conduct electricity only when molten or in solution because', ['they become metals', 'electrons are released', 'their ions become free to move', 'heat creates current'], 'C', 'Ions are fixed in the solid lattice.', 4],
     ],
 
     'SHS 1: Diffusion and osmosis' => [
@@ -193,6 +255,8 @@ return [
         ['A plant cell placed in a concentrated salt solution becomes', ['turgid', 'plasmolysed (shrunken)', 'burst', 'unchanged'], 'B', 'Water leaves the cell by osmosis.', 2],
         ['Diffusion is faster at higher temperatures because particles', ['stop moving', 'become heavier', 'move faster', 'get bigger'], 'C', 'They have more kinetic energy.', 1],
         ['Osmosis is the movement of water through a partially permeable membrane from', ['solid to liquid', 'concentrated to dilute', 'a dilute solution to a concentrated solution', 'gas to liquid'], 'C', 'High water potential to low.', 2],
+        ['A potato strip placed in distilled water increases in length because', ['air enters', 'salt enters', 'starch dissolves', 'water enters the cells by osmosis'], 'D', 'Cells become turgid.', 4],
+        ['The rate of diffusion of a gas increases when', ['the temperature falls', 'the concentration gradient increases', 'the distance increases', 'the molecules get heavier'], 'B', 'Fick\'s law principles.', 4],
     ],
 
     'SHS 1: Reproduction in plants and humans' => [
@@ -208,6 +272,9 @@ return [
         ['The female part of a flower that receives pollen is the', ['sepal', 'anther', 'filament', 'stigma'], 'D', 'It is often sticky.', 1],
         ['The male reproductive cells in humans are', ['eggs', 'sperm', 'zygotes', 'embryos'], 'B', 'They are produced in the testes.', 1],
         ['The fusion of male and female gametes is', ['germination', 'pollination', 'fertilisation', 'menstruation'], 'C', 'It forms a zygote.', 1],
+        ['The hormone that maintains the uterine lining during pregnancy is', ['testosterone', 'oestrogen only', 'progesterone', 'insulin'], 'C', 'It is produced by the corpus luteum, later the placenta.', 5],
+        ['In a 28-day menstrual cycle, ovulation usually occurs around', ['day 5', 'day 1', 'day 28', 'day 14'], 'D', 'Mid-cycle.', 4],
+        ['A flower with both stamens and carpels is', ['unisexual', 'bisexual (hermaphrodite)', 'sterile', 'incomplete only'], 'B', 'E.g. hibiscus.', 4],
     ],
 
     'SHS 1: Solar energy and solar panels' => [
@@ -221,6 +288,8 @@ return [
         ['A solar water heater uses a black collector because black', ['reflects heat', 'absorbs heat well', 'is cheaper', 'cools water'], 'B', 'Dark surfaces are good absorbers.', 1],
         ['Batteries in a solar home system are used to', ['cool the panels', 'increase sunlight', 'store energy for use at night', 'change AC to DC only'], 'C', 'Panels produce power only in daylight.', 1],
         ['The device that changes DC from a solar system to AC for home appliances is an', ['fuse', 'charge controller', 'rectifier', 'inverter'], 'D', 'A charge controller protects the batteries.', 2],
+        ['A solar panel of area 2 m² receives 800 W/m² and is 15% efficient. Its electrical output is', ['120 W', '1,600 W', '240 W', '800 W'], 'C', '2 × 800 × 0.15.', 5],
+        ['Solar cells connected in series', ['store energy', 'increase the current only', 'reduce voltage', 'increase the output voltage'], 'D', 'Voltages add.', 4],
     ],
 
     'SHS 1: Force' => [
@@ -233,6 +302,9 @@ return [
         ['Oiling the moving parts of a bicycle reduces', ['gravity', 'friction', 'weight', 'mass'], 'B', 'Less friction means less wear and easier pedalling.', 1],
         ['The weight of a 5 kg mass on earth (g = 10 m/s²) is', ['5 N', '50 N', '0.5 N', '500 N'], 'B', 'W = mg.', 1],
         ['A spring stretches 2 cm with a 4 N load. With a 10 N load (within its limit) it stretches', ['20 cm', '8 cm', '5 cm', '2.5 cm'], 'C', 'Hooke\'s law: extension ∝ force.', 2],
+        ['A spring extends 4 cm under 2 N. What load gives an extension of 10 cm (within the elastic limit)?', ['8 N', '5 N', '20 N', '2.5 N'], 'B', 'k = 0.5 N/cm.', 4],
+        ['A 10 N force acts at the end of a 0.3 m spanner. The moment is', ['0.03 N m', '30 N m', '3 N m', '33 N m'], 'C', 'M = F × d.', 3],
+        ['A 10 kg box on a level floor needs 30 N to move it at constant speed (g = 10 m/s²). The coefficient of friction is', ['30', '3', '0.03', '0.3'], 'D', '30 ÷ 100.', 4],
     ],
 
     'SHS 1: Basic electronics' => [
@@ -247,6 +319,7 @@ return [
         ['A light-dependent resistor is used in', ['kettles', 'loudspeakers', 'automatic street lights', 'fans'], 'C', 'It senses darkness.', 2],
         ['The longer leg of an LED is the', ['gate', 'cathode (negative)', 'earth', 'anode (positive)'], 'D', 'It connects to the positive side.', 2],
         ['A capacitor in a circuit', ['creates sound', 'produces light', 'reduces resistance always', 'stores electric charge'], 'D', 'It charges and discharges.', 2],
+        ['An LED with a forward voltage of 2 V is connected to a 9 V battery. To limit current to 20 mA, the series resistor should be', ['7 Ω', '450 Ω', '100 Ω', '350 Ω'], 'D', '(9 − 2)/0.02.', 5],
     ],
 
     'SHS 1: Promoting health and safety' => [
@@ -258,6 +331,7 @@ return [
         ['A chemical splash in the eye should be treated first by', ['rubbing the eye', 'rinsing with plenty of clean water', 'covering it and waiting', 'applying oil'], 'B', 'Rinse for at least 10 minutes.', 1],
         ['The hazard symbol of a skull and crossbones means the substance is', ['corrosive', 'flammable', 'toxic', 'harmless'], 'C', 'It can cause death if swallowed.', 1],
         ['Regular exercise helps to prevent', ['colour blindness', 'malaria', 'cholera', 'obesity and heart disease'], 'D', 'It also improves mental health.', 1],
+        ['A Class B fire involving petrol is best put out with', ['water', 'foam or carbon dioxide', 'sand only in a kitchen', 'a wet cloth'], 'B', 'Water spreads burning liquids.', 4],
     ],
 
     'SHS 1: Science in local industry' => [
@@ -269,6 +343,8 @@ return [
         ['Palm wine becomes sour over time because', ['sugar increases', 'ethanol is oxidised to ethanoic acid', 'water evaporates', 'it freezes'], 'B', 'Bacteria cause the souring.', 3],
         ['The local process of making gari involves', ['drying cocoa', 'boiling maize', 'grating, fermenting, pressing and roasting cassava', 'smoking fish'], 'C', 'Fermentation reduces cyanide.', 2],
         ['Shea butter is extracted from the nuts of the shea tree mainly in', ['the Volta lake', 'the coastal savanna', 'the rainforest belt', 'northern Ghana'], 'D', 'It is used in cosmetics and cooking.', 1],
+        ['In soap making, the by-product glycerol comes from', ['water', 'the alkali', 'the fat or oil', 'salt'], 'C', 'Triglycerides release glycerol.', 5],
+        ['Kenkey production involves fermenting maize dough mainly by', ['heat only', 'viruses', 'salt only', 'lactic acid bacteria and yeast'], 'D', 'It gives the sour taste.', 4],
     ],
 
     'SHS 2: Acids, bases and salts' => [
@@ -279,12 +355,19 @@ return [
         ['Indigestion tablets often contain a mild base because', ['they kill all bacteria', 'they add acid to the stomach', 'they neutralise excess stomach acid', 'they increase the pH of blood to 14'], 'C', 'Antacids such as magnesium hydroxide neutralise excess hydrochloric acid in the stomach.', 2],
         ['The acid found in the stomach is', ['citric acid', 'sulphuric acid', 'hydrochloric acid', 'ethanoic acid'], 'C', 'It kills germs and helps protein digestion.', 2],
         ['An ant sting can be soothed with a mild base because the sting contains', ['sugar', 'a salt', 'a base', 'an acid'], 'D', 'The base neutralises the methanoic acid.', 2],
-        ['Which indicator turns red in acid and blue in alkali?', ['litmus', 'phenolphthalein', 'starch', 'iodine'], 'A', 'Phenolphthalein is colourless in acid and pink in alkali.', 1],
-        ['An acid turns blue litmus paper', ['red', 'blue', 'green', 'yellow'], 'A', 'Bases turn red litmus blue.', 1],
-        ['A base that dissolves in water is called an', ['alkali', 'acid', 'salt', 'oxide only'], 'A', 'Sodium hydroxide is an alkali.', 1],
-        ['Toothpaste is slightly alkaline to', ['neutralise acids produced by mouth bacteria', 'add colour', 'increase acidity', 'kill all saliva'], 'A', 'Acids cause tooth decay.', 2],
-        ['Lemon juice is', ['acidic', 'alkaline', 'neutral', 'a salt'], 'A', 'It contains citric acid.', 1],
-        ['Soap solution is', ['alkaline', 'acidic', 'neutral', 'a strong acid'], 'A', 'It feels slippery.', 1],
+        ['Which indicator turns red in acid and blue in alkali?', ['starch', 'phenolphthalein', 'litmus', 'iodine'], 'C', 'Phenolphthalein is colourless in acid and pink in alkali.', 1],
+        ['An acid turns blue litmus paper', ['blue', 'red', 'green', 'yellow'], 'B', 'Bases turn red litmus blue.', 1],
+        ['A base that dissolves in water is called an', ['salt', 'acid', 'alkali', 'oxide only'], 'C', 'Sodium hydroxide is an alkali.', 1],
+        ['Toothpaste is slightly alkaline to', ['kill all saliva', 'add colour', 'increase acidity', 'neutralise acids produced by mouth bacteria'], 'D', 'Acids cause tooth decay.', 2],
+        ['Lemon juice is', ['alkaline', 'acidic', 'neutral', 'a salt'], 'B', 'It contains citric acid.', 1],
+        ['Soap solution is', ['neutral', 'acidic', 'alkaline', 'a strong acid'], 'C', 'It feels slippery.', 1],
+        ['The salt formed when sulphuric acid reacts with potassium hydroxide is', ['potassium hydrogen', 'potassium sulphide', 'potassium sulphite', 'potassium sulphate'], 'D', 'H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O.', 4],
+        ['Which pair of substances would produce a salt and carbon dioxide?', ['an acid and a metal', 'an acid and a carbonate', 'a base and water', 'two salts'], 'B', 'Carbonates release CO₂.', 4],
+        ['25 cm³ of 0.2 mol/dm³ HCl is neutralised by NaOH. The moles of NaOH needed are', ['0.5', '0.05', '0.005', '5'], 'C', '0.025 × 0.2.', 4],
+        ['The pH of a solution with [H⁺] = 10⁻⁴ mol/dm³ is', ['0.0001', '10', '−4', '4'], 'D', 'pH = −log[H⁺].', 5],
+        ['A solution of pH 2 is', ['neutral', 'weakly acidic', 'strongly acidic', 'alkaline'], 'C', 'Far below 7.', 4],
+        ['When an acid reacts with a carbonate, the gas given off is', ['chlorine', 'hydrogen', 'oxygen', 'carbon dioxide'], 'D', 'Turns lime water milky.', 4],
+        ['Neutralisation produces', ['salt and water', 'acid and base', 'hydrogen only', 'oxygen and water'], 'A', 'Acid + base.', 4],
     ],
 
     'SHS 2: Human excretory organs' => [
@@ -292,20 +375,22 @@ return [
         ['The skin excretes water, salts and a little urea in', ['tears', 'bile', 'saliva', 'sweat'], 'D', 'Sweat glands remove some wastes as they help to cool the body.', 1],
         ['The lungs excrete', ['urea', 'bile pigments', 'carbon dioxide and water vapour', 'excess salt'], 'C', 'Carbon dioxide from respiration leaves the body when we breathe out.', 1],
         ['Urea is made in the', ['kidney', 'pancreas', 'bladder', 'liver'], 'D', 'The liver breaks down excess amino acids and forms urea, which the blood carries to the kidneys.', 2],
-        ['The excretory organ that removes urea from the blood is the', ['kidney', 'liver', 'heart', 'stomach'], 'A', 'Urea is passed out in urine.', 1],
-        ['The skin excretes', ['sweat containing water, salts and some urea', 'carbon dioxide only', 'bile', 'faeces'], 'A', 'Sweating also cools the body.', 1],
-        ['The tube that carries urine from the kidney to the bladder is the', ['ureter', 'urethra', 'oesophagus', 'trachea'], 'A', 'The urethra leads out of the bladder.', 2],
+        ['The excretory organ that removes urea from the blood is the', ['liver', 'kidney', 'heart', 'stomach'], 'B', 'Urea is passed out in urine.', 1],
+        ['The skin excretes', ['bile', 'carbon dioxide only', 'sweat containing water, salts and some urea', 'faeces'], 'C', 'Sweating also cools the body.', 1],
+        ['The tube that carries urine from the kidney to the bladder is the', ['trachea', 'urethra', 'oesophagus', 'ureter'], 'D', 'The urethra leads out of the bladder.', 2],
+        ['A person with failed kidneys may be treated by', ['insulin', 'dialysis', 'antibiotics only', 'bandages'], 'B', 'A machine filters the blood.', 4],
     ],
 
     'SHS 2: Gaseous exchange in humans' => [
         ['Gaseous exchange in the human lungs takes place in the', ['trachea', 'bronchi', 'alveoli', 'larynx'], 'C', 'The alveoli have thin, moist walls and a rich blood supply.', 1],
-        ['When we breathe in, the diaphragm', ['contracts and flattens', 'relaxes and domes upwards', 'stays still', 'moves the ribs down'], 'A', 'The flattening diaphragm and rising ribs enlarge the chest, so air rushes in.', 2],
+        ['When we breathe in, the diaphragm', ['stays still', 'relaxes and domes upwards', 'contracts and flattens', 'moves the ribs down'], 'C', 'The flattening diaphragm and rising ribs enlarge the chest, so air rushes in.', 2],
         ['Compared with inhaled air, exhaled air contains', ['more oxygen', 'less water vapour', 'more carbon dioxide', 'less nitrogen only'], 'C', 'Body cells use oxygen and produce carbon dioxide, which is breathed out.', 1],
         ['Which disease mainly damages the alveoli and is strongly linked with smoking?', ['malaria', 'scurvy', 'cholera', 'emphysema'], 'D', 'Emphysema breaks down alveolar walls, reducing the surface area for gaseous exchange.', 2],
         ['Alveoli are well suited for gaseous exchange because they have', ['thin walls and a large surface area', 'thick walls', 'few blood vessels', 'a dry surface'], 'A', 'They are also moist and well supplied with blood.', 2],
         ['During inhalation, the diaphragm', ['contracts and flattens', 'relaxes and domes upward', 'disappears', 'moves into the chest'], 'A', 'This increases chest volume.', 2],
         ['Inhaled air contains about what percentage of oxygen?', ['21%', '78%', '16%', '0.04%'], 'A', 'Exhaled air has about 16%.', 2],
         ['The windpipe is also called the', ['trachea', 'oesophagus', 'bronchiole', 'larynx'], 'A', 'It is kept open by rings of cartilage.', 1],
+        ['Carbon monoxide is dangerous because it', ['binds to haemoglobin more strongly than oxygen', 'is very hot', 'dissolves bones', 'causes sneezing only'], 'A', 'It forms carboxyhaemoglobin.', 5],
     ],
 
     'SHS 2: Concepts of electricity' => [
@@ -320,6 +405,11 @@ return [
         ['The current through a 6 Ω resistor connected to a 12 V supply is', ['2 A', '72 A', '0.5 A', '18 A'], 'A', 'I = V/R.', 1],
         ['A kilowatt-hour is a unit of', ['electrical energy', 'power', 'current', 'voltage'], 'A', 'ECG bills in kWh.', 1],
         ['A 100 W bulb used for 10 hours uses', ['1 kWh', '10 kWh', '0.1 kWh', '1,000 kWh'], 'A', '100 × 10 = 1,000 Wh.', 2],
+        ['Three resistors of 2 Ω, 3 Ω and 6 Ω are connected in parallel across 6 V. The total current is', ['6 A', '0.55 A', '1 A', '3 A'], 'A', 'R = 1 Ω; I = 6/1.', 5],
+        ['A 240 V, 60 W bulb has a resistance of', ['960 Ω', '4 Ω', '0.25 Ω', '14,400 Ω'], 'A', 'R = V²/P.', 4],
+        ['A household uses a 2 kW heater for 3 h and five 100 W bulbs for 4 h daily. Daily energy is', ['8 kWh', '6 kWh', '2.4 kWh', '26 kWh'], 'A', '6 + 2.', 4],
+        ['If the cost is GH¢1.20 per kWh, the daily cost of using 8 kWh is', ['GH¢9.60', 'GH¢8.00', 'GH¢1.20', 'GH¢96'], 'A', '8 × 1.20.', 3],
+        ['Three 12 Ω bulbs are connected in parallel to a 6 V supply. The total current is', ['1.5 A', '0.5 A', '6 A', '0.17 A'], 'A', 'R = 4 Ω.', 5],
     ],
 
     'SHS 2: Buoyancy' => [
@@ -331,6 +421,9 @@ return [
         ['Archimedes\' principle states that the upthrust equals the', ['weight of fluid displaced', 'mass of the object', 'volume of the container', 'density of the object'], 'A', 'It applies to bodies in any fluid.', 2],
         ['A steel ship floats because', ['its shape displaces a large weight of water', 'steel is lighter than water', 'water pushes it sideways', 'it has no weight'], 'A', 'Its average density is less than water.', 2],
         ['An object with a density greater than water will', ['sink', 'float', 'hover', 'rise'], 'A', 'Water density is 1 g/cm³.', 1],
+        ['A block weighs 10 N in air and 6 N in water. The upthrust on it is', ['4 N', '16 N', '6 N', '10 N'], 'A', 'Loss in weight = upthrust.', 3],
+        ['A block weighs 10 N in air and 6 N when fully immersed in water. Its relative density is', ['2.5', '1.67', '0.4', '4'], 'A', '10 ÷ 4.', 5],
+        ['A ship of mass 2,000 tonnes floats in sea water (density 1,025 kg/m³). The volume of water it displaces is about', ['1,951 m³', '2,000 m³', '2,050 m³', '1,025 m³'], 'A', '2,000,000 ÷ 1,025.', 5],
     ],
 
     'SHS 2: Semiconductors and electronic devices' => [
@@ -339,10 +432,10 @@ return [
         ['A light-dependent resistor (LDR) has a resistance that', ['rises as light gets brighter', 'falls as light gets brighter', 'never changes', 'depends only on temperature'], 'B', 'More light frees more charge carriers, so the resistance falls.', 2],
         ['The most commonly used semiconductor material is', ['silicon', 'copper', 'iron', 'rubber'], 'A', 'It is used in chips and solar cells.', 1],
         ['Adding impurities to a semiconductor to change its conductivity is', ['doping', 'rectifying', 'charging', 'insulating'], 'A', 'It produces n-type or p-type material.', 2],
+        ['A p-n junction diode conducts when the', ['p-side is connected to the positive terminal', 'n-side is positive', 'junction is cold', 'circuit is open'], 'A', 'Forward bias.', 5],
     ],
 
     'SHS 2: Pathogenic diseases' => [
-        ['Malaria is caused by', ['a virus', 'a bacterium', 'Plasmodium, a protozoan', 'a fungus'], 'C', 'The Plasmodium parasite is carried by female Anopheles mosquitoes.', 1],
         ['Which disease is caused by a virus?', ['tuberculosis', 'cholera', 'measles', 'typhoid'], 'C', 'Measles is viral. Tuberculosis, cholera and typhoid are bacterial.', 2],
         ['Sleeping nets treated with insecticide mainly prevent', ['cholera', 'malaria', 'tuberculosis', 'ringworm'], 'B', 'They keep mosquitoes away while people sleep.', 1],
         ['Ringworm is caused by', ['a worm', 'a fungus', 'a virus', 'a protozoan'], 'B', 'Despite its name, ringworm is a fungal skin infection.', 2],
@@ -353,6 +446,7 @@ return [
         ['The organism that causes malaria is a', ['protozoan (Plasmodium)', 'virus', 'bacterium', 'worm'], 'A', 'It is carried by the female Anopheles mosquito.', 1],
         ['Oral rehydration solution is given to treat', ['dehydration from diarrhoea', 'malaria', 'broken bones', 'eye infections'], 'A', 'It replaces water and salts.', 1],
         ['Tuberculosis mainly affects the', ['lungs', 'eyes', 'skin', 'bones only'], 'A', 'It spreads by coughing.', 1],
+        ['The vector of yellow fever is the', ['Aedes mosquito', 'Anopheles mosquito', 'tsetse fly', 'housefly'], 'A', 'It also spreads dengue.', 4],
     ],
 
     'SHS 2: Indigenous beverages' => [
@@ -363,6 +457,7 @@ return [
         ['The process that turns sugar into alcohol in palm wine is', ['fermentation by yeast', 'distillation', 'evaporation', 'filtration'], 'A', 'Carbon dioxide is also given off.', 1],
         ['Sobolo is a drink made mainly from', ['hibiscus (roselle) leaves/calyces', 'maize', 'cassava', 'groundnuts'], 'A', 'It is rich in antioxidants.', 1],
         ['Akpeteshie is made from fermented palm wine or sugar cane juice by', ['distillation', 'filtration', 'freezing', 'decanting'], 'A', 'Distillation concentrates the alcohol.', 2],
+        ['In palm-wine fermentation, the gas produced is', ['carbon dioxide', 'oxygen', 'nitrogen', 'hydrogen'], 'A', 'C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.', 4],
     ],
 
     'SHS 3: The composition of air' => [
@@ -374,6 +469,8 @@ return [
         ['The percentage of carbon dioxide in air is about', ['0.04%', '21%', '1%', '78%'], 'A', 'It is rising due to burning fossil fuels.', 2],
         ['The noble gas present in air in the largest amount is', ['argon', 'neon', 'helium', 'krypton'], 'A', 'About 0.9% of air.', 2],
         ['Oxygen in air is needed for', ['burning and respiration', 'photosynthesis only', 'freezing', 'rusting prevention'], 'A', 'It supports combustion.', 1],
+        ['When air is passed over heated copper, the copper turns black because it reacts with', ['oxygen', 'nitrogen', 'argon', 'carbon dioxide'], 'A', 'Copper(II) oxide forms.', 4],
+        ['In the experiment where 100 cm³ of air passes over heated copper until no further change, the volume remaining is about', ['79 cm³', '21 cm³', '100 cm³', '50 cm³'], 'A', 'About 21% oxygen is removed.', 5],
     ],
 
     'SHS 3: Oil and natural gas' => [
@@ -385,6 +482,8 @@ return [
         ['The main component of natural gas is', ['methane', 'ethane', 'propane', 'butane'], 'A', 'Formula CH₄.', 1],
         ['Ghana began commercial oil production in 2010 from the', ['Jubilee Field', 'Akosombo Field', 'Volta Basin', 'Keta Field'], 'A', 'It is offshore in the Western Region.', 2],
         ['Liquefied petroleum gas (LPG) used for cooking is mainly', ['propane and butane', 'methane only', 'hydrogen', 'oxygen'], 'A', 'It is stored under pressure.', 2],
+        ['Fractions with higher boiling points are collected', ['near the bottom of the fractionating column', 'at the top', 'in the middle only', 'outside the column'], 'A', 'Bitumen at the bottom; gases at the top.', 4],
+        ['Cracking of large hydrocarbons is done to produce', ['petrol and alkenes', 'bitumen', 'coal', 'water'], 'A', 'Higher demand for small molecules.', 4],
     ],
 
     'SHS 3: The nervous system' => [
@@ -399,6 +498,10 @@ return [
         ['Neurons that carry impulses from receptors to the CNS are', ['sensory neurons', 'motor neurons', 'relay neurons', 'muscle cells'], 'A', 'Motor neurons go to effectors.', 2],
         ['The spinal cord is protected by the', ['vertebral column (backbone)', 'skull', 'ribs', 'pelvis'], 'A', 'Vertebrae surround it.', 1],
         ['A reflex arc involves receptor, sensory neuron, relay neuron, motor neuron and', ['effector', 'brain only', 'skin', 'heart'], 'A', 'The effector is a muscle or gland.', 2],
+        ['Myelinated neurons transmit impulses faster because', ['impulses jump between nodes of Ranvier', 'they are longer', 'they have no axon', 'they carry hormones'], 'A', 'Saltatory conduction.', 5],
+        ['A person with damage to the cerebellum would most likely have problems with', ['balance and coordination', 'vision only', 'breathing', 'digestion'], 'A', 'Cerebellum function.', 4],
+        ['A reflex arc involves sensory neurone, relay neurone and', ['motor neurone', 'brain only', 'hormone', 'muscle fibre only'], 'A', 'Rapid response.', 4],
+        ['The gap between two neurones is the', ['synapse', 'axon', 'dendrite', 'myelin sheath'], 'A', 'Chemical transmission.', 4],
     ],
 
     'SHS 3: Movement of the human body' => [
@@ -410,6 +513,7 @@ return [
         ['The knee is an example of a', ['hinge joint', 'ball-and-socket joint', 'pivot joint', 'gliding joint'], 'A', 'It moves in one plane.', 1],
         ['The fluid that lubricates movable joints is', ['synovial fluid', 'plasma', 'lymph', 'bile'], 'A', 'It reduces friction.', 2],
         ['The longest bone in the human body is the', ['femur', 'tibia', 'humerus', 'radius'], 'A', 'It is the thigh bone.', 1],
+        ['When the biceps contracts, the triceps', ['relaxes', 'contracts', 'disappears', 'shortens strongly'], 'A', 'Antagonistic pair.', 3],
     ],
 
     'SHS 3: Light energy' => [
@@ -425,6 +529,13 @@ return [
         ['Light travels in', ['straight lines', 'curves only', 'circles', 'zigzags'], 'A', 'This explains shadows.', 1],
         ['The angle of incidence equals the angle of', ['reflection', 'refraction', 'deviation', 'dispersion'], 'A', 'The law of reflection.', 1],
         ['A periscope uses', ['two plane mirrors', 'two lenses only', 'one prism only', 'a convex mirror'], 'A', 'Mirrors at 45°.', 2],
+        ['An object 10 cm from a converging lens of focal length 15 cm forms an image that is', ['virtual, upright and magnified', 'real and inverted', 'real and diminished', 'at infinity'], 'A', 'The object is inside the focal length.', 5],
+        ['The refractive index of a medium in which light travels at 2.25 × 10⁸ m/s is (c = 3 × 10⁸ m/s)', ['1.33', '0.75', '1.5', '2.25'], 'A', 'n = c/v.', 4],
+        ['The power of a converging lens of focal length 25 cm is', ['+4 D', '−4 D', '+0.25 D', '+25 D'], 'A', 'P = 1/0.25 m.', 4],
+        ['An object 20 cm from a convex lens of focal length 10 cm forms an image', ['20 cm away, real, inverted and the same size', 'at infinity', 'virtual and magnified', '10 cm away'], 'A', 'Object at 2F.', 5],
+        ['The image formed by a plane mirror is', ['virtual, upright and laterally inverted', 'real and inverted', 'magnified', 'real and upright'], 'A', 'Same size, behind the mirror.', 4],
+        ['Short-sightedness is corrected using a', ['concave lens', 'convex lens', 'plane mirror', 'prism'], 'A', 'Diverging lens.', 4],
+        ['White light is split into colours by a prism because of', ['dispersion', 'reflection', 'diffraction', 'polarisation'], 'A', 'Different refractive indices.', 4],
     ],
 
     'SHS 3: Forces and motion' => [
@@ -436,6 +547,8 @@ return [
         ['Momentum is the product of', ['mass and velocity', 'force and time only', 'mass and acceleration', 'speed and time'], 'A', 'p = mv.', 1],
         ['A force of 20 N acts on a 4 kg mass. Its acceleration is', ['5 m/s²', '80 m/s²', '0.2 m/s²', '24 m/s²'], 'A', 'a = F/m.', 1],
         ['Seat belts protect passengers by', ['reducing forward motion during a sudden stop', 'increasing speed', 'adding weight', 'cooling the car'], 'A', 'They counter inertia.', 1],
+        ['A 1,200 kg car moving at 20 m/s stops in 4 s. The braking force is', ['6,000 N', '24,000 N', '4,800 N', '300 N'], 'A', 'F = m(v − u)/t.', 5],
+        ['A trolley of mass 2 kg is pulled by a net force of 10 N for 3 s from rest. Its final speed is', ['15 m/s', '5 m/s', '30 m/s', '6 m/s'], 'A', 'a = 5 m/s²; v = at.', 4],
     ],
 
     'SHS 3: Logic gates' => [
@@ -444,6 +557,8 @@ return [
         ['A NAND gate gives an output of 0 only when', ['both inputs are 1', 'both inputs are 0', 'one input is 1', 'never'], 'A', 'NAND is NOT-AND: it gives 0 only when AND would give 1.', 2],
         ['The output of an OR gate is 1 when', ['at least one input is 1', 'both inputs are 0', 'both inputs must be 1', 'the inputs differ only'], 'A', 'A + B.', 1],
         ['A truth table shows', ['all possible inputs and their outputs', 'the cost of a gate', 'the size of a chip', 'the voltage only'], 'A', 'Two inputs give four rows.', 1],
+        ['The output of a NOR gate with inputs A = 0, B = 0 is', ['1', '0', 'undefined', '2'], 'A', 'NOT (0 OR 0).', 4],
+        ['Which single gate gives output 0 only when both inputs are 1?', ['NAND', 'AND', 'OR', 'NOR'], 'A', 'NOT AND.', 4],
     ],
 
     'SHS 3: Heredity and genetics' => [
@@ -458,5 +573,11 @@ return [
         ['A gene is', ['a section of DNA that codes for a trait', 'a whole chromosome', 'a type of cell', 'a protein'], 'A', 'Genes are inherited from parents.', 1],
         ['An allele that is always expressed when present is', ['dominant', 'recessive', 'codominant always', 'mutant'], 'A', 'Recessive alleles are hidden by dominant ones.', 1],
         ['Identical twins develop from', ['one fertilised egg that splits', 'two eggs', 'two sperm and two eggs', 'no egg'], 'A', 'They share the same genes.', 2],
+        ['A man with blood group AB marries a woman with blood group O. Which blood group is impossible for their children?', ['O', 'A', 'B', 'none'], 'A', 'Children are AO or BO.', 5],
+        ['A heterozygous black guinea pig (Bb) is crossed with a white one (bb). The expected ratio of black to white offspring is', ['1 : 1', '3 : 1', 'all black', '1 : 3'], 'A', 'Bb, Bb, bb, bb.', 4],
+        ['Two parents with sickle cell trait (AS) have a child. The probability the child is AS is', ['1/2', '1/4', '3/4', '0'], 'A', 'AA, AS, AS, SS.', 4],
+        ['A test cross is used to determine whether an organism showing a dominant trait is', ['homozygous or heterozygous', 'male or female', 'young or old', 'healthy'], 'A', 'Cross with a homozygous recessive.', 5],
+        ['A cross between Tt and tt gives tall offspring in the ratio', ['1 : 1', '3 : 1', '1 : 2 : 1', 'all tall'], 'A', 'Tt, Tt, tt, tt.', 5],
+        ['A recessive trait shows only when the organism is', ['homozygous recessive', 'heterozygous', 'homozygous dominant', 'a hybrid'], 'A', 'Two recessive alleles.', 4],
     ],
 ];

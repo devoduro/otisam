@@ -35,6 +35,8 @@ return [
         ['Blending in shading is done to', ['erase drawings', 'add lines', 'create smooth transitions between tones', 'sharpen pencils'], 'C', 'A stump or finger can be used.', 1],
         ['Pastels are', ['liquid paints', 'sticks of pigment used for colour drawing', 'carving tools', 'canvas'], 'B', 'Oil and soft pastels exist.', 1],
         ['A grid method helps an artist to', ['frame a picture', 'mix colours', 'enlarge or copy a picture accurately', 'varnish'], 'C', 'Square by square.', 2],
+        ['Linear perspective was systematised during the', ['Impressionist period', 'Stone Age', 'Baroque period only', 'Renaissance'], 'D', 'Brunelleschi demonstrated it.', 5],
+        ['In three-point perspective, the third vanishing point is used for', ['horizontal lines only', 'vertical lines viewed from very high or low', 'shadows only', 'colour'], 'B', 'Dramatic views of tall buildings.', 5],
     ],
 
     'Painting' => [
@@ -60,10 +62,13 @@ return [
         ['Acrylic paint is', ['a type of ink only', 'oil-based and slow drying', 'a dry pigment stick', 'a fast-drying water-based paint'], 'D', 'It becomes water-resistant when dry.', 1],
         ['A wash in watercolour painting is', ['thick paint', 'a thin, transparent layer of diluted paint', 'a dry brush stroke', 'a pencil sketch'], 'B', 'It covers large areas.', 1],
         ['Glazing in painting means', ['scraping paint', 'mixing paint with sand', 'applying thin transparent layers over dry paint', 'painting on glass only'], 'C', 'It modifies colour.', 2],
-        ['The surface on which a painting is made is the', ['support', 'medium', 'binder', 'palette'], 'A', 'Canvas, paper or board.', 2],
-        ['A fresco is painted on', ['wet plaster', 'canvas', 'paper', 'wood'], 'A', 'The pigment bonds as the plaster dries.', 2],
+        ['The surface on which a painting is made is the', ['binder', 'medium', 'support', 'palette'], 'C', 'Canvas, paper or board.', 2],
+        ['A fresco is painted on', ['wood', 'canvas', 'paper', 'wet plaster'], 'D', 'The pigment bonds as the plaster dries.', 2],
         ['Primer (ground) is applied to a canvas to', ['prepare the surface for paint', 'finish the painting', 'clean brushes', 'frame it'], 'A', 'Gesso is a common primer.', 2],
         ['Flat brushes are best for', ['broad strokes and filling areas', 'fine details only', 'sketching', 'cutting'], 'A', 'Round brushes are for details.', 1],
+        ['The "fat over lean" rule in oil painting means', ['each layer should contain more oil than the one below', 'thin layers go on top', 'use no oil', 'paint only one layer'], 'A', 'It prevents cracking.', 5],
+        ['Scumbling is', ['applying a thin, broken layer of opaque paint over a dry layer', 'a transparent glaze', 'mixing on the palette', 'washing out paint'], 'A', 'It softens colours.', 5],
+        ['Wet-on-wet in watercolour produces', ['soft, diffused edges', 'sharp hard edges', 'thick impasto', 'no colour change'], 'A', 'Paint spreads on damp paper.', 4],
     ],
 
     'Subjects and composition' => [
@@ -91,5 +96,7 @@ return [
         ['Imaginative composition is based on', ['the artist\'s ideas rather than direct observation', 'copying photographs', 'still life only', 'measurements'], 'A', 'It uses creativity.', 1],
         ['Genre painting depicts', ['scenes of everyday life', 'only kings', 'only landscapes', 'abstract shapes'], 'A', 'Market scenes are genre paintings.', 2],
         ['Balance in a composition can be achieved by', ['distributing visual weight evenly', 'placing everything on one side', 'using one colour', 'leaving it blank'], 'A', 'Symmetrical or asymmetrical.', 1],
+        ['A triangular composition creates', ['stability and focus', 'chaos', 'flatness', 'no balance'], 'A', 'Used by Renaissance painters.', 4],
+        ['Negative space in a composition is', ['the empty area around the subject', 'the subject itself', 'the frame', 'the signature'], 'A', 'It shapes the image.', 4],
     ],
 ];

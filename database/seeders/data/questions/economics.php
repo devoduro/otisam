@@ -26,6 +26,11 @@ return [
         ['Economics is often defined as the study of how society', ['prints money', 'allocates scarce resources to satisfy unlimited wants', 'governs itself', 'worships'], 'B', 'Lionel Robbins gave a similar definition.', 1],
         ['A point inside the production possibility curve indicates', ['an unattainable output', 'full employment', 'unemployment or inefficient use of resources', 'economic growth'], 'C', 'More could be produced.', 2],
         ['An outward shift of the PPC represents', ['unemployment', 'a recession', 'inflation', 'economic growth'], 'D', 'More resources or better technology.', 2],
+        ['A country can produce 100 tonnes of rice or 50 tonnes of maize. The opportunity cost of 1 tonne of maize is', ['1 tonne of rice', '0.5 tonne of rice', '50 tonnes of rice', '2 tonnes of rice'], 'D', '100/50.', 4],
+        ['A concave PPC shows', ['constant opportunity cost', 'increasing opportunity cost', 'zero cost', 'decreasing cost'], 'B', 'Resources are not equally suited.', 5],
+        ['Positive economics deals with', ['religious ideas', 'value judgements', 'testable statements about what is', 'opinions only'], 'C', 'E.g. "a tax raises prices".', 4],
+        ['A production possibility curve that is concave to the origin shows', ['free goods', 'constant opportunity cost', 'unemployment', 'increasing opportunity cost'], 'D', 'Resources not equally suited.', 5],
+        ['Normative economics deals with', ['facts only', 'what is', 'statistics only', 'what ought to be'], 'D', 'Value judgements.', 4],
     ],
 
     'Demand, supply, elasticity' => [
@@ -54,6 +59,22 @@ return [
         ['Composite demand occurs when a good', ['is free', 'is demanded with another good', 'is a luxury', 'has several different uses'], 'D', 'Wood is used for furniture and fuel.', 3],
         ['Derived demand means that the demand for a factor depends on', ['its own price only', 'the demand for the goods it produces', 'government policy only', 'the weather'], 'B', 'Demand for labour is derived.', 2],
         ['Income elasticity of demand for luxury goods is', ['zero', 'negative', 'greater than 1', 'less than 0'], 'C', 'Demand rises faster than income.', 3],
+        ['The price of a good rises from GH¢10 to GH¢12 and quantity demanded falls from 100 to 80 units. The price elasticity of demand is', ['0.2', '0.5', '2.0', '1.0 (unitary)'], 'D', '%ΔQ = 20%; %ΔP = 20%.', 4],
+        ['If demand is price inelastic, a rise in price will', ['reduce total revenue', 'increase total revenue', 'leave revenue unchanged', 'make revenue zero'], 'B', 'Quantity falls proportionately less.', 4],
+        ['A tax on a good with perfectly inelastic demand is borne', ['equally by both', 'entirely by producers', 'entirely by consumers', 'by the government'], 'C', 'Quantity does not change.', 5],
+        ['A rise in the price of tea leads to a rise in demand for coffee. The cross elasticity is', ['infinite', 'negative, showing complements', 'zero', 'positive, showing substitutes'], 'D', 'Substitutes have positive XED.', 4],
+        ['Income rises by 10% and demand for a good falls by 5%. The good is', ['normal', 'inferior', 'luxury', 'Giffen only'], 'B', 'Negative income elasticity.', 4],
+        ['A Giffen good is one for which', ['demand is perfectly elastic', 'demand falls with income', 'quantity demanded rises when price rises', 'supply is fixed'], 'C', 'It is a strongly inferior staple.', 5],
+        ['A good has PED of −0.3. A 20% price rise changes total revenue by about', ['−12.8%', '−6%', '+20%', '+12.8%'], 'D', 'Quantity falls 6%: 1.2 × 0.94 = 1.128.', 5],
+        ['If the supply curve is perfectly elastic, an increase in demand will', ['raise price only', 'raise quantity but not price', 'lower price', 'have no effect'], 'B', 'Horizontal supply.', 5],
+        ['A subsidy to producers of a good with inelastic demand mainly benefits', ['the government', 'producers only', 'consumers through lower prices', 'importers'], 'C', 'Price falls more than quantity rises.', 5],
+        ['If price rises from GH¢10 to GH¢12 and quantity demanded falls from 100 to 90, PED is', ['0.2', '2', '1', '0.5'], 'D', '10% ÷ 20%.', 5],
+        ['A rise in the price of tea leads to an increase in demand for coffee. Tea and coffee are', ['complements', 'substitutes', 'inferior goods', 'Giffen goods'], 'B', 'Positive cross elasticity.', 4],
+        ['Demand for salt is likely to be', ['elastic', 'perfectly elastic', 'inelastic', 'unitary'], 'C', 'Necessity, small share of income.', 4],
+        ['An increase in supply, other things equal, leads to', ['no change', 'higher price and lower quantity', 'higher price and higher quantity', 'lower price and higher quantity'], 'D', 'Supply curve shifts right.', 4],
+        ['A maximum price set below equilibrium leads to', ['surpluses', 'shortages', 'higher output', 'lower demand'], 'B', 'Qd exceeds Qs.', 4],
+        ['When demand is elastic, a fall in price will', ['leave revenue unchanged', 'reduce total revenue', 'increase total revenue', 'reduce quantity sold'], 'C', 'Quantity rises proportionately more.', 5],
+        ['Income elasticity of demand for an inferior good is', ['infinite', 'positive', 'zero', 'negative'], 'D', 'Demand falls as income rises.', 4],
     ],
 
     'Production and costs' => [
@@ -74,6 +95,19 @@ return [
         ['Diseconomies of scale occur when', ['average cost falls', 'average cost rises as the firm grows too large', 'output falls', 'the firm closes'], 'B', 'Management becomes difficult.', 2],
         ['Which is an internal economy of scale?', ['a skilled local labour pool', 'improved roads in the area', 'bulk buying of raw materials', 'nearby research institutes'], 'C', 'The others are external economies.', 2],
         ['The entrepreneur is rewarded with', ['interest', 'rent', 'wages', 'profit'], 'D', 'Profit compensates for risk.', 1],
+        ['Total product rises from 40 to 52 when labour increases from 4 to 5 workers. The marginal product of the 5th worker is', ['8', '10.4', '52', '12'], 'D', '52 − 40.', 3],
+        ['The point where average product equals marginal product is where', ['total product is zero', 'average product is at its maximum', 'marginal product is negative', 'average product is minimum'], 'B', 'MP cuts AP at its peak.', 5],
+        ['In the short run, average fixed cost', ['is constant', 'rises as output rises', 'falls continuously as output rises', 'is U-shaped'], 'C', 'Fixed cost is spread over more units.', 4],
+        ['The marginal cost curve cuts the average cost curve at', ['no point', 'its maximum', 'the origin', 'the minimum point of average cost'], 'D', 'A mathematical property.', 4],
+        ['TFC = 200; TVC at 10 units = 300. AVC at 10 units is', ['500', '50', '20', '30'], 'D', '300/10.', 3],
+        ['External economies of scale arise from', ['a firm buying in bulk', 'growth of the whole industry in an area', 'specialised managers in a firm', 'technical efficiency of one firm'], 'B', 'E.g. shared training institutes.', 4],
+        ['If TC = 100 + 5Q, the average fixed cost at Q = 20 is', ['GH¢10', 'GH¢5', 'GH¢100', 'GH¢20'], 'B', '100 ÷ 20.', 5],
+        ['The law of diminishing returns applies in the', ['very long run', 'long run only', 'short run', 'market period only'], 'C', 'At least one fixed factor.', 4],
+        ['Marginal cost cuts average cost at', ['any point', 'its maximum point', 'zero output', 'its minimum point'], 'D', 'MC = AC at minimum AC.', 5],
+        ['Total product is at a maximum when marginal product is', ['maximum', 'zero', 'equal to AP', 'negative'], 'B', 'No extra output.', 5],
+        ['Economies of scale are reflected by a', ['constant MC', 'rising LRAC', 'falling long-run average cost', 'rising fixed cost'], 'C', 'Lower unit cost with size.', 4],
+        ['If 4 workers produce 40 units and 5 workers produce 45 units, the marginal product of the 5th worker is', ['9', '5', '45', '10'], 'B', '45 − 40.', 4],
+        ['Total cost of 10 units is GH¢200 and of 11 units is GH¢215. Marginal cost of the 11th unit is', ['GH¢19.55', 'GH¢20', 'GH¢15', 'GH¢215'], 'C', '215 − 200.', 4],
     ],
 
     'Market structures' => [
@@ -88,6 +122,16 @@ return [
         ['A monopolist maximises profit where', ['P = MC', 'MR = MC', 'AR = AC', 'TR is maximum'], 'B', 'This holds for all profit-maximising firms.', 2],
         ['Product differentiation is a feature of', ['pure monopoly only', 'perfect competition', 'monopolistic competition', 'barter'], 'C', 'Firms use branding.', 2],
         ['A cartel is', ['a trade union', 'a single firm', 'a government agency', 'a group of firms that agree to fix prices or output'], 'D', 'OPEC is an example.', 2],
+        ['In the long run, firms in perfect competition earn', ['supernormal profit', 'only normal profit', 'losses', 'no revenue'], 'B', 'Free entry removes abnormal profit.', 4],
+        ['A natural monopoly arises when', ['the government bans trade', 'there are many sellers', 'economies of scale make one firm most efficient', 'demand is zero'], 'C', 'E.g. water supply.', 5],
+        ['A monopolist practises price discrimination successfully only if', ['there is perfect information', 'goods are identical everywhere', 'resale is easy', 'markets can be separated and elasticities differ'], 'D', 'Charge more where demand is inelastic.', 5],
+        ['A monopolist faces demand P = 100 − 2Q. Total revenue at Q = 20 is', ['600', '2,000', '1,200', '60'], 'C', 'P = 60; TR = 60 × 20.', 5],
+        ['In monopolistic competition, the long-run equilibrium has', ['perfectly elastic demand', 'supernormal profit forever', 'zero output', 'excess capacity and normal profit'], 'D', 'Firms produce below minimum AC.', 5],
+        ['A perfectly competitive firm is a', ['cartel', 'price maker', 'monopolist', 'price taker'], 'D', 'Faces horizontal demand.', 4],
+        ['Price discrimination is possible when', ['there are many sellers', 'markets can be separated', 'goods are homogeneous', 'consumers have perfect knowledge'], 'B', 'No resale between markets.', 5],
+        ['In the long run, a firm in monopolistic competition earns', ['losses', 'supernormal profit', 'normal profit', 'no revenue'], 'C', 'Free entry.', 5],
+        ['A cartel such as OPEC is an example of', ['monopsony', 'perfect competition', 'pure monopoly', 'collusive oligopoly'], 'D', 'Producers agree on output.', 4],
+        ['A monopsony is a market with', ['a single seller', 'a single buyer', 'two sellers', 'many buyers'], 'B', 'E.g. sole employer.', 5],
     ],
 
     'National income, money, banking' => [
@@ -110,6 +154,24 @@ return [
         ['The Bank of Ghana can reduce money supply by', ['printing money', 'lowering interest rates', 'selling government securities (open market operations)', 'reducing reserve requirements'], 'C', 'It absorbs cash from the system.', 3],
         ['Deflation is', ['a rise in exports', 'a rise in prices', 'a fall in output', 'a persistent fall in the general price level'], 'D', 'It can reduce spending.', 2],
         ['The quantity theory of money is expressed as', ['P = MC', 'MV = PT', 'Y = C + I', 'E = mc²'], 'B', 'Fisher\'s equation of exchange.', 3],
+        ['GDP at market prices minus indirect taxes plus subsidies gives GDP at', ['constant prices', 'factor cost', 'current prices', 'net value'], 'B', 'Adjusts for taxes and subsidies.', 5],
+        ['If the cash reserve ratio is 10% and a bank receives a deposit of GH¢1,000, the maximum credit creation by the banking system is', ['GH¢900', 'GH¢1,000', 'GH¢10,000', 'GH¢100'], 'C', 'Multiplier = 1/0.1.', 5],
+        ['The marginal propensity to consume is 0.8. The investment multiplier is', ['1.25', '0.2', '8', '5'], 'D', 'k = 1/(1 − MPC).', 5],
+        ['Stagflation describes', ['falling prices', 'high inflation with high unemployment and slow growth', 'rapid growth', 'full employment'], 'B', 'It occurred in the 1970s.', 4],
+        ['An increase in the bank rate by the central bank is likely to', ['raise inflation', 'increase money supply', 'reduce borrowing and spending', 'reduce savings'], 'C', 'It is contractionary.', 4],
+        ['If consumption C = 50 + 0.75Y and investment I = 100, equilibrium income is', ['200', '600', '400', '150'], 'B', 'Y = 150/(1 − 0.75).', 5],
+        ['The demand for money for day-to-day purchases is the', ['precautionary motive', 'speculative motive', 'transactions motive', 'investment motive'], 'C', 'Keynes\' liquidity preference.', 4],
+        ['Open market purchase of securities by the central bank', ['has no effect', 'reduces money supply', 'raises reserve requirements', 'increases money supply'], 'D', 'It injects cash.', 4],
+        ['GNP = GDP +', ['subsidies', 'depreciation', 'indirect taxes', 'net factor income from abroad'], 'D', 'Income earned abroad less paid abroad.', 4],
+        ['If MPC = 0.8, the multiplier is', ['0.8', '5', '1.25', '8'], 'B', '1 ÷ 0.2.', 5],
+        ['With a reserve ratio of 10%, a deposit of GH¢1,000 can create total deposits of', ['GH¢9,000', 'GH¢1,100', 'GH¢10,000', 'GH¢100'], 'C', '1000 ÷ 0.1.', 5],
+        ['Cost-push inflation is caused by', ['falling wages', 'excess demand', 'rising production costs', 'falling import prices'], 'C', 'Supply-side pressure.', 4],
+        ['An open market sale of securities by the central bank will', ['increase bank reserves', 'increase money supply', 'reduce interest rates', 'reduce money supply'], 'D', 'Money is withdrawn.', 5],
+        ['Real GDP is nominal GDP adjusted for', ['price changes', 'population', 'depreciation', 'taxes'], 'A', 'Deflated by price index.', 4],
+        ['If consumption is C = 50 + 0.75Y, the MPS is', ['0.25', '0.75', '50', '1.33'], 'A', '1 − 0.75.', 4],
+        ['An increase in investment of GH¢100m with MPC 0.75 raises income by', ['GH¢400m', 'GH¢100m', 'GH¢133m', 'GH¢75m'], 'A', 'Multiplier 4.', 5],
+        ['Bank of Ghana raising the policy rate is intended to', ['reduce inflation', 'increase borrowing', 'raise money supply', 'weaken the cedi'], 'A', 'Contractionary policy.', 4],
+        ['If the CPI rises from 200 to 220, the inflation rate is', ['10%', '20%', '22%', '2%'], 'A', '20 ÷ 200.', 4],
     ],
 
     'Public finance and international trade' => [
@@ -131,6 +193,21 @@ return [
         ['Devaluation of a currency makes exports', ['unchanged', 'more expensive', 'illegal', 'cheaper for foreigners'], 'D', 'It may increase exports.', 2],
         ['An embargo is', ['a tax on imports', 'a total ban on trade with a country or in a good', 'a subsidy', 'a quota'], 'B', 'It is often political.', 2],
         ['Direct taxes are levied on', ['imports only', 'goods and services', 'income and wealth', 'exports only'], 'C', 'Income tax is direct.', 1],
+        ['Country A produces 10 cloth or 5 rice per worker; country B 6 cloth or 4 rice. Country A has a comparative advantage in', ['neither', 'rice', 'both', 'cloth'], 'D', 'A\'s opportunity cost of cloth is 0.5 rice; B\'s is 0.67.', 5],
+        ['A J-curve effect describes how a devaluation', ['always improves it immediately', 'first worsens then improves the trade balance', 'has no effect', 'raises imports permanently'], 'B', 'Demand adjusts with a lag.', 5],
+        ['A tax of 15% on all incomes is', ['regressive', 'progressive', 'proportional', 'indirect'], 'C', 'The rate is the same for all.', 4],
+        ['The incidence of a tax refers to', ['the tax office', 'the tax rate', 'the date of payment', 'who finally bears the burden'], 'D', 'It may be shifted.', 4],
+        ['A current account deficit can be financed by', ['reducing exports', 'a capital account surplus', 'printing more tariffs', 'increasing imports'], 'B', 'Inflows of capital balance it.', 5],
+        ['A country exports goods worth $5bn and imports $7bn, with net services of +$1bn. Its current account (ignoring transfers) is', ['+$1bn', '−$1bn', '−$2bn', '+$3bn'], 'B', '−2 + 1.', 5],
+        ['An import quota restricts trade by', ['subsidising exports', 'taxing imports', 'limiting the quantity of imports', 'banning exports'], 'C', 'Physical limit.', 4],
+        ['Laffer curve analysis suggests that very high tax rates may', ['end inflation', 'always raise revenue', 'have no effect', 'reduce total tax revenue'], 'D', 'Incentives fall.', 5],
+        ['A tax that takes a higher percentage from higher incomes is', ['progressive', 'regressive', 'proportional', 'indirect'], 'A', 'Rate rises with income.', 4],
+        ['The terms of trade improve when', ['export prices rise relative to import prices', 'import prices rise', 'export volume falls', 'the currency depreciates'], 'A', 'Index of Px/Pm rises.', 5],
+        ['Devaluation is most likely to improve the balance of payments if demand for exports is', ['elastic', 'inelastic', 'perfectly inelastic', 'zero'], 'A', 'Marshall-Lerner condition.', 5],
+        ['Comparative advantage exists when a country produces a good at a lower', ['opportunity cost', 'money price', 'absolute cost', 'wage'], 'A', 'Ricardo.', 5],
+        ['A budget deficit is financed partly by', ['borrowing', 'reducing debt', 'saving surplus', 'lowering imports'], 'A', 'Spending exceeds revenue.', 4],
+        ['A tariff is', ['a tax on imports', 'a subsidy to exporters', 'a quota', 'an exchange rate'], 'A', 'Customs duty.', 4],
+        ['Dumping is', ['selling abroad below cost', 'importing waste', 'restricting imports', 'raising tariffs'], 'A', 'Unfair trade practice.', 4],
     ],
 
     'Development and population' => [
@@ -145,6 +222,11 @@ return [
         ['A population census in Ghana is conducted roughly every', ['5 years', '2 years', '50 years', '10 years'], 'D', 'The last was in 2021.', 1],
         ['Underpopulation means', ['too many people', 'there are too few people to make full use of resources', 'an ageing population', 'high birth rate'], 'B', 'Output per head could rise with more people.', 2],
         ['Which is a characteristic of developing countries?', ['low birth rates', 'high per capita income', 'heavy dependence on primary production', 'advanced technology everywhere'], 'C', 'Many rely on agriculture and mining.', 2],
+        ['The Malthusian theory states that population grows', ['at the same rate as food', 'arithmetically while food grows geometrically', 'geometrically while food supply grows arithmetically', 'only in rich countries'], 'C', 'It predicted famine.', 4],
+        ['A dependency ratio is calculated as', ['GDP divided by population', 'workers divided by population', 'births divided by deaths', 'dependants divided by the working population'], 'D', 'It shows burden on workers.', 4],
+        ['The Human Development Index combines', ['GDP only', 'life expectancy, education and income', 'population and land area', 'exports and imports'], 'B', 'It is published by the UNDP.', 4],
+        ['The demographic transition model\'s second stage features', ['low birth and death rates', 'high birth rates and falling death rates', 'rising death rates', 'falling birth rates only'], 'B', 'Population grows rapidly.', 5],
+        ['A population of 30 million growing at 2% a year will be about how large after 1 year?', ['30.2 million', '32 million', '30.6 million', '36 million'], 'C', '30 × 1.02.', 3],
     ],
 
     'SHS 1: Introduction to economics' => [
@@ -152,11 +234,12 @@ return [
         ['A student chooses to buy a textbook instead of a pair of shoes. The shoes are the', ['utility', 'real income', 'opportunity cost', 'demand'], 'C', 'Opportunity cost is the next best alternative given up.', 1],
         ['A point inside a production possibility curve shows', ['economic growth', 'full employment', 'an impossible output', 'unemployed or inefficiently used resources'], 'D', 'The economy could produce more of both goods.', 2],
         ['The questions "what to produce, how to produce and for whom to produce" are the', ['functions of money', 'basic questions every economy must answer', 'types of taxes', 'laws of demand'], 'B', 'Every economic system answers them in its own way.', 1],
-        ['Normative economics deals with', ['prices alone', 'facts that can be tested', 'only statistics', 'statements about what ought to be'], 'D', 'Positive economics deals with what is.', 2],
         ['Scale of preference is', ['a weighing scale', 'a list of wants arranged in order of importance', 'a price list', 'a tax table'], 'B', 'It helps in making choices.', 1],
         ['Which is a free good?', ['a car', 'bread', 'air', 'a textbook'], 'C', 'It is not scarce and has no price.', 1],
         ['The three basic questions every economy must answer are what to produce, how to produce and', ['who to tax', 'when to stop', 'where to sell', 'for whom to produce'], 'D', 'They arise from scarcity.', 1],
         ['Choice in economics arises because of', ['abundance', 'scarcity', 'taxation', 'inflation'], 'B', 'Resources are limited.', 1],
+        ['Economics is described as a social science because it', ['is only about money', 'uses laboratory experiments only', 'studies rocks', 'studies human behaviour in using scarce resources'], 'D', 'It concerns people and choices.', 4],
+        ['The opportunity cost of attending SHS for a 16-year-old might be', ['school fees only', 'the wages forgone from working', 'nothing', 'the cost of books only'], 'B', 'Next best alternative.', 4],
     ],
 
     'SHS 1: Demand' => [
@@ -170,6 +253,8 @@ return [
         ['Joint demand exists when goods are', ['produced together', 'substitutes', 'free goods', 'used together'], 'D', 'For example, cars and tyres.', 2],
         ['Effective demand is', ['supply', 'desire only', 'desire backed by the ability and willingness to pay', 'government spending'], 'C', 'Wishes alone are not demand.', 2],
         ['A movement along the demand curve is caused by a change in', ['population', 'income', 'tastes', 'the price of the good'], 'D', 'Other factors shift the curve.', 2],
+        ['A fall in the price of petrol is likely to', ['have no effect on cars', 'reduce demand for cars', 'increase demand for cars', 'reduce car supply'], 'C', 'Complements.', 4],
+        ['Demand for a good is Qd = 80 − 4P. At P = 5, quantity demanded is', ['100', '75', '20', '60'], 'D', '80 − 20.', 3],
     ],
 
     'SHS 1: Utility' => [
@@ -181,6 +266,8 @@ return [
         ['A consumer is in equilibrium with two goods when', ['total utility is zero', 'MUx = MUy', 'Px = Py', 'MUx/Px = MUy/Py'], 'D', 'The last cedi spent on each gives equal utility.', 3],
         ['Total utility is maximised when marginal utility is', ['maximum', 'zero', 'negative', 'equal to price'], 'B', 'Further units add nothing.', 2],
         ['The paradox of value (water–diamond paradox) is explained by', ['supply only', 'total cost', 'marginal utility', 'taxation'], 'C', 'Water is plentiful, so its MU is low.', 3],
+        ['A consumer buys goods X and Y priced GH¢2 and GH¢4. At equilibrium, if MUx = 10, then MUy must be', ['5', '10', '20', '40'], 'C', 'MUx/Px = MUy/Py.', 5],
+        ['Consumer surplus is the difference between', ['supply and demand', 'price and cost', 'income and spending', 'what a consumer is willing to pay and what they actually pay'], 'D', 'It is the area under demand above price.', 4],
     ],
 
     'SHS 1: Production' => [
@@ -193,6 +280,8 @@ return [
         ['Average product is', ['fixed cost per unit', 'the change in total product', 'total product times labour', 'total product divided by units of the variable factor'], 'D', 'AP = TP/L.', 2],
         ['Capital as a factor of production refers to', ['labour', 'money only', 'land', 'man-made goods used to produce other goods'], 'D', 'Machines and tools.', 1],
         ['The mobility of labour refers to', ['the speed of workers', 'the ease with which workers change jobs or locations', 'transport of goods', 'population growth'], 'B', 'Geographical and occupational mobility.', 2],
+        ['Returns to scale refer to changes in output when', ['one input changes', 'all inputs are increased in the same proportion', 'prices change', 'technology is fixed'], 'B', 'A long-run concept.', 5],
+        ['The production function Q = f(L, K) shows', ['demand and supply', 'cost and price', 'the relationship between inputs and output', 'profit and tax'], 'C', 'L is labour, K capital.', 4],
     ],
 
     'SHS 1: Supply' => [
@@ -204,6 +293,8 @@ return [
         ['Supply of agricultural produce in Ghana is affected by', ['school holidays', 'only advertising', 'the colour of packaging', 'weather conditions'], 'D', 'Good rains raise output.', 1],
         ['An improvement in technology shifts the supply curve', ['upward only', 'to the left', 'to the right', 'not at all'], 'C', 'Costs fall.', 2],
         ['Supply is perfectly inelastic when', ['demand is high', 'supply is very responsive', 'price is zero', 'quantity supplied does not change as price changes'], 'D', 'The curve is vertical.', 2],
+        ['Supply is Qs = −10 + 5P. At P = 6, quantity supplied is', ['30', '20', '40', '−4'], 'B', '−10 + 30.', 3],
+        ['A tax on producers shifts the supply curve', ['not at all', 'downward', 'upward (to the left) by the amount of the tax', 'to the right'], 'C', 'Costs rise.', 4],
     ],
 
     'SHS 1: Markets and prices' => [
@@ -217,6 +308,10 @@ return [
         ['A black market often arises when the government', ['removes price controls', 'sets a maximum price below equilibrium', 'cuts taxes', 'increases supply'], 'B', 'Shortages lead to illegal trading.', 2],
         ['A surplus occurs when', ['demand exceeds supply', 'quantity supplied exceeds quantity demanded', 'price equals equilibrium', 'there are no sellers'], 'B', 'Prices tend to fall.', 1],
         ['Hoarding of goods by traders leads to', ['more supply', 'lower prices', 'artificial shortage and higher prices', 'equilibrium'], 'C', 'Goods are withheld.', 2],
+        ['Demand is Qd = 100 − 2P and supply Qs = 20 + 2P. The equilibrium price is', ['60', '40', '30', '20'], 'D', '100 − 2P = 20 + 2P.', 5],
+        ['Using Qd = 100 − 2P and Qs = 20 + 2P, the equilibrium quantity is', ['40', '60', '80', '20'], 'B', 'Substitute P = 20.', 5],
+        ['A price ceiling below equilibrium leads to', ['equilibrium', 'excess supply', 'excess demand and possible rationing', 'higher prices'], 'C', 'Shortages result.', 4],
+        ['Using Qd = 80 − 4P and Qs = −10 + 5P, the equilibrium price is', ['10', '9', '8', '12'], 'A', '80 − 4P = −10 + 5P → 9P = 90.', 5],
     ],
 
     'SHS 1: Economic systems and macroeconomic variables' => [
@@ -230,6 +325,7 @@ return [
         ['A key feature of the free market economy is', ['state ownership of all firms', 'central planning', 'the price mechanism allocates resources', 'no private property'], 'C', 'Demand and supply guide decisions.', 1],
         ['In a traditional economy, decisions are based mainly on', ['stock markets', 'prices only', 'government plans', 'customs and traditions'], 'D', 'Often subsistence-based.', 1],
         ['The four main macroeconomic objectives include low inflation, low unemployment, economic growth and', ['high taxes', 'a favourable balance of payments', 'more imports only', 'fewer firms'], 'B', 'Governments pursue all four.', 2],
+        ['A major weakness of the command economy is', ['inefficiency due to lack of price signals', 'too much competition', 'excessive consumer choice', 'unemployment always'], 'A', 'Planners lack information.', 5],
     ],
 
     'SHS 1: Money and financial institutions' => [
@@ -243,6 +339,8 @@ return [
         ['The bank that acts as the lender of last resort is the', ['commercial bank', 'central bank', 'rural bank', 'savings and loans company'], 'B', 'The Bank of Ghana in Ghana.', 2],
         ['Money as a store of value means it', ['is used to pay debts later', 'is used to compare prices', 'can be saved for future use', 'is exchanged for goods'], 'C', 'Inflation weakens it.', 2],
         ['A rural bank mainly serves', ['farmers and rural communities', 'foreign governments', 'only big companies', 'the central bank'], 'A', 'It promotes rural development.', 1],
+        ['Inflation reduces the effectiveness of money as a', ['store of value', 'medium of exchange only', 'measure of length', 'unit of weight'], 'A', 'Purchasing power falls.', 4],
+        ['Money supply M1 typically includes', ['currency in circulation and demand deposits', 'treasury bills only', 'gold reserves', 'foreign currency held abroad'], 'A', 'Narrow money.', 5],
     ],
 
     'SHS 2: Tools of economic analysis' => [
@@ -267,6 +365,9 @@ return [
         ['In the short run, a firm should shut down if price is below', ['average variable cost', 'average fixed cost', 'marginal revenue', 'total revenue'], 'A', 'It cannot cover its variable costs.', 3],
         ['Average revenue is equal to', ['price', 'total cost', 'marginal cost', 'profit'], 'A', 'AR = TR/Q = P.', 2],
         ['Normal profit is', ['the minimum profit needed to keep a firm in the industry', 'excess profit', 'zero revenue', 'a loss'], 'A', 'It is counted as a cost.', 3],
+        ['TC = 100 + 5Q. When Q = 20, average cost is', ['GH¢10', 'GH¢5', 'GH¢200', 'GH¢105'], 'A', '(100 + 100)/20.', 5],
+        ['For a firm with TR = 50Q − Q², marginal revenue at Q = 10 is', ['30', '40', '50', '20'], 'A', 'MR = 50 − 2Q.', 5],
+        ['Break-even occurs where', ['total revenue equals total cost', 'MR = 0', 'price is highest', 'MC is lowest'], 'A', 'Zero economic profit.', 4],
     ],
 
     'SHS 2: Market structures' => [
@@ -277,7 +378,7 @@ return [
         ['Monopolistic competition is characterised by', ['many firms selling differentiated products', 'one firm', 'identical products', 'no advertising'], 'A', 'Hairdressing salons are an example.', 2],
         ['Price discrimination means', ['charging different prices to different customers for the same good', 'charging one price', 'giving goods free', 'lowering all prices'], 'A', 'Student fares are an example.', 2],
         ['In perfect competition, the demand curve facing a firm is', ['perfectly elastic (horizontal)', 'downward sloping', 'vertical', 'upward sloping'], 'A', 'The firm sells any amount at the market price.', 3],
-        ['A monopsony is a market with', ['a single buyer', 'a single seller', 'two sellers', 'many buyers and sellers'], 'A', 'E.g. COCOBOD buying cocoa.', 3],
+        ['A firm in perfect competition with P = GH¢10 and AC = GH¢8 at output 100 earns supernormal profit of', ['GH¢200', 'GH¢1,000', 'GH¢800', 'GH¢2'], 'A', '(10 − 8) × 100.', 4],
     ],
 
     'SHS 2: GDP, inflation and exchange rates' => [
@@ -290,6 +391,9 @@ return [
         ['The Consumer Price Index measures changes in', ['the prices of a basket of goods and services', 'the population', 'exports only', 'interest rates'], 'A', 'It is used to calculate inflation.', 2],
         ['Real GDP is GDP adjusted for', ['inflation', 'population', 'exports', 'taxes'], 'A', 'It measures true output change.', 2],
         ['Appreciation of the cedi makes imports', ['cheaper', 'more expensive', 'banned', 'unchanged'], 'A', 'Fewer cedis buy each dollar.', 2],
+        ['If nominal GDP rises by 12% and prices rise by 8%, real GDP grows by about', ['4%', '20%', '12%', '8%'], 'A', 'Real ≈ nominal − inflation.', 5],
+        ['A CPI rising from 120 to 132 shows an inflation rate of', ['10%', '12%', '132%', '8%'], 'A', '12/120 × 100.', 5],
+        ['Purchasing power parity theory suggests exchange rates adjust to equalise', ['the price of identical goods in different countries', 'interest rates', 'population', 'tax rates'], 'A', 'The "law of one price".', 5],
     ],
 
     'SHS 2: Public finance and the national budget' => [
@@ -302,6 +406,8 @@ return [
         ['A canon of taxation which says taxes should be cheap to collect is', ['economy', 'equity', 'certainty', 'convenience'], 'A', 'Adam Smith\'s canons of taxation.', 2],
         ['Government expenditure on roads and schools is', ['capital expenditure', 'recurrent expenditure', 'transfer payments', 'debt servicing'], 'A', 'It creates lasting assets.', 2],
         ['Salaries of civil servants are', ['recurrent expenditure', 'capital expenditure', 'investment', 'revenue'], 'A', 'Paid regularly.', 2],
+        ['Fiscal policy uses', ['government spending and taxation', 'interest rates only', 'exchange rates only', 'money printing only'], 'A', 'Monetary policy uses interest rates.', 4],
+        ['A government running a deficit to boost demand in a recession is following', ['expansionary fiscal policy', 'contractionary policy', 'monetary tightening', 'free trade'], 'A', 'Keynesian approach.', 5],
     ],
 
     'SHS 2: Agriculture, industry and trade' => [
@@ -314,6 +420,7 @@ return [
         ['The One District One Factory (1D1F) policy aims to', ['promote industrialisation across Ghana', 'close factories', 'import all goods', 'reduce employment'], 'A', 'It was launched in 2017.', 2],
         ['A problem of agriculture in Ghana is', ['reliance on rainfall', 'too much mechanisation', 'excess credit', 'too many roads'], 'A', 'Irrigation is limited.', 1],
         ['Free trade means', ['trade without barriers such as tariffs', 'trade with no money', 'only local trade', 'barter trade'], 'A', 'AfCFTA aims for free trade in Africa.', 1],
+        ['The Prebisch–Singer thesis argues that developing countries\' terms of trade tend to', ['deteriorate over time', 'improve over time', 'stay constant', 'be irrelevant'], 'A', 'Primary product prices fall relative to manufactures.', 5],
     ],
 
     'SHS 3: Elasticity of demand and supply' => [
@@ -322,11 +429,12 @@ return [
         ['An inferior good has an income elasticity of demand that is', ['negative', 'positive', 'zero', 'infinite'], 'A', 'As income rises, people buy less of it.', 3],
         ['Two goods with a positive cross elasticity of demand are', ['substitutes', 'complements', 'unrelated', 'inferior goods'], 'A', 'A rise in the price of one raises demand for the other.', 3],
         ['The supply of fresh tomatoes is usually inelastic in the short run because', ['they take time to grow and cannot be stored long', 'they are luxuries', 'they are imported', 'farmers dislike them'], 'A', 'Producers cannot quickly increase supply when prices rise.', 2],
-        ['Demand for salt is likely to be', ['price inelastic', 'perfectly elastic', 'highly elastic', 'unitary elastic'], 'A', 'It is a necessity with a small share of income.', 2],
         ['If PED is 0.4, a 10% price rise reduces quantity demanded by', ['4%', '10%', '40%', '0.4%'], 'A', '0.4 × 10%.', 2],
         ['Cross elasticity of demand between substitutes is', ['positive', 'negative', 'zero', 'always infinite'], 'A', 'A rise in the price of one raises demand for the other.', 3],
         ['Price elasticity of supply measures', ['how quantity supplied responds to price changes', 'demand changes', 'income changes', 'tax changes'], 'A', 'PES = %ΔQs/%ΔP.', 2],
         ['If PED = 1, demand is', ['unitary elastic', 'perfectly elastic', 'perfectly inelastic', 'inelastic'], 'A', 'Total revenue stays the same.', 2],
+        ['Price falls from GH¢8 to GH¢6 and quantity rises from 40 to 60. PED (point method from initial values) is', ['2', '0.5', '1', '1.5'], 'A', '%ΔQ = 50%; %ΔP = 25%.', 5],
+        ['Supply of agricultural produce is inelastic in the short run because', ['production takes time', 'demand is fixed', 'prices are fixed', 'storage is unlimited'], 'A', 'Crops need a growing season.', 4],
     ],
 
     'SHS 3: Distribution and price control' => [
@@ -338,6 +446,7 @@ return [
         ['A rent control is an example of a', ['maximum price', 'minimum price', 'tax', 'subsidy'], 'A', 'It may cause housing shortages.', 2],
         ['A minimum wage is an example of a', ['price floor', 'price ceiling', 'tax', 'tariff'], 'A', 'It is set above the market wage.', 2],
         ['A retailer', ['sells goods in small quantities to final consumers', 'manufactures goods', 'buys in bulk from producers only', 'exports goods'], 'A', 'The last link in distribution.', 1],
+        ['A price floor set above equilibrium in an agricultural market leads to', ['surplus produce', 'shortage', 'lower prices', 'black markets for buyers'], 'A', 'Government may buy the surplus.', 4],
     ],
 
     'SHS 3: Firms and industrialisation' => [
@@ -350,5 +459,6 @@ return [
         ['Infant industries need protection because they', ['cannot yet compete with established foreign firms', 'are too large', 'make huge profits', 'have no workers'], 'A', 'Tariffs may shield them.', 2],
         ['A firm is', ['a single business unit', 'a whole industry', 'the government', 'a market'], 'A', 'An industry is a group of firms.', 1],
         ['Vertical integration is a merger between firms', ['at different stages of production', 'at the same stage', 'in unrelated industries', 'in different countries only'], 'A', 'E.g. a cocoa farm and a chocolate factory.', 2],
+        ['The optimum firm size is where', ['long-run average cost is at its minimum', 'output is largest', 'profit is zero', 'workers are most'], 'A', 'Lowest unit cost.', 5],
     ],
 ];

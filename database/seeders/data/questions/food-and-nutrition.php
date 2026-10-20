@@ -40,6 +40,19 @@ return [
         ['The main source of energy for the body during exercise is', ['minerals', 'protein', 'vitamins', 'carbohydrate'], 'D', 'Glucose fuels muscles.', 1],
         ['Which food is a good source of calcium?', ['rice', 'milk', 'cassava', 'sugar'], 'B', 'Calcium builds bones and teeth.', 1],
         ['Water makes up about what fraction of body weight?', ['one-quarter', 'one-tenth', 'two-thirds', 'nine-tenths'], 'C', 'It is vital for all body processes.', 2],
+        ['1 g of fat supplies about', ['2 kcal', '4 kcal', '7 kcal', '9 kcal (37 kJ)'], 'D', 'Carbohydrate and protein give about 4 kcal/g.', 4],
+        ['A meal contains 20 g protein, 50 g carbohydrate and 10 g fat. Its energy value is about', ['280 kcal', '370 kcal', '800 kcal', '640 kcal'], 'B', '80 + 200 + 90.', 5],
+        ['Biological value of protein refers to', ['its cost', 'its colour', 'the proportion of essential amino acids it supplies', 'its cooking time'], 'C', 'Animal proteins usually have high BV.', 5],
+        ['Complementation of proteins means', ['avoiding beans', 'adding salt', 'cooking proteins twice', 'combining plant proteins so their amino acids make up for each other'], 'D', 'E.g. rice and beans.', 5],
+        ['Vitamin C is easily lost during cooking because it is', ['fat-soluble', 'water-soluble and destroyed by heat', 'stable to heat', 'a mineral'], 'B', 'Use little water and short cooking.', 4],
+        ['Haem iron from meat is absorbed better than non-haem iron, and non-haem iron absorption is improved by', ['calcium supplements', 'tea', 'vitamin C', 'fibre'], 'C', 'Vitamin C enhances absorption.', 5],
+        ['Deficiency of vitamin A causes', ['beriberi', 'scurvy', 'rickets', 'night blindness'], 'D', 'Retinol is needed for vision.', 4],
+        ['Scurvy results from a lack of', ['iron', 'vitamin D', 'vitamin B1', 'vitamin C'], 'D', 'Ascorbic acid.', 4],
+        ['Kwashiorkor is caused mainly by a deficiency of', ['carbohydrate', 'protein', 'fat', 'vitamin C'], 'B', 'Protein-energy malnutrition.', 4],
+        ['One gram of fat yields about', ['7 kcal', '4 kcal', '9 kcal', '2 kcal'], 'C', 'Most energy-dense.', 5],
+        ['Iron is needed for the formation of', ['insulin', 'bones', 'enzymes only', 'haemoglobin'], 'D', 'Oxygen carrier.', 4],
+        ['Vitamin D helps the body absorb', ['iron', 'calcium', 'iodine', 'sodium'], 'B', 'Bone health.', 4],
+        ['Goitre is linked to a lack of', ['calcium', 'iron', 'iodine', 'zinc'], 'C', 'Thyroid enlargement.', 4],
     ],
 
     'Meal planning' => [
@@ -60,6 +73,10 @@ return [
         ['Packed lunches for school children should include', ['only sweets', 'a balance of energy, protein and vitamins', 'only drinks', 'only biscuits'], 'B', 'They support learning.', 1],
         ['Garnishing food means', ['adding salt', 'cooking it longer', 'decorating it to improve its appearance', 'freezing it'], 'C', 'Parsley or tomato slices are used.', 1],
         ['Table setting for a formal meal places the fork on the', ['chair', 'right of the plate', 'top of the plate', 'left of the plate'], 'D', 'The knife goes on the right.', 2],
+        ['A teenage boy needs more energy than an elderly woman mainly because of', ['eating less', 'shorter height', 'lower metabolism', 'growth and higher activity'], 'D', 'Requirements depend on age, sex and activity.', 4],
+        ['When planning meals on a low budget, the best protein choice is', ['imported beef', 'legumes such as beans and cowpeas', 'shellfish', 'cheese'], 'B', 'They are cheap and nutritious.', 4],
+        ['Pregnant women need extra', ['caffeine', 'salt', 'sugar', 'iron and folic acid'], 'D', 'Foetal development.', 4],
+        ['Convalescents should be given foods that are', ['heavy and fried', 'light and easily digested', 'very spicy', 'high in alcohol'], 'B', 'Recovery diet.', 4],
     ],
 
     'Cooking methods and food science' => [
@@ -85,6 +102,15 @@ return [
         ['Caramelisation is the browning of', ['starch in cold water', 'protein in water', 'fat in the fridge', 'sugar when heated'], 'D', 'It gives colour and flavour.', 2],
         ['A pressure cooker cooks food faster because', ['it uses less water only', 'water boils at a higher temperature under pressure', 'it is made of metal', 'it uses electricity'], 'B', 'Higher pressure raises the boiling point.', 2],
         ['Enzymic browning of cut fruits such as apples can be prevented by', ['adding salt only', 'leaving them in the sun', 'dipping them in lemon juice', 'cutting them smaller'], 'C', 'Acid slows the enzyme.', 2],
+        ['The Maillard reaction in roasting meat involves', ['gelatinisation of starch', 'melting of fat only', 'reaction between amino acids and reducing sugars', 'coagulation of water'], 'C', 'It produces browning and flavour.', 5],
+        ['Overheated egg custard curdles because', ['fat melts', 'starch gelatinises', 'sugar caramelises', 'the egg proteins over-coagulate and squeeze out liquid'], 'D', 'Syneresis occurs.', 5],
+        ['An emulsifier such as lecithin in egg yolk helps to', ['raise dough', 'keep oil and water mixed', 'preserve food', 'colour food'], 'B', 'Used in mayonnaise.', 4],
+        ['Dextrinisation occurs when starch is', ['frozen', 'boiled in water', 'subjected to dry heat', 'soaked'], 'C', 'Toast browns this way.', 4],
+        ['Gelatinisation occurs when starch is heated with', ['sugar only', 'oil only', 'water', 'salt only'], 'C', 'Granules swell.', 5],
+        ['The browning of bread when toasted is caused by', ['emulsification', 'gelatinisation', 'coagulation', 'dextrinisation'], 'D', 'Starch to dextrins.', 5],
+        ['Egg white sets on heating because of', ['caramelisation', 'coagulation of protein', 'fermentation', 'gelatinisation'], 'B', 'Denatured albumin.', 4],
+        ['Yeast makes dough rise by producing', ['nitrogen', 'oxygen', 'carbon dioxide', 'steam only'], 'C', 'Fermentation.', 4],
+        ['Mayonnaise is an example of', ['an emulsion', 'a suspension', 'a gel', 'a foam'], 'A', 'Oil in water with egg yolk.', 5],
     ],
 
     'Food hygiene and preservation' => [
@@ -104,6 +130,13 @@ return [
         ['Refrigerators should be kept at about', ['20–25 °C', '0–5 °C', '50 °C', '−30 °C'], 'B', 'This slows bacterial growth.', 2],
         ['Smoking is a method of preservation commonly used for', ['milk', 'bread', 'fish', 'vegetables only'], 'C', 'It is widely done in coastal Ghana.', 1],
         ['Food handlers should keep their nails', ['dirty', 'long', 'painted', 'short and clean'], 'D', 'Germs collect under nails.', 1],
+        ['Clostridium botulinum is a particular risk in', ['bottled water', 'fresh fruit', 'dry rice', 'improperly canned low-acid foods'], 'D', 'It grows without oxygen.', 5],
+        ['Water activity in food is reduced by', ['adding water', 'drying, salting and adding sugar', 'chilling only', 'cutting'], 'B', 'Microbes need available water.', 5],
+        ['Cook-chill food must be reheated to at least', ['50 °C', '40 °C', '75 °C in the centre', '20 °C'], 'C', 'This kills most bacteria.', 4],
+        ['Bacteria multiply fastest in the temperature range', ['5 °C to 63 °C', '−18 °C to 0 °C', '70 °C to 100 °C', 'above 120 °C'], 'A', 'The danger zone.', 5],
+        ['Salting preserves food mainly by', ['removing water by osmosis', 'adding vitamins', 'killing all bacteria by heat', 'adding oxygen'], 'A', 'Dehydrates microbes.', 4],
+        ['Pasteurisation of milk involves', ['heating to about 72 °C for 15 seconds', 'boiling for an hour', 'freezing', 'adding salt'], 'A', 'HTST method.', 5],
+        ['Cross-contamination is best avoided by', ['using separate boards for raw and cooked food', 'washing hands once a day', 'storing raw meat above cooked food', 'tasting with fingers'], 'A', 'Separation.', 4],
     ],
 
     'SHS 1: Nutrients, food groups and food habits' => [
@@ -117,6 +150,8 @@ return [
         ['Food taboos are', ['food prices', 'recipes', 'cultural rules forbidding certain foods for some people', 'cooking utensils'], 'C', 'Some taboos deny pregnant women nutritious foods.', 2],
         ['Legumes such as beans and groundnuts are good sources of', ['vitamin C', 'plant protein', 'starch only', 'fat only'], 'B', 'They are cheap protein foods.', 1],
         ['Eating late at night regularly can lead to', ['more energy in the morning', 'better digestion', 'weight gain and poor sleep', 'stronger bones'], 'C', 'Allow time for digestion.', 1],
+        ['Kwashiorkor differs from marasmus because kwashiorkor is caused mainly by', ['vitamin excess', 'lack of all nutrients', 'excess protein', 'protein deficiency with adequate energy'], 'D', 'Oedema is a sign.', 5],
+        ['Lactose intolerance results from a lack of the enzyme', ['amylase', 'lactase', 'pepsin', 'lipase'], 'B', 'Milk sugar is not digested.', 4],
     ],
 
     'SHS 1: Food security, storage and spoilage' => [
@@ -130,6 +165,7 @@ return [
         ['Cereals should be stored in', ['direct sunlight', 'damp places', 'open sacks on the floor', 'cool, dry, airtight containers'], 'D', 'This keeps out pests and moisture.', 1],
         ['A cause of food spoilage is', ['drying', 'refrigeration', 'proper packaging', 'microorganisms such as bacteria and moulds'], 'D', 'Enzymes also cause spoilage.', 1],
         ['First in, first out (FIFO) in food storage means', ['using new stock first', 'using older stock before newer stock', 'throwing away old stock', 'buying more stock'], 'B', 'It reduces waste.', 1],
+        ['Rancidity in fats is caused by', ['adding salt', 'freezing', 'oxidation and hydrolysis', 'cooling'], 'C', 'Antioxidants slow it.', 5],
     ],
 
     'SHS 1: The food laboratory and hygiene' => [
@@ -161,12 +197,13 @@ return [
         ['A pregnant woman needs extra folic acid mainly to', ['reduce her appetite', 'help prevent birth defects in the baby', 'raise blood sugar', 'cure malaria'], 'B', 'Folic acid supports the developing nervous system of the baby.', 2],
         ['A diet for a person with diabetes should be', ['only fats', 'high in sweets', 'low in added sugar and high in fibre', 'without vegetables'], 'C', 'Fibre-rich, low-sugar meals help control blood glucose.', 1],
         ['A balanced diet is one that', ['contains no fats', 'contains only proteins', 'is eaten once a day', 'contains all the nutrients in the right amounts'], 'D', 'It provides energy, body-building and protective nutrients in suitable proportions.', 1],
-        ['Pregnant women need extra', ['caffeine', 'salt and sugar', 'alcohol', 'folic acid, iron and protein'], 'D', 'Folic acid prevents neural tube defects.', 2],
         ['Babies should be exclusively breastfed for the first', ['one month', 'two weeks', 'two years', 'six months'], 'D', 'WHO recommendation.', 1],
         ['Athletes need more', ['alcohol', 'carbohydrates for energy', 'salt only', 'sugar only'], 'B', 'They also need adequate protein and water.', 1],
         ['People with diabetes should limit', ['water', 'vegetables', 'sugary foods', 'fibre'], 'C', 'They need to control blood sugar.', 1],
         ['Adolescents need extra iron because of', ['sleeping more', 'less activity', 'shrinking bones', 'rapid growth and, for girls, menstruation'], 'D', 'Iron prevents anaemia.', 2],
         ['Vegetarians can get protein from', ['only meat', 'beans, lentils and nuts', 'only fish', 'sugar'], 'B', 'Combine plant proteins.', 1],
+        ['The Estimated Average Requirement (EAR) represents the intake that meets the needs of', ['50% of a population group', '100% of people', '10% of people', 'infants only'], 'A', 'RNI covers about 97.5%.', 5],
+        ['An athlete\'s pre-competition meal should be eaten about', ['3–4 hours before the event', '5 minutes before', '24 hours before only', 'during the event'], 'A', 'Allows digestion.', 4],
     ],
 
     'SHS 2: Food preservation' => [
@@ -178,8 +215,9 @@ return [
         ['Making jam preserves fruit using a high concentration of', ['sugar', 'salt', 'vinegar', 'water'], 'A', 'Sugar draws water from microbes.', 1],
         ['Pickling preserves vegetables in', ['vinegar', 'sugar', 'oil only', 'milk'], 'A', 'The acid stops microbial growth.', 1],
         ['Freezing preserves food because low temperatures', ['stop microorganisms from multiplying', 'kill all bacteria', 'add nutrients', 'cook the food'], 'A', 'Bacteria become active again on thawing.', 2],
-        ['Pasteurisation of milk involves', ['heating it to kill harmful bacteria then cooling quickly', 'freezing it', 'drying it', 'adding salt'], 'A', 'Named after Louis Pasteur.', 2],
         ['Vacuum packing preserves food by', ['removing air that supports microbes', 'adding water', 'heating', 'adding sugar'], 'A', 'Oxygen is excluded.', 2],
+        ['UHT milk is heated to about', ['135–140 °C for a few seconds', '63 °C for 30 minutes', '100 °C for an hour', '50 °C'], 'A', 'Ultra-heat treatment.', 5],
+        ['Irradiation preserves food by', ['destroying microorganisms with ionising radiation', 'making it radioactive', 'adding chemicals', 'drying'], 'A', 'The food does not become radioactive.', 5],
     ],
 
     'SHS 2: Methods of cooking and heat transfer' => [
@@ -232,6 +270,8 @@ return [
         ['Good packaging protects food from', ['contamination and damage', 'customers', 'labels', 'sales'], 'A', 'It also extends shelf life.', 1],
         ['Nutrition labels show', ['the amounts of nutrients in the food', 'the price only', 'the shop name', 'the cook\'s name'], 'A', 'They help consumers choose.', 1],
         ['Costing a recipe helps a caterer to', ['set a profitable selling price', 'avoid customers', 'waste food', 'increase spoilage'], 'A', 'Add ingredients, fuel and labour.', 1],
+        ['A caterer\'s food cost is GH¢12 per plate and the target food cost is 40% of the selling price. The selling price should be', ['GH¢30', 'GH¢16.80', 'GH¢48', 'GH¢20'], 'A', '12 ÷ 0.4.', 5],
+        ['Modified atmosphere packaging extends shelf life by', ['changing the gas mix around the food', 'adding sugar', 'freezing', 'smoking'], 'A', 'E.g. more CO₂, less O₂.', 5],
     ],
 
     'SHS 3: Careers in food and nutrition' => [

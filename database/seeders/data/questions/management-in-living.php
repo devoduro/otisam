@@ -29,6 +29,12 @@ return [
         ['Money is an example of a', ['community resource', 'human resource', 'material (non-human) resource', 'natural resource'], 'C', 'Time and skills are human resources.', 1],
         ['Resources are said to be limited because', ['they never run out', 'they cost nothing', 'everyone has the same amount', 'they are not available in unlimited amounts'], 'D', 'Choices must be made.', 1],
         ['Organising in home management means', ['setting goals only', 'arranging resources and tasks to carry out a plan', 'evaluating results', 'buying furniture'], 'B', 'It follows planning.', 1],
+        ['The interdependence of resources means that', ['time is unlimited', 'resources never interact', 'only money matters', 'using one resource affects the use of others'], 'D', 'Saving time may cost money.', 4],
+        ['Substitution of resources means', ['wasting resources', 'using one resource in place of another', 'buying more', 'storing all resources'], 'B', 'E.g. doing work yourself instead of paying.', 4],
+        ['The "systems approach" to home management sees the family as', ['only money flows', 'unrelated individuals', 'inputs, throughputs and outputs with feedback', 'a single person'], 'C', 'It analyses how resources are converted.', 5],
+        ['The correct order of the management process is', ['evaluating, planning, organising, implementing', 'planning, organising, implementing, evaluating', 'organising, evaluating, planning, implementing', 'implementing, planning, evaluating, organising'], 'B', 'Plan first, evaluate last.', 4],
+        ['Time, energy and skills are examples of', ['community resources', 'material resources', 'human resources', 'financial resources'], 'C', 'From the person.', 4],
+        ['Work simplification aims to', ['reduce quality', 'increase effort', 'add tasks', 'save time and energy'], 'D', 'Efficient methods.', 4],
     ],
 
     'Family and relationships' => [
@@ -49,6 +55,10 @@ return [
         ['A function of the family is to', ['make laws', 'collect taxes', 'run elections', 'socialise children'], 'D', 'Children learn values at home.', 1],
         ['Sibling rivalry means', ['friendship between parents', 'competition and conflict between brothers and sisters', 'marriage', 'adoption'], 'B', 'Parents should treat children fairly.', 2],
         ['Domestic violence is', ['a household chore', 'a family party', 'abuse within the home or family', 'a family budget'], 'C', 'Ghana has a Domestic Violence Act.', 1],
+        ['Polygynous families are those in which', ['grandparents rule', 'a woman has more than one husband', 'there are no children', 'a man has more than one wife'], 'D', 'Polyandry is the reverse.', 4],
+        ['A matrilineal system of inheritance traces descent through the', ['father\'s line', 'mother\'s line', 'eldest son', 'chief'], 'B', 'Common among the Akan.', 4],
+        ['Inheritance through the mother\'s line is', ['patrilineal', 'matrilineal', 'bilateral', 'monogamous'], 'B', 'E.g. Akan.', 4],
+        ['The Intestate Succession Law (PNDCL 111) provides for', ['child adoption', 'marriage registration', 'the distribution of property of a person who dies without a will', 'divorce'], 'C', 'Protects spouses and children.', 5],
     ],
 
     'Consumer education and money management' => [
@@ -70,6 +80,13 @@ return [
         ['Savings should be made', ['only after wasting money', 'regularly, before spending on wants', 'never', 'only by the rich'], 'B', 'Pay yourself first.', 1],
         ['A consumer who buys goods in large quantities to save money practises', ['credit buying', 'impulse buying', 'bulk buying', 'window shopping'], 'C', 'It may reduce unit cost.', 1],
         ['Income that a family can spend after taxes is', ['debt', 'gross income', 'capital', 'disposable income'], 'D', 'It is used for budgeting.', 2],
+        ['A family earns GH¢3,000 a month and spends 30% on food. Its monthly food budget is', ['GH¢1,000', 'GH¢300', 'GH¢900', 'GH¢2,100'], 'C', '0.3 × 3,000.', 3],
+        ['Hire purchase is often more expensive than cash buying because of', ['discounts', 'lower prices', 'free delivery', 'interest and charges'], 'D', 'The total paid is higher.', 4],
+        ['Engel\'s law states that as income rises, the proportion spent on food', ['rises', 'falls', 'stays the same', 'doubles'], 'B', 'Although total food spending may rise.', 5],
+        ['A budget is', ['a receipt', 'a bank account', 'a loan', 'a plan for spending and saving income'], 'D', 'Financial plan.', 4],
+        ['Impulse buying is', ['buying in bulk', 'buying without planning', 'comparison shopping', 'saving'], 'B', 'Unplanned purchase.', 4],
+        ['A guarantee on goods means', ['the goods are second-hand', 'the price is low', 'the maker will repair or replace faults within a period', 'payment is by instalment'], 'C', 'Consumer protection.', 4],
+        ['Income GH¢2,000; fixed expenses GH¢1,200; savings target 10% of income. The amount left for flexible spending is', ['GH¢1,000', 'GH¢800', 'GH¢200', 'GH¢600'], 'D', '2,000 − 1,200 − 200.', 5],
     ],
 
     'Housing and home care' => [
@@ -89,6 +106,10 @@ return [
         ['Ventilation in a house helps to', ['increase dust', 'trap heat', 'remove stale air and moisture', 'block light'], 'C', 'It keeps the house healthy.', 1],
         ['Weekly cleaning tasks include', ['brushing teeth', 'washing dishes after every meal', 'making the bed daily', 'washing curtains and dusting furniture'], 'D', 'Some tasks are done less often.', 2],
         ['A storage space in the home helps to', ['create clutter', 'keep items organised and safe', 'waste space', 'attract pests'], 'B', 'Good storage saves time.', 1],
+        ['The best orientation of a house in Ghana to reduce heat gain is', ['no windows', 'long walls facing east and west', 'long walls facing north and south', 'a flat metal roof without insulation'], 'C', 'Reduces direct morning and evening sun.', 5],
+        ['Cross-ventilation in a house is achieved by', ['openings on opposite walls', 'closing all windows', 'one small window', 'air conditioning only'], 'A', 'Air flows through.', 4],
+        ['A soak-away is used to', ['dispose of waste water into the ground', 'store drinking water', 'collect rubbish', 'cool rooms'], 'A', 'Drainage pit.', 4],
+        ['The best way to remove a fresh blood stain is with', ['cold water', 'hot water', 'bleach first', 'ironing'], 'A', 'Heat sets protein stains.', 5],
     ],
 
     'Health and the environment' => [
@@ -115,6 +136,7 @@ return [
         ['Values influence management because they', ['are prices', 'determine what people consider important', 'are laws', 'are foods'], 'B', 'Goals grow from values.', 2],
         ['Flexibility in management means', ['avoiding plans', 'never changing plans', 'being willing to change plans when necessary', 'copying others'], 'C', 'Circumstances change.', 1],
         ['Effective management of the home leads to', ['debt', 'waste and stress', 'a comfortable and satisfying family life', 'conflict'], 'C', 'Resources are used wisely.', 1],
+        ['Management standards that are flexible rather than rigid allow', ['conflict', 'no planning', 'waste', 'adjustment to changing circumstances'], 'D', 'Flexibility is a key principle.', 4],
     ],
 
     'SHS 1: Motivators for quality living' => [
@@ -150,6 +172,8 @@ return [
         ['Work simplification means', ['doing more steps', 'finding easier ways to do tasks', 'avoiding tasks', 'hiring more workers'], 'B', 'It saves time and energy.', 2],
         ['Conserving electricity at home includes', ['using old bulbs', 'leaving the TV on', 'opening the fridge often', 'switching off unused lights and appliances'], 'D', 'It saves money.', 1],
         ['Water can be conserved by', ['leaving taps running', 'fixing leaks and harvesting rainwater', 'washing cars daily', 'flooding gardens'], 'B', 'Water is precious.', 1],
+        ['A household uses a 1.5 kW iron for 2 hours a week. At GH¢1.50 per kWh, the monthly (4-week) cost is', ['GH¢4.50', 'GH¢18', 'GH¢12', 'GH¢9'], 'B', '1.5 × 2 × 4 = 12 kWh.', 5],
+        ['Opportunity cost in family resource use means', ['free resources', 'the price of goods', 'the value of the best alternative given up', 'total income'], 'C', 'E.g. time spent cooking vs. studying.', 4],
     ],
 
     'SHS 2: Decision-making and communication' => [
@@ -162,6 +186,7 @@ return [
         ['Family meetings help in', ['avoiding responsibilities', 'causing quarrels', 'hiding information', 'making joint decisions'], 'D', 'Everyone shares their views.', 1],
         ['The last step in decision-making is', ['identifying the problem', 'evaluating the decision', 'listing alternatives', 'gathering information'], 'B', 'Learn from the outcome.', 2],
         ['Feedback in communication shows', ['noise', 'that the message was ignored', 'that the message was received and understood', 'a barrier'], 'C', 'It completes the cycle.', 1],
+        ['Group decisions in families are usually better when', ['children are excluded always', 'one person decides alone always', 'no one speaks', 'all members share information and views'], 'D', 'Commitment improves.', 4],
     ],
 
     'SHS 2: Housing and home furnishing' => [
@@ -186,6 +211,7 @@ return [
         ['Advertisements can mislead consumers by', ['exaggerating the benefits of a product', 'giving accurate prices', 'showing the expiry date', 'listing ingredients'], 'A', 'Consumers should think critically.', 1],
         ['A warranty card should be kept because it', ['entitles the buyer to repairs within a period', 'is decorative', 'reduces tax', 'is a receipt for food'], 'A', 'It proves cover.', 1],
         ['Consumer protection agencies help consumers to', ['seek redress against unfair practices', 'cheat sellers', 'avoid paying', 'hide receipts'], 'A', 'They enforce standards.', 1],
+        ['A product costs GH¢1,200 cash or GH¢150 deposit plus 12 instalments of GH¢100. The extra cost of hire purchase is', ['GH¢150', 'GH¢100', 'GH¢1,350', 'GH¢50'], 'A', '1,350 − 1,200.', 5],
     ],
 
     'SHS 3: Financial literacy for family security' => [
@@ -202,6 +228,8 @@ return [
         ['Investing in treasury bills means', ['lending money to the government for a short period at interest', 'buying land', 'buying shares', 'gambling'], 'A', 'They are low-risk investments.', 2],
         ['Debt becomes a problem when', ['repayments exceed what the family can afford', 'it is small and planned', 'it is paid on time', 'it builds a house'], 'A', 'Borrow only what you can repay.', 1],
         ['A family emergency fund should ideally cover', ['several months of basic expenses', 'one day', 'nothing', 'only luxuries'], 'A', 'Three to six months is common advice.', 2],
+        ['The "rule of 72" estimates the years to double money as 72 divided by the interest rate. At 8% this is', ['9 years', '8 years', '72 years', '6 years'], 'A', '72 ÷ 8.', 5],
+        ['Diversifying investments helps a family to', ['reduce risk', 'increase risk', 'avoid saving', 'lose money'], 'A', '"Don\'t put all eggs in one basket."', 4],
     ],
 
     'SHS 3: Product planning and estimation' => [
@@ -214,6 +242,7 @@ return [
         ['Product planning starts with', ['identifying a need or market', 'packaging', 'selling', 'advertising'], 'A', 'Then design and costing follow.', 1],
         ['Material cost GH¢30, labour GH¢20, overhead GH¢10. With a 20% markup, the price is', ['GH¢72', 'GH¢60', 'GH¢70', 'GH¢80'], 'A', '60 × 1.2.', 2],
         ['Market research before making a product helps to', ['know what customers want', 'waste money', 'avoid customers', 'increase costs only'], 'A', 'It reduces risk.', 1],
+        ['Materials GH¢45, labour 3 hours at GH¢10, overheads 20% of material and labour. The total cost is', ['GH¢90', 'GH¢75', 'GH¢84', 'GH¢95'], 'A', '75 + 15.', 5],
     ],
 
     'SHS 3: Home care and maintenance' => [
@@ -238,5 +267,6 @@ return [
         ['A consumer who is cheated can report to the', ['Ghana Standards Authority or consumer protection bodies', 'Electoral Commission', 'football association', 'meteorological agency'], 'A', 'Complaints can lead to action.', 2],
         ['Comparing unit prices helps consumers to', ['find the best value for money', 'pay more', 'buy less quality', 'avoid shops'], 'A', 'Price per kg or litre.', 1],
         ['Buying from unregistered online sellers can risk', ['fraud and fake goods', 'better quality', 'free delivery', 'guaranteed refunds'], 'A', 'Use trusted sellers.', 1],
+        ['A 2 kg pack costs GH¢30 and a 500 g pack costs GH¢8. The better value is', ['the 2 kg pack at GH¢15/kg', 'the 500 g pack at GH¢16/kg', 'both are equal', 'cannot tell'], 'A', 'Compare unit prices.', 4],
     ],
 ];

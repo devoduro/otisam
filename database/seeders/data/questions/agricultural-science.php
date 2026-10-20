@@ -26,6 +26,7 @@ return [
         ['A problem of agricultural development in Ghana is', ['excess roads', 'too much credit', 'poor storage facilities', 'too many extension officers'], 'C', 'Post-harvest losses are high.', 1],
         ['Agricultural extension helps to', ['sell land', 'collect taxes', 'build roads', 'transfer new technologies to farmers'], 'D', 'Extension officers train farmers.', 1],
         ['Shifting cultivation involves', ['irrigating fields', 'moving to new land when soil fertility declines', 'using tractors', 'growing crops in greenhouses'], 'B', 'It leads to deforestation.', 1],
+        ['A major reason for low agricultural productivity in Ghana is', ['large farm sizes', 'too many tractors', 'excess credit', 'dependence on rain-fed farming and simple tools'], 'D', 'Irrigation and mechanisation are limited.', 4],
     ],
 
     'Soil and water' => [
@@ -46,6 +47,16 @@ return [
         ['Soil acidity can be corrected by', ['burning bush', 'adding sulphur', 'irrigating', 'liming'], 'D', 'Lime raises pH.', 1],
         ['Infiltration is the', ['loss of water from leaves', 'entry of water into the soil surface', 'flow of water over the surface', 'evaporation'], 'B', 'Sandy soils have high infiltration.', 2],
         ['Surface runoff increases when', ['trees are present', 'there is mulch', 'the soil is bare and compacted', 'the soil is loose and covered'], 'C', 'Water cannot soak in.', 2],
+        ['A soil has 40% sand, 40% silt and 20% clay. Its textural class is', ['sand', 'loam', 'clay', 'silty clay'], 'B', 'Balanced proportions.', 5],
+        ['Cation exchange capacity of a soil is highest in soils rich in', ['gravel', 'sand', 'clay and humus', 'stones'], 'C', 'They hold nutrient cations.', 5],
+        ['The water held at field capacity minus that at permanent wilting point is', ['runoff', 'gravitational water', 'hygroscopic water', 'available water'], 'D', 'Plants can use it.', 5],
+        ['Sodic soils can be reclaimed by applying', ['lime only', 'gypsum', 'urea', 'muriate of potash'], 'B', 'Calcium replaces sodium.', 5],
+        ['A soil with high organic matter generally has', ['poorer fertility', 'better water-holding capacity and structure', 'more erosion', 'lower CEC'], 'B', 'Humus improves soils.', 4],
+        ['A soil with pH 5.0 can be corrected by applying', ['sulphur', 'lime', 'ammonium sulphate', 'urea'], 'B', 'Lime raises pH.', 4],
+        ['The soil texture with the highest water-holding capacity is', ['gravel', 'sand', 'clay', 'loamy sand'], 'C', 'Fine particles.', 4],
+        ['Leaching is the', ['binding of particles', 'upward movement of water', 'formation of humus', 'downward washing of nutrients'], 'D', 'Nutrients lost below roots.', 4],
+        ['Nitrogen-fixing bacteria in legume nodules belong to the genus', ['Azotobacter', 'Rhizobium', 'Nitrobacter', 'Clostridium'], 'B', 'Symbiotic fixation.', 5],
+        ['Drip irrigation is preferred in dry areas because it', ['needs no pipes', 'floods the field', 'saves water', 'washes away salt'], 'C', 'Water at the root zone.', 4],
     ],
 
     'Crop science' => [
@@ -66,6 +77,17 @@ return [
         ['The edible part of groundnut develops', ['on the stem', 'underground from the flower peg', 'in the leaves', 'in the roots'], 'B', 'It is geocarpic.', 2],
         ['Photosynthesis takes place mainly in the', ['flowers', 'roots', 'leaves', 'seeds'], 'C', 'Leaves contain chlorophyll.', 1],
         ['Vegetative propagation produces plants that are', ['weaker', 'always different', 'seedless always', 'identical to the parent'], 'D', 'It is asexual reproduction.', 2],
+        ['A fertiliser bag labelled 15-15-15 contains', ['15% water', '15 kg of each nutrient', '15% N, 15% P₂O₅, 15% K₂O', 'only nitrogen'], 'C', 'NPK percentages.', 4],
+        ['How much urea (46% N) supplies 92 kg of nitrogen?', ['100 kg', '92 kg', '46 kg', '200 kg'], 'D', '92 ÷ 0.46.', 5],
+        ['C₄ plants such as maize are more efficient than C₃ plants in', ['cold shade', 'hot, sunny conditions', 'waterlogged soils', 'darkness'], 'B', 'Less photorespiration.', 5],
+        ['Apical dominance in plants is caused by', ['ethylene', 'gibberellin', 'auxin from the shoot tip inhibiting side buds', 'abscisic acid only'], 'C', 'Pruning removes it.', 5],
+        ['A farmer needs 60 kg/ha of P₂O₅ using single superphosphate (18% P₂O₅). The fertiliser needed per hectare is about', ['108 kg', '60 kg', '333 kg', '180 kg'], 'C', '60 ÷ 0.18.', 5],
+        ['Vernalisation is the induction of flowering by', ['pruning', 'long days', 'fertiliser', 'exposure to low temperatures'], 'D', 'E.g. winter wheat.', 5],
+        ['Gibberellins promote', ['leaf fall', 'stem elongation and seed germination', 'dormancy', 'root death'], 'B', 'Used to break seed dormancy.', 5],
+        ['A fertiliser labelled 15-15-15 contains', ['15% organic matter', '15 kg of nitrogen only', '45% nitrogen', '15% each of N, P₂O₅ and K₂O'], 'D', 'NPK grade.', 5],
+        ['Cassava is propagated mainly by', ['seeds', 'stem cuttings', 'suckers', 'tubers'], 'B', 'Vegetative.', 4],
+        ['Thinning in crop production is done to', ['control erosion', 'add fertiliser', 'reduce competition between seedlings', 'harvest early'], 'C', 'Optimal spacing.', 4],
+        ['Damping-off disease mainly affects', ['roots of grasses only', 'mature trees', 'stored grain', 'seedlings'], 'D', 'Fungal disease in nurseries.', 5],
     ],
 
     'Livestock, fisheries and forestry' => [
@@ -87,6 +109,16 @@ return [
         ['The breeding of fish under controlled conditions is', ['sericulture', 'apiculture', 'aquaculture', 'horticulture'], 'C', 'Fish ponds are an example.', 1],
         ['Selective logging means', ['planting crops in forests', 'cutting all trees', 'burning forests', 'cutting only certain mature trees'], 'D', 'It conserves the forest.', 2],
         ['The rearing of rabbits is called', ['apiculture', 'cuniculture', 'aquaculture', 'pisciculture'], 'B', 'Rabbits breed quickly.', 3],
+        ['The feed conversion ratio of a broiler that gains 2 kg on 4 kg of feed is', ['6', '0.5', '8', '2.0'], 'D', 'Feed ÷ weight gain.', 4],
+        ['A pig farmer\'s 10 sows each wean 8 piglets twice a year. Piglets weaned per year are', ['80', '160', '20', '100'], 'B', '10 × 8 × 2.', 4],
+        ['Sustained-yield forestry means', ['never cutting trees', 'clear-felling everything', 'harvesting no more timber than grows back', 'burning forests'], 'C', 'It conserves forests.', 4],
+        ['A cow with a calving interval of 13 months produces about how many calves in 6.5 years?', ['7', '5', '6', '8'], 'C', '78 ÷ 13.', 4],
+        ['The maximum sustainable yield in fisheries is', ['catching only juveniles', 'catching all fish', 'no fishing', 'the largest catch that can be taken without reducing stock over time'], 'D', 'A management target.', 5],
+        ['The gestation period of a sow is about', ['150 days', '114 days', '280 days', '21 days'], 'B', '3 months, 3 weeks, 3 days.', 5],
+        ['Ruminants digest cellulose with the help of', ['bile', 'gastric juice only', 'micro-organisms in the rumen', 'saliva only'], 'C', 'Microbial fermentation.', 4],
+        ['Newcastle disease affects', ['goats', 'cattle', 'pigs', 'poultry'], 'D', 'Viral disease of birds.', 4],
+        ['The incubation period of a hen\'s egg is', ['21 days', '28 days', '14 days', '35 days'], 'A', 'Three weeks.', 4],
+        ['Tilapia farming is an example of', ['aquaculture', 'apiculture', 'sericulture', 'silviculture'], 'A', 'Fish farming.', 4],
     ],
 
     'Post-harvest and agribusiness' => [
@@ -103,6 +135,11 @@ return [
         ['Agribusiness includes', ['only banking', 'only farming', 'input supply, processing and marketing of farm products', 'only teaching'], 'C', 'It covers the whole value chain.', 1],
         ['A value chain in agriculture is', ['a crop disease', 'a farm tool', 'a type of soil', 'the series of activities that add value from farm to consumer'], 'D', 'Production, processing, distribution.', 2],
         ['Grading of farm produce means', ['harvesting', 'sorting produce by quality or size', 'planting', 'weeding'], 'B', 'Graded produce sells better.', 1],
+        ['A farmer sells 50 bags of maize at GH¢400 each. Costs total GH¢12,000. Profit is', ['GH¢4,000', 'GH¢20,000', 'GH¢12,000', 'GH¢8,000'], 'D', '20,000 − 12,000.', 4],
+        ['The main cause of high post-harvest loss of tomatoes in Ghana is', ['too much processing', 'poor storage and transport', 'excess cold storage', 'low production'], 'B', 'They are highly perishable.', 4],
+        ['Grain is dried before storage mainly to', ['prevent mould and insect damage', 'increase weight', 'improve colour', 'speed germination'], 'A', 'Low moisture content.', 4],
+        ['Fixed costs on a farm include', ['rent of land', 'seeds', 'fertiliser', 'casual labour'], 'A', 'Do not vary with output.', 4],
+        ['A farmer sells 50 bags at GH¢200 each with total costs of GH¢6,000. Profit is', ['GH¢4,000', 'GH¢10,000', 'GH¢6,000', 'GH¢2,000'], 'A', '10,000 − 6,000.', 4],
     ],
 
     'SHS 1: The meaning and importance of agricultural science' => [
@@ -127,6 +164,8 @@ return [
         ['Regular servicing of farm machines', ['damages them', 'extends their life and prevents breakdowns', 'wastes fuel', 'is unnecessary'], 'B', 'Oil and filters must be changed.', 1],
         ['A planter is used to', ['plough', 'harvest grain', 'spray pesticides', 'sow seeds at the correct depth and spacing'], 'D', 'It saves labour.', 1],
         ['A boom sprayer is attached to a', ['bicycle', 'tractor', 'wheelbarrow', 'knapsack'], 'B', 'It covers wide areas.', 2],
+        ['A tractor ploughs 0.5 ha per hour. How long will it take to plough a field 200 m × 150 m?', ['30 hours', '3 hours', '6 hours', '1.5 hours'], 'C', '3 ha ÷ 0.5.', 5],
+        ['The power take-off (PTO) shaft of a tractor is used to', ['cool the engine', 'steer the tractor', 'brake', 'drive attached implements'], 'D', 'E.g. rotavators and mowers.', 4],
     ],
 
     'SHS 1: Vegetable crops and ornamental plants' => [
@@ -140,6 +179,7 @@ return [
         ['Hardening off seedlings means', ['cutting their roots', 'watering them heavily', 'gradually exposing them to field conditions before transplanting', 'keeping them in shade forever'], 'C', 'It reduces transplant shock.', 2],
         ['Onions are grown for their', ['roots', 'leaves only', 'bulbs', 'flowers'], 'C', 'The bulb is a swollen leaf base.', 1],
         ['Lawn grass is an example of', ['a fodder only', 'a cash crop', 'a cereal crop', 'an ornamental plant'], 'D', 'It beautifies compounds.', 1],
+        ['Blossom-end rot in tomatoes is caused by', ['a virus', 'calcium deficiency often linked to irregular watering', 'too much nitrogen only', 'insects'], 'B', 'A physiological disorder.', 5],
     ],
 
     'SHS 1: Irrigation systems' => [
@@ -152,6 +192,8 @@ return [
         ['A disadvantage of flood irrigation is', ['simple design', 'low cost', 'waterlogging and salinity', 'no equipment'], 'C', 'Too much water damages soil.', 2],
         ['The Tono irrigation dam is in the', ['Central Region', 'Western Region', 'Volta Region', 'Upper East Region'], 'D', 'It supports dry-season farming.', 2],
         ['Overhead irrigation is', ['drip irrigation', 'sprinkler irrigation', 'flood irrigation', 'sub-surface irrigation'], 'B', 'Water falls like rain.', 1],
+        ['A crop needs 5 mm of water per day over 2 ha. The daily water requirement is', ['10 m³', '100 m³', '1,000 m³', '50 m³'], 'B', '0.005 m × 20,000 m².', 5],
+        ['Drip irrigation has a typical application efficiency of about', ['20%', '40%', '90%', '10%'], 'C', 'Surface irrigation is much lower.', 5],
     ],
 
     'SHS 1: Poultry production' => [
@@ -164,6 +206,8 @@ return [
         ['Gumboro disease in poultry mainly affects', ['goats', 'cattle', 'pigs', 'young chicks'], 'D', 'It damages the immune system.', 2],
         ['Debeaking is done to prevent', ['egg laying', 'feather pecking and cannibalism', 'feeding', 'drinking'], 'B', 'Part of the beak is trimmed.', 2],
         ['The litter in a deep litter house should be', ['never changed', 'kept wet', 'kept dry and turned regularly', 'removed daily always'], 'C', 'Wet litter causes disease.', 2],
+        ['A broiler farmer stocks 500 birds; mortality is 4%. How many birds are sold?', ['400', '496', '460', '480'], 'D', '500 × 0.96.', 4],
+        ['Stocking density for broilers on deep litter is about', ['1 bird per m²', '10 birds per m²', '50 birds per m²', '100 birds per m²'], 'B', 'Overcrowding causes disease.', 5],
     ],
 
     'SHS 1: Land tenure systems' => [
@@ -176,6 +220,7 @@ return [
         ['A disadvantage of land fragmentation is that it', ['encourages investment', 'increases farm size', 'makes mechanisation difficult', 'reduces disputes'], 'C', 'Plots become too small.', 2],
         ['The body that manages public lands in Ghana is the', ['Ghana Highway Authority', 'Electoral Commission', 'Forestry Commission only', 'Lands Commission'], 'D', 'It registers land titles.', 1],
         ['Leasehold means a person', ['farms without permission', 'owns land forever', 'steals land', 'uses land for a fixed period under agreement'], 'D', 'E.g. a 50-year lease.', 2],
+        ['A disadvantage of the communal land tenure system is that', ['farms are very large', 'land is easily mortgaged', 'it discourages long-term investment by individuals', 'there are no disputes'], 'C', 'Insecure user rights.', 5],
     ],
 
     'SHS 1: Climate change and agriculture' => [
@@ -188,6 +233,7 @@ return [
         ['Methane from livestock contributes to', ['cooling the earth', 'global warming', 'soil fertility', 'rainfall'], 'B', 'Ruminants produce methane.', 2],
         ['Early-maturing crop varieties help farmers to', ['use more water', 'grow crops slowly', 'harvest before the rains fail', 'avoid harvesting'], 'C', 'They suit short rainy seasons.', 2],
         ['Prolonged drought causes', ['bumper harvests', 'crop failure and food shortage', 'floods', 'more fish'], 'B', 'Water is essential.', 1],
+        ['A 2 °C rise in temperature is expected to reduce maize yields in Ghana mainly by', ['reducing pests', 'improving pollination', 'increasing heat and water stress during growth', 'increasing rainfall'], 'C', 'Shortened grain-filling.', 4],
     ],
 
     'SHS 2: Arable crop production' => [
@@ -202,6 +248,8 @@ return [
         ['Transplanting rice seedlings is usually done when they are about', ['6 months old', '1 day old', '3–4 weeks old', '1 year old'], 'C', 'Seedlings are raised in a nursery.', 3],
         ['Maize planting distance is commonly about', ['10 m × 10 m', '5 cm × 5 cm', '3 m × 3 m', '75 cm × 40 cm'], 'D', 'It allows adequate space.', 3],
         ['Weeding in crops should be done', ['only at harvest', 'early, before weeds compete strongly', 'never', 'after harvest only'], 'B', 'Critical period of weed competition.', 1],
+        ['The optimum soil pH for most cereal crops is about', ['10–11', '3.0–4.0', '8.5–9.5', '6.0–7.0'], 'D', 'Slightly acidic to neutral.', 4],
+        ['The critical period of weed competition in maize is about', ['only at tasselling', 'just before harvest', 'after harvest', 'the first 3–6 weeks after planting'], 'D', 'Early weeding matters most.', 5],
     ],
 
     'SHS 2: Emerging technologies in crop production' => [
@@ -214,6 +262,7 @@ return [
         ['Greenhouse farming protects crops from', ['sunlight entirely', 'harsh weather and pests', 'water', 'air'], 'B', 'Conditions are controlled.', 1],
         ['Precision agriculture uses', ['only hoes', 'guesswork', 'GPS and sensors to apply inputs exactly where needed', 'no data'], 'C', 'It reduces waste.', 2],
         ['Soil sensors in precision farming measure', ['farmer\'s height', 'crop prices', 'moisture and nutrient levels', 'rainfall in other countries'], 'C', 'They guide irrigation.', 2],
+        ['Aquaponics combines', ['fish farming with hydroponic crop production', 'bee-keeping and poultry', 'forestry and mining', 'drip irrigation and burning'], 'A', 'Fish waste feeds plants.', 4],
     ],
 
     'SHS 2: Producing crops and animals for income' => [
@@ -225,6 +274,7 @@ return [
         ['Profit from a farm enterprise is', ['revenue minus total cost', 'revenue plus cost', 'only revenue', 'only cost'], 'A', 'Costs include inputs and labour.', 1],
         ['Value addition, such as processing groundnuts into paste,', ['increases the price farmers receive', 'reduces income', 'spoils produce', 'is illegal'], 'A', 'Processed goods sell for more.', 1],
         ['A farm budget helps a farmer to', ['estimate costs and expected income', 'avoid planting', 'waste money', 'skip records'], 'A', 'It guides decisions.', 1],
+        ['A broiler enterprise sells 500 birds at GH¢80 each. Costs are GH¢28,000. The profit margin on sales is', ['30%', '43%', '20%', '70%'], 'A', 'Profit 12,000 ÷ 40,000.', 5],
     ],
 
     'SHS 2: Global warming' => [
@@ -236,6 +286,7 @@ return [
         ['Burning crop residues on farms releases', ['carbon dioxide and smoke', 'oxygen', 'nitrogen fertiliser', 'water only'], 'A', 'Incorporating residues is better.', 1],
         ['One way farmers can reduce global warming is by', ['planting trees and reducing burning', 'clearing more forests', 'using more fuel', 'burning bush'], 'A', 'Trees absorb CO₂.', 1],
         ['Rising temperatures can reduce crop yields by', ['causing heat stress and water shortage', 'improving soil', 'increasing rainfall always', 'killing all pests'], 'A', 'Crops have temperature limits.', 1],
+        ['Nitrous oxide from farms comes mainly from', ['nitrogen fertilisers and manure', 'tractors only', 'irrigation water', 'pesticides only'], 'A', 'A potent greenhouse gas.', 4],
     ],
 
     'SHS 3: Budding and grafting' => [
@@ -248,6 +299,7 @@ return [
         ['Budding is commonly used to propagate', ['citrus', 'maize', 'rice', 'groundnut'], 'A', 'A bud is inserted under the bark.', 2],
         ['An advantage of grafting is that it', ['combines desirable qualities of two plants', 'produces seeds', 'kills plants', 'slows fruiting'], 'A', 'E.g. disease-resistant rootstock with high-yielding scion.', 2],
         ['Approach grafting differs from other methods because', ['stock and scion remain attached to their own roots until union', 'no stock is used', 'seeds are used', 'it uses only leaves'], 'A', 'Used for mango.', 3],
+        ['Compatibility between stock and scion is best when they are', ['closely related species', 'unrelated plants', 'different families', 'monocot and dicot'], 'A', 'E.g. citrus on citrus.', 4],
     ],
 
     'SHS 3: Bee-keeping' => [
@@ -260,6 +312,7 @@ return [
         ['The Kenya top-bar hive is popular because it', ['is cheap and easy to manage', 'needs electricity', 'is made of glass', 'has no bars'], 'A', 'Combs hang from bars.', 2],
         ['Besides honey, bees produce', ['beeswax and propolis', 'silk', 'milk', 'wool'], 'A', 'Beeswax is used in candles.', 1],
         ['Honey is harvested from the', ['honeycomb', 'queen bee', 'drone', 'smoker'], 'A', 'Combs are cut or spun.', 1],
+        ['Absconding in bee colonies means', ['the whole colony leaves the hive', 'bees produce more honey', 'the queen dies', 'workers sting'], 'A', 'Often due to disturbance or pests.', 5],
     ],
 
     'SHS 3: Soil science' => [
@@ -272,6 +325,7 @@ return [
         ['Soil pH affects', ['nutrient availability to plants', 'soil colour only', 'rainfall', 'air temperature'], 'A', 'Most crops prefer pH 6–7.', 2],
         ['Earthworms improve soil by', ['aerating it and mixing organic matter', 'eating roots', 'compacting it', 'removing nutrients'], 'A', 'Their casts are fertile.', 1],
         ['Soil structure refers to', ['the arrangement of soil particles into aggregates', 'soil colour', 'soil temperature', 'soil depth'], 'A', 'Crumb structure is ideal.', 2],
+        ['Base saturation of a soil refers to the', ['proportion of exchange sites occupied by basic cations', 'amount of sand', 'soil depth', 'water content'], 'A', 'Ca, Mg, K, Na.', 5],
     ],
 
     'SHS 3: Plantation tree crops' => [
@@ -285,6 +339,8 @@ return [
         ['Cashew is grown widely in the', ['Bono and Bono East regions', 'Greater Accra only', 'Western North only', 'Central Region only'], 'A', 'It is an important export crop.', 3],
         ['Coffee is propagated mainly by', ['seeds and cuttings', 'suckers', 'tubers', 'bulbs'], 'A', 'Seedlings are raised in nurseries.', 2],
         ['The main product of the shea tree is', ['shea butter from its nuts', 'rubber', 'timber only', 'coffee'], 'A', 'It grows in northern Ghana.', 1],
+        ['The recommended spacing for cocoa is about', ['3 m × 3 m', '0.5 m × 0.5 m', '10 m × 10 m', '1 m × 1 m'], 'A', 'About 1,111 trees/ha.', 5],
+        ['Oil palm fruits are harvested when', ['a few loose fruits drop from the bunch', 'they are green', 'the tree flowers', 'leaves fall'], 'A', 'A sign of ripeness.', 4],
     ],
 
     'SHS 3: Fish farming' => [
@@ -297,6 +353,8 @@ return [
         ['Cage culture of fish is practised mainly on', ['the Volta Lake', 'deserts', 'mountains', 'roads'], 'A', 'Floating cages hold tilapia.', 2],
         ['African catfish is popular in fish farming because it', ['tolerates low oxygen and grows fast', 'needs cold water', 'only eats insects', 'is very small'], 'A', 'It can breathe air.', 2],
         ['Fish ponds should be fertilised to', ['increase plankton as natural fish food', 'kill fish', 'drain water', 'reduce oxygen'], 'A', 'Manure or fertiliser is used.', 2],
+        ['A pond of 1,000 m² stocked at 2 fingerlings/m² with 80% survival yields how many fish?', ['1,600', '2,000', '800', '1,000'], 'A', '2,000 × 0.8.', 4],
+        ['Dissolved oxygen in fish ponds is lowest', ['just before dawn', 'at midday', 'in the afternoon', 'after rain only'], 'A', 'Plants respire at night without photosynthesis.', 5],
     ],
 
     'SHS 3: Climate change policies' => [
@@ -308,5 +366,6 @@ return [
         ['The government agency that coordinates climate policy and environmental protection in Ghana is the', ['Environmental Protection Authority', 'Bank of Ghana', 'Ghana Police Service', 'Electoral Commission'], 'A', 'It works with the Ministry of Environment.', 2],
         ['Climate adaptation means', ['adjusting to the effects of climate change', 'stopping all farming', 'increasing emissions', 'ignoring the climate'], 'A', 'Mitigation means reducing emissions.', 2],
         ['Ghana\'s National Climate Change Policy aims to', ['help the country adapt to and mitigate climate change', 'increase emissions', 'stop farming', 'cut all trees'], 'A', 'It guides national action.', 1],
+        ['Carbon credits reward farmers for', ['practices that store carbon or cut emissions', 'burning bush', 'cutting forests', 'using more fertiliser'], 'A', 'E.g. agroforestry.', 4],
     ],
 ];

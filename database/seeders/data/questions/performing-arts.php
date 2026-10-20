@@ -49,6 +49,10 @@ return [
         ['The resolution (denouement) of a plot is', ['the beginning', 'where conflicts are resolved', 'the rising action', 'the exposition'], 'B', 'It follows the climax.', 1],
         ['A one-act play is', ['a musical only', 'a play with many acts', 'a short play with only one act', 'a dance'], 'C', 'It focuses on a single event.', 1],
         ['Tragicomedy combines', ['only songs', 'tragic and comic elements', 'only dance', 'only mime'], 'B', 'It mixes seriousness and humour.', 2],
+        ['Brecht\'s "alienation effect" aims to', ['avoid politics', 'make the audience cry', 'hide the stage', 'make the audience think critically rather than identify emotionally'], 'D', 'Epic theatre.', 5],
+        ['Theatre of the Absurd, as in Beckett\'s "Waiting for Godot", presents', ['realistic family life', 'the meaninglessness of human existence', 'historical battles', 'romantic comedy'], 'B', 'Post-war existentialism.', 5],
+        ['Freytag\'s pyramid describes plot as exposition, rising action, climax, falling action and', ['interval', 'prologue', 'denouement', 'curtain call'], 'C', 'A five-part structure.', 4],
+        ['The three classical unities are time, place and', ['costume', 'character', 'music', 'action'], 'D', 'From Aristotle via Renaissance critics.', 5],
     ],
 
     'Ghanaian theatre' => [
@@ -65,6 +69,8 @@ return [
         ['"The Marriage of Anansewa" was written by', ['Chinua Achebe', 'Ama Ata Aidoo', 'Wole Soyinka', 'Efua Sutherland'], 'D', 'It develops the Anansegoro style.', 2],
         ['Anansegoro is a form of Ghanaian drama based on', ['film', 'Greek tragedy', 'Shakespeare only', 'Ananse storytelling traditions'], 'D', 'Developed by Efua Sutherland.', 2],
         ['Storytelling sessions in Ghanaian communities often include', ['written scripts', 'silence only', 'songs and audience participation', 'no performers'], 'C', 'Mmoguo are interludes of song.', 2],
+        ['Abibigoro is a Ghanaian theatre form associated with', ['Wole Soyinka', 'Mohammed ben Abdallah', 'Bob Johnson', 'Efua Sutherland only'], 'B', 'It blends African performance traditions.', 5],
+        ['Concert party performances traditionally began with a', ['long lecture', 'silent mime', 'musical opening and comic prologue', 'sermon'], 'C', 'Music and comedy.', 5],
     ],
 
     'Acting and production' => [
@@ -85,6 +91,8 @@ return [
         ['The stage manager is responsible for', ['writing the play', 'running the show backstage and calling cues', 'buying tickets', 'acting the lead'], 'B', 'They coordinate the crew.', 2],
         ['Casting is', ['selling tickets', 'building sets', 'choosing actors for roles', 'writing the script'], 'C', 'Auditions are held.', 1],
         ['A costume designer creates', ['the music', 'the lighting', 'the script', 'the clothes actors wear on stage'], 'D', 'Costumes reveal character.', 1],
+        ['Stanislavski\'s "magic if" asks actors to', ['copy other actors', 'memorise lines faster', 'ignore emotions', 'imagine how they would act if they were in the character\'s situation'], 'D', 'Basis of method acting.', 5],
+        ['A production\'s "concept" is', ['the director\'s overall interpretive vision', 'the ticket price', 'the venue size', 'the cast list'], 'A', 'It unifies design choices.', 5],
     ],
 
     'Stagecraft' => [
@@ -99,6 +107,8 @@ return [
         ['A flat is', ['a stage light', 'a framed piece of scenery covered with canvas or board', 'a script', 'a costume'], 'B', 'Flats form walls of sets.', 2],
         ['A backdrop is', ['a seat', 'a curtain at the front', 'a painted cloth hung at the back of the stage', 'a microphone'], 'C', 'It shows the setting.', 1],
         ['Sound effects in a play help to', ['stop the play', 'distract actors', 'replace dialogue', 'create atmosphere and realism'], 'D', 'Thunder, birds or traffic.', 1],
+        ['Cross-fading in lighting means', ['one lighting state gradually replaces another', 'all lights go off', 'lights flash', 'a spotlight follows'], 'A', 'Smooth transitions.', 4],
+        ['A scrim (gauze) appears opaque when lit from', ['the front', 'behind', 'above only', 'nowhere'], 'A', 'It becomes see-through when lit from behind.', 5],
     ],
 
     'Dance' => [

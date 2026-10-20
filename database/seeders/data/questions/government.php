@@ -27,6 +27,15 @@ return [
         ['The most important feature distinguishing the state from other associations is', ['leadership', 'membership', 'sovereignty', 'money'], 'C', 'Only the state has supreme authority.', 2],
         ['Rights that cannot be taken away are described as', ['optional', 'temporary', 'conditional', 'inalienable'], 'D', 'Such as the right to life.', 2],
         ['Political participation includes', ['paying school fees', 'voting, campaigning and joining parties', 'fishing', 'farming only'], 'B', 'It strengthens democracy.', 1],
+        ['According to Max Weber, authority based on custom and tradition is', ['charismatic authority', 'traditional authority', 'legal-rational authority', 'coercive authority'], 'B', 'E.g. chieftaincy.', 4],
+        ['The theory that the state arose from an agreement among people is the', ['force theory', 'divine right theory', 'social contract theory', 'evolutionary theory'], 'C', 'Hobbes, Locke and Rousseau.', 4],
+        ['John Locke argued that people have natural rights to', ['free food', 'wealth and fame', 'land only', 'life, liberty and property'], 'D', 'Government must protect them.', 4],
+        ['Which is a feature of a totalitarian state?', ['free press', 'state control of all aspects of life', 'independent judiciary', 'multi-party elections'], 'B', 'Individual freedom is suppressed.', 4],
+        ['Rousseau\'s idea of the "general will" holds that legitimate authority comes from', ['the wealthy', 'the king\'s divine right', 'military force', 'the collective will of the people'], 'D', 'The Social Contract (1762).', 5],
+        ['A nation-state exists when', ['many nations share no state', 'the boundaries of a nation and a state largely coincide', 'there is no government', 'a colony is ruled abroad'], 'B', 'E.g. Japan.', 5],
+        ['De facto authority means authority that', ['is religious', 'is granted by law', 'exists in practice though not necessarily by law', 'is absent'], 'C', 'De jure is legal authority.', 5],
+        ['Sovereignty is best described as', ['power of the press', 'power of the courts only', 'party power', 'supreme power of the state'], 'D', 'Final authority within a territory.', 4],
+        ['A nation differs from a state because a nation is', ['a sovereign territory', 'a people sharing common identity', 'a government', 'a constitution'], 'B', 'Cultural, not legal, entity.', 5],
     ],
 
     'Constitutions and systems' => [
@@ -47,6 +56,21 @@ return [
         ['Entrenched clauses in a constitution', ['are written by chiefs', 'can be changed easily', 'are not law', 'require a special procedure to amend'], 'D', 'They protect key provisions.', 2],
         ['A constitutional monarchy is one in which the monarch', ['has absolute power', 'reigns but does not rule', 'is elected', 'is a military leader'], 'B', 'Power lies with elected officials.', 2],
         ['Ghana operates a', ['monarchy', 'pure parliamentary system', 'hybrid presidential system', 'confederation'], 'C', 'Most ministers come from Parliament.', 3],
+        ['A major advantage of a written constitution is that it', ['is always short', 'can be easily changed', 'provides certainty about rules of government', 'needs no interpretation'], 'C', 'Rules are clearly stated.', 4],
+        ['Under a parliamentary system, the government can be removed by', ['the army', 'a court order only', 'a referendum only', 'a vote of no confidence'], 'D', 'The executive is accountable to parliament.', 4],
+        ['In a confederation, the central government', ['is supreme', 'depends on member states for power', 'controls all taxes', 'appoints state governors'], 'B', 'States are sovereign.', 4],
+        ['Fusion of powers is a feature of the', ['federal system only', 'presidential system', 'parliamentary system', 'military regime only'], 'C', 'Ministers sit in parliament.', 4],
+        ['The doctrine of judicial precedent (stare decisis) means', ['the President decides cases', 'judges ignore past cases', 'laws are made by chiefs', 'lower courts follow decisions of higher courts'], 'D', 'Promotes consistency.', 5],
+        ['Constitutional conventions are', ['written laws', 'unwritten rules of political practice', 'court cases', 'party manifestos'], 'B', 'Important in the UK.', 4],
+        ['A rigid constitution is one that', ['can be changed by ordinary law', 'is unwritten', 'requires a special procedure to amend', 'has no bill of rights'], 'C', 'Entrenched provisions.', 4],
+        ['In a parliamentary system, the executive is', ['hereditary only', 'separately elected', 'appointed by the courts', 'drawn from and accountable to the legislature'], 'D', 'Fusion of powers.', 4],
+        ['A federal system is characterised by', ['one level of government', 'division of powers between centre and regions', 'a monarchy', 'one party'], 'B', 'Constitutional sharing of power.', 4],
+        ['A confederation gives most power to the', ['army', 'central government', 'component states', 'judiciary'], 'C', 'Loose union.', 5],
+        ['Ghana\'s 1992 Constitution established a', ['one-party system', 'pure parliamentary system', 'federal system', 'hybrid presidential system with ministers from Parliament'], 'D', 'Article 78: most ministers from Parliament.', 5],
+        ['A unitary state is one in which', ['states share sovereignty equally', 'power is concentrated in the central government', 'there is no constitution', 'chiefs hold all power'], 'B', 'E.g. Ghana.', 4],
+        ['An unwritten constitution is mainly found in', ['the United States', 'the United Kingdom', 'Ghana', 'Nigeria'], 'B', 'Conventions and statutes.', 4],
+        ['Separation of powers was popularised by', ['Hobbes', 'Rousseau', 'Montesquieu', 'Locke only'], 'C', 'The Spirit of the Laws.', 5],
+        ['A referendum is used to', ['appoint ministers', 'elect a president', 'choose judges', 'let citizens vote directly on an issue'], 'D', 'Direct democracy.', 4],
     ],
 
     'Organs of government and principles' => [
@@ -67,8 +91,20 @@ return [
         ['Checks and balances ensure that', ['laws are not made', 'only one organ rules', 'no organ of government becomes too powerful', 'elections are cancelled'], 'C', 'Each organ limits the others.', 1],
         ['The highest court in Ghana is the', ['Circuit Court', 'High Court', 'Court of Appeal', 'Supreme Court'], 'D', 'It interprets the Constitution.', 1],
         ['Judicial independence means', ['the President controls judges', 'judges make laws', 'judges are elected by parties', 'judges decide cases without interference from other organs'], 'D', 'It protects the rule of law.', 1],
-        ['Separation of powers was popularised by', ['Karl Marx', 'Montesquieu', 'Kwame Nkrumah', 'Plato'], 'B', 'In "The Spirit of the Laws".', 2],
         ['A bill becomes law in Ghana after it is passed by Parliament and', ['signed by chiefs', 'approved by the Chief Justice', 'assented to by the President', 'published in a newspaper'], 'C', 'Presidential assent completes the process.', 2],
+        ['Delegated legislation refers to', ['party manifestos', 'laws made by the President alone', 'court judgements', 'laws made by bodies other than parliament under its authority'], 'D', 'E.g. by-laws of district assemblies.', 5],
+        ['A major limitation of the rule of law is', ['equality before the law', 'immunity enjoyed by some officials', 'fair trials', 'independent courts'], 'B', 'E.g. diplomatic immunity.', 5],
+        ['Administrative tribunals are established mainly to', ['conduct elections', 'make laws', 'settle disputes quickly in specialised areas', 'run schools'], 'C', 'They are less formal than courts.', 4],
+        ['Impeachment is a process for', ['creating a party', 'electing a president', 'passing a budget', 'removing a high official for misconduct'], 'D', 'It is a check on the executive.', 4],
+        ['The ombudsman system is designed to', ['collect taxes', 'make laws', 'investigate citizens\' complaints against public officials', 'run elections'], 'C', 'CHRAJ performs this role in Ghana.', 4],
+        ['Ultra vires refers to an action that is', ['popular', 'within legal powers', 'approved by courts', 'beyond the legal powers of the body taking it'], 'D', 'Such actions can be declared void.', 5],
+        ['Judicial review is the power of courts to', ['make laws', 'declare laws unconstitutional', 'appoint ministers', 'conduct elections'], 'B', 'Checks the legislature and executive.', 4],
+        ['Rule of law implies', ['rule by the rich', 'rule by the army', 'equality before the law', 'absence of laws'], 'C', 'Dicey\'s principle.', 4],
+        ['A vote of no confidence is a feature of', ['monarchies only', 'presidential systems', 'military rule', 'parliamentary systems'], 'D', 'Removes the cabinet.', 5],
+        ['Collective responsibility means that ministers', ['act independently', 'publicly support cabinet decisions', 'are elected', 'serve for life'], 'B', 'Cabinet solidarity.', 5],
+        ['The Speaker of Ghana\'s Parliament is', ['appointed by the President', 'elected by Parliament', 'chosen by the Chief Justice', 'elected by the public'], 'B', 'Article 95.', 5],
+        ['The Chief Justice of Ghana is appointed by the President', ['with the approval of chiefs', 'alone', 'with the approval of Parliament', 'by election'], 'C', 'After Council of State consultation.', 5],
+        ['Impeachment is a process to', ['appoint judges', 'elect a president', 'pass a budget', 'remove a high official for misconduct'], 'D', 'Legislative check.', 4],
     ],
 
     'Elections, parties, pressure groups' => [
@@ -91,6 +127,20 @@ return [
         ['Proportional representation allocates seats', ['by lottery', 'to the candidate with the most votes in each constituency', 'according to the share of votes each party receives', 'to chiefs'], 'C', 'Ghana uses first-past-the-post.', 3],
         ['Gerrymandering is', ['registering voters', 'counting votes', 'campaigning', 'drawing constituency boundaries to favour a party'], 'D', 'It is an electoral malpractice.', 3],
         ['A run-off election in Ghana\'s presidential vote is held when', ['turnout is low', 'no candidate gets more than 50% of valid votes', 'there is a tie only', 'the President resigns'], 'B', 'The top two candidates contest.', 2],
+        ['A major disadvantage of the first-past-the-post system is that', ['it is too complex', 'parties may win seats out of proportion to votes', 'it needs no constituencies', 'voters cannot choose candidates'], 'B', 'Minority parties lose out.', 5],
+        ['An electoral college is', ['a polling station', 'a school for politicians', 'a body that elects on behalf of voters', 'a party office'], 'C', 'Used in US presidential elections.', 4],
+        ['Pressure groups differ from political parties because they', ['have manifestos for government', 'contest elections', 'form cabinets', 'do not seek to control government'], 'D', 'They influence policy.', 4],
+        ['Recall in a democracy allows voters to', ['vote twice', 'remove an elected representative before the end of the term', 'cancel elections', 'appoint judges'], 'B', 'It promotes accountability.', 5],
+        ['A by-election in Ghana is conducted by the', ['Speaker', 'Electoral Commission', 'President', 'Supreme Court'], 'B', 'When a seat falls vacant.', 3],
+        ['A two-party system tends to produce', ['no opposition', 'many coalitions', 'stable single-party governments', 'military rule'], 'C', 'E.g. USA.', 4],
+        ['Proportional representation tends to produce', ['military rule', 'single-party dominance always', 'no parliament', 'coalition governments'], 'D', 'Many parties win seats.', 4],
+        ['A promotional (cause) pressure group differs from a sectional group because it', ['contests elections', 'represents workers only', 'is a party', 'promotes a cause for society rather than a member interest'], 'D', 'E.g. environmental groups.', 5],
+        ['Proportional representation allocates seats according to', ['appointment', 'the largest single vote', 'share of votes won', 'population size only'], 'C', 'Seats mirror votes.', 4],
+        ['Gerrymandering means', ['boycotting elections', 'rigging ballots', 'buying votes', 'drawing constituency boundaries unfairly'], 'D', 'Boundaries favour a party.', 5],
+        ['Pressure groups differ from parties because they', ['contest elections', 'do not seek to form a government', 'have manifestos to rule', 'control parliament'], 'B', 'They influence policy.', 4],
+        ['A by-election is held to', ['choose party leaders', 'elect a president', 'fill a vacant seat', 'amend the constitution'], 'C', 'Between general elections.', 4],
+        ['The first-past-the-post system awards a seat to the candidate with', ['the most money', 'an absolute majority only', 'a quota', 'the most votes'], 'D', 'Simple plurality.', 4],
+        ['A two-party system is one in which', ['only two parties are legal', 'two major parties dominate', 'parties take turns by law', 'one party rules'], 'B', 'E.g. USA.', 4],
     ],
 
     'Ghana\'s political history' => [
@@ -112,6 +162,15 @@ return [
         ['The 31st December 1981 coup was led by', ['Gen. Afrifa', 'Col. Acheampong', 'Gen. Akuffo', 'Flt Lt Jerry Rawlings'], 'D', 'It established the PNDC.', 2],
         ['The Supreme Military Council (SMC) was associated with', ['Kwame Nkrumah', 'Gen. I. K. Acheampong', 'Kofi Busia', 'John Kufuor'], 'B', 'It replaced the NRC in 1975.', 3],
         ['The 1992 Constitution was approved by', ['the Supreme Court', 'the President alone', 'a national referendum', 'chiefs'], 'C', 'The referendum was held on 28 April 1992.', 2],
+        ['The Republican Constitution of 1960 made Ghana', ['a monarchy', 'a federation', 'a republic with an executive president', 'a confederation'], 'C', 'Nkrumah became President.', 4],
+        ['The 1969 Constitution established the', ['PNDC', 'First Republic', 'Fourth Republic', 'Second Republic with a parliamentary system'], 'D', 'Busia was Prime Minister.', 5],
+        ['The Union Government (Unigov) concept was proposed by', ['Kwame Nkrumah', 'Gen. I. K. Acheampong', 'Jerry Rawlings', 'Kofi Busia'], 'B', 'It was rejected by many in 1978.', 5],
+        ['The PNDC came to power through a coup on', ['24 February 1966', '31 December 1981', '4 June 1979', '13 January 1972'], 'B', 'Led by Jerry Rawlings.', 4],
+        ['The Armed Forces Revolutionary Council (AFRC) ruled briefly in', ['1972', '1966', '1979', '1993'], 'C', 'It handed over to Limann.', 4],
+        ['The first military coup in Ghana took place on', ['4 June 1979', '13 January 1972', '24 February 1966', '31 December 1981'], 'C', 'Overthrew Nkrumah.', 4],
+        ['Ghana\'s Second Republic was led by Prime Minister', ['K. A. Busia', 'Hilla Limann', 'J. B. Danquah', 'Edward Akufo-Addo'], 'A', '1969–1972.', 4],
+        ['The Third Republic was headed by President', ['Hilla Limann', 'K. A. Busia', 'J. J. Rawlings', 'I. K. Acheampong'], 'A', '1979–1981.', 4],
+        ['The Fourth Republic began on', ['7 January 1993', '6 March 1957', '1 July 1960', '24 September 1979'], 'A', '1992 Constitution in force.', 4],
     ],
 
     'International organisations' => [
@@ -131,6 +190,19 @@ return [
         ['The OAU was replaced by the African Union in', ['1963', '2002', '1975', '1990'], 'B', 'It was launched in Durban.', 2],
         ['The headquarters of ECOWAS is in', ['Lomé', 'Accra', 'Abuja', 'Dakar'], 'C', 'In Nigeria.', 1],
         ['The UN Secretary-General from Ghana was', ['Javier Pérez de Cuéllar', 'Boutros Boutros-Ghali', 'Ban Ki-moon', 'Kofi Annan'], 'D', 'He served from 1997 to 2006.', 1],
+        ['The veto power in the UN Security Council belongs to', ['the General Assembly', 'all members', 'the five permanent members', 'the Secretary-General'], 'C', 'One veto blocks a resolution.', 4],
+        ['A major problem facing ECOWAS is', ['no borders', 'too much funding', 'a common currency in use', 'political instability in member states'], 'D', 'Coups and conflicts hinder integration.', 4],
+        ['The ICJ is located at', ['Geneva', 'The Hague', 'New York', 'Addis Ababa'], 'B', 'International Court of Justice.', 4],
+        ['The Bretton Woods institutions are', ['ECOWAS and SADC', 'the UN and AU', 'the IMF and World Bank', 'NATO and WTO'], 'C', 'Created in 1944.', 4],
+        ['The AU\'s Peace and Security Council is mainly responsible for', ['education only', 'trade negotiations', 'health only', 'preventing and managing conflicts in Africa'], 'D', 'Established in 2004.', 5],
+        ['The Lomé Convention was an agreement between the EEC and', ['NATO members', 'African, Caribbean and Pacific (ACP) countries', 'Asian countries only', 'the USA'], 'B', 'Trade and aid, first signed 1975.', 5],
+        ['The Non-Aligned Movement was founded at a conference in', ['London (1945)', 'Accra (1957)', 'Belgrade (1961)', 'Addis Ababa (1963)'], 'C', 'Nkrumah was a founding leader.', 5],
+        ['The veto power in the UN is held by', ['the five permanent members of the Security Council', 'all members of the General Assembly', 'the Secretary-General', 'the ICJ'], 'A', 'China, France, Russia, UK, USA.', 4],
+        ['ECOWAS was established in', ['1975', '1963', '1957', '2002'], 'A', 'Treaty of Lagos.', 4],
+        ['The headquarters of the AU is in', ['Addis Ababa', 'Abuja', 'Accra', 'Nairobi'], 'A', 'Ethiopia.', 4],
+        ['The UN was founded in', ['1945', '1919', '1963', '1957'], 'A', 'After World War II.', 4],
+        ['The principal judicial organ of the UN is the', ['International Court of Justice', 'Security Council', 'General Assembly', 'ECOSOC'], 'A', 'At The Hague.', 4],
+        ['The Commonwealth is an association of mainly', ['former British colonies', 'French colonies', 'oil producers', 'European states'], 'A', 'Voluntary association.', 4],
     ],
 
     'SHS 1: Why we study government' => [
@@ -142,6 +214,7 @@ return [
         ['Studying government prepares students for careers in', ['fishing', 'surgery only', 'mechanical engineering only', 'law, diplomacy and public administration'], 'D', 'It builds civic and analytical skills.', 1],
         ['A political culture is', ['a party manifesto', 'the shared attitudes and beliefs about politics in a society', 'a voting machine', 'a law court'], 'B', 'It shapes how people participate.', 2],
         ['The study of government helps to produce', ['only soldiers', 'informed and responsible citizens', 'farmers only', 'no change'], 'B', 'Citizens understand public affairs.', 1],
+        ['Political science differs from government as a subject mainly because political science', ['is about chiefs only', 'only studies Ghana', 'avoids theory', 'studies politics more theoretically and broadly'], 'D', 'Government focuses on institutions.', 5],
     ],
 
     'SHS 1: Indigenous systems of government in Ghana' => [
@@ -156,6 +229,8 @@ return [
         ['In pre-colonial Dagbon, the paramount ruler is the', ['Okyenhene', 'Asantehene', 'Ya Na', 'Ga Mantse'], 'C', 'He rules from Yendi.', 2],
         ['The council of elders in traditional Akan government', ['ran banks', 'had no role', 'made foreign laws', 'advised the chief'], 'D', 'It checked the chief\'s power.', 1],
         ['Pre-colonial Ewe communities were largely', ['one centralised empire', 'decentralised, with independent chiefdoms', 'ruled by a king in Kumasi', 'without chiefs'], 'B', 'Each state had its own ruler.', 3],
+        ['The pre-colonial Asante political system was best described as', ['a stateless society', 'a centralised confederacy', 'a democracy with elections', 'a colonial system'], 'B', 'Asantehene with paramount chiefs.', 5],
+        ['Checks on the chief\'s power in Akan societies included', ['parliament', 'a written constitution', 'destoolment and the council of elders', 'the press'], 'C', 'Traditional checks.', 4],
     ],
 
     'SHS 1: Constitutionalism and the organs of government' => [
@@ -169,6 +244,8 @@ return [
         ['The Chief Justice of Ghana is the head of the', ['executive', 'legislature', 'judiciary', 'police'], 'C', 'The President appoints them with Parliament\'s approval.', 1],
         ['The legislature in Ghana is', ['the Council of State', 'the Cabinet', 'the Supreme Court', 'Parliament'], 'D', 'It makes laws.', 1],
         ['A constitution is', ['a party manifesto', 'the fundamental law of a state', 'a court ruling', 'a budget'], 'B', 'All other laws must conform to it.', 1],
+        ['The 1992 Constitution can be suspended or abrogated lawfully', ['by Parliament with a simple majority', 'by the President', 'by the army', 'never; it forbids this'], 'D', 'Article 3 prohibits it.', 5],
+        ['A presidential veto in Ghana can be overridden by Parliament with a', ['simple majority', 'two-thirds majority', 'unanimous vote', 'court order'], 'B', 'Article 106.', 5],
     ],
 
     'SHS 1: State-society relations' => [
@@ -177,10 +254,11 @@ return [
         ['Trade unions, religious bodies and non-governmental organisations are part of', ['the judiciary', 'the executive', 'civil society', 'the armed forces'], 'C', 'Civil society organisations speak for citizens\' interests.', 1],
         ['Civil society organisations', ['are political parties only', 'are part of the army', 'are non-state groups that represent citizens\' interests', 'are government ministries'], 'C', 'NGOs and religious bodies are examples.', 2],
         ['The media is often called the fourth estate because it', ['runs elections', 'makes laws', 'judges cases', 'checks the use of power by informing the public'], 'D', 'A free press promotes accountability.', 2],
-        ['Legitimacy of a government means', ['the people accept its right to rule', 'it has many soldiers', 'it is rich', 'it rules forever'], 'A', 'Free elections confer legitimacy.', 2],
-        ['Citizens can hold government accountable through', ['elections, the media and petitions', 'violence', 'tax evasion', 'silence'], 'A', 'These are peaceful democratic means.', 1],
-        ['Interest groups influence government by', ['lobbying and advocacy', 'contesting elections only', 'forming the cabinet', 'appointing judges'], 'A', 'They do not seek power directly.', 2],
+        ['Legitimacy of a government means', ['it is rich', 'it has many soldiers', 'the people accept its right to rule', 'it rules forever'], 'C', 'Free elections confer legitimacy.', 2],
+        ['Citizens can hold government accountable through', ['violence', 'elections, the media and petitions', 'tax evasion', 'silence'], 'B', 'These are peaceful democratic means.', 1],
+        ['Interest groups influence government by', ['forming the cabinet', 'contesting elections only', 'lobbying and advocacy', 'appointing judges'], 'C', 'They do not seek power directly.', 2],
         ['Traditional authorities in Ghana are prohibited by the Constitution from', ['active party politics', 'settling disputes', 'leading festivals', 'managing stool lands'], 'A', 'Article 276.', 3],
+        ['Patron–client relationships in politics can lead to', ['corruption and favouritism', 'efficient institutions', 'free elections', 'transparency'], 'A', 'Loyalty is exchanged for favours.', 5],
     ],
 
     'SHS 1: Actors in the international system' => [
@@ -193,6 +271,7 @@ return [
         ['An intergovernmental organisation is made up of', ['member states', 'private individuals only', 'companies only', 'chiefs'], 'A', 'The UN and AU are examples.', 1],
         ['NGOs are', ['non-governmental organisations', 'national government offices', 'new government orders', 'news groups'], 'A', 'They work independently of governments.', 1],
         ['The World Bank mainly provides', ['loans for development projects', 'military aid', 'football tournaments', 'elections'], 'A', 'It is based in Washington, D.C.', 2],
+        ['Multinational corporations can influence states through', ['investment decisions and lobbying', 'voting in UN elections', 'commanding armies', 'issuing passports'], 'A', 'Economic power.', 4],
     ],
 
     'SHS 2: Citizenship, rights and responsibilities' => [
@@ -206,6 +285,9 @@ return [
         ['Which is a responsibility of a citizen?', ['obeying the law', 'avoiding taxes', 'destroying public property', 'refusing jury duty always'], 'A', 'Rights come with duties.', 1],
         ['Citizenship by registration is often acquired through', ['marriage to a citizen', 'birth', 'tourism', 'buying property'], 'A', 'It is a legal process.', 2],
         ['The right to a fair trial means', ['an accused person is heard before an impartial court', 'no trial is needed', 'the police decide guilt', 'judges are paid by the accused'], 'A', 'It is a fundamental right.', 1],
+        ['Fundamental human rights may be limited by law in the interest of', ['public safety, order and the rights of others', 'the President\'s wishes', 'party interests', 'chiefs only'], 'A', 'Rights are not absolute.', 5],
+        ['Habeas corpus protects a citizen against', ['unlawful detention', 'paying tax', 'military service', 'voting'], 'A', 'The detainee must be brought before a court.', 5],
+        ['Positive rights require the state to', ['provide something, such as education', 'refrain from interference only', 'abolish rights', 'arrest citizens'], 'A', 'Negative rights restrain the state.', 5],
     ],
 
     'SHS 2: Democracy and governance' => [
@@ -218,6 +300,9 @@ return [
         ['A free and fair election requires', ['an independent electoral body', 'voter intimidation', 'one candidate only', 'secret counting by one party'], 'A', 'Ghana\'s EC is independent.', 1],
         ['Decentralisation means', ['transferring power from the centre to local authorities', 'concentrating power in Accra', 'abolishing local government', 'military rule'], 'A', 'District assemblies are an example.', 2],
         ['A free press supports democracy by', ['informing citizens and exposing abuses', 'supporting only the ruling party', 'banning opinions', 'replacing elections'], 'A', 'It holds leaders accountable.', 1],
+        ['Liberal democracy is characterised by', ['protection of individual rights and free elections', 'one-party rule', 'state ownership of all property', 'rule by chiefs'], 'A', 'It limits government power.', 4],
+        ['Deliberative democracy emphasises', ['reasoned public discussion before decisions', 'rule by the army', 'secret decisions', 'one-party rule'], 'A', 'Participation through debate.', 5],
+        ['Transparency in governance is promoted in Ghana by the', ['Right to Information Act, 2019', 'Road Traffic Act', 'Fisheries Act', 'Lands Act'], 'A', 'Act 989.', 5],
     ],
 
     'SHS 2: Organs of government in Ghana' => [
@@ -231,6 +316,8 @@ return [
         ['The Attorney-General is the', ['principal legal adviser to the government', 'head of the army', 'Speaker', 'head of the police'], 'A', 'They also prosecute crimes.', 2],
         ['The President of Ghana is the Commander-in-Chief of the', ['Armed Forces', 'Police only', 'Parliament', 'Judiciary'], 'A', 'Under the 1992 Constitution.', 1],
         ['The number of members of Parliament in Ghana since 2016 is', ['275', '200', '230', '300'], 'A', 'One per constituency.', 2],
+        ['The Public Accounts Committee of Parliament examines', ['the Auditor-General\'s reports on public spending', 'court cases', 'party finances', 'church accounts'], 'A', 'It promotes accountability.', 5],
+        ['A Member of Parliament in Ghana loses his seat if he', ['leaves the party on whose ticket he was elected to join another', 'travels abroad', 'misses one sitting', 'speaks against a bill'], 'A', 'Article 97.', 5],
     ],
 
     'Statecraft, diplomacy and globalisation' => [
@@ -242,6 +329,8 @@ return [
         ['Ghana\'s foreign policy under Nkrumah strongly supported', ['African unity and the liberation of colonies', 'colonial rule', 'apartheid', 'isolation'], 'A', 'Pan-Africanism was central.', 1],
         ['Diplomatic immunity protects diplomats from', ['prosecution under the host country\'s laws', 'paying rent', 'learning languages', 'travelling'], 'A', 'Under the Vienna Convention.', 2],
         ['The Ministry responsible for Ghana\'s foreign relations is the Ministry of', ['Foreign Affairs and Regional Integration', 'Interior', 'Finance', 'Education'], 'A', 'It manages embassies.', 2],
+        ['Non-alignment as a foreign policy means', ['not joining either major power bloc', 'joining NATO', 'isolating oneself completely', 'supporting only the West'], 'A', 'Nkrumah supported it.', 4],
+        ['A consulate differs from an embassy because it', ['handles mainly citizens\' and trade matters, often outside the capital', 'is headed by the President', 'has no staff', 'makes laws'], 'A', 'Embassies handle political relations.', 5],
     ],
 
     'SHS 3: Systems of government' => [
@@ -254,6 +343,9 @@ return [
         ['A monarchy is a system in which the head of state', ['inherits the position', 'is elected every four years', 'is appointed by the UN', 'is chosen by lottery'], 'A', 'The UK has a constitutional monarchy.', 1],
         ['Ghana\'s government is a', ['unitary republic', 'federal monarchy', 'confederation', 'military junta'], 'A', 'Power is centralised with local units.', 1],
         ['In a federal system, the constitution is usually', ['written and rigid', 'unwritten', 'flexible', 'non-existent'], 'A', 'It protects the division of powers.', 2],
+        ['A weakness of the presidential system is the risk of', ['deadlock between the executive and legislature', 'lack of separation of powers', 'collective cabinet responsibility', 'easy removal of the president'], 'A', 'Divided government.', 5],
+        ['A parliamentary system\'s principle of collective responsibility means', ['ministers publicly support cabinet decisions or resign', 'each minister acts alone', 'the courts decide policy', 'parliament has no role'], 'A', 'Cabinet solidarity.', 5],
+        ['A semi-presidential system, as in France, has', ['both a president and a prime minister sharing executive power', 'no president', 'a monarch only', 'no legislature'], 'A', 'Dual executive.', 5],
     ],
 
     'SHS 3: Governance and public administration' => [
@@ -266,5 +358,7 @@ return [
         ['Local government in Ghana is administered through', ['Metropolitan, Municipal and District Assemblies', 'chiefs only', 'the Supreme Court', 'the Council of State'], 'A', 'MMDAs are the basic units.', 1],
         ['Bureaucracy refers to', ['an administrative system with rules and hierarchy', 'a political party', 'a court', 'an election'], 'A', 'Max Weber described it.', 2],
         ['The Office of the Head of Civil Service in Ghana', ['manages the civil service', 'conducts elections', 'prosecutes crimes', 'collects taxes'], 'A', 'It oversees ministries\' staff.', 2],
+        ['New Public Management reforms emphasise', ['efficiency, performance and market-like approaches', 'more red tape', 'secrecy', 'abolishing the civil service'], 'A', 'Results-oriented administration.', 5],
+        ['Red tape in public administration refers to', ['excessive bureaucratic procedures causing delay', 'security tape', 'efficient service', 'tax incentives'], 'A', 'Slows service delivery.', 4],
     ],
 ];

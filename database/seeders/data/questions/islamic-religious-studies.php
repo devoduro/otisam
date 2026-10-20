@@ -34,6 +34,17 @@ return [
         ['The science of explaining the meaning of the Qur\'an is', ['tajwid', 'fiqh', 'tafsir', 'sirah'], 'C', 'Tajwid is the art of recitation.', 2],
         ['A Hadith Qudsi is a hadith in which', ['the Qur\'an is quoted', 'only the companions speak', 'there is no chain', 'the Prophet reports words from Allah'], 'D', 'The meaning is from Allah, the words from the Prophet.', 3],
         ['The chain of narrators of a Hadith is called the', ['matn', 'isnad', 'surah', 'ayah'], 'B', 'The matn is the text.', 3],
+        ['Makkan surahs mainly emphasise', ['state administration', 'detailed laws of inheritance', 'rules of warfare', 'Tawhid, the Hereafter and moral teachings'], 'D', 'Madinan surahs contain more laws.', 5],
+        ['A Hadith classified as sahih is one that', ['has a weak narrator', 'has a sound, unbroken chain of reliable narrators', 'is fabricated', 'has no chain'], 'B', 'Da\'if is weak.', 4],
+        ['The standardisation of the Qur\'an\'s text into one reading is credited to Caliph', ['Umar', 'Abu Bakr', 'Uthman', 'Ali'], 'C', 'Copies were sent to major cities.', 4],
+        ['Abrogation (naskh) in Qur\'anic studies refers to', ['recitation rules', 'translation of verses', 'memorisation', 'a later revelation replacing the ruling of an earlier one'], 'D', 'E.g. the gradual prohibition of alcohol.', 5],
+        ['Ayat al-Kursi is found in Surah', ['Al-Ikhlas', 'Al-Fatihah', 'Yasin', 'Al-Baqarah'], 'D', 'Verse 255.', 4],
+        ['The matn of a hadith is', ['the chain of narrators', 'the text or content of the report', 'its classification', 'its translation'], 'B', 'The isnad is the chain.', 5],
+        ['The Sunan of Abu Dawud is classified among the', ['fiqh manuals only', 'tafsir works', 'six major hadith collections (Kutub al-Sittah)', 'poetry collections'], 'C', 'With Bukhari, Muslim, Tirmidhi, Nasa\'i and Ibn Majah.', 5],
+        ['The Qur\'an has how many surahs?', ['113', '114', '120', '99'], 'B', 'From al-Fatihah to an-Nas.', 4],
+        ['The first revelation came in the cave of', ['Uhud', 'Thawr', 'Hira', 'Quba'], 'C', 'Near Makkah.', 4],
+        ['The compilation of the Qur\'an into one standard copy was completed under Caliph', ['Abu Bakr only', 'Umar', 'Ali', 'Uthman'], 'D', 'Standardised copies sent out.', 5],
+        ['A hadith qudsi is', ['a verse of the Qur\'an', 'a saying in which the Prophet reports words from Allah', 'a weak hadith', 'a legal ruling'], 'B', 'Meaning from Allah, wording from the Prophet.', 5],
     ],
 
     'Beliefs and pillars' => [
@@ -62,6 +73,22 @@ return [
         ['The first pillar of Islam is', ['Salah', 'Shahadah', 'Zakat', 'Hajj'], 'B', 'The declaration of faith.', 1],
         ['Muslims who are sick or travelling during Ramadan may', ['fast twice as long', 'never fast again', 'make up the missed fasts later', 'pay nothing'], 'C', 'Surah Al-Baqarah 2:184.', 2],
         ['The number of daily obligatory prayers (salah) is', ['2', '3', '7', '5'], 'D', 'Fajr, Zuhr, Asr, Maghrib, Isha.', 1],
+        ['Zakat is payable only when wealth reaches the', ['level of a car', 'nisab and has been held for a lunar year', 'age of 60', 'start of Ramadan only'], 'B', 'The minimum threshold.', 4],
+        ['The rites of Hajj include tawaf, sa\'y and standing at', ['Badr', 'Uhud', 'Arafat', 'Quba'], 'C', 'The Day of Arafah is the climax.', 4],
+        ['Shirk is regarded as the gravest sin because it', ['misses prayer', 'involves stealing', 'breaks a fast', 'associates partners with Allah'], 'D', 'It violates Tawhid.', 4],
+        ['The difference between fard \'ayn and fard kifayah is that fard kifayah', ['must be done by every individual', 'is fulfilled for the community if some perform it', 'is forbidden', 'is optional for all'], 'B', 'E.g. funeral prayer.', 5],
+        ['Ihram during Hajj refers to', ['the farewell circuit', 'the stoning ritual', 'the sacrifice', 'the sacred state and garments of the pilgrim'], 'D', 'Certain acts are forbidden in ihram.', 4],
+        ['Fasting in Ramadan is broken intentionally by', ['sleeping', 'eating or drinking during daylight', 'praying', 'reading the Qur\'an'], 'B', 'Requires making up (qada).', 3],
+        ['Zakat on savings is generally', ['5%', '10%', '2.5%', '20%'], 'C', 'On wealth held for a year above nisab.', 4],
+        ['The fast of Ramadan is broken each day at', ['dawn', 'midnight', 'noon', 'sunset'], 'D', 'Iftar at Maghrib.', 4],
+        ['The belief in the oneness of Allah is', ['Shirk', 'Tawhid', 'Risalah', 'Akhirah'], 'B', 'Core doctrine.', 4],
+        ['Associating partners with Allah is', ['Ihsan', 'Tawhid', 'Shirk', 'Taqwa'], 'C', 'The gravest sin.', 4],
+        ['The angel responsible for revelation is', ['Malik', 'Mika\'il', 'Israfil', 'Jibril'], 'D', 'Gabriel.', 4],
+        ['Hajj takes place in the month of', ['Ramadan', 'Dhul-Hijjah', 'Muharram', 'Shawwal'], 'B', 'Twelfth month.', 4],
+        ['The minimum amount of wealth on which zakat becomes due is the', ['hawl', 'nisab', 'sadaqah', 'fitrah'], 'B', 'Threshold value.', 5],
+        ['The holy month in which fasting is obligatory is the', ['twelfth month', 'first month', 'ninth month', 'seventh month'], 'C', 'Ramadan is the ninth.', 4],
+        ['The night on which the Qur\'an was first revealed is called', ['Eid night', 'Laylat al-Mi\'raj', 'Laylat al-Bara\'ah', 'Laylat al-Qadr'], 'D', 'Night of Power.', 4],
+        ['Belief in the Day of Judgement is called belief in', ['Tawhid', 'Akhirah', 'Risalah', 'Qadar'], 'B', 'The hereafter.', 4],
     ],
 
     'Sirah and early Islam' => [
@@ -86,6 +113,21 @@ return [
         ['The Prophet received his first revelation at the age of', ['63', '25', '40', '30'], 'C', 'In 610 CE.', 1],
         ['The conquest of Makkah took place in', ['632 CE', '622 CE', '610 CE', '630 CE'], 'D', 'It was largely peaceful.', 2],
         ['The Prophet\'s uncle who protected him in Makkah was', ['Abu Lahab', 'Abu Talib', 'Abu Jahl', 'Abu Sufyan'], 'B', 'He never accepted Islam but protected the Prophet.', 2],
+        ['The Constitution of Madinah established', ['the five pillars', 'rights and duties of Muslims, Jews and others in Madinah', 'the Hijri calendar only', 'the conquest of Makkah'], 'B', 'It created a pluralistic community.', 5],
+        ['The Muslims lost the Battle of Uhud mainly because', ['the Prophet was absent', 'they were outnumbered ten to one', 'the archers left their positions', 'it rained'], 'C', 'They disobeyed orders.', 4],
+        ['The Battle of the Trench (Khandaq) was won by', ['cavalry charges', 'a surprise attack', 'Roman help', 'digging a defensive trench around Madinah'], 'D', 'Suggested by Salman al-Farsi.', 4],
+        ['The Year of Sorrow refers to the year in which the Prophet lost', ['Makkah', 'the Battle of Uhud', 'his wife Khadijah and uncle Abu Talib', 'his son Ibrahim'], 'C', 'About 619 CE.', 4],
+        ['The first mosque built by the Prophet was at', ['Taif', 'Makkah', 'Jerusalem', 'Quba'], 'D', 'On the way to Madinah.', 4],
+        ['The Pledges of Aqabah were made by', ['Christians of Abyssinia', 'Quraysh leaders', 'people from Yathrib (Madinah) before the Hijrah', 'Persians'], 'C', 'They invited the Prophet.', 5],
+        ['The first migration (hijrah) of Muslims was to', ['Syria', 'Madinah', 'Taif', 'Abyssinia (Ethiopia)'], 'D', 'Under the Negus\' protection.', 4],
+        ['The Battle of Badr (624 CE) is significant because', ['Muslims lost Madinah', 'a small Muslim force defeated a larger Quraysh army', 'the Prophet died', 'Makkah was conquered'], 'B', 'It strengthened the community.', 4],
+        ['The migration of the Prophet to Madinah is called the', ['Mi\'raj', 'Isra', 'Hijrah', 'Hudaybiyyah'], 'C', '622 CE.', 4],
+        ['The first caliph after the Prophet was', ['Ali', 'Umar', 'Uthman', 'Abu Bakr'], 'D', 'Rashidun.', 4],
+        ['The treaty signed between Muslims and the Quraysh in 6 AH was the Treaty of', ['Aqabah', 'Madinah', 'Hudaybiyyah', 'Ta\'if'], 'C', 'Ten-year truce.', 4],
+        ['The first person to accept Islam among women was', ['Hafsah', 'Aishah', 'Fatimah', 'Khadijah'], 'D', 'The Prophet\'s wife.', 4],
+        ['The Prophet was born in the Year of the', ['Elephant', 'Hijrah', 'Conquest', 'Sorrow'], 'A', 'Abraha\'s attack on Makkah.', 4],
+        ['The Battle of Uhud took place in', ['3 AH', '2 AH', '5 AH', '8 AH'], 'A', 'After Badr.', 5],
+        ['The Battle of the Trench (Khandaq) took place in', ['5 AH', '3 AH', '8 AH', '1 AH'], 'A', 'Siege of Madinah.', 5],
     ],
 
     'Islamic law and ethics' => [
@@ -105,6 +147,15 @@ return [
         ['Actions that are disliked but not forbidden are', ['haram', 'makruh', 'fard', 'halal'], 'B', 'Avoiding them earns reward.', 2],
         ['Obligatory duties in Islam are described as', ['mubah', 'makruh', 'fard (wajib)', 'haram'], 'C', 'Salah is fard.', 2],
         ['Islam forbids the consumption of', ['water', 'fish', 'rice', 'pork and alcohol'], 'D', 'They are haram.', 1],
+        ['Ijtihad means', ['blind imitation', 'independent reasoning by qualified scholars', 'fasting', 'a type of charity'], 'B', 'Taqlid is following a school.', 5],
+        ['The four Sunni schools of law are Hanafi, Maliki, Shafi\'i and', ['Zaydi', 'Ja\'fari', 'Hanbali', 'Ibadi'], 'C', 'Most Ghanaian Muslims follow the Maliki school.', 4],
+        ['In Islamic inheritance, a son generally receives', ['half the share of a daughter', 'the same as a daughter', 'nothing', 'twice the share of a daughter'], 'D', 'Surah An-Nisa 4:11.', 5],
+        ['Maslahah in Islamic jurisprudence means', ['prayer', 'public interest or welfare', 'fasting', 'pilgrimage'], 'B', 'A consideration in rulings.', 5],
+        ['Istihsan in Islamic jurisprudence means', ['fasting', 'blind imitation', 'juristic preference for a more equitable ruling', 'pilgrimage'], 'C', 'Used mainly by the Hanafi school.', 5],
+        ['Hudud punishments in Islamic law apply to', ['marriage matters', 'all minor offences', 'business disputes', 'specific offences with fixed penalties'], 'D', 'With strict evidentiary rules.', 5],
+        ['The sources of Shari\'ah in order are Qur\'an, Sunnah,', ['Ijma and Qiyas', 'Qiyas and Fatwa', 'Urf and Ijma only', 'Hadith and Tafsir'], 'A', 'Consensus then analogy.', 5],
+        ['An act that is neither rewarded nor punished is', ['mubah', 'wajib', 'haram', 'makruh'], 'A', 'Permissible.', 5],
+        ['Riba refers to', ['interest or usury', 'charity', 'inheritance', 'trade'], 'A', 'Forbidden gain.', 4],
     ],
 
     'SHS 1: Islam in Ghana' => [
@@ -116,6 +167,7 @@ return [
         ['The National Chief Imam of Ghana is the', ['Speaker of Parliament', 'head of the army', 'spiritual leader of Muslims in Ghana', 'President'], 'C', 'Sheikh Osman Nuhu Sharubutu has long held the office.', 2],
         ['Zongo communities in Ghanaian towns are', ['military camps', 'Christian monasteries', 'fishing villages only', 'settlements with large Muslim populations'], 'D', 'They grew from traders\' quarters.', 2],
         ['The Ahmadiyya Mission in Ghana is known for establishing', ['gold mines', 'schools and hospitals', 'castles', 'oil refineries'], 'B', 'It began in 1921.', 2],
+        ['Islam spread to Kumasi in the 18th–19th centuries largely through', ['Muslim traders and scholars serving the Asante court', 'British missionaries', 'Portuguese priests', 'military conquest'], 'A', 'The Asante Nkramo community.', 5],
     ],
 
     'SHS 1: Islamic sacred texts' => [
@@ -129,6 +181,8 @@ return [
         ['The Qur\'an was revealed in', ['Hebrew', 'Arabic', 'Greek', 'Persian'], 'B', 'Translations explain its meaning.', 1],
         ['The verses of the Qur\'an are called', ['hadith', 'surahs', 'ayat', 'juz'], 'C', 'Chapters are surahs.', 2],
         ['The Qur\'an is divided into how many parts (juz\') for recitation?', ['12', '114', '60', '30'], 'D', 'One juz\' per night of Ramadan.', 2],
+        ['Asbab al-nuzul refers to', ['Qur\'anic recitation rules', 'the chain of narrators', 'the circumstances of revelation of verses', 'Islamic law schools'], 'C', 'It aids tafsir.', 5],
+        ['The Qur\'an was compiled during Abu Bakr\'s caliphate mainly because', ['many memorisers (huffaz) died at the Battle of Yamamah', 'the Prophet ordered it in writing', 'it was lost', 'Christians requested it'], 'A', 'Umar urged compilation.', 5],
     ],
 
     'SHS 1: Islamic beliefs and practices' => [
@@ -139,6 +193,8 @@ return [
         ['Ablution before prayer is called', ['iqamah', 'zakat', 'adhan', 'wudu'], 'D', 'It purifies the body.', 1],
         ['Muslims face the Ka\'bah in Makkah when praying. This direction is the', ['mihrab', 'qiblah', 'minbar', 'hijrah'], 'B', 'The mihrab in a mosque marks it.', 2],
         ['Belief in Qadar means belief in', ['the angels only', 'divine decree (predestination)', 'the books only', 'Hajj'], 'B', 'It is an article of faith.', 2],
+        ['Prayer (salah) is invalid without', ['ritual purity (taharah)', 'a mosque', 'an imam', 'a prayer mat'], 'A', 'Wudu or ghusl is required.', 4],
+        ['The Zakat rate on cash savings above the nisab is', ['2.5%', '10%', '5%', '20%'], 'A', 'Payable annually.', 4],
     ],
 
     'SHS 1: Islam and the environment' => [
@@ -160,6 +216,7 @@ return [
         ['The Tijaniyya is a', ['Christian church', 'political party', 'Sufi order', 'court'], 'C', 'It has many followers in Ghana.', 2],
         ['Despite differences, Muslim groups in Ghana share belief in', ['Allah, the Qur\'an and the Prophet Muhammad (SAW)', 'different gods', 'no prayer', 'the Bible only'], 'A', 'These unite all Muslims.', 1],
         ['The Ahlus-Sunnah Wal-Jama\'ah in Ghana emphasise', ['following the Qur\'an and Sunnah strictly', 'Sufi rituals only', 'abandoning prayer', 'Christian practices'], 'A', 'It is a reformist group.', 3],
+        ['The Sufi orders emphasise', ['spiritual purification and remembrance of Allah (dhikr)', 'political parties', 'commerce only', 'ignoring prayer'], 'A', 'Mysticism.', 4],
     ],
 
     'SHS 2: Allah, His creation and worship' => [
@@ -173,6 +230,7 @@ return [
         ['Islam teaches that Allah created humans and jinn to', ['worship Him', 'rule over angels', 'destroy the earth', 'remain idle'], 'A', 'Surah Adh-Dhariyat 51:56.', 2],
         ['The direction Muslims face during prayer is', ['the Ka\'bah in Makkah', 'Jerusalem', 'Madinah', 'the east always'], 'A', 'This direction is the qiblah.', 1],
         ['Salat al-Jumu\'ah is performed on', ['Friday', 'Sunday', 'Saturday', 'Monday'], 'A', 'It replaces Zuhr prayer.', 1],
+        ['Salat al-Istisqa is offered', ['to pray for rain', 'at funerals', 'at Eid', 'on Fridays only'], 'A', 'During drought.', 5],
     ],
 
     'SHS 2: Islam, nation building and sexual morality' => [
@@ -205,6 +263,7 @@ return [
         ['Congregational prayer promotes', ['unity and discipline', 'division', 'disorder', 'idleness'], 'A', 'Muslims stand shoulder to shoulder.', 1],
         ['Waqf in Islam is', ['an endowment of property for charitable purposes', 'a type of prayer', 'a fasting month', 'a pilgrimage'], 'A', 'It funds schools and wells.', 3],
         ['Hajj promotes unity because', ['Muslims of all races gather and worship equally', 'only Arabs attend', 'it is done alone', 'it divides people'], 'A', 'All wear simple white garments.', 1],
+        ['Sadaqah differs from Zakat because sadaqah is', ['voluntary charity at any time', 'compulsory annual', 'a tax on land', 'paid only at Hajj'], 'A', 'Any amount, any time.', 4],
     ],
 
     'SHS 3: Islam and women' => [
@@ -217,6 +276,7 @@ return [
         ['Mahr in an Islamic marriage is', ['a gift from the groom to the bride', 'a payment to the imam', 'a dowry from the bride\'s family to the groom', 'a fine'], 'A', 'It belongs to the bride.', 2],
         ['The Prophet\'s wife Aisha is remembered as', ['a great scholar and narrator of Hadith', 'a military general', 'a queen of Egypt', 'a prophetess'], 'A', 'She narrated over 2,000 hadiths.', 2],
         ['The Prophet\'s daughter married to Ali was', ['Fatimah', 'Zainab', 'Ruqayyah', 'Aisha'], 'A', 'She was the mother of Hasan and Husayn.', 2],
+        ['Khul\' in Islamic law allows', ['a wife to seek divorce by returning the mahr', 'a husband to marry four wives', 'women to inherit everything', 'no divorce'], 'A', 'Initiated by the wife.', 5],
     ],
 
     'SHS 3: Islam and fraud' => [
@@ -228,5 +288,6 @@ return [
         ['Bribery (rishwah) in Islam is', ['forbidden for both giver and taker', 'allowed for officials', 'a form of zakat', 'encouraged in trade'], 'A', 'Both are cursed in the Hadith.', 2],
         ['The Qur\'an commands Muslims to give', ['full measure and weight in trade', 'short measure', 'false weights', 'no receipts'], 'A', 'Surah Al-Isra 17:35.', 2],
         ['Earning money through fraud is', ['haram (forbidden)', 'halal', 'makruh only', 'encouraged'], 'A', 'Wealth must be lawfully earned.', 1],
+        ['Gharar, prohibited in Islamic commerce, means', ['excessive uncertainty or deception in a contract', 'charity', 'interest-free loans', 'honest trade'], 'A', 'It invalidates sales.', 5],
     ],
 ];

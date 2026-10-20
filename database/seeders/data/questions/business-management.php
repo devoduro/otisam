@@ -31,6 +31,13 @@ return [
         ['Shares of a public limited company can be', ['owned only by the government', 'held by one person only', 'never transferred', 'sold to the public on the stock exchange'], 'D', 'It raises large capital.', 1],
         ['A franchise allows a business to', ['avoid tax', 'use another firm\'s brand and methods for a fee', 'copy without permission', 'become a public corporation'], 'B', 'KFC outlets are franchises.', 2],
         ['The document that sets out the internal rules of a company is the', ['receipt', 'invoice', 'articles of association (company constitution)', 'delivery note'], 'C', 'It governs how the company is run.', 3],
+        ['A major advantage of a public limited company over a partnership is', ['fewer regulations', 'unlimited liability', 'secrecy of accounts', 'easier access to large capital through shares'], 'D', 'Shares are sold to the public.', 4],
+        ['The divorce of ownership from control occurs mainly in', ['sole proprietorships', 'public limited companies', 'small partnerships', 'family businesses'], 'B', 'Shareholders own; managers control.', 5],
+        ['A holding company is one that', ['is a bank', 'only holds cash', 'controls other companies by owning a majority of their shares', 'sells holdings'], 'C', 'Subsidiaries are controlled.', 4],
+        ['A public limited company raises capital by', ['borrowing from members only', 'selling shares to the general public', 'partners\' contributions only', 'government grants only'], 'B', 'Shares on the stock exchange.', 4],
+        ['The document that governs the internal affairs of a company is the', ['memorandum of association', 'articles of association', 'prospectus', 'certificate of incorporation'], 'B', 'Internal rules.', 5],
+        ['A cooperative society is run on the principle of', ['votes by shares', 'one member, one vote', 'votes by age', 'a single owner'], 'B', 'Democratic control.', 4],
+        ['A sleeping partner', ['has unlimited liability always', 'manages the business', 'contributes capital but takes no part in management', 'is a minor'], 'C', 'Dormant partner.', 4],
     ],
 
     'Management and leadership' => [
@@ -54,6 +61,18 @@ return [
         ['The chain of command is', ['a staff meeting', 'the line of authority from top to bottom in an organisation', 'a customer list', 'a production line'], 'B', 'It shows who reports to whom.', 1],
         ['Unity of command means each employee should', ['have no boss', 'have many bosses', 'have only one boss', 'manage themselves'], 'C', 'It is one of Fayol\'s principles.', 2],
         ['A tall organisational structure has', ['one employee', 'few levels', 'no managers', 'many levels of management'], 'D', 'It has a narrow span of control.', 2],
+        ['F. W. Taylor is associated with', ['Theory Y', 'human relations theory', 'the hierarchy of needs', 'scientific management'], 'D', 'Time and motion studies.', 4],
+        ['McGregor\'s Theory X assumes that workers', ['are self-motivated', 'dislike work and need close supervision', 'seek responsibility', 'enjoy work'], 'B', 'Theory Y assumes the opposite.', 4],
+        ['The Hawthorne studies led to the', ['bureaucratic theory', 'scientific management', 'human relations approach to management', 'contingency theory only'], 'C', 'Elton Mayo found social factors matter.', 5],
+        ['Management by objectives (MBO) involves', ['random tasks', 'autocratic orders', 'no planning', 'agreeing goals with employees and measuring results'], 'D', 'Peter Drucker popularised it.', 4],
+        ['Contingency theory of leadership argues that', ['autocracy is best', 'one style always works', 'leaders are born only', 'the best style depends on the situation'], 'D', 'Fiedler\'s model.', 5],
+        ['Transformational leaders mainly', ['rely on rewards and punishments only', 'inspire followers with a shared vision', 'avoid change', 'micromanage'], 'B', 'Transactional leaders use exchanges.', 5],
+        ['Laissez-faire leadership', ['relies on punishment', 'uses strict control', 'involves voting', 'gives subordinates great freedom'], 'D', 'Hands-off style.', 4],
+        ['According to Maslow, the highest need is', ['safety', 'self-actualisation', 'esteem', 'physiological'], 'B', 'Top of the hierarchy.', 4],
+        ['Delegation means', ['firing workers', 'abandoning responsibility', 'assigning authority to a subordinate', 'centralising power'], 'C', 'Responsibility remains with the manager.', 4],
+        ['Herzberg\'s hygiene factors include', ['responsibility', 'achievement', 'recognition', 'salary and working conditions'], 'D', 'Prevent dissatisfaction.', 5],
+        ['Henri Fayol is known for', ['the hierarchy of needs', 'the principles and functions of management', 'scientific management time studies', 'theory X and Y'], 'B', 'Fourteen principles.', 5],
+        ['Unity of command means that each employee', ['commands others', 'has many bosses', 'reports to one superior', 'works alone'], 'C', 'Fayol principle.', 4],
     ],
 
     'Human resources' => [
@@ -66,10 +85,17 @@ return [
         ['Filling a vacancy with an existing employee is', ['dismissal', 'external recruitment', 'induction', 'internal recruitment'], 'D', 'It motivates staff and saves costs.', 1],
         ['Introducing new employees to the organisation is', ['appraisal', 'induction', 'redundancy', 'promotion'], 'B', 'It helps them settle quickly.', 1],
         ['According to Maslow, the most basic human needs are', ['esteem', 'self-actualisation', 'physiological needs such as food and shelter', 'social needs'], 'C', 'They are at the base of the hierarchy.', 2],
-        ['Herzberg\'s hygiene factors include', ['achievement and recognition', 'salary and working conditions', 'promotion only', 'responsibility only'], 'B', 'Their absence causes dissatisfaction.', 3],
         ['Fringe benefits are', ['taxes', 'deductions from pay', 'extra benefits given to employees besides wages', 'fines'], 'C', 'Company cars and health insurance.', 1],
         ['Dismissal of an employee for serious misconduct is called', ['promotion', 'redundancy', 'retirement', 'summary dismissal'], 'D', 'It happens without notice.', 3],
         ['Redundancy occurs when', ['a worker misbehaves', 'a job is no longer needed', 'a worker is promoted', 'a worker retires'], 'B', 'It is not the worker\'s fault.', 2],
+        ['Maslow\'s highest level of needs is', ['safety', 'self-actualisation', 'esteem', 'social'], 'B', 'Realising one\'s full potential.', 4],
+        ['Herzberg\'s motivators include', ['job security only', 'pay and working conditions', 'achievement, recognition and responsibility', 'company policy'], 'C', 'These cause satisfaction.', 5],
+        ['Collective bargaining is negotiation between', ['government and courts', 'customers and suppliers', 'banks and borrowers', 'employers and trade unions'], 'D', 'It sets wages and conditions.', 4],
+        ['Labour turnover is calculated as', ['wages ÷ output', 'workers ÷ leavers', 'leavers ÷ average workforce × 100', 'hours ÷ days'], 'C', 'A measure of staff retention.', 4],
+        ['Vroom\'s expectancy theory links motivation to', ['pay alone', 'hygiene factors', 'physiological needs only', 'expectancy, instrumentality and valence'], 'D', 'Effort–performance–reward beliefs.', 5],
+        ['Induction is', ['dismissing staff', 'introducing new staff to the organisation', 'promoting staff', 'paying staff'], 'B', 'Orientation.', 4],
+        ['On-the-job training takes place', ['only abroad', 'at a university', 'at the workplace while working', 'before recruitment'], 'C', 'Learning by doing.', 4],
+        ['Job description states', ['company profit', 'the qualities of the person', 'the salary of the manager', 'the duties of a job'], 'D', 'Person specification covers qualities.', 4],
     ],
 
     'Marketing' => [
@@ -88,6 +114,18 @@ return [
         ['Sales promotion techniques include', ['taxation', 'recruitment', 'auditing', 'free samples and discounts'], 'D', 'They boost short-term sales.', 1],
         ['A channel of distribution is', ['a TV station', 'the route by which goods reach the consumer', 'a road', 'a bank'], 'B', 'Producer → wholesaler → retailer → consumer.', 1],
         ['Price skimming means', ['pricing at cost', 'setting a very low price', 'setting a high initial price for a new product', 'giving goods away'], 'C', 'Used for innovative products.', 2],
+        ['A product in the maturity stage of its life cycle typically has', ['very low sales', 'peak sales and intense competition', 'no competition', 'high growth'], 'B', 'Firms may extend the life.', 4],
+        ['The Boston Matrix classifies a product with high market share in a low-growth market as a', ['question mark', 'star', 'cash cow', 'dog'], 'C', 'It generates steady cash.', 5],
+        ['Psychological pricing such as GH¢9.99 aims to', ['cover costs only', 'raise the price', 'reduce sales', 'make the price seem lower'], 'D', 'Charm pricing.', 4],
+        ['A "question mark" in the Boston Matrix has', ['high share in low growth', 'low market share in a high-growth market', 'high share in high growth', 'low share in low growth'], 'B', 'Needs investment or divestment.', 5],
+        ['Extension strategies in the product life cycle aim to', ['raise costs', 'end the product', 'delay decline by renewing interest', 'avoid customers'], 'C', 'E.g. new packaging.', 4],
+        ['The four Ps of marketing are product, price, promotion and', ['people', 'place', 'profit', 'planning'], 'B', 'Marketing mix.', 4],
+        ['Penetration pricing means', ['matching rivals', 'setting a high price at launch', 'setting a low price to gain market share', 'charging what the market can bear'], 'C', 'Enter the market cheaply.', 4],
+        ['Market segmentation is', ['merging firms', 'selling abroad', 'cutting prices', 'dividing a market into groups of similar buyers'], 'D', 'Target groups.', 4],
+        ['The stage of the product life cycle with the highest sales is', ['decline', 'introduction', 'growth', 'maturity'], 'D', 'Sales peak.', 5],
+        ['Skimming pricing sets', ['a low price to enter the market', 'a high initial price for a new product', 'prices equal to rivals', 'prices below cost'], 'B', 'Early adopters pay more.', 4],
+        ['Branding helps a firm to', ['avoid advertising', 'reduce quality', 'differentiate its product', 'lower prices always'], 'C', 'Product identity.', 4],
+        ['After-sales service is part of', ['accounting', 'production', 'recruitment', 'customer care'], 'D', 'Support after purchase.', 4],
     ],
 
     'Finance and the business environment' => [
@@ -111,6 +149,18 @@ return [
         ['Venture capital is finance provided to', ['governments', 'new or growing businesses with high potential', 'charities only', 'banks'], 'B', 'Investors take a share in the business.', 2],
         ['Trade credit means', ['getting a bank loan', 'paying in advance', 'buying goods now and paying the supplier later', 'selling shares'], 'C', 'It is a short-term source of finance.', 1],
         ['Inflation affects a business by', ['removing competition', 'reducing all prices', 'increasing the value of money', 'raising its costs'], 'D', 'Inputs become dearer.', 1],
+        ['Factoring involves a business', ['buying factories', 'selling its receivables to a third party for immediate cash', 'borrowing from friends', 'issuing shares'], 'B', 'It improves cash flow.', 5],
+        ['A disadvantage of financing with debentures is that', ['they dilute ownership', 'holders control the company', 'interest must be paid even when profits are low', 'they are never repaid'], 'C', 'It is a fixed obligation.', 5],
+        ['A firm with current assets GH¢60,000 and current liabilities GH¢40,000 has working capital of', ['GH¢40,000', 'GH¢100,000', 'GH¢1.5', 'GH¢20,000'], 'D', '60,000 − 40,000.', 3],
+        ['Leasing equipment instead of buying helps a business to', ['own the asset immediately', 'conserve cash for other uses', 'avoid all costs', 'increase debt always'], 'B', 'Payments are spread.', 4],
+        ['Working capital is', ['current assets minus current liabilities', 'total assets', 'share capital', 'fixed assets minus debts'], 'A', 'Liquidity measure.', 4],
+        ['Current assets GH¢30,000; current liabilities GH¢15,000. The current ratio is', ['2 : 1', '1 : 2', '15 : 1', '3 : 1'], 'A', '30 ÷ 15.', 4],
+        ['A debenture holder is', ['a creditor of the company', 'an owner', 'a director', 'a partner'], 'A', 'Lends to the company.', 5],
+        ['SWOT analysis examines strengths, weaknesses, opportunities and', ['threats', 'targets', 'trends', 'taxes'], 'A', 'Strategic planning tool.', 4],
+        ['Equity finance comes from', ['selling shares', 'bank loans', 'overdrafts', 'trade credit'], 'A', 'Ownership capital.', 4],
+        ['An overdraft is a form of', ['short-term finance', 'long-term finance', 'equity', 'grant'], 'A', 'Flexible borrowing.', 4],
+        ['Net profit GH¢12,000 on sales of GH¢60,000 gives a net profit margin of', ['20%', '12%', '5%', '50%'], 'A', '12 ÷ 60.', 4],
+        ['Corporate social responsibility means', ['a business acting ethically towards society', 'maximising profit only', 'avoiding tax', 'cutting wages'], 'A', 'Social obligations.', 4],
     ],
 
     'SHS 1: Business and its environment' => [
@@ -124,6 +174,8 @@ return [
         ['A rise in interest rates mainly affects a business through', ['more customers', 'lower wages', 'higher borrowing costs', 'cheaper loans'], 'C', 'It is an economic factor.', 2],
         ['The economic environment of a business includes', ['staff uniforms', 'inflation, interest rates and exchange rates', 'office layout', 'the company logo'], 'B', 'These are external factors.', 1],
         ['Technological change affects business by', ['reducing knowledge', 'stopping all trade', 'creating new products and methods', 'removing competition'], 'C', 'E.g. mobile payments.', 1],
+        ['A business facing a new tax on its product is affected by which PESTLE factor?', ['environmental', 'social', 'technological', 'political/legal'], 'D', 'Government policy.', 4],
+        ['Porter\'s Five Forces includes the threat of', ['inflation only', 'new entrants and substitutes', 'staff turnover', 'weather'], 'B', 'Also buyer and supplier power and rivalry.', 5],
     ],
 
     'SHS 1: Functions of management' => [
@@ -136,6 +188,9 @@ return [
         ['Directing involves', ['writing laws', 'buying machines', 'auditing accounts', 'leading, motivating and communicating with staff'], 'D', 'It turns plans into action.', 1],
         ['Staffing as a management function involves', ['designing logos', 'selling products', 'paying taxes', 'recruiting, training and placing workers'], 'D', 'It fills positions.', 1],
         ['Coordinating means', ['firing staff', 'harmonising the activities of different departments', 'setting prices', 'auditing'], 'B', 'It ensures teamwork.', 2],
+        ['Contingency planning prepares a business for', ['annual holidays', 'daily routines', 'unexpected events', 'tax returns'], 'C', 'E.g. power outages.', 4],
+        ['Strategic planning is usually done by', ['suppliers', 'supervisors daily', 'customers', 'top management for the long term'], 'D', 'Operational planning is short-term.', 4],
+        ['Span of control should be narrower when', ['work is routine', 'staff are highly skilled', 'tasks are complex and staff need close supervision', 'technology is simple'], 'C', 'More supervision needed.', 5],
     ],
 
     'International business' => [
@@ -148,18 +203,21 @@ return [
         ['Exporting means', ['buying from abroad', 'selling goods to other countries', 'selling locally', 'manufacturing'], 'B', 'It earns foreign exchange.', 1],
         ['A barrier to international trade is', ['good roads', 'free trade agreements', 'tariffs', 'common currency'], 'C', 'Taxes make imports dearer.', 1],
         ['Exchange-rate risk in international business is the risk that', ['machines break', 'goods are stolen', 'staff resign', 'currency values change and affect profits'], 'D', 'Firms may hedge against it.', 2],
+        ['A joint venture in international business is', ['a merger of governments', 'two firms sharing ownership of a new business', 'a type of tariff', 'an exchange rate'], 'B', 'Risks and profits are shared.', 4],
+        ['Dumping in international trade means', ['export subsidies only', 'buying in bulk', 'free trade', 'selling goods abroad below their cost or home price'], 'D', 'WTO rules restrict it.', 5],
     ],
 
     'SHS 2: Decision making, delegation and communication' => [
         ['Giving a subordinate the authority to perform a task is', ['recruitment', 'centralisation', 'coordination', 'delegation'], 'D', 'Responsibility for the result remains with the manager.', 1],
         ['A written message sent within an organisation is a', ['invoice', 'memo', 'receipt', 'prospectus'], 'B', 'Memos are short internal communications.', 1],
         ['Communication that flows from managers to subordinates is', ['horizontal communication', 'upward communication', 'downward communication', 'grapevine'], 'C', 'Instructions and policies usually flow downwards.', 1],
-        ['Delegation means', ['doing everything yourself', 'giving authority to a subordinate to perform a task', 'firing staff', 'refusing responsibility'], 'B', 'Responsibility remains with the manager.', 1],
         ['Communication from managers to workers is', ['horizontal communication', 'upward communication', 'downward communication', 'grapevine'], 'C', 'Upward is from workers to managers.', 1],
-        ['The informal channel of communication in an organisation is the', ['grapevine', 'memo', 'notice board', 'annual report'], 'A', 'It spreads rumours quickly.', 2],
-        ['The first step in decision making is to', ['identify the problem', 'implement the solution', 'evaluate results', 'choose the best option'], 'A', 'Then gather information and alternatives.', 1],
-        ['Lateral communication is between', ['people at the same level', 'managers and workers', 'customers and suppliers', 'shareholders'], 'A', 'Also called horizontal communication.', 2],
-        ['Barriers to communication include', ['noise and jargon', 'clear language', 'feedback', 'listening'], 'A', 'They distort the message.', 1],
+        ['The informal channel of communication in an organisation is the', ['notice board', 'memo', 'grapevine', 'annual report'], 'C', 'It spreads rumours quickly.', 2],
+        ['The first step in decision making is to', ['choose the best option', 'implement the solution', 'evaluate results', 'identify the problem'], 'D', 'Then gather information and alternatives.', 1],
+        ['Lateral communication is between', ['managers and workers', 'people at the same level', 'customers and suppliers', 'shareholders'], 'B', 'Also called horizontal communication.', 2],
+        ['Barriers to communication include', ['feedback', 'clear language', 'noise and jargon', 'listening'], 'C', 'They distort the message.', 1],
+        ['A matrix organisational structure means employees', ['have no manager', 'report to both a functional and a project manager', 'report to customers', 'work alone'], 'B', 'Dual reporting lines.', 5],
+        ['Decentralisation in an organisation means', ['the business closes branches', 'all decisions are made at the top', 'decision-making authority is spread to lower levels', 'no decisions are made'], 'C', 'Faster local decisions.', 4],
     ],
 
     'SHS 2: The law of contract' => [
@@ -167,7 +225,7 @@ return [
         ['In contract law, consideration means', ['thinking about the offer', 'something of value given by each party', 'the court\'s decision', 'a gift'], 'B', 'For example, goods in exchange for money.', 2],
         ['A contract made with a person below 18 is generally', ['a crime', 'always fully valid', 'voidable, except contracts for necessaries', 'binding on the parents'], 'C', 'Minors lack full capacity to contract.', 3],
         ['A shop displaying goods with price tags is making', ['a counter-offer', 'a binding offer', 'an acceptance', 'an invitation to treat'], 'D', 'The customer makes the offer at the till.', 3],
-        ['A valid contract requires offer, acceptance, consideration and', ['intention to create legal relations', 'a lawyer', 'a witness always', 'a stamp'], 'A', 'Capacity and legality are also needed.', 2],
+        ['A valid contract requires offer, acceptance, consideration and', ['a stamp', 'a lawyer', 'a witness always', 'intention to create legal relations'], 'D', 'Capacity and legality are also needed.', 2],
         ['Consideration in a contract is', ['something of value exchanged by each party', 'kindness', 'a gift', 'thinking carefully'], 'A', 'It may be money or a promise.', 2],
         ['An invitation to treat, such as goods displayed in a shop window, is', ['not an offer', 'a binding offer', 'an acceptance', 'a contract'], 'A', 'The customer makes the offer.', 3],
         ['A contract with a minor for non-necessaries is generally', ['voidable', 'fully valid', 'illegal', 'criminal'], 'A', 'Minors lack full contractual capacity.', 3],
@@ -176,6 +234,10 @@ return [
         ['An offer can be terminated by', ['revocation before acceptance', 'acceptance', 'performance', 'consideration'], 'A', 'Also by rejection or lapse of time.', 2],
         ['Capacity to contract means the parties must be', ['legally able to enter a contract', 'rich', 'related', 'employed'], 'A', 'Minors and the insane lack full capacity.', 2],
         ['A void contract is', ['one that has no legal effect', 'fully binding', 'voidable at will', 'a verbal contract'], 'A', 'E.g. an illegal contract.', 2],
+        ['An acceptance sent by post is generally effective', ['when it is posted', 'when it is received', 'when it is read', 'never'], 'A', 'The postal rule.', 5],
+        ['A contract induced by misrepresentation is', ['voidable', 'void', 'fully valid', 'illegal'], 'A', 'The innocent party may rescind.', 5],
+        ['An offer made to the whole world, such as a reward for a lost dog, can be accepted by', ['anyone who performs the stated act', 'only the first caller', 'nobody', 'the police'], 'A', 'A unilateral contract (Carlill case principle).', 5],
+        ['A counter-offer has the effect of', ['rejecting the original offer', 'accepting it', 'making it binding', 'extending it'], 'A', 'Hyde v Wrench principle.', 5],
     ],
 
     'SHS 2: Human resource management' => [
@@ -188,6 +250,9 @@ return [
         ['A trade union mainly aims to', ['protect the interests of workers', 'increase company profits only', 'recruit managers', 'set prices'], 'A', 'It bargains collectively.', 1],
         ['Manpower planning means', ['forecasting the organisation\'s future staff needs', 'firing all staff', 'buying machines', 'paying taxes'], 'A', 'It ensures the right people at the right time.', 2],
         ['Induction training is given to', ['new employees', 'retiring employees', 'customers', 'shareholders'], 'A', 'It introduces them to the organisation.', 1],
+        ['Psychometric tests in recruitment measure', ['personality and aptitude', 'height', 'eyesight', 'salary expectations'], 'A', 'They aid selection.', 4],
+        ['Job enrichment means', ['giving workers more responsibility and challenge', 'cutting pay', 'reducing tasks', 'longer hours only'], 'A', 'Herzberg recommended it.', 5],
+        ['A firm with 200 staff loses 30 in a year and replaces them. Its labour turnover rate is', ['15%', '30%', '6.7%', '85%'], 'A', '30/200 × 100.', 4],
     ],
 
     'SHS 3: Production and procurement management' => [
@@ -201,6 +266,9 @@ return [
         ['Inviting suppliers to submit bids is called', ['tendering', 'auditing', 'budgeting', 'franchising'], 'A', 'The best bid wins the contract.', 2],
         ['Inventory control aims to', ['keep the right level of stock at the lowest cost', 'hold as much stock as possible', 'avoid stock entirely', 'sell stock below cost'], 'A', 'It avoids shortages and waste.', 2],
         ['Productivity is increased by', ['better training and technology', 'more absenteeism', 'poor equipment', 'longer breaks only'], 'A', 'Output per worker rises.', 1],
+        ['Total quality management (TQM) involves', ['everyone in the organisation being responsible for quality', 'only inspectors checking quality', 'ignoring customers', 'producing more regardless'], 'A', 'A culture of quality.', 4],
+        ['Capacity utilisation of a factory producing 8,000 units with capacity 10,000 is', ['80%', '20%', '125%', '8%'], 'A', '8,000/10,000.', 4],
+        ['Just-in-time inventory is risky when', ['suppliers are unreliable', 'demand is stable', 'storage is costly', 'quality is high'], 'A', 'Production may halt.', 4],
     ],
 
     'SHS 3: Principles of marketing' => [
@@ -210,9 +278,11 @@ return [
         ['The product life cycle stages are introduction, growth, maturity and', ['decline', 'death', 'restart', 'launch'], 'A', 'Sales fall in decline.', 1],
         ['Market research involves', ['collecting information about customers and competitors', 'printing money', 'manufacturing goods', 'paying staff'], 'A', 'It reduces risk.', 1],
         ['A brand is', ['a name or symbol that identifies a product', 'a price', 'a factory', 'a tax'], 'A', 'It builds customer loyalty.', 1],
-        ['After-sales service is part of', ['customer care', 'production', 'procurement', 'accounting'], 'A', 'It includes repairs and support.', 1],
         ['Market segmentation by age is an example of', ['demographic segmentation', 'geographic segmentation', 'behavioural segmentation', 'psychographic segmentation'], 'A', 'Age, gender and income are demographic.', 2],
         ['The marketing concept focuses on', ['satisfying customer needs profitably', 'producing whatever is cheapest', 'selling at any cost', 'ignoring competitors'], 'A', 'Customers come first.', 1],
+        ['Price elasticity of demand matters in pricing because', ['it shows how sales respond to price changes', 'it sets costs', 'it measures quality', 'it fixes wages'], 'A', 'Inelastic products can bear higher prices.', 5],
+        ['A unique selling point (USP) is', ['a feature that distinguishes a product from competitors', 'the lowest price only', 'a sales discount', 'a retail shop'], 'A', 'It attracts customers.', 4],
+        ['Penetration pricing is most suitable when demand is', ['price elastic', 'price inelastic', 'perfectly inelastic', 'zero'], 'A', 'Low prices win many customers.', 5],
     ],
 
     'SHS 3: Entrepreneurship and business plans' => [
@@ -225,5 +295,9 @@ return [
         ['Which is a source of finance for a small business in Ghana?', ['microfinance institutions', 'the Supreme Court', 'the Electoral Commission', 'the police'], 'A', 'They lend small amounts.', 1],
         ['A SWOT analysis in a business plan examines strengths, weaknesses, opportunities and', ['threats', 'taxes', 'targets', 'trends only'], 'A', 'It assesses the business position.', 1],
         ['The marketing plan section of a business plan describes', ['how the business will reach and attract customers', 'the owner\'s family', 'the building design only', 'tax returns'], 'A', 'It covers the 4Ps.', 1],
+        ['Cash-flow forecasting helps a new business to', ['anticipate periods of cash shortage', 'calculate taxes only', 'design logos', 'hire staff'], 'A', 'Arrange finance in advance.', 4],
+        ['A start-up with fixed costs GH¢6,000 a month, price GH¢50 and variable cost GH¢20 per unit must sell at least how many units monthly to break even?', ['200', '120', '300', '150'], 'A', '6,000 ÷ 30.', 4],
+        ['Net present value (NPV) of a project is positive when', ['discounted cash inflows exceed the investment', 'payback is long', 'profit is zero', 'costs exceed revenue'], 'A', 'Accept positive NPV projects.', 5],
+        ['The payback period of a GH¢60,000 investment returning GH¢15,000 a year is', ['4 years', '15 years', '6 years', '2 years'], 'A', '60,000 ÷ 15,000.', 4],
     ],
 ];

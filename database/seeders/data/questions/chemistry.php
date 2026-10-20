@@ -28,6 +28,15 @@ return [
         ['The relative atomic mass of chlorine is 35.5 because', ['it has half a neutron', 'it exists as isotopes ³⁵Cl and ³⁷Cl', 'it is a gas', 'it is radioactive'], 'B', 'It is a weighted average.', 2],
         ['The electron configuration of calcium (Z = 20) is', ['2, 8, 2, 8', '2, 8, 10', '2, 8, 8, 2', '2, 10, 8'], 'C', 'The 4s fills before 3d.', 2],
         ['Which pair are isotopes?', ['H₂O and D₂O', '¹⁴N and ¹⁴C', 'O₂ and O₃', '¹²C and ¹⁴C'], 'D', 'Same atomic number, different mass number.', 2],
+        ['An element has isotopes of mass 63 (69%) and 65 (31%). Its relative atomic mass is about', ['65.0', '64.0', '63.0', '63.6'], 'D', '(63 × 69 + 65 × 31)/100.', 5],
+        ['The electron configuration 1s² 2s² 2p⁶ 3s² 3p⁵ belongs to', ['argon', 'chlorine', 'sulphur', 'sodium'], 'B', '17 electrons.', 4],
+        ['Which has the largest ionic radius?', ['K⁺', 'Cl⁻', 'S²⁻', 'Ca²⁺'], 'C', 'Isoelectronic; fewest protons.', 5],
+        ['The first ionisation energy of magnesium is higher than that of sodium because magnesium has', ['a larger radius', 'more shells', 'fewer protons', 'a greater nuclear charge with the same shielding'], 'D', 'Electrons are held more tightly.', 4],
+        ['An ion X²⁻ has 18 electrons. The atomic number of X is', ['17', '18', '20', '16'], 'D', 'Gained 2 electrons.', 4],
+        ['Element Y has electron configuration 2, 8, 7. It forms ions with charge', ['+7', '−1', '+1', '−7'], 'B', 'Gains one electron.', 4],
+        ['Down a group in the periodic table, atomic radius', ['decreases', 'increases', 'stays the same', 'becomes zero'], 'B', 'More shells.', 4],
+        ['Across a period, first ionisation energy generally', ['stays constant', 'decreases', 'increases', 'becomes negative'], 'C', 'Higher nuclear charge.', 4],
+        ['The element with configuration 1s² 2s² 2p⁶ 3s² is in', ['Group 8, Period 3', 'Group 3, Period 2', 'Group 2, Period 2', 'Group 2, Period 3'], 'D', 'Magnesium.', 5],
     ],
 
     'Bonding' => [
@@ -46,6 +55,16 @@ return [
         ['How many shared pairs of electrons are in a nitrogen molecule, N₂?', ['2', '1', '3', '4'], 'C', 'N≡N triple bond.', 2],
         ['The shape of the water molecule is', ['trigonal planar', 'linear', 'tetrahedral', 'bent (V-shaped)'], 'D', 'Two lone pairs push the bonds together.', 2],
         ['Which substance has a giant covalent structure?', ['carbon dioxide', 'silicon dioxide', 'water', 'methane'], 'B', 'Sand (SiO₂) has a giant lattice.', 2],
+        ['The bond angle in ammonia is about 107° because', ['it has four bonding pairs', 'the lone pair repels bonding pairs more strongly', 'it is linear', 'it has no lone pairs'], 'B', 'VSEPR theory.', 5],
+        ['Which molecule is non-polar despite having polar bonds?', ['NH₃', 'H₂O', 'CO₂', 'HCl'], 'C', 'Linear shape cancels dipoles.', 5],
+        ['The type of hybridisation of carbon in ethene is', ['dsp²', 'sp³', 'sp', 'sp²'], 'D', 'Trigonal planar with a π bond.', 5],
+        ['The number of electrons shared in a double covalent bond is', ['6', '2', '4', '8'], 'C', 'Two pairs.', 4],
+        ['Which compound has the highest melting point?', ['CH₄', 'NaCl', 'HCl', 'MgO'], 'D', 'Doubly charged ions: stronger lattice.', 5],
+        ['The bond in sodium chloride is', ['covalent', 'ionic', 'metallic', 'dative'], 'B', 'Electron transfer.', 4],
+        ['The shape of the methane molecule is', ['trigonal planar', 'linear', 'tetrahedral', 'bent'], 'C', 'Four bond pairs.', 4],
+        ['The H–O–H bond angle in water is about', ['109.5°', '104.5°', '120°', '180°'], 'B', 'Lone pairs compress the angle.', 5],
+        ['Hydrogen bonding explains the high boiling point of', ['hydrogen sulphide', 'methane', 'water', 'neon'], 'C', 'H bonded to O.', 4],
+        ['A dative bond is formed when', ['ions attract', 'electrons are transferred', 'metals bond', 'both shared electrons come from one atom'], 'D', 'Coordinate bond.', 5],
     ],
 
     'Stoichiometry and gases' => [
@@ -69,6 +88,25 @@ return [
         ['The concentration of a solution with 4 g of NaOH in 500 cm³ is', ['0.1 mol/dm³', '0.2 mol/dm³', '8 mol/dm³', '2 mol/dm³'], 'B', '0.1 mol in 0.5 dm³.', 3],
         ['At constant pressure, the volume of a gas is directly proportional to its', ['density', 'mass only', 'absolute temperature', 'Celsius temperature'], 'C', 'Charles\' law.', 2],
         ['A gas occupies 200 cm³ at 300 K. At constant pressure, its volume at 600 K is', ['600 cm³', '100 cm³', '200 cm³', '400 cm³'], 'D', 'V ∝ T.', 2],
+        ['What volume of CO₂ at s.t.p. is produced when 10 g of CaCO₃ reacts completely with excess acid? (CaCO₃ = 100)', ['22.4 dm³', '2.24 dm³', '1.12 dm³', '4.48 dm³'], 'B', '0.1 mol CO₂.', 4],
+        ['25.0 cm³ of 0.10 mol/dm³ NaOH neutralises 20.0 cm³ of HCl. The concentration of the acid is', ['0.25 mol/dm³', '0.080 mol/dm³', '0.125 mol/dm³', '0.10 mol/dm³'], 'C', '0.0025 mol in 0.020 dm³.', 5],
+        ['A gas occupies 300 cm³ at 27 °C and 1 atm. Its volume at 127 °C and 2 atm is', ['600 cm³', '450 cm³', '150 cm³', '200 cm³'], 'D', 'V₂ = 300 × (400/300) × (1/2).', 5],
+        ['The empirical formula of a compound with 40% C, 6.7% H and 53.3% O is', ['CHO', 'CH₂O', 'C₂H₄O', 'CH₃O'], 'B', 'Mole ratio 3.33 : 6.7 : 3.33.', 5],
+        ['What mass of oxygen is needed to burn 8 g of methane completely? (C = 12, H = 1, O = 16)', ['64 g', '16 g', '32 g', '8 g'], 'C', '0.5 mol CH₄ needs 1 mol O₂.', 5],
+        ['What mass of iron is produced from 320 g of Fe₂O₃ reduced completely? (Fe = 56, O = 16)', ['112 g', '224 g', '160 g', '448 g'], 'B', '2 mol Fe₂O₃ gives 4 mol Fe.', 5],
+        ['10 cm³ of a gaseous hydrocarbon needs 30 cm³ of oxygen and forms 20 cm³ of CO₂. The hydrocarbon is', ['C₂H₆', 'CH₄', 'C₂H₄', 'C₃H₈'], 'C', 'C₂H₄ + 3O₂ → 2CO₂ + 2H₂O.', 5],
+        ['The percentage of nitrogen in NH₄NO₃ (N = 14, H = 1, O = 16) is', ['46%', '17.5%', '28%', '35%'], 'D', '28/80 × 100.', 5],
+        ['What mass of NaCl is needed to make 250 cm³ of 0.2 mol/dm³ solution? (NaCl = 58.5)', ['11.7 g', '2.925 g', '58.5 g', '1.17 g'], 'B', '0.05 mol × 58.5.', 5],
+        ['A gas has a density of 1.43 g/dm³ at s.t.p. Its molar mass is about', ['44 g/mol', '16 g/mol', '32 g/mol', '28 g/mol'], 'C', '1.43 × 22.4.', 5],
+        ['The number of moles in 8.8 g of CO₂ (C = 12, O = 16) is', ['0.4', '0.2', '2', '0.02'], 'B', '8.8 ÷ 44.', 4],
+        ['The volume of 0.5 mol of a gas at s.t.p. is', ['5.6 dm³', '22.4 dm³', '11.2 dm³', '44.8 dm³'], 'C', '0.5 × 22.4.', 4],
+        ['A gas occupies 200 cm³ at 300 K. At constant pressure, its volume at 450 K is', ['250 cm³', '133 cm³', '400 cm³', '300 cm³'], 'D', 'Charles\' law.', 5],
+        ['The mass of NaOH (Na = 23, O = 16, H = 1) needed to make 250 cm³ of 0.2 M solution is', ['8.0 g', '2.0 g', '0.5 g', '4.0 g'], 'B', '0.05 mol × 40.', 5],
+        ['How many moles of oxygen are needed to burn 2 moles of CH₄ completely?', ['2', '4', '1', '6'], 'B', 'CH₄ + 2O₂ → CO₂ + 2H₂O.', 5],
+        ['The number of atoms in 0.5 mol of helium is (L = 6.02 × 10²³)', ['1.2 × 10²⁴', '6.02 × 10²³', '3.01 × 10²³', '3.01 × 10²²'], 'C', '0.5 × L.', 4],
+        ['The relative molecular mass of H₂SO₄ (H = 1, S = 32, O = 16) is', ['100', '96', '49', '98'], 'D', '2 + 32 + 64.', 4],
+        ['A gas diffuses 4 times faster than oxygen (M = 32). Its molar mass is', ['8', '2', '16', '128'], 'B', 'Graham: 32 ÷ 16.', 5],
+        ['What mass of CaO is formed from 50 g of CaCO₃ (Ca = 40, C = 12, O = 16)?', ['22 g', '56 g', '28 g', '50 g'], 'C', 'Half a mole of CaCO₃.', 5],
     ],
 
     'Acids, bases, salts, redox' => [
@@ -89,6 +127,21 @@ return [
         ['A solution with pH 12 is', ['strongly acidic', 'strongly alkaline', 'neutral', 'weakly acidic'], 'B', 'pH above 7 is alkaline.', 1],
         ['Zinc reacts with dilute hydrochloric acid to produce', ['zinc oxide and water', 'zinc chloride and hydrogen', 'zinc chloride and oxygen', 'zinc hydroxide'], 'B', 'Metal + acid → salt + hydrogen.', 1],
         ['The gas produced at the cathode during electrolysis of dilute sulphuric acid is', ['sulphur dioxide', 'oxygen', 'hydrogen', 'chlorine'], 'C', 'H⁺ ions gain electrons.', 2],
+        ['In the reaction 2Fe³⁺ + Sn²⁺ → 2Fe²⁺ + Sn⁴⁺, the oxidising agent is', ['Sn⁴⁺', 'Sn²⁺', 'Fe²⁺', 'Fe³⁺'], 'D', 'Fe³⁺ gains electrons.', 4],
+        ['During electrolysis of brine, the product at the anode is', ['hydrogen', 'chlorine', 'sodium', 'oxygen only'], 'B', 'Cl⁻ is preferentially discharged at high concentration.', 4],
+        ['How many faradays are needed to deposit 1 mol of copper from Cu²⁺ ions?', ['0.5', '1', '2', '4'], 'C', 'Cu²⁺ + 2e⁻ → Cu.', 4],
+        ['The oxidation number of nitrogen in NH₄⁺ is', ['−4', '+3', '+5', '−3'], 'D', 'N + 4(+1) = +1.', 4],
+        ['How long must a current of 2 A flow to deposit 0.01 mol of silver? (F = 96,500 C)', ['965 s', '482.5 s', '96.5 s', '1,930 s'], 'B', 'Q = 965 C; t = Q/I.', 5],
+        ['In the electrolysis of copper(II) sulphate with copper electrodes, the anode', ['releases oxygen', 'gains copper', 'dissolves and gets thinner', 'is unchanged'], 'C', 'Cu → Cu²⁺ + 2e⁻.', 5],
+        ['How many coulombs are needed to liberate 1.12 dm³ of hydrogen at s.t.p.? (F = 96,500 C)', ['19,300 C', '96,500 C', '4,825 C', '9,650 C'], 'D', '0.05 mol H₂ needs 0.1 F.', 5],
+        ['The oxidation number of Mn in KMnO₄ is', ['+6', '+5', '+7', '+4'], 'C', '+1 + Mn − 8 = 0.', 5],
+        ['25 cm³ of 0.1 M NaOH neutralises 20 cm³ of HCl. The concentration of the HCl is', ['0.25 M', '0.08 M', '0.1 M', '0.125 M'], 'D', '2.5 mmol ÷ 20 cm³.', 5],
+        ['The pH of 0.01 M HCl is', ['1', '2', '12', '0.01'], 'B', '−log(10⁻²).', 5],
+        ['An acid salt is formed when', ['a base is in excess', 'all hydrogen is replaced', 'the replaceable hydrogen is partly replaced', 'water is removed'], 'C', 'E.g. NaHSO₄.', 4],
+        ['The conjugate base of HSO₄⁻ is', ['OH⁻', 'H₂SO₄', 'H₃O⁺', 'SO₄²⁻'], 'D', 'Loses a proton.', 5],
+        ['In electrolysis of brine, the product at the anode is', ['hydrogen', 'chlorine', 'sodium', 'oxygen only'], 'B', 'Cl⁻ is discharged.', 5],
+        ['The mass of copper deposited by 0.2 mol of electrons (Cu = 64) is', ['3.2 g', '12.8 g', '6.4 g', '64 g'], 'C', 'Cu²⁺ + 2e⁻ → Cu.', 5],
+        ['A buffer solution', ['changes colour', 'is always neutral', 'is a strong acid', 'resists changes in pH'], 'D', 'Weak acid and its salt.', 5],
     ],
 
     'Rates, equilibrium, energy' => [
@@ -104,6 +157,19 @@ return [
         ['Which change would NOT increase the rate of reaction between marble chips and acid?', ['powdering the marble', 'heating the acid', 'using more concentrated acid', 'using larger marble chips'], 'D', 'Larger chips have less surface area.', 2],
         ['In the Haber process, the catalyst is', ['vanadium(V) oxide', 'iron', 'nickel', 'platinum'], 'B', 'Ammonia is made from N₂ and H₂.', 2],
         ['The energy profile of an exothermic reaction shows products', ['at the same energy', 'at a higher energy than reactants', 'at a lower energy than reactants', 'with no activation energy'], 'C', 'Energy is released.', 2],
+        ['For 2SO₂ + O₂ ⇌ 2SO₃ (ΔH negative), the yield of SO₃ is increased by', ['low pressure and high temperature', 'high pressure and moderate temperature', 'removing oxygen', 'adding a catalyst only'], 'B', 'Fewer moles on the right; exothermic.', 5],
+        ['Using bond energies C–H 413, O=O 498, C=O 805, O–H 464 kJ/mol, ΔH for CH₄ + 2O₂ → CO₂ + 2H₂O is about', ['−402 kJ/mol', '+818 kJ/mol', '−818 kJ/mol', '−1,646 kJ/mol'], 'C', 'Broken 2648; formed 3466; 2648 − 3466.', 5],
+        ['A reaction rate doubles for every 10 °C rise. Raising the temperature by 30 °C increases the rate by a factor of', ['30', '3', '6', '8'], 'D', 'Three doublings: 2³ = 8.', 4],
+        ['For H₂(g) + I₂(g) ⇌ 2HI(g), Kc = 49 at a temperature. Kc for 2HI ⇌ H₂ + I₂ is', ['1/7', '49', '7', '1/49'], 'D', 'Reverse reaction: reciprocal.', 5],
+        ['If 0.2 mol each of H₂ and I₂ are in equilibrium with 1.4 mol HI in 1 dm³, Kc is', ['7', '49', '35', '0.02'], 'B', '1.4²/(0.2 × 0.2).', 5],
+        ['The activation energy of a reaction is lowered by a catalyst from 80 kJ/mol to 50 kJ/mol. The enthalpy change ΔH', ['falls by 30 kJ/mol', 'is unchanged', 'rises by 30 kJ/mol', 'becomes zero'], 'B', 'Catalysts do not change ΔH.', 5],
+        ['For N₂ + 3H₂ ⇌ 2NH₃ (exothermic), yield of ammonia increases with', ['adding a catalyst only', 'low pressure', 'high temperature', 'high pressure and low temperature'], 'D', 'Le Chatelier.', 5],
+        ['A catalyst increases reaction rate by', ['raising temperature', 'lowering activation energy', 'shifting equilibrium', 'increasing concentration'], 'B', 'Alternative pathway.', 4],
+        ['An endothermic reaction has a ΔH that is', ['zero', 'negative', 'positive', 'always large'], 'C', 'Heat absorbed.', 4],
+        ['Increasing temperature increases reaction rate mainly because', ['the catalyst is used up', 'activation energy rises', 'fewer collisions occur', 'more particles have energy above the activation energy'], 'D', 'Boltzmann distribution.', 5],
+        ['Powdered marble reacts faster with acid than lumps because it has', ['more mass', 'a larger surface area', 'a higher temperature', 'a catalyst'], 'B', 'More collisions.', 4],
+        ['For an exothermic reaction, raising the temperature shifts equilibrium', ['not at all', 'to the right', 'to the left', 'to the side with more moles'], 'C', 'Favours the endothermic direction.', 5],
+        ['Kc for H₂ + I₂ ⇌ 2HI is', ['[HI]² / ([H₂][I₂])', '[H₂][I₂] / [HI]²', '[HI] / ([H₂][I₂])', '2[HI] / ([H₂][I₂])'], 'A', 'Products over reactants with powers.', 5],
     ],
 
     'Organic chemistry' => [
@@ -125,6 +191,23 @@ return [
         ['Alkanes undergo mainly', ['addition reactions', 'substitution reactions', 'polymerisation', 'neutralisation'], 'B', 'For example, with chlorine in light.', 2],
         ['The number of structural isomers of butane (C₄H₁₀) is', ['3', '1', '2', '4'], 'C', 'n-butane and methylpropane.', 2],
         ['The test for an alkene uses', ['a glowing splint', 'lime water', 'litmus paper', 'bromine water, which is decolourised'], 'D', 'Bromine adds across C=C.', 1],
+        ['The IUPAC name of CH₃CH(CH₃)CH₂CH₃ is', ['3-methylbutane', '2-methylbutane', 'pentane', '2-ethylpropane'], 'B', 'Longest chain 4 carbons, methyl at C2.', 5],
+        ['Which compound exhibits cis–trans isomerism?', ['ethene', 'but-1-ene', 'but-2-ene', 'propene'], 'C', 'Each carbon of C=C has two different groups.', 5],
+        ['Ethanol is oxidised by acidified K₂Cr₂O₇ to', ['methanol', 'ethene', 'ethane', 'ethanal and then ethanoic acid'], 'D', 'The orange solution turns green.', 4],
+        ['The reaction of ethene with steam in the presence of H₃PO₄ produces', ['ethane', 'ethanol', 'ethanoic acid', 'ethyl ethanoate'], 'B', 'Hydration of alkenes.', 4],
+        ['The number of isomers of C₅H₁₂ is', ['4', '2', '3', '5'], 'C', 'Pentane, 2-methylbutane, 2,2-dimethylpropane.', 5],
+        ['How many structural isomers does C₄H₉OH (alkanols) have?', ['3', '2', '4', '5'], 'C', 'Butan-1-ol, butan-2-ol, 2-methylpropan-1-ol, 2-methylpropan-2-ol.', 5],
+        ['A tertiary alcohol is', ['oxidised to an acid', 'oxidised to an aldehyde', 'oxidised to a ketone', 'not oxidised by acidified dichromate under normal conditions'], 'D', 'No H on the carbinol carbon.', 5],
+        ['Benzene undergoes mainly substitution rather than addition because', ['it has no double bonds', 'substitution keeps its stable delocalised ring', 'it is an alkane', 'it is ionic'], 'B', 'Aromatic stability.', 5],
+        ['The compound CH₃COOCH₂CH₃ is', ['propyl methanoate', 'methyl propanoate', 'ethyl ethanoate', 'ethanoic acid'], 'C', 'Ester from ethanoic acid and ethanol.', 4],
+        ['Complete combustion of 1 mol of propane produces how many moles of water?', ['8', '3', '5', '4'], 'D', 'C₃H₈ has 8 H atoms.', 4],
+        ['The IUPAC name of CH₃CH₂CH₂OH is', ['propan-1-ol', 'propanal', 'propanone', 'propanoic acid'], 'A', 'Three carbons, OH on C-1.', 4],
+        ['Esters are formed from', ['an alkanoic acid and an alkanol', 'two alkanes', 'an alkene and water', 'an acid and a base'], 'A', 'Esterification.', 4],
+        ['Butane has how many structural isomers?', ['2', '3', '1', '4'], 'A', 'Butane and 2-methylpropane.', 5],
+        ['The reaction of ethene with hydrogen over nickel is', ['hydrogenation', 'hydration', 'polymerisation', 'cracking'], 'A', 'Forms ethane.', 4],
+        ['Soap is made by', ['saponification of fats with alkali', 'esterification', 'cracking', 'fermentation'], 'A', 'Alkaline hydrolysis.', 4],
+        ['The functional group –CHO is found in', ['alkanals', 'alkanones', 'alkanols', 'alkanoic acids'], 'A', 'Aldehydes.', 4],
+        ['Polythene is made by', ['addition polymerisation of ethene', 'condensation of glucose', 'cracking of oil', 'fermentation'], 'A', 'Many ethene units.', 4],
     ],
 
     'Industrial and environmental chemistry' => [
@@ -138,6 +221,14 @@ return [
         ['Iron is extracted from its ore in the', ['fractionating column', 'electrolytic cell', 'Contact process', 'blast furnace'], 'D', 'Coke reduces iron(III) oxide.', 1],
         ['The ozone layer is damaged by', ['oxygen', 'CFCs', 'carbon dioxide only', 'water'], 'B', 'Chlorofluorocarbons release chlorine radicals.', 2],
         ['Temporary hardness of water can be removed by', ['adding salt', 'filtering', 'boiling', 'freezing'], 'C', 'Hydrogencarbonates decompose.', 2],
+        ['In the Contact process, SO₂ is oxidised to SO₃ using', ['platinum at 1,000 °C only', 'iron at 200 °C', 'nickel at room temperature', 'V₂O₅ catalyst at about 450 °C'], 'D', 'SO₃ is absorbed in concentrated H₂SO₄.', 4],
+        ['Permanent hardness of water is caused by dissolved', ['calcium hydrogencarbonate', 'calcium and magnesium sulphates', 'sodium chloride', 'carbon dioxide'], 'B', 'Boiling does not remove it.', 4],
+        ['In the extraction of iron, limestone is added to the blast furnace to', ['provide heat only', 'reduce the iron ore', 'remove silica impurities as slag', 'oxidise carbon'], 'C', 'CaO + SiO₂ → CaSiO₃.', 4],
+        ['In the Haber process, typical conditions are about', ['200 °C with platinum', '25 °C and 1 atm', '1,000 °C and 1 atm', '450 °C and 200 atm with iron catalyst'], 'D', 'A compromise of rate and yield.', 4],
+        ['In the Solvay process, the main product is', ['sulphuric acid', 'sodium carbonate', 'ammonia', 'nitric acid'], 'B', 'Uses brine, ammonia and CO₂.', 5],
+        ['The Haber process uses an iron catalyst to make', ['ammonia', 'sulphuric acid', 'nitric acid', 'chlorine'], 'A', 'N₂ + 3H₂.', 4],
+        ['The Contact process makes', ['sulphuric acid', 'ammonia', 'sodium hydroxide', 'ethanol'], 'A', 'V₂O₅ catalyst.', 4],
+        ['Ozone layer depletion is caused mainly by', ['CFCs', 'carbon dioxide', 'water vapour', 'nitrogen'], 'A', 'Chlorine radicals.', 5],
     ],
 
     'SHS 1: Atoms and the scientific method' => [
@@ -151,6 +242,9 @@ return [
         ['The number of protons in an atom is its', ['mass number', 'atomic number', 'valency', 'isotope number'], 'B', 'It identifies the element.', 1],
         ['The scientific method begins with', ['a law', 'a conclusion', 'publishing results', 'observation and asking a question'], 'D', 'A hypothesis follows.', 1],
         ['Bohr\'s model of the atom proposed that electrons', ['are inside the nucleus', 'move in fixed energy levels (shells)', 'are spread evenly like a pudding', 'have no charge'], 'B', 'Energy is emitted when they drop levels.', 2],
+        ['The maximum number of electrons in the n = 3 shell is', ['2', '8', '32', '18'], 'D', 'Maximum = 2n² = 2 × 9.', 4],
+        ['The quantum number that describes the shape of an orbital is the', ['principal quantum number', 'azimuthal (l) quantum number', 'magnetic quantum number', 'spin quantum number'], 'B', 'l = 0 (s), 1 (p), 2 (d).', 5],
+        ['According to Hund\'s rule, electrons fill degenerate orbitals', ['randomly', 'in pairs first', 'singly with parallel spins before pairing', 'only in s orbitals'], 'C', 'E.g. nitrogen\'s 2p³.', 5],
     ],
 
     'SHS 1: The mole concept' => [
@@ -164,6 +258,11 @@ return [
         ['The number of atoms in 0.5 mol of carbon is', ['1.2 × 10²⁴', '6.02 × 10²³', '3.01 × 10²³', '12'], 'C', '0.5 × 6.02 × 10²³.', 2],
         ['The molar mass of H₂SO₄ (H = 1, S = 32, O = 16) is', ['49 g/mol', '96 g/mol', '98 g/mol', '82 g/mol'], 'C', '2 + 32 + 64.', 1],
         ['How many moles are in 11.2 dm³ of a gas at s.t.p.?', ['11.2 mol', '2 mol', '1 mol', '0.5 mol'], 'D', '11.2 ÷ 22.4.', 2],
+        ['How many molecules are in 3.6 g of water? (H₂O = 18; L = 6.02 × 10²³)', ['2.17 × 10²⁴', '6.02 × 10²³', '3.6 × 10²³', '1.20 × 10²³'], 'D', '0.2 mol × L.', 5],
+        ['What mass of sodium contains the same number of atoms as 6 g of carbon? (Na = 23, C = 12)', ['23 g', '11.5 g', '6 g', '46 g'], 'B', '0.5 mol each.', 4],
+        ['The number of moles of oxygen atoms in 0.5 mol of CuSO₄ is', ['4.0', '0.5', '2.0', '1.0'], 'C', '4 O per formula unit.', 4],
+        ['What volume at s.t.p. is occupied by 8.8 g of CO₂? (C = 12, O = 16)', ['22.4 dm³', '2.24 dm³', '8.8 dm³', '4.48 dm³'], 'D', '0.2 mol × 22.4.', 5],
+        ['The mass of 3.01 × 10²³ molecules of NH₃ (N = 14, H = 1) is', ['17 g', '8.5 g', '34 g', '4.25 g'], 'B', '0.5 mol × 17.', 5],
     ],
 
     'SHS 1: Formulae, mole ratios and equations' => [
@@ -177,6 +276,10 @@ return [
         ['The formula of calcium carbonate is', ['CaC', 'CaCO₂', 'Ca₂CO₃', 'CaCO₃'], 'D', 'Ca²⁺ and CO₃²⁻.', 1],
         ['The formula of aluminium sulphate is', ['AlSO₄', 'Al₂(SO₄)₃', 'Al₃(SO₄)₂', 'Al(SO₄)₂'], 'B', 'Al³⁺ and SO₄²⁻.', 3],
         ['In CH₄ + 2O₂ → CO₂ + 2H₂O, how many moles of water form from 3 moles of methane?', ['2', '3', '6', '9'], 'C', 'Ratio 1 : 2.', 2],
+        ['Balance: Al + O₂ → Al₂O₃. The coefficients are', ['4, 3, 1', '2, 3, 1', '4, 3, 2', '2, 1, 1'], 'C', '4Al + 3O₂ → 2Al₂O₃.', 4],
+        ['A compound has empirical formula CH₂ and relative molecular mass 56. Its molecular formula is', ['C₅H₁₀', 'C₂H₄', 'C₃H₆', 'C₄H₈'], 'D', '56/14 = 4.', 4],
+        ['A hydrated salt CuSO₄·xH₂O loses 36% of its mass on heating. Find x (CuSO₄ = 160, H₂O = 18).', ['6', '4', '5', '3'], 'C', '18x/(160 + 18x) = 0.36.', 5],
+        ['Balance: C₃H₈ + O₂ → CO₂ + H₂O. The coefficient of O₂ is', ['7', '3', '4', '5'], 'D', 'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O.', 4],
     ],
 
     'SHS 1: Kinetic theory and the states of matter' => [
@@ -190,6 +293,9 @@ return [
         ['The temperature at which a liquid boils at standard pressure is its', ['melting point', 'normal boiling point', 'dew point', 'freezing point'], 'B', 'Water boils at 100 °C at 1 atm.', 1],
         ['Gases are easily compressed because their particles are', ['very heavy', 'close together', 'not moving', 'far apart'], 'D', 'There is a lot of empty space.', 1],
         ['Evaporation differs from boiling because evaporation', ['occurs only at 100 °C', 'occurs at the surface at any temperature', 'occurs throughout the liquid', 'needs no energy'], 'B', 'Boiling occurs at the boiling point.', 2],
+        ['According to Graham\'s law, the rate of diffusion of a gas is', ['directly proportional to its mass', 'inversely proportional to the square root of its molar mass', 'independent of mass', 'proportional to pressure only'], 'B', 'Lighter gases diffuse faster.', 4],
+        ['Hydrogen (M = 2) diffuses how many times faster than oxygen (M = 32)?', ['2', '16', '4', '8'], 'C', '√(32/2).', 5],
+        ['Real gases deviate most from ideal behaviour at', ['low pressure and high temperature', 'high pressure and low temperature', 'room conditions', 'all conditions equally'], 'B', 'Molecules are close and attract.', 5],
     ],
 
     'SHS 1: Periodic properties' => [
@@ -203,6 +309,9 @@ return [
         ['Across Period 3 from sodium to chlorine, the elements change from', ['liquids to gases', 'non-metals to metals', 'gases to solids', 'metals to non-metals'], 'D', 'Metallic character decreases.', 2],
         ['The modern periodic table arranges elements in order of', ['alphabetical order', 'increasing mass only', 'increasing atomic number', 'discovery date'], 'C', 'Moseley\'s work.', 1],
         ['Elements in Period 2 have', ['two neutrons', 'two valence electrons', 'two protons', 'two electron shells'], 'D', 'Period number = number of shells.', 1],
+        ['Which element has the highest first ionisation energy?', ['fluorine', 'hydrogen', 'neon', 'helium'], 'D', 'Smallest atom with a full shell.', 5],
+        ['Electron affinity is the energy change when', ['an atom loses an electron', 'an atom gains an electron', 'bonds break', 'atoms combine'], 'B', 'Usually exothermic for halogens.', 4],
+        ['The second ionisation energy of sodium is very high because', ['it has many protons', 'sodium is a gas', 'the second electron is removed from a full inner shell', 'the first electron is inner'], 'C', 'Na⁺ has the neon configuration.', 5],
     ],
 
     'SHS 1: Bonding between atoms' => [
@@ -210,12 +319,15 @@ return [
         ['A covalent bond is formed when atoms', ['lose protons', 'transfer electrons', 'share a pair of electrons', 'gain neutrons'], 'C', 'Non-metal atoms share electrons, as in H₂, Cl₂ and H₂O.', 1],
         ['The bond formed when both shared electrons come from one atom, as in NH₄⁺, is', ['a hydrogen bond', 'an ionic bond', 'a metallic bond', 'a dative (coordinate) bond'], 'D', 'The nitrogen in NH₃ donates its lone pair to H⁺.', 2],
         ['Metallic bonding is best described as', ['transfer of electrons to non-metals', 'shared pairs between two atoms', 'positive ions in a sea of delocalised electrons', 'weak attraction between molecules'], 'C', 'The free electrons explain why metals conduct electricity.', 2],
-        ['The bond in sodium chloride is', ['covalent', 'ionic', 'metallic', 'dative'], 'B', 'Electrons are transferred from Na to Cl.', 1],
         ['A dative (coordinate) bond is formed when', ['ions attract', 'electrons are transferred', 'both shared electrons come from one atom', 'metals bond'], 'C', 'Example: NH₄⁺.', 2],
         ['Metallic bonding consists of', ['hydrogen bonds', 'shared electron pairs', 'oppositely charged ions', 'positive ions in a sea of delocalised electrons'], 'D', 'This explains conductivity.', 2],
         ['How many covalent bonds does carbon usually form?', ['2', '4', '3', '1'], 'B', 'It has four valence electrons.', 1],
         ['The formula of the compound formed between Al and O is', ['AlO', 'Al₂O₃', 'Al₃O₂', 'AlO₂'], 'B', 'Valencies 3 and 2.', 2],
         ['A molecule of chlorine, Cl₂, is held by', ['a double bond', 'an ionic bond', 'a single covalent bond', 'a metallic bond'], 'C', 'One shared pair.', 1],
+        ['The number of lone pairs on the oxygen atom in water is', ['0', '1', '2', '3'], 'C', 'Two bonding, two lone pairs.', 4],
+        ['Which molecule has a trigonal planar shape?', ['CH₄', 'NH₃', 'H₂O', 'BF₃'], 'D', 'Three bonding pairs, no lone pair.', 5],
+        ['The bond angle in methane is', ['104.5°', '120°', '180°', '109.5°'], 'D', 'Tetrahedral.', 4],
+        ['Which compound contains both ionic and covalent bonds?', ['NaCl', 'NH₄Cl', 'CH₄', 'H₂O'], 'B', 'N–H covalent within NH₄⁺.', 5],
     ],
 
     'SHS 1: Forces between molecules' => [
@@ -228,6 +340,7 @@ return [
         ['Iodine sublimes easily because its molecules are held by', ['metallic bonds', 'strong ionic bonds', 'weak van der Waals forces', 'hydrogen bonds'], 'C', 'Little energy is needed to separate them.', 2],
         ['Which molecule can form hydrogen bonds?', ['H₂', 'CH₄', 'CO₂', 'NH₃'], 'D', 'H is bonded to N.', 2],
         ['The boiling point of HF is higher than HCl mainly because of', ['metallic bonding', 'greater mass of HF', 'ionic bonding', 'hydrogen bonding in HF'], 'D', 'F is highly electronegative.', 3],
+        ['Ethanol has a higher boiling point than propane (similar mass) because ethanol', ['is a metal', 'is ionic', 'forms hydrogen bonds', 'has weaker forces'], 'C', 'O–H groups.', 4],
     ],
 
     'SHS 1: Analysing and classifying organic compounds' => [
@@ -239,6 +352,8 @@ return [
         ['A series of organic compounds with the same functional group is a', ['periodic group', 'homologous series', 'polymer', 'mixture'], 'B', 'Members differ by CH₂.', 2],
         ['The IUPAC name of CH₃CH₂CH₃ is', ['butane', 'ethane', 'propane', 'propene'], 'C', 'Three carbons, single bonds.', 1],
         ['The test for carbon in an organic compound is to burn it and pass the gas into', ['bromine water', 'lime water, which turns milky', 'iodine solution', 'litmus'], 'B', 'CO₂ is produced.', 2],
+        ['A hydrocarbon contains 85.7% carbon by mass. Its empirical formula is', ['CH₃', 'CH₂', 'CH', 'C₂H₃'], 'B', 'C 7.14 : H 14.3 = 1 : 2.', 5],
+        ['The functional group C=O in an aldehyde is found', ['attached to oxygen', 'in the middle of the chain', 'at the end of the carbon chain', 'in a ring only'], 'C', 'Ketones have it in the middle.', 5],
     ],
 
     'SHS 2: Energy changes' => [
@@ -251,6 +366,10 @@ return [
         ['The heat change when 1 mole of a substance burns completely in oxygen is the', ['enthalpy of solution', 'enthalpy of neutralisation', 'enthalpy of combustion', 'lattice energy'], 'C', 'It is always negative.', 2],
         ['Dissolving ammonium nitrate in water makes the solution', ['unchanged', 'hotter', 'colder (endothermic)', 'explode'], 'C', 'It absorbs heat.', 2],
         ['The enthalpy of neutralisation of a strong acid and strong base is about', ['0 kJ/mol', '+57 kJ/mol', '−570 kJ/mol', '−57 kJ/mol'], 'D', 'H⁺ + OH⁻ → H₂O.', 3],
+        ['Hess\'s law states that the enthalpy change of a reaction', ['depends on time', 'depends on the catalyst', 'is always negative', 'is independent of the route taken'], 'D', 'Energy is conserved.', 4],
+        ['When 50 cm³ of 1 M HCl reacts with 50 cm³ of 1 M NaOH, the temperature rises by 6.8 °C. The heat released is about (c = 4.2 J/g K; density 1 g/cm³)', ['1,428 J', '2,856 J', '28,560 J', '340 J'], 'B', 'Q = 100 × 4.2 × 6.8.', 5],
+        ['Given C + O₂ → CO₂ ΔH = −394 kJ and CO + ½O₂ → CO₂ ΔH = −283 kJ, ΔH for C + ½O₂ → CO is', ['+111 kJ', '−677 kJ', '−111 kJ', '−394 kJ'], 'C', 'Hess: −394 − (−283).', 5],
+        ['The heat of combustion of ethanol is −1,370 kJ/mol. Burning 4.6 g of ethanol (M = 46) releases', ['137 kJ', '1,370 kJ', '13.7 kJ', '298 kJ'], 'A', '0.1 mol × 1,370.', 5],
     ],
 
     'SHS 2: Chemical kinetics' => [
@@ -262,6 +381,9 @@ return [
         ['The minimum energy colliding particles need to react is the', ['enthalpy change', 'activation energy', 'bond energy', 'ionisation energy'], 'B', 'Catalysts lower it.', 1],
         ['Food lasts longer in a refrigerator because low temperature', ['kills all bacteria', 'speeds up reactions', 'slows down reactions', 'adds oxygen'], 'C', 'Particles have less energy.', 1],
         ['The rate of a reaction can be measured by recording the', ['colour of the beaker', 'volume of gas produced over time', 'shape of the flask', 'room size'], 'B', 'A gas syringe is used.', 1],
+        ['For a zero-order reaction, the rate', ['quadruples', 'doubles when concentration doubles', 'does not depend on reactant concentration', 'is zero always'], 'C', 'Rate = k.', 5],
+        ['The half-life of a first-order reaction', ['is zero', 'doubles each time', 'depends on volume', 'is independent of the initial concentration'], 'D', 't½ = 0.693/k.', 5],
+        ['If doubling [A] quadruples the rate, the reaction is', ['third order', 'first order', 'zero order', 'second order in A'], 'D', 'Rate ∝ [A]².', 5],
     ],
 
     'SHS 2: Dynamic equilibrium' => [
@@ -273,6 +395,9 @@ return [
         ['Le Chatelier\'s principle states that a system at equilibrium', ['never changes', 'shifts to oppose any change imposed on it', 'always moves right', 'stops reacting'], 'B', 'It predicts the effect of changes.', 2],
         ['For an exothermic forward reaction, increasing the temperature shifts the equilibrium', ['nowhere', 'to the right', 'to the left', 'to produce more heat'], 'C', 'The system absorbs the added heat.', 3],
         ['For H₂ + I₂ ⇌ 2HI, increasing the pressure', ['shifts it left', 'shifts it right', 'has no effect on the position of equilibrium', 'stops the reaction'], 'C', 'Equal moles of gas on both sides.', 3],
+        ['For N₂O₄ ⇌ 2NO₂, the equilibrium constant Kc is expressed as', ['[N₂O₄]/[NO₂]²', '[NO₂]²/[N₂O₄]', '[NO₂]/[N₂O₄]', '2[NO₂]/[N₂O₄]'], 'B', 'Products over reactants with powers.', 4],
+        ['The value of Kc changes only when', ['a catalyst is added', 'pressure changes', 'temperature changes', 'concentration changes'], 'C', 'K depends on temperature only.', 5],
+        ['For an equilibrium where Kc is very large, the position of equilibrium', ['lies to the left', 'lies far to the right (mostly products)', 'is balanced equally', 'does not exist'], 'B', 'Products dominate.', 4],
     ],
 
     'SHS 2: Acids, bases and salts' => [
@@ -283,19 +408,24 @@ return [
         ['Ethanoic acid is a weak acid because it', ['is a base', 'has no hydrogen ions', 'is a solid', 'ionises only partially in water'], 'D', 'It is the acid in vinegar.', 2],
         ['The salt formed when HCl reacts with NaOH is', ['sodium hydroxide', 'sodium chloride', 'sodium sulphate', 'hydrogen chloride'], 'B', 'HCl + NaOH → NaCl + H₂O.', 1],
         ['An acid salt contains', ['only hydroxide ions', 'no hydrogen', 'replaceable hydrogen', 'only oxygen'], 'C', 'Example: NaHSO₄.', 3],
-        ['A base that dissolves in water to give OH⁻ ions is an', ['alkali', 'acid', 'indicator', 'oxide only'], 'A', 'NaOH is an alkali.', 1],
+        ['A base that dissolves in water to give OH⁻ ions is an', ['oxide only', 'acid', 'indicator', 'alkali'], 'D', 'NaOH is an alkali.', 1],
+        ['A Lewis acid is a substance that', ['donates a proton', 'accepts an electron pair', 'donates an electron pair', 'accepts a proton'], 'B', 'E.g. BF₃.', 5],
+        ['The Brønsted–Lowry conjugate acid of NH₃ is', ['NH₄⁺', 'NH₂⁻', 'H₂O', 'N₂'], 'A', 'Add a proton.', 4],
     ],
 
     'SHS 2: Trends in the periodic table' => [
         ['Which oxide of a Period 3 element is amphoteric?', ['Na₂O', 'Al₂O₃', 'SO₂', 'P₄O₁₀'], 'B', 'Aluminium oxide reacts with both acids and bases.', 3],
         ['Across Period 3 from sodium to chlorine, metallic character', ['increases', 'decreases', 'stays the same', 'is absent throughout'], 'B', 'Elements change from metals (Na, Mg, Al) to non-metals (P, S, Cl).', 2],
         ['The oxides of non-metals such as sulphur are usually', ['basic', 'acidic', 'neutral salts', 'metallic'], 'B', 'SO₂ dissolves in water to form an acidic solution.', 2],
-        ['Down Group 1, reactivity', ['increases', 'decreases', 'stays the same', 'first rises then falls'], 'A', 'The outer electron is lost more easily.', 2],
-        ['Down Group 17, reactivity', ['decreases', 'increases', 'stays the same', 'becomes zero'], 'A', 'It is harder to gain an electron.', 2],
+        ['Down Group 1, reactivity', ['first rises then falls', 'decreases', 'stays the same', 'increases'], 'D', 'The outer electron is lost more easily.', 2],
+        ['Down Group 17, reactivity', ['stays the same', 'increases', 'decreases', 'becomes zero'], 'C', 'It is harder to gain an electron.', 2],
         ['Atomic radius down a group', ['increases', 'decreases', 'stays the same', 'halves'], 'A', 'More electron shells are added.', 1],
         ['Oxides of metals are generally', ['basic', 'acidic', 'neutral', 'explosive'], 'A', 'Oxides of non-metals are generally acidic.', 2],
         ['Electronegativity across a period from left to right', ['increases', 'decreases', 'stays the same', 'becomes zero'], 'A', 'Nuclear charge increases.', 2],
         ['The noble gas used in advertising signs because it glows red is', ['neon', 'argon', 'helium', 'xenon'], 'A', 'Neon lights.', 1],
+        ['Down Group 2, the solubility of the hydroxides', ['increases', 'decreases', 'stays the same', 'becomes zero'], 'A', 'Ba(OH)₂ is more soluble than Mg(OH)₂.', 5],
+        ['Aluminium oxide is amphoteric, meaning it', ['reacts with both acids and bases', 'reacts only with acids', 'does not react', 'is a gas'], 'A', 'It forms salts with both.', 4],
+        ['Across Period 3, the oxides change from', ['basic to amphoteric to acidic', 'acidic to basic', 'neutral throughout', 'basic throughout'], 'A', 'Na₂O → Al₂O₃ → SO₃.', 5],
     ],
 
     'SHS 2: The halogens' => [
@@ -309,6 +439,9 @@ return [
         ['The halogens exist as', ['diatomic molecules', 'single atoms', 'ions only', 'metals'], 'A', 'For example, Cl₂ and Br₂.', 1],
         ['Iodine at room temperature is a', ['dark grey/purple solid', 'green gas', 'red liquid', 'colourless gas'], 'A', 'It sublimes on heating.', 1],
         ['The halogen used in toothpaste to prevent tooth decay is', ['fluorine (as fluoride)', 'iodine', 'bromine', 'astatine'], 'A', 'Fluoride strengthens enamel.', 1],
+        ['Chlorine reacts with cold dilute sodium hydroxide to form', ['NaCl, NaOCl and water', 'NaClO₃ only', 'HCl and O₂', 'NaH'], 'A', 'Bleach is formed.', 5],
+        ['Hydrogen halides become stronger acids down the group because', ['the H–X bond becomes weaker', 'electronegativity rises', 'atoms get smaller', 'boiling points rise'], 'A', 'HI is the strongest.', 5],
+        ['Silver halide precipitates: AgCl is white, AgBr cream and AgI is', ['yellow', 'black', 'blue', 'red'], 'A', 'Test for halide ions.', 4],
     ],
 
     'SHS 2: Structure, bonding and properties' => [
@@ -318,6 +451,7 @@ return [
         ['Simple molecular substances such as CO₂ have', ['low melting and boiling points', 'very high melting points', 'metallic lustre', 'ionic bonds'], 'A', 'Intermolecular forces are weak.', 2],
         ['Different forms of the same element in the same physical state are', ['allotropes', 'isotopes', 'isomers', 'homologues'], 'A', 'Diamond and graphite are allotropes of carbon.', 1],
         ['Metals conduct electricity because they have', ['delocalised electrons', 'ions that move in the solid', 'no electrons', 'covalent bonds'], 'A', 'The electrons carry charge.', 1],
+        ['Sodium chloride has a high melting point because', ['strong electrostatic forces hold the giant ionic lattice', 'it has weak van der Waals forces', 'it is covalent', 'it has delocalised electrons'], 'A', 'Much energy is needed to break it.', 4],
     ],
 
     'SHS 2: Organic compounds' => [
@@ -329,12 +463,13 @@ return [
         ['The functional group of the alkanoic acids is', ['−COOH', '−OH', 'C=C', '−NH₂'], 'A', 'It is the carboxyl group.', 1],
         ['Cracking of long-chain alkanes produces', ['shorter alkanes and alkenes', 'only water', 'salts', 'only polymers'], 'A', 'It meets demand for petrol.', 2],
         ['The first member of the alkanoic acids is', ['methanoic acid', 'ethanoic acid', 'propanoic acid', 'butanoic acid'], 'A', 'HCOOH.', 2],
+        ['The product of the reaction between ethene and hydrogen bromide is', ['bromoethane', '1,2-dibromoethane', 'ethanol', 'ethyne'], 'A', 'Addition of HBr.', 4],
+        ['The general formula of the alkynes is', ['CₙH₂ₙ₋₂', 'CₙH₂ₙ', 'CₙH₂ₙ₊₂', 'CₙH₂ₙ₊₁'], 'A', 'Ethyne is C₂H₂.', 4],
     ],
 
     'SHS 3: pH and its applications' => [
         ['A solution has [H⁺] = 1 × 10⁻³ mol/dm³. What is its pH?', ['3', '−3', '11', '0.001'], 'A', 'pH = −log₁₀[H⁺] = −log(10⁻³) = 3.', 2],
         ['A solution has a pOH of 4 at 25 °C. What is its pH?', ['4', '10', '14', '18'], 'B', 'pH + pOH = 14, so pH = 14 − 4 = 10.', 3],
-        ['A buffer solution', ['resists changes in pH when small amounts of acid or base are added', 'always has pH 7', 'is a strong acid', 'changes colour with pH'], 'A', 'Blood is buffered to keep its pH near 7.4.', 2],
         ['Pure water at 25 °C has a pH of', ['0', '7', '14', '1'], 'B', 'Its H⁺ and OH⁻ concentrations are equal (10⁻⁷ mol/dm³).', 1],
         ['The pH of a 0.01 mol/dm³ HCl solution is', ['2', '1', '0.01', '12'], 'A', 'pH = −log[H⁺] = −log(10⁻²).', 3],
         ['Farmers add lime to soil that is', ['too acidic', 'too alkaline', 'neutral', 'too sandy'], 'A', 'Lime neutralises acidity.', 1],
@@ -342,6 +477,9 @@ return [
         ['Antacid tablets relieve indigestion by', ['neutralising excess stomach acid', 'adding acid', 'killing bacteria', 'dissolving food'], 'A', 'They contain bases such as Mg(OH)₂.', 1],
         ['Universal indicator turns green in a', ['neutral solution', 'strong acid', 'strong alkali', 'weak acid'], 'A', 'Green means pH 7 (neutral).', 1],
         ['The pH of a 0.001 mol/dm³ HCl solution is', ['3', '1', '0.001', '11'], 'A', '−log(10⁻³).', 3],
+        ['The pH of 0.01 mol/dm³ NaOH at 25 °C is', ['12', '2', '10', '14'], 'A', 'pOH = 2; pH = 14 − 2.', 5],
+        ['The pH of 0.005 mol/dm³ H₂SO₄ (fully ionised) is', ['2', '2.3', '1', '3'], 'A', '[H⁺] = 0.01.', 5],
+        ['Diluting a strong acid of pH 2 by a factor of 100 gives a pH of', ['4', '3', '2', '6'], 'A', '[H⁺] falls 100-fold.', 5],
     ],
 
     'SHS 3: Hydrolysis of salts' => [
@@ -352,6 +490,8 @@ return [
         ['Hydrolysis of a salt is a reaction between the salt and', ['water', 'oxygen', 'carbon dioxide', 'a metal'], 'A', 'It can change the pH.', 2],
         ['Which salt solution would turn red litmus blue?', ['potassium ethanoate', 'ammonium sulphate', 'potassium chloride', 'sodium nitrate'], 'A', 'The ethanoate ion is basic.', 3],
         ['A solution of sodium ethanoate is', ['alkaline', 'acidic', 'neutral', 'strongly acidic'], 'A', 'Salt of weak acid and strong base.', 2],
+        ['Iron(III) chloride solution is acidic because', ['Fe³⁺ ions hydrolyse to release H⁺', 'it contains OH⁻', 'chloride is basic', 'it is neutral'], 'A', 'Small highly charged cations hydrolyse.', 5],
+        ['The pH of 0.1 mol/dm³ sodium ethanoate solution is', ['greater than 7', 'less than 7', 'exactly 7', 'zero'], 'A', 'CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻.', 4],
     ],
 
     'SHS 3: Indicators and titration' => [
@@ -363,6 +503,9 @@ return [
         ['The indicator best for titrating a strong acid with a weak base is', ['methyl orange', 'phenolphthalein', 'litmus only', 'universal indicator'], 'A', 'The end point is in the acidic range.', 3],
         ['Phenolphthalein in alkaline solution is', ['pink', 'colourless', 'yellow', 'red'], 'A', 'It is colourless in acid.', 1],
         ['Methyl orange in acid is', ['red', 'yellow', 'pink', 'colourless'], 'A', 'It is yellow in alkali.', 2],
+        ['20.0 cm³ of 0.05 mol/dm³ H₂SO₄ neutralises x cm³ of 0.10 mol/dm³ NaOH. Find x.', ['20.0', '10.0', '40.0', '5.0'], 'A', '1 mol acid needs 2 mol base.', 5],
+        ['Phenolphthalein is suitable for titrating a weak acid with a strong base because', ['the end point is in the alkaline range', 'it changes colour at pH 4', 'it works only for strong acids', 'it is red in acid'], 'A', 'Its range is about pH 8–10.', 5],
+        ['25.0 cm³ of Na₂CO₃ solution needs 20.0 cm³ of 0.1 mol/dm³ HCl for complete reaction. The concentration of Na₂CO₃ is', ['0.04 mol/dm³', '0.08 mol/dm³', '0.1 mol/dm³', '0.02 mol/dm³'], 'A', 'Ratio 1 : 2; 0.001 mol ÷ 0.025.', 5],
     ],
 
     'SHS 3: Oxidation and reduction' => [
@@ -376,6 +519,10 @@ return [
         ['Which is the best oxidising agent?', ['fluorine', 'sodium', 'hydrogen', 'zinc'], 'A', 'It accepts electrons most readily.', 3],
         ['In the reaction CuO + H₂ → Cu + H₂O, the reducing agent is', ['hydrogen', 'copper(II) oxide', 'copper', 'water'], 'A', 'H₂ removes oxygen from CuO.', 2],
         ['The oxidation number of chromium in K₂Cr₂O₇ is', ['+6', '+7', '+3', '+12'], 'A', '2(+1) + 2Cr + 7(−2) = 0.', 3],
+        ['In MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O, the change in oxidation number of Mn is', ['+7 to +2', '+6 to +2', '+7 to +4', '+4 to +2'], 'A', 'A gain of 5 electrons.', 5],
+        ['The standard electrode potential of zinc is −0.76 V and copper +0.34 V. The e.m.f. of a Daniell cell is', ['1.10 V', '0.42 V', '−1.10 V', '0.34 V'], 'A', 'E(cathode) − E(anode).', 5],
+        ['Balance: Cr₂O₇²⁻ + Fe²⁺ → Cr³⁺ + Fe³⁺ (acid). The mole ratio Cr₂O₇²⁻ : Fe²⁺ is', ['1 : 6', '1 : 3', '1 : 2', '2 : 3'], 'A', 'Cr₂O₇²⁻ gains 6 electrons.', 5],
+        ['In the reaction 2H₂S + SO₂ → 3S + 2H₂O, the oxidising agent is', ['SO₂', 'H₂S', 'S', 'H₂O'], 'A', 'S in SO₂ goes from +4 to 0.', 5],
     ],
 
     'SHS 3: The transition elements' => [
@@ -388,6 +535,10 @@ return [
         ['Which is a transition element?', ['copper', 'sodium', 'calcium', 'aluminium'], 'A', 'It is in the d-block.', 1],
         ['The Contact process uses which catalyst?', ['vanadium(V) oxide', 'iron', 'nickel', 'platinum only'], 'A', 'It makes sulphuric acid.', 3],
         ['Copper(II) compounds are typically', ['blue or green', 'white', 'colourless', 'black only'], 'A', 'CuSO₄·5H₂O is blue.', 1],
+        ['The electron configuration of Fe²⁺ (Fe, Z = 26) is', ['[Ar] 3d⁶', '[Ar] 3d⁴ 4s²', '[Ar] 3d⁵ 4s¹', '[Ar] 4s² 3d⁶'], 'A', '4s electrons are lost first.', 5],
+        ['Transition metal ions are coloured because of', ['electron transitions between split d-orbitals', 'their large mass', 'their charge only', 'their s-electrons'], 'A', 'd–d transitions absorb light.', 5],
+        ['The complex ion [Cu(NH₃)₄]²⁺ has a', ['deep blue colour', 'green colour', 'colourless appearance', 'red colour'], 'A', 'Formed with excess ammonia.', 5],
+        ['Zinc is not usually regarded as a transition element because', ['its ions have a full d-subshell', 'it is a gas', 'it has no d electrons in the atom', 'it is in Group 1'], 'A', 'Zn²⁺ is d¹⁰.', 5],
     ],
 
     'SHS 3: Alkanoic acid derivatives and lipids' => [
@@ -399,6 +550,9 @@ return [
         ['Hydrogenation of vegetable oils produces', ['margarine', 'soap', 'ethanol', 'glycerol only'], 'A', 'Hydrogen adds to C=C bonds with a nickel catalyst.', 2],
         ['Soap is made by boiling fats with', ['sodium hydroxide', 'hydrochloric acid', 'water only', 'sugar'], 'A', 'This is saponification.', 1],
         ['The ester formed from ethanoic acid and ethanol is', ['ethyl ethanoate', 'methyl ethanoate', 'ethyl methanoate', 'propyl ethanoate'], 'A', 'Alcohol part + acid part.', 2],
+        ['The alkaline hydrolysis of a fat produces', ['soap and glycerol', 'ester and water', 'acid and alcohol only', 'polymer'], 'A', 'Saponification.', 4],
+        ['Detergents are better than soap in hard water because they', ['do not form scum with Ca²⁺ and Mg²⁺', 'are natural', 'are cheaper always', 'are acidic'], 'A', 'Their calcium salts are soluble.', 4],
+        ['Amides are formed from carboxylic acids and', ['ammonia or amines', 'alcohols', 'alkenes', 'water'], 'A', 'The CONH₂ group.', 5],
     ],
 
     'SHS 3: Polymers' => [
@@ -411,5 +565,8 @@ return [
         ['The monomer of poly(vinyl chloride) (PVC) is', ['chloroethene', 'ethene', 'propene', 'styrene'], 'A', 'Also called vinyl chloride.', 2],
         ['Proteins are natural polymers of', ['amino acids', 'glucose', 'fatty acids', 'ethene'], 'A', 'Joined by peptide links.', 2],
         ['Starch is a natural polymer of', ['glucose', 'amino acids', 'ethene', 'glycerol'], 'A', 'It is a polysaccharide.', 1],
+        ['Terylene (a polyester) is formed by', ['condensation of a diol and a dicarboxylic acid', 'addition of ethene', 'fermentation', 'cracking'], 'A', 'Water is eliminated.', 5],
+        ['Vulcanisation of rubber involves heating it with', ['sulphur', 'oxygen', 'chlorine', 'hydrogen'], 'A', 'Cross-links make it harder.', 4],
+        ['The repeating unit of poly(propene) is', ['−CH₂−CH(CH₃)−', '−CH₂−CH₂−', '−CH₂−CHCl−', '−CF₂−CF₂−'], 'A', 'From propene, CH₂=CHCH₃.', 5],
     ],
 ];

@@ -35,6 +35,22 @@ return [
         ['Unicode was developed to', ['encrypt data', 'compress images', 'represent characters from all the world\'s writing systems', 'speed up CPUs'], 'C', 'ASCII covers only English characters.', 2],
         ['Lossy compression', ['only works on text', 'keeps every bit', 'increases file size', 'permanently removes some data to reduce file size'], 'D', 'JPEG and MP3 are lossy.', 2],
         ['Add binary 1011 + 0110.', ['1101', '10001', '10101', '11001'], 'B', '11 + 6 = 17.', 2],
+        ['Convert the binary fraction 0.101 to denary.', ['0.5', '0.625', '0.75', '0.101'], 'B', '0.5 + 0.125.', 5],
+        ['In 8-bit two\'s complement, the range of integers is', ['0 to 255', '−127 to 127', '−128 to 127', '−256 to 255'], 'C', '−2⁷ to 2⁷ − 1.', 5],
+        ['A sound sampled at 44.1 kHz with 16-bit samples in stereo for 1 minute needs about', ['44 MB', '2.6 MB', '5.3 MB', '10.6 MB'], 'D', '44,100 × 2 bytes × 2 × 60.', 5],
+        ['Run-length encoding is most effective on data with', ['random values', 'long runs of repeated values', 'encrypted text', 'unique characters'], 'B', 'E.g. simple images.', 4],
+        ['Hexadecimal A3 in binary is', ['11000011', '10101100', '10100011', '10010011'], 'C', 'A = 1010, 3 = 0011.', 4],
+        ['Convert 101101 (binary) to decimal.', ['43', '45', '53', '41'], 'B', '32 + 8 + 4 + 1.', 4],
+        ['Convert 2F (hexadecimal) to decimal.', ['45', '32', '215', '47'], 'D', '2 × 16 + 15.', 4],
+        ['The two\'s complement 8-bit representation of −5 is', ['10000101', '11111011', '11111010', '00000101'], 'B', 'Invert 00000101 and add 1.', 5],
+        ['How many different values can 6 bits represent?', ['36', '32', '64', '128'], 'C', '2⁶ = 64.', 4],
+        ['A colour image 100 × 100 pixels at 24 bits per pixel needs', ['2,400 bytes', '10,000 bytes', '240,000 bytes', '30,000 bytes'], 'D', '10,000 × 3 bytes.', 5],
+        ['1 kibibyte equals', ['1000 bytes', '1024 bytes', '1024 bits', '8 bits'], 'B', '2¹⁰ bytes.', 4],
+        ['Convert 156 (decimal) to hexadecimal.', ['C9', '9C', '9A', 'A9'], 'B', '9 × 16 + 12.', 5],
+        ['Convert 77 (octal) to decimal.', ['56', '77', '63', '49'], 'C', '7 × 8 + 7.', 4],
+        ['ASCII code 65 represents', ['uppercase Z', 'lowercase a', 'the digit 0', 'uppercase A'], 'D', 'Uppercase letters start at 65.', 4],
+        ['Adding binary 0111 and 0011 gives', ['1001', '1010', '1100', '0110'], 'B', '7 + 3 = 10.', 4],
+        ['A sound file sampled at 44,100 Hz with 16 bits for 10 s (mono) is', ['7,056,000 bytes', '441,000 bytes', '882,000 bytes', '44,100 bytes'], 'C', '44100 × 2 × 10.', 5],
     ],
 
     'Computer architecture' => [
@@ -53,6 +69,13 @@ return [
         ['The accumulator is a register that', ['controls the screen', 'holds the next instruction address', 'stores files', 'holds the results of ALU calculations'], 'D', 'It accumulates results.', 2],
         ['A multi-core processor', ['has more RAM', 'has more than one processing unit on a chip', 'has a bigger screen', 'uses vacuum tubes'], 'B', 'It can run tasks in parallel.', 1],
         ['The MAR holds the', ['current instruction', 'data being transferred', 'address of the memory location being accessed', 'result of a calculation'], 'C', 'Memory Address Register.', 2],
+        ['During the fetch stage, the contents of the PC are copied to the', ['CIR', 'MDR', 'ACC', 'MAR'], 'D', 'The address is placed on the address bus.', 5],
+        ['Pipelining improves CPU performance by', ['increasing RAM', 'overlapping stages of different instructions', 'reducing voltage', 'using a bigger screen'], 'B', 'Fetch, decode and execute overlap.', 5],
+        ['A 32-bit address bus can address a maximum of', ['2 GB', '32 GB', '4 GB of memory', '64 KB'], 'C', '2³² bytes.', 5],
+        ['In the fetch–decode–execute cycle, the address of the next instruction is held in the', ['ALU', 'accumulator', 'MDR', 'program counter'], 'D', 'The PC register.', 4],
+        ['The memory address register holds', ['the data itself', 'the address of data to be accessed', 'the result of calculations', 'the instruction count'], 'B', 'The MAR register.', 4],
+        ['A multi-core processor improves performance by', ['storing more files', 'increasing RAM', 'executing several instructions in parallel', 'cooling faster'], 'C', 'Parallel processing.', 4],
+        ['Virtual memory uses', ['registers', 'cache only', 'ROM', 'secondary storage as an extension of RAM'], 'D', 'Paging to disk.', 5],
     ],
 
     'Logic' => [
@@ -68,6 +91,13 @@ return [
         ['A NOR gate outputs 1 only when', ['inputs differ', 'all inputs are 1', 'one input is 1', 'all inputs are 0'], 'D', 'NOT OR.', 2],
         ['How many rows are in the truth table of a 3-input logic gate?', ['6', '8', '3', '9'], 'B', '2³ = 8 input combinations.', 2],
         ['The Boolean expression for an AND gate with inputs A and B is', ['Ā', 'A + B', 'A · B', 'A ⊕ B'], 'C', 'The dot means AND.', 1],
+        ['Simplify the Boolean expression A·B + A·B̄.', ['1', 'B', 'A + B', 'A'], 'D', 'A(B + B̄) = A.', 5],
+        ['The expression (A + B)·(A + C) simplifies to', ['A·B + C', 'A + B·C', 'A + B + C', 'B·C'], 'B', 'Distributive law.', 5],
+        ['A half adder produces a sum and carry using', ['NAND only', 'OR and NOT', 'XOR and AND gates', 'NOR only'], 'C', 'Sum = A ⊕ B; carry = A·B.', 5],
+        ['The output of a NAND gate is 0 only when', ['one input is 1', 'all inputs are 0', 'all inputs are 1', 'inputs differ'], 'C', 'NOT of AND.', 4],
+        ['A XOR B is 1 when', ['A is 1 only', 'both are 1', 'both are 0', 'A and B are different'], 'D', 'Exclusive OR.', 4],
+        ['Simplify A + A·B.', ['B', 'A', 'A·B', 'A + B'], 'B', 'Absorption law.', 5],
+        ['By De Morgan\'s law, NOT(A AND B) equals', ['A OR B', 'NOT A AND NOT B', 'NOT A OR NOT B', 'A AND B'], 'C', 'Break the bar, change the sign.', 5],
     ],
 
     'Programming in Python' => [
@@ -96,6 +126,21 @@ return [
         ['What is the output of print("Hi" * 3)?', ['Hi3', 'HiHiHi', 'Hi Hi Hi', 'error'], 'B', 'String repetition.', 2],
         ['Which keyword is used to return a value from a function?', ['yield only', 'print', 'return', 'break'], 'C', 'return ends the function with a value.', 1],
         ['What is the output of print(10 > 3 and 2 > 5)?', ['error', 'True', '10', 'False'], 'D', 'and needs both to be True.', 2],
+        ['What is printed by: x = [1, 2, 3]; y = x; y.append(4); print(len(x))', ['error', '3', '1', '4'], 'D', 'y refers to the same list.', 5],
+        ['What is the value of sum(range(1, 5))?', ['15', '10', '5', '4'], 'B', '1 + 2 + 3 + 4.', 4],
+        ['What is printed by: print("ghana"[1:4])', ['ana', 'gha', 'han', 'hana'], 'C', 'Slice from index 1 up to 4.', 5],
+        ['A recursive function must have', ['a global variable', 'no parameters', 'a loop', 'a base case that stops the recursion'], 'D', 'Otherwise it never ends.', 5],
+        ['What does the following print? for i in range(3): print(i, end="")', ['123', '012', '0 1 2', '3'], 'B', 'end="" removes newlines.', 4],
+        ['What does print(7 % 3) display?', ['2.33', '2', '0', '1'], 'D', 'Remainder.', 4],
+        ['What is len([1, [2, 3], 4])?', ['4', '3', '2', '5'], 'B', 'The inner list counts as one item.', 5],
+        ['What does "abc"[::-1] produce?', ['"a"', '"abc"', '"cba"', 'an error'], 'C', 'Reverses the string.', 5],
+        ['How many times does for i in range(2, 10, 3) loop?', ['2', '8', '4', '3'], 'D', 'i = 2, 5, 8.', 5],
+        ['What does print(2 ** 3 ** 2) display?', ['64', '512', '36', '12'], 'B', 'Right-associative: 2 ** 9.', 5],
+        ['What is the output of print([x * 2 for x in range(3)])?', ['[2, 4, 6]', '[0, 2, 4]', '[0, 1, 2]', '[1, 2, 3]'], 'B', 'range(3) = 0, 1, 2.', 5],
+        ['What does print("Hi" * 3) display?', ['Hi Hi Hi', 'Hi3', 'HiHiHi', 'an error'], 'C', 'String repetition.', 4],
+        ['After a = [1, 2]; b = a; b.append(3), the value of a is', ['an error', '[1, 2]', '[3]', '[1, 2, 3]'], 'D', 'Same list object.', 5],
+        ['What is bool("") in Python?', ['True', 'False', 'None', 'an error'], 'B', 'Empty string is falsy.', 5],
+        ['What does int("7") + 3 give?', ['73', '"73"', '10', 'an error'], 'C', 'Converted to an integer.', 4],
     ],
 
     'Algorithms and data structures' => [
@@ -115,6 +160,12 @@ return [
         ['Bubble sort repeatedly', ['picks a pivot', 'splits the list in half', 'swaps adjacent items that are in the wrong order', 'reverses the list'], 'C', 'Large items "bubble" to the end.', 2],
         ['A tree data structure has a top node called the', ['stack', 'leaf', 'branch', 'root'], 'D', 'Leaves have no children.', 2],
         ['Which algorithm is generally fastest for sorting large lists?', ['bubble sort', 'merge sort', 'linear search', 'insertion sort for huge lists'], 'B', 'It is O(n log n).', 3],
+        ['The time complexity of binary search is', ['O(n²)', 'O(n)', 'O(log n)', 'O(1)'], 'C', 'It halves each step.', 5],
+        ['The worst-case time complexity of bubble sort is', ['O(log n)', 'O(n log n)', 'O(n)', 'O(n²)'], 'D', 'Nested passes.', 5],
+        ['After pushing 3, 5, 7 onto an empty stack and popping once, the top item is', ['7', '5', '3', 'empty'], 'B', '7 is removed.', 4],
+        ['The maximum number of comparisons a binary search needs for 1,000 sorted items is about', ['1000', '500', '10', '100'], 'C', '2¹⁰ = 1024.', 5],
+        ['A queue follows the principle of', ['priority only', 'last in, first out', 'random access', 'first in, first out'], 'D', 'FIFO order.', 4],
+        ['Pushing 1, 2, 3 onto a stack and popping once returns', ['3', '1', '2', 'nothing'], 'A', 'Last in, first out.', 4],
     ],
 
     'Networks and the internet' => [
@@ -132,6 +183,12 @@ return [
         ['TCP/IP is', ['an operating system', 'a type of cable', 'a browser', 'the suite of protocols the internet uses'], 'D', 'TCP ensures reliable delivery.', 2],
         ['A packet in networking is', ['a type of cable', 'a small unit of data sent over a network', 'a router', 'a website'], 'B', 'Packets are reassembled at the destination.', 2],
         ['Latency in a network is the', ['number of users', 'amount of data', 'delay before data begins to transfer', 'cable length'], 'C', 'Measured in milliseconds.', 2],
+        ['In TCP/IP, the protocol that guarantees ordered, reliable delivery is', ['IP', 'UDP', 'TCP', 'ARP'], 'C', 'UDP is connectionless.', 4],
+        ['The transport-layer port commonly used for HTTPS is', ['25', '80', '21', '443'], 'D', '80 is HTTP.', 5],
+        ['How many usable host addresses are in a /24 IPv4 subnet?', ['254', '256', '255', '24'], 'A', '2⁸ − 2.', 5],
+        ['DNS is used to', ['translate domain names into IP addresses', 'encrypt data', 'assign MAC addresses', 'route packets'], 'A', 'Name resolution.', 4],
+        ['HTTPS differs from HTTP because it', ['encrypts data using TLS', 'is faster', 'uses no ports', 'needs no server'], 'A', 'Secure transfer.', 4],
+        ['The topology in which all nodes connect to a central switch is', ['star', 'bus', 'ring', 'mesh'], 'A', 'Central device.', 4],
     ],
 
     'Databases' => [
@@ -146,6 +203,12 @@ return [
         ['Normalisation in databases aims to', ['increase duplication', 'reduce data redundancy', 'delete all data', 'slow queries'], 'B', 'Data is split into related tables.', 3],
         ['The SQL command to change existing data is', ['INSERT', 'SELECT', 'UPDATE', 'CREATE'], 'C', 'UPDATE table SET ... WHERE ...', 2],
         ['A query in a database is used to', ['print slides', 'draw pictures', 'format text', 'retrieve specific information'], 'D', 'It filters and sorts records.', 1],
+        ['The SQL query SELECT COUNT(*) FROM students WHERE age > 16 returns', ['all students', 'the number of students older than 16', 'their ages', 'nothing'], 'B', 'COUNT aggregates rows.', 4],
+        ['A many-to-many relationship in a relational database is implemented using', ['a primary key only', 'one table', 'a link (junction) table', 'a view'], 'C', 'E.g. students–courses.', 5],
+        ['Referential integrity ensures that', ['no nulls exist', 'data is encrypted', 'tables are sorted', 'foreign key values match existing primary keys'], 'D', 'Prevents orphan records.', 5],
+        ['A foreign key is a field that', ['refers to the primary key of another table', 'uniquely identifies records in its table', 'is always numeric', 'is encrypted'], 'A', 'Links tables.', 4],
+        ['Which SQL clause filters rows?', ['WHERE', 'ORDER BY', 'SELECT', 'FROM'], 'A', 'Conditions on rows.', 4],
+        ['Normalisation aims mainly to', ['reduce data redundancy', 'increase duplication', 'speed up typing', 'remove keys'], 'A', 'Avoid anomalies.', 5],
     ],
 
     'Security, software development and emerging technology' => [
@@ -164,6 +227,10 @@ return [
         ['Agile software development works in', ['paper only', 'one long phase', 'no planning', 'short iterations with frequent feedback'], 'D', 'Scrum is an agile method.', 2],
         ['Cloud computing means', ['computing during rain', 'using computing services over the internet', 'storing data only on paper', 'using a calculator'], 'B', 'Examples: Google Drive, AWS.', 1],
         ['Social engineering attacks', ['cool servers', 'damage hardware', 'trick people into revealing confidential information', 'speed up networks'], 'C', 'Phishing is an example.', 2],
+        ['A brute-force attack tries to', ['guess passwords by trying all combinations', 'flood a network', 'trick users by email', 'encrypt files'], 'A', 'Exhaustive search.', 4],
+        ['In the waterfall model, each phase', ['is completed before the next begins', 'runs in parallel', 'is repeated weekly', 'is skipped'], 'A', 'Sequential.', 4],
+        ['Encryption with a public and private key pair is', ['asymmetric encryption', 'symmetric encryption', 'hashing', 'compression'], 'A', 'E.g. RSA.', 5],
+        ['A hash function is used to', ['produce a fixed-length digest of data', 'decrypt files', 'compress images', 'route packets'], 'A', 'One-way.', 5],
     ],
 
     'SHS 1: Computer structure' => [
@@ -177,6 +244,8 @@ return [
         ['Clock speed of a CPU is measured in', ['gigabytes (GB)', 'gigahertz (GHz)', 'megapixels', 'volts'], 'B', 'It is the number of cycles per second.', 1],
         ['The motherboard connects', ['the internet', 'only the monitor', 'only the printer', 'the CPU, memory and other components'], 'D', 'It is the main circuit board.', 1],
         ['The power supply unit converts', ['DC to AC', 'mains AC to low-voltage DC for components', 'data to light', 'sound to data'], 'B', 'Computers use DC.', 2],
+        ['A CPU with a 3 GHz clock completes how many cycles per second?', ['3', '3 × 10⁶', '3 × 10³', '3 × 10⁹'], 'D', 'Giga = 10⁹.', 4],
+        ['Cache hit ratio of 90% means', ['the cache is 90% full', '90% of memory requests are found in cache', 'the CPU is 90% busy', 'RAM is 90% used'], 'B', 'Fewer slow RAM accesses.', 5],
     ],
 
     'SHS 1: Hardware and software' => [
@@ -190,6 +259,7 @@ return [
         ['An SSD is faster than a traditional hard disk because it', ['is larger', 'spins faster', 'has no moving parts', 'uses tape'], 'C', 'It uses flash memory.', 2],
         ['Utility software performs', ['games', 'word processing', 'maintenance tasks such as backup and antivirus', 'web design'], 'C', 'It keeps the system healthy.', 1],
         ['An example of system software is', ['a photo editor', 'a spreadsheet', 'a game', 'an operating system'], 'D', 'It manages hardware.', 1],
+        ['Moore\'s law observed that the number of transistors on a chip', ['stays constant', 'halves every year', 'roughly doubles every two years', 'triples monthly'], 'C', 'Gordon Moore, 1965.', 4],
     ],
 
     'SHS 1: Computer networking' => [
@@ -203,6 +273,8 @@ return [
         ['A network in which all computers have equal status is', ['WAN only', 'client–server', 'mainframe', 'peer-to-peer'], 'D', 'There is no central server.', 2],
         ['A router forwards data between', ['one computer\'s parts', 'different networks', 'keyboard and mouse', 'printer and paper'], 'B', 'It uses IP addresses.', 2],
         ['A server in a network', ['only displays', 'only prints', 'provides services or resources to other computers', 'has no storage'], 'C', 'Clients request services.', 1],
+        ['A network of 6 computers in a full mesh needs how many links?', ['12', '6', '30', '15'], 'D', 'n(n − 1)/2.', 5],
+        ['Packet switching sends data by', ['a single dedicated circuit', 'splitting it into packets that may travel different routes', 'post', 'radio only'], 'B', 'Used on the internet.', 4],
     ],
 
     'SHS 1: Computational thinking and programming logic' => [
@@ -216,19 +288,22 @@ return [
         ['An error that causes a program to give wrong results but still run is a', ['syntax error', 'logic error', 'hardware error', 'runtime crash'], 'B', 'Syntax errors stop compilation.', 2],
         ['Pattern recognition in computational thinking means', ['typing fast', 'drawing patterns', 'coding colours', 'spotting similarities between problems'], 'D', 'It allows reuse of solutions.', 2],
         ['A selection construct in a program allows', ['repeating forever', 'choosing between paths based on a condition', 'storing data only', 'printing only'], 'B', 'E.g. if–else.', 1],
+        ['What is the output of the pseudocode: x ← 1; REPEAT x ← x × 2 UNTIL x > 20; OUTPUT x', ['20', '16', '32', '64'], 'C', '1, 2, 4, 8, 16, 32.', 5],
+        ['A trace table is used to', ['print reports', 'design hardware', 'store files', 'record variable values as an algorithm runs'], 'D', 'Helps find logic errors.', 4],
     ],
 
     'SHS 1: Web development' => [
         ['In HTML, which tag creates a hyperlink?', ['<img>', '<p>', '<a>', '<h1>'], 'C', 'For example: <a href="https://example.com">Visit</a>.', 1],
         ['Which language is mainly used to style the appearance of web pages?', ['Python', 'HTML', 'SQL', 'CSS'], 'D', 'HTML gives structure; CSS gives colours, fonts and layout.', 1],
-        ['HTTPS differs from HTTP because it', ['is slower always', 'encrypts the data sent between browser and server', 'does not use the internet', 'only sends images'], 'B', 'A padlock in the address bar shows HTTPS is in use.', 2],
         ['Which HTML tag displays an image?', ['<ul>', '<a>', '<img>', '<table>'], 'C', 'The src attribute gives the image file.', 1],
         ['HTML stands for', ['Hyper Transfer Main Link', 'High Tech Modern Language', 'HyperText Markup Language', 'Home Tool Markup Language'], 'C', 'It structures web pages.', 1],
         ['The HTML tag for the largest heading is', ['<p>', '<h6>', '<head>', '<h1>'], 'D', '<h6> is the smallest.', 1],
         ['CSS is used to', ['run servers', 'store databases', 'style the appearance of web pages', 'write operating systems'], 'C', 'Cascading Style Sheets.', 1],
         ['The HTML tag used to create a hyperlink is', ['<url>', '<link>', '<href>', '<a>'], 'D', 'The href attribute gives the address.', 2],
-        ['The <img> tag is used to', ['display an image on a web page', 'create a link', 'make a heading', 'start a table'], 'A', 'The src attribute gives the file.', 1],
-        ['The <p> tag defines a', ['paragraph', 'picture', 'program', 'page link'], 'A', 'Text blocks.', 1],
+        ['The <img> tag is used to', ['create a link', 'display an image on a web page', 'make a heading', 'start a table'], 'B', 'The src attribute gives the file.', 1],
+        ['The <p> tag defines a', ['program', 'picture', 'paragraph', 'page link'], 'C', 'Text blocks.', 1],
+        ['In CSS, the selector #main targets an element with', ['class="main"', 'id="main"', 'tag <main> only', 'name="main"'], 'B', '. is used for classes.', 4],
+        ['The CSS box model consists of content, padding, border and', ['colour', 'font', 'margin', 'shadow'], 'C', 'From inside out.', 4],
     ],
 
     'SHS 2: Boolean algebra' => [
@@ -236,12 +311,14 @@ return [
         ['What is A · 1 equal to?', ['1', 'A', '0', 'Ā'], 'B', 'The identity law for AND.', 2],
         ['What is A + 1 equal to?', ['0', 'A', '1', 'Ā'], 'C', 'Anything OR 1 is 1.', 2],
         ['Simplify A·B + A·B̄.', ['1', 'B', 'A·B', 'A'], 'D', 'A·B + A·B̄ = A(B + B̄) = A × 1 = A.', 3],
-        ['Simplify A + A.', ['A', '2A', '1', '0'], 'A', 'Idempotent law.', 2],
-        ['Simplify A · 1.', ['A', '1', '0', 'Ā'], 'A', 'Identity law.', 1],
-        ['De Morgan\'s law states that NOT(A AND B) equals', ['(NOT A) OR (NOT B)', '(NOT A) AND (NOT B)', 'A OR B', 'A AND B'], 'A', '¬(A·B) = Ā + B̄.', 3],
-        ['Simplify A + Ā.', ['1', '0', 'A', 'Ā'], 'A', 'Complement law.', 2],
-        ['Simplify A · Ā.', ['0', '1', 'A', 'Ā'], 'A', 'A thing and its complement cannot both be 1.', 2],
-        ['Simplify A + 1.', ['1', 'A', '0', 'Ā'], 'A', 'Anything OR 1 is 1.', 2],
+        ['Simplify A + A.', ['0', '2A', '1', 'A'], 'D', 'Idempotent law.', 2],
+        ['Simplify A · 1.', ['1', 'A', '0', 'Ā'], 'B', 'Identity law.', 1],
+        ['De Morgan\'s law states that NOT(A AND B) equals', ['A OR B', '(NOT A) AND (NOT B)', '(NOT A) OR (NOT B)', 'A AND B'], 'C', '¬(A·B) = Ā + B̄.', 3],
+        ['Simplify A + Ā.', ['Ā', '0', 'A', '1'], 'D', 'Complement law.', 2],
+        ['Simplify A · Ā.', ['1', '0', 'A', 'Ā'], 'B', 'A thing and its complement cannot both be 1.', 2],
+        ['Simplify A + 1.', ['0', 'A', '1', 'Ā'], 'C', 'Anything OR 1 is 1.', 2],
+        ['Apply De Morgan\'s law to NOT(A + B).', ['Ā · B̄', 'Ā + B̄', 'A · B', 'A + B'], 'A', '¬(A ∨ B) = ¬A ∧ ¬B.', 4],
+        ['How many NAND gates are needed to make an AND gate?', ['2', '1', '3', '4'], 'A', 'NAND followed by NAND-as-NOT.', 5],
     ],
 
     'SHS 2: Barcodes and input technologies' => [
@@ -254,6 +331,7 @@ return [
         ['Magnetic Ink Character Recognition (MICR) is used mainly by', ['banks to read cheques', 'schools to mark exams', 'shops to read barcodes', 'phones to read faces'], 'A', 'The numbers are printed in magnetic ink.', 2],
         ['A barcode reader reads data using', ['reflected light', 'magnetism', 'sound', 'heat'], 'A', 'Black bars absorb light.', 1],
         ['Touchscreens detect input by', ['sensing pressure or electrical changes from touch', 'sound', 'smell', 'heat only'], 'A', 'Resistive or capacitive.', 2],
+        ['The check digit in a barcode is used to', ['detect errors in scanning', 'show the price', 'identify the country only', 'encrypt data'], 'A', 'Calculated from other digits.', 5],
     ],
 
     'SHS 2: Network topologies' => [
@@ -265,6 +343,7 @@ return [
         ['A mesh topology is reliable because', ['there are multiple paths between devices', 'it uses one cable', 'it has no connections', 'it is cheap'], 'A', 'Data can be rerouted.', 2],
         ['In a ring topology, data travels', ['around the ring from device to device', 'only to a hub', 'randomly', 'only upward'], 'A', 'A token may control access.', 2],
         ['A hybrid topology', ['combines two or more topologies', 'uses no cables', 'has one computer', 'is a ring only'], 'A', 'Common in large organisations.', 2],
+        ['A star network fails completely if', ['the central switch fails', 'one cable fails', 'one computer fails', 'a printer fails'], 'A', 'Single point of failure.', 4],
     ],
 
     'SHS 2: Main memory and data structures' => [
@@ -273,10 +352,12 @@ return [
         ['A data structure that stores items of the same type under one name, accessed by index, is', ['a loop', 'a record', 'a file', 'an array'], 'D', 'For example, scores[0], scores[1] and so on.', 1],
         ['An array stores', ['elements of the same type in contiguous positions', 'only one value', 'files on disk', 'web pages'], 'A', 'Elements are accessed by index.', 1],
         ['In most programming languages, the first index of an array is', ['0', '1', '−1', '10'], 'A', 'Zero-based indexing.', 1],
-        ['A queue follows the principle of', ['First In, First Out', 'Last In, First Out', 'random access', 'sorted order only'], 'A', 'Like people waiting in line.', 1],
         ['A linked list stores each element with', ['a pointer to the next element', 'an index number only', 'a fixed size', 'no data'], 'A', 'Nodes can be anywhere in memory.', 2],
         ['RAM stands for', ['Random Access Memory', 'Read Access Memory', 'Run All Memory', 'Real Active Memory'], 'A', 'It is volatile.', 1],
         ['A two-dimensional array is like a', ['table with rows and columns', 'single list', 'tree', 'stack'], 'A', 'Accessed with two indices.', 2],
+        ['In a circular queue of size 5 with front at index 3 and rear at index 1, the number of items is', ['4', '2', '3', '5'], 'A', 'Indices 3, 4, 0, 1.', 5],
+        ['Accessing an element of an array by index takes', ['constant time O(1)', 'O(n)', 'O(n²)', 'O(log n)'], 'A', 'Direct addressing.', 5],
+        ['A binary search tree stores values so that', ['left subtree values are smaller and right subtree values are larger', 'all values are random', 'only leaves store values', 'the root is the largest'], 'A', 'Enables fast search.', 5],
     ],
 
     'SHS 2: Programming in Python' => [
@@ -291,6 +372,10 @@ return [
         ['What is the output of print(type(5))?', ["<class 'int'>", "<class 'str'>", "<class 'float'>", '5'], 'A', '5 is an integer.', 2],
         ['Which operator checks equality in Python?', ['==', '=', '!=', '=>'], 'A', '= assigns a value.', 1],
         ['What does list.append(x) do?', ['adds x to the end of the list', 'removes x', 'sorts the list', 'clears the list'], 'A', 'Lists are mutable.', 1],
+        ['What is the output of: print([x * 2 for x in range(3)])', ['[0, 2, 4]', '[2, 4, 6]', '[0, 1, 2]', '[0, 2, 4, 6]'], 'A', 'List comprehension.', 5],
+        ['What is the output of: d = {"a": 1}; d["b"] = 2; print(len(d))', ['2', '1', '3', 'error'], 'A', 'A key is added.', 4],
+        ['What happens when a Python program divides by zero without handling it?', ['A ZeroDivisionError is raised', 'It returns 0', 'It returns infinity', 'It is ignored'], 'A', 'Use try/except.', 4],
+        ['What is printed by: print(10 // 3, 10 % 3)', ['3 1', '3.33 1', '3 0', '1 3'], 'A', 'Quotient and remainder.', 4],
     ],
 
     'SHS 3: System software' => [
@@ -301,9 +386,11 @@ return [
         ['The kernel is the', ['core part of an operating system', 'screen saver', 'web browser', 'antivirus'], 'A', 'It manages hardware resources.', 2],
         ['Disk defragmentation', ['rearranges file fragments so they are stored together', 'deletes all files', 'encrypts data', 'formats the disk'], 'A', 'It is not needed for SSDs.', 2],
         ['Multitasking allows', ['several programs to run at the same time', 'only one program to run', 'the computer to shut down', 'hardware to be removed'], 'A', 'The OS shares CPU time.', 1],
-        ['Virtual memory uses', ['part of the storage drive as extra RAM', 'the internet', 'the screen', 'the keyboard'], 'A', 'It is slower than real RAM.', 2],
         ['Device management by the OS means', ['controlling hardware devices through drivers', 'deleting devices', 'buying hardware', 'repairing screens'], 'A', 'The OS talks to devices.', 2],
         ['A file management system lets users', ['create, rename, move and delete files', 'only print', 'only browse', 'only play music'], 'A', 'File Explorer is an example.', 1],
+        ['Thrashing in virtual memory occurs when', ['the system spends more time swapping pages than executing', 'the CPU overheats', 'the disk is full of files', 'RAM is unused'], 'A', 'Too little physical memory.', 5],
+        ['A deadlock occurs when', ['processes wait for resources held by each other indefinitely', 'the CPU is idle', 'memory is free', 'a program ends normally'], 'A', 'Circular wait.', 5],
+        ['Round-robin scheduling gives each process', ['a fixed time slice in turn', 'unlimited CPU time', 'priority only', 'no CPU time'], 'A', 'Fair sharing.', 4],
     ],
 
     'SHS 3: Network design and implementation' => [
@@ -315,6 +402,8 @@ return [
         ['Subnetting a network means', ['dividing it into smaller logical networks', 'joining it to the internet', 'removing all cables', 'encrypting data'], 'A', 'It improves management and security.', 3],
         ['A VPN provides', ['a secure encrypted connection over a public network', 'free internet', 'faster CPUs', 'more storage'], 'A', 'Virtual Private Network.', 2],
         ['Network cabling should be planned to', ['reach all devices with minimum interference', 'look decorative', 'avoid switches', 'use the longest routes'], 'A', 'Good design reduces faults.', 2],
+        ['The network address of 192.168.10.37/24 is', ['192.168.10.0', '192.168.10.37', '192.168.0.0', '192.168.10.255'], 'A', 'Last octet zeroed.', 5],
+        ['The broadcast address of 192.168.10.0/24 is', ['192.168.10.255', '192.168.10.1', '255.255.255.0', '192.168.10.0'], 'A', 'All host bits set to 1.', 5],
     ],
 
     'SHS 3: Mass storage and artificial intelligence' => [
@@ -328,6 +417,8 @@ return [
         ['Bias in AI systems can arise from', ['unrepresentative training data', 'fast processors', 'large screens', 'cloud storage'], 'A', 'Biased data gives biased results.', 2],
         ['A terabyte is about', ['1,000 gigabytes', '1,000 megabytes', '1,000 kilobytes', '100 gigabytes'], 'A', 'Strictly 1,024 GB.', 2],
         ['Computer vision is AI that enables computers to', ['interpret images and video', 'smell', 'taste', 'feel heat'], 'A', 'Used in face recognition.', 2],
+        ['RAID 1 provides data protection by', ['mirroring data on two disks', 'striping without redundancy', 'compressing data', 'encrypting data'], 'A', 'A copy exists if one disk fails.', 5],
+        ['In supervised machine learning, the training data must be', ['labelled with correct outputs', 'unlabelled', 'random noise', 'images only'], 'A', 'E.g. spam/not spam.', 5],
     ],
 
     'SHS 3: Web technologies and databases' => [
@@ -340,5 +431,7 @@ return [
         ['A server-side language used with databases on websites is', ['PHP', 'HTML', 'CSS', 'JPEG'], 'A', 'It runs on the web server.', 2],
         ['The SQL clause used to filter records is', ['WHERE', 'ORDER BY', 'FROM', 'GROUP'], 'A', 'SELECT * FROM t WHERE age > 18.', 1],
         ['A web server', ['stores and delivers web pages to browsers', 'only sends e-mail', 'prints documents', 'creates databases only'], 'A', 'Apache is an example.', 2],
+        ['The SQL statement SELECT name FROM students ORDER BY score DESC returns names', ['from highest to lowest score', 'from lowest to highest', 'alphabetically', 'randomly'], 'A', 'DESC = descending.', 4],
+        ['SQL injection attacks are prevented by', ['using parameterised (prepared) queries', 'larger databases', 'more images', 'disabling CSS'], 'A', 'Input is not executed as code.', 5],
     ],
 ];

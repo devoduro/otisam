@@ -35,6 +35,16 @@ return [
         ['Macronutrients needed by plants in large amounts include', ['boron', 'iron and zinc', 'copper only', 'nitrogen, phosphorus and potassium'], 'D', 'Iron and zinc are micronutrients.', 1],
         ['Nitrogen deficiency in plants shows as', ['purple leaves', 'yellowing of older leaves', 'strong growth', 'dark green leaves'], 'B', 'Nitrogen is mobile in plants.', 2],
         ['Organic manure improves soil by', ['removing water', 'making it acidic always', 'adding nutrients and improving structure', 'killing earthworms'], 'C', 'It increases humus.', 1],
+        ['A soil sample weighing 120 g wet and 100 g oven-dry has a moisture content (dry basis) of', ['16.7%', '20%', '120%', '83%'], 'B', '20/100 × 100.', 5],
+        ['Soil with pH 4.5 is likely to have', ['high nitrogen fixation', 'excess calcium', 'aluminium toxicity and low phosphorus availability', 'ideal conditions'], 'C', 'Acid soils lock up P.', 5],
+        ['The bulk density of a soil is calculated as', ['mass of particles ÷ particle volume', 'wet mass ÷ volume', 'volume ÷ mass', 'oven-dry mass ÷ total volume'], 'D', 'Particle density uses particle volume.', 5],
+        ['The particle density of most mineral soils is about', ['1.0 g/cm³', '2.65 g/cm³', '5.5 g/cm³', '0.5 g/cm³'], 'B', 'Close to quartz.', 5],
+        ['Porosity of a soil with bulk density 1.325 g/cm³ and particle density 2.65 g/cm³ is', ['75%', '25%', '50%', '100%'], 'C', '1 − 1.325/2.65.', 5],
+        ['The horizon of a soil profile richest in humus is the', ['B horizon', 'A horizon', 'C horizon', 'bedrock'], 'B', 'Topsoil.', 4],
+        ['Cation exchange capacity is highest in soils rich in', ['gravel', 'sand', 'clay and humus', 'stones'], 'C', 'Negatively charged colloids.', 5],
+        ['Soil with 40% sand, 40% silt and 20% clay is classified as', ['silty clay', 'clay', 'sand', 'loam'], 'D', 'Balanced texture.', 5],
+        ['Waterlogging harms plant roots mainly by', ['adding nutrients', 'reducing soil aeration', 'raising pH', 'warming soil'], 'B', 'Lack of oxygen.', 4],
+        ['Contour ploughing helps to', ['raise soil temperature', 'increase run-off', 'reduce soil erosion on slopes', 'drain swamps'], 'C', 'Across the slope.', 4],
     ],
 
     'Crop production' => [
@@ -60,6 +70,14 @@ return [
         ['Staking is done for crops such as', ['groundnut', 'yam and tomato', 'rice', 'cowpea'], 'B', 'It supports climbing or heavy plants.', 1],
         ['Pruning in cocoa helps to', ['reduce yield', 'kill the tree', 'remove diseased branches and improve air flow', 'increase pests'], 'C', 'It also shapes the tree.', 1],
         ['Mixed cropping means', ['leaving land fallow', 'growing one crop', 'rearing animals', 'growing two or more crops together on the same land'], 'D', 'It spreads risk.', 1],
+        ['Maize planted at 75 cm × 25 cm with one plant per stand gives how many plants per hectare?', ['40,000', '53,333', '75,000', '25,000'], 'B', '10,000 m² ÷ 0.1875 m².', 5],
+        ['A seed lot with 85% germination is sown to obtain 40,000 plants/ha. The seeds needed are about', ['34,000', '40,000', '47,060', '85,000'], 'C', '40,000 ÷ 0.85.', 5],
+        ['Photoperiodism in crops refers to flowering in response to', ['fertiliser', 'temperature only', 'soil pH', 'day length'], 'D', 'Short-day and long-day plants.', 4],
+        ['Cassava planted at 1 m × 1 m with one cutting per stand needs how many cuttings per hectare?', ['5,000', '1,000', '100,000', '10,000'], 'D', '10,000 m² ÷ 1 m².', 4],
+        ['The recommended spacing for maize of 75 cm × 25 cm gives about how many plants per hectare (one per stand)?', ['25,000', '40,000', '75,000', '53,333'], 'D', '10,000 m² ÷ 0.1875 m².', 5],
+        ['Cocoa is propagated commercially by', ['suckers', 'seeds and cuttings or grafts', 'tubers', 'rhizomes'], 'B', 'Seed and vegetative methods.', 4],
+        ['Hardening-off of seedlings means', ['pruning roots', 'adding fertiliser', 'gradually exposing them to field conditions', 'spraying pesticides'], 'C', 'Acclimatisation.', 4],
+        ['Ratooning is practised in', ['groundnut', 'maize', 'yam', 'sugarcane'], 'D', 'Regrowth from stubble.', 5],
     ],
 
     'Crop protection' => [
@@ -81,6 +99,15 @@ return [
         ['The cassava mosaic disease is spread by', ['rain only', 'birds', 'whiteflies and infected cuttings', 'rodents'], 'C', 'It is caused by a virus.', 2],
         ['Rodenticides are used to control', ['insects', 'weeds', 'fungi', 'rats and mice'], 'D', 'Rodents eat stored produce.', 1],
         ['Integrated pest management (IPM) combines', ['only chemicals', 'several control methods to reduce pests safely', 'no control', 'only burning'], 'B', 'It reduces pesticide use.', 2],
+        ['A systemic insecticide works by', ['killing only on contact', 'being absorbed and moving through the plant', 'repelling insects with smell only', 'blocking sunlight'], 'B', 'Sucking insects take it in.', 4],
+        ['The economic threshold in pest management is the pest level at which', ['crops are harvested', 'pests are zero', 'control action should be taken to prevent economic loss', 'pests are harmless'], 'C', 'Below it, control costs more than the loss.', 5],
+        ['Fall armyworm mainly attacks', ['oil palm', 'cocoa', 'cassava', 'maize'], 'D', 'It spread to Ghana around 2016.', 4],
+        ['The LD₅₀ of a pesticide is', ['its price', 'the dose that kills 50% of test animals', 'its colour', 'the area it covers'], 'B', 'Lower LD₅₀ = more toxic.', 5],
+        ['Resistance of pests to pesticides develops mainly through', ['biological control', 'rotating chemicals', 'repeated use of the same chemical', 'crop rotation'], 'C', 'Selection pressure.', 4],
+        ['Cocoa swollen shoot disease is spread by', ['aphids', 'mealybugs', 'whiteflies', 'thrips'], 'B', 'Viral vector.', 4],
+        ['The fall armyworm attacks mainly', ['cocoa', 'cassava', 'maize', 'yam'], 'C', 'Leaf and cob damage.', 4],
+        ['Integrated pest management combines', ['several control methods to keep pests below damaging levels', 'only chemicals', 'only burning', 'no control'], 'A', 'Economic threshold.', 5],
+        ['A systemic pesticide', ['is absorbed and moves within the plant', 'acts only on contact', 'kills only weeds', 'is a fertiliser'], 'A', 'Translocated.', 5],
     ],
 
     'Mechanisation and economics' => [
@@ -101,6 +128,10 @@ return [
         ['Farm records help the farmer to', ['grow fewer crops', 'avoid farming', 'pay no tax', 'know profit or loss and plan'], 'D', 'Good records support decisions.', 1],
         ['Labour cost is an example of a', ['fixed cost', 'variable cost', 'sunk cost', 'land cost'], 'B', 'It changes with output.', 2],
         ['Depreciation of a tractor is', ['its purchase price', 'its fuel cost', 'the loss in its value over time', 'its repair cost only'], 'C', 'It is a fixed cost.', 2],
+        ['A tractor bought for GH¢200,000 with a salvage value of GH¢20,000 and 10-year life depreciates per year by (straight line)', ['GH¢20,000', 'GH¢18,000', 'GH¢22,000', 'GH¢2,000'], 'B', '(200,000 − 20,000)/10.', 4],
+        ['Opportunity cost for a farmer who grows maize instead of cassava on the same land is', ['labour cost', 'the cost of maize seed', 'the income forgone from cassava', 'the land rent'], 'C', 'The next best alternative.', 4],
+        ['The implement used for primary tillage is the', ['plough', 'harrow', 'ridger', 'planter'], 'A', 'First cultivation.', 4],
+        ['Revenue GH¢12,000, variable costs GH¢5,000, fixed costs GH¢3,000. Net farm income is', ['GH¢4,000', 'GH¢7,000', 'GH¢9,000', 'GH¢2,000'], 'A', '12,000 − 8,000.', 5],
     ],
 
     'SHS 1: The meaning and importance of agriculture' => [
@@ -126,6 +157,7 @@ return [
         ['Farm tools should be cleaned and oiled after use to', ['blunt them', 'make them heavy', 'change their colour', 'prevent rusting'], 'D', 'Proper care extends their life.', 1],
         ['A sickle is used for', ['digging', 'cutting grass and harvesting cereals', 'spraying', 'carrying'], 'B', 'It has a curved blade.', 1],
         ['A rake is used to', ['plough', 'cut trees', 'level soil and gather debris', 'spray'], 'C', 'It has teeth.', 1],
+        ['The draw-bar of a tractor is used to', ['steer', 'lift implements', 'drive the PTO', 'tow trailed implements'], 'D', 'The three-point linkage lifts mounted ones.', 4],
     ],
 
     'SHS 1: Principles of crop production' => [
@@ -138,6 +170,8 @@ return [
         ['Supplying nutrients through fertiliser is called', ['harvesting', 'thinning', 'weeding', 'fertiliser application'], 'D', 'It boosts growth.', 1],
         ['Planting improved seeds helps to', ['reduce yields', 'increase yields', 'attract pests', 'delay harvest'], 'B', 'Certified seeds are recommended.', 1],
         ['Seed dormancy means', ['it is a hybrid', 'the seed is dead', 'it germinates immediately', 'a seed does not germinate even under good conditions'], 'D', 'It can be broken by treatment.', 2],
+        ['A farmer applies 120 kg of N per hectare using sulphate of ammonia (21% N). The fertiliser needed per hectare is about', ['21 kg', '120 kg', '252 kg', '571 kg'], 'D', '120 ÷ 0.21.', 5],
+        ['The law of the minimum (Liebig) states that growth is limited by', ['the most abundant nutrient', 'the scarcest essential factor', 'sunlight only', 'labour'], 'B', 'Like the shortest stave of a barrel.', 5],
     ],
 
     'SHS 1: Animal production and management' => [
@@ -150,6 +184,8 @@ return [
         ['The system in which animals roam freely to find their own food is', ['the intensive system', 'the extensive (free-range) system', 'the battery system', 'zero grazing'], 'B', 'It needs little capital.', 1],
         ['Clean water should always be available to farm animals because water', ['causes disease', 'is a luxury', 'is needed for all body functions', 'replaces feed'], 'C', 'Dehydration reduces production.', 1],
         ['Intensive animal production keeps animals', ['roaming freely', 'confined and fed by the farmer', 'in forests', 'without care'], 'B', 'It gives higher output per area.', 1],
+        ['A dairy cow produces 12 litres a day for a 300-day lactation. Total milk yield is', ['360 litres', '1,200 litres', '3,600 litres', '12,000 litres'], 'C', '12 × 300.', 4],
+        ['Zero grazing means', ['grazing on bare land', 'animals are not fed', 'animals graze freely', 'animals are fed cut fodder in stalls'], 'D', 'Cut-and-carry.', 4],
     ],
 
     'SHS 1: Soil, forests and climate change' => [
@@ -184,7 +220,9 @@ return [
         ['Farm credit helps farmers to', ['avoid farming', 'buy inputs and equipment', 'reduce output', 'sell land'], 'B', 'Loans finance production.', 1],
         ['The law of supply and demand determines', ['soil type', 'rainfall', 'farm produce prices', 'seed colour'], 'C', 'Gluts lower prices.', 1],
         ['Farmer-based organisations help farmers to', ['avoid extension', 'compete against each other', 'stop farming', 'buy inputs and sell produce together'], 'D', 'Group action gives bargaining power.', 2],
-        ['The law of diminishing returns in farming means', ['adding more of one input eventually gives smaller extra output', 'output always rises equally', 'inputs are useless', 'output falls immediately'], 'A', 'E.g. too much fertiliser.', 2],
+        ['The law of diminishing returns in farming means', ['output always rises equally', 'adding more of one input eventually gives smaller extra output', 'inputs are useless', 'output falls immediately'], 'B', 'E.g. too much fertiliser.', 2],
+        ['The farm gate price is', ['the export price', 'the retail price', 'the price received by the farmer at the farm', 'the wholesale price'], 'C', 'Before transport and marketing.', 4],
+        ['Diffusion of innovations among farmers usually begins with', ['government only', 'laggards', 'everyone equally', 'innovators and early adopters'], 'D', 'Rogers\' adoption curve.', 5],
     ],
 
     'SHS 2: Agricultural industries' => [
@@ -207,6 +245,7 @@ return [
         ['A farm with dimensions 100 m by 50 m has an area of', ['0.5 hectare', '5 hectares', '50 hectares', '0.05 hectare'], 'A', '5,000 m² ÷ 10,000.', 2],
         ['A farm map shows the', ['layout of plots, buildings and boundaries', 'weather', 'prices', 'farmer\'s family'], 'A', 'It aids planning and management.', 1],
         ['One hectare equals', ['10,000 m²', '1,000 m²', '100 m²', '100,000 m²'], 'A', '100 m × 100 m.', 1],
+        ['A triangular plot has base 120 m and height 50 m. Its area is', ['0.3 ha', '0.6 ha', '3 ha', '6 ha'], 'A', '½ × 120 × 50 = 3,000 m².', 4],
     ],
 
     'SHS 2: Irrigation, drainage and post-harvest implements' => [
@@ -218,17 +257,18 @@ return [
         ['Threshing is', ['separating grain from the stalk or husk', 'drying grain', 'storing grain', 'planting grain'], 'A', 'It follows harvesting.', 1],
         ['Winnowing removes', ['chaff from grain using air', 'water from soil', 'weeds from fields', 'pests from leaves'], 'A', 'The lighter chaff blows away.', 1],
         ['A cassava grater is a', ['post-harvest processing implement', 'planting tool', 'spraying tool', 'irrigation device'], 'A', 'It prepares cassava for gari.', 1],
+        ['Sub-surface (tile) drainage lowers the', ['water table', 'soil pH', 'temperature', 'fertility'], 'A', 'Removes excess water below the surface.', 4],
     ],
 
     'SHS 2: Natural resource conservation' => [
         ['Ploughing across a slope rather than up and down it is', ['deep ploughing', 'contour ploughing', 'zero tillage', 'ridging'], 'B', 'The furrows slow run-off and reduce erosion.', 2],
         ['Wildlife reserves and forest reserves are created mainly to', ['mine gold', 'clear land for farms', 'conserve plants and animals', 'build towns'], 'C', 'They protect biodiversity and water sources.', 1],
         ['Which practice conserves soil moisture?', ['mulching', 'bush burning', 'overgrazing', 'removing all cover crops'], 'A', 'Mulch shades the soil and reduces evaporation.', 1],
-        ['Contour ploughing helps to', ['reduce soil erosion on slopes', 'increase erosion', 'drain swamps', 'harvest crops'], 'A', 'Furrows run across the slope.', 1],
         ['A wildlife sanctuary protects', ['animals and their habitats', 'farms only', 'factories', 'mines'], 'A', 'Hunting is banned there.', 1],
         ['Cover crops such as mucuna help conserve soil by', ['protecting the soil surface and adding nitrogen', 'removing nutrients', 'causing erosion', 'shading out crops always'], 'A', 'They are legumes.', 2],
         ['Overfishing can be prevented by', ['using approved net sizes and closed seasons', 'using dynamite', 'light fishing', 'fishing all year'], 'A', 'Young fish must be allowed to grow.', 1],
         ['Strip cropping helps to', ['reduce soil erosion', 'increase runoff', 'remove trees', 'pollute water'], 'A', 'Alternating crops slow water flow.', 2],
+        ['A watershed protection measure is', ['reforesting hill slopes', 'clearing riverbanks', 'overgrazing', 'sand winning'], 'A', 'It reduces runoff and siltation.', 4],
     ],
 
     'SHS 3: Good agricultural practices and waste management' => [
@@ -240,6 +280,7 @@ return [
         ['Observing the pre-harvest interval after spraying ensures', ['chemical residues are safe at harvest', 'faster harvest', 'more pests', 'bigger fruits'], 'A', 'Residues need time to break down.', 2],
         ['Protective clothing is worn when spraying pesticides to', ['avoid poisoning', 'look smart', 'keep warm', 'attract insects'], 'A', 'Gloves, masks and boots are needed.', 1],
         ['Composting crop residues helps to', ['return nutrients to the soil', 'pollute air', 'attract pests', 'burn fields'], 'A', 'It recycles organic matter.', 1],
+        ['A biogas digester produces methane mainly by', ['anaerobic digestion of organic waste', 'burning waste', 'aerobic composting', 'drying manure'], 'A', 'Bacteria work without oxygen.', 4],
     ],
 
     'SHS 3: Processing, storage and food safety' => [
@@ -252,6 +293,7 @@ return [
         ['Grain should be dried to a safe moisture content before storage to prevent', ['mould growth', 'colour change only', 'weight loss', 'germination always'], 'A', 'About 12–13% for maize.', 2],
         ['A silo is used for', ['storing grain in bulk', 'drying fish', 'milking cows', 'raising chicks'], 'A', 'It protects grain from pests and weather.', 1],
         ['Pesticide residues on harvested produce can be reduced by', ['observing the pre-harvest interval', 'spraying at harvest', 'not washing produce', 'using more chemicals'], 'A', 'Residues degrade over time.', 2],
+        ['Grain stored at 18% moisture is likely to', ['develop moulds and heat up', 'store safely for years', 'gain weight safely', 'resist all insects'], 'A', 'Safe level is about 12–13%.', 4],
     ],
 
     'SHS 3: Soil water and soil erosion' => [
@@ -264,6 +306,7 @@ return [
         ['Field capacity is the amount of water soil holds', ['after excess water has drained away', 'when flooded', 'when completely dry', 'during rain only'], 'A', 'It is the upper limit for plants.', 3],
         ['Terracing is used on steep slopes to', ['reduce erosion by creating level steps', 'increase runoff', 'drain all water', 'remove soil'], 'A', 'It slows water flow.', 1],
         ['Splash erosion is caused by', ['raindrops hitting bare soil', 'wind', 'animals', 'rivers'], 'A', 'Cover protects soil.', 2],
+        ['The Universal Soil Loss Equation includes rainfall erosivity, soil erodibility, slope, cover and', ['support (conservation) practice', 'farmer age', 'crop price', 'labour cost'], 'A', 'A = RKLSCP.', 5],
     ],
 
     'SHS 3: Weeds and production economics' => [
@@ -275,5 +318,7 @@ return [
         ['Spear grass (Imperata) is difficult to control because of its', ['underground rhizomes', 'large seeds', 'thorns', 'bright flowers'], 'A', 'Rhizomes regrow after slashing.', 2],
         ['Gross margin in farm economics is', ['gross output minus variable costs', 'total output plus costs', 'fixed costs only', 'net profit plus tax'], 'A', 'It compares enterprises.', 3],
         ['A pre-emergence herbicide is applied', ['before weeds emerge', 'after harvest', 'on mature weeds only', 'to animals'], 'A', 'It controls weeds early.', 2],
+        ['Revenue GH¢18,000; variable costs GH¢7,000; fixed costs GH¢5,000. The gross margin is', ['GH¢11,000', 'GH¢6,000', 'GH¢13,000', 'GH¢18,000'], 'A', 'Revenue − variable costs.', 5],
+        ['Using those figures (revenue GH¢18,000, variable GH¢7,000, fixed GH¢5,000), net farm income is', ['GH¢6,000', 'GH¢11,000', 'GH¢13,000', 'GH¢2,000'], 'A', 'Gross margin − fixed costs.', 5],
     ],
 ];

@@ -30,6 +30,12 @@ return [
         ['A rest is a symbol that indicates', ['loud playing', 'silence', 'a repeat', 'a key change'], 'B', 'Each note value has a matching rest.', 1],
         ['A tie joins two notes of the', ['different instruments', 'different pitches', 'same pitch to make one longer note', 'different bars only when rests'], 'C', 'A slur joins different pitches.', 2],
         ['In 4/4 time, a dotted minim and a crotchet together fill', ['a quarter of a bar', 'half a bar', 'two bars', 'one bar'], 'D', '3 + 1 = 4 beats.', 2],
+        ['In 9/8 time, each bar contains', ['nine minims', 'nine crotchet beats', 'three crotchets', 'three dotted-crotchet beats'], 'D', 'Compound triple time.', 5],
+        ['A triplet of quavers occupies the time of', ['three quavers', 'two quavers', 'one quaver', 'four quavers'], 'B', 'Three in the time of two.', 4],
+        ['How many quavers equal a dotted minim?', ['4', '6', '3', '8'], 'B', 'Dotted minim = 3 crotchets.', 4],
+        ['In 6/8 time, each bar contains', ['three crotchets', 'six crotchet beats', 'two dotted crotchet beats', 'four quavers'], 'C', 'Compound duple.', 5],
+        ['3/4 time is described as', ['compound duple', 'compound triple', 'simple duple', 'simple triple'], 'D', 'Three crotchet beats.', 4],
+        ['A semibreve equals how many semiquavers?', ['8', '16', '4', '32'], 'B', '4 crotchets × 4.', 4],
     ],
 
     'The staff and clefs' => [
@@ -46,6 +52,8 @@ return [
         ['Middle C is written on a', ['top line of the treble staff', 'ledger line below the treble staff', 'third space', 'bottom line of the bass staff'], 'B', 'It sits between the two staves.', 2],
         ['The lines of the bass staff from bottom to top are', ['F A C E', 'E G B D F', 'G B D F A', 'A C E G'], 'C', '"Good Boys Do Fine Always".', 2],
         ['A sharp sign (♯)', ['doubles its length', 'lowers it by a semitone', 'cancels a sharp only', 'raises a note by a semitone'], 'D', 'A flat lowers it.', 1],
+        ['The alto clef places middle C on the', ['first space', 'bottom line', 'top line', 'middle (third) line of the staff'], 'D', 'Used by the viola.', 5],
+        ['A note written on the first ledger line above the treble staff is', ['G', 'A', 'C', 'B'], 'B', 'F on the top line, G above, A on the ledger.', 5],
     ],
 
     'Scales, keys and intervals' => [
@@ -68,6 +76,18 @@ return [
         ['A chromatic scale moves entirely in', ['thirds', 'tones', 'semitones', 'octaves'], 'C', 'It uses all 12 notes.', 2],
         ['The interval from C to E is a', ['major second', 'minor third', 'perfect fourth', 'major third'], 'D', 'Two tones.', 2],
         ['A pentatonic scale has', ['seven notes', 'five notes', 'eight notes', 'twelve notes'], 'B', 'Common in folk music.', 1],
+        ['The relative minor of E♭ major is', ['F minor', 'G minor', 'C minor', 'B♭ minor'], 'C', 'Three semitones below the tonic.', 5],
+        ['The key with four sharps is', ['D major', 'A major', 'B major', 'E major'], 'D', 'F♯ C♯ G♯ D♯.', 5],
+        ['The interval C to A♭ is a', ['major sixth', 'minor sixth', 'perfect fifth', 'augmented fifth'], 'B', 'Eight semitones.', 5],
+        ['The harmonic minor scale is formed by raising the', ['6th degree only', '3rd degree', '7th degree of the natural minor', '2nd degree'], 'C', 'It creates a leading note.', 5],
+        ['An augmented fourth (e.g. F to B) is also called a', ['octave', 'perfect fifth', 'major third', 'tritone'], 'D', 'Three whole tones.', 5],
+        ['The inversion of a major third is a', ['perfect fourth', 'major sixth', 'minor sixth', 'minor third'], 'C', 'Intervals invert to 9 minus the number.', 5],
+        ['The enharmonic equivalent of F♯ is', ['G♯', 'E♯', 'F♭', 'G♭'], 'D', 'Same pitch, different name.', 4],
+        ['The melodic minor scale ascending raises the', ['3rd only', '6th and 7th degrees', '2nd only', '4th'], 'B', 'Descending is the natural minor.', 5],
+        ['The relative minor of G major is', ['B minor', 'A minor', 'E minor', 'D minor'], 'C', 'One sharp.', 4],
+        ['The interval from C up to G is a perfect', ['third', 'fourth', 'octave', 'fifth'], 'D', 'Five letter names.', 4],
+        ['In the harmonic minor scale, the seventh note is', ['lowered', 'raised', 'omitted', 'doubled'], 'B', 'Leading note sharpened.', 5],
+        ['The dominant of C major is', ['D', 'F', 'G', 'B'], 'C', 'Fifth degree.', 4],
     ],
 
     'Dynamics and tempo' => [
@@ -87,6 +107,12 @@ return [
         ['"Accelerando" means', ['softer', 'gradually slower', 'louder', 'gradually getting faster'], 'D', 'Ritardando means getting slower.', 2],
         ['"Largo" indicates a tempo that is', ['very fast', 'very slow and broad', 'moderate', 'lively'], 'B', 'Presto is very fast.', 2],
         ['"Mezzo forte" (mf) means', ['very loud', 'very soft', 'moderately loud', 'silent'], 'C', 'Mezzo means half.', 1],
+        ['"Rallentando" means', ['speeding up', 'getting louder', 'gradually slowing down', 'sharply accented'], 'C', 'Like ritardando.', 4],
+        ['A metronome mark ♩ = 120 means', ['120 notes per bar', '120 bars per minute', '120 seconds per bar', '120 crotchet beats per minute'], 'D', 'Beats per minute.', 4],
+        ['Crescendo means', ['very fast', 'gradually softer', 'very slow', 'gradually getting louder'], 'D', 'Increase volume.', 4],
+        ['Andante means', ['very fast', 'at a walking pace', 'very slow', 'gradually slower'], 'B', 'Moderate tempo.', 4],
+        ['Rallentando means', ['getting louder', 'getting faster', 'gradually slowing down', 'detached'], 'C', 'Slowing.', 4],
+        ['Pianissimo is indicated by', ['sf', 'ff', 'mf', 'pp'], 'D', 'Very soft.', 4],
     ],
 
     'Instruments' => [
@@ -106,6 +132,9 @@ return [
         ['An instrument that produces sound by vibrating air columns is an', ['chordophone', 'idiophone', 'aerophone', 'membranophone'], 'C', 'Flutes and trumpets are aerophones.', 2],
         ['The atenteben is a Ghanaian', ['rattle', 'drum', 'xylophone', 'bamboo flute'], 'D', 'It was popularised by Ephraim Amu.', 2],
         ['The axatse is a', ['drum', 'gourd rattle covered with beads', 'flute', 'harp'], 'B', 'It is used in Ewe music.', 2],
+        ['The atumpan is a type of', ['talking drum', 'flute', 'xylophone', 'horn'], 'A', 'Akan drum pair.', 4],
+        ['The gyil is a', ['xylophone', 'drum', 'string instrument', 'trumpet'], 'A', 'Dagaaba instrument.', 4],
+        ['The seperewa is a', ['harp-lute', 'drum', 'bell', 'flute'], 'A', 'Akan string instrument.', 5],
     ],
 
     'Ghanaian music and dance' => [
@@ -123,6 +152,7 @@ return [
         ['Takai is a traditional dance of the', ['Fante', 'Ga', 'Dagomba', 'Nzema'], 'C', 'Dancers strike metal rods.', 2],
         ['Hiplife music combines highlife with', ['country music', 'classical music', 'reggae only', 'hip hop'], 'D', 'Reggie Rockstone is called its pioneer.', 1],
         ['Fontomfrom is a', ['flute ensemble', 'large ceremonial drum ensemble of the Akan', 'string band', 'church choir'], 'B', 'It accompanies chiefs.', 2],
+        ['Hemiola, common in West African music, creates', ['a shift between groupings of 2 and 3 beats', 'a key change', 'silence', 'a slow tempo'], 'A', 'Cross-rhythm.', 5],
     ],
 
     'Form and history' => [
@@ -139,6 +169,9 @@ return [
         ['Johann Sebastian Bach was a composer of the', ['Romantic period', 'Classical period', 'Baroque period', '20th century'], 'C', 'He lived 1685–1750.', 2],
         ['Wolfgang Amadeus Mozart is associated with the', ['Medieval period', 'Baroque period', 'Romantic period', 'Classical period'], 'D', 'He lived 1756–1791.', 2],
         ['Ephraim Amu is famous for composing', ['the national anthem', '"Yen Ara Asaase Ni"', 'highlife hits only', 'hiplife'], 'B', 'It is a patriotic song.', 2],
+        ['Sonata form consists of exposition, development and', ['coda only', 'recapitulation', 'trio', 'refrain'], 'B', 'Used in first movements of symphonies.', 5],
+        ['A fugue is a contrapuntal piece based on a', ['verse and chorus', 'single chord', 'subject imitated in several voices', 'drum pattern'], 'C', 'Bach wrote many fugues.', 5],
+        ['The Romantic period in music is roughly', ['1820–1900', '1600–1750', '1750–1820', '1900–2000'], 'A', 'Chopin, Brahms, Tchaikovsky.', 4],
     ],
 
     'SHS 1: Musical expression and articulation' => [
@@ -165,6 +198,8 @@ return [
         ['A triad built on the first degree of a scale is the', ['tonic chord', 'dominant chord', 'subdominant chord', 'leading-note chord'], 'A', 'In C major it is C–E–G.', 1],
         ['The dominant chord in C major is', ['G major (G–B–D)', 'F major', 'A minor', 'E minor'], 'A', 'Built on the fifth degree.', 2],
         ['Consecutive fifths are generally', ['avoided in four-part writing', 'required', 'encouraged', 'irrelevant'], 'A', 'They weaken independence of parts.', 3],
+        ['In a second-inversion triad, the bass note is the', ['fifth of the chord', 'root', 'third', 'seventh'], 'A', 'Labelled 6/4.', 5],
+        ['The dominant seventh chord in G major is', ['D–F♯–A–C', 'G–B–D–F', 'C–E–G–B', 'A–C♯–E–G'], 'A', 'Built on D.', 5],
     ],
 
     'SHS 2: Texture and listening' => [
@@ -178,6 +213,7 @@ return [
         ['Call and response, common in African music, is', ['a leader singing a phrase answered by a group', 'everyone singing different songs', 'silent music', 'only instrumental music'], 'A', 'It is used in work songs and worship.', 1],
         ['Unison means', ['everyone performs the same notes together', 'different melodies', 'silence', 'a solo'], 'A', 'Same pitch at the same time.', 1],
         ['Timbre is the', ['tone colour that distinguishes instruments', 'speed', 'loudness', 'pitch'], 'A', 'A flute and violin differ in timbre.', 2],
+        ['Heterophony is a texture in which', ['several performers play variations of the same melody at once', 'there is one melody alone', 'two different melodies are played', 'chords accompany a tune'], 'A', 'Common in African and Asian music.', 5],
     ],
 
     'SHS 2: Digital music and notation software' => [
@@ -226,5 +262,7 @@ return [
         ['Modulation in music means', ['changing from one key to another', 'changing tempo', 'changing instruments', 'stopping the music'], 'A', 'Often to the dominant or relative key.', 2],
         ['An interrupted cadence moves from', ['V to VI', 'V to I', 'IV to I', 'I to V'], 'A', 'It surprises the listener.', 3],
         ['A sequence in composition is', ['a melodic pattern repeated at a different pitch', 'a single note', 'silence', 'a key signature'], 'A', 'It develops ideas.', 2],
+        ['A passing note moves', ['by step between two chord notes', 'by leap', 'only in the bass', 'without resolution'], 'A', 'A non-chord tone.', 5],
+        ['A suspension is prepared, sounded against a chord change and then', ['resolved by step downwards', 'repeated forever', 'leapt upwards', 'omitted'], 'A', 'E.g. 4–3 suspension.', 5],
     ],
 ];

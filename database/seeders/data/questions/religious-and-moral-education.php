@@ -39,6 +39,15 @@ return [
         ['The Christian festival that celebrates the resurrection of Jesus is', ['Advent', 'Christmas', 'Pentecost', 'Easter'], 'D', 'It follows Good Friday.', 1],
         ['Eid al-Adha commemorates', ['the birth of the Prophet', 'Prophet Ibrahim\'s willingness to sacrifice his son', 'the end of Ramadan', 'the Hijrah'], 'B', 'Animals are sacrificed.', 2],
         ['A traditional priest who serves a deity is called', ['a pastor', 'an imam', 'an okomfo (priest)', 'a pope'], 'C', 'They interpret the deity\'s will.', 2],
+        ['The belief that spirits dwell in natural objects such as rivers and trees is', ['monotheism', 'animism', 'atheism', 'pantheism only'], 'B', 'A feature of African Traditional Religion.', 4],
+        ['A major difference between Christian and Islamic beliefs about Jesus is that Islam regards him as', ['not a real person', 'God incarnate', 'a prophet, not the Son of God', 'the last prophet'], 'C', 'Isa is a respected prophet in Islam.', 4],
+        ['In African Traditional Religion, the belief in the Supreme Being is shown by', ['pilgrimage to Rome', 'building cathedrals', 'reading the Qur\'an', 'names, proverbs and appellations given to God'], 'D', 'E.g. "Onyankopon Kwame".', 4],
+        ['The concept of the "remote God" in African Traditional Religion explains why', ['God is absent', 'people approach God through lesser gods and ancestors', 'there is no worship', 'God is evil'], 'B', 'Intermediaries are used.', 5],
+        ['In African Traditional Religion, the Supreme Being is believed to be', ['a priest', 'one of many equal gods', 'an ancestor', 'the creator who is above lesser gods'], 'D', 'E.g. Onyame.', 4],
+        ['Ancestors in African belief are', ['all dead people', 'dead members who lived good lives and are revered', 'living elders', 'evil spirits'], 'B', 'Qualifications for ancestorhood.', 5],
+        ['Libation is offered mainly to', ['entertain guests', 'clean the floor', 'communicate with God, gods and ancestors', 'cure disease directly'], 'C', 'Prayer with drink.', 4],
+        ['The Christian festival marking the resurrection of Jesus is', ['Advent', 'Christmas', 'Pentecost', 'Easter'], 'D', 'Central feast.', 4],
+        ['Eid al-Fitr marks', ['the Hajj', 'the end of the Ramadan fast', 'the new Islamic year', 'the night journey'], 'B', 'Festival of breaking the fast.', 4],
     ],
 
     'Religion and society' => [
@@ -58,6 +67,9 @@ return [
         ['Religious tolerance helps to prevent', ['development', 'religious conflicts', 'education', 'peace'], 'B', 'People respect each other\'s beliefs.', 1],
         ['Religion influences moral behaviour by', ['promoting greed', 'encouraging crime', 'teaching what is right and wrong', 'ignoring values'], 'C', 'Scriptures give moral guidance.', 1],
         ['The National Peace Council in Ghana', ['trains soldiers', 'collects taxes', 'conducts elections', 'promotes peace and resolves conflicts'], 'D', 'Religious leaders serve on it.', 2],
+        ['Religious fundamentalism can threaten national unity by', ['building schools', 'promoting dialogue', 'encouraging intolerance of other beliefs', 'reducing crime'], 'C', 'Extremism divides society.', 4],
+        ['The secular nature of the Ghanaian state means that', ['chiefs choose the religion', 'religion is banned', 'only Christianity is allowed', 'no religion is official and all are free'], 'D', 'Freedom of religion is guaranteed.', 4],
+        ['Religious syncretism means', ['rejecting all religions', 'blending elements of different religions', 'converting by force', 'religious war'], 'B', 'E.g. some African independent churches.', 5],
     ],
 
     'Moral values and decision-making' => [
@@ -84,6 +96,15 @@ return [
         ['Which is an example of an immoral act?', ['obeying parents', 'helping the needy', 'telling lies to cheat someone', 'working hard'], 'C', 'Deceit harms others.', 1],
         ['Conscience is', ['a religious book', 'a type of law', 'a festival', 'an inner sense of right and wrong'], 'D', 'It guides decisions.', 1],
         ['Obedience to rules in society helps to', ['cause chaos', 'maintain order', 'break laws', 'create conflict'], 'B', 'Order supports peace.', 1],
+        ['A moral dilemma is a situation in which', ['there is an easy choice', 'a person must choose between two conflicting moral obligations', 'no rules exist', 'only laws matter'], 'B', 'E.g. lying to protect a friend.', 4],
+        ['Moral relativism holds that', ['there is no morality', 'morality is universal and fixed', 'right and wrong depend on culture or situation', 'only laws decide'], 'C', 'Contrast with moral absolutism.', 5],
+        ['Delayed gratification shows', ['impatience', 'greed', 'laziness', 'self-control in giving up immediate pleasure for future benefit'], 'D', 'E.g. saving instead of spending.', 4],
+        ['The utilitarian approach judges an action right if it', ['pleases the individual', 'follows religious law only', 'produces the greatest good for the greatest number', 'is traditional'], 'C', 'Bentham and Mill.', 5],
+        ['Deontological ethics holds that', ['pleasure decides', 'only outcomes matter', 'there is no morality', 'some actions are right or wrong regardless of consequences'], 'D', 'Kant\'s duty ethics.', 5],
+        ['Integrity means', ['being popular', 'being wealthy', 'being honest and having strong moral principles', 'obeying friends always'], 'C', 'Consistency of values.', 4],
+        ['A conscience helps a person to', ['sleep well', 'earn money', 'win arguments', 'judge right from wrong'], 'D', 'Inner moral sense.', 4],
+        ['Delayed gratification means', ['giving up immediate pleasure for a later benefit', 'spending all income now', 'refusing all pleasure', 'borrowing to buy'], 'A', 'Self-control.', 5],
+        ['Bribery and corruption undermine society because they', ['promote injustice and waste resources', 'create fairness', 'build trust', 'increase efficiency'], 'A', 'Social harm.', 4],
     ],
 
     'Work, family and the environment' => [
@@ -99,6 +120,11 @@ return [
         ['Planting trees around the home helps to', ['pollute the air', 'increase heat', 'cause erosion', 'provide shade and protect the soil'], 'D', 'Trees also clean the air.', 1],
         ['Keeping the environment clean is a way of', ['causing disease', 'wasting time', 'showing respect for God\'s creation', 'breaking rules'], 'C', 'Cleanliness promotes health.', 1],
         ['Dignity of labour means', ['work is unnecessary', 'only office work is respectable', 'manual work is shameful', 'all honest work deserves respect'], 'D', 'Every honest job has value.', 1],
+        ['The Akan saying "Obi nnim obrempon ahyease" reminds people that', ['only the rich succeed', 'great people often start from humble beginnings', 'work is useless', 'chiefs never work'], 'B', 'It encourages humility and hard work.', 5],
+        ['Environmental stewardship in religion implies that humans', ['can destroy nature freely', 'own the earth absolutely', 'must account to God for how they use the earth', 'should not farm'], 'C', 'Trustees, not owners.', 4],
+        ['The dignity of labour means that', ['all honest work deserves respect', 'only office work is good', 'manual work is shameful', 'work is punishment'], 'A', 'Value of work.', 4],
+        ['Stewardship of the environment means', ['caring for nature responsibly', 'exploiting nature fully', 'ignoring pollution', 'burning bush'], 'A', 'Responsible use.', 4],
+        ['Taboos in traditional society help to', ['protect nature and maintain moral order', 'spread disease', 'encourage crime', 'end festivals'], 'A', 'E.g. resting rivers.', 4],
     ],
 
     'SHS 1: Work ethics and honesty' => [
@@ -112,6 +138,7 @@ return [
         ['Islam teaches that earning a living through honest work is', ['unnecessary', 'an act of worship', 'shameful', 'forbidden'], 'B', 'Honest labour is highly valued.', 2],
         ['An honest worker', ['sleeps at work', 'takes office items home', 'lies about hours worked', 'does not steal or cheat the employer'], 'D', 'Honesty builds trust.', 1],
         ['Diligence means', ['being lazy', 'working carefully and persistently', 'working only when watched', 'avoiding work'], 'B', 'It leads to success.', 1],
+        ['Whistle-blowing on corruption in a workplace reflects the value of', ['integrity and courage', 'disloyalty', 'laziness', 'greed'], 'A', 'Protected by law in Ghana.', 4],
     ],
 
     'SHS 1: The environment and climate change' => [
@@ -138,6 +165,7 @@ return [
         ['A whistle-blower is a person who', ['hides corruption', 'blows whistles at games', 'reports wrongdoing in an organisation', 'pays bribes'], 'C', 'Ghana has a Whistleblower Act, 2006.', 1],
         ['Corruption in public office can be reduced by', ['hiding records', 'transparency and punishment of offenders', 'paying bribes', 'ignoring reports'], 'B', 'Accountability deters corruption.', 1],
         ['A bribe is', ['a tax', 'a salary', 'money or a gift given to influence someone dishonestly', 'a donation to charity'], 'C', 'Giving and taking bribes are crimes.', 1],
+        ['Which institution in Ghana prosecutes corruption-related offences independently of the Attorney-General\'s office?', ['Office of the Special Prosecutor', 'NCCE', 'Electoral Commission', 'Ghana Statistical Service'], 'A', 'Created in 2017.', 5],
     ],
 
     'SHS 2: Time management' => [
@@ -178,7 +206,6 @@ return [
         ['Self-discipline is shown by', ['controlling one\'s desires and doing what is right', 'doing whatever one likes', 'blaming others', 'skipping school'], 'A', 'It is key to success.', 1],
         ['Generosity is the willingness to', ['give freely to others', 'keep everything', 'borrow without paying back', 'cheat'], 'A', 'It is encouraged by all religions.', 1],
         ['Faithfulness in friendship means', ['being loyal and trustworthy', 'betraying secrets', 'changing friends daily', 'lying'], 'A', 'Trust holds friendships together.', 1],
-        ['Integrity means', ['being honest and having strong moral principles', 'being rich', 'being popular', 'being loud'], 'A', 'People of integrity are trusted.', 1],
         ['Loyalty means', ['being faithful to people or causes', 'betraying friends', 'cheating', 'lying'], 'A', 'It is valued in friendship and work.', 1],
     ],
 
@@ -220,5 +247,6 @@ return [
         ['Respect for national symbols, such as standing for the national anthem, shows', ['patriotism', 'disrespect', 'tribalism', 'corruption'], 'A', 'It shows love for Ghana.', 1],
         ['Protecting public property shows', ['concern for the nation', 'carelessness', 'selfishness', 'greed'], 'A', 'Public property belongs to all.', 1],
         ['Paying taxes honestly helps the nation to', ['provide roads, schools and hospitals', 'become poorer', 'stop development', 'waste money'], 'A', 'Taxes fund services.', 1],
+        ['The Akan concept of "abusua" stresses', ['the extended family and its obligations', 'individualism', 'wealth only', 'foreign ties'], 'A', 'Matrilineal kinship.', 5],
     ],
 ];
