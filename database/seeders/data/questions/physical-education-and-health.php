@@ -10,15 +10,29 @@
 
 return [
     'Fitness' => [
-        ['The components of health-related fitness include', ['cardiovascular endurance, muscular strength, flexibility and body composition', 'speed, agility and reaction time only', 'height and weight only', 'skill and luck'], 'A', 'Health-related fitness covers the components linked to good health.', 2],
-        ['Agility is the ability to', ['change direction quickly while keeping control', 'lift heavy weights', 'run long distances', 'stay still'], 'A', 'Agility is a skill-related fitness component.', 2],
-        ['The FITT principle of training stands for', ['frequency, intensity, time and type', 'fitness, interest, training and target', 'force, impact, tempo and technique', 'flexibility, intensity, tone and timing'], 'A', 'FITT guides how to plan training.', 2],
-        ['Gradually increasing the training load to improve fitness is the principle of', ['progressive overload', 'reversibility', 'specificity', 'rest'], 'A', 'The body adapts to gradually increased demands.', 2],
-        ['Losing fitness when training stops is the principle of', ['reversibility', 'overload', 'specificity', 'progression'], 'A', 'Gains are lost if training stops ("use it or lose it").', 2],
-        ['Maximum heart rate is commonly estimated as', ['220 minus age', '200 plus age', '180 minus age', 'age × 2'], 'A', 'A 16-year-old\'s estimated maximum is about 204 beats per minute.', 2],
-        ['Exercise that uses oxygen to release energy over a long period, such as jogging, is', ['aerobic exercise', 'anaerobic exercise', 'isometric exercise', 'plyometric exercise'], 'A', 'Aerobic activity is sustained and uses oxygen.', 2],
-        ['Short, intense activity such as a 100 m sprint mainly uses', ['anaerobic energy systems', 'aerobic energy only', 'no energy', 'fat only'], 'A', 'Sprinting relies on energy released without enough oxygen.', 3],
+        ['The components of health-related fitness include', ['skill and luck', 'speed, agility and reaction time only', 'height and weight only', 'cardiovascular endurance, muscular strength, flexibility and body composition'], 'D', 'Health-related fitness covers the components linked to good health.', 2],
+        ['Agility is the ability to', ['stay still', 'lift heavy weights', 'run long distances', 'change direction quickly while keeping control'], 'D', 'Agility is a skill-related fitness component.', 2],
+        ['The FITT principle of training stands for', ['fitness, interest, training and target', 'frequency, intensity, time and type', 'force, impact, tempo and technique', 'flexibility, intensity, tone and timing'], 'B', 'FITT guides how to plan training.', 2],
+        ['Gradually increasing the training load to improve fitness is the principle of', ['specificity', 'reversibility', 'progressive overload', 'rest'], 'C', 'The body adapts to gradually increased demands.', 2],
+        ['Losing fitness when training stops is the principle of', ['progression', 'overload', 'specificity', 'reversibility'], 'D', 'Gains are lost if training stops ("use it or lose it").', 2],
+        ['Maximum heart rate is commonly estimated as', ['200 plus age', '220 minus age', '180 minus age', 'age × 2'], 'B', 'A 16-year-old\'s estimated maximum is about 204 beats per minute.', 2],
+        ['Exercise that uses oxygen to release energy over a long period, such as jogging, is', ['isometric exercise', 'anaerobic exercise', 'aerobic exercise', 'plyometric exercise'], 'C', 'Aerobic activity is sustained and uses oxygen.', 2],
+        ['Short, intense activity such as a 100 m sprint mainly uses', ['fat only', 'aerobic energy only', 'no energy', 'anaerobic energy systems'], 'D', 'Sprinting relies on energy released without enough oxygen.', 3],
         ['The Body Mass Index (BMI) is calculated as', ['height ÷ weight', 'weight (kg) ÷ height² (m²)', 'weight × height', 'age ÷ weight'], 'B', 'BMI = kg/m².', 2],
+        ['Which component of fitness is the ability to change direction quickly?', ['flexibility', 'agility', 'muscular strength', 'body composition'], 'B', 'The shuttle run tests agility.', 1],
+        ['Push-ups mainly develop', ['balance only', 'flexibility of the legs', 'muscular strength and endurance of the arms and chest', 'reaction time'], 'C', 'They work the triceps, chest and shoulders.', 1],
+        ['Which exercise is aerobic?', ['holding a plank for 10 seconds', 'lifting a heavy weight once', 'a 50 m sprint', 'jogging for 30 minutes'], 'D', 'Aerobic exercise uses oxygen over a sustained period.', 2],
+        ['The amount of fat compared with muscle and bone in the body is', ['agility', 'body composition', 'power', 'coordination'], 'B', 'It is a health-related component of fitness.', 2],
+        ['Power is a combination of', ['agility and endurance', 'balance and flexibility', 'strength and speed', 'reaction time and balance'], 'C', 'The vertical jump tests power.', 2],
+        ['The ability to keep the body steady while still or moving is', ['speed', 'balance', 'power', 'endurance'], 'B', 'Standing on one leg tests balance.', 1],
+        ['How quickly a person responds to a signal, such as a starting gun, is', ['flexibility', 'agility', 'reaction time', 'power'], 'C', 'It is a skill-related fitness component.', 1],
+        ['Sit-ups mainly strengthen the', ['neck muscles only', 'calf muscles', 'biceps', 'abdominal muscles'], 'D', 'A strong core supports the spine.', 1],
+        ['The 30 m sprint test measures', ['endurance', 'speed', 'flexibility', 'balance'], 'B', 'It is timed over a short distance.', 1],
+        ['Cardiovascular endurance is the ability of the heart and lungs to', ['react quickly', 'lift heavy weights once', 'stretch joints', 'supply oxygen to the muscles during prolonged exercise'], 'D', 'Long-distance running builds it.', 1],
+        ['Muscular strength is best developed by', ['sleeping', 'resistance training such as weightlifting', 'stretching only', 'watching sports'], 'B', 'Muscles adapt to heavy loads.', 1],
+        ['Flexibility is the', ['strength of a muscle', 'speed of a runner', 'range of movement around a joint', 'heart rate'], 'C', 'Stretching improves it.', 1],
+        ['The normal resting heart rate of an adult is about', ['5–10 beats per minute', '20–40 beats per minute', '150–200 beats per minute', '60–100 beats per minute'], 'D', 'Fit people often have lower rates.', 2],
+        ['Body composition refers to the', ['height only', 'proportion of fat to lean tissue in the body', 'skin colour', 'speed'], 'B', 'It is a health-related fitness component.', 2],
     ],
 
     'Anatomy and physiology' => [
@@ -29,6 +43,18 @@ return [
         ['The muscle at the front of the upper arm that bends the elbow is the', ['triceps', 'biceps', 'deltoid', 'quadriceps'], 'B', 'The biceps flexes the elbow; the triceps extends it.', 1],
         ['The type of muscle found in the heart is', ['skeletal muscle', 'cardiac muscle', 'smooth muscle', 'voluntary muscle'], 'B', 'Cardiac muscle contracts without tiring.', 1],
         ['During exercise, breathing rate increases mainly to', ['reduce heart rate', 'cool the body', 'take in more oxygen and remove carbon dioxide', 'digest food'], 'C', 'Working muscles need more oxygen.', 1],
+        ['The skull protects the', ['heart', 'brain', 'lungs', 'stomach'], 'B', 'The rib cage protects the heart and lungs.', 1],
+        ['Muscles that work in pairs, one contracting while the other relaxes, are called', ['smooth muscles', 'cardiac muscles', 'antagonistic muscles', 'involuntary muscles'], 'C', 'Biceps and triceps are an example.', 2],
+        ['The muscle found only in the heart is', ['voluntary muscle', 'skeletal muscle', 'smooth muscle', 'cardiac muscle'], 'D', 'It contracts without tiring.', 1],
+        ['The kneecap is also called the', ['tibia', 'femur', 'patella', 'fibula'], 'C', 'It protects the knee joint.', 1],
+        ['How many chambers does the human heart have?', ['six', 'two', 'three', 'four'], 'D', 'Two atria and two ventricles.', 1],
+        ['The breastbone is the', ['scapula', 'sternum', 'clavicle', 'pelvis'], 'B', 'The ribs join it at the front.', 2],
+        ['Oxygen is carried in the blood by', ['platelets', 'white blood cells', 'red blood cells', 'plasma only'], 'C', 'Haemoglobin binds oxygen.', 1],
+        ['The adult human skeleton has about', ['306 bones', '106 bones', '206 bones', '150 bones'], 'C', 'Babies have more, which fuse.', 1],
+        ['The muscle that separates the chest from the abdomen is the', ['hamstring', 'biceps', 'deltoid', 'diaphragm'], 'D', 'It helps breathing.', 1],
+        ['Joints that allow no movement, such as in the skull, are', ['hinge joints', 'fixed (fibrous) joints', 'ball-and-socket joints', 'pivot joints'], 'B', 'They are also called sutures.', 2],
+        ['The large muscle at the front of the thigh is the', ['calf', 'hamstring', 'quadriceps', 'gluteus'], 'C', 'It straightens the knee.', 1],
+        ['Blood returns to the heart through', ['nerves', 'arteries', 'capillaries only', 'veins'], 'D', 'Veins have valves.', 1],
     ],
 
     'Sports and athletics' => [
@@ -40,6 +66,20 @@ return [
         ['The take-off in the triple jump is followed by', ['a throw', 'two jumps only', 'a run and a vault', 'a hop, a step and a jump'], 'D', 'Triple jump phases are hop, step and jump.', 2],
         ['The implement thrown with a spinning action from a circle and attached to a wire is the', ['shot', 'javelin', 'discus', 'hammer'], 'D', 'The hammer is a metal ball on a wire with a handle.', 2],
         ['The use of banned substances to improve sports performance is', ['conditioning', 'fair play', 'warming up', 'doping'], 'D', 'Doping is cheating and harms health.', 1],
+        ['In athletics, a false start in a sprint race usually leads to', ['a warning only', 'disqualification of the athlete', 'a restart for everyone with no penalty', 'extra points'], 'B', 'Under current rules, one false start means disqualification.', 2],
+        ['How many players are on the field for a hockey team?', ['7', '9', '11', '6'], 'C', 'Including the goalkeeper.', 1],
+        ['In basketball, a successful shot from beyond the arc scores', ['4 points', '2 points', '1 point', '3 points'], 'D', 'Shots inside the arc score 2 and free throws 1.', 1],
+        ['In volleyball, the player who wears a different-coloured shirt and specialises in defence is the', ['setter', 'libero', 'spiker', 'server'], 'B', 'The libero cannot attack above the net.', 2],
+        ['In football, an indirect free kick', ['is the same as a corner', 'is taken from the penalty spot', 'cannot score directly; another player must touch the ball first', 'is always taken by the goalkeeper'], 'C', 'The referee raises an arm to show it.', 2],
+        ['How many players are on a netball team on court?', ['9', '5', '6', '7'], 'D', 'Each has a set playing area.', 1],
+        ['In football, a match ends level after extra time in a knockout game. It is usually decided by', ['a coin toss', 'a penalty shoot-out', 'the referee\'s choice', 'a replay always'], 'B', 'Each team takes penalties in turn.', 1],
+        ['In the 4 × 400 m relay, each runner covers', ['1,600 m', '100 m', '400 m', '200 m'], 'C', 'Four runners run 400 m each.', 1],
+        ['In the javelin, the throw is valid only if', ['the thrower crosses the line', 'it lands flat', 'it lands outside the lines', 'the tip lands first inside the sector'], 'D', 'The metal tip must strike first.', 2],
+        ['How many players are on a football team on the field?', ['9', '11', '7', '15'], 'B', 'Including the goalkeeper.', 1],
+        ['The standard length of a marathon race is about', ['10 km', '21.1 km', '42.2 km', '100 km'], 'C', 'A half-marathon is 21.1 km.', 2],
+        ['In a relay race, the baton must be passed within the', ['spectator area', 'starting blocks', 'finish line', 'changeover (takeover) zone'], 'D', 'Passing outside it disqualifies the team.', 2],
+        ['The triple jump consists of a hop, a step and a', ['run', 'jump', 'throw', 'roll'], 'B', 'The athlete lands in the sand pit.', 1],
+        ['In basketball, each team has how many players on court?', ['7', '6', '5', '11'], 'C', 'Substitutions are unlimited.', 1],
     ],
 
     'First aid and health' => [
@@ -50,12 +90,30 @@ return [
         ['A nosebleed should be treated by', ['blowing the nose hard', 'tilting the head far back', 'lying the person flat', 'sitting the person forward and pinching the soft part of the nose'], 'D', 'Leaning forward stops blood going down the throat.', 2],
         ['Heat stroke during sports in hot weather can be prevented by', ['training at midday without breaks', 'wearing thick clothes', 'avoiding water', 'drinking enough water and resting in shade'], 'D', 'Hydration and shade prevent overheating.', 1],
         ['Which of the following is a non-communicable disease?', ['malaria', 'cholera', 'diabetes', 'tuberculosis'], 'C', 'Diabetes is not caused by germs and cannot be passed on.', 1],
+        ['The first thing to do when you find an injured person is to', ['leave them alone', 'give them water', 'move them immediately', 'check that the area is safe'], 'D', 'Protect yourself and the casualty from further danger.', 1],
+        ['For a nosebleed, the casualty should', ['lie flat on the back', 'sit up, lean forward and pinch the soft part of the nose', 'tilt the head back', 'blow the nose hard'], 'B', 'Leaning forward stops blood going down the throat.', 2],
+        ['CPR is given to a person who', ['has a headache', 'has a small cut', 'is not breathing and has no pulse', 'is sleeping'], 'C', 'It keeps blood flowing to the brain.', 2],
+        ['A balanced diet helps an athlete because it', ['is mostly fat', 'contains only proteins', 'avoids water', 'provides all the nutrients needed for energy, growth and repair'], 'D', 'Each nutrient has a role.', 1],
+        ['A person who has fainted should be laid down with the', ['head raised', 'legs raised', 'arms tied', 'face covered'], 'B', 'This helps blood flow to the brain.', 2],
+        ['A burn should be cooled with', ['butter', 'ice directly', 'cool running water', 'oil'], 'C', 'Cool water for at least 10 minutes.', 1],
+        ['Which is a sign of dehydration?', ['more energy', 'clear urine', 'cold hands only', 'dark yellow urine and thirst'], 'D', 'Drink water regularly during activity.', 1],
+        ['The recovery position is used for a casualty who is', ['running', 'unconscious but breathing', 'eating', 'fully awake and walking'], 'B', 'It keeps the airway open.', 2],
+        ['The first thing to do at the scene of an accident is to', ['leave', 'move the casualty quickly', 'give water', 'check for danger'], 'D', 'DRABC: Danger, Response, Airway, Breathing, Circulation.', 2],
+        ['Bleeding from a cut can be controlled by', ['removing the bandage', 'applying direct pressure', 'washing with hot water', 'lifting the casualty'], 'B', 'Elevate the wound too.', 1],
+        ['CPR is given to a casualty who is', ['walking', 'talking', 'not breathing normally', 'eating'], 'C', 'It combines chest compressions and rescue breaths.', 2],
     ],
 
     'SHS 1: Career pathways in PEH' => [
         ['A professional who designs exercise programmes and helps clients improve their fitness is a', ['auditor', 'pharmacist', 'surveyor', 'fitness trainer'], 'D', 'Fitness trainers plan safe exercise routines for individuals and groups.', 1],
         ['A professional who treats injuries with exercise, massage and movement therapy is a', ['referee', 'cardiologist', 'dietitian', 'physiotherapist'], 'D', 'Physiotherapists help injured athletes and patients recover movement and strength.', 1],
         ['A sports nutritionist mainly advises athletes on', ['stadium design', 'how to referee matches', 'how to sell tickets', 'what to eat to support training and recovery'], 'D', 'Good nutrition provides energy and helps the body recover.', 1],
+        ['A person trained to treat sports injuries with exercise and massage is a', ['commentator', 'referee', 'physiotherapist', 'groundsman'], 'C', 'They help athletes recover.', 1],
+        ['A person who plans training programmes for athletes is a', ['pharmacist', 'spectator', 'journalist', 'coach'], 'D', 'Coaches also teach skills.', 1],
+        ['A sports official who enforces the rules in a football match is the', ['coach', 'referee', 'captain', 'manager'], 'B', 'Assistant referees help.', 1],
+        ['A professional who advises athletes on diet is a', ['architect', 'statistician', 'sports nutritionist', 'lawyer'], 'C', 'Diet affects performance.', 1],
+        ['Which institution in Ghana trains physical education teachers at university level?', ['Accra Technical University only', 'Ghana Maritime University', 'Ghana School of Law', 'University of Education, Winneba'], 'D', 'UEW has a Department of Health, PE and Sports.', 2],
+        ['A sports commentator', ['builds stadiums', 'treats injuries', 'trains athletes', 'describes a game live on radio or TV'], 'D', 'They need good communication skills.', 1],
+        ['An athletic trainer mainly', ['sells tickets', 'prevents and treats sports injuries', 'designs kits', 'writes rules'], 'B', 'They work with teams.', 1],
     ],
 
     'SHS 1: Traditional dances as physical activity' => [
@@ -63,6 +121,11 @@ return [
         ['Agbadza is a traditional dance of the', ['Akan', 'Ewe', 'Gonja', 'Nzema'], 'B', 'Agbadza is a recreational dance of the Ewe of the Volta Region.', 1],
         ['Takai, performed with metal rods struck together, is a dance of the', ['Krobo', 'Fante', 'Ga', 'Dagomba'], 'D', 'Takai comes from Dagbon in northern Ghana.', 2],
         ['Dancing counts as physical activity mainly because it', ['reduces fitness', 'needs no movement', 'is done sitting down', 'raises the heart rate and works the muscles'], 'D', 'Vigorous dancing is aerobic exercise that improves heart and lung fitness.', 1],
+        ['Performing traditional dances regularly improves', ['only eyesight', 'cardiovascular fitness and coordination', 'reading skills', 'hair growth'], 'B', 'Dancing is aerobic exercise.', 1],
+        ['Bawa is a traditional dance from the', ['Central Region', 'Greater Accra Region', 'Upper West Region (Dagaaba)', 'Volta Region'], 'C', 'It is a harvest dance.', 2],
+        ['Borborbor is a popular recreational dance of the', ['Nzema', 'Ga', 'Asante', 'Ewe'], 'D', 'It originated in Kpandu.', 2],
+        ['Traditional dances also help to', ['cause injuries only', 'preserve culture and bring people together', 'reduce fitness', 'destroy traditions'], 'B', 'They have social and health benefits.', 1],
+        ['Agbadza dance improves', ['typing speed', 'reading only', 'cardiovascular fitness and coordination', 'eyesight'], 'C', 'It involves rhythmic movement.', 1],
     ],
 
     'SHS 1: Gymnastics' => [
@@ -70,6 +133,14 @@ return [
         ['Mats are used in gymnastics mainly to', ['decorate the hall', 'cushion falls and prevent injury', 'make the floor slippery', 'mark the boundary'], 'B', 'Mats absorb impact during landings and falls.', 1],
         ['A sideways movement in which the hands and feet touch the floor in turn, like a turning wheel, is a', ['headstand', 'forward roll', 'cartwheel', 'bridge'], 'C', 'The body passes through a handstand-like position sideways.', 1],
         ['Holding a still position, such as a headstand, mainly develops', ['reaction to sound', 'speed only', 'endurance running', 'balance and strength'], 'D', 'Static balances need core strength and body control.', 2],
+        ['In gymnastics, a "spotter" is a person who', ['sets up the music', 'judges the routine', 'supports and protects the performer', 'keeps time'], 'C', 'Spotters prevent falls during difficult skills.', 2],
+        ['A handstand mainly develops', ['endurance only', 'running speed', 'kicking power', 'balance and upper-body strength'], 'D', 'The arms take the body weight.', 1],
+        ['A forward roll begins with the', ['head held back', 'chin tucked into the chest', 'arms behind the back', 'legs apart wide'], 'B', 'This protects the neck.', 1],
+        ['A handstand mainly requires', ['kicking skill', 'speed only', 'balance and upper-body strength', 'endurance running'], 'C', 'Weight is supported on the hands.', 1],
+        ['A cartwheel is a', ['handstand only', 'forward roll', 'jump', 'sideways rotation on the hands and feet'], 'D', 'The body passes through a handstand.', 1],
+        ['Spotting in gymnastics means', ['marking scores', 'a partner supports the performer to prevent injury', 'watching from a distance', 'pointing at mistakes'], 'B', 'It is a safety technique.', 2],
+        ['A backward roll ends with the performer', ['on the head', 'lying flat', 'on the feet', 'sitting with legs apart'], 'C', 'Hands push through.', 2],
+        ['Gymnastic mats are used to', ['store equipment', 'decorate the hall', 'mark scores', 'cushion falls and prevent injury'], 'D', 'Safety first.', 1],
     ],
 
     'SHS 1: Foot games: football' => [
@@ -77,6 +148,12 @@ return [
         ['How long is a normal football match, not counting added time?', ['60 minutes', '80 minutes', '90 minutes', '120 minutes'], 'C', 'Two halves of 45 minutes each.', 1],
         ['A player shown a red card must', ['take a penalty', 'leave the field and cannot be replaced', 'change ends', 'become goalkeeper'], 'B', 'A sent-off player leaves the game and the team plays with one fewer player.', 1],
         ['Which part of the foot is usually used for an accurate short pass in football?', ['the heel', 'the toe', 'the inside of the foot', 'the sole'], 'C', 'The flat inside of the foot gives the most control over direction.', 1],
+        ['A football match is normally played in', ['three periods of 30 minutes', 'four quarters of 15 minutes', 'two halves of 30 minutes', 'two halves of 45 minutes'], 'D', 'Extra time is two 15-minute halves.', 1],
+        ['A player is offside when, at the moment the ball is played to them, they are', ['in their own half', 'nearer the opponents\' goal line than both the ball and the second-last opponent', 'level with the second-last defender', 'behind the ball'], 'B', 'Being level is onside.', 3],
+        ['A free kick from which a goal can be scored directly is a', ['goal kick', 'indirect free kick', 'direct free kick', 'throw-in'], 'C', 'An indirect kick must touch another player first.', 2],
+        ['The ball is out of play when it', ['bounces twice', 'touches the line', 'hits the referee', 'wholly crosses the touchline or goal line'], 'D', 'The whole ball must cross the line.', 2],
+        ['A goal kick is awarded when the ball last touched by an attacker crosses the', ['touchline', 'goal line outside the goal', 'halfway line', 'penalty spot'], 'B', 'The defending team restarts.', 2],
+        ['A throw-in is taken when the ball crosses the', ['halfway line', 'goal line', 'touchline', 'crossbar'], 'C', 'Both feet must be on the ground.', 1],
     ],
 
     'SHS 1: Hand games: volleyball, handball and basketball' => [
@@ -85,6 +162,11 @@ return [
         ['In handball, a penalty is taken from the', ['6-metre line', '7-metre line', '9-metre line', 'centre line'], 'B', 'The penalty is called a 7-metre throw.', 2],
         ['In basketball, moving with the ball without dribbling is called', ['goaltending', 'double dribble', 'charging', 'travelling'], 'D', 'Travelling gives the ball to the other team.', 1],
         ['In handball, a player holding the ball may take at most', ['1 step', '2 steps', '3 steps', '5 steps'], 'C', 'A player may take up to three steps and hold the ball for up to three seconds.', 2],
+        ['In basketball, a successful shot from outside the arc scores', ['2 points', '3 points', '1 point', '4 points'], 'B', 'A free throw scores 1.', 1],
+        ['Walking or running with the ball without dribbling in basketball is', ['a block', 'a foul', 'travelling', 'a rebound'], 'C', 'It gives possession to the other team.', 1],
+        ['A volleyball set is won by the first team to reach', ['11 points', '15 points only', '21 points', '25 points with a 2-point lead'], 'D', 'The fifth set is played to 15.', 2],
+        ['A free throw in basketball is worth', ['0 points', '2 points', '3 points', '1 point'], 'D', 'It is taken after a foul.', 1],
+        ['In handball, the goal area is marked by a line', ['11 m from the goal', '6 m from the goal', '3 m from the goal', '20 m from the goal'], 'B', 'Only the goalkeeper may enter.', 2],
     ],
 
     'SHS 1: Health, wellness and physical activity' => [
@@ -92,6 +174,12 @@ return [
         ['Which of these is a benefit of regular exercise?', ['weaker bones', 'higher risk of heart disease', 'stronger heart and lungs', 'poor sleep'], 'C', 'Exercise improves fitness and lowers the risk of many diseases.', 1],
         ['Which food group mainly builds and repairs body tissues?', ['carbohydrates', 'proteins', 'fats', 'water'], 'B', 'Proteins from beans, fish, eggs and meat build muscle and repair tissue.', 1],
         ['Cooling down after exercise helps to', ['stop breathing', 'increase injury', 'raise body temperature', 'bring the heart rate back to normal gradually'], 'D', 'Gentle activity and stretching help the body recover.', 1],
+        ['The World Health Organization recommends that adolescents do at least', ['10 minutes a week', '60 minutes of moderate to vigorous activity daily', '5 hours daily', 'no exercise'], 'B', 'It strengthens the heart, muscles and bones.', 2],
+        ['Wellness includes physical, mental, social and', ['popularity', 'financial wealth only', 'emotional health', 'fame'], 'C', 'It is overall well-being.', 1],
+        ['Too much screen time and little movement is a', ['balanced diet', 'active lifestyle', 'sedentary lifestyle', 'fitness plan'], 'C', 'It increases the risk of obesity.', 1],
+        ['Getting enough sleep helps the body to', ['weaken muscles', 'gain fat', 'lose memory', 'recover and grow'], 'D', 'Teenagers need about 8–10 hours.', 1],
+        ['Mental wellness includes', ['only lifting weights', 'managing stress and having positive thoughts', 'avoiding friends', 'skipping meals'], 'B', 'It is part of overall health.', 1],
+        ['A sedentary lifestyle increases the risk of', ['strength', 'fitness', 'obesity', 'flexibility'], 'C', 'Too little movement.', 1],
     ],
 
     'SHS 2: Netball' => [
@@ -99,6 +187,13 @@ return [
         ['How long may a netball player hold the ball?', ['1 second', '3 seconds', '5 seconds', '10 seconds'], 'B', 'The ball must be passed or shot within three seconds.', 1],
         ['How many players does a netball team have on court?', ['5', '6', '7', '9'], 'C', 'Each team has seven players, each confined to certain areas of the court.', 1],
         ['A netball match is made up of', ['two halves of 45 minutes', 'four quarters of 15 minutes', 'three sets', 'nine innings'], 'B', 'Netball is played in four 15-minute quarters.', 2],
+        ['In netball, the player who can play in all areas except the two goal circles is the', ['wing attack (WA)', 'goal keeper (GK)', 'goal shooter (GS)', 'centre (C)'], 'D', 'The centre links defence and attack.', 2],
+        ['In netball, a player must stand at least how far from an opponent holding the ball when defending?', ['0.9 m', '3 m', '0.5 m', '2 m'], 'A', 'The distance is measured from the landing foot.', 3],
+        ['In netball, a player holding the ball must pass or shoot within', ['3 seconds', '5 seconds', '10 seconds', '1 second'], 'A', 'Holding longer is a violation.', 2],
+        ['Only the goal shooter and the', ['goal attack', 'wing attack', 'centre', 'goal defence'], 'A', 'They are the only players who may score.', 2],
+        ['A netball match has', ['four quarters of 15 minutes', 'two halves of 45 minutes', 'three periods of 20 minutes', 'two halves of 30 minutes'], 'A', 'Total playing time is 60 minutes.', 2],
+        ['In netball, the player wearing "C" is the', ['centre', 'captain', 'coach', 'goal keeper'], 'A', 'The centre can move everywhere except the goal circles.', 1],
+        ['The goal keeper (GK) in netball defends', ['the opponents\' goal shooter', 'the centre', 'the wing attack', 'the umpire'], 'A', 'GK stays in the defending third.', 2],
     ],
 
     'SHS 2: Hockey' => [
@@ -106,6 +201,12 @@ return [
         ['How many players does a hockey team have on the field?', ['7', '9', '11', '15'], 'C', 'Eleven players, including a goalkeeper.', 1],
         ['Which hockey player may use the feet and body to stop the ball inside the circle?', ['the captain', 'the centre forward', 'any defender', 'the goalkeeper'], 'D', 'Only the goalkeeper, inside the shooting circle, may use the body to play the ball.', 2],
         ['Pushing the ball along the ground with the stick, keeping it in contact, is a', ['lob', 'push pass', 'serve', 'volley'], 'B', 'The push pass is the most accurate short pass in hockey.', 2],
+        ['In hockey, the ball may be played only with the', ['flat side of the stick', 'rounded back of the stick', 'feet', 'hands'], 'A', 'Using the back is a foul.', 2],
+        ['A hockey team has how many players on the field?', ['11', '7', '9', '6'], 'A', 'Including the goalkeeper.', 1],
+        ['A goal in field hockey can only be scored from', ['inside the shooting circle', 'anywhere on the pitch', 'the halfway line', 'behind the goal'], 'A', 'The circle is also called the D.', 2],
+        ['The goalkeeper in hockey wears', ['protective pads, helmet and kickers', 'no protection', 'only gloves', 'a cap only'], 'A', 'The ball is hard and fast.', 1],
+        ['A penalty corner in hockey is awarded for', ['certain fouls by defenders inside or near their circle', 'scoring a goal', 'the start of the game', 'kicking the ball accidentally anywhere'], 'A', 'It is taken from the back line.', 3],
+        ['The duration of a hockey match is', ['four quarters of 15 minutes', 'two halves of 45 minutes', 'three periods of 20 minutes', 'two halves of 30 minutes'], 'A', 'FIH rules.', 2],
     ],
 
     'SHS 2: Human diseases and their prevention' => [
@@ -114,6 +215,11 @@ return [
         ['HIV is mainly spread through', ['mosquito bites', 'shaking hands', 'sharing a classroom', 'unprotected sex and contact with infected blood'], 'D', 'HIV is not spread by casual contact or by mosquitoes.', 1],
         ['Malaria can be prevented by', ['eating more salt', 'sleeping under insecticide-treated nets', 'drinking cold water', 'avoiding exercise'], 'B', 'Treated nets and clearing stagnant water reduce mosquito bites.', 1],
         ['A disease caught by drinking water contaminated with faeces is', ['diabetes', 'asthma', 'cholera', 'stroke'], 'C', 'Cholera spreads through dirty water and food; safe water and sanitation prevent it.', 1],
+        ['Which disease is caused by a lack of insulin?', ['diabetes', 'malaria', 'cholera', 'measles'], 'A', 'Type 1 diabetes results from the pancreas making too little insulin.', 1],
+        ['Washing hands with soap helps prevent', ['diarrhoeal diseases such as cholera', 'sickle cell disease', 'hypertension', 'short-sightedness'], 'A', 'Germs from dirty hands spread to food and mouths.', 1],
+        ['Sleeping under an insecticide-treated net prevents', ['malaria', 'diabetes', 'tuberculosis', 'hypertension'], 'A', 'It stops mosquito bites.', 1],
+        ['Cholera can be prevented by', ['drinking safe water and good sanitation', 'sleeping under nets', 'wearing shoes only', 'eating sweets'], 'A', 'It is a waterborne disease.', 1],
+        ['Hypertension can be reduced by', ['regular exercise and less salt', 'more salt', 'smoking', 'no exercise'], 'A', 'It is a lifestyle disease.', 1],
     ],
 
     'SHS 2: Traditional games' => [
@@ -121,6 +227,11 @@ return [
         ['Oware is played on a board with', ['two rows of six pits and 48 seeds', 'one row of four pits', '64 squares', 'a net'], 'A', 'Players sow seeds around the pits and capture the opponent\'s seeds.', 2],
         ['Ampe is a traditional game mainly involving', ['jumping, clapping and quick foot movements', 'kicking a ball', 'swimming', 'throwing spears'], 'A', 'Players jump and put a foot forward; the leader scores by matching or not matching feet.', 1],
         ['Traditional games help young people mainly by', ['building fitness, quick thinking and social skills', 'replacing all schoolwork', 'causing injuries', 'reducing friendships'], 'A', 'They are cheap, fun and develop physical and social skills.', 1],
+        ['Pilolo is a traditional Ghanaian game that involves', ['hiding sticks or objects and racing to find them', 'kicking a ball', 'swimming', 'weightlifting'], 'A', 'The finder races to a finish line.', 2],
+        ['Tug of war mainly develops', ['strength and teamwork', 'flexibility only', 'reading skills', 'balance only'], 'A', 'Two teams pull a rope in opposite directions.', 1],
+        ['Ampe is a traditional game played mainly by', ['girls, involving jumping and clapping', 'boys with a ball', 'adults with cards', 'animals'], 'A', 'Players guess which foot comes forward.', 1],
+        ['Oware is a traditional board game that develops', ['counting and strategic thinking', 'running speed', 'swimming', 'jumping'], 'A', 'Seeds are moved around pits.', 1],
+        ['Chaskele is a traditional Ghanaian game played with', ['a tin and a stick or ball', 'a racket', 'a net', 'a puck'], 'A', 'It is similar to cricket.', 2],
     ],
 
     'SHS 3: Athletics and sports participation' => [
@@ -128,6 +239,13 @@ return [
         ['In the shot put, the shot must be', ['put from the shoulder with one hand', 'thrown overarm like a ball', 'rolled', 'thrown with both hands'], 'A', 'The shot is pushed from close to the neck; throwing it like a ball is a foul.', 2],
         ['Sprinters use starting blocks mainly to', ['push off powerfully at the start', 'rest during the race', 'measure time', 'mark lanes'], 'A', 'Blocks give a firm surface to drive against.', 1],
         ['Which event is a jumping event in athletics?', ['triple jump', 'discus', '400 m', 'javelin'], 'A', 'Jumps include long jump, triple jump, high jump and pole vault.', 1],
+        ['In the long jump, the jump is measured from the', ['take-off line to the nearest mark in the sand', 'farthest mark in the sand', 'start of the runway', 'centre of the pit'], 'A', 'The nearest break in the sand made by any part of the body counts.', 2],
+        ['In the high jump, the technique of going over the bar backwards and head first is the', ['Fosbury flop', 'scissors kick', 'straddle', 'western roll'], 'A', 'It was made famous by Dick Fosbury in 1968.', 2],
+        ['In the high jump, an athlete is eliminated after', ['three consecutive failures', 'one failure', 'two attempts', 'five attempts'], 'A', 'The bar is raised after each round.', 2],
+        ['The shot put must be released', ['from the shoulder with one hand', 'with a full arm swing like a javelin', 'with both hands', 'underarm'], 'A', 'It is pushed, not thrown.', 2],
+        ['In the 100 m race, a false start is when a runner', ['leaves the blocks before the gun', 'finishes last', 'runs in lane 1', 'wears spikes'], 'A', 'It leads to disqualification.', 1],
+        ['The discus is thrown from a', ['circle', 'runway', 'pit', 'lane'], 'A', 'The thrower spins before release.', 1],
+        ['Participation in sport helps young people to', ['develop discipline and teamwork', 'become lazy', 'avoid friends', 'skip school'], 'A', 'Sport builds character.', 1],
     ],
 
     'SHS 3: Recreational activities' => [
@@ -135,6 +253,11 @@ return [
         ['Before going on a hike, it is most important to', ['carry water and tell someone your route', 'wear slippers', 'go alone without telling anyone', 'skip breakfast'], 'A', 'Planning, water and sharing your route keep hikers safe.', 1],
         ['Recreation mainly helps a person to', ['relax and refresh the body and mind', 'work longer hours', 'avoid friends', 'gain weight'], 'A', 'Recreation reduces stress and improves wellbeing.', 1],
         ['Which is a basic water-safety rule?', ['never swim alone and swim only where it is safe', 'dive into shallow water', 'swim after heavy drinking', 'swim far from the lifeguard'], 'A', 'Swimming with others in safe, supervised places prevents drowning.', 1],
+        ['Recreational activities are mainly done for', ['enjoyment and relaxation', 'money only', 'punishment', 'exams'], 'A', 'Examples: hiking, swimming, picnics.', 1],
+        ['Hiking up a mountain mainly improves', ['endurance and leg strength', 'typing speed', 'eyesight', 'handwriting'], 'A', 'It is also good for mental health.', 1],
+        ['Which is an outdoor recreational activity?', ['camping', 'watching TV', 'playing video games', 'sleeping'], 'A', 'It involves nature.', 1],
+        ['Recreation helps to reduce', ['stress', 'fitness', 'friendship', 'happiness'], 'A', 'It refreshes the mind.', 1],
+        ['Swimming is a recreational activity that', ['exercises the whole body', 'only exercises the arms', 'has no benefits', 'causes injury always'], 'A', 'It is low-impact.', 1],
     ],
 
     'SHS 3: Health and wellness: drugs and stress' => [
@@ -142,5 +265,11 @@ return [
         ['Which is a healthy way to manage stress?', ['regular exercise and enough sleep', 'taking alcohol', 'smoking', 'skipping meals'], 'A', 'Exercise, rest, talking to someone and good time management reduce stress.', 1],
         ['Using banned substances to improve sports performance is', ['doping', 'warming up', 'cross-training', 'hydration'], 'A', 'Doping is cheating and can seriously harm health.', 1],
         ['Smoking mainly damages the', ['lungs and heart', 'hair', 'nails', 'eyes only'], 'A', 'Smoking causes lung cancer, emphysema and heart disease.', 1],
+        ['Tramadol abuse among young people can cause', ['seizures, addiction and death', 'better grades', 'stronger muscles', 'improved memory'], 'A', 'It is a controlled painkiller.', 2],
+        ['A healthy way to cope with stress is', ['exercise and talking to someone you trust', 'taking drugs', 'drinking alcohol', 'isolating yourself'], 'A', 'Healthy coping protects mental health.', 1],
+        ['Smoking cigarettes damages mainly the', ['lungs and heart', 'hair', 'nails', 'teeth only'], 'A', 'It causes lung cancer and heart disease.', 1],
+        ['Drug dependence means', ['the body needs the drug to function normally', 'taking medicine correctly', 'never using drugs', 'using vitamins'], 'A', 'Stopping causes withdrawal symptoms.', 2],
+        ['Stress can be managed by', ['exercise, rest and talking to others', 'drinking alcohol', 'taking drugs', 'isolation'], 'A', 'Healthy coping.', 1],
+        ['Alcohol abuse by drivers leads to', ['road accidents', 'safer driving', 'better reflexes', 'less fuel use'], 'A', 'It impairs judgement.', 1],
     ],
 ];
