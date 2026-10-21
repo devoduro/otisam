@@ -61,4 +61,9 @@ return [
             'access_level' => 'free',
         ],
     ],
+
+    // Community Q&A: a post is hidden for review once this many people have reported it.
+    'qa' => [
+        'hide_after_reports' => (int) env('QA_HIDE_AFTER_REPORTS', 3),
+    ],
 ];

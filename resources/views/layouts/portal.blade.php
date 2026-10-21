@@ -18,6 +18,7 @@
         ['Practice papers', route('papers.index'), 'fa-file-lines', request()->routeIs('papers.*')],
         ['Top scorers', route('leaderboard'), 'fa-trophy', request()->routeIs('leaderboard')],
         ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
+        ['Q&A', route('qa.index'), 'fa-comments', request()->routeIs('qa.*')],
         $isTeacher ? ['Lesson plans', route('lesson-plans.index'), 'fa-clipboard-list', request()->routeIs('lesson-plans.*')] : null,
         $isTeacher ? ['Subject apps', route('subject-apps.index'), 'fa-robot', request()->routeIs('subject-apps.*')] : null,
         ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
