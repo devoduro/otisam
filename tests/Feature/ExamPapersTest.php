@@ -57,7 +57,8 @@ class ExamPapersTest extends TestCase
 
         $papers = ExamPaper::where('subject_id', $this->maths->id)->orderBy('number')->get();
         $this->assertSame([1, 2], $papers->pluck('number')->all()); // 130 eligible → two papers of 50
-        $this->assertSame('Core Mathematics Paper 1', $papers[0]->title);
+        $this->assertSame('Core Mathematics Mock '.now()->year, $papers[0]->title);
+        $this->assertSame('Core Mathematics Mock '.(now()->year - 1), $papers[1]->title);
         $this->assertSame('WASSCE', $papers[0]->exam_style);
         $this->assertSame(60, $papers[0]->duration_minutes);
 
@@ -102,7 +103,7 @@ class ExamPapersTest extends TestCase
         app(PaperBuilder::class)->build($english);
 
         $this->get(route('papers.index'))->assertOk()->assertSee('Core Mathematics')->assertSee('English Language')->assertSee('1 paper · WASSCE style');
-        $this->get(route('papers.subject', $this->maths))->assertOk()->assertSee('Core Mathematics Paper 1')->assertSee('50 questions');
+        $this->get(route('papers.subject', $this->maths))->assertOk()->assertSee('Core Mathematics Mock '.now()->year)->assertSee('50 questions');
         $this->get(route('papers.show', [$this->maths, 1]))->assertOk()->assertSee('Study mode')->assertSee('Exam mode');
         $this->get(route('papers.show', [$this->maths, 9]))->assertNotFound();
 
@@ -160,7 +161,7 @@ class ExamPapersTest extends TestCase
 
         $this->get(route('library.index', ['subject' => 'core-mathematics']))->assertOk()
             ->assertSee('WASSCE past papers by year')->assertSee((string) now()->year)->assertSee('1993')->assertDontSee('WASSCE 1992')
-            ->assertSee('WASSCE-style practice papers')->assertSee('Core Mathematics Paper 1')->assertSee('not WAEC papers')
+            ->assertSee('WASSCE-style practice papers')->assertSee('Core Mathematics Mock '.now()->year)->assertSee('not WAEC papers')
             ->assertSee(route('papers.take', [$this->maths, 1, 'mode' => 'exam']), false);
 
         $this->get(route('library.index', ['subject' => 'jhs-science']))->assertOk()->assertSee('BECE past papers by year')->assertSee('1990');

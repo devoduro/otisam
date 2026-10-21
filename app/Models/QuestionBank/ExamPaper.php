@@ -28,6 +28,16 @@ class ExamPaper extends Model
         return $this->belongsToMany(Question::class)->withPivot('position')->orderByPivot('position');
     }
 
+    /**
+     * "Core Mathematics Mock 2026": paper 1 takes the current year and each later paper the year
+     * before, newest first. These are Otisam's own papers; the year is only a label, not an exam
+     * year, so pages next to it say they are not WAEC papers.
+     */
+    public static function titleFor(string $subjectName, int $number, ?int $baseYear = null): string
+    {
+        return $subjectName.' Mock '.(($baseYear ?? (int) now()->year) - $number + 1);
+    }
+
     public function scopeVisible(Builder $query): Builder
     {
         return $query->where('status', 'published');

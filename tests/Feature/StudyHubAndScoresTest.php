@@ -92,7 +92,7 @@ class StudyHubAndScoresTest extends TestCase
 
         $this->get(route('leaderboard', ['subject' => 'core-mathematics']))->assertOk()
             ->assertSee('Ama O.')->assertSee('Kofi B.')->assertDontSee('Owusu');
-        $this->actingAs($ama)->get(route('learn.progress'))->assertOk()->assertSee('Core Mathematics Paper 1')->assertSee('40/50')->assertSee('#1');
+        $this->actingAs($ama)->get(route('learn.progress'))->assertOk()->assertSee('Core Mathematics Mock '.now()->year)->assertSee('40/50')->assertSee('#1');
     }
 
     public function test_only_students_are_recorded_and_ranked(): void

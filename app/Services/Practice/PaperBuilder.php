@@ -46,7 +46,7 @@ class PaperBuilder
             $picked = $this->pick($pools, $size);
             $number++;
             DB::transaction(function () use ($subject, $style, $shape, $number, $picked) {
-                $paper = new ExamPaper(['number' => $number, 'title' => "{$subject->name} Paper {$number}", 'exam_style' => $style, 'duration_minutes' => $shape['minutes']]);
+                $paper = new ExamPaper(['number' => $number, 'title' => ExamPaper::titleFor($subject->name, $number), 'exam_style' => $style, 'duration_minutes' => $shape['minutes']]);
                 $paper->subject_id = $subject->id;
                 $paper->status = 'published';
                 $paper->published_at = now();
