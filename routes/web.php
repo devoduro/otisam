@@ -6,13 +6,16 @@ use App\Http\Controllers\Auth;
 use App\Http\Controllers\Learn;
 use App\Http\Controllers\Public\DownloadController;
 use App\Http\Controllers\Public\HomeController;
+use App\Http\Controllers\Public\LeaderboardController;
 use App\Http\Controllers\Public\LessonPlanController;
 use App\Http\Controllers\Public\LibraryController;
+use App\Http\Controllers\Public\PaperController;
 use App\Http\Controllers\Public\PlanController;
 use App\Http\Controllers\Public\PracticeController;
 use App\Http\Controllers\Public\PromotionController;
 use App\Http\Controllers\Public\ReferralController;
 use App\Http\Controllers\Public\ResourceFileController;
+use App\Http\Controllers\Public\StudyController;
 use App\Http\Controllers\Public\SubjectAppController;
 use App\Http\Controllers\Public\SubjectController;
 use App\Http\Controllers\Public\TeacherDirectoryController;
@@ -48,6 +51,23 @@ Route::get('/practice', [PracticeController::class, 'index'])->name('practice.in
 Route::get('/practice/start', [PracticeController::class, 'start'])->name('practice.start');
 Route::post('/practice/mark', [PracticeController::class, 'mark'])->middleware('throttle:30,1')->name('practice.mark');
 Route::get('/practice/{subject}', [PracticeController::class, 'show'])->name('practice.show');
+// Study by class: level → class → subject hub.
+Route::get('/study', [StudyController::class, 'index'])->name('study.index');
+Route::get('/study/{level}', [StudyController::class, 'level'])->whereIn('level', ['jhs', 'shs'])->name('study.level');
+Route::get('/study/{level}/{subject}', [StudyController::class, 'subject'])->whereIn('level', ['jhs', 'shs'])->name('study.subject');
+Route::get('/study/{level}/{subject}/quick', [StudyController::class, 'quick'])->whereIn('level', ['jhs', 'shs'])->name('study.quick');
+Route::post('/study/{level}/{subject}/check', [StudyController::class, 'check'])->whereIn('level', ['jhs', 'shs'])->middleware('throttle:120,1')->name('study.check');
+Route::get('/leaderboard', LeaderboardController::class)->name('leaderboard');
+// WASSCE/BECE-style objective papers built from Otisam's own questions.
+Route::prefix('/papers')->name('papers.')->group(function () {
+    Route::get('/', [PaperController::class, 'index'])->name('index');
+    Route::get('/{subject}', [PaperController::class, 'subject'])->name('subject');
+    Route::get('/{subject}/{number}', [PaperController::class, 'show'])->whereNumber('number')->name('show');
+    Route::get('/{subject}/{number}/take', [PaperController::class, 'take'])->whereNumber('number')->name('take');
+    Route::post('/{subject}/{number}/check', [PaperController::class, 'check'])->whereNumber('number')->middleware('throttle:120,1')->name('check');
+    Route::post('/{subject}/{number}/mark', [PaperController::class, 'mark'])->whereNumber('number')->middleware('throttle:30,1')->name('mark');
+    Route::get('/{subject}/{number}/solutions', [PaperController::class, 'solutions'])->whereNumber('number')->middleware('auth')->name('solutions');
+});
 Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.show');
 Route::get('/downloads', [DownloadController::class, 'index'])->name('downloads.index');
@@ -114,6 +134,7 @@ Route::middleware(['auth', 'account:student,teacher', 'phone.verified', 'passwor
 */
 Route::middleware(['auth', 'account:student', 'phone.verified', 'password.fresh'])->prefix('learn')->name('learn.')->group(function () {
     Route::get('/', Learn\DashboardController::class)->name('dashboard');
+    Route::get('/progress', Learn\ProgressController::class)->name('progress');
 
     // Classes, assignments and quizzes from teachers
     Route::get('/classes', [Learn\ClassController::class, 'index'])->name('classes.index');

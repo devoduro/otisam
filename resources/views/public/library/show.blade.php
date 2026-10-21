@@ -15,7 +15,7 @@
 <div class="mx-auto max-w-5xl px-4 py-8 sm:py-12">
     <nav aria-label="Breadcrumb" class="text-sm text-gray-500">
         <ol class="flex flex-wrap gap-1">
-            <li><a href="{{ route('library.index') }}">Library</a> /</li>
+            <li><a href="{{ route('library.index') }}">Past Questions</a> /</li>
             @if ($resource->subject)<li><a href="{{ route('library.index', ['subject' => $resource->subject->slug]) }}">{{ $resource->subject->name }}</a> /</li>@endif
             <li aria-current="page">{{ \Illuminate\Support\Str::limit($resource->title, 50) }}</li>
         </ol>

@@ -8,6 +8,7 @@ use App\Models\Curriculum\EducationLevel;
 use App\Models\Curriculum\Subject;
 use App\Models\QuestionBank\Question;
 use App\Models\QuestionBank\QuestionKey;
+use App\Models\QuestionBank\QuizAttempt;
 use App\Services\Access\Entitlements;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
@@ -146,6 +147,14 @@ class PracticeController extends Controller
 
             return ['total' => $rows->count(), 'right' => $rows->where('right', true)->count()];
         })->filter(fn ($row) => $row['total'] > 0);
+
+        // Signed-in students keep their score (My progress, leaderboard).
+        if (! $subject->isProfessional()) {
+            QuizAttempt::recordFor($request->user(), [
+                'subject_id' => $subject->id, 'kind' => 'practice', 'score' => $score,
+                'total' => $results->count(), 'seconds' => $seconds, 'late' => (bool) $late,
+            ]);
+        }
 
         // Keep the last few scores for the practice home page (this browser session only).
         $recent = collect($request->session()->get('practice.recent', []))

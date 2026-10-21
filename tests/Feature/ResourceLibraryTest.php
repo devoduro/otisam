@@ -84,6 +84,24 @@ class ResourceLibraryTest extends TestCase
         return $resource->fresh();
     }
 
+    public function test_an_uploaded_past_paper_opens_its_year(): void
+    {
+        $resource = $this->publishedResource([
+            'title' => 'WASSCE 2019 Core Mathematics Paper 1',
+            'category_id' => ResourceCategory::where('name', 'WASSCE past questions')->value('id'),
+            'exam_type_id' => ExamType::where('name', 'WASSCE (May/June)')->value('id'),
+            'exam_year' => 2019,
+            'paper_number' => '1',
+            'access_level' => 'free',
+        ]);
+
+        $this->get(route('library.index', ['subject' => 'core-mathematics']))->assertOk()
+            ->assertSee(route('library.index', ['subject' => 'core-mathematics', 'year' => 2019]))
+            ->assertSee('WASSCE 2018: not available yet');
+        $this->get(route('library.index', ['subject' => 'core-mathematics', 'year' => 2019]))->assertOk()->assertSee($resource->title);
+        $this->get(route('library.index'))->assertOk()->assertSee('1 past paper');
+    }
+
     public function test_upload_stores_privately_and_generates_a_short_preview(): void
     {
         $resource = $this->publishedResource();

@@ -22,6 +22,7 @@
             <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Subjects</dt><dd><strong class="font-display text-lg">{{ $counts->count() }}</strong> subjects</dd></div>
             <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Exams</dt><dd>WASSCE &amp; BECE style</dd></div>
         </dl>
+        <a href="{{ route('papers.index') }}" class="mt-5 inline-flex h-11 items-center gap-2 rounded-xl bg-gold-500 px-5 text-[15px] font-bold text-primary-950 no-underline shadow-gold hover:bg-gold-400 hover:text-primary-950"><i class="fas fa-file-lines" aria-hidden="true"></i>Full practice papers <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
     </div>
 </section>
 

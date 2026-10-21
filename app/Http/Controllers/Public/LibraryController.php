@@ -9,7 +9,9 @@ use App\Models\Library\ExamType;
 use App\Models\Library\Resource;
 use App\Models\Library\ResourceCategory;
 use App\Models\Library\TakedownRequest;
+use App\Models\QuestionBank\ExamPaper;
 use App\Models\QuestionBank\Question;
+use App\Models\QuestionBank\QuizAttempt;
 use App\Services\Library\ResourceAccess;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -70,7 +72,60 @@ class LibraryController extends Controller
             'practiceCount' => $subject ? Question::where('subject_id', $subject->id)->where('status', 'published')
                 ->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count() : 0,
             'subject' => $subject,
-        ]);
+        ] + $this->papers($request, $levels, $level, $subject));
+    }
+
+    /** First year of each exam (WAEC has run the BECE since 1990 and the WASSCE since 1993). */
+    public const FIRST_YEAR = ['JHS' => 1990, 'SHS' => 1993];
+
+    /**
+     * The Past Questions view on top of the documents: BECE (JHS) and WASSCE (SHS) subject cards,
+     * or, for one subject, every exam year (with the uploaded papers for the years that have them)
+     * and Otisam's own exam-style practice papers.
+     */
+    private function papers(Request $request, $levels, ?EducationLevel $level, ?Subject $subject): array
+    {
+        $examTypes = fn (string $code) => ExamType::where(fn ($q) => $code === 'JHS' ? $q->where('name', 'like', 'BECE%') : $q->where('name', 'like', 'WASSCE%'))->pluck('id');
+        $pastPapers = fn ($q) => $q->visible()->whereHas('category', fn ($c) => $c->where('is_exam_paper', true))->where('audience', '!=', 'teacher');
+
+        if ($subject) {
+            $subject->loadMissing('educationLevel');
+            $code = $subject->educationLevel?->code === 'JHS' ? 'JHS' : 'SHS';
+            $papers = ExamPaper::visible()->where('subject_id', $subject->id)->withCount('questions')->orderBy('number')->get();
+            $user = $request->user();
+            $byYear = $pastPapers(Resource::query())->where('subject_id', $subject->id)->whereIn('exam_type_id', $examTypes($code))
+                ->whereNotNull('exam_year')->selectRaw('exam_year, count(*) as n')->groupBy('exam_year')->pluck('n', 'exam_year');
+
+            return [
+                'subjectPapers' => $papers,
+                'best' => $user ? QuizAttempt::where('user_id', $user->id)->where('kind', 'paper')->whereIn('exam_paper_id', $papers->pluck('id'))
+                    ->groupBy('exam_paper_id')->selectRaw('exam_paper_id, max(score) as best')->pluck('best', 'exam_paper_id') : collect(),
+                'paperSubjects' => collect(),
+                'examYears' => range((int) now()->year, self::FIRST_YEAR[$code]),
+                'yearCounts' => $byYear,
+                'examName' => $code === 'JHS' ? 'BECE' : 'WASSCE',
+            ];
+        }
+
+        $paperCounts = ExamPaper::visible()->selectRaw('subject_id, count(*) as n')->groupBy('subject_id')->pluck('n', 'subject_id');
+        $docCounts = $pastPapers(Resource::query())->whereNotNull('subject_id')->selectRaw('subject_id, count(*) as n')->groupBy('subject_id')->pluck('n', 'subject_id');
+
+        return [
+            'subjectPapers' => collect(),
+            'best' => collect(),
+            'examYears' => [],
+            'yearCounts' => collect(),
+            'examName' => null,
+            // [level name => every active subject], each carrying its counts; BECE first, then WASSCE.
+            'paperSubjects' => $levels->filter(fn ($l) => in_array($l->code, ['JHS', 'SHS'], true))
+                ->when($level, fn ($c) => $c->where('id', $level->id))
+                ->mapWithKeys(fn ($l) => [($l->code === 'JHS' ? 'BECE · ' : 'WASSCE · ').$l->name => $l->subjects
+                    ->each(function ($s) use ($paperCounts, $docCounts) {
+                        $s->papers_count = $paperCounts[$s->id] ?? 0;
+                        $s->past_count = $docCounts[$s->id] ?? 0;
+                    })->values()])
+                ->filter(fn ($subjects) => $subjects->isNotEmpty()),
+        ];
     }
 
     /** Exam years to filter by: this year back to 1990 (WAEC has run the WASSCE since 1993, BECE since 1990). */

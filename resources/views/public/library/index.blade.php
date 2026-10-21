@@ -1,15 +1,84 @@
 @extends('layouts.app')
 
-@section('title', 'Past questions & study library')
-@section('description', 'Past questions, worked solutions, marking guides and notes for JHS and SHS students in Ghana.')
+@section('title', 'Past Questions: BECE & WASSCE')
+@section('description', 'BECE and WASSCE past questions by subject and year, plus exam-style practice papers with answers, for JHS and SHS students in Ghana.')
 
 @section('content')
+@php $tab = $subject?->educationLevel?->code ?? strtoupper($filters['level'] ?? ''); @endphp
 <div class="mx-auto max-w-6xl px-4 py-8 sm:py-12">
-    <h1 class="text-3xl font-extrabold text-gray-800">Library</h1>
-    <p class="mt-1 text-gray-500">Past questions, worked solutions and notes. Free items open straight away; premium items show a preview.</p>
+    <h1 class="text-3xl font-extrabold text-gray-800">Past Questions</h1>
+    <p class="mt-1 text-gray-500">BECE and WASSCE papers by subject and year, with exam-style practice papers to sit online.</p>
 
+    <nav aria-label="Exam" class="mt-5 flex flex-wrap gap-2 text-sm">
+        @foreach (['' => 'BECE & WASSCE', 'JHS' => 'BECE (JHS)', 'SHS' => 'WASSCE (SHS)'] as $code => $label)
+            <a href="{{ route('library.index', array_filter(['level' => strtolower($code)])) }}" @if ($tab === $code && ! $subject) aria-current="page" @endif
+               class="rounded-full px-4 py-1.5 font-semibold no-underline {{ $tab === $code ? 'bg-primary-600 text-white' : 'bg-white text-primary-700 ring-1 ring-[#e2e0ea] hover:ring-gold-500' }}">{{ $label }}</a>
+        @endforeach
+    </nav>
+
+    @if ($paperSubjects->isNotEmpty())
+        @foreach ($paperSubjects as $levelName => $cards)
+            <h2 class="mt-8 text-lg font-extrabold text-gray-800">{{ $levelName }}</h2>
+            <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                @foreach ($cards as $s)
+                    <li>
+                        <a href="{{ route('library.index', ['subject' => $s->slug]) }}" class="flex h-full flex-col justify-between rounded-2xl bg-white p-4 no-underline shadow-card ring-1 ring-[#ece9f3] transition hover:-translate-y-0.5 hover:shadow-md">
+                            <span class="font-semibold text-gray-800">{{ $s->name }}</span>
+                            <span class="mt-2 flex flex-wrap gap-1.5 text-[11px] font-semibold">
+                                <span class="rounded-full bg-gray-100 px-2 py-0.5 text-gray-600">{{ $s->past_count ? $s->past_count.' past '.\Illuminate\Support\Str::plural('paper', $s->past_count) : 'Past papers coming' }}</span>
+                                @if ($s->papers_count)<span class="rounded-full bg-gold-100 px-2 py-0.5 text-gold-800">{{ $s->papers_count }} practice {{ \Illuminate\Support\Str::plural('paper', $s->papers_count) }}</span>@endif
+                            </span>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        @endforeach
+    @elseif ($subject)
+        <div class="mt-6 flex flex-wrap items-end justify-between gap-3">
+            <div>
+                <p class="eyebrow">{{ $examName }} · {{ $subject->educationLevel?->name }}</p>
+                <h2 class="mt-1 text-2xl font-extrabold text-gray-800">{{ $subject->name }}</h2>
+            </div>
+            <a href="{{ route('library.index', ['level' => strtolower($subject->educationLevel?->code ?? '')]) }}" class="text-sm font-semibold no-underline"><i class="fas fa-arrow-left mr-1" aria-hidden="true"></i>All {{ $examName }} subjects</a>
+        </div>
+
+        <section aria-labelledby="years-title" class="mt-5 rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3]">
+            <h3 id="years-title" class="font-bold text-gray-800">{{ $examName }} past papers by year</h3>
+            <p class="text-sm text-gray-500">Years with papers open them below. The others are not available on {{ config('app.name') }} yet.</p>
+            <ul class="mt-4 grid grid-cols-4 gap-2 sm:grid-cols-8 lg:grid-cols-12">
+                @foreach ($examYears as $y)
+                    <li>
+                        @if (isset($yearCounts[$y]))
+                            <a href="{{ route('library.index', ['subject' => $subject->slug, 'year' => $y]) }}" @if ((int) ($filters['year'] ?? 0) === $y) aria-current="true" @endif
+                               class="flex h-14 flex-col items-center justify-center rounded-xl text-sm font-bold no-underline {{ (int) ($filters['year'] ?? 0) === $y ? 'bg-primary-600 text-white' : 'bg-primary-50 text-primary-700 hover:bg-primary-100' }}">{{ $y }}<span class="text-[10px] font-semibold opacity-75">{{ $yearCounts[$y] }} {{ \Illuminate\Support\Str::plural('paper', $yearCounts[$y]) }}</span></a>
+                        @else
+                            <span class="flex h-14 flex-col items-center justify-center rounded-xl bg-gray-50 text-sm font-semibold text-gray-400" title="{{ $examName }} {{ $y }}: not available yet">{{ $y }}<span class="text-[10px] font-normal">not yet</span></span>
+                        @endif
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+
+        @if ($subjectPapers->isNotEmpty())
+            <section aria-labelledby="practice-papers-title" class="mt-6">
+                <div class="flex flex-wrap items-end justify-between gap-3">
+                    <div>
+                        <h3 id="practice-papers-title" class="text-lg font-bold text-gray-800">{{ $examName }}-style practice papers</h3>
+                        <p class="text-sm text-gray-500">Full objective papers written by {{ config('app.name') }} in the style of the {{ $examName }}, with answers and explanations. They are not WAEC papers.</p>
+                    </div>
+                    @if ($subject->educationLevel && ! $subject->isProfessional())
+                        <a href="{{ route('study.subject', [strtolower($subject->educationLevel->code), $subject]) }}" class="text-sm font-semibold no-underline"><i class="fas fa-layer-group mr-1" aria-hidden="true"></i>Practice by topic</a>
+                    @endif
+                </div>
+                @include('public.papers._list', ['papers' => $subjectPapers])
+            </section>
+        @endif
+    @endif
+
+    <details class="mt-10 rounded-2xl bg-white p-4 shadow-card ring-1 ring-[#ece9f3]" @if (array_filter(\Illuminate\Support\Arr::except($filters, ['subject', 'level']))) open @endif>
+        <summary class="cursor-pointer font-semibold text-primary-700"><i class="fas fa-magnifying-glass mr-1" aria-hidden="true"></i>Search all papers, solutions and notes</summary>
     @php $control = 'block w-full rounded-xl border-[1.5px] border-[#e2e0ea] bg-white px-3 py-2.5 text-sm text-[#241038] focus:border-gold-500 focus:outline-none focus:ring-[3px] focus:ring-gold-500/30'; @endphp
-    <form method="GET" class="mt-6 rounded-2xl bg-white p-4 shadow-card ring-1 ring-[#ece9f3]" role="search" data-catalogue-filters>
+    <form method="GET" class="mt-4" role="search" data-catalogue-filters>
         <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <div class="sm:col-span-2">
                 <label for="q" class="mb-1 block text-[13px] font-bold text-primary-800">Search</label>
@@ -78,6 +147,7 @@
         </div>
     </form>
     @include('public.partials.auto-filter-script')
+    </details>
 
     @if ($practiceCount > 0)
         <a href="{{ route('practice.index', ['subject' => $subject->slug]) }}" class="mt-6 flex items-center justify-between gap-3 rounded-2xl bg-gold-50 p-4 text-primary-700 no-underline shadow-card ring-1 ring-[#ece9f3] hover:bg-gold-100">
@@ -86,10 +156,18 @@
         </a>
     @endif
 
-    <p class="mt-6 text-sm text-gray-500" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
+    <h2 class="mt-8 text-xl font-extrabold text-gray-800">{{ $subject ? $subject->name.' papers, solutions and notes' : 'Papers, solutions and notes' }}</h2>
+    <p class="mt-1 text-sm text-gray-500" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
 
     @if ($resources->isEmpty())
-        <p class="mt-3 rounded-2xl bg-white shadow-card ring-1 ring-[#ece9f3] p-6 text-gray-500">Nothing matches yet. Try fewer filters, or check back soon. New material is being added.</p>
+        <div class="mt-3 rounded-2xl bg-white p-6 shadow-card ring-1 ring-[#ece9f3]">
+            <p class="text-gray-500">{{ array_filter($filters) ? 'No documents match these filters yet. Try fewer filters.' : 'Past papers, notes and marking schemes are being added to the Library.' }} In the meantime, practise with answers and explanations:</p>
+            <div class="mt-4 grid gap-3 sm:grid-cols-3">
+                <a href="{{ route('practice.index', array_filter(['subject' => $subject?->slug])) }}" class="rounded-xl bg-gold-50 p-4 font-semibold text-primary-700 no-underline ring-1 ring-[#ece9f3] hover:bg-gold-100"><i class="fas fa-list-check mr-2" aria-hidden="true"></i>Practice questions</a>
+                <a href="{{ $subject ? route('papers.subject', $subject) : route('papers.index') }}" class="rounded-xl bg-gold-50 p-4 font-semibold text-primary-700 no-underline ring-1 ring-[#ece9f3] hover:bg-gold-100"><i class="fas fa-stopwatch mr-2" aria-hidden="true"></i>WASSCE/BECE-style papers</a>
+                <a href="{{ route('study.index') }}" class="rounded-xl bg-gold-50 p-4 font-semibold text-primary-700 no-underline ring-1 ring-[#ece9f3] hover:bg-gold-100"><i class="fas fa-layer-group mr-2" aria-hidden="true"></i>Study by class</a>
+            </div>
+        </div>
     @else
         <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($resources as $resource)

@@ -22,7 +22,7 @@
                 @if ($profile->region)<span><i class="fas fa-location-dot"></i> {{ $profile->region }}</span>@endif
                 <span><i class="fas fa-shield-halved"></i> {{ $status->label() }}</span>
             </x-slot:chips>
-            <a class="primary" href="{{ route('library.index') }}"><i class="fas fa-book-open"></i> Library</a>
+            <a class="primary" href="{{ route('library.index') }}"><i class="fas fa-book-open"></i> Past Questions</a>
             <a href="{{ route('teach.profile.edit') }}"><i class="fas fa-id-badge"></i> My profile</a>
         </x-dashboard-hero>
     </div>

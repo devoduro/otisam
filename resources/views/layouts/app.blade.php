@@ -3,11 +3,14 @@
 @php
     $links = [
         'home' => ['Home', route('home'), 'fa-house', request()->routeIs('home')],
-        'library' => ['Library', route('library.index'), 'fa-book-open', request()->routeIs('library.*')],
+        'study' => ['Study by class', route('study.index'), 'fa-layer-group', request()->routeIs('study.*')],
+        'library' => ['Past Questions', route('library.index'), 'fa-book-open', request()->routeIs('library.*')],
         'practice' => ['Practice', route('practice.index'), 'fa-list-check', request()->routeIs('practice.*')],
+        'papers' => ['Practice papers', route('papers.index'), 'fa-file-lines', request()->routeIs('papers.*')],
         'videos' => ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
         'lesson-plans' => ['Lesson plans', route('lesson-plans.index'), 'fa-clipboard-list', request()->routeIs('lesson-plans.*')],
         'subject-apps' => ['Subject apps', route('subject-apps.index'), 'fa-robot', request()->routeIs('subject-apps.*')],
+        'leaderboard' => ['Top scorers', route('leaderboard'), 'fa-trophy', request()->routeIs('leaderboard')],
         'downloads' => ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
         'teachers' => ['Teachers', route('teachers.index'), 'fa-user-tie', request()->routeIs('teachers.index', 'teachers.show')],
         'promotion' => ['Promotion', route('promotion'), 'fa-chalkboard-user', request()->routeIs('promotion')],
@@ -16,13 +19,13 @@
     ];
     $navLinks = array_values($links);
     // The wide-screen bar is full: these stay in the menu, footer and teacher sidebar only.
-    $barLinks = array_values(\Illuminate\Support\Arr::except($links, ['lesson-plans', 'subject-apps']));
+    $barLinks = array_values(\Illuminate\Support\Arr::except($links, ['study', 'papers', 'leaderboard', 'lesson-plans', 'subject-apps']));
     $accountUrl = auth()->check() ? route(auth()->user()->homeRoute()) : route('login');
     // Phone tab bar: the five most used destinations (examsghana-style).
     $tabLinks = [
         // Short labels for the narrow tab bar; [label] + link keeps the link's url, icon and active state.
         ['Home'] + $links['home'],
-        ['Library'] + $links['library'],
+        ['Past Qs'] + $links['library'],
         ['Videos'] + $links['videos'],
         ['Downloads'] + $links['downloads'],
         [auth()->check() ? 'Me' : 'Sign in', $accountUrl, 'fa-user', request()->routeIs('login', 'learn.*', 'teach.*')],
@@ -104,8 +107,11 @@
             <div>
                 <p class="text-[13px] font-bold uppercase tracking-wider text-white">Learn</p>
                 <ul class="mt-3 space-y-2 text-sm">
-                    <li><a href="{{ route('library.index') }}" class="text-white/60 no-underline hover:text-gold-400">Library</a></li>
+                    <li><a href="{{ route('study.index') }}" class="text-white/60 no-underline hover:text-gold-400">Study by class</a></li>
+                    <li><a href="{{ route('library.index') }}" class="text-white/60 no-underline hover:text-gold-400">Past Questions</a></li>
                     <li><a href="{{ route('practice.index') }}" class="text-white/60 no-underline hover:text-gold-400">Practice questions</a></li>
+                    <li><a href="{{ route('papers.index') }}" class="text-white/60 no-underline hover:text-gold-400">Practice papers</a></li>
+                    <li><a href="{{ route('leaderboard') }}" class="text-white/60 no-underline hover:text-gold-400">Top scorers</a></li>
                     <li><a href="{{ route('videos.index') }}" class="text-white/60 no-underline hover:text-gold-400">Video lessons</a></li>
                     <li><a href="{{ route('lesson-plans.index') }}" class="text-white/60 no-underline hover:text-gold-400">Lesson plans</a></li>
                     <li><a href="{{ route('subject-apps.index') }}" class="text-white/60 no-underline hover:text-gold-400">Subject apps</a></li>
