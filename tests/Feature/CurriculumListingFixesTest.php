@@ -54,12 +54,12 @@ class CurriculumListingFixesTest extends TestCase
         // Every Robotics question has a topic; the SHS 2 topic's questions are filed under SHS 2.
         $questions = Question::where('subject_id', $robotics->id)->get();
         $this->assertSame(0, $questions->filter(fn ($q) => ! $q->curriculumNodes()->exists())->count());
-        $this->assertSame(3, Question::whereHas('curriculumNodes', fn ($n) => $n->whereKey($topic->id))->where('class_level_id', $shs2->id)->count());
+        $this->assertSame(10, Question::whereHas('curriculumNodes', fn ($n) => $n->whereKey($topic->id))->where('class_level_id', $shs2->id)->count());
 
         $this->get(route('practice.index', ['subject' => 'robotics']))->assertOk()
             ->assertDontSee('none tagged yet')->assertSee('SHS 2 · PID control and troubleshooting');
         $this->get(route('practice.index', ['subject' => 'robotics', 'topic' => $topic->id]))->assertOk()
-            ->assertSee('3 questions match');
+            ->assertSee('10 questions match');
 
         // Running the seeder again neither duplicates topics nor re-tags questions.
         $nodes = CurriculumNode::count();
