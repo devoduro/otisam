@@ -13,6 +13,7 @@
         <div>
             <h1 class="text-3xl font-extrabold text-gray-800">Lesson plans</h1>
             <p class="mt-1 text-gray-500">Weekly plans written by teachers: starter, main activities, reflection and assessment. Print one or save it to edit.</p>
+            <p class="mt-1 text-sm"><a href="{{ route('subject-apps.index') }}" class="font-semibold no-underline"><i class="fas fa-robot mr-1" aria-hidden="true"></i>AI planning apps for your subject</a></p>
         </div>
         @if ($canWrite)
             <x-button :href="route('teach.lesson-plans.create')" icon="fa-plus">Write a lesson plan</x-button>

@@ -42,6 +42,7 @@ class EveryPageLoadsTest extends TestCase
             route('admin.audit.index'),
             route('admin.lesson-plans.index'),
             route('lesson-plans.index'),
+            route('subject-apps.index'),
             route('password.change'),
         ] as $url) {
             $this->get($url)->assertOk();

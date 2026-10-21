@@ -17,6 +17,11 @@
                 <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Teachers</dt><dd><strong class="font-display text-lg">{{ $teachers->count() }}</strong> teachers</dd></div>
                 <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Schools</dt><dd><strong class="font-display text-lg">{{ $schools }}</strong> schools</dd></div>
             </dl>
+            <p class="mt-4 flex flex-wrap items-center gap-2 text-sm">
+                <span class="font-semibold text-white/70">Teacher tools:</span>
+                <a href="{{ route('subject-apps.index') }}" class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-semibold text-primary-700 no-underline hover:bg-gold-50 hover:text-gold-700"><i class="fas fa-robot" aria-hidden="true"></i>Subject apps</a>
+                <a href="{{ route('lesson-plans.index') }}" class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-semibold text-primary-700 no-underline hover:bg-gold-50 hover:text-gold-700"><i class="fas fa-clipboard-list" aria-hidden="true"></i>Lesson plans</a>
+            </p>
         </div>
         @guest
             <a href="{{ route('teachers.register') }}" class="inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-gold-500 px-6 text-[15px] font-bold text-primary-950 no-underline shadow-gold hover:bg-gold-400 hover:text-primary-950">Are you a teacher? Join free <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
