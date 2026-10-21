@@ -7,7 +7,7 @@
 @php $tab = $subject?->educationLevel?->code ?? strtoupper($filters['level'] ?? ''); @endphp
 <div class="mx-auto max-w-6xl px-4 py-8 sm:py-12">
     <h1 class="text-3xl font-extrabold text-gray-800">Past Questions</h1>
-    <p class="mt-1 text-gray-500">BECE and WASSCE papers by subject and year, with exam-style practice papers to sit online.</p>
+    <p class="mt-1 text-gray-500">BECE and WASSCE papers by subject and year</p>
 
     <nav aria-label="Exam" class="mt-5 flex flex-wrap gap-2 text-sm">
         @foreach (['' => 'BECE & WASSCE', 'JHS' => 'BECE (JHS)', 'SHS' => 'WASSCE (SHS)'] as $code => $label)
