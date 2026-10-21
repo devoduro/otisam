@@ -33,6 +33,7 @@ class LibraryController extends Controller
             'exam' => ['nullable', 'integer'],
             'year' => ['nullable', 'integer', 'min:1950', 'max:2100'],
             'access' => ['nullable', Rule::in(['free', 'premium'])],
+            'paper' => ['nullable', Rule::in(['1', '2', '3'])],
         ]);
 
         $levels = EducationLevel::active()->ordered()->with([
@@ -56,6 +57,7 @@ class LibraryController extends Controller
             ->when($category, fn ($q) => $q->where('category_id', $category->id))
             ->when($filters['exam'] ?? null, fn ($q, $e) => $q->where('exam_type_id', $e))
             ->when($filters['year'] ?? null, fn ($q, $y) => $q->where('exam_year', $y))
+            ->when($filters['paper'] ?? null, fn ($q, $n) => $q->where('paper_number', $n))
             ->when($filters['access'] ?? null, fn ($q, $a) => $q->where('access_level', $a))
             ->orderByDesc('exam_year')->orderByDesc('published_at')->orderBy('title')
             ->paginate(20)->withQueryString();
@@ -66,8 +68,10 @@ class LibraryController extends Controller
             'levels' => $levels,
             'level' => $level,
             'categories' => ResourceCategory::active()->where('audience', '!=', 'teacher')->ordered()->get(),
-            'examTypes' => ExamType::active()->ordered()->get(),
-            'years' => self::examYears(),
+            'examTypes' => ExamType::active()->ordered()->get()
+                ->when($level?->code === 'JHS', fn ($c) => $c->reject(fn ($e) => str_starts_with($e->name, 'WASSCE')))
+                ->when($level?->code === 'SHS', fn ($c) => $c->reject(fn ($e) => str_starts_with($e->name, 'BECE')))->values(),
+            'years' => range((int) now()->year, $level?->code === 'SHS' ? self::FIRST_YEAR['SHS'] : self::FIRST_YEAR['JHS']),
             // Practice questions live in the question bank, not the library, so point to them.
             'practiceCount' => $subject ? Question::where('subject_id', $subject->id)->where('status', 'published')
                 ->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count() : 0,
@@ -85,6 +89,11 @@ class LibraryController extends Controller
      */
     private function papers(Request $request, $levels, ?EducationLevel $level, ?Subject $subject): array
     {
+        $filters = $request->only(['exam', 'year', 'paper']);
+        $narrow = fn ($q, bool $withYear = true) => $q
+            ->when($filters['exam'] ?? null, fn ($w, $e) => $w->where('exam_type_id', (int) $e))
+            ->when($withYear && ($filters['year'] ?? null), fn ($w) => $w->where('exam_year', (int) $filters['year']))
+            ->when($filters['paper'] ?? null, fn ($w, $n) => $w->where('paper_number', $n));
         $examTypes = fn (string $code) => ExamType::where(fn ($q) => $code === 'JHS' ? $q->where('name', 'like', 'BECE%') : $q->where('name', 'like', 'WASSCE%'))->pluck('id');
         $pastPapers = fn ($q) => $q->visible()->whereHas('category', fn ($c) => $c->where('is_exam_paper', true))->where('audience', '!=', 'teacher');
 
@@ -93,7 +102,7 @@ class LibraryController extends Controller
             $code = $subject->educationLevel?->code === 'JHS' ? 'JHS' : 'SHS';
             $papers = ExamPaper::visible()->where('subject_id', $subject->id)->withCount('questions')->orderBy('number')->get();
             $user = $request->user();
-            $byYear = $pastPapers(Resource::query())->where('subject_id', $subject->id)->whereIn('exam_type_id', $examTypes($code))
+            $byYear = $narrow($pastPapers(Resource::query()), false)->where('subject_id', $subject->id)->whereIn('exam_type_id', $examTypes($code))
                 ->whereNotNull('exam_year')->selectRaw('exam_year, count(*) as n')->groupBy('exam_year')->pluck('n', 'exam_year');
 
             return [
@@ -108,7 +117,7 @@ class LibraryController extends Controller
         }
 
         $paperCounts = ExamPaper::visible()->selectRaw('subject_id, count(*) as n')->groupBy('subject_id')->pluck('n', 'subject_id');
-        $docCounts = $pastPapers(Resource::query())->whereNotNull('subject_id')->selectRaw('subject_id, count(*) as n')->groupBy('subject_id')->pluck('n', 'subject_id');
+        $docCounts = $narrow($pastPapers(Resource::query()))->whereNotNull('subject_id')->selectRaw('subject_id, count(*) as n')->groupBy('subject_id')->pluck('n', 'subject_id');
 
         return [
             'subjectPapers' => collect(),

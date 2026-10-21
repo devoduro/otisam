@@ -102,6 +102,27 @@ class ResourceLibraryTest extends TestCase
         $this->get(route('library.index'))->assertOk()->assertSee('1 past paper');
     }
 
+    public function test_advanced_filters_narrow_by_series_year_and_paper(): void
+    {
+        $category = ResourceCategory::where('name', 'WASSCE past questions')->value('id');
+        $mayJune = ExamType::where('name', 'WASSCE (May/June)')->value('id');
+        $novDec = ExamType::where('name', 'WASSCE (Nov/Dec)')->value('id');
+        $school = $this->publishedResource(['title' => 'WASSCE 2019 May/June Core Mathematics Paper 1', 'category_id' => $category, 'exam_type_id' => $mayJune, 'exam_year' => 2019, 'paper_number' => '1', 'access_level' => 'free']);
+        $private = $this->publishedResource(['title' => 'WASSCE 2018 Nov/Dec Core Mathematics Paper 2', 'category_id' => $category, 'exam_type_id' => $novDec, 'exam_year' => 2018, 'paper_number' => '2', 'access_level' => 'free']);
+
+        $this->get(route('library.index', ['level' => 'shs']))->assertOk()
+            ->assertSee('Advanced filters')->assertSee('WASSCE Nov/Dec (private candidates)')->assertDontSee('>BECE<', false);
+
+        $this->get(route('library.index', ['exam' => $novDec]))->assertOk()->assertSee($private->title)->assertDontSee($school->title);
+        $this->get(route('library.index', ['paper' => '1']))->assertOk()->assertSee($school->title)->assertDontSee($private->title);
+        $this->get(route('library.index', ['year' => 2018, 'level' => 'shs']))->assertOk()->assertSee($private->title)->assertDontSee($school->title);
+
+        // The year grid follows the chosen series.
+        $this->get(route('library.index', ['subject' => 'core-mathematics', 'exam' => $mayJune]))->assertOk()
+            ->assertSee('WASSCE 2018: not available yet')->assertDontSee('WASSCE 2019: not available yet');
+        $this->get(route('library.index', ['paper' => '3']))->assertSessionHasNoErrors()->assertOk()->assertSee('No documents match');
+    }
+
     public function test_upload_stores_privately_and_generates_a_short_preview(): void
     {
         $resource = $this->publishedResource();
