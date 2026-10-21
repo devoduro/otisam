@@ -82,6 +82,9 @@ class LibraryController extends Controller
     /** First year of each exam (WAEC has run the BECE since 1990 and the WASSCE since 1993). */
     public const FIRST_YEAR = ['JHS' => 1990, 'SHS' => 1993];
 
+    /** Slug of the Chief Examiners' reports category. */
+    public const REPORTS_CATEGORY = 'chief-examiners-reports';
+
     /**
      * The Past Questions view on top of the documents: BECE (JHS) and WASSCE (SHS) subject cards,
      * or, for one subject, every exam year (with the uploaded papers for the years that have them)
@@ -95,7 +98,8 @@ class LibraryController extends Controller
             ->when($withYear && ($filters['year'] ?? null), fn ($w) => $w->where('exam_year', (int) $filters['year']))
             ->when($filters['paper'] ?? null, fn ($w, $n) => $w->where('paper_number', $n));
         $examTypes = fn (string $code) => ExamType::where(fn ($q) => $code === 'JHS' ? $q->where('name', 'like', 'BECE%') : $q->where('name', 'like', 'WASSCE%'))->pluck('id');
-        $pastPapers = fn ($q) => $q->visible()->whereHas('category', fn ($c) => $c->where('is_exam_paper', true))->where('audience', '!=', 'teacher');
+        // Past papers are exam-paper categories except the examiners' reports, which are listed on their own.
+        $pastPapers = fn ($q) => $q->visible()->whereHas('category', fn ($c) => $c->where('is_exam_paper', true)->where('slug', '!=', self::REPORTS_CATEGORY))->where('audience', '!=', 'teacher');
 
         if ($subject) {
             $subject->loadMissing('educationLevel');
@@ -110,6 +114,8 @@ class LibraryController extends Controller
                 'best' => $user ? QuizAttempt::where('user_id', $user->id)->where('kind', 'paper')->whereIn('exam_paper_id', $papers->pluck('id'))
                     ->groupBy('exam_paper_id')->selectRaw('exam_paper_id, max(score) as best')->pluck('best', 'exam_paper_id') : collect(),
                 'paperSubjects' => collect(),
+                'reports' => Resource::visible()->with('examType')->where('audience', '!=', 'teacher')->where('subject_id', $subject->id)
+                    ->whereHas('category', fn ($c) => $c->where('slug', self::REPORTS_CATEGORY))->orderByDesc('exam_year')->orderBy('title')->get(),
                 'examYears' => range((int) now()->year, self::FIRST_YEAR[$code]),
                 'yearCounts' => $byYear,
                 'examName' => $code === 'JHS' ? 'BECE' : 'WASSCE',
@@ -123,6 +129,7 @@ class LibraryController extends Controller
             'subjectPapers' => collect(),
             'best' => collect(),
             'examYears' => [],
+            'reports' => collect(),
             'yearCounts' => collect(),
             'examName' => null,
             // [level name => every active subject], each carrying its counts; BECE first, then WASSCE.

@@ -20,6 +20,8 @@ class LibrarySeeder extends Seeder
         'School examination papers' => ['student', true],
         'Solutions and worked answers' => ['both', false],
         'Marking schemes' => ['both', false],
+        // Reports by the exam body's chief examiners, one per subject and year (upload only what you are licensed to publish).
+        'Chief Examiners reports' => ['student', true],
         'Lesson notes' => ['student', false],
         'Revision notes' => ['student', false],
         'Worksheets' => ['both', false],

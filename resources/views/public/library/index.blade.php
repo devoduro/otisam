@@ -148,6 +148,21 @@
             </ul>
         </section>
 
+        @if ($reports->isNotEmpty())
+            <section aria-labelledby="reports-title" class="mt-6 rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3]">
+                <h3 id="reports-title" class="font-bold text-gray-800">Chief Examiners' reports</h3>
+                <p class="text-sm text-gray-500">What the examiners saw in candidates' answers, year by year.</p>
+                <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                    @foreach ($reports as $report)
+                        <li><a href="{{ route('library.show', $report) }}" class="flex items-center justify-between gap-3 rounded-xl bg-gray-50 px-4 py-3 no-underline hover:bg-gold-50">
+                            <span class="font-semibold text-gray-800">{{ $report->exam_year ? $report->exam_year.' · ' : '' }}{{ $report->examType?->name ?? 'Report' }}</span>
+                            <i class="fas fa-file-lines text-gray-400" aria-hidden="true"></i>
+                        </a></li>
+                    @endforeach
+                </ul>
+            </section>
+        @endif
+
         @if ($subjectPapers->isNotEmpty())
             <section aria-labelledby="practice-papers-title" class="mt-6">
                 <div class="flex flex-wrap items-end justify-between gap-3">
