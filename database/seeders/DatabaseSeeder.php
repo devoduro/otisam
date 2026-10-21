@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             CurriculumSubjectsSeeder::class,
             LibrarySeeder::class,
             PlanSeeder::class,
+            LessonPlanSeeder::class,
         ]);
     }
 }

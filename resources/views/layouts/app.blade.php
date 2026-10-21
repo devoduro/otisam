@@ -6,6 +6,7 @@
         'library' => ['Library', route('library.index'), 'fa-book-open', request()->routeIs('library.*')],
         'practice' => ['Practice', route('practice.index'), 'fa-list-check', request()->routeIs('practice.*')],
         'videos' => ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
+        'lesson-plans' => ['Lesson plans', route('lesson-plans.index'), 'fa-clipboard-list', request()->routeIs('lesson-plans.*')],
         'downloads' => ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
         'teachers' => ['Teachers', route('teachers.index'), 'fa-user-tie', request()->routeIs('teachers.index', 'teachers.show')],
         'promotion' => ['Promotion', route('promotion'), 'fa-chalkboard-user', request()->routeIs('promotion')],
@@ -13,6 +14,8 @@
         'premium' => ['Premium', route('plans.index'), 'fa-crown', request()->routeIs('plans.*')],
     ];
     $navLinks = array_values($links);
+    // The wide-screen bar is full: these stay in the menu, footer and teacher sidebar only.
+    $barLinks = array_values(\Illuminate\Support\Arr::except($links, ['lesson-plans']));
     $accountUrl = auth()->check() ? route(auth()->user()->homeRoute()) : route('login');
     // Phone tab bar: the five most used destinations (examsghana-style).
     $tabLinks = [
@@ -44,7 +47,7 @@
             </a>
 
             <nav aria-label="Main" class="hidden xl:flex items-center gap-0.5 text-sm">
-                @foreach ($navLinks as [$label, $href, $icon, $active])
+                @foreach ($barLinks as [$label, $href, $icon, $active])
                     <a href="{{ $href }}" @if ($active) aria-current="page" @endif
                        class="flex items-center gap-1.5 whitespace-nowrap rounded-xl px-2 py-2 2xl:px-2.5 no-underline transition {{ $active ? 'bg-gold-50 text-gold-600 font-semibold' : 'font-medium text-primary-700 hover:bg-gold-50 hover:text-gold-600' }}">
                         <i class="fas {{ $icon }} hidden 2xl:inline" aria-hidden="true"></i>{{ $label }}
@@ -103,6 +106,7 @@
                     <li><a href="{{ route('library.index') }}" class="text-white/60 no-underline hover:text-gold-400">Library</a></li>
                     <li><a href="{{ route('practice.index') }}" class="text-white/60 no-underline hover:text-gold-400">Practice questions</a></li>
                     <li><a href="{{ route('videos.index') }}" class="text-white/60 no-underline hover:text-gold-400">Video lessons</a></li>
+                    <li><a href="{{ route('lesson-plans.index') }}" class="text-white/60 no-underline hover:text-gold-400">Lesson plans</a></li>
                     <li><a href="{{ route('downloads.index') }}" class="text-white/60 no-underline hover:text-gold-400">Downloads</a></li>
                     <li><a href="{{ route('subjects.index') }}" class="text-white/60 no-underline hover:text-gold-400">Subjects &amp; topics</a></li>
                     <li><a href="{{ route('plans.index') }}" class="text-white/60 no-underline hover:text-gold-400">Premium plans</a></li>
