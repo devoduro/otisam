@@ -8,6 +8,7 @@
         'videos' => ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
         'lesson-plans' => ['Lesson plans', route('lesson-plans.index'), 'fa-clipboard-list', request()->routeIs('lesson-plans.*')],
         'subject-apps' => ['Subject apps', route('subject-apps.index'), 'fa-robot', request()->routeIs('subject-apps.*')],
+        'qa' => ['Q&A', route('qa.index'), 'fa-comments', request()->routeIs('qa.*')],
         'downloads' => ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
         'teachers' => ['Teachers', route('teachers.index'), 'fa-user-tie', request()->routeIs('teachers.index', 'teachers.show')],
         'promotion' => ['Promotion', route('promotion'), 'fa-chalkboard-user', request()->routeIs('promotion')],
@@ -16,7 +17,7 @@
     ];
     $navLinks = array_values($links);
     // The wide-screen bar is full: these stay in the menu, footer and teacher sidebar only.
-    $barLinks = array_values(\Illuminate\Support\Arr::except($links, ['lesson-plans', 'subject-apps']));
+    $barLinks = array_values(\Illuminate\Support\Arr::except($links, ['lesson-plans', 'subject-apps', 'qa']));
     $accountUrl = auth()->check() ? route(auth()->user()->homeRoute()) : route('login');
     // Phone tab bar: the five most used destinations (examsghana-style).
     $tabLinks = [
@@ -109,6 +110,7 @@
                     <li><a href="{{ route('videos.index') }}" class="text-white/60 no-underline hover:text-gold-400">Video lessons</a></li>
                     <li><a href="{{ route('lesson-plans.index') }}" class="text-white/60 no-underline hover:text-gold-400">Lesson plans</a></li>
                     <li><a href="{{ route('subject-apps.index') }}" class="text-white/60 no-underline hover:text-gold-400">Subject apps</a></li>
+                    <li><a href="{{ route('qa.index') }}" class="text-white/60 no-underline hover:text-gold-400">Q&amp;A</a></li>
                     <li><a href="{{ route('downloads.index') }}" class="text-white/60 no-underline hover:text-gold-400">Downloads</a></li>
                     <li><a href="{{ route('subjects.index') }}" class="text-white/60 no-underline hover:text-gold-400">Subjects &amp; topics</a></li>
                     <li><a href="{{ route('plans.index') }}" class="text-white/60 no-underline hover:text-gold-400">Premium plans</a></li>

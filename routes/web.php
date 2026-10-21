@@ -11,6 +11,8 @@ use App\Http\Controllers\Public\LibraryController;
 use App\Http\Controllers\Public\PlanController;
 use App\Http\Controllers\Public\PracticeController;
 use App\Http\Controllers\Public\PromotionController;
+use App\Http\Controllers\Public\QaAnswerController;
+use App\Http\Controllers\Public\QaController;
 use App\Http\Controllers\Public\ReferralController;
 use App\Http\Controllers\Public\ResourceFileController;
 use App\Http\Controllers\Public\SubjectAppController;
@@ -58,6 +60,29 @@ Route::get('/lesson-plans/{plan}/print', [LessonPlanController::class, 'print'])
 Route::get('/lesson-plans/{plan}/download', [LessonPlanController::class, 'download'])->middleware('throttle:30,1')->name('lesson-plans.download');
 Route::get('/downloads/teachers/{material}', [DownloadController::class, 'material'])->name('downloads.material');
 Route::get('/promotion', PromotionController::class)->name('promotion');
+
+/*
+| Community Q&A ("Q&A" in menus; not the question bank). Anyone reads; students and teachers post.
+*/
+Route::get('/questions', [QaController::class, 'index'])->name('qa.index');
+Route::get('/questions/{question}', [QaController::class, 'show'])->whereNumber('question')->name('qa.show');
+Route::middleware(['auth', 'account:student,teacher', 'phone.verified', 'password.fresh'])->name('qa.')->group(function () {
+    Route::get('/questions/ask', [QaController::class, 'create'])->name('create');
+    Route::post('/questions', [QaController::class, 'store'])->middleware('throttle:5,10')->name('store');
+    Route::get('/questions/{question}/edit', [QaController::class, 'edit'])->name('edit');
+    Route::put('/questions/{question}', [QaController::class, 'update'])->middleware('throttle:20,10')->name('update');
+    Route::delete('/questions/{question}', [QaController::class, 'destroy'])->name('destroy');
+    Route::post('/questions/{question}/answers', [QaAnswerController::class, 'store'])->middleware('throttle:10,10')->name('answers.store');
+    Route::get('/answers/{answer}/edit', [QaAnswerController::class, 'edit'])->name('answers.edit');
+    Route::put('/answers/{answer}', [QaAnswerController::class, 'update'])->middleware('throttle:20,10')->name('answers.update');
+    Route::delete('/answers/{answer}', [QaAnswerController::class, 'destroy'])->name('answers.destroy');
+});
+// Accepting (asker or moderator) and reporting (anyone signed in) are checked in the controller.
+Route::middleware(['auth', 'password.fresh'])->name('qa.')->group(function () {
+    Route::post('/questions/{question}/accept/{answer}', [QaController::class, 'accept'])->middleware('throttle:30,1')->name('accept');
+    Route::post('/questions/{question}/report', [QaController::class, 'reportQuestion'])->middleware('throttle:20,10')->name('report');
+    Route::post('/answers/{answer}/report', [QaController::class, 'reportAnswer'])->middleware('throttle:20,10')->name('answers.report');
+});
 
 // Paystack sends the browser back here after checkout. The reference is re-verified server-side.
 Route::get('/payments/paystack/callback', [Account\CheckoutController::class, 'callback'])->middleware('throttle:30,1')->name('payments.callback');
@@ -230,6 +255,14 @@ Route::middleware(['auth', 'account:staff', 'password.fresh'])->prefix('admin')-
         Route::post('/lesson-plans/{plan}/reject', [Admin\LessonPlanController::class, 'reject'])->name('lesson-plans.reject');
         Route::post('/lesson-plans/{plan}/archive', [Admin\LessonPlanController::class, 'archive'])->name('lesson-plans.archive');
         Route::post('/moderation/materials/{material}/hide', [Admin\ContentModerationController::class, 'hideMaterial'])->name('moderation.materials.hide');
+    });
+
+    // Community Q&A reports.
+    Route::middleware('permission:tutorials.manage')->prefix('qa')->name('qa.')->group(function () {
+        Route::get('/', [Admin\QaModerationController::class, 'index'])->name('index');
+        Route::post('/{type}/{id}/hide', [Admin\QaModerationController::class, 'hide'])->whereIn('type', ['question', 'answer'])->whereNumber('id')->name('hide');
+        Route::post('/{type}/{id}/restore', [Admin\QaModerationController::class, 'restore'])->whereIn('type', ['question', 'answer'])->whereNumber('id')->name('restore');
+        Route::delete('/{type}/{id}', [Admin\QaModerationController::class, 'destroy'])->whereIn('type', ['question', 'answer'])->whereNumber('id')->name('destroy');
     });
 
     Route::prefix('commerce')->name('commerce.')->group(function () {

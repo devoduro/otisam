@@ -14,6 +14,7 @@
         ['Library', route('library.index'), 'fa-book-open', request()->routeIs('library.*')],
         ['Practice questions', route('practice.index'), 'fa-list-check', request()->routeIs('practice.*')],
         ['Video lessons', route('videos.index'), 'fa-circle-play', request()->routeIs('videos.*')],
+        ['Q&A', route('qa.index'), 'fa-comments', request()->routeIs('qa.*')],
         $isTeacher ? ['Lesson plans', route('lesson-plans.index'), 'fa-clipboard-list', request()->routeIs('lesson-plans.*')] : null,
         $isTeacher ? ['Subject apps', route('subject-apps.index'), 'fa-robot', request()->routeIs('subject-apps.*')] : null,
         ['Downloads', route('downloads.index'), 'fa-download', request()->routeIs('downloads.*')],
