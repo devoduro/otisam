@@ -24,7 +24,7 @@
                     <a href="{{ route('papers.subject', $s) }}" class="flex items-center justify-between gap-3 rounded-2xl bg-white p-4 no-underline shadow-card ring-1 ring-[#ece9f3] transition hover:-translate-y-0.5 hover:shadow-md">
                         <span>
                             <span class="block font-semibold text-gray-800">{{ $s->name }}</span>
-                            <span class="block text-xs text-gray-500">{{ $counts[$s->id] }} {{ \Illuminate\Support\Str::plural('paper', $counts[$s->id]) }} · {{ $s->examStyle() }} style</span>
+                            <span class="block text-xs text-gray-500">{{ $counts[$s->id] }} {{ \Illuminate\Support\Str::plural('paper', $counts[$s->id]) }} · {{ $l->code === 'JHS' ? 'BECE' : 'WASSCE' }} style</span>
                         </span>
                         <i class="fas fa-chevron-right text-gray-300" aria-hidden="true"></i>
                     </a>

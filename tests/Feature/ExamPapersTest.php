@@ -96,7 +96,12 @@ class ExamPapersTest extends TestCase
         $paper = ExamPaper::firstOrFail();
         $question = $paper->questions()->with('currentRevision')->first();
 
-        $this->get(route('papers.index'))->assertOk()->assertSee('Core Mathematics')->assertSee('1 paper');
+        // A second subject with papers: the index must not load each subject's level one by one.
+        $english = Subject::where('slug', 'english-language')->firstOrFail();
+        $this->questions($english, 50);
+        app(PaperBuilder::class)->build($english);
+
+        $this->get(route('papers.index'))->assertOk()->assertSee('Core Mathematics')->assertSee('English Language')->assertSee('1 paper · WASSCE style');
         $this->get(route('papers.subject', $this->maths))->assertOk()->assertSee('Core Mathematics Paper 1')->assertSee('50 questions');
         $this->get(route('papers.show', [$this->maths, 1]))->assertOk()->assertSee('Study mode')->assertSee('Exam mode');
         $this->get(route('papers.show', [$this->maths, 9]))->assertNotFound();
