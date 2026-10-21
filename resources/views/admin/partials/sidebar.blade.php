@@ -89,6 +89,16 @@
                     <span class="nav-badge badge-warn" title="Teacher videos waiting for review">{{ $pendingTeacherContent }}</span>
                 @endif
             </a>
+            @php $pendingLessonPlans = \App\Models\LessonPlans\LessonPlan::where('status', 'pending')->count(); @endphp
+            <a href="{{ route('admin.lesson-plans.index') }}" class="nav-item {{ request()->routeIs('admin.lesson-plans.*') ? 'active' : '' }}">
+                <div class="nav-item-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><line x1="9" y1="12" x2="15" y2="12"></line><line x1="9" y1="16" x2="13" y2="16"></line></svg>
+                    <span>Lesson plans</span>
+                </div>
+                @if($pendingLessonPlans > 0)
+                    <span class="nav-badge badge-warn" title="Lesson plans waiting for review">{{ $pendingLessonPlans }}</span>
+                @endif
+            </a>
         @endcan
 
         @canany(['resources.manage', 'resources.publish', 'resources.moderate', 'takedowns.manage'])

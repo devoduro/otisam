@@ -40,6 +40,8 @@ class EveryPageLoadsTest extends TestCase
             route('admin.roles.create'),
             route('admin.roles.edit', Role::findByName('Content Manager')),
             route('admin.audit.index'),
+            route('admin.lesson-plans.index'),
+            route('lesson-plans.index'),
             route('password.change'),
         ] as $url) {
             $this->get($url)->assertOk();

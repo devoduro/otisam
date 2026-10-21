@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth;
 use App\Http\Controllers\Learn;
 use App\Http\Controllers\Public\DownloadController;
 use App\Http\Controllers\Public\HomeController;
+use App\Http\Controllers\Public\LessonPlanController;
 use App\Http\Controllers\Public\LibraryController;
 use App\Http\Controllers\Public\PlanController;
 use App\Http\Controllers\Public\PracticeController;
@@ -49,6 +50,10 @@ Route::get('/practice/{subject}', [PracticeController::class, 'show'])->name('pr
 Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.show');
 Route::get('/downloads', [DownloadController::class, 'index'])->name('downloads.index');
+Route::get('/lesson-plans', [LessonPlanController::class, 'index'])->name('lesson-plans.index');
+Route::get('/lesson-plans/{plan}', [LessonPlanController::class, 'show'])->name('lesson-plans.show');
+Route::get('/lesson-plans/{plan}/print', [LessonPlanController::class, 'print'])->name('lesson-plans.print');
+Route::get('/lesson-plans/{plan}/download', [LessonPlanController::class, 'download'])->middleware('throttle:30,1')->name('lesson-plans.download');
 Route::get('/downloads/teachers/{material}', [DownloadController::class, 'material'])->name('downloads.material');
 Route::get('/promotion', PromotionController::class)->name('promotion');
 
@@ -154,6 +159,7 @@ Route::middleware(['auth', 'account:teacher', 'phone.verified', 'password.fresh'
         Route::get('/work/{assignment}/submissions/{submission}/file', [Teach\AssignmentController::class, 'submissionFile'])->name('assignments.submission-file');
 
         Route::resource('videos', Teach\VideoController::class)->except('show');
+        Route::resource('lesson-plans', Teach\LessonPlanController::class)->except('show');
 
         Route::get('/materials/{material}/download', [Teach\MaterialController::class, 'download'])->name('materials.download');
         Route::resource('materials', Teach\MaterialController::class)->except('show');
@@ -217,6 +223,10 @@ Route::middleware(['auth', 'account:staff', 'password.fresh'])->prefix('admin')-
         Route::post('/moderation/videos/{video}/approve', [Admin\ContentModerationController::class, 'approveVideo'])->name('moderation.videos.approve');
         Route::post('/moderation/videos/{video}/reject', [Admin\ContentModerationController::class, 'rejectVideo'])->name('moderation.videos.reject');
         Route::get('/moderation/materials/{material}/download', [Admin\ContentModerationController::class, 'downloadMaterial'])->name('moderation.materials.download');
+        Route::get('/lesson-plans', [Admin\LessonPlanController::class, 'index'])->name('lesson-plans.index');
+        Route::post('/lesson-plans/{plan}/approve', [Admin\LessonPlanController::class, 'approve'])->name('lesson-plans.approve');
+        Route::post('/lesson-plans/{plan}/reject', [Admin\LessonPlanController::class, 'reject'])->name('lesson-plans.reject');
+        Route::post('/lesson-plans/{plan}/archive', [Admin\LessonPlanController::class, 'archive'])->name('lesson-plans.archive');
         Route::post('/moderation/materials/{material}/hide', [Admin\ContentModerationController::class, 'hideMaterial'])->name('moderation.materials.hide');
     });
 
