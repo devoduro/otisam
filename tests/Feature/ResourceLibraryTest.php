@@ -123,6 +123,25 @@ class ResourceLibraryTest extends TestCase
         $this->get(route('library.index', ['paper' => '3']))->assertSessionHasNoErrors()->assertOk()->assertSee('No documents match');
     }
 
+    public function test_chief_examiners_reports_are_listed_by_subject_and_year(): void
+    {
+        $report = $this->publishedResource([
+            'title' => 'WASSCE 2019 Core Mathematics: examiners report',
+            'category_id' => ResourceCategory::where('name', 'Chief Examiners reports')->value('id'),
+            'exam_type_id' => ExamType::where('name', 'WASSCE (May/June)')->value('id'),
+            'exam_year' => 2019,
+            'access_level' => 'free',
+        ]);
+
+        $this->get(route('library.index', ['subject' => 'core-mathematics']))->assertOk()
+            ->assertSee("Chief Examiners' reports", false)->assertSee('2019 · WASSCE (May/June)')
+            ->assertSee(route('library.show', $report))
+            // A report is not a past paper: its year stays "not yet" on the paper grid.
+            ->assertSee('WASSCE 2019: not available yet');
+        $this->get(route('library.index'))->assertOk()->assertDontSee('1 past paper');
+        $this->get(route('library.index', ['category' => 'chief-examiners-reports']))->assertOk()->assertSee($report->title);
+    }
+
     public function test_upload_stores_privately_and_generates_a_short_preview(): void
     {
         $resource = $this->publishedResource();
