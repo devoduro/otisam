@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice">
+  <!-- Card background: a clipboard with ticked answers. Original artwork. -->
+  <rect width="800" height="240" fill="#0d6b44"/>
+  <g opacity=".3"><circle cx="700" cy="30" r="130" fill="#35c283"/><circle cx="90" cy="250" r="130" fill="#08472d"/></g>
+  <g transform="rotate(6 560 130)">
+    <rect x="450" y="22" width="220" height="230" rx="14" fill="#c98f4f"/>
+    <rect x="466" y="48" width="188" height="190" rx="8" fill="#ffffff"/>
+    <rect x="522" y="12" width="76" height="30" rx="8" fill="#7a5530"/><circle cx="560" cy="27" r="6" fill="#e5c38f"/>
+    <g fill="none" stroke="#12a05f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M486 92l11 11 20-22"/><path d="M486 136l11 11 20-22"/><path d="M486 180l11 11 20-22"/></g>
+    <g fill="#c8e6d6"><rect x="530" y="86" width="104" height="8" rx="4"/><rect x="530" y="130" width="90" height="8" rx="4"/><rect x="530" y="174" width="100" height="8" rx="4"/><rect x="530" y="104" width="70" height="6" rx="3"/><rect x="530" y="148" width="60" height="6" rx="3"/></g>
+  </g>
+  <g transform="translate(330 120)">
+    <circle r="62" fill="#1fb872" opacity=".9"/>
+    <path d="M-28 2l20 22 38-44" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#ffffff" opacity=".18"><rect x="40" y="40" width="160" height="8" rx="4"/><rect x="40" y="62" width="120" height="8" rx="4"/><rect x="40" y="190" width="200" height="8" rx="4"/></g>
+</svg>

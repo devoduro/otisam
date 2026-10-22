@@ -5,16 +5,21 @@
     // Big category tiles (examsghana.com idea). Only real destinations; anything not built yet says so.
     $bySlug = $categories->keyBy('slug');
     $tiles = [
-        ['WASSCE past questions', 'Papers by subject and year, with worked solutions.', 'fa-file-lines', 'blue', route('library.index', ['category' => 'wassce-past-questions']), $bySlug['wassce-past-questions']->resources_count ?? 0],
-        ['Worked solutions', 'Step-by-step answers and marking guides.', 'fa-square-check', 'green', route('library.index', ['category' => 'solutions-and-worked-answers']), $bySlug['solutions-and-worked-answers']->resources_count ?? 0],
-        ['SHS learning centre', 'Every subject, strand and topic in the curriculum.', 'fa-sitemap', 'purple', route('subjects.index'), null],
-        ['Notes & revision', 'Lesson notes, revision notes and worksheets.', 'fa-book-open', 'orange', route('library.index', ['category' => 'revision-notes']), ($bySlug['revision-notes']->resources_count ?? 0) + ($bySlug['lesson-notes']->resources_count ?? 0)],
-        ['BECE past questions', 'JHS papers for BECE candidates.', 'fa-school', 'slate', route('library.index', ['category' => 'bece-past-questions']), $bySlug['bece-past-questions']->resources_count ?? 0],
-        ['For teachers', 'Lesson plans, schemes and professional exams.', 'fa-chalkboard-user', 'red', route('teachers.register'), null],
+        ['WASSCE past questions', 'Papers by subject and year, with worked solutions.', 'fa-file-lines', 'blue', route('library.index', ['category' => 'wassce-past-questions']), $bySlug['wassce-past-questions']->resources_count ?? 0, 'papers.svg'],
+        ['Worked solutions', 'Step-by-step answers and marking guides.', 'fa-square-check', 'green', route('library.index', ['category' => 'solutions-and-worked-answers']), $bySlug['solutions-and-worked-answers']->resources_count ?? 0, 'solutions.svg'],
+        ['SHS learning centre', 'Every subject, strand and topic in the curriculum.', 'fa-sitemap', 'purple', route('subjects.index'), null, 'curriculum.svg'],
+        ['Notes & revision', 'Lesson notes, revision notes and worksheets.', 'fa-book-open', 'orange', route('library.index', ['category' => 'revision-notes']), ($bySlug['revision-notes']->resources_count ?? 0) + ($bySlug['lesson-notes']->resources_count ?? 0), 'notes.svg'],
+        ['BECE past questions', 'JHS papers for BECE candidates.', 'fa-school', 'slate', route('library.index', ['category' => 'bece-past-questions']), $bySlug['bece-past-questions']->resources_count ?? 0, 'school.svg'],
+        ['For teachers', 'Lesson plans, schemes and professional exams.', 'fa-chalkboard-user', 'red', route('teachers.register'), null, 'teachers.svg'],
     ];
+    // badge colour, overlay gradient laid over the picture (darker where the text sits).
     $tileColours = [
-        'blue' => ['bg-tile-blue', 'bg-tile-blue-dark'], 'green' => ['bg-tile-green', 'bg-tile-green-dark'], 'purple' => ['bg-tile-purple', 'bg-tile-purple-dark'],
-        'orange' => ['bg-tile-orange', 'bg-tile-orange-dark'], 'slate' => ['bg-tile-slate', 'bg-tile-slate-dark'], 'red' => ['bg-tile-red', 'bg-tile-red-dark'],
+        'blue' => ['bg-tile-blue-dark', 'from-tile-blue-dark/95 via-tile-blue/80 to-tile-blue/35'],
+        'green' => ['bg-tile-green-dark', 'from-tile-green-dark/95 via-tile-green/80 to-tile-green/35'],
+        'purple' => ['bg-tile-purple-dark', 'from-tile-purple-dark/95 via-tile-purple/80 to-tile-purple/35'],
+        'orange' => ['bg-tile-orange-dark', 'from-tile-orange-dark/95 via-tile-orange/80 to-tile-orange/35'],
+        'slate' => ['bg-tile-slate-dark', 'from-tile-slate-dark/95 via-tile-slate/80 to-tile-slate/35'],
+        'red' => ['bg-tile-red-dark', 'from-tile-red-dark/95 via-tile-red/80 to-tile-red/35'],
     ];
 @endphp
 
@@ -81,18 +86,23 @@
         <a href="{{ route('library.index') }}" class="text-sm font-medium">Open the full library <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
     </div>
     <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        @foreach ($tiles as [$title, $text, $icon, $colour, $href, $count])
+        @foreach ($tiles as [$title, $text, $icon, $colour, $href, $count, $image])
             <li>
-                <a href="{{ $href }}" class="group flex h-full overflow-hidden rounded-2xl text-white no-underline shadow-sm transition hover:-translate-y-0.5 hover:text-white hover:shadow-md">
-                    <span class="flex w-16 shrink-0 items-center justify-center {{ $tileColours[$colour][1] }}"><i class="fas {{ $icon }} text-2xl" aria-hidden="true"></i></span>
-                    <span class="flex flex-1 flex-col justify-center px-4 py-4 {{ $tileColours[$colour][0] }}">
-                        <span class="flex items-center justify-between gap-2">
-                            <span class="text-base font-semibold leading-tight">{{ $title }}</span>
+                <a href="{{ $href }}" class="group relative flex h-full min-h-40 overflow-hidden rounded-2xl bg-primary-900 text-white no-underline shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:text-white hover:shadow-lg">
+                    {{-- Picture under a colour overlay: strongest behind the text, lighter on the right so the artwork shows. --}}
+                    <img src="{{ asset('images/tiles/'.$image) }}" alt="" loading="lazy" class="pointer-events-none absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                    <span class="pointer-events-none absolute inset-0 bg-gradient-to-r {{ $tileColours[$colour][1] }}"></span>
+                    <span class="relative flex flex-1 flex-col justify-between gap-4 p-5">
+                        <span class="flex items-start justify-between gap-2">
+                            <span class="flex h-11 w-11 items-center justify-center rounded-xl {{ $tileColours[$colour][0] }} text-xl shadow-md ring-1 ring-white/25"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
                             @if ($count !== null)
-                                <span class="whitespace-nowrap rounded-full bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-gray-700">{{ $count > 0 ? number_format($count).' items' : 'Coming soon' }}</span>
+                                <span class="whitespace-nowrap rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold text-gray-700">{{ $count > 0 ? number_format($count).' items' : 'Coming soon' }}</span>
                             @endif
                         </span>
-                        <span class="mt-1 text-xs opacity-90">{{ $text }}</span>
+                        <span>
+                            <span class="block text-lg font-bold leading-tight drop-shadow-sm">{{ $title }}</span>
+                            <span class="mt-1 block max-w-[16rem] text-xs text-white/90">{{ $text }}</span>
+                        </span>
                     </span>
                 </a>
             </li>
