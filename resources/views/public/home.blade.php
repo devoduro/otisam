@@ -142,23 +142,7 @@
 @endif
 
 {{-- How it works --}}
-<section class="mx-auto max-w-7xl px-4 py-12 md:px-6" aria-labelledby="how-heading">
-    <h2 id="how-heading" class="text-2xl font-bold text-gray-800">How it works</h2>
-    <ol class="mt-6 grid gap-4 md:grid-cols-3">
-        @foreach ([
-            ['fa-user-plus', 'Sign up with your phone', 'Free account in a minute. We text you a code; no email needed.'],
-            ['fa-magnifying-glass', 'Find your topic', 'Search past questions by subject, year or topic, or follow the curriculum strand by strand.'],
-            ['fa-crown', 'Go premium when ready', $cheapestPlan ? 'Unlock every worked solution from '.$cheapestPlan->price().' with mobile money or card.' : 'Unlock every worked solution with mobile money or card.'],
-        ] as $i => [$icon, $title, $text])
-            <li class="rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3]">
-                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary-600 text-white"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
-                <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-400">Step {{ $i + 1 }}</p>
-                <h3 class="font-semibold text-gray-800">{{ $title }}</h3>
-                <p class="mt-1 text-sm text-gray-500">{{ $text }}</p>
-            </li>
-        @endforeach
-    </ol>
-</section>
+ 
 
 {{-- Teachers band --}}
 <section class="mx-auto max-w-7xl px-4 pb-14 md:px-6">
