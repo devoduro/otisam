@@ -46,13 +46,19 @@
     {{-- Papers --}}
     <section aria-labelledby="papers-heading">
         <h2 id="papers-heading" class="text-2xl font-extrabold text-primary-700">Practice papers</h2>
+        <p class="mt-1 text-sm text-gray-500">The rank papers are Otisam's own practice sets, weighted towards the skills each step up tends to need (more leadership, administration, HR, finance and policy at senior ranks). They are not official GES rank syllabi or past papers.</p>
         <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($papers as $paper)
                 @php
                     $count = min($paper['count'], $totals[$paper['subject'] ?? P::SUBJECT] ?? 0);
-                    $href = $canPractise
-                        ? route('practice.start', ['subject' => $paper['subject'] ?? P::SUBJECT, 'count' => in_array($paper['count'], \App\Http\Controllers\Public\PracticeController::COUNTS, true) ? $paper['count'] : 20, 'mode' => $paper['mode']])
-                        : (! $user ? route('teachers.register') : null);
+                    $href = null;
+                    if ($canPractise) {
+                        $href = isset($paper['key'])
+                            ? route('promotion.paper', $paper['key'])
+                            : route('practice.start', ['subject' => $paper['subject'] ?? P::SUBJECT, 'count' => in_array($paper['count'], \App\Http\Controllers\Public\PracticeController::COUNTS, true) ? $paper['count'] : 20, 'mode' => $paper['mode']]);
+                    } elseif (! $user) {
+                        $href = route('teachers.register');
+                    }
                 @endphp
                 <li class="flex flex-col rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3] {{ $paper['ready'] ? '' : 'opacity-70' }}">
                     <div class="flex items-start justify-between gap-3">

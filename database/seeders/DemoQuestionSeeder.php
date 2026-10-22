@@ -105,6 +105,11 @@ class DemoQuestionSeeder extends Seeder
             $subject->slug = 'ges-promotion-aptitude';
             $subject->save();
         }
+        if (! Subject::where('slug', 'ges-promotion-leadership')->exists()) {
+            $subject = new Subject(['education_level_id' => $level->id, 'name' => 'GES Promotion (Leadership)', 'category' => 'core', 'description' => 'Leadership, administration, human resources, finance, policy, data and supervision for senior ranks.', 'sort' => 3, 'is_active' => true]);
+            $subject->slug = 'ges-promotion-leadership';
+            $subject->save();
+        }
     }
 
     /** @return array<string, string> subject slug => path of its question file */
