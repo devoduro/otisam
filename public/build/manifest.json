@@ -4,7 +4,7 @@
     "src": "../../../node_modules/pdfjs-dist/build/pdf.worker.min.mjs"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CSyCDV8J.css",
+    "file": "assets/app-CoV02ho4.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -19,7 +19,7 @@
     "isEntry": true
   },
   "resources/js/pdf-viewer.js": {
-    "file": "assets/pdf-viewer-D_PzjaX-.js",
+    "file": "assets/pdf-viewer-BNSI7pKo.js",
     "name": "pdf-viewer",
     "src": "resources/js/pdf-viewer.js",
     "isEntry": true,

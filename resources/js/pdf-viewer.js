@@ -41,6 +41,8 @@ async function mount(viewer) {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
         canvas.style.width = '100%';
+        canvas.style.pointerEvents = 'none'; // clicks and right-clicks fall through to the protected viewer
+        canvas.draggable = false;
         canvas.setAttribute('role', 'img');
         canvas.setAttribute('aria-label', `Page ${holder.dataset.page}`);
         holder.replaceChildren(canvas);
@@ -69,4 +71,20 @@ async function mount(viewer) {
     }
 }
 
-document.querySelectorAll('[data-pdf-src]').forEach((viewer) => mount(viewer));
+// Makes casual saving of the page images harder: no right-click menu ("Save image as"), no dragging
+// a page out, no selecting or copying, and the canvases ignore clicks. This is a deterrent, not
+// security: anyone who can read a page can still screenshot it. Real access control is on the server.
+function protect(viewer) {
+    const stop = (event) => event.preventDefault();
+    ['contextmenu', 'dragstart', 'selectstart', 'copy', 'cut'].forEach((name) => viewer.addEventListener(name, stop));
+    viewer.addEventListener('keydown', (event) => {
+        if ((event.ctrlKey || event.metaKey) && ['s', 'p', 'u'].includes(event.key.toLowerCase())) {
+            event.preventDefault();
+        }
+    });
+}
+
+document.querySelectorAll('[data-pdf-src]').forEach((viewer) => {
+    protect(viewer);
+    mount(viewer);
+});
