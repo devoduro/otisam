@@ -32,7 +32,7 @@
     <div class="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-primary-400/20 blur-3xl"></div>
     <div class="pointer-events-none absolute inset-0 bg-crosshatch"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 py-14 text-center sm:py-20">
+    <div class="relative mx-auto max-w-5xl px-4 pb-24 pt-14 text-center sm:pb-28 sm:pt-20">
         <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">
             <i class="fas fa-graduation-cap text-gold-400" aria-hidden="true"></i> For JHS &amp; SHS students and teachers in Ghana
         </p>
@@ -96,38 +96,35 @@
             @endauth
         </div>
     </div>
-
-    {{-- Live numbers: real counts only; anything at zero is left out. Counts up once when scrolled into view. --}}
-    @php
-        $figures = array_filter([
-            [$stats['questions'], 'practice questions', 'fa-list-check', 'with answers and explanations'],
-            [$stats['papers'], 'practice papers', 'fa-stopwatch', 'timed exam or study mode'],
-            [$stats['resources'], 'past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read'],
-            [$stats['subjects'], 'subjects', 'fa-book-open', 'JHS and SHS'],
-            [$stats['topics'], 'curriculum topics', 'fa-sitemap', 'mapped to the syllabus'],
-        ], fn ($f) => $f[0] > 0);
-        $figureCols = [1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4', 5 => 'sm:grid-cols-3 xl:grid-cols-5'][count($figures)] ?? 'sm:grid-cols-3 xl:grid-cols-5';
-    @endphp
-    @if ($figures)
-        <div class="relative border-t border-white/10 bg-primary-950/50 backdrop-blur-sm">
-            <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-6 sm:gap-4 {{ $figureCols }}">
-                @foreach ($figures as [$value, $label, $icon, $note])
-                    <div class="group rounded-2xl bg-white/[0.07] p-4 text-left ring-1 ring-white/10 transition hover:bg-white/[0.12] {{ $loop->last && count($figures) % 2 === 1 ? 'col-span-2 sm:col-span-1' : '' }}">
-                        <div class="flex items-center gap-3">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-500/20 text-gold-300 ring-1 ring-gold-400/30"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
-                            <div class="min-w-0">
-                                <dt class="sr-only">{{ $label }}</dt>
-                                <dd class="font-display text-2xl font-extrabold leading-none tabular-nums sm:text-3xl"><span data-count="{{ $value }}">{{ number_format($value) }}</span></dd>
-                                <p class="mt-1 text-xs font-semibold leading-tight text-white/85">{{ $label }}</p>
-                            </div>
-                        </div>
-                        <p class="mt-2 text-[11px] leading-snug text-white/55">{{ $note }}</p>
-                    </div>
-                @endforeach
-            </dl>
-        </div>
-    @endif
 </section>
+
+{{-- Live numbers: a white card floating over the bottom edge of the hero. Real counts only; zero is left out. Counts up once when scrolled into view. --}}
+@php
+    $figures = array_filter([
+        [$stats['questions'], 'Practice questions', 'fa-list-check', 'With answers and explanations', 'from-blue-500 to-indigo-600'],
+        [$stats['papers'], 'Practice papers', 'fa-stopwatch', 'Timed exam or study mode', 'from-amber-400 to-orange-500'],
+        [$stats['resources'], 'Past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read', 'from-emerald-500 to-green-600'],
+        [$stats['subjects'], 'Subjects', 'fa-book-open', 'JHS and SHS', 'from-violet-500 to-purple-600'],
+        [$stats['topics'], 'Curriculum topics', 'fa-sitemap', 'Mapped to the syllabus', 'from-rose-500 to-red-600'],
+    ], fn ($f) => $f[0] > 0);
+    $figureCols = [1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4', 5 => 'sm:grid-cols-3 xl:grid-cols-5'][count($figures)] ?? 'sm:grid-cols-3 xl:grid-cols-5';
+@endphp
+@if ($figures)
+    <section class="relative z-10 mx-auto -mt-14 max-w-6xl px-4 md:px-6" aria-label="Otisam in numbers">
+        <dl class="grid grid-cols-2 gap-x-2 gap-y-6 rounded-3xl bg-white p-5 shadow-lift ring-1 ring-[#ece9f3] sm:p-6 {{ $figureCols }} xl:gap-x-0 xl:divide-x xl:divide-gray-100">
+            @foreach ($figures as [$value, $label, $icon, $note, $gradient])
+                <div class="flex items-center gap-3 xl:px-5 {{ $loop->last && count($figures) % 2 === 1 ? 'col-span-2 sm:col-span-1' : '' }}">
+                    <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br {{ $gradient }} text-lg text-white shadow-md ring-4 ring-white"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
+                    <div class="min-w-0">
+                        <dt class="text-xs font-semibold uppercase tracking-wide text-gray-500">{{ $label }}</dt>
+                        <dd class="font-display text-2xl font-extrabold leading-tight tabular-nums text-primary-800 sm:text-[1.7rem]"><span data-count="{{ $value }}">{{ number_format($value) }}</span></dd>
+                        <p class="text-[11px] leading-snug text-gray-400">{{ $note }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </dl>
+    </section>
+@endif
 
 {{-- Category tiles in jhs_portal's two-tone stat-tile style --}}
 <section class="mx-auto max-w-7xl px-4 py-12 md:px-6" aria-labelledby="browse-heading">

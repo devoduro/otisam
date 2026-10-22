@@ -44,7 +44,7 @@ class HomepageSearchAndStatsTest extends TestCase
         Cache::forget('home.v2');
 
         $response = $this->get('/')->assertOk()
-            ->assertSee('practice questions')->assertSee('practice papers')
+            ->assertSee('Practice questions')->assertSee('Practice papers')
             ->assertSee('data-count="50"', false)->assertSee('data-count="1"', false);
         $this->assertStringNotContainsString('data-count="55"', $response->getContent());
     }
