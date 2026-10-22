@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid slice">
+  <!-- Card background: a curriculum tree (strand, sub-strand, topic) beside a bookshelf. Original artwork. -->
+  <rect width="800" height="240" fill="#4a2f93"/>
+  <g opacity=".3"><circle cx="680" cy="20" r="140" fill="#8f73e0"/><circle cx="70" cy="240" r="130" fill="#2f1c6e"/></g>
+  <g stroke="#d9cffa" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M520 60C520 100 450 100 450 140M520 60C520 100 590 100 590 140M450 140C450 175 410 175 410 200M450 140C450 175 490 175 490 200M590 140C590 175 560 175 560 200M590 140C590 175 630 175 630 200"/>
+  </g>
+  <g>
+    <rect x="480" y="36" width="80" height="48" rx="12" fill="#f2b84a"/>
+    <rect x="410" y="116" width="80" height="44" rx="12" fill="#ffffff"/><rect x="550" y="116" width="80" height="44" rx="12" fill="#ffffff"/>
+    <rect x="380" y="186" width="60" height="38" rx="10" fill="#cdbff7"/><rect x="460" y="186" width="60" height="38" rx="10" fill="#cdbff7"/><rect x="530" y="186" width="60" height="38" rx="10" fill="#cdbff7"/><rect x="600" y="186" width="60" height="38" rx="10" fill="#cdbff7"/>
+  </g>
+  <g fill="#6a4cbf" opacity=".7"><rect x="496" y="54" width="48" height="8" rx="4"/><rect x="496" y="68" width="32" height="6" rx="3"/><rect x="426" y="132" width="48" height="7" rx="3"/><rect x="566" y="132" width="48" height="7" rx="3"/></g>
+  <g transform="translate(690 60)">
+    <rect width="90" height="170" rx="6" fill="#38237a"/>
+    <rect x="8" y="10" width="14" height="50" rx="2" fill="#f2b84a"/><rect x="26" y="16" width="12" height="44" rx="2" fill="#8f73e0"/><rect x="42" y="8" width="16" height="52" rx="2" fill="#e9edf8"/><rect x="62" y="14" width="14" height="46" rx="2" fill="#d9777a"/>
+    <rect x="8" y="80" width="18" height="50" rx="2" fill="#8f73e0"/><rect x="30" y="74" width="14" height="56" rx="2" fill="#f2b84a"/><rect x="48" y="84" width="16" height="46" rx="2" fill="#e9edf8"/><rect x="68" y="78" width="12" height="52" rx="2" fill="#cdbff7"/>
+  </g>
+</svg>

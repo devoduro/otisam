@@ -9,6 +9,8 @@ use App\Models\Curriculum\CurriculumNode;
 use App\Models\Curriculum\Subject;
 use App\Models\Library\Resource;
 use App\Models\Library\ResourceCategory;
+use App\Models\QuestionBank\ExamPaper;
+use App\Models\QuestionBank\Question;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
@@ -21,7 +23,7 @@ class HomeController extends Controller
 {
     public function __invoke(): View
     {
-        $data = Cache::remember('home.v1', now()->addMinutes(10), function () {
+        $data = Cache::remember('home.v2', now()->addMinutes(10), function () {
             $visible = Resource::visible()->where('audience', '!=', 'teacher');
 
             $categories = ResourceCategory::active()->where('audience', '!=', 'teacher')->ordered()
@@ -41,7 +43,15 @@ class HomeController extends Controller
                     'free' => (clone $visible)->where('access_level', 'free')->count(),
                     'subjects' => Subject::active()->count(),
                     'topics' => CurriculumNode::whereHas('version', fn ($v) => $v->published())->count(),
+                    // Everything a student can practise: published self-test questions and the papers built from them.
+                    'questions' => Question::where('status', 'published')->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count(),
+                    'papers' => ExamPaper::visible()->count(),
                 ],
+                // For the hero search: JHS (BECE) and SHS (WASSCE) subjects.
+                'searchSubjects' => Subject::active()
+                    ->whereHas('educationLevel', fn ($q) => $q->where('is_active', true)->whereIn('code', ['JHS', 'SHS']))
+                    ->with('educationLevel:id,code')->orderBy('sort')->orderBy('name')->get(['id', 'slug', 'name', 'education_level_id'])
+                    ->map(fn ($s) => ['slug' => $s->slug, 'name' => $s->name, 'level' => strtolower($s->educationLevel->code)])->values()->all(),
                 'categories' => $categories,
                 'subjects' => $subjects->each(fn ($s) => $s->setAttribute('resources_count', (int) ($resourceCounts[$s->id] ?? 0))),
                 'cheapestPlan' => Plan::active()->where('price_minor', '>', 0)->orderBy('price_minor')->first(),
@@ -54,6 +64,7 @@ class HomeController extends Controller
             ->latest('published_at')->limit(6)->get();
 
         $data['heroImage'] = HomepageSettingsController::heroImageUrl();
+        $data['searchYears'] = range((int) now()->year, 1990);
 
         return view('public.home', $data);
     }
