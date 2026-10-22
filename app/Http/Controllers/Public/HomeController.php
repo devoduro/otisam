@@ -23,7 +23,7 @@ class HomeController extends Controller
 {
     public function __invoke(): View
     {
-        $data = Cache::remember('home.v2', now()->addMinutes(10), function () {
+        $data = Cache::remember('home.v3', now()->addMinutes(10), function () {
             $visible = Resource::visible()->where('audience', '!=', 'teacher');
 
             $categories = ResourceCategory::active()->where('audience', '!=', 'teacher')->ordered()
@@ -46,6 +46,7 @@ class HomeController extends Controller
                     // Everything a student can practise: published self-test questions and the papers built from them.
                     'questions' => Question::where('status', 'published')->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count(),
                     'papers' => ExamPaper::visible()->count(),
+                    'promotion' => Question::where('status', 'published')->where('confidentiality', 'promotion')->where('type', 'mcq')->whereNotNull('current_revision_id')->count(),
                 ],
                 // For the hero search: JHS (BECE) and SHS (WASSCE) subjects.
                 'searchSubjects' => Subject::active()

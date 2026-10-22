@@ -98,31 +98,27 @@
     </div>
 </section>
 
-{{-- Live numbers: a white card floating over the bottom edge of the hero. Real counts only; zero is left out. Counts up once when scrolled into view. --}}
+{{-- Live numbers as two-tone stat tiles (the dashboard style). Real counts only; zero is left out. Counts up once when scrolled into view. --}}
 @php
+    // [value, title, icon, note, colour]: no red.
     $figures = array_filter([
-        [$stats['questions'], 'Practice questions', 'fa-list-check', 'With answers and explanations', 'from-blue-500 to-indigo-600'],
-        [$stats['papers'], 'Practice papers', 'fa-stopwatch', 'Timed exam or study mode', 'from-amber-400 to-orange-500'],
-        [$stats['resources'], 'Past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read', 'from-emerald-500 to-green-600'],
-        [$stats['subjects'], 'Subjects', 'fa-book-open', 'JHS and SHS', 'from-violet-500 to-purple-600'],
-        [$stats['topics'], 'Curriculum topics', 'fa-sitemap', 'Mapped to the syllabus', 'from-rose-500 to-red-600'],
+        [$stats['questions'], 'Practice questions', 'fa-list-check', 'Answers explained', 'blue'],
+        [$stats['papers'], 'Practice papers', 'fa-stopwatch', 'Timed or study mode', 'green'],
+        [$stats['resources'], 'Past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read', 'purple'],
+        [$stats['subjects'], 'Subjects', 'fa-book-open', 'JHS and SHS', 'orange'],
+        [$stats['topics'], 'Curriculum topics', 'fa-sitemap', 'Mapped to syllabus', 'slate'],
+        [$stats['promotion'] ?? 0, 'Promotion questions', 'fa-chalkboard-user', 'GES teacher exams', 'blue'],
     ], fn ($f) => $f[0] > 0);
-    $figureCols = [1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4', 5 => 'sm:grid-cols-3 xl:grid-cols-5'][count($figures)] ?? 'sm:grid-cols-3 xl:grid-cols-5';
+    // The figure, marked up so the count-up script can find it.
+    $figure = fn (int $n) => new \Illuminate\Support\HtmlString('<span data-count="'.$n.'">'.number_format($n).'</span>');
 @endphp
 @if ($figures)
     <section class="relative z-10 mx-auto -mt-14 max-w-6xl px-4 md:px-6" aria-label="Otisam in numbers">
-        <dl class="grid grid-cols-2 gap-x-2 gap-y-6 rounded-3xl bg-white p-5 shadow-lift ring-1 ring-[#ece9f3] sm:p-6 {{ $figureCols }} xl:gap-x-0 xl:divide-x xl:divide-gray-100">
-            @foreach ($figures as [$value, $label, $icon, $note, $gradient])
-                <div class="flex items-center gap-3 xl:px-5 {{ $loop->last && count($figures) % 2 === 1 ? 'col-span-2 sm:col-span-1' : '' }}">
-                    <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br {{ $gradient }} text-lg text-white shadow-md ring-4 ring-white"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
-                    <div class="min-w-0">
-                        <dt class="text-xs font-semibold uppercase tracking-wide text-gray-500">{{ $label }}</dt>
-                        <dd class="font-display text-2xl font-extrabold leading-tight tabular-nums text-primary-800 sm:text-[1.7rem]"><span data-count="{{ $value }}">{{ number_format($value) }}</span></dd>
-                        <p class="text-[11px] leading-snug text-gray-400">{{ $note }}</p>
-                    </div>
-                </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            @foreach ($figures as [$value, $title, $icon, $note, $colour])
+                <x-stat-tile :color="$colour" :icon="$icon" :title="$title" :sub="$note" :value="$figure((int) $value)" class="rounded-lg shadow-lg" />
             @endforeach
-        </dl>
+        </div>
     </section>
 @endif
 
