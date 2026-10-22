@@ -114,10 +114,18 @@
 @endphp
 @if ($figures)
     <section class="relative z-10 mx-auto -mt-14 max-w-6xl px-4 md:px-6" aria-label="Otisam in numbers">
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            @foreach ($figures as [$value, $title, $icon, $note, $colour])
-                <x-stat-tile :color="$colour" :icon="$icon" :title="$title" :sub="$note" :value="$figure((int) $value)" class="rounded-lg shadow-lg" />
-            @endforeach
+        {{-- Slider: every tile in one row. Swipe or scroll on a phone; arrows, dots and a gentle auto-advance elsewhere. --}}
+        <div class="relative" data-slider role="region" aria-roledescription="carousel" aria-label="Otisam in numbers">
+            <div data-track class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-4 pt-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                @foreach ($figures as [$value, $title, $icon, $note, $colour])
+                    <div data-slide class="w-[85%] shrink-0 snap-start sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
+                        <x-stat-tile :color="$colour" :icon="$icon" :title="$title" :sub="$note" :value="$figure((int) $value)" class="h-full rounded-lg shadow-lg" />
+                    </div>
+                @endforeach
+            </div>
+            <button type="button" data-prev aria-label="Previous numbers" class="absolute left-2 top-[calc(50%-0.5rem)] z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary-700 shadow-lg ring-1 ring-black/5 hover:bg-gold-50 sm:flex"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <button type="button" data-next aria-label="Next numbers" class="absolute right-2 top-[calc(50%-0.5rem)] z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary-700 shadow-lg ring-1 ring-black/5 hover:bg-gold-50 sm:flex"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            <div data-dots class="mt-1 flex justify-center gap-1.5" aria-hidden="true"></div>
         </div>
     </section>
 @endif
@@ -236,3 +244,55 @@
 </script>
 @endpush
 
+@push('scripts')
+<script>
+    // The numbers slider: arrows, dots, and an auto-advance that pauses on hover/focus and for reduced motion.
+    (function () {
+        var slider = document.querySelector('[data-slider]');
+        if (!slider) { return; }
+        var track = slider.querySelector('[data-track]'), slides = slider.querySelectorAll('[data-slide]'), dots = slider.querySelector('[data-dots]');
+        var paused = false, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
+        function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 4; }
+        function go(dir) {
+            if (dir > 0 && atEnd()) { track.scrollTo({ left: 0 }); return; }
+            if (dir < 0 && track.scrollLeft <= 4) { track.scrollTo({ left: track.scrollWidth }); return; }
+            track.scrollBy({ left: dir * step() });
+        }
+        slider.querySelector('[data-prev]').addEventListener('click', function () { go(-1); });
+        slider.querySelector('[data-next]').addEventListener('click', function () { go(1); });
+        // One dot per reachable position (it depends on how many tiles fit), rebuilt when the window changes size.
+        function positions() { return Math.max(1, Math.round((track.scrollWidth - track.clientWidth) / (step() || 1)) + 1); }
+        function build() {
+            dots.replaceChildren();
+            var n = positions();
+            dots.hidden = n < 2;
+            for (var i = 0; i < n; i++) {
+                (function (i) {
+                    var d = document.createElement('span');
+                    d.className = 'h-1.5 w-1.5 cursor-pointer rounded-full bg-primary-200 transition-all';
+                    d.addEventListener('click', function () { track.scrollTo({ left: i * step() }); });
+                    dots.appendChild(d);
+                })(i);
+            }
+            mark();
+        }
+        function mark() {
+            var last = dots.children.length - 1;
+            var i = atEnd() ? last : Math.min(last, Math.round(track.scrollLeft / (step() || 1)));
+            Array.prototype.forEach.call(dots.children, function (d, n) {
+                d.classList.toggle('bg-primary-600', n === i); d.classList.toggle('w-5', n === i);
+                d.classList.toggle('bg-primary-200', n !== i); d.classList.toggle('w-1.5', n !== i);
+            });
+        }
+        track.addEventListener('scroll', mark, { passive: true });
+        window.addEventListener('resize', build);
+        build();
+        ['mouseenter', 'focusin', 'touchstart'].forEach(function (e) { slider.addEventListener(e, function () { paused = true; }, { passive: true }); });
+        ['mouseleave', 'focusout'].forEach(function (e) { slider.addEventListener(e, function () { paused = false; }); });
+        if (!reduce) {
+            setInterval(function () { if (!paused && !document.hidden) { go(1); } }, 4000);
+        }
+    })();
+</script>
+@endpush
