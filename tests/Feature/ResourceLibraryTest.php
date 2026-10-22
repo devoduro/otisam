@@ -95,11 +95,26 @@ class ResourceLibraryTest extends TestCase
             'access_level' => 'free',
         ]);
 
+        // A year with one paper opens that paper straight away.
         $this->get(route('library.index', ['subject' => 'core-mathematics']))->assertOk()
-            ->assertSee(route('library.index', ['subject' => 'core-mathematics', 'year' => 2019]))
+            ->assertSee(route('library.show', $resource))
             ->assertSee('WASSCE 2018: not available yet');
         $this->get(route('library.index', ['subject' => 'core-mathematics', 'year' => 2019]))->assertOk()->assertSee($resource->title);
-        $this->get(route('library.index'))->assertOk()->assertSee('1 past paper');
+
+        // A year with several papers opens the filtered list, scrolled to the documents.
+        $this->publishedResource([
+            'title' => 'WASSCE 2019 Core Mathematics Paper 2',
+            'category_id' => ResourceCategory::where('name', 'WASSCE past questions')->value('id'),
+            'exam_type_id' => ExamType::where('name', 'WASSCE (May/June)')->value('id'),
+            'exam_year' => 2019,
+            'paper_number' => '2',
+            'access_level' => 'free',
+        ]);
+        $this->get(route('library.index', ['subject' => 'core-mathematics']))->assertOk()
+            ->assertSee(route('library.index', ['subject' => 'core-mathematics', 'year' => 2019]).'#documents', false)
+            ->assertDontSee(route('library.show', $resource))
+            ->assertSee('id="documents"', false);
+        $this->get(route('library.index'))->assertOk()->assertSee('2 past papers');
     }
 
     public function test_advanced_filters_narrow_by_series_year_and_paper(): void

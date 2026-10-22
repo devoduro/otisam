@@ -138,7 +138,7 @@
                 @foreach ($examYears as $y)
                     <li>
                         @if (isset($yearCounts[$y]))
-                            <a href="{{ route('library.index', array_filter(['subject' => $subject->slug, 'year' => $y, 'exam' => $filters['exam'] ?? null, 'paper' => $filters['paper'] ?? null])) }}" @if ((int) ($filters['year'] ?? 0) === $y) aria-current="true" @endif
+                            <a href="{{ isset($yearPaper[$y]) ? route('library.show', $yearPaper[$y]) : route('library.index', array_filter(['subject' => $subject->slug, 'year' => $y, 'exam' => $filters['exam'] ?? null, 'paper' => $filters['paper'] ?? null])).'#documents' }}" @if ((int) ($filters['year'] ?? 0) === $y) aria-current="true" @endif
                                class="flex h-14 flex-col items-center justify-center rounded-xl text-sm font-bold no-underline {{ (int) ($filters['year'] ?? 0) === $y ? 'bg-primary-600 text-white' : 'bg-primary-50 text-primary-700 hover:bg-primary-100' }}">{{ $y }}<span class="text-[10px] font-semibold opacity-75">{{ $yearCounts[$y] }} {{ \Illuminate\Support\Str::plural('paper', $yearCounts[$y]) }}</span></a>
                         @else
                             <span class="flex h-14 flex-col items-center justify-center rounded-xl bg-gray-50 text-sm font-semibold text-gray-400" title="{{ $examName }} {{ $y }}: not available yet">{{ $y }}<span class="text-[10px] font-normal">not yet</span></span>
@@ -187,7 +187,7 @@
         </a>
     @endif
 
-    <h2 class="mt-8 text-xl font-extrabold text-gray-800">{{ $subject ? $subject->name.' papers, solutions and notes' : 'Papers, solutions and notes' }}</h2>
+    <h2 id="documents" class="mt-8 scroll-mt-24 text-xl font-extrabold text-gray-800">{{ $subject ? $subject->name.' papers, solutions and notes' : 'Papers, solutions and notes' }}</h2>
     <p class="mt-1 text-sm text-gray-500" role="status">{{ $resources->total() }} {{ \Illuminate\Support\Str::plural('item', $resources->total()) }}</p>
 
     @if ($resources->isEmpty())

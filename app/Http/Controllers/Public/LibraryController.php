@@ -107,7 +107,7 @@ class LibraryController extends Controller
             $papers = ExamPaper::visible()->where('subject_id', $subject->id)->withCount('questions')->orderBy('number')->get();
             $user = $request->user();
             $byYear = $narrow($pastPapers(Resource::query()), false)->where('subject_id', $subject->id)->whereIn('exam_type_id', $examTypes($code))
-                ->whereNotNull('exam_year')->selectRaw('exam_year, count(*) as n')->groupBy('exam_year')->pluck('n', 'exam_year');
+                ->whereNotNull('exam_year')->get(['id', 'slug', 'exam_year'])->groupBy('exam_year');
 
             return [
                 'subjectPapers' => $papers,
@@ -117,7 +117,9 @@ class LibraryController extends Controller
                 'reports' => Resource::visible()->with('examType')->where('audience', '!=', 'teacher')->where('subject_id', $subject->id)
                     ->whereHas('category', fn ($c) => $c->where('slug', self::REPORTS_CATEGORY))->orderByDesc('exam_year')->orderBy('title')->get(),
                 'examYears' => range((int) now()->year, self::FIRST_YEAR[$code]),
-                'yearCounts' => $byYear,
+                'yearCounts' => $byYear->map->count(),
+                // A year with exactly one paper opens that paper; a year with several opens the filtered list.
+                'yearPaper' => $byYear->filter(fn ($rows) => $rows->count() === 1)->map(fn ($rows) => $rows->first()->slug),
                 'examName' => $code === 'JHS' ? 'BECE' : 'WASSCE',
             ];
         }
@@ -131,6 +133,7 @@ class LibraryController extends Controller
             'examYears' => [],
             'reports' => collect(),
             'yearCounts' => collect(),
+            'yearPaper' => collect(),
             'examName' => null,
             // [level name => every active subject], each carrying its counts; BECE first, then WASSCE.
             'paperSubjects' => $levels->filter(fn ($l) => in_array($l->code, ['JHS', 'SHS'], true))
