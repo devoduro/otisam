@@ -86,7 +86,8 @@
             <div class="flex items-center justify-between">
                 <h2 class="font-bold text-gray-800">{{ $canViewFull ? 'Read online' : 'Preview' }}</h2>
             </div>
-            <div class="mt-2 rounded-xl bg-gray-100 p-2 sm:p-4" data-pdf-src="{{ $readerSrc }}">
+            {{-- select-none and print:hidden: the pages cannot be selected, and the reader does not print (use Download where allowed). --}}
+            <div class="mt-2 select-none rounded-xl bg-gray-100 p-2 sm:p-4 [-webkit-touch-callout:none] print:hidden" data-pdf-src="{{ $readerSrc }}" tabindex="-1" oncontextmenu="return false">
                 <p class="mb-2 text-sm text-gray-500" data-pdf-status aria-live="polite">Loading document…</p>
                 <div data-pdf-pages></div>
                 <noscript><p class="text-sm">Turn on JavaScript to read the document here.</p></noscript>
