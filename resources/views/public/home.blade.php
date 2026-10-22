@@ -32,7 +32,7 @@
     <div class="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-primary-400/20 blur-3xl"></div>
     <div class="pointer-events-none absolute inset-0 bg-crosshatch"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 py-14 text-center sm:py-20">
+    <div class="relative mx-auto max-w-5xl px-4 pb-24 pt-14 text-center sm:pb-28 sm:pt-20">
         <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">
            For JHS &amp; SHS students and teachers in Ghana
         </p>
@@ -96,38 +96,39 @@
             @endauth
         </div>
     </div>
+</section>
 
-    {{-- Live numbers: real counts only; anything at zero is left out. Counts up once when scrolled into view. --}}
-    @php
-        $figures = array_filter([
-            [$stats['questions'], 'practice questions', 'fa-list-check', 'with answers and explanations'],
-            [$stats['papers'], 'practice papers', 'fa-stopwatch', 'timed exam or study mode'],
-            [$stats['resources'], 'past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read'],
-            [$stats['subjects'], 'subjects', 'fa-book-open', 'JHS and SHS'],
-            [$stats['topics'], 'curriculum topics', 'fa-sitemap', 'mapped to the syllabus'],
-        ], fn ($f) => $f[0] > 0);
-        $figureCols = [1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4', 5 => 'sm:grid-cols-3 xl:grid-cols-5'][count($figures)] ?? 'sm:grid-cols-3 xl:grid-cols-5';
-    @endphp
-    @if ($figures)
-        <div class="relative border-t border-white/10 bg-primary-950/50 backdrop-blur-sm">
-            <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-6 sm:gap-4 {{ $figureCols }}">
-                @foreach ($figures as [$value, $label, $icon, $note])
-                    <div class="group rounded-2xl bg-white/[0.07] p-4 text-left ring-1 ring-white/10 transition hover:bg-white/[0.12] {{ $loop->last && count($figures) % 2 === 1 ? 'col-span-2 sm:col-span-1' : '' }}">
-                        <div class="flex items-center gap-3">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-500/20 text-gold-300 ring-1 ring-gold-400/30"><i class="fas {{ $icon }}" aria-hidden="true"></i></span>
-                            <div class="min-w-0">
-                                <dt class="sr-only">{{ $label }}</dt>
-                                <dd class="font-display text-2xl font-extrabold leading-none tabular-nums sm:text-3xl"><span data-count="{{ $value }}">{{ number_format($value) }}</span></dd>
-                                <p class="mt-1 text-xs font-semibold leading-tight text-white/85">{{ $label }}</p>
-                            </div>
-                        </div>
-                        <p class="mt-2 text-[11px] leading-snug text-white/55">{{ $note }}</p>
+{{-- Live numbers as two-tone stat tiles (the dashboard style). Real counts only; zero is left out. Counts up once when scrolled into view. --}}
+@php
+    // [value, title, icon, note, colour]: no red.
+    $figures = array_filter([
+        [$stats['questions'], 'Practice questions', 'fa-list-check', 'Answers explained', 'blue'],
+        [$stats['papers'], 'Practice papers', 'fa-stopwatch', 'Timed or study mode', 'green'],
+        [$stats['resources'], 'Past papers & notes', 'fa-file-lines', number_format($stats['free']).' free to read', 'purple'],
+        [$stats['subjects'], 'Subjects', 'fa-book-open', 'JHS and SHS', 'orange'],
+        [$stats['topics'], 'Curriculum topics', 'fa-sitemap', 'Mapped to syllabus', 'slate'],
+        [$stats['promotion'] ?? 0, 'Promotion questions', 'fa-chalkboard-user', 'GES teacher exams', 'blue'],
+    ], fn ($f) => $f[0] > 0);
+    // The figure, marked up so the count-up script can find it.
+    $figure = fn (int $n) => new \Illuminate\Support\HtmlString('<span data-count="'.$n.'">'.number_format($n).'</span>');
+@endphp
+@if ($figures)
+    <section class="relative z-10 mx-auto -mt-14 max-w-6xl px-4 md:px-6" aria-label="Otisam in numbers">
+        {{-- Slider: every tile in one row. Swipe or scroll on a phone; arrows, dots and a gentle auto-advance elsewhere. --}}
+        <div class="relative" data-slider role="region" aria-roledescription="carousel" aria-label="Otisam in numbers">
+            <div data-track class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-4 pt-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                @foreach ($figures as [$value, $title, $icon, $note, $colour])
+                    <div data-slide class="w-[85%] shrink-0 snap-start sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
+                        <x-stat-tile :color="$colour" :icon="$icon" :title="$title" :sub="$note" :value="$figure((int) $value)" class="h-full rounded-lg shadow-lg" />
                     </div>
                 @endforeach
-            </dl>
+            </div>
+            <button type="button" data-prev aria-label="Previous numbers" class="absolute left-2 top-[calc(50%-0.5rem)] z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary-700 shadow-lg ring-1 ring-black/5 hover:bg-gold-50 sm:flex"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <button type="button" data-next aria-label="Next numbers" class="absolute right-2 top-[calc(50%-0.5rem)] z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-primary-700 shadow-lg ring-1 ring-black/5 hover:bg-gold-50 sm:flex"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            <div data-dots class="mt-1 flex justify-center gap-1.5" aria-hidden="true"></div>
         </div>
-    @endif
-</section>
+    </section>
+@endif
 
 {{-- Category tiles in jhs_portal's two-tone stat-tile style --}}
 <section class="mx-auto max-w-7xl px-4 py-12 md:px-6" aria-labelledby="browse-heading">
@@ -243,3 +244,55 @@
 </script>
 @endpush
 
+@push('scripts')
+<script>
+    // The numbers slider: arrows, dots, and an auto-advance that pauses on hover/focus and for reduced motion.
+    (function () {
+        var slider = document.querySelector('[data-slider]');
+        if (!slider) { return; }
+        var track = slider.querySelector('[data-track]'), slides = slider.querySelectorAll('[data-slide]'), dots = slider.querySelector('[data-dots]');
+        var paused = false, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
+        function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 4; }
+        function go(dir) {
+            if (dir > 0 && atEnd()) { track.scrollTo({ left: 0 }); return; }
+            if (dir < 0 && track.scrollLeft <= 4) { track.scrollTo({ left: track.scrollWidth }); return; }
+            track.scrollBy({ left: dir * step() });
+        }
+        slider.querySelector('[data-prev]').addEventListener('click', function () { go(-1); });
+        slider.querySelector('[data-next]').addEventListener('click', function () { go(1); });
+        // One dot per reachable position (it depends on how many tiles fit), rebuilt when the window changes size.
+        function positions() { return Math.max(1, Math.round((track.scrollWidth - track.clientWidth) / (step() || 1)) + 1); }
+        function build() {
+            dots.replaceChildren();
+            var n = positions();
+            dots.hidden = n < 2;
+            for (var i = 0; i < n; i++) {
+                (function (i) {
+                    var d = document.createElement('span');
+                    d.className = 'h-1.5 w-1.5 cursor-pointer rounded-full bg-primary-200 transition-all';
+                    d.addEventListener('click', function () { track.scrollTo({ left: i * step() }); });
+                    dots.appendChild(d);
+                })(i);
+            }
+            mark();
+        }
+        function mark() {
+            var last = dots.children.length - 1;
+            var i = atEnd() ? last : Math.min(last, Math.round(track.scrollLeft / (step() || 1)));
+            Array.prototype.forEach.call(dots.children, function (d, n) {
+                d.classList.toggle('bg-primary-600', n === i); d.classList.toggle('w-5', n === i);
+                d.classList.toggle('bg-primary-200', n !== i); d.classList.toggle('w-1.5', n !== i);
+            });
+        }
+        track.addEventListener('scroll', mark, { passive: true });
+        window.addEventListener('resize', build);
+        build();
+        ['mouseenter', 'focusin', 'touchstart'].forEach(function (e) { slider.addEventListener(e, function () { paused = true; }, { passive: true }); });
+        ['mouseleave', 'focusout'].forEach(function (e) { slider.addEventListener(e, function () { paused = false; }); });
+        if (!reduce) {
+            setInterval(function () { if (!paused && !document.hidden) { go(1); } }, 4000);
+        }
+    })();
+</script>
+@endpush

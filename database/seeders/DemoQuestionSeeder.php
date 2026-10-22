@@ -100,6 +100,11 @@ class DemoQuestionSeeder extends Seeder
             $subject->slug = 'ges-promotion-general';
             $subject->save();
         }
+        if (! Subject::where('slug', 'ges-promotion-aptitude')->exists()) {
+            $subject = new Subject(['education_level_id' => $level->id, 'name' => 'GES Promotion (Aptitude)', 'category' => 'core', 'description' => 'Numerical, verbal and logical reasoning for all ranks: number work, word skills, analogies, series, coding and direction puzzles.', 'sort' => 2, 'is_active' => true]);
+            $subject->slug = 'ges-promotion-aptitude';
+            $subject->save();
+        }
     }
 
     /** @return array<string, string> subject slug => path of its question file */

@@ -16,7 +16,7 @@ class HomepageSearchAndStatsTest extends TestCase
     {
         parent::setUp();
         $this->seed(CurriculumSubjectsSeeder::class);
-        Cache::forget('home.v2');
+        Cache::forget('home.v3');
     }
 
     /** $count free practice MCQs for the subject. */
@@ -41,10 +41,10 @@ class HomepageSearchAndStatsTest extends TestCase
         $this->questions($maths, 3, ['status' => 'draft']); // not counted
         $this->questions($maths, 2, ['confidentiality' => 'exam']); // not counted
         app(PaperBuilder::class)->build($maths);
-        Cache::forget('home.v2');
+        Cache::forget('home.v3');
 
         $response = $this->get('/')->assertOk()
-            ->assertSee('practice questions')->assertSee('practice papers')
+            ->assertSee('Practice questions')->assertSee('Practice papers')
             ->assertSee('data-count="50"', false)->assertSee('data-count="1"', false);
         $this->assertStringNotContainsString('data-count="55"', $response->getContent());
     }
