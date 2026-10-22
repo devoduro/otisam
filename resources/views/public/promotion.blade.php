@@ -18,7 +18,7 @@
         <h1 class="mt-4 text-3xl font-extrabold sm:text-4xl">Teacher promotion exams</h1>
         <p class="mt-3 max-w-2xl text-white/75">Timed practice papers for GES promotion examinations: education acts and agencies, teacher standards, curriculum, educational psychology, assessment and school management. Every answer is explained.</p>
         <dl class="mt-5 flex flex-wrap gap-3 text-sm">
-            <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Questions</dt><dd><strong class="font-display text-lg">{{ $total }}</strong> practice questions</dd></div>
+            <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Questions</dt><dd><strong class="font-display text-lg">{{ number_format($allTotal) }}</strong> practice questions</dd></div>
             <div class="rounded-xl bg-white/10 px-4 py-2 ring-1 ring-white/15"><dt class="sr-only">Papers</dt><dd><strong class="font-display text-lg">{{ collect($papers)->where('ready', true)->count() }}</strong> papers open</dd></div>
         </dl>
         <div class="mt-6 flex flex-wrap gap-3">
@@ -49,9 +49,9 @@
         <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($papers as $paper)
                 @php
-                    $count = min($paper['count'], $total);
+                    $count = min($paper['count'], $totals[$paper['subject'] ?? P::SUBJECT] ?? 0);
                     $href = $canPractise
-                        ? route('practice.start', ['subject' => P::SUBJECT, 'count' => in_array($paper['count'], \App\Http\Controllers\Public\PracticeController::COUNTS, true) ? $paper['count'] : 20, 'mode' => $paper['mode']])
+                        ? route('practice.start', ['subject' => $paper['subject'] ?? P::SUBJECT, 'count' => in_array($paper['count'], \App\Http\Controllers\Public\PracticeController::COUNTS, true) ? $paper['count'] : 20, 'mode' => $paper['mode']])
                         : (! $user ? route('teachers.register') : null);
                 @endphp
                 <li class="flex flex-col rounded-2xl bg-white p-5 shadow-card ring-1 ring-[#ece9f3] {{ $paper['ready'] ? '' : 'opacity-70' }}">
