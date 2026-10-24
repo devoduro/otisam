@@ -5,6 +5,7 @@
 
 @section('actions')
     <a href="{{ route('admin.attempts.index') }}" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-1" aria-hidden="true"></i> Back to attempts</a>
+
 @endsection
 
 @section('content')
@@ -44,4 +45,31 @@
         </div>
     </div>
 </div>
+
+@if ($attempt->answers->isNotEmpty())
+    <div class="j-card j-card-flush mt-3">
+        <div class="j-card-head j-pad"><div><h4>Question by question</h4><p class="j-note">{{ $attempt->answers->where('is_correct', true)->count() }} right, {{ $attempt->answers->where('is_correct', false)->count() }} wrong{{ $attempt->answers->whereNull('is_correct')->count() ? ', '.$attempt->answers->whereNull('is_correct')->count().' theory (not marked)' : '' }}.</p></div></div>
+        <div class="table-responsive">
+            <table class="j-table">
+                <thead><tr><th style="width:3rem">#</th><th>Question</th><th>Answer given</th><th class="text-end">Result</th></tr></thead>
+                <tbody>
+                    @foreach ($attempt->answers as $i => $answer)
+                        <tr>
+                            <td>{{ $i + 1 }}</td>
+                            <td><a href="{{ route('admin.questions.show', $answer->question) }}" style="font-size:.875rem">{{ \Illuminate\Support\Str::limit($answer->question?->currentRevision?->stem ?? 'Question removed', 120) }}</a></td>
+                            <td>{{ $answer->given !== null && $answer->given !== '' ? \Illuminate\Support\Str::limit($answer->given, 120) : '(left blank)' }}</td>
+                            <td class="text-end">
+                                @if ($answer->is_correct === null)<span class="badge text-bg-secondary">Theory</span>
+                                @elseif ($answer->is_correct)<span class="badge text-bg-success">Right</span>
+                                @else<span class="badge text-bg-danger">Wrong</span>@endif
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@else
+    <p class="small text-muted mt-3">Question-level results were not saved for this attempt; only its score is available.</p>
+@endif
 @endsection

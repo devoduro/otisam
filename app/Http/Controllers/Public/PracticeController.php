@@ -192,7 +192,7 @@ class PracticeController extends Controller
             QuizAttempt::recordFor($request->user(), [
                 'subject_id' => $subject->id, 'kind' => 'practice', 'score' => $score,
                 'total' => $marked->count(), 'seconds' => $seconds, 'late' => (bool) $late,
-            ]);
+            ])?->recordAnswers($results);
         }
 
         // Keep the last few scores for the practice home page (this browser session only).

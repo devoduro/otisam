@@ -39,7 +39,7 @@ class PracticeAttemptController extends Controller
 
     public function show(Request $request, QuizAttempt $attempt): View
     {
-        $attempt->load(['user', 'subject.educationLevel', 'paper']);
+        $attempt->load(['user', 'subject.educationLevel', 'paper', 'answers.question.currentRevision']);
 
         return view('admin.attempts.show', [
             'attempt' => $attempt,
