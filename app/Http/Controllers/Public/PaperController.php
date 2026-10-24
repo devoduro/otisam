@@ -120,7 +120,7 @@ class PaperController extends Controller
         QuizAttempt::recordFor($request->user(), [
             'subject_id' => $subject->id, 'kind' => 'paper', 'exam_paper_id' => $paper->id,
             'score' => $score, 'total' => $results->count(), 'seconds' => $seconds, 'late' => $late,
-        ]);
+        ])?->recordAnswers($results);
 
         return view('public.papers.result', [
             'subject' => $subject,
