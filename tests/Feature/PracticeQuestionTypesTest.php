@@ -38,6 +38,7 @@ class PracticeQuestionTypesTest extends TestCase
             'JHS Mathematics' => ['jhs-mathematics', 'JHS'],
             'JHS English Language' => ['jhs-english-language', 'JHS'],
             'SHS English Language' => ['english-language', 'SHS'],
+            'JHS Science' => ['jhs-science', 'JHS'],
         ];
     }
 
