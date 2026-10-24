@@ -10,7 +10,7 @@
 
     <div class="mt-6 grid gap-5 sm:grid-cols-2">
         @foreach ($levels as $l)
-            <section class="relative overflow-hidden rounded-2xl p-6 text-white shadow-card {{ $l->code === 'JHS' ? 'bg-sky-700' : 'bg-primary-900' }}" style="background-image: linear-gradient(90deg, {{ $l->code === 'JHS' ? 'rgba(7,70,130,.92), rgba(7,70,130,.35)' : 'rgba(13,18,64,.94), rgba(13,18,64,.35)' }}), url('{{ asset('images/study/'.strtolower($l->code).'.svg') }}'); background-size: cover; background-position: right center;">
+            <section class="relative overflow-hidden rounded-2xl p-6 text-white shadow-card {{ $l->code === 'JHS' ? 'bg-[#2c8fc6]' : 'bg-[#7d62c4]' }}" style="background-image: linear-gradient(90deg, {{ $l->code === 'JHS' ? 'rgba(44,143,198,.92), rgba(66,165,220,.30)' : 'rgba(125,98,196,.92), rgba(150,122,220,.30)' }}), url('{{ asset('images/study/'.strtolower($l->code).'.svg') }}'); background-size: cover; background-position: right center;">
                 <p class="eyebrow !text-gold-300">{{ $l->code === 'JHS' ? 'BECE' : 'WASSCE' }}</p>
                 <h2 class="mt-1 text-2xl font-extrabold">{{ $l->name }}</h2>
                 <a href="{{ route('study.level', strtolower($l->code)) }}" class="mt-1 inline-block text-sm font-semibold text-white/80 no-underline hover:text-white">All subjects <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
