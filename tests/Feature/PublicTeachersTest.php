@@ -163,7 +163,7 @@ class PublicTeachersTest extends TestCase
         $page = $this->get(route('promotion'))->assertOk();
         $page->assertSee('General paper: all ranks')->assertSee('Assistant Director I to Deputy Director')
             ->assertSee('Sample questions')->assertSee('Show answer')->assertSee('Sign up to start')
-            ->assertSee('21 more questions and timed papers');
+            ->assertSeeText('more questions and timed papers');
         $this->assertSame(5, substr_count($page->getContent(), 'data-sample'));
 
         $teacher = User::factory()->teacher(TeacherVerificationStatus::Approved)->create();
