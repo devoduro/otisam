@@ -35,7 +35,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/brand/otisam-mark.svg') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@hasSection('title')@yield('title') | @endif{{ config('app.name') }}</title>
     <meta name="description" content="@yield('description', 'SHS past questions, worked solutions, curriculum topics and practice for students and teachers in Ghana.')">
@@ -47,8 +48,7 @@
     <header class="sticky top-0 z-40 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur">
         <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
             <a href="{{ route('home') }}" class="flex items-center gap-2 no-underline">
-                <span class="flex h-9 w-9 items-center justify-center rounded-xl gradient-bg text-sm font-bold text-white">{{ mb_substr(config('app.name'), 0, 1) }}</span>
-                <span class="font-display text-xl font-extrabold text-primary-700">{{ config('app.name') }}</span>
+                <img src="{{ asset('assets/brand/otisam-logo.svg') }}" alt="{{ config('app.name') }}" class="h-10 w-auto">
             </a>
 
             <nav aria-label="Main" class="hidden xl:flex items-center gap-0.5 text-sm">
@@ -100,8 +100,7 @@
         <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-4 md:px-6">
             <div class="md:col-span-2">
                 <a href="{{ route('home') }}" class="flex items-center gap-2 no-underline">
-                    <span class="flex h-9 w-9 items-center justify-center rounded-xl gradient-bg text-sm font-bold text-white">{{ mb_substr(config('app.name'), 0, 1) }}</span>
-                    <span class="font-display text-lg font-extrabold text-white">{{ config('app.name') }}</span>
+                    <img src="{{ asset('assets/brand/otisam-logo-white.svg') }}" alt="{{ config('app.name') }}" class="h-10 w-auto">
                 </a>
                 <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/60">Past questions, worked solutions and curriculum-mapped study material for JHS and SHS students and teachers in Ghana.</p>
             </div>

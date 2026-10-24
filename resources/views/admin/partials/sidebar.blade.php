@@ -13,8 +13,8 @@
     <div class="sidebar-header">
         <a href="{{ route('admin.dashboard') }}" class="brand">
             <div class="brand-content-light">
-                <div class="brand-icon"><span>{{ mb_substr(config('app.name'), 0, 1) }}</span></div>
-                <span class="brand-text">{{ config('app.name') }}<span class="brand-sub">Admin console</span></span>
+                <img src="{{ asset('assets/brand/otisam-logo-white.svg') }}" alt="{{ config('app.name') }}" style="height:34px;width:auto">
+                <span class="brand-sub" style="margin-left:6px">Admin console</span>
             </div>
         </a>
         <button class="mobile-close-btn" id="mobile-close" type="button" aria-label="Close menu">

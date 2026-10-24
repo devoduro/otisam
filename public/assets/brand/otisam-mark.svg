@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="tm">
+  <title id="tm">Otisam</title>
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2DB4EE"/><stop offset="1" stop-color="#0B2A5E"/></linearGradient>
+    <linearGradient id="boardm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CFE6FA"/></linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="url(#bgm)"/>
+  <path d="M61 0V544H184V418L170 439Q185 498 230.0 527.0Q275 556 336 556Q403 556 454.0 521.0Q505 486 520 429L483 426Q508 491 558.0 523.5Q608 556 673 556Q731 556 776.5 530.0Q822 504 848.0 457.5Q874 411 874 350V0H743V319Q743 355 730.0 381.0Q717 407 694.0 421.5Q671 436 638 436Q607 436 583.0 421.5Q559 407 546.0 381.0Q533 355 533 319V0H402V319Q402 355 389.0 381.0Q376 407 352.5 421.5Q329 436 297 436Q266 436 242.0 421.5Q218 407 205.0 381.0Q192 355 192 319V0Z" fill="#FFFFFF" transform="translate(35.6 166) scale(0.13776137761377613 -0.13776137761377613)"/>
+  <g transform="translate(-451.6 -18.1) rotate(-9 579 90)">
+    <path d="M553 95 V114 Q579 129 605 114 V95 Z" fill="#CFE6FA"/>
+    <path d="M526 88 L579 60 L634 88 L579 116 Z" fill="url(#boardm)"/>
+    <path d="M579 88 L628 98 V124" fill="none" stroke="#FFB41B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="623" y="120" width="10" height="20" rx="5" fill="#FFB41B"/>
+    <circle cx="579" cy="88" r="5" fill="#FFB41B"/>
+  </g>
+</svg>
