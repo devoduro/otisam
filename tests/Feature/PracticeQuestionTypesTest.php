@@ -8,6 +8,7 @@ use App\Models\QuestionBank\QuestionKey;
 use Database\Seeders\CurriculumStructureSeeder;
 use Database\Seeders\CurriculumSubjectsSeeder;
 use Database\Seeders\DemoQuestionSeeder;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 /** Fill-in, true/false and theory questions in the practice section. */
@@ -27,16 +28,26 @@ class PracticeQuestionTypesTest extends TestCase
         return Subject::where('slug', 'jhs-computing')->firstOrFail();
     }
 
-    public function test_jhs_computing_covers_all_three_years_with_enough_questions(): void
+    /** @return array<string, array{string, string}> subject file slug => [slug, level code] */
+    public static function fullBanks(): array
     {
-        $tagged = DemoQuestionSeeder::rows(DemoQuestionSeeder::subjectFiles()['jhs-computing']);
+        return [
+            'JHS Computing' => ['jhs-computing', 'JHS'],
+            'SHS Computing' => ['computing', 'SHS'],
+        ];
+    }
+
+    #[DataProvider('fullBanks')]
+    public function test_full_banks_cover_all_three_years_with_every_question_type(string $slug, string $level): void
+    {
+        $tagged = DemoQuestionSeeder::rows(DemoQuestionSeeder::subjectFiles()[$slug]);
         $kinds = array_count_values(array_map(fn ($t) => $t['row'][5] ?? 'mcq', $tagged));
 
-        $this->assertGreaterThanOrEqual(1000, count(array_filter($tagged, fn ($t) => $t['year'] !== null)), 'Year-tagged Computing questions.');
-        $this->assertGreaterThanOrEqual(150, $kinds['theory'] ?? 0);
-        $this->assertGreaterThan(100, $kinds['tf'] ?? 0);
-        $this->assertGreaterThan(100, $kinds['fill'] ?? 0);
-        $this->assertEqualsCanonicalizing(['JHS 1', 'JHS 2', 'JHS 3'], array_values(array_unique(array_filter(array_column($tagged, 'year')))));
+        $this->assertGreaterThanOrEqual(1000, count(array_filter($tagged, fn ($t) => $t['year'] !== null)), "{$slug}: year-tagged questions.");
+        $this->assertGreaterThanOrEqual(150, $kinds['theory'] ?? 0, "{$slug}: theory questions.");
+        $this->assertGreaterThan(100, $kinds['tf'] ?? 0, "{$slug}: true/false questions.");
+        $this->assertGreaterThan(100, $kinds['fill'] ?? 0, "{$slug}: fill-in questions.");
+        $this->assertEqualsCanonicalizing(["{$level} 1", "{$level} 2", "{$level} 3"], array_values(array_unique(array_filter(array_column($tagged, 'year')))));
     }
 
     public function test_jhs_computing_has_every_question_type(): void
