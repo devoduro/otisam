@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-    $total = $results->count();
+    $total = $markedTotal;
     $percent = $total ? round($score / $total * 100) : 0;
     $wrong = $total - $score;
     $time = sprintf('%d min %02d s', intdiv($seconds, 60), $seconds % 60);
@@ -53,12 +53,25 @@
     <ol class="mt-3 space-y-4">
         @foreach ($results as $row)
             @php $revision = $row['question']->currentRevision; @endphp
-            <li class="rounded-2xl bg-white p-5 shadow-card ring-1 {{ $row['right'] ? 'ring-green-200' : 'ring-red-200' }}" @if ($row['right']) data-right @endif>
+            <li class="rounded-2xl bg-white p-5 shadow-card ring-1 {{ $row['theory'] ? 'ring-[#ece9f3]' : ($row['right'] ? 'ring-green-200' : 'ring-red-200') }}" @if ($row['right']) data-right @endif>
                 <p class="font-semibold text-gray-800">
-                    <i class="fas {{ $row['right'] ? 'fa-circle-check text-green-600' : 'fa-circle-xmark text-red-600' }} mr-1" aria-hidden="true"></i>
-                    <span class="sr-only">{{ $row['right'] ? 'Correct.' : 'Wrong.' }}</span>
+                    @if ($row['theory'])<i class="fas fa-pen-to-square mr-1 text-primary-600" aria-hidden="true"></i><span class="sr-only">Theory, self-marked.</span>@else<i class="fas {{ $row['right'] ? 'fa-circle-check text-green-600' : 'fa-circle-xmark text-red-600' }} mr-1" aria-hidden="true"></i>
+                    <span class="sr-only">{{ $row['right'] ? 'Correct.' : 'Wrong.' }}</span>@endif
                     {{ $loop->iteration }}. {{ $revision->stem }}
                 </p>
+                @if ($row['question']->type === 'fill_in')
+                    <p class="mt-3 text-sm text-gray-600">Your answer: <strong class="{{ $row['right'] ? 'text-green-700' : 'text-red-700' }}">{{ $row['given'] ?? '(none)' }}</strong></p>
+                    @unless ($row['right'])<p class="mt-1 text-sm text-gray-600">Accepted answer: <strong class="text-green-700">{{ implode(' / ', $row['key']['accepted'] ?? []) }}</strong></p>@endunless
+                @elseif ($row['theory'])
+                    <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">Your answer</p>
+                    <p class="mt-1 whitespace-pre-line rounded-xl bg-gray-50 px-3 py-2 text-sm text-gray-700">{{ $row['given'] ?? 'You did not answer this one.' }}</p>
+                    <p class="mt-3 text-xs font-bold uppercase tracking-wide text-green-700">Model answer ({{ $row['question']->default_marks + 0 }} marks)</p>
+                    <p class="mt-1 whitespace-pre-line rounded-xl bg-green-50 px-3 py-2 text-sm text-green-900">{{ $row['key']['model'] ?? '' }}</p>
+                    @if (! empty($row['key']['points']))
+                        <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">Give yourself a mark for each point you made</p>
+                        <ul class="mt-1 list-inside list-disc text-sm text-gray-700">@foreach ($row['key']['points'] as $point)<li>{{ $point }}</li>@endforeach</ul>
+                    @endif
+                @else
                 <ul class="mt-3 grid gap-2 text-sm sm:grid-cols-2">
                     @foreach ($revision->payload['options'] ?? [] as $option)
                         @php
@@ -71,7 +84,8 @@
                         </li>
                     @endforeach
                 </ul>
-                @if ($row['given'] === null)<p class="mt-2 text-sm text-gray-500">You did not answer this one.</p>@endif
+                @endif
+                @if ($row['given'] === null && ! $row['theory'] && $row['question']->type !== 'fill_in')<p class="mt-2 text-sm text-gray-500">You did not answer this one.</p>@endif
                 @if ($revision->explanation)
                     <p class="mt-3 rounded-xl bg-primary-50 px-3 py-2 text-sm text-primary-800"><strong>Explanation:</strong> {{ $revision->explanation }}</p>
                 @endif

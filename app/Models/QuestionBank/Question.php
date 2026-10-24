@@ -19,6 +19,12 @@ class Question extends Model
 
     public const STATUSES = ['draft' => 'Draft', 'in_review' => 'In review', 'changes_requested' => 'Changes requested', 'published' => 'Published', 'archived' => 'Archived'];
 
+    /** Types learners can practise: marked automatically, except theory, which they compare with a model answer. */
+    public const PRACTICE_TYPES = ['mcq', 'true_false', 'fill_in', 'theory'];
+
+    /** Practice types the computer can mark. */
+    public const OBJECTIVE_TYPES = ['mcq', 'true_false', 'fill_in'];
+
     public const CONFIDENTIALITY = ['practice' => 'Practice (self-test)', 'exam' => 'Formal exams only', 'promotion' => 'Teacher promotion exams'];
 
     protected $guarded = ['*'];

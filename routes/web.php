@@ -80,6 +80,7 @@ Route::get('/lesson-plans/{plan}/print', [LessonPlanController::class, 'print'])
 Route::get('/lesson-plans/{plan}/download', [LessonPlanController::class, 'download'])->middleware('throttle:30,1')->name('lesson-plans.download');
 Route::get('/downloads/teachers/{material}', [DownloadController::class, 'material'])->name('downloads.material');
 Route::get('/promotion', PromotionController::class)->name('promotion');
+Route::get('/promotion/paper/{paper}', [PromotionController::class, 'paper'])->name('promotion.paper');
 
 /*
 | Community Q&A ("Q&A" in menus; not the question bank). Anyone reads; students and teachers post.

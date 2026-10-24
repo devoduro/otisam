@@ -134,11 +134,11 @@ class StudyController extends Controller
         abort_unless($subject->is_active && $subject->educationLevel?->is_active && strtoupper($level) === $subject->educationLevel->code && ! $subject->isProfessional(), 404);
     }
 
-    /** Free, published self-test MCQs of the subject (the same pool practice papers use). */
+    /** Free, published self-test questions of the subject (all practice types). */
     private function practiceBank($query, Subject $subject)
     {
         return $query->where('questions.subject_id', $subject->id)->where('questions.status', 'published')
-            ->where('questions.confidentiality', 'practice')->where('questions.type', 'mcq')
+            ->where('questions.confidentiality', 'practice')->whereIn('questions.type', Question::PRACTICE_TYPES)
             ->where('questions.access_level', 'free')->whereNotNull('questions.current_revision_id');
     }
 

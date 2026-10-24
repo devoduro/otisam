@@ -81,6 +81,16 @@
             </div>
         </div>
 
+        @if ($theoryAvailable > 0)
+            <div class="mt-4">
+                <label for="p-type" class="mb-1 block text-[13px] font-bold text-primary-800">Question type</label>
+                <select id="p-type" name="type" class="{{ $control }} sm:max-w-sm">
+                    <option value="objective">Objective: multiple choice, fill-in, true/false</option>
+                    <option value="theory" @selected(($filters['type'] ?? '') === 'theory')>Theory ({{ $theoryAvailable }}): write, then compare with the model answer</option>
+                </select>
+            </div>
+        @endif
+
         <fieldset class="mt-4">
             <legend class="mb-2 text-[13px] font-bold text-primary-800">Mode</legend>
             <div class="grid gap-3 sm:grid-cols-2">
