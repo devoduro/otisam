@@ -27,6 +27,12 @@ class PracticeController extends Controller
 
     public const DIFFICULTIES = ['easy' => [1, 2], 'medium' => [3, 3], 'hard' => [4, 5]];
 
+    /** Question types a learner can mix into a set, in the order they are offered. */
+    public const TYPE_LABELS = ['mcq' => 'Multiple choice', 'true_false' => 'True or false', 'fill_in' => 'Fill in the blank', 'theory' => 'Theory'];
+
+    /** How many recently answered questions per subject are held back so the next set is fresh. */
+    public const SEEN_LIMIT = 600;
+
     /** Minutes allowed per question in timed mode (WASSCE objective papers allow roughly a minute each). */
     public const MINUTES_PER_QUESTION = 1;
 
@@ -52,8 +58,13 @@ class PracticeController extends Controller
                 ->orderBy('path')->orderBy('sort')->get(['id', 'title', 'code', 'path', 'class_level_id'])
             : collect();
 
-        $available = $subject ? $this->filtered($premium, $subject, $filters, $year, $topic)->count() : null;
-        $theoryAvailable = $subject ? $this->filtered($premium, $subject, ['type' => 'theory'] + $filters, $year, $topic)->count() : 0;
+        // Per-type counts for the other filters, so the page can total the ticked types itself.
+        $typeCounts = $subject
+            ? $this->filtered($premium, $subject, ['types' => Question::PRACTICE_TYPES] + $filters, $year, $topic)
+                ->selectRaw('type, count(*) as total')->groupBy('type')->pluck('total', 'type')
+            : collect();
+        $types = self::selectedTypes($filters);
+        $available = $subject ? (int) $typeCounts->only($types)->sum() : null;
 
         return view('public.practice.index', [
             'filters' => $filters,
@@ -64,7 +75,8 @@ class PracticeController extends Controller
             'topics' => $topics,
             'counts' => $counts,
             'available' => $available,
-            'theoryAvailable' => $theoryAvailable,
+            'typeCounts' => $typeCounts,
+            'types' => $types,
             'recent' => collect($request->session()->get('practice.recent', [])),
         ]);
     }
@@ -98,8 +110,18 @@ class PracticeController extends Controller
         }
 
         $count = (int) ($filters['count'] ?? 10);
-        $questions = $this->filtered($promotion || $entitlements->hasPremium($request->user()), $subject, $filters, $year, $topic, $promotion ? 'promotion' : 'practice')
-            ->with('currentRevision')->inRandomOrder()->limit($count)->get();
+        $ids = $this->pick($request, $subject, $count,
+            $this->filtered($promotion || $entitlements->hasPremium($request->user()), $subject, $filters, $year, $topic, $promotion ? 'promotion' : 'practice')->pluck('id')->all());
+        // Objective questions first, theory at the end, each in the shuffled order.
+        $questions = Question::whereIn('id', $ids)->with('currentRevision')->get()
+            ->sortBy(fn ($q) => [$q->type === 'theory' ? 1 : 0, array_search($q->id, $ids)])->values();
+
+        // Multiple-choice options are shuffled too; true/false stays True then False.
+        $orders = $questions->mapWithKeys(function (Question $q) {
+            $options = array_column($q->currentRevision->payload['options'] ?? [], 'id');
+
+            return [$q->id => $q->type === 'mcq' ? collect($options)->shuffle()->all() : $options];
+        })->all();
 
         $timed = ($filters['mode'] ?? 'practice') === 'timed' && $questions->isNotEmpty();
         $minutes = $timed ? max(1, $questions->count() * self::MINUTES_PER_QUESTION) : null;
@@ -111,11 +133,13 @@ class PracticeController extends Controller
             'started_at' => now()->timestamp,
             'minutes' => $minutes,
             'filters' => $filters,
+            'orders' => $orders,
         ]);
 
         return view('public.practice.show', [
             'subject' => $subject->load('educationLevel'),
             'questions' => $questions,
+            'orders' => $orders,
             'minutes' => $minutes,
             'filters' => $filters,
         ]);
@@ -186,14 +210,71 @@ class PracticeController extends Controller
             'late' => $late,
             'byDifficulty' => $byDifficulty,
             'retry' => $set['filters'] ?? ['subject' => $subject->slug],
+            'orders' => $set['orders'] ?? [],
         ]);
+    }
+
+    /**
+     * Options in the order the learner saw them, each with its display letter. Answers are still
+     * submitted and marked by the option's own id.
+     *
+     * @return list<array{id: string, text: string, label: string}>
+     */
+    public static function arrangedOptions(Question $question, array $orders): array
+    {
+        $options = collect($question->currentRevision->payload['options'] ?? [])->keyBy('id');
+        $order = $orders[$question->id] ?? $options->keys()->all();
+        $letters = range('A', 'Z');
+
+        return collect($order)->filter(fn ($id) => $options->has($id))->values()
+            ->map(fn ($id, $i) => $options[$id] + ['label' => $letters[$i]])
+            ->all();
+    }
+
+    /** The types ticked on the form; the old single "type" field and the default still work. */
+    public static function selectedTypes(array $filters): array
+    {
+        $types = array_values(array_intersect(Question::PRACTICE_TYPES, $filters['types'] ?? []));
+        if ($types) {
+            return $types;
+        }
+
+        return ($filters['type'] ?? null) === 'theory' ? ['theory'] : Question::OBJECTIVE_TYPES;
+    }
+
+    /**
+     * A fresh random set: questions this learner answered recently in the subject are held back
+     * until the matching pool runs out, then the oldest ones come round again.
+     *
+     * @param  list<int>  $pool
+     * @return list<int>
+     */
+    private function pick(Request $request, Subject $subject, int $count, array $pool): array
+    {
+        $key = 'practice.seen.'.$subject->id;
+        $seen = $request->session()->get($key, []);
+        $fresh = array_values(array_diff($pool, $seen));
+        shuffle($fresh);
+        $ids = array_slice($fresh, 0, $count);
+
+        if (count($ids) < $count) {
+            // Top up with the questions seen longest ago.
+            $again = array_values(array_intersect($seen, $pool));
+            $ids = array_merge($ids, array_slice($again, 0, $count - count($ids)));
+            shuffle($ids);
+        }
+
+        $request->session()->put($key, array_slice(array_values(array_unique(array_merge(array_diff($seen, $ids), $ids))), -self::SEEN_LIMIT));
+
+        return $ids;
     }
 
     /** Lower case, single spaces, no surrounding punctuation: "  Mouse. " matches "mouse". */
     public static function normalise(string $answer): string
     {
         return trim(preg_replace('/\s+/', ' ', mb_strtolower($answer)), " 	
-.,;:!?\"'");
+
+.,;:!?\"'");
     }
 
     private function filters(Request $request): array
@@ -207,6 +288,8 @@ class PracticeController extends Controller
             'count' => ['nullable', 'integer', 'in:'.implode(',', self::COUNTS)],
             'mode' => ['nullable', 'in:practice,timed'],
             'type' => ['nullable', 'in:objective,theory'],
+            'types' => ['nullable', 'array'],
+            'types.*' => ['string', 'in:'.implode(',', Question::PRACTICE_TYPES)],
         ]);
     }
 
@@ -227,7 +310,7 @@ class PracticeController extends Controller
         $range = self::DIFFICULTIES[$filters['difficulty'] ?? ''] ?? null;
 
         return $this->bank($premium, $confidentiality)
-            ->whereIn('type', ($filters['type'] ?? 'objective') === 'theory' ? ['theory'] : Question::OBJECTIVE_TYPES)
+            ->whereIn('type', self::selectedTypes($filters))
             ->where('subject_id', $subject->id)
             // A question tagged to no year counts for every year of its level.
             ->when($year, fn ($q) => $q->where(fn ($w) => $w->whereNull('class_level_id')->orWhere('class_level_id', $year->id)))

@@ -177,6 +177,26 @@
             </div>
         @endcanany
 
+        @canany(['questions.manage', 'questions.review', 'questions.view-keys', 'reports.view', 'results.view-all'])
+            <div class="menu-group-title">Learning</div>
+        @endcanany
+        @canany(['questions.manage', 'questions.review', 'questions.view-keys'])
+            <a href="{{ route('admin.questions.index') }}" class="nav-item {{ request()->routeIs('admin.questions.*') ? 'active' : '' }}">
+                <div class="nav-item-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><polyline points="3 6 4 7 6 5"></polyline><polyline points="3 12 4 13 6 11"></polyline><polyline points="3 18 4 19 6 17"></polyline></svg>
+                    <span>Question bank</span>
+                </div>
+            </a>
+        @endcanany
+        @canany(['reports.view', 'results.view-all'])
+            <a href="{{ route('admin.attempts.index') }}" class="nav-item {{ request()->routeIs('admin.attempts.*') ? 'active' : '' }}">
+                <div class="nav-item-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <span>Practice attempts</span>
+                </div>
+            </a>
+        @endcanany
+
         @canany(['curriculum.view-admin', 'curriculum.manage'])
             @php $isCurriculum = request()->routeIs('admin.curriculum.*'); @endphp
             <div class="menu-group-title">Academics</div>
@@ -198,9 +218,17 @@
             </div>
         @endcanany
 
-        @canany(['audit.view', 'settings.manage'])
+        @canany(['audit.view', 'settings.manage', 'notifications.view-logs'])
             <div class="menu-group-title">System</div>
         @endcanany
+        @can('notifications.view-logs')
+            <a href="{{ route('admin.messages.index') }}" class="nav-item {{ request()->routeIs('admin.messages.*') ? 'active' : '' }}">
+                <div class="nav-item-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <span>Message log</span>
+                </div>
+            </a>
+        @endcan
         @can('settings.manage')
             <a href="{{ route('admin.settings.homepage') }}" class="nav-item {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">
                 <div class="nav-item-content">

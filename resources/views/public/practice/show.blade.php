@@ -38,10 +38,10 @@
                             <textarea id="a{{ $loop->iteration }}" name="answers[{{ $question->ulid }}]" rows="5" maxlength="3000" class="mt-2 w-full rounded-xl border-[1.5px] border-[#e2e0ea] px-3 py-2 text-sm focus:border-primary-600 focus:outline-none" data-text></textarea>
                         @else
                         <div class="mt-3 grid gap-2 sm:grid-cols-2">
-                            @foreach ($revision->payload['options'] ?? [] as $option)
+                            @foreach (\App\Http\Controllers\Public\PracticeController::arrangedOptions($question, $orders ?? []) as $option)
                                 <label class="flex cursor-pointer items-start gap-3 rounded-xl border-[1.5px] border-[#e2e0ea] px-3 py-2.5 text-sm hover:border-gold-500 has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50">
                                     <input type="radio" name="answers[{{ $question->ulid }}]" value="{{ $option['id'] }}" class="mt-0.5 accent-[#28409e]">
-                                    <span><strong class="mr-1">{{ $option['id'] }}.</strong> {{ $option['text'] }}</span>
+                                    <span><strong class="mr-1">{{ $option['label'] }}.</strong> {{ $option['text'] }}</span>
                                 </label>
                             @endforeach
                         </div>

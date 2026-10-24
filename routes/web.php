@@ -254,6 +254,19 @@ Route::middleware(['auth', 'account:staff', 'password.fresh'])->prefix('admin')-
 
     Route::get('/audit-log', [Admin\AuditLogController::class, 'index'])->middleware('permission:audit.view')->name('audit.index');
 
+    Route::middleware('permission:questions.manage|questions.review|questions.view-keys')->group(function () {
+        Route::get('/questions', [Admin\QuestionBankController::class, 'index'])->name('questions.index');
+        Route::get('/questions/{question}', [Admin\QuestionBankController::class, 'show'])->name('questions.show');
+    });
+    Route::middleware('permission:notifications.view-logs')->group(function () {
+        Route::get('/messages', [Admin\MessageLogController::class, 'index'])->name('messages.index');
+        Route::get('/messages/{message}', [Admin\MessageLogController::class, 'show'])->name('messages.show');
+    });
+    Route::middleware('permission:reports.view|results.view-all')->group(function () {
+        Route::get('/practice-attempts', [Admin\PracticeAttemptController::class, 'index'])->name('attempts.index');
+        Route::get('/practice-attempts/{attempt}', [Admin\PracticeAttemptController::class, 'show'])->name('attempts.show');
+    });
+
     /*
     | Commerce (BLUEPRINT §7).
     */
