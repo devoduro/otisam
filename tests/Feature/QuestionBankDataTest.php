@@ -53,7 +53,8 @@ class QuestionBankDataTest extends TestCase
                     $this->assertIsString($option, $where);
                     $this->assertNotSame('', trim($option), "{$where}: empty option.");
                 }
-                $normalised = array_map(fn ($o) => mb_strtolower(trim($o)), $options);
+                // Case is kept: punctuation and capital-letter questions have options that differ only in case.
+                $normalised = array_map(fn ($o) => preg_replace('/\s+/', ' ', trim($o)), $options);
                 if (in_array($kind, ['mcq', 'tf'], true)) {
                     $this->assertSame(count($normalised), count(array_unique($normalised)), "{$where}: two options are the same.");
                 }

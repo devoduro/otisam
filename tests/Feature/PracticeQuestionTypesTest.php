@@ -36,6 +36,7 @@ class PracticeQuestionTypesTest extends TestCase
             'SHS Computing' => ['computing', 'SHS'],
             'SHS ICT' => ['information-and-communication-technology', 'SHS'],
             'JHS Mathematics' => ['jhs-mathematics', 'JHS'],
+            'JHS English Language' => ['jhs-english-language', 'JHS'],
         ];
     }
 
