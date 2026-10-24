@@ -32,7 +32,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/brand/otisam-mark.svg') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@hasSection('title')@yield('title') | @endif{{ config('app.name') }}</title>
     @include('partials.head-assets')
@@ -49,8 +50,7 @@
            aria-label="Main menu">
         <div class="flex items-center justify-between h-16 px-6 border-b border-gray-200">
             <a href="{{ $home }}" class="flex items-center gap-2 no-underline">
-                <span class="flex h-9 w-9 items-center justify-center rounded-lg gradient-bg text-sm font-bold text-white">{{ mb_substr(config('app.name'), 0, 1) }}</span>
-                <span class="text-xl font-bold gradient-text">{{ config('app.name') }}</span>
+                <img src="{{ asset('assets/brand/otisam-logo.svg') }}" alt="{{ config('app.name') }}" class="h-9 w-auto">
             </a>
             <button type="button" @click="sidebarOpen = false" class="md:hidden text-gray-500 hover:text-gray-700" aria-label="Close menu"><i class="fas fa-times text-lg" aria-hidden="true"></i></button>
         </div>

@@ -10,6 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/brand/otisam-mark.svg') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $pageTitle }} — {{ config('app.name') }}</title>
@@ -20,8 +21,7 @@
     <!-- Form side -->
     <div class="flex w-full flex-col px-6 py-8 sm:px-10 lg:w-1/2 xl:px-16">
         <a href="{{ route('home') }}" class="flex items-center gap-3 text-gray-900 no-underline hover:text-gray-900">
-            <span class="flex h-11 w-11 items-center justify-center rounded-lg gradient-bg text-lg font-bold text-white">{{ mb_substr(config('app.name'), 0, 1) }}</span>
-            <span class="text-xl font-semibold tracking-tight">{{ config('app.name') }}</span>
+            <img src="{{ asset('assets/brand/otisam-logo.svg') }}" alt="{{ config('app.name') }}" class="h-11 w-auto">
         </a>
 
         <div class="flex flex-1 items-center justify-center py-10">
@@ -98,7 +98,7 @@
         </svg>
 
         <div class="mt-6 max-w-md px-10 text-center text-white">
-            <p class="text-2xl font-bold">{{ config('app.name') }}</p>
+            <img src="{{ asset('assets/brand/otisam-logo-white.svg') }}" alt="{{ config('app.name') }}" class="mx-auto h-14 w-auto">
             <p class="mt-2 text-brand-50/90">{{ $tagline }}</p>
         </div>
     </div>
