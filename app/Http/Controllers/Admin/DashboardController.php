@@ -57,6 +57,9 @@ class DashboardController extends Controller
                     ->whereHas('teacherProfile', fn ($q) => $q->where('verification_status', TeacherVerificationStatus::Pending->value))
                     ->with('teacherProfile')->oldest()->limit(5)->get()
                 : collect(),
+            'newStudents' => $me->can('users.view')
+                ? User::where('account_type', AccountType::Student->value)->latest('id')->limit(5)->get(['id', 'name', 'created_at'])
+                : collect(),
             'recentActivity' => $me->can('audit.view')
                 ? AuditLog::with('user')->latest('id')->limit(8)->get()
                 : collect(),
