@@ -15,13 +15,13 @@
     // [colour, icon, title, caption, value, badge, link]
     $tiles = [
         ['blue', 'fa-user-graduate', 'Students', '+'.$stats['newStudentsWeek'].' this week', number_format($stats['students']), null,
-            $me->can('users.view') ? route('admin.students.index') : null],
+            $me->can('users.view') ? route('admin.students.index') : route('admin.overview.students')],
         ['purple', 'fa-chalkboard-user', 'Teachers', $stats['pendingTeachers'].' awaiting approval', number_format($stats['teachers']), $stats['pendingTeachers'] ? 'Review' : null,
-            $me->can('users.view') ? route('admin.teachers.index', $stats['pendingTeachers'] ? ['verification' => 'pending'] : []) : null],
+            $me->can('users.view') ? route('admin.teachers.index', $stats['pendingTeachers'] ? ['verification' => 'pending'] : []) : route('admin.overview.teachers')],
         ['slate', 'fa-user-shield', 'Staff accounts', 'Admins and officers', number_format($stats['staff']), null,
-            $me->can('staff.manage') ? route('admin.staff.index') : null],
+            $me->can('staff.manage') ? route('admin.staff.index') : route('admin.overview.staff')],
         [$sms['failed'] > 0 ? 'red' : 'orange', 'fa-comment-sms', 'SMS (24 h)', $sms['failed'].' failed · '.$sms['queued'].' queued', number_format($sms['sent']), null,
-            $me->can('notifications.view-logs') ? route('admin.messages.index', array_filter(['channel' => 'sms', 'status' => $sms['failed'] > 0 ? 'failed' : null])) : null],
+            $me->can('notifications.view-logs') ? route('admin.messages.index', array_filter(['channel' => 'sms', 'status' => $sms['failed'] > 0 ? 'failed' : null])) : route('admin.overview.sms')],
     ];
     if ($commerce) {
         $tiles[] = ['green', 'fa-crown', 'Premium subscribers', 'With access right now', number_format($commerce['subscribers']), null, route('admin.commerce.subscriptions.index')];

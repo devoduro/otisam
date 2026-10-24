@@ -220,3 +220,12 @@ a.j-row:hover { background: #f9fafb; }
     .table-stack td::before { content: attr(data-label); font-weight: 600; color: var(--zi-text-muted); }
 }
 @media (prefers-reduced-motion: reduce) { .j-tile, .nav-dropdown.show { transition: none; animation: none !important; } }
+
+/* Bar lists used by the overview pages. */
+.dash-breakdown + .dash-breakdown { margin-top: 1.25rem; }
+.dash-breakdown-title { font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #6b7280; margin-bottom: .6rem; }
+.dash-bar + .dash-bar { margin-top: .6rem; }
+.dash-bar-head { display: flex; justify-content: space-between; gap: 1rem; font-size: .82rem; margin-bottom: 4px; }
+.dash-bar-head strong { color: #1f2937; }
+.dash-bar-track { height: 8px; border-radius: 4px; background: #f3f4f6; overflow: hidden; }
+.dash-bar-track span { display: block; height: 100%; border-radius: 4px; background: #42a5dc; }

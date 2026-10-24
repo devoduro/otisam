@@ -63,4 +63,20 @@ class AdminDashboardLinksTest extends TestCase
         $this->get(route('admin.messages.show', $message))->assertOk()->assertSee('Your code is 123456');
         $this->get(route('admin.attempts.index'))->assertOk()->assertSee($student->name);
     }
+
+    public function test_overview_pages_open_for_any_staff_with_shortened_names(): void
+    {
+        $student = User::factory()->student()->create(['name' => 'Kwame Mensah Boateng']);
+        $manager = User::factory()->staff('Content Manager')->create();
+
+        $dash = $this->actingAs($manager)->get(route('admin.dashboard'))->assertOk();
+        foreach (['students', 'teachers', 'staff', 'sms'] as $page) {
+            $dash->assertSee(route('admin.overview.'.$page), false);
+            $this->get(route('admin.overview.'.$page))->assertOk();
+        }
+        $this->get(route('admin.overview.students'))->assertSee('Kwame B.')->assertDontSee('Kwame Mensah Boateng');
+
+        $admin = User::factory()->staff('Administrator')->create();
+        $this->actingAs($admin)->get(route('admin.overview.students'))->assertSee('Kwame Mensah Boateng')->assertSee(route('admin.students.index'), false);
+    }
 }

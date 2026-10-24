@@ -254,6 +254,14 @@ Route::middleware(['auth', 'account:staff', 'password.fresh'])->prefix('admin')-
 
     Route::get('/audit-log', [Admin\AuditLogController::class, 'index'])->middleware('permission:audit.view')->name('audit.index');
 
+    // Summary pages behind the dashboard cards: open to all staff, with names and numbers shortened.
+    Route::prefix('overview')->name('overview.')->group(function () {
+        Route::get('/students', [Admin\OverviewController::class, 'students'])->name('students');
+        Route::get('/teachers', [Admin\OverviewController::class, 'teachers'])->name('teachers');
+        Route::get('/staff', [Admin\OverviewController::class, 'staff'])->name('staff');
+        Route::get('/sms', [Admin\OverviewController::class, 'sms'])->name('sms');
+    });
+
     Route::middleware('permission:questions.manage|questions.review|questions.view-keys')->group(function () {
         Route::get('/questions', [Admin\QuestionBankController::class, 'index'])->name('questions.index');
         Route::get('/questions/{question}', [Admin\QuestionBankController::class, 'show'])->name('questions.show');
