@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" preserveAspectRatio="xMaxYMid slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0b4f8f"/></linearGradient></defs>
+<rect width="800" height="300" fill="url(#g)"/>
+<circle cx="690" cy="60" r="70" fill="#fff" opacity=".10"/><circle cx="740" cy="250" r="110" fill="#fff" opacity=".07"/>
+<g opacity=".9">
+<path d="M470 215 L600 190 L730 215 V250 L600 225 L470 250 Z" fill="#fff" opacity=".9"/>
+<path d="M600 190 V225" stroke="#0b4f8f" stroke-width="3"/>
+<g stroke="#0b4f8f" stroke-width="3" opacity=".35"><path d="M490 222 L585 205"/><path d="M490 232 L585 215"/><path d="M715 222 L615 205"/><path d="M715 232 L615 215"/></g>
+<rect x="440" y="70" width="70" height="70" rx="8" fill="#ffb41b"/><path d="M455 95h40M455 108h40M455 121h26" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<g transform="rotate(35 660 110)"><rect x="620" y="96" width="120" height="22" rx="4" fill="#ffb41b"/><path d="M740 96 L765 107 L740 118Z" fill="#fde3a7"/><rect x="620" y="96" width="14" height="22" fill="#f97316"/></g>
+<g transform="rotate(-18 560 90)"><rect x="530" y="70" width="110" height="26" rx="3" fill="#fff" opacity=".85"/><g stroke="#0b4f8f" stroke-width="3"><path d="M545 70v10M560 70v14M575 70v10M590 70v14M605 70v10M620 70v14"/></g></g>
+<text x="690" y="205" font-family="Arial" font-weight="700" font-size="46" fill="#fff" opacity=".35">A+</text>
+<text x="470" y="40" font-family="Arial" font-weight="700" font-size="34" fill="#fff" opacity=".3">2 + 3 = 5</text>
+</g></svg>
