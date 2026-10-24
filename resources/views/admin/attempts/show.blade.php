@@ -1,0 +1,47 @@
+@extends('layouts.admin')
+
+@section('title', ($attempt->subject?->name ?? 'Practice').' attempt')
+@section('subtitle', $attempt->created_at->format('l, j F Y, H:i'))
+
+@section('actions')
+    <a href="{{ route('admin.attempts.index') }}" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-1" aria-hidden="true"></i> Back to attempts</a>
+@endsection
+
+@section('content')
+<div class="row g-3">
+    <div class="col-lg-5">
+        <div class="card-panel">
+            <p class="display-6 fw-bold mb-0">{{ $attempt->score }}/{{ $attempt->total }} <span class="fs-5 text-muted">{{ $attempt->percent() }}%</span></p>
+            <dl class="row small mt-3 mb-0">
+                <dt class="col-5 text-muted">Learner</dt>
+                <dd class="col-7">
+                    @if ($showNames && $attempt->user)
+                        <a href="{{ route('admin.students.show', $attempt->user) }}">{{ $attempt->user->name }}</a>
+                    @else
+                        Learner #{{ $attempt->user_id }}
+                    @endif
+                </dd>
+                <dt class="col-5 text-muted">Subject</dt><dd class="col-7">{{ $attempt->subject?->labelWithLevel() }}</dd>
+                <dt class="col-5 text-muted">Kind</dt><dd class="col-7">{{ $attempt->kind === 'paper' ? 'Full paper: '.($attempt->paper?->title ?? '') : 'Practice set' }}</dd>
+                <dt class="col-5 text-muted">Time taken</dt><dd class="col-7">{{ gmdate($attempt->seconds >= 3600 ? 'G:i:s' : 'i:s', (int) $attempt->seconds) }}@if ($attempt->late) <span class="badge text-bg-warning">Handed in late</span>@endif</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div class="card-panel">
+            <h2 class="h6 fw-bold mb-3">Other recent attempts by this learner</h2>
+            @forelse ($others as $other)
+                <a href="{{ route('admin.attempts.show', $other) }}" class="report-item text-decoration-none">
+                    <div>
+                        <div class="fw-semibold text-dark">{{ $other->subject?->name }} · {{ $other->score }}/{{ $other->total }} ({{ $other->percent() }}%)</div>
+                        <div class="small text-muted">{{ $other->created_at->diffForHumans() }}</div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right report-arrow" aria-hidden="true"></i>
+                </a>
+            @empty
+                <p class="text-muted small mb-0">None.</p>
+            @endforelse
+        </div>
+    </div>
+</div>
+@endsection

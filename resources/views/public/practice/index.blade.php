@@ -81,15 +81,20 @@
             </div>
         </div>
 
-        @if ($theoryAvailable > 0)
-            <div class="mt-4">
-                <label for="p-type" class="mb-1 block text-[13px] font-bold text-primary-800">Question type</label>
-                <select id="p-type" name="type" class="{{ $control }} sm:max-w-sm">
-                    <option value="objective">Objective: multiple choice, fill-in, true/false</option>
-                    <option value="theory" @selected(($filters['type'] ?? '') === 'theory')>Theory ({{ $theoryAvailable }}): write, then compare with the model answer</option>
-                </select>
+        <fieldset class="mt-4" data-type-picker>
+            <legend class="mb-2 text-[13px] font-bold text-primary-800">Question types <span class="font-normal text-gray-500">(tick one or more)</span></legend>
+            <div class="flex flex-wrap gap-2">
+                @foreach (P::TYPE_LABELS as $value => $label)
+                    @php $n = (int) ($typeCounts[$value] ?? 0); @endphp
+                    <label class="inline-flex cursor-pointer items-center gap-2 rounded-xl border-[1.5px] border-[#e2e0ea] px-3 py-2 text-sm has-[:checked]:border-primary-600 has-[:checked]:bg-primary-50 {{ $subject && $n === 0 ? 'opacity-50' : '' }}">
+                        <input type="checkbox" name="types[]" value="{{ $value }}" data-count="{{ $n }}" class="accent-[#28409e]" @checked(in_array($value, $types, true))>
+                        <span class="font-semibold text-gray-800">{{ $label }}</span>
+                        @if ($subject)<span class="rounded-full bg-[#eef1fb] px-1.5 text-[11px] font-semibold text-primary-600">{{ number_format($n) }}</span>@endif
+                    </label>
+                @endforeach
             </div>
-        @endif
+            <p class="mt-1.5 text-xs text-gray-500">Every set is freshly shuffled: questions you answered recently are held back, and multiple-choice options change order. Theory answers are not scored; you compare yours with the model answer.</p>
+        </fieldset>
 
         <fieldset class="mt-4">
             <legend class="mb-2 text-[13px] font-bold text-primary-800">Mode</legend>
@@ -113,7 +118,7 @@
             <p class="text-sm text-gray-500" aria-live="polite">
                 @if (! $subject) Choose a subject to start.
                 @elseif ($available === 0) No questions match these filters. Try fewer filters.
-                @else {{ $available }} {{ \Illuminate\Support\Str::plural('question', $available) }} match. You will get {{ min($available, (int) ($filters['count'] ?? 10)) }}.
+                @else <span data-available>{{ $available }}</span> <span data-available-word>{{ \Illuminate\Support\Str::plural('question', $available) }}</span> match. You will get <span data-will-get>{{ min($available, (int) ($filters['count'] ?? 10)) }}</span>.
                 @endif
             </p>
             @if (collect($filters)->except(['count', 'mode'])->filter()->isNotEmpty())
@@ -182,5 +187,28 @@
             select.form.requestSubmit();
         });
     });
+
+    // Ticking question types updates the match count here, without reloading.
+    (function () {
+        var picker = document.querySelector('[data-type-picker]');
+        if (!picker) { return; }
+        var form = picker.closest('form');
+        var start = form.querySelector('button[formaction]');
+        var count = form.elements.count;
+        function update() {
+            var boxes = picker.querySelectorAll('input[type=checkbox]');
+            var ticked = Array.prototype.filter.call(boxes, function (b) { return b.checked; });
+            var total = ticked.reduce(function (sum, b) { return sum + Number(b.dataset.count || 0); }, 0);
+            var available = form.querySelector('[data-available]');
+            if (available) {
+                available.textContent = total;
+                form.querySelector('[data-available-word]').textContent = total === 1 ? 'question' : 'questions';
+                form.querySelector('[data-will-get]').textContent = Math.min(total, Number(count ? count.value : 10));
+            }
+            if (start && form.elements.subject && form.elements.subject.value) { start.disabled = total === 0; }
+        }
+        picker.addEventListener('change', update);
+        if (count) { count.addEventListener('change', update); }
+    })();
 </script>
 @endpush
