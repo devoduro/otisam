@@ -46,9 +46,9 @@
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[60] focus:rounded focus:bg-white focus:px-3 focus:py-2">Skip to content</a>
 
     <header class="sticky top-0 z-40 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur">
-        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-4 md:px-6">
             <a href="{{ route('home') }}" class="flex items-center gap-2 no-underline">
-                <img src="{{ asset('assets/brand/otisam-logo.svg') }}" alt="{{ config('app.name') }}" class="h-10 w-auto">
+                <img src="{{ asset('assets/brand/otisam-logo.svg') }}" alt="{{ config('app.name') }}" class="h-9 w-auto sm:h-10">
             </a>
 
             <nav aria-label="Main" class="hidden xl:flex items-center gap-0.5 text-sm">
@@ -60,15 +60,15 @@
                 @endforeach
             </nav>
 
-            <div class="flex items-center gap-2 text-sm">
+            <div class="flex items-center gap-1 text-sm sm:gap-2">
                 {{-- Menu button below xl: the full list of destinations --}}
-                <div x-data="{ open: false }" class="relative xl:hidden" @keydown.escape="open = false">
+                <div x-data="{ open: false }" class="sm:relative xl:hidden" @keydown.escape="open = false">
                     <button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-controls="site-menu"
-                            class="flex items-center gap-2 rounded-md px-3 py-2 font-medium text-gray-700 hover:bg-gray-100">
+                            class="flex items-center gap-2 rounded-md px-2.5 py-2 font-medium text-gray-700 hover:bg-gray-100">
                         <i class="fas fa-bars" aria-hidden="true"></i><span class="hidden sm:inline">Menu</span>
                     </button>
                     <div id="site-menu" x-show="open" x-cloak x-transition @click.outside="open = false"
-                         class="absolute right-0 z-50 mt-2 w-60 overflow-hidden rounded-lg border border-gray-200 bg-white py-1 shadow-lg">
+                         class="absolute inset-x-3 top-full z-50 mt-1 max-h-[75vh] overflow-y-auto rounded-lg sm:inset-x-auto sm:right-0 sm:top-auto sm:mt-2 sm:w-60 sm:overflow-hidden rounded-lg border border-gray-200 bg-white py-1 shadow-lg">
                         @foreach ($navLinks as [$label, $href, $icon, $active])
                             <a href="{{ $href }}" @if ($active) aria-current="page" @endif
                                class="flex items-center gap-3 px-4 py-2.5 no-underline {{ $active ? 'bg-gold-50 text-gold-600 font-semibold' : 'text-primary-700 hover:bg-gold-50 hover:text-gold-600' }}">
@@ -85,8 +85,8 @@
                         <button type="submit" class="rounded-md px-3 py-2 text-gray-600 hover:bg-gray-100" title="Logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span class="sr-only">Logout</span></button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="rounded-xl px-3 py-2 font-semibold text-primary-700 no-underline hover:bg-gray-100 hover:text-primary-800">Sign in</a>
-                    <a href="{{ route('register') }}" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-4 py-2.5 font-bold text-white no-underline shadow-navy hover:bg-primary-700 hover:text-white">Sign up free <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
+                    <a href="{{ route('login') }}" class="whitespace-nowrap rounded-xl px-2 py-2 font-semibold text-primary-700 no-underline hover:bg-gray-100 hover:text-primary-800 sm:px-3">Sign in</a>
+                    <a href="{{ route('register') }}" class="inline-flex items-center gap-2 whitespace-nowrap rounded-xl bg-primary-600 px-3 py-2.5 font-bold text-white no-underline shadow-navy hover:bg-primary-700 hover:text-white sm:px-4">Sign up<span class="hidden sm:inline"> free</span> <i class="fas fa-arrow-right hidden text-xs sm:inline" aria-hidden="true"></i></a>
                 @endauth
             </div>
         </div>
