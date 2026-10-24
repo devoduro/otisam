@@ -42,6 +42,9 @@ class DemoQuestionSeeder extends Seeder
     /** @var array<string, CurriculumNode> */
     private array $nodes = [];
 
+    /** Subject slugs to seed; null seeds them all. Tests set it to keep seeding quick. */
+    public static ?array $only = null;
+
     public function run(): void
     {
         $created = 0;
@@ -50,19 +53,25 @@ class DemoQuestionSeeder extends Seeder
 
         foreach (self::SOURCES as $set => $source) {
             foreach (require __DIR__."/data/demo-questions-{$set}.php" as $slug => $questions) {
+                if (self::$only !== null && ! in_array($slug, self::$only, true)) {
+                    continue;
+                }
                 $subject = Subject::where('slug', $slug)->first();
                 if (! $subject) {
                     $missing[] = $slug;
 
                     continue;
                 }
-                foreach ($questions as [$stem, $options, $answer, $explanation, $difficulty]) {
-                    $created += (int) $this->add($subject, $stem, $options, $answer, $explanation, $difficulty, $source);
+                foreach ($questions as $row) {
+                    $created += (int) $this->add($subject, ...$this->parts($row, $source));
                 }
             }
         }
 
         foreach (self::subjectFiles() as $slug => $file) {
+            if (self::$only !== null && ! in_array($slug, self::$only, true)) {
+                continue;
+            }
             $subject = Subject::with('educationLevel')->where('slug', $slug)->first();
             if (! $subject) {
                 $missing[] = $slug;
@@ -74,10 +83,10 @@ class DemoQuestionSeeder extends Seeder
                 EducationLevel::PROFESSIONAL => 'promotion',
                 default => 'shs',
             }];
-            foreach (self::rows($file) as ['row' => [$stem, $options, $answer, $explanation, $difficulty], 'topic' => $topic, 'year' => $year]) {
-                $created += (int) $this->add($subject, $stem, $options, $answer, $explanation, $difficulty, $source);
+            foreach (self::rows($file) as ['row' => $row, 'topic' => $topic, 'year' => $year]) {
+                $created += (int) $this->add($subject, ...$this->parts($row, $source));
                 if ($topic !== null) {
-                    $this->tag($subject, $stem, $topic, $year);
+                    $this->tag($subject, $row[0], $topic, $year);
                 }
             }
         }
@@ -157,6 +166,20 @@ class DemoQuestionSeeder extends Seeder
         return [trim($key), null];
     }
 
+    /**
+     * Arguments for add() from a file row. Five-part rows are multiple choice. A sixth part names
+     * another type: 'tf' (true/false: options ['True', 'False'], answer A or B), 'fill' (options are the
+     * accepted answers; use ___ in the stem) or 'theory' (options are the marking points, answer is the
+     * model answer; an optional seventh part is the marks, default 5).
+     */
+    private function parts(array $row, string $source): array
+    {
+        [$stem, $options, $answer, $explanation, $difficulty] = $row;
+        $kind = $row[5] ?? 'mcq';
+
+        return [$stem, $options, $answer, $explanation, $difficulty, $source, $kind, (int) ($row[6] ?? 5)];
+    }
+
     /** Files the question under its topic (and year), unless it is already tagged. */
     private function tag(Subject $subject, string $stem, string $topic, ?string $year): void
     {
@@ -205,7 +228,7 @@ class DemoQuestionSeeder extends Seeder
         return hash('sha256', Str::of($stem)->lower()->squish()->toString());
     }
 
-    private function add(Subject $subject, string $stem, array $options, string $answer, string $explanation, int $difficulty, string $source): bool
+    private function add(Subject $subject, string $stem, array $options, string $answer, string $explanation, int $difficulty, string $source, string $kind = 'mcq', int $marks = 5): bool
     {
         $hash = self::stemHash($stem);
         if (Question::withTrashed()->where('subject_id', $subject->id)->where('stem_hash', $hash)->exists()) {
@@ -214,18 +237,26 @@ class DemoQuestionSeeder extends Seeder
 
         $letters = ['A', 'B', 'C', 'D', 'E'];
         $choices = [];
-        foreach (array_values($options) as $i => $text) {
-            $choices[] = ['id' => $letters[$i], 'text' => $text];
+        if (in_array($kind, ['mcq', 'tf'], true)) {
+            foreach (array_values($options) as $i => $text) {
+                $choices[] = ['id' => $letters[$i], 'text' => $text];
+            }
         }
+        [$type, $payload, $key, $defaultMarks] = match ($kind) {
+            'tf' => ['true_false', ['options' => $choices], ['correct' => $answer], 1],
+            'fill' => ['fill_in', ['blanks' => 1], ['accepted' => array_values(array_intersect_key($options, array_unique(array_map('mb_strtolower', $options))))], 1],
+            'theory' => ['theory', ['marks' => $marks], ['model' => $answer, 'points' => array_values($options)], $marks],
+            default => ['mcq', ['options' => $choices], ['correct' => $answer], 1],
+        };
 
-        DB::transaction(function () use ($subject, $stem, $choices, $answer, $explanation, $difficulty, $source, $hash) {
+        DB::transaction(function () use ($subject, $stem, $type, $payload, $key, $defaultMarks, $explanation, $difficulty, $source, $hash) {
             $question = new Question;
             $question->forceFill([
-                'type' => 'mcq',
+                'type' => $type,
                 'education_level_id' => $subject->education_level_id,
                 'subject_id' => $subject->id,
                 'difficulty' => max(1, min(5, $difficulty)),
-                'default_marks' => 1,
+                'default_marks' => $defaultMarks,
                 'status' => 'published',
                 'access_level' => 'free',
                 'confidentiality' => $subject->isProfessional() ? 'promotion' : 'practice',
@@ -240,12 +271,12 @@ class DemoQuestionSeeder extends Seeder
                 'question_id' => $question->id,
                 'revision_no' => 1,
                 'stem' => $stem,
-                'payload' => ['options' => $choices],
+                'payload' => $payload,
                 'explanation' => $explanation,
             ])->save();
 
-            $key = new QuestionKey;
-            $key->forceFill(['question_revision_id' => $revision->id, 'key' => ['correct' => $answer]])->save();
+            $answerKey = new QuestionKey;
+            $answerKey->forceFill(['question_revision_id' => $revision->id, 'key' => $key])->save();
 
             $question->forceFill(['current_revision_id' => $revision->id])->save();
         });

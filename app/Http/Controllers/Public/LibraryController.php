@@ -74,7 +74,7 @@ class LibraryController extends Controller
             'years' => range((int) now()->year, $level?->code === 'SHS' ? self::FIRST_YEAR['SHS'] : self::FIRST_YEAR['JHS']),
             // Practice questions live in the question bank, not the library, so point to them.
             'practiceCount' => $subject ? Question::where('subject_id', $subject->id)->where('status', 'published')
-                ->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count() : 0,
+                ->where('confidentiality', 'practice')->whereIn('type', Question::PRACTICE_TYPES)->whereNotNull('current_revision_id')->count() : 0,
             'subject' => $subject,
         ] + $this->papers($request, $levels, $level, $subject));
     }

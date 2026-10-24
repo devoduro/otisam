@@ -44,9 +44,9 @@ class HomeController extends Controller
                     'subjects' => Subject::active()->count(),
                     'topics' => CurriculumNode::whereHas('version', fn ($v) => $v->published())->count(),
                     // Everything a student can practise: published self-test questions and the papers built from them.
-                    'questions' => Question::where('status', 'published')->where('confidentiality', 'practice')->where('type', 'mcq')->whereNotNull('current_revision_id')->count(),
+                    'questions' => Question::where('status', 'published')->where('confidentiality', 'practice')->whereIn('type', Question::PRACTICE_TYPES)->whereNotNull('current_revision_id')->count(),
                     'papers' => ExamPaper::visible()->count(),
-                    'promotion' => Question::where('status', 'published')->where('confidentiality', 'promotion')->where('type', 'mcq')->whereNotNull('current_revision_id')->count(),
+                    'promotion' => Question::where('status', 'published')->where('confidentiality', 'promotion')->whereIn('type', Question::PRACTICE_TYPES)->whereNotNull('current_revision_id')->count(),
                 ],
                 // For the hero search: JHS (BECE) and SHS (WASSCE) subjects.
                 'searchSubjects' => Subject::active()

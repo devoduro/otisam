@@ -53,6 +53,7 @@ class PracticeController extends Controller
             : collect();
 
         $available = $subject ? $this->filtered($premium, $subject, $filters, $year, $topic)->count() : null;
+        $theoryAvailable = $subject ? $this->filtered($premium, $subject, ['type' => 'theory'] + $filters, $year, $topic)->count() : 0;
 
         return view('public.practice.index', [
             'filters' => $filters,
@@ -63,6 +64,7 @@ class PracticeController extends Controller
             'topics' => $topics,
             'counts' => $counts,
             'available' => $available,
+            'theoryAvailable' => $theoryAvailable,
             'recent' => collect($request->session()->get('practice.recent', [])),
         ]);
     }
@@ -124,7 +126,7 @@ class PracticeController extends Controller
         $set = $request->session()->pull('practice.set');
         abort_if(! $set || $set['ids'] === [], 419, 'This practice set has expired. Please start a new one.');
 
-        $answers = $request->validate(['answers' => ['array'], 'answers.*' => ['nullable', 'string', 'max:2']])['answers'] ?? [];
+        $answers = $request->validate(['answers' => ['array'], 'answers.*' => ['nullable', 'string', 'max:3000']])['answers'] ?? [];
         $subject = Subject::with('educationLevel')->findOrFail($set['subject_id']);
         $seconds = now()->timestamp - $set['started_at'];
         // A short grace period covers the auto-submit round trip; later answers still count but are flagged.
@@ -135,15 +137,28 @@ class PracticeController extends Controller
         $keys = QuestionKey::whereIn('question_revision_id', $questions->pluck('current_revision_id'))->pluck('key', 'question_revision_id');
 
         $results = $questions->map(function (Question $question) use ($answers, $keys) {
-            $correct = $keys[$question->current_revision_id]['correct'] ?? null;
+            $key = $keys[$question->current_revision_id] ?? [];
             $given = $answers[$question->ulid] ?? null;
+            $given = is_string($given) ? trim($given) : null;
+            $given = $given === '' ? null : $given;
 
-            return ['question' => $question, 'given' => $given, 'correct' => $correct, 'right' => $given !== null && $given === $correct];
+            // Theory is not marked by the computer: the learner compares with the model answer.
+            if ($question->type === 'theory') {
+                return ['question' => $question, 'given' => $given, 'correct' => null, 'right' => false, 'key' => $key, 'theory' => true];
+            }
+            $right = $question->type === 'fill_in'
+                ? $given !== null && in_array(self::normalise($given), array_map(fn ($a) => self::normalise((string) $a), $key['accepted'] ?? []), true)
+                : $given !== null && $given === ($key['correct'] ?? null);
+
+            return ['question' => $question, 'given' => $given, 'correct' => $key['correct'] ?? null, 'right' => $right, 'key' => $key, 'theory' => false];
         });
+        $theory = $results->where('theory', true)->values();
+        $results = $results->where('theory', false)->values()->concat($theory);
+        $marked = $results->where('theory', false);
 
-        $score = $results->where('right', true)->count();
-        $byDifficulty = collect(self::DIFFICULTIES)->map(function ($range) use ($results) {
-            $rows = $results->filter(fn ($r) => $r['question']->difficulty >= $range[0] && $r['question']->difficulty <= $range[1]);
+        $score = $marked->where('right', true)->count();
+        $byDifficulty = collect(self::DIFFICULTIES)->map(function ($range) use ($marked) {
+            $rows = $marked->filter(fn ($r) => $r['question']->difficulty >= $range[0] && $r['question']->difficulty <= $range[1]);
 
             return ['total' => $rows->count(), 'right' => $rows->where('right', true)->count()];
         })->filter(fn ($row) => $row['total'] > 0);
@@ -152,25 +167,33 @@ class PracticeController extends Controller
         if (! $subject->isProfessional()) {
             QuizAttempt::recordFor($request->user(), [
                 'subject_id' => $subject->id, 'kind' => 'practice', 'score' => $score,
-                'total' => $results->count(), 'seconds' => $seconds, 'late' => (bool) $late,
+                'total' => $marked->count(), 'seconds' => $seconds, 'late' => (bool) $late,
             ]);
         }
 
         // Keep the last few scores for the practice home page (this browser session only).
         $recent = collect($request->session()->get('practice.recent', []))
-            ->prepend(['subject' => $subject->name, 'slug' => $subject->slug, 'score' => $score, 'total' => $results->count(), 'at' => now()->toIso8601String()])
+            ->prepend(['subject' => $subject->name, 'slug' => $subject->slug, 'score' => $score, 'total' => $marked->count(), 'at' => now()->toIso8601String()])
             ->take(5)->values()->all();
         $request->session()->put('practice.recent', $recent);
 
         return view('public.practice.result', [
             'subject' => $subject,
             'results' => $results,
+            'markedTotal' => $marked->count(),
             'score' => $score,
             'seconds' => $seconds,
             'late' => $late,
             'byDifficulty' => $byDifficulty,
             'retry' => $set['filters'] ?? ['subject' => $subject->slug],
         ]);
+    }
+
+    /** Lower case, single spaces, no surrounding punctuation: "  Mouse. " matches "mouse". */
+    public static function normalise(string $answer): string
+    {
+        return trim(preg_replace('/\s+/', ' ', mb_strtolower($answer)), " 	
+.,;:!?\"'");
     }
 
     private function filters(Request $request): array
@@ -183,6 +206,7 @@ class PracticeController extends Controller
             'difficulty' => ['nullable', 'in:easy,medium,hard'],
             'count' => ['nullable', 'integer', 'in:'.implode(',', self::COUNTS)],
             'mode' => ['nullable', 'in:practice,timed'],
+            'type' => ['nullable', 'in:objective,theory'],
         ]);
     }
 
@@ -203,6 +227,7 @@ class PracticeController extends Controller
         $range = self::DIFFICULTIES[$filters['difficulty'] ?? ''] ?? null;
 
         return $this->bank($premium, $confidentiality)
+            ->whereIn('type', ($filters['type'] ?? 'objective') === 'theory' ? ['theory'] : Question::OBJECTIVE_TYPES)
             ->where('subject_id', $subject->id)
             // A question tagged to no year counts for every year of its level.
             ->when($year, fn ($q) => $q->where(fn ($w) => $w->whereNull('class_level_id')->orWhere('class_level_id', $year->id)))
@@ -216,7 +241,6 @@ class PracticeController extends Controller
         return Question::query()
             ->where('status', 'published')
             ->where('confidentiality', $confidentiality)
-            ->where('type', 'mcq')
             ->whereNotNull('current_revision_id')
             ->when(! $premium, fn ($q) => $q->where('access_level', 'free'));
     }
