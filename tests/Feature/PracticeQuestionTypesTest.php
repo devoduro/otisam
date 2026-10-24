@@ -42,6 +42,8 @@ class PracticeQuestionTypesTest extends TestCase
             'SHS Core Mathematics' => ['core-mathematics', 'SHS'],
             'SHS Chemistry' => ['chemistry', 'SHS'],
             'SHS Physics' => ['physics', 'SHS'],
+            'SHS Biology' => ['biology', 'SHS'],
+            'SHS Elective Mathematics' => ['elective-mathematics', 'SHS'],
         ];
     }
 
