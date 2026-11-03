@@ -2,12 +2,12 @@
 
 @section('title', 'Sign in')
 @section('heading', 'Welcome back')
-@section('intro', 'Sign in with the phone number or email on your account.')
+@section('intro', 'Sign in with the phone number or email on your account. Students whose teacher gave them a username and PIN use those.')
 
 @section('form')
 <form method="POST" action="{{ route('login.attempt') }}" class="space-y-5" data-auth-form>
     @csrf
-    <x-input name="login" label="Phone number or email" required autocomplete="username" autofocus placeholder="024 123 4567" />
+    <x-input name="login" label="Phone number, email or username" required autocomplete="username" autofocus placeholder="024 123 4567" />
     <x-input name="password" type="password" label="Password" required autocomplete="current-password" />
 
     <div class="flex items-center justify-between text-sm">

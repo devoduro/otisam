@@ -57,9 +57,12 @@
                             <div class="flex items-start justify-between gap-3">
                                 <p class="text-sm font-semibold text-gray-800">{{ $loop->iteration }}. {{ $revision?->stem }}</p>
                                 @unless ($locked)
-                                    <form method="POST" action="{{ route('teach.assignments.questions.destroy', [$assignment, $question]) }}">@csrf @method('DELETE')
-                                        <button type="submit" class="text-gray-400 hover:text-red-600" title="Remove question"><i class="fas fa-xmark" aria-hidden="true"></i><span class="sr-only">Remove question {{ $loop->iteration }}</span></button>
-                                    </form>
+                                    <div class="flex shrink-0 items-center gap-3">
+                                        <a href="{{ route('teach.assignments.questions.edit', [$assignment, $question]) }}" class="text-sm font-semibold text-primary-700" title="Edit question"><i class="fas fa-pen" aria-hidden="true"></i> Edit<span class="sr-only"> question {{ $loop->iteration }}</span></a>
+                                        <form method="POST" action="{{ route('teach.assignments.questions.destroy', [$assignment, $question]) }}">@csrf @method('DELETE')
+                                            <button type="submit" class="text-gray-400 hover:text-red-600" title="Remove question"><i class="fas fa-xmark" aria-hidden="true"></i><span class="sr-only">Remove question {{ $loop->iteration }}</span></button>
+                                        </form>
+                                    </div>
                                 @endunless
                             </div>
                             <ul class="mt-2 grid gap-1 text-sm sm:grid-cols-2">
@@ -67,7 +70,7 @@
                                     <li class="{{ $o['id'] === $correct ? 'font-semibold text-green-700' : 'text-gray-600' }}">{{ $o['id'] }}. {{ $o['text'] }} @if ($o['id'] === $correct)<i class="fas fa-check" aria-label="correct"></i>@endif</li>
                                 @endforeach
                             </ul>
-                            <p class="mt-1 text-xs text-gray-400">{{ $question->owner_scope === 'teacher' ? 'Written by you' : 'From the question bank' }}</p>
+                            <p class="mt-1 text-xs text-gray-400">{{ (float) $question->pivot->marks == 1 ? '1 mark' : (float) $question->pivot->marks.' marks' }} · {{ $question->owner_scope === 'teacher' ? 'Your question' : 'From the question bank' }}</p>
                         </li>
                     @empty
                         <li class="text-sm text-gray-500">No questions yet. Add some from the bank or write your own below.</li>
@@ -75,17 +78,28 @@
                 </ol>
 
                 @unless ($locked)
-                    <div class="mt-5 grid gap-4 lg:grid-cols-2">
-                        <form method="POST" action="{{ route('teach.assignments.questions.bank', $assignment) }}" class="rounded-xl bg-primary-50 p-4">
+                    <a href="{{ route('teach.assignments.bank', $assignment) }}" class="mt-5 flex items-center justify-between gap-3 rounded-xl border-[1.5px] border-primary-600 bg-white p-4 no-underline hover:bg-primary-50">
+                        <span>
+                            <span class="block font-semibold text-primary-800"><i class="fas fa-list-check mr-1" aria-hidden="true"></i> Choose from the question bank</span>
+                            <span class="block text-sm text-gray-600">Browse by subject and topic, read each question and its answer, and tick the ones you want.</span>
+                        </span>
+                        <i class="fas fa-chevron-right text-primary-600" aria-hidden="true"></i>
+                    </a>
+                    <div class="mt-4 grid gap-4 lg:grid-cols-2">
+                        <form method="POST" action="{{ route('teach.assignments.questions.bank', $assignment) }}" class="rounded-xl bg-primary-50 p-4" data-bank-form data-topics-url="{{ route('teach.assignments.bank-topics') }}">
                             @csrf
-                            <h3 class="font-semibold text-primary-800"><i class="fas fa-database mr-1" aria-hidden="true"></i> Add from the question bank</h3>
+                            <h3 class="font-semibold text-primary-800"><i class="fas fa-shuffle mr-1" aria-hidden="true"></i> Add random questions from the bank</h3>
                             <div class="mt-3 space-y-3">
-                                <select name="subject_id" class="{{ $control }}" required aria-label="Subject">
+                                <select name="subject_id" class="{{ $control }}" required aria-label="Subject" data-bank-subject>
                                     @include('partials.subject-options', ['levels' => $levels, 'selected' => old('subject_id', $classroom->subject_id)])
+                                </select>
+                                <select name="topic_id" class="{{ $control }}" aria-label="Topic" data-bank-topic>
+                                    <option value="">All topics</option>
+                                    @foreach ($bankTopics as $t)<option value="{{ $t['id'] }}">{{ $t['title'] }}{{ $t['year'] ? ' ('.$t['year'].')' : '' }} · {{ $t['count'] }} questions</option>@endforeach
                                 </select>
                                 <div class="grid grid-cols-2 gap-3">
                                     <select name="count" class="{{ $control }}" aria-label="How many questions">
-                                        @foreach ([5, 10, 15, 20] as $n)<option value="{{ $n }}">{{ $n }} questions</option>@endforeach
+                                        @foreach ([5, 10, 15, 20, 25, 30, 40, 50] as $n)<option value="{{ $n }}" @selected($n === 10)>{{ $n }} questions</option>@endforeach
                                     </select>
                                     <select name="difficulty" class="{{ $control }}" aria-label="Difficulty">
                                         <option value="">Mixed difficulty</option>
@@ -181,6 +195,9 @@
                     <div><dt class="text-gray-500">Handed in</dt><dd class="text-xl font-extrabold text-primary-700">{{ $submissions->filter->isSubmitted()->count() }}/{{ $students->count() }}</dd></div>
                     <div><dt class="text-gray-500">Average</dt><dd class="text-xl font-extrabold text-primary-700">{{ $scored->isNotEmpty() ? round($scored->avg(fn ($s) => $s->percent())).'%' : '—' }}</dd></div>
                 </dl>
+                @if ($assignment->isQuiz())
+                    <x-button class="mt-4" full variant="accent" :href="route('teach.assignments.report', $assignment)" icon="fa-chart-column">Assessment details</x-button>
+                @endif
             </section>
         @endif
         <form method="POST" action="{{ route('teach.assignments.destroy', $assignment) }}" onsubmit="return confirm('Delete this {{ $assignment->type }} and all submissions?')">
@@ -190,3 +207,28 @@
     </aside>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+// Reload the topic list when the teacher picks another subject.
+(function () {
+    var form = document.querySelector('[data-bank-form]');
+    if (!form) { return; }
+    var subject = form.querySelector('[data-bank-subject]'), topic = form.querySelector('[data-bank-topic]');
+    subject.addEventListener('change', function () {
+        topic.innerHTML = '<option value="">All topics</option>';
+        if (!subject.value) { return; }
+        fetch(form.dataset.topicsUrl + '?subject_id=' + encodeURIComponent(subject.value), { headers: { Accept: 'application/json' }, credentials: 'same-origin' })
+            .then(function (r) { return r.ok ? r.json() : []; })
+            .then(function (topics) {
+                topics.forEach(function (t) {
+                    var o = document.createElement('option');
+                    o.value = t.id;
+                    o.textContent = t.title + (t.year ? ' (' + t.year + ')' : '') + ' · ' + t.count + ' questions';
+                    topic.appendChild(o);
+                });
+            });
+    });
+})();
+</script>
+@endpush

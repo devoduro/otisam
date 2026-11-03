@@ -187,6 +187,15 @@ Route::middleware(['auth', 'account:teacher', 'phone.verified', 'password.fresh'
 
     // Classes, assignments, quizzes and shared materials: approved teachers only.
     Route::middleware('teacher.approved')->group(function () {
+        // Class lists: student accounts with a username and 6-digit PIN.
+        Route::get('/class-list', [Teach\ClassListController::class, 'create'])->name('class-list.create');
+        Route::post('/class-list', [Teach\ClassListController::class, 'store'])->middleware('throttle:10,1')->name('class-list.store');
+        Route::get('/class-list/template', [Teach\ClassListController::class, 'template'])->name('class-list.template');
+        Route::get('/class-list/logins', [Teach\ClassListController::class, 'credentials'])->name('class-list.credentials');
+        Route::get('/class-list/logins/download', [Teach\ClassListController::class, 'download'])->name('class-list.download');
+        Route::delete('/class-list/logins', [Teach\ClassListController::class, 'forget'])->name('class-list.forget');
+        Route::post('/classes/{classroom}/students/{student}/pin', [Teach\ClassListController::class, 'resetPin'])->middleware('throttle:30,1')->name('classes.students.pin');
+
         Route::resource('classes', Teach\ClassroomController::class)->parameters(['classes' => 'classroom'])->except('destroy');
         Route::post('/classes/{classroom}/archive', [Teach\ClassroomController::class, 'archive'])->name('classes.archive');
         Route::post('/classes/{classroom}/code', [Teach\ClassroomController::class, 'newCode'])->name('classes.code');
@@ -201,7 +210,14 @@ Route::middleware(['auth', 'account:teacher', 'phone.verified', 'password.fresh'
         Route::post('/work/{assignment}/publish', [Teach\AssignmentController::class, 'publish'])->name('assignments.publish');
         Route::post('/work/{assignment}/close', [Teach\AssignmentController::class, 'close'])->name('assignments.close');
         Route::post('/work/{assignment}/questions/bank', [Teach\AssignmentController::class, 'addFromBank'])->name('assignments.questions.bank');
+        Route::get('/work/{assignment}/bank', [Teach\AssignmentController::class, 'bank'])->name('assignments.bank');
+        Route::post('/work/{assignment}/questions/selected', [Teach\AssignmentController::class, 'addSelected'])->name('assignments.questions.selected');
+        Route::get('/bank-topics', [Teach\AssignmentController::class, 'bankTopics'])->name('assignments.bank-topics');
+        Route::get('/work/{assignment}/report', [Teach\AssignmentController::class, 'report'])->name('assignments.report');
+        Route::get('/work/{assignment}/report.csv', [Teach\AssignmentController::class, 'reportCsv'])->name('assignments.report-csv');
         Route::post('/work/{assignment}/questions', [Teach\AssignmentController::class, 'addOwnQuestion'])->name('assignments.questions.store');
+        Route::get('/work/{assignment}/questions/{question}/edit', [Teach\AssignmentController::class, 'editQuestion'])->name('assignments.questions.edit');
+        Route::put('/work/{assignment}/questions/{question}', [Teach\AssignmentController::class, 'updateQuestion'])->name('assignments.questions.update');
         Route::delete('/work/{assignment}/questions/{question}', [Teach\AssignmentController::class, 'removeQuestion'])->name('assignments.questions.destroy');
         Route::put('/work/{assignment}/submissions/{submission}', [Teach\AssignmentController::class, 'grade'])->name('assignments.grade');
         Route::get('/work/{assignment}/handout', [Teach\AssignmentController::class, 'handout'])->name('assignments.handout');

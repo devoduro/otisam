@@ -4,6 +4,7 @@
 @section('subtitle', 'Create a class, give students the join code, then set assignments and quizzes.')
 
 @section('actions')
+    <x-button variant="outline" :href="route('teach.class-list.create')" icon="fa-file-arrow-up">Upload class list</x-button>
     <x-button :href="route('teach.classes.create')" icon="fa-plus">New class</x-button>
 @endsection
 

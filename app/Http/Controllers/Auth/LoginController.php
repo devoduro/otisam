@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
-/** One sign-in page for every account type: phone number or email + password. */
+/** One sign-in page for every account type: phone number, email or class-list username + password. */
 class LoginController extends Controller
 {
     /** Hash of a random string nobody knows; checked when no account matches. */
@@ -35,10 +35,16 @@ class LoginController extends Controller
         $identifier = Str::lower(trim($data['login']));
         $throttleKey = 'login:'.sha1($identifier).'|'.$request->ip();
 
-        if (RateLimiter::tooManyAttempts($throttleKey, 5)) {
-            throw ValidationException::withMessages([
-                'login' => 'Too many sign-in attempts. Try again in '.RateLimiter::availableIn($throttleKey).' seconds.',
-            ]);
+        // Class-list accounts use 6-digit PINs, so they also get a limit per account across all
+        // addresses: 10 wrong PINs locks the username for 15 minutes.
+        $accountKey = self::isUsername($identifier) ? 'login-account:'.sha1($identifier) : null;
+
+        foreach (array_filter([$throttleKey => 5, $accountKey => 10]) as $key => $max) {
+            if (RateLimiter::tooManyAttempts($key, $max)) {
+                throw ValidationException::withMessages([
+                    'login' => 'Too many sign-in attempts. Try again in '.RateLimiter::availableIn($key).' seconds.',
+                ]);
+            }
         }
 
         $user = User::findByLogin($identifier);
@@ -57,8 +63,11 @@ class LoginController extends Controller
 
         if (! $valid) {
             RateLimiter::hit($throttleKey, 60);
+            if ($accountKey) {
+                RateLimiter::hit($accountKey, 15 * 60);
+            }
 
-            throw ValidationException::withMessages(['login' => 'The phone number/email or password is incorrect.']);
+            throw ValidationException::withMessages(['login' => 'The phone number, email, username or password is incorrect.']);
         }
 
         if (! $user->isActive()) {
@@ -66,12 +75,20 @@ class LoginController extends Controller
         }
 
         RateLimiter::clear($throttleKey);
+        if ($accountKey) {
+            RateLimiter::clear($accountKey);
+        }
         Auth::login($user, $request->boolean('remember'));
         $request->session()->regenerate();
 
         $user->forceFill(['last_login_at' => now()])->save();
 
         return redirect()->intended(route($user->homeRoute()));
+    }
+
+    private static function isUsername(string $identifier): bool
+    {
+        return ! str_contains($identifier, '@') && preg_match('/[a-z]/', $identifier) === 1;
     }
 
     public function logout(Request $request): RedirectResponse

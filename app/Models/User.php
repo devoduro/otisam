@@ -131,13 +131,30 @@ class User extends Authenticatable
         };
     }
 
-    /** Find an account by phone (any common Ghana format) or email. */
+    /** The teacher who created this account from a class list. */
+    public function managedBy(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'managed_by_id');
+    }
+
+    /** A student account created by a teacher: signs in with a username and PIN, has no phone. */
+    public function isClassManaged(): bool
+    {
+        return $this->managed_by_id !== null && $this->username !== null;
+    }
+
+    /** Find an account by phone (any common Ghana format), email or class-list username. */
     public static function findByLogin(string $login): ?self
     {
         $login = trim($login);
 
         if (str_contains($login, '@')) {
             return static::where('email', mb_strtolower($login))->first();
+        }
+
+        // Phone numbers have no letters; class-list usernames always do.
+        if (preg_match('/[a-z]/i', $login)) {
+            return static::where('username', mb_strtolower($login))->first();
         }
 
         $phone = Phone::clean($login);

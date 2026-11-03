@@ -2,6 +2,7 @@
 
 namespace App\Models\QuestionBank;
 
+use App\Models\Curriculum\ClassLevel;
 use App\Models\Curriculum\CurriculumNode;
 use App\Models\Curriculum\Subject;
 use App\Models\User;
@@ -52,6 +53,12 @@ class Question extends Model
     public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'author_id');
+    }
+
+    /** The class year the question is for; none means any year of its level. */
+    public function classLevel(): BelongsTo
+    {
+        return $this->belongsTo(ClassLevel::class);
     }
 
     public function revisions(): HasMany

@@ -8,6 +8,9 @@
         <x-button :href="route('teach.assignments.create', [$classroom, 'type' => 'assignment'])" icon="fa-file-pen">New assignment</x-button>
         <x-button variant="accent" :href="route('teach.assignments.create', [$classroom, 'type' => 'quiz'])" icon="fa-list-check">New quiz</x-button>
     @endunless
+    @unless ($classroom->isArchived())
+        <x-button variant="outline" :href="route('teach.class-list.create', ['class' => $classroom->ulid])" icon="fa-file-arrow-up">Upload class list</x-button>
+    @endunless
     <x-button variant="outline" :href="route('teach.classes.edit', $classroom)" icon="fa-pen">Edit</x-button>
 @endsection
 
@@ -34,19 +37,32 @@
 
         <section class="panel p-5" aria-labelledby="students-heading">
             <h2 id="students-heading" class="font-bold text-gray-800">Students ({{ $classroom->students->count() }})</h2>
+            @if (session('pin_reset'))
+                <div class="mt-3 rounded-xl bg-gold-50 px-4 py-3 text-sm text-gray-800" role="status">
+                    New PIN for <strong>{{ session('pin_reset.name') }}</strong>: username <span class="font-mono">{{ session('pin_reset.username') }}</span>, PIN <span class="font-mono font-bold tracking-widest">{{ session('pin_reset.pin') }}</span>. Write it down now; it will not be shown again.
+                </div>
+            @endif
             @forelse ($classroom->students as $student)
                 <div class="flex items-center justify-between gap-3 border-b border-gray-100 py-2.5 last:border-0">
                     <div class="min-w-0">
                         <p class="truncate font-medium text-gray-800">{{ $student->name }}</p>
-                        <p class="text-xs text-gray-500">Joined {{ \Illuminate\Support\Carbon::parse($student->pivot->joined_at)->diffForHumans() }}</p>
+                        <p class="text-xs text-gray-500">@if ($student->username)Username <span class="font-mono">{{ $student->username }}</span> · @endif Joined {{ \Illuminate\Support\Carbon::parse($student->pivot->joined_at)->diffForHumans() }}</p>
                     </div>
+                    <div class="flex items-center gap-1">
+                    @if ($student->isClassManaged() && $student->managed_by_id === auth()->id())
+                        <form method="POST" action="{{ route('teach.classes.students.pin', [$classroom, $student]) }}" onsubmit="return confirm(@js('Give '.$student->name.' a new PIN? The old PIN will stop working.'))">
+                            @csrf
+                            <button type="submit" class="rounded-lg px-2 py-1 text-sm text-gray-500 hover:bg-gold-50 hover:text-gold-700" title="New PIN"><i class="fas fa-key" aria-hidden="true"></i><span class="sr-only">New PIN for {{ $student->name }}</span></button>
+                        </form>
+                    @endif
                     <form method="POST" action="{{ route('teach.classes.students.remove', [$classroom, $student]) }}" onsubmit="return confirm('Remove this student from the class?')">
                         @csrf @method('DELETE')
                         <button type="submit" class="rounded-lg px-2 py-1 text-sm text-gray-400 hover:bg-red-50 hover:text-red-600" title="Remove"><i class="fas fa-user-minus" aria-hidden="true"></i><span class="sr-only">Remove {{ $student->name }}</span></button>
                     </form>
+                    </div>
                 </div>
             @empty
-                <p class="mt-2 text-sm text-gray-500">No students yet. Share the join code.</p>
+                <p class="mt-2 text-sm text-gray-500">No students yet. Share the join code, or <a href="{{ route('teach.class-list.create', ['class' => $classroom->ulid]) }}">upload a class list</a> to create logins for them.</p>
             @endforelse
         </section>
     </div>
